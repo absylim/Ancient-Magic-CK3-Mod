@@ -1398,7 +1398,7 @@ ancient_magic_spellbook_events.502 = {
 	
 	option = {
 		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.005
+		trigger_event = ancient_magic_spellbook_events.005 #add_character_flag = immune_to_disease if trait flag doesn't work
 	}
 }
 
@@ -1429,7 +1429,7 @@ ancient_magic_spellbook_events.503 = {
 	
 	option = {
 		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.005
+		trigger_event = ancient_magic_spellbook_events.005 #add_character_flag = immune_to_disease if trait flag doesn't work
 	}
 }
 

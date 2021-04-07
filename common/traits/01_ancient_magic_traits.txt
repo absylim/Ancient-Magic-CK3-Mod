@@ -56,12 +56,13 @@ master_of_time = {
 undead = {
 	index = 9007
 	immortal = yes
-	fertility = -1000
+	#fertility = -1000
+	can_have_children = no # Looks better
 	dread_baseline_add = 30
 	general_opinion = -30
 	same_opinion = 30
 	dread_baseline_add = 10
-	add_character_flag = immune_to_disease
+	flag = immune_to_disease # Add character flag doesn't work in this context
 }
 deacon_of_death = {
 	index = 9008

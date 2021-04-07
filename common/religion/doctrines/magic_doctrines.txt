@@ -1,0 +1,59 @@
+﻿doctrine_necromancy = {
+	group = "crimes"
+	
+    doctrine_necromancy_crime = {
+        piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = doctrine_necromancy_crime }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_necromancy_accepted }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+		}
+		parameters = {
+			necromancy_illegal = yes
+		}
+	}
+	
+    doctrine_necromancy_shunned = {
+		can_pick = {
+            OR = {
+                flag:doctrine_witchcraft_shunned = { is_in_list = selected_doctrines }
+                flag:doctrine_witchcraft_accepted = { is_in_list = selected_doctrines }
+            }
+        }
+        piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = doctrine_necromancy_shunned }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+		parameters = {
+			necromancy_shunned = yes
+		}
+	}
+	
+    doctrine_necromancy_accepted = {
+        can_pick = {
+            flag:doctrine_witchcraft_accepted = { is_in_list = selected_doctrines }
+        }
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = doctrine_necromancy_accepted }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_necromancy_crime }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+		}
+		parameters = {
+			necromancy_accepted = yes
+		}
+	}
+}
