@@ -4,8 +4,6 @@ biomancy_mage_perk = {
 	position = { 2 0 }
 	icon = node_diplomacy
 	
-	
-	
 	auto_selection_weight = {
 		value = 11
 		if = {
@@ -13,6 +11,30 @@ biomancy_mage_perk = {
 				has_trait = magic_potential
 			}
 			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = honest
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = gregarious
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = temperate
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = diligent
+			}
+			multiply = 2
 		}
 		if = {
 			limit = {

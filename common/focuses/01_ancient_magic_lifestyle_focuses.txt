@@ -8,6 +8,30 @@
 
 	auto_selection_weight = {
 		value = 11
+		if = {
+			limit = {
+				has_trait = magic_potential	
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = ambitious
+			}
+			multiply = 2;
+		}
+		if = {
+			limit = {
+				has_trait = diligent
+			}
+			multiply = 2;
+		}
+		if = {
+			limit = {
+				has_trait = content
+			}
+			add = -300
+		}
 	}
 	
 	focus_id = 10001
@@ -18,6 +42,24 @@ magic_meditation_focus = {
 
 	auto_selection_weight = {
 		value = 11
+		if = {
+			limit = {
+				has_trait = magic_potential	
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = patient
+			}
+			multiply = 2;
+		}
+		if = {
+			limit = {
+				has_trait = content
+			}
+			add = 300
+		}
 	}
 	
 	focus_id = 10002
@@ -32,6 +74,18 @@ magic_mana_focus = {
 
 	auto_selection_weight = {
 		value = 11
+		if = {
+			limit = {
+				has_trait = magic_potential	
+			}
+			add = 1000
+		}
+		if = {
+			limit = {
+				has_trait = lazy
+			}
+			add = 350;
+		}
 	}
 	
 	focus_id = 10003
