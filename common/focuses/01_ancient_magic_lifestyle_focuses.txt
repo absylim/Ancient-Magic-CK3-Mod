@@ -1,0 +1,38 @@
+﻿magic_arcana_focus = {
+	lifestyle = ancient_magic_lifestyle
+	
+	modifier = {
+		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.2
+	}
+
+
+	auto_selection_weight = {
+		value = 11
+	}
+	
+	focus_id = 10001
+}
+
+magic_meditation_focus = {
+	lifestyle = ancient_magic_lifestyle
+
+	auto_selection_weight = {
+		value = 11
+	}
+	
+	focus_id = 10002
+}
+
+magic_mana_focus = {
+	lifestyle = ancient_magic_lifestyle
+	
+	modifier = {
+		monthly_ancient_magic_lifestyle_xp_gain_mult = -10000
+	}
+
+	auto_selection_weight = {
+		value = 11
+	}
+	
+	focus_id = 10003
+}

@@ -1,0 +1,9 @@
+﻿ancient_magic_lifestyle = {
+	
+	is_valid = {
+		has_trait = magic_potential	
+	}
+
+	xp_per_level = 1000
+	base_xp_gain = 25
+}

@@ -1,0 +1,283 @@
+death_mage_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = death_magic
+	position = { 2 0 }
+	icon = node_diplomacy
+	
+	auto_selection_weight = {
+		value = 0
+		if = {
+			limit = {
+				has_trait = magic_potential
+			}
+			add = 9999
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+		add_trait_force_tooltip = mage
+		add_trait_force_tooltip = mana
+	}
+	character_modifier = {
+		dread_baseline_add = 5
+	}
+}
+
+inflict_illness_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = death_magic
+	position = { 0 1.25 }
+	icon = node_diplomacy
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = inflict_illness_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	
+	parent = death_mage_perk
+}
+
+
+plague_lord_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = death_magic
+	position = { 0 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = plague_lord_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	
+	parent = inflict_illness_perk
+}
+
+
+aura_of_death_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = death_magic
+	position = { 2 1.25 }
+	icon = node_diplomacy
+	
+	parent = death_mage_perk
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+necromancy_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = death_magic
+	position = { 2 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = aura_of_death_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = necromancy_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+drain_life_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = death_magic
+	position = { 4 1.25 }
+	icon = node_diplomacy
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = drain_life_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	
+	parent = death_mage_perk
+}
+
+
+death_stare_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = death_magic
+	position = { 4 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = drain_life_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = death_stare_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+death_magic_8_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = death_magic
+	position = { 2 3.75 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = plague_lord_perk
+	parent = necromancy_perk
+	parent = death_stare_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = placeholder_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	character_modifier = {
+		dread_baseline_add = 25
+	}
+}
+
+
+deacon_of_death_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = death_magic
+	position = { 2 5 }
+	icon = deacon_of_death
+	
+	
+	
+	parent = death_magic_8_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = deacon_of_death_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+		add_trait_force_tooltip = deacon_of_death
+	}
+}

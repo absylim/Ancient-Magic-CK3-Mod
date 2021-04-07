@@ -1,0 +1,62 @@
+PC_magic_level = {
+	default = PC_magic_level_decision
+
+	PC_magic_level_decision = {
+
+	}
+	
+	PC_magic_level_1 = {
+	
+	}
+	
+	PC_magic_level_2 = {
+
+	}
+	
+	PC_magic_level_3 = {
+
+	}	
+}
+
+NPC_magic_chance = {
+	default = NPC_magic_chance_001
+	NPC_magic_chance_0 = {
+
+	}
+	
+	NPC_magic_chance_001 = {
+	
+	}
+	
+	NPC_magic_chance_01 = {
+
+	}
+	
+	NPC_magic_chance_05 = {
+
+	}
+	
+	NPC_magic_chance_1 = {	
+	
+	}
+}
+
+NPC_magic_level = {
+	default = NPC_magic_level_random
+
+	NPC_magic_level_random = {
+
+	}
+	
+	NPC_magic_level_1 = {
+	
+	}
+	
+	NPC_magic_level_2 = {
+
+	}
+	
+	NPC_magic_level_3 = {
+
+	}	
+}

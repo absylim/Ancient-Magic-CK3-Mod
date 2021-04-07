@@ -1,0 +1,74 @@
+change_mana = {
+	first_past = I_GAINED_MANA_EFFECT
+	first_past_neg = I_LOST_MANA_EFFECT
+	global_past = GAINED_MANA_EFFECT
+	global_past_neg = LOST_MANA_EFFECT
+	first = I_GAIN_MANA_EFFECT
+	first_neg = I_LOSE_MANA_EFFECT
+	global = GAIN_MANA_EFFECT
+	global_neg = LOSE_MANA_EFFECT
+}
+
+placeholder_effect = {
+	global = PLACEHOLDER_EFFECT
+}
+
+mana_gen_magic_perk_effect = {
+	global = MANA_GEN_MAGIC_PERK_EFFECT
+}
+
+max_mana_magic_perk_effect = {
+	global = MAX_MANA_MAGIC_PERK_EFFECT
+}
+
+mage_xp_magic_perk_effect = {
+	global = MAGE_XP_MAGIC_PERK_EFFECT
+}
+
+heal_perk_effect = {
+	global = HEAL_PERK_EFFECT
+}
+
+greater_heal_perk_effect = {
+	global = GREATER_HEAL_PERK_EFFECT
+}
+
+golem_creation_perk_effect = {
+	gobal = GOLEM_CREATION_PERK_EFFECT
+}
+
+avatar_of_life_perk_effect = {
+	gobal = AVATAR_OF_LIFE_PERK_EFFECT
+}
+
+purity_of_body_perk_effect = {
+	gobal = PURITY_OF_BODY_PERK_EFFECT
+}
+
+lord_of_the_elements_perk_effect = {
+	global = LORD_OF_THE_ELEMENTS_PERK_EFFECT
+}
+
+inflict_illness_perk_effect = {
+	global = INFLICT_ILLNESS_PERK_EFFECT
+}
+
+plague_lord_perk_effect = {
+	global = PLAGUE_LORD_PERK_EFFECT
+}
+
+necromancy_perk_effect = {
+	global = NECROMANCY_PERK_EFFECT
+}
+
+drain_life_perk_effect = {
+	global = DRAIN_LIFE_PERK_EFFECT
+}
+
+death_stare_perk_effect = {
+	global = DEATH_STARE_PERK_EFFECT
+}
+
+deacon_of_death_perk_effect = {
+	global = DEACON_OF_DEATH_PERK_EFFECT
+}

@@ -1,0 +1,18 @@
+ancient_magic_hook_undead_master = {
+	strong = yes
+	expiration_days = -1
+}
+
+ancient_magic_hook_puppet = {
+	strong = yes
+	expiration_days = -1
+}
+
+ancient_magic_hook_obedient = {
+	expiration_days = 90
+}
+
+ancient_magic_hook_dominated = {
+	expiration_days = 360
+	strong = yes
+}

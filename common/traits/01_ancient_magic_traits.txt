@@ -1,0 +1,78 @@
+immortal = {
+	index = 9001
+	
+	immortal = yes
+}
+
+magic_potential_1 = {
+	index = 9002
+	
+	name = trait_magic_potential_1
+	desc = trait_magic_potential_1_desc
+
+	group = magic_potential
+	level = 1
+	
+	genetic = yes
+	good = yes
+}
+
+magic_potential_2 = {
+	index = 9003
+	
+	name = trait_magic_potential_2
+	desc = trait_magic_potential_2_desc
+
+	group = magic_potential
+	level = 2
+	
+	genetic = yes
+	good = yes
+}
+
+magic_potential_3 = {
+	index = 9004
+	
+	name = trait_magic_potential_3
+	desc = trait_magic_potential_3_desc
+
+	group = magic_potential
+	level = 3
+	
+	genetic = yes
+	good = yes
+}
+
+architect_of_bloodlines = {
+	index = 9005
+}
+
+master_of_time = {
+	index = 9006
+	
+	immortal = yes
+}
+
+undead = {
+	index = 9007
+	immortal = yes
+	fertility = -1000
+	dread_baseline_add = 30
+	general_opinion = -30
+	same_opinion = 30
+	dread_baseline_add = 10
+	add_character_flag = immune_to_disease
+}
+deacon_of_death = {
+	index = 9008
+}
+avatar_of_life = {
+	index = 9009
+}
+lord_of_the_elements = {
+	index = 9010
+}
+master_of_puppets = {
+	index = 9011
+}
+

@@ -1,0 +1,96 @@
+entrance_spell_modifier = {
+	icon = martial_positive
+}
+
+incite_lust_spell_modifier = {
+	icon = martial_positive
+}
+
+incite_obedience_spell_modifier = {
+	icon = martial_positive
+}
+
+dominate_spell_modifier = {
+	icon = martial_positive
+}
+
+friendship_spell_modifier = {
+	icon = martial_positive
+}
+
+master_of_puppets_spell_modifier = {
+	icon = martial_positive
+}
+
+full_restoration_modifier = {
+	icon = health_positive
+	health = 100
+}
+
+halt_aging_spell_modifier = {
+	icon = martial_positive
+}
+
+restart_aging_spell_modifier = {
+	icon = martial_positive
+}
+
+heal_spell_modifier = {
+	icon = martial_positive
+}
+
+heal_2_spell_modifier = {
+	icon = martial_positive
+}
+
+heal_3_spell_modifier = {
+	icon = martial_positive
+}
+
+gift_of_unlife_spell_modifier = {
+	icon = martial_positive
+}
+
+death_stare_spell_modifier = {
+	icon = martial_positive
+}
+
+spread_plague_spell_modifier = {
+	icon = martial_positive
+}
+
+drain_life_spell_modifier = {
+	icon = martial_positive
+}
+
+inflict_illness_spell_modifier = {
+	icon = martial_positive
+}
+
+improve_trait_spell_modifier = {
+	icon = martial_positive
+}
+
+perfect_trait_spell_modifier = {
+	icon = martial_positive
+}
+
+weak_trait_spell_modifier = {
+	icon = martial_positive
+}
+
+criple_trait_spell_modifier = {
+	icon = martial_positive
+}
+
+sculpter_of_flesh_spell_modifier = {
+	icon = martial_positive
+}
+
+impregnate_spell_modifier = {
+	icon = martial_positive
+}
+
+rewrite_blood_spell_modifier = {
+	icon = martial_positive
+}

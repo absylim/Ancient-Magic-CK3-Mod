@@ -1,0 +1,53 @@
+open_spellbook_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
+
+	ai_check_interval = 0
+	
+	is_shown = {
+		has_trait = mage
+	}
+	
+	desc = open_spellbook_decision_desc
+	
+	effect = {
+		trigger_event = ancient_magic_spellbook_events.001
+	}	
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+gain_potential_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
+	
+	major = yes
+
+	ai_check_interval = 0
+	
+	is_shown = {
+		has_game_rule = PC_magic_level_decision
+		NOT = {
+			has_character_flag = ancient_magic_potential_chosen
+			has_trait = magic_potential	
+		}
+	}
+	
+	desc = gain_potential_decision_desc
+	
+	effect = {
+		trigger_event = ancient_magic_gain_talent_events.001
+	}	
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

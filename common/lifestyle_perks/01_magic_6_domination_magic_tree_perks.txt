@@ -1,0 +1,261 @@
+domination_mage_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = domination_magic
+	position = { 2 0 }
+	icon = node_diplomacy
+	
+	auto_selection_weight = {
+		value = 0
+		if = {
+			limit = {
+				has_trait = magic_potential
+			}
+			add = 9999
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+		add_trait_force_tooltip = mage
+		add_trait_force_tooltip = mana
+	}
+	
+	character_modifier = {
+		general_opinion = 5
+	}
+}
+
+entrance_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = domination_magic
+	position = { 0 1.25 }
+	icon = node_diplomacy
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	
+	parent = domination_mage_perk
+}
+
+
+incite_lust_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = domination_magic
+	position = { 0 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+
+	
+	parent = entrance_perk
+}
+
+
+incite_obedience_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = domination_magic
+	position = { 2 1.25 }
+	icon = node_diplomacy
+	
+	parent = domination_mage_perk
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+dominate_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = domination_magic
+	position = { 2 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = incite_obedience_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+beguiling_aura_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = domination_magic
+	position = { 4 1.25 }
+	icon = node_diplomacy
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	
+	parent = domination_mage_perk
+}
+
+
+friendship_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = domination_magic
+	position = { 4 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = beguiling_aura_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+enchanting_aura_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = domination_magic
+	position = { 2 3.75 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = incite_lust_perk
+	parent = dominate_perk
+	parent = friendship_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+master_of_puppets_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = domination_magic
+	position = { 2 5 }
+	icon = master_of_puppets
+	
+	
+	
+	parent = enchanting_aura_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		add_trait_force_tooltip = master_of_puppets
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}

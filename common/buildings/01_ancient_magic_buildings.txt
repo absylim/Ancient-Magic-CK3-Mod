@@ -1,0 +1,156 @@
+ancient_magic_academy_01 = {
+	construction_time = slow_construction_time
+	
+	can_construct_potential = {
+		building_ancient_magic_mage_buildings_requirement = yes
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+	show_disabled = yes
+	
+	cost_gold = expensive_building_tier_2_cost
+	
+	character_modifier = {
+		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.25
+	}
+	
+	next_building = ancient_magic_academy_02
+	
+	type_icon = "icon_building_university.dds"
+
+	type = duchy_capital
+	
+	ai_value = {
+		base = 0
+	}
+}
+
+ancient_magic_academy_02 = {
+	construction_time = slow_construction_time
+	
+	can_construct_potential = {
+		building_ancient_magic_mage_buildings_requirement = yes
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+	show_disabled = yes
+	
+	cost_gold = expensive_building_tier_4_cost
+	
+	character_modifier = {
+		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.5
+	}
+	
+	flag = fully_upgraded_duchy_capital_building
+	
+	type_icon = "icon_building_university.dds"
+
+	type = duchy_capital
+	
+	ai_value = {
+		base = 0
+	}
+}
+
+ancient_magic_mana_circle_01 = {
+	construction_time = slow_construction_time
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+	
+	can_construct_potential = {
+		building_ancient_magic_mage_buildings_requirement = yes
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+	
+	next_building = ancient_magic_mana_circle_02
+	
+	cost_gold = expensive_building_tier_2_cost
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = ancient_magic_mana_circle_01
+		}
+	}
+	
+	type = duchy_capital
+	
+	type_icon = "icon_structure_stonehenge.dds"
+	
+	ai_value = {
+		base = 0
+	}
+}
+
+ancient_magic_mana_circle_02 = {
+	construction_time = slow_construction_time
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+	
+	can_construct_potential = {
+		building_ancient_magic_mage_buildings_requirement = yes
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+	
+	next_building = ancient_magic_mana_circle_03
+	
+	cost_gold = expensive_building_tier_3_cost
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = ancient_magic_mana_circle_01
+		}
+	}
+	
+	type = duchy_capital
+	
+	type_icon = "icon_structure_stonehenge.dds"
+	
+	ai_value = {
+		base = 0
+	}
+}
+
+ancient_magic_mana_circle_03 = {
+	construction_time = slow_construction_time
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+		building_disable_if_vastly_over_domain_limit_trigger = yes
+	}
+	
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_ancient_magic_mage_buildings_requirement = yes
+	}
+	
+	cost_gold = expensive_building_tier_4_cost
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = ancient_magic_mana_circle_01
+		}
+	}
+	
+	type = duchy_capital
+	
+	flag = fully_upgraded_duchy_capital_building
+	
+	type_icon = "icon_structure_stonehenge.dds"
+
+	ai_value = {
+		base = 0
+	}
+}
+	

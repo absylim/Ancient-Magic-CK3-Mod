@@ -1,0 +1,136 @@
+namespace = ancient_magic_gain_talent_events
+
+ancient_magic_gain_talent_events.001 = {
+	title = ancient_magic_gain_talent_events.001.t
+	desc = ancient_magic_gain_talent_events.001.desc
+	
+	option = {
+		name = ancient_magic_gain_talent_events.001.a
+		add_trait = magic_potential_1
+		add_character_flag = ancient_magic_potential_chosen
+	}
+	
+	option = {
+		name = ancient_magic_gain_talent_events.001.b
+		add_trait = magic_potential_2
+		add_character_flag = ancient_magic_potential_chosen
+	}
+	
+	option = {
+		name = ancient_magic_gain_talent_events.001.c
+		add_trait = magic_potential_3
+		add_character_flag = ancient_magic_potential_chosen
+	}
+	
+	option = {
+		name = ancient_magic_gain_talent_events.001.d
+		add_character_flag = ancient_magic_potential_chosen
+	}
+}
+
+ancient_magic_gain_talent_events.002 = {
+	hidden = yes
+	type = empty
+	immediate = {
+		every_living_character = {
+			trigger_event = ancient_magic_gain_talent_events.003
+		}
+	}
+}
+
+ancient_magic_gain_talent_events.003 = {
+	hidden = yes
+	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					has_game_rule = PC_magic_level_1
+				}
+				add_trait = magic_potential_1
+			}
+			if = {
+				limit = {
+					has_game_rule = PC_magic_level_2
+				}
+				add_trait = magic_potential_2
+			}
+			if = {
+				limit = {
+					has_game_rule = PC_magic_level_3
+				}
+				add_trait = magic_potential_3
+			}
+		}
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			random = {
+				chance = {
+					value = 0
+					if = {
+						limit = {
+							has_game_rule = NPC_magic_chance_001
+						}
+						add = 1
+					}
+					if = {
+						limit = {
+							has_game_rule = NPC_magic_chance_01
+						}
+						add = 10
+					}
+					if = {
+						limit = {
+							has_game_rule = NPC_magic_chance_05
+						}
+						add = 50
+					}
+					if = {
+						limit = {
+							has_game_rule = NPC_magic_chance_1
+						}
+						add = 100
+					}
+				}
+				if = {
+					limit = {
+						has_game_rule = NPC_magic_level_1
+					}
+					add_trait = magic_potential_1
+				}
+				if = {
+					limit = {
+						has_game_rule = NPC_magic_level_2
+					}
+					add_trait = magic_potential_2
+				}
+				if = {
+					limit = {
+						has_game_rule = NPC_magic_level_3
+					}
+					add_trait = magic_potential_3
+				}
+				if = {
+					limit = {
+						has_game_rule = NPC_magic_level_random
+					}
+					random_list = {
+						70 = {
+							add_trait = magic_potential_1
+						}
+						25 = {
+							add_trait = magic_potential_2
+						}
+						5 = {
+							add_trait = magic_potential_3
+						}
+					}
+				}
+			}
+		}
+	}
+}

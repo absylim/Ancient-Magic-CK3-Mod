@@ -1,0 +1,5 @@
+﻿on_game_start_after_lobby = {
+	events = {
+		ancient_magic_gain_talent_events.002
+	}
+}

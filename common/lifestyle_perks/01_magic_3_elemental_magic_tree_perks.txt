@@ -1,0 +1,269 @@
+﻿elemental_mage_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = elemental_magic
+	position = { 2 0 }
+	icon = node_diplomacy
+	
+	auto_selection_weight = {
+		value = 0
+		if = {
+			limit = {
+				has_trait = magic_potential
+			}
+			add = 9999
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
+	character_modifier = {
+		prowess = 2
+	}
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+		add_trait_force_tooltip = mage
+		add_trait_force_tooltip = mana
+	}
+}
+
+flame_aura_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = elemental_magic
+	position = { 0 1.25 }
+	icon = node_diplomacy
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	
+	parent = elemental_mage_perk
+}
+
+
+flaming_weapons_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = elemental_magic
+	position = { 0 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	
+	parent = flame_aura_perk
+}
+
+
+living_earthworks_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = elemental_magic
+	position = { 2 1.25 }
+	icon = node_diplomacy
+	
+	parent = elemental_mage_perk
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+golem_creation_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = elemental_magic
+	position = { 2 2.5 }
+	icon = node_diplomacy
+	
+	parent = living_earthworks_perk
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = golem_creation_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+control_water_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = elemental_magic
+	position = { 4 1.25 }
+	icon = node_diplomacy
+	
+	
+	
+	character_modifier = {
+		no_water_crossing_penalty = yes
+	}
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	
+	parent = elemental_mage_perk
+}
+
+
+drought_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = elemental_magic
+	position = { 4 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = control_water_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+elemental_warrior_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = elemental_magic
+	position = { 2 3.75 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = flaming_weapons_perk
+	parent = golem_creation_perk
+	parent = drought_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+lord_of_the_elements_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = elemental_magic
+	position = { 2 5 }
+	icon = lord_of_the_elements
+	
+	
+	
+	parent = elemental_warrior_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = lord_of_the_elements_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+		add_trait_force_tooltip = lord_of_the_elements
+	}
+}

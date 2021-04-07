@@ -1,0 +1,295 @@
+﻿life_mage_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = life_magic
+	position = { 2 0 }
+	icon = node_diplomacy
+	
+	auto_selection_weight = {
+		value = 0
+		if = {
+			limit = {
+				has_trait = magic_potential
+			}
+			add = 9999
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+		add_trait_force_tooltip = mage
+		add_trait_force_tooltip = mana
+	}
+	character_modifier = {
+		health = 0.1
+	}
+}
+
+inward_reflection_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = life_magic
+	position = { 0 1.25 }
+	icon = node_diplomacy
+	
+	
+	
+	character_modifier = {
+		health = 0.5
+		life_expectancy = 20
+	}
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	
+	parent = life_mage_perk
+}
+
+
+inward_perfection_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = life_magic
+	position = { 0 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = inward_reflection_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	
+	character_modifier = {
+		health = 0.5
+		life_expectancy = 20
+		no_prowess_loss_from_age = yes
+	}
+}
+
+heal_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = life_magic
+	position = { 2 1.25 }
+	icon = node_diplomacy
+	
+	parent = life_mage_perk
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = heal_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+greater_heal_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = life_magic
+	position = { 2 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = heal_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = greater_heal_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+battlefield_life_mage_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = life_magic
+	position = { 4 1.25 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = life_mage_perk
+	
+	character_modifier = {
+		hard_casualty_modifier = -0.3
+	}
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+greater_battlefield_life_mage_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = life_magic
+	position = { 4 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = battlefield_life_mage_perk
+	
+	character_modifier = {
+		hard_casualty_modifier = -0.3
+	}
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+purity_of_body_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = life_magic
+	position = { 2 3.75 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = inward_perfection_perk
+	parent = greater_heal_perk
+	parent = greater_battlefield_life_mage_perk
+	
+	character_modifier = {
+		life_expectancy = 10
+	}
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = purity_of_body_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+		add_character_flag = immune_to_disease
+	}
+}
+
+
+avatar_of_life_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = life_magic
+	position = { 2 5 }
+	icon = avatar_of_life
+	
+	
+	
+	parent = purity_of_body_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = avatar_of_life_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+		add_trait_force_tooltip = avatar_of_life
+	}
+}
+

@@ -1,0 +1,61 @@
+visual_traits_undead = {
+
+	undead = {
+
+		dna_modifiers = {
+			color = {
+				gene = skin_color
+				# template = skin_color
+				#mode = add			#not supported for color genes
+				#mode = replace		#overwrite this gene with palette coordinates specified here
+				#mode = modify		#adds x and y to the dna-gene's values
+				mode = modify
+				
+				x = -1.0
+				y = -1.0
+			}
+			color = {
+				gene = hair_color
+				# template = hair_color
+				#mode = add			#not supported for color genes
+				#mode = replace		#overwrite this gene with palette coordinates specified here
+				#mode = modify		#adds x and y to the dna-gene's values
+				mode = modify
+					
+				x = -1.0
+				y = -1.0
+			}
+			color = {
+				gene = eye_color
+				# template = hair_color
+				#mode = add			#not supported for color genes
+				#mode = replace		#overwrite this gene with palette coordinates specified here
+				#mode = modify		#adds x and y to the dna-gene's values
+				mode = modify
+					
+				x = -1.0
+				y = -1.0
+			}
+			accessory = {
+				mode = modify				
+				gene = eye_accessory
+				template = bloodshot_eyes
+				value = 0.5
+			}
+			morph = {
+				mode = add
+				gene = gene_illness
+				value = 1.0
+				template = illness
+			}
+		}
+
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_trait = undead
+			}
+		}
+	}
+}

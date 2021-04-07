@@ -1,0 +1,12 @@
+change_mage_xp = {
+	if = {
+		limit = {
+			NOT = { exists = var:mage_xp }
+		}
+		set_variable = {
+			name = mage_xp
+			value = 0
+		}
+	}
+	change_variable = { name = mage_xp add = $VALUE$ }
+}

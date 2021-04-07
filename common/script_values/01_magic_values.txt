@@ -1,0 +1,37 @@
+mage_level = {
+	value = var:mage_xp
+	if = {
+		limit = { has_trait = magic_potential_1 }
+		divide = 150
+	}
+	if = {
+		limit = { has_trait = magic_potential_2 }
+		divide = 100
+	}
+	if = {
+		limit = { has_trait = magic_potential_3 }
+		divide = 75
+	}
+	add = 1
+}
+
+mage_xp_per_perk = 15
+
+max_mana_per_perk = 30
+
+mana_gen_per_perk = 3
+
+arcana_mage_xp_per_perk = {
+	value = mage_xp_per_perk
+	multiply = 2
+}
+
+arcana_max_mana_per_perk = {
+	value = max_mana_per_perk
+	multiply = 2
+}
+
+arcana_mana_gen_per_perk = {
+	value = mana_gen_per_perk
+	multiply = 2
+}

@@ -1,0 +1,288 @@
+biomancy_mage_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = biomancy_magic
+	position = { 2 0 }
+	icon = node_diplomacy
+	
+	
+	
+	auto_selection_weight = {
+		value = 11
+		if = {
+			limit = {
+				has_trait = magic_potential
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
+	effect = {
+		custom_description_no_bullet = {
+			text = mage_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+		add_trait_force_tooltip = mage
+		add_trait_force_tooltip = mana
+	}
+	character_modifier = {
+		life_expectancy = 2
+	}
+}
+
+improve_trait_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = biomancy_magic
+	position = { 0 1.25 }
+	icon = node_diplomacy
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = improve_trait_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	
+	parent = biomancy_mage_perk
+}
+
+
+perfect_trait_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = biomancy_magic
+	position = { 0 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = perfect_trait_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	
+	parent = improve_trait_perk
+}
+
+
+fertility_control_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = biomancy_magic
+	position = { 2 1.25 }
+	icon = node_diplomacy
+	
+	parent = biomancy_mage_perk
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = fertility_control_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+impregnate_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = biomancy_magic
+	position = { 2 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = fertility_control_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = impregnate_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+weaken_trait_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = biomancy_magic
+	position = { 4 1.25 }
+	icon = node_diplomacy
+	
+	
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = weaken_trait_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+	
+	parent = biomancy_mage_perk
+}
+
+
+criple_trait_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = biomancy_magic
+	position = { 4 2.5 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = weaken_trait_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = criple_trait_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+sculpter_of_flesh_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = biomancy_magic
+	position = { 2 3.75 }
+	icon = node_diplomacy
+	
+	
+	
+	parent = perfect_trait_perk
+	parent = impregnate_perk
+	parent = criple_trait_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = sculpter_of_flesh_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+	}
+}
+
+
+architect_of_bloodlines_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = biomancy_magic
+	position = { 2 5 }
+	icon = architect_of_bloodlines
+	
+	
+	
+	parent = sculpter_of_flesh_perk
+	
+	effect = {
+		custom_description_no_bullet = {
+			text = architect_of_bloodlines_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mana_gen_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = max_mana_magic_perk_effect
+		}
+		custom_description_no_bullet = {
+			text = mage_xp_magic_perk_effect
+		}
+		change_max_mana = { VALUE = max_mana_per_perk }
+		change_mage_xp = { VALUE = mage_xp_per_perk }
+		change_mana_gen = { VALUE = mana_gen_per_perk }
+		add_trait_force_tooltip = architect_of_bloodlines
+	}
+}

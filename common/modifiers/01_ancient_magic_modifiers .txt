@@ -1,0 +1,133 @@
+magic_haste_modifier = {
+	icon = martial_positive
+	movement_speed = 0.3
+	stacking = yes
+}
+
+golem_cooldown_modifier = {
+	icon = martial_negative
+}
+
+lava_golem_cooldown_modifier = {
+	icon = martial_negative
+}
+
+undead_horde_cooldown_modifier = {
+	icon = martial_negative
+}
+
+drained_modifier = {
+	icon = health_negative
+	health = -1.5
+}
+
+stolen_lifeforce_modifier = {
+	icon = health_positive
+	health = 1.5
+}
+
+biomantic_fertility_modifier = {
+	icon = health_positive
+	fertility = 10
+}
+
+biomantic_infertility_modifier = {
+	icon = health_negative
+	fertility = -10
+}
+
+beguiling_aura_modifier = {
+	icon = martial_positive
+	general_opinion = 3
+	stacking = yes
+}
+
+enchanting_aura_modifier = {
+	icon = martial_positive
+	hostile_scheme_resistance_mult = 0.05
+	stacking = yes
+}
+
+glimpse_the_future_modifier = {
+	icon = martial_positive
+	cultural_head_fascination_mult = 0.2
+	stacking = yes
+}
+
+finacial_times_modifier = {
+	icon = martial_positive
+	monthly_income_mult = 0.1
+	stacking = yes
+}
+
+celerity_modifier = {
+	icon = martial_positive
+	prowess = 2
+	stacking = yes
+}
+
+slowness_modifier = {
+	icon = martial_positive
+	prowess = 2
+	stacking = yes
+}
+
+mass_slowness_modifier = {
+	icon = martial_positive
+	advantage = 1
+	hard_casualty_modifier = -0.1
+	stacking = yes
+}
+
+temporal_manipulation_modifier = {
+	icon = martial_positive
+	build_speed = -0.05
+	stacking = yes
+}
+
+flame_aura_modifier = {
+	icon = martial_positive
+	prowess = 2
+	stacking = yes
+}
+
+flaming_weapons_modifier = {
+	icon = martial_positive
+	advantage = 1
+	enemy_hard_casualty_modifier = 0.1
+	stacking = yes
+}
+
+living_earthworks_modifier = {
+	icon = martial_positive
+	fort_level = 0.5
+	stacking = yes
+}
+
+control_water_modifier = {
+	icon = martial_positive
+	naval_movement_speed_mult = 0.1
+	stacking = yes
+}
+
+drought_modifier = {
+	icon = martial_positive
+	siege_phase_time = -0.1
+	stacking = yes
+}
+
+elemental_warrior_modifier = {
+	icon = martial_positive
+	siege_phase_time = -0.1
+	naval_movement_speed_mult = 0.1
+	fort_level = 0.5
+	enemy_hard_casualty_modifier = 0.1
+	prowess = 2
+	stacking = yes
+}
+
+aura_of_death_modifier = {
+	icon = martial_positive
+	dread_baseline_add = 5
+	stacking = yes
+}
