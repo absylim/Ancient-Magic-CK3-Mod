@@ -278,6 +278,7 @@ gift_of_unlife_interaction = {
 		}
 		scope:recipient = {
 			add_trait = undead
+			add_character_flag = immune_to_disease
 		}
 	}
 }
