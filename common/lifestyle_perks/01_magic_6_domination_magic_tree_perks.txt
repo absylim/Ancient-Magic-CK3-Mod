@@ -5,36 +5,12 @@ domination_mage_perk = {
 	icon = node_diplomacy
 	
 	auto_selection_weight = {
-		value = 11
+		value = 0
 		if = {
 			limit = {
 				has_trait = magic_potential
 			}
-			add = 1989
-		}
-		if = {
-			limit = {
-				has_trait = shy
-			}
-			multiply = 2
-		}
-		if = {
-			limit = {
-				has_trait = paranoid
-			}
-			multiply = 2
-		}
-		if = {
-			limit = {
-				has_trait = lustful
-			}
-			multiply = 2
-		}
-		if = {
-			limit = {
-				has_trait = deceitful
-			}
-			multiply = 2
+			add = 9999
 		}
 		if = {
 			limit = {
