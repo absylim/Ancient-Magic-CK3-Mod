@@ -1394,6 +1394,7 @@ ancient_magic_spellbook_events.502 = {
 		}
 		change_mana = { VALUE = -600 }
 		add_trait = undead
+		add_character_flag = immune_to_disease
 	}
 	
 	option = {
