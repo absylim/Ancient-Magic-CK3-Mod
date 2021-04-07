@@ -44,7 +44,7 @@ death_mage_perk = {
 		}
 		if = {
 			limit = {
-				NOT = { is_immortal }
+				NOT = { is_immortal = yes }
 			}
 			multiply = 2
 		}
