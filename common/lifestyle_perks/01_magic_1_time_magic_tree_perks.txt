@@ -5,12 +5,42 @@
 	icon = node_diplomacy
 	
 	auto_selection_weight = {
-		value = 0
+		value = 11
 		if = {
 			limit = {
 				has_trait = magic_potential
 			}
-			add = 9999
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = ambitious
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = greedy
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = temperate
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = patient
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				NOT = { is_immortal }
+			}
+			multiply = 2
 		}
 		if = {
 			limit = {
