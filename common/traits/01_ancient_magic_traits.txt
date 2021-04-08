@@ -2,6 +2,8 @@ immortal = {
 	index = 9001
 	
 	immortal = yes
+	
+	ruler_designer_cost = 100
 }
 
 magic_potential_1 = {
@@ -9,6 +11,8 @@ magic_potential_1 = {
 	
 	name = trait_magic_potential_1
 	desc = trait_magic_potential_1_desc
+	
+	ruler_designer_cost = 20
 
 	group = magic_potential
 	level = 1
@@ -22,6 +26,8 @@ magic_potential_2 = {
 	
 	name = trait_magic_potential_2
 	desc = trait_magic_potential_2_desc
+	
+	ruler_designer_cost = 50
 
 	group = magic_potential
 	level = 2
@@ -35,6 +41,8 @@ magic_potential_3 = {
 	
 	name = trait_magic_potential_3
 	desc = trait_magic_potential_3_desc
+	
+	ruler_designer_cost = 80
 
 	group = magic_potential
 	level = 3
@@ -45,12 +53,16 @@ magic_potential_3 = {
 
 architect_of_bloodlines = {
 	index = 9005
+	
+	ruler_designer_cost = 50
 }
 
 master_of_time = {
 	index = 9006
 	
 	immortal = yes
+	
+	ruler_designer_cost = 50
 }
 
 undead = {
@@ -65,14 +77,124 @@ undead = {
 }
 deacon_of_death = {
 	index = 9008
+	
+	ruler_designer_cost = 50
 }
 avatar_of_life = {
 	index = 9009
+	
+	ruler_designer_cost = 50
 }
 lord_of_the_elements = {
 	index = 9010
+	
+	ruler_designer_cost = 50
 }
 master_of_puppets = {
 	index = 9011
+	
+	ruler_designer_cost = 50
+}
+
+##############################################
+############## EDUCATIONS ####################
+##############################################
+
+#Arcane Education
+education_arcane_1 = {
+	index = 9101
+	minimum_age = 16
+	learning = 2
+	education = yes
+	monthly_ancient_magic_lifestyle_xp_gain_mult = 0.1
+	
+	ruler_designer_cost = 0
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_education_arcane_1_desc
+			}
+			desc = trait_education_arcane_1_character_desc
+		}
+	}
+
+	group = education_arcane
+	level = 1
+}
+education_arcane_2 = {
+	index = 9102
+	minimum_age = 16
+	learning = 4
+	education = yes
+	monthly_ancient_magic_lifestyle_xp_gain_mult = 0.2
+	
+	ruler_designer_cost = 20
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_arcane_learning_2_desc
+			}
+			desc = trait_arcane_learning_2_character_desc
+		}
+	}
+
+	group = education_arcane
+	level = 2
+}
+education_arcane_3 = {
+	index = 9103
+	minimum_age = 16
+	learning = 6
+	education = yes
+	monthly_ancient_magic_lifestyle_xp_gain_mult = 0.3
+	
+	ruler_designer_cost = 40
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_arcane_learning_3_desc
+			}
+			desc = trait_arcane_learning_3_character_desc
+		}
+	}
+
+	group = education_arcane
+	level = 3
+}
+education_arcane_4 = {
+	index = 9104
+	minimum_age = 16
+	learning = 8
+	education = yes
+	monthly_ancient_magic_lifestyle_xp_gain_mult = 0.4
+	
+	ruler_designer_cost = 80
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_arcane_learning_4_desc
+			}
+			desc = trait_arcane_learning_4_character_desc
+		}
+	}
+	
+	group = education_arcane
+	level = 4
 }
 
