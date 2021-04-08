@@ -3,7 +3,7 @@
 #Arcane knowlage
 education_arcane = {
 	education = yes
-	focus_id = 10101
+	focus_id = 5
 	
 	skill = learning
 
