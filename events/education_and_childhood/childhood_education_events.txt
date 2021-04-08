@@ -93,6 +93,19 @@ childhood_education.0004 = {
 			}
 			add_character_flag = matching_education
 		}
+		else_if = { # Arcame education
+			limit = {
+				OR = {
+					has_education_arcane_trigger = yes
+					has_focus_arcane = yes
+					learning >= high_skill_rating
+				}
+				scope:ward = {
+					has_focus = education_arcane
+				}
+			}
+			add_character_flag = matching_education
+		}
 		else_if = {
 			limit = {
 				OR = {
@@ -106,6 +119,7 @@ childhood_education.0004 = {
 			}
 			add_character_flag = matching_education
 		}
+		
 		if = {
 			limit = {
 				OR = {
@@ -161,6 +175,19 @@ childhood_education.0004 = {
 		else_if = {
 			limit = {
 				OR = {
+					has_education_arcane_trigger = yes
+					has_focus_arcane = yes
+					learning >= high_skill_rating
+				}
+				scope:ward = {
+					has_character_flag = arcane_previous_education
+				}
+			}
+			add_character_flag = previously_matching_education
+		}
+		else_if = {
+			limit = {
+				OR = {
 					has_education_learning_trigger = yes
 					has_focus_learning = yes
 					learning >= high_skill_rating
@@ -186,6 +213,7 @@ childhood_education.0004 = {
 			remove_character_flag = diplomacy_previous_education
 			remove_character_flag = learning_previous_education
 			remove_character_flag = stewardship_previous_education
+			remove_character_flag = arcane_previous_education
 		}
 	}
 }
@@ -199,6 +227,7 @@ childhood_education.0005 = {
 			has_focus = education_stewardship
 			has_focus = education_learning
 			has_focus = education_intrigue
+			has_focus = education_arcane
 		}
 	}
 	immediate = {
