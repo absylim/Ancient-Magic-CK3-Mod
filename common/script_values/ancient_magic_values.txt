@@ -1,3 +1,10 @@
+# No-brainer value in a magic mod.
+# Uses - Is a character even possibly a mage? 'mage_potency > 0' Is the character not a mage? 'mage_potency < 1' How much potential does this mage have? 'mage_potency >= x'
+mage_potency = {
+	value = 0
+	if = { limit = { has_trait = magic_potential_1 } value = 1 } if = { limit = { has_trait = magic_potential_2 } value = 2 } if = { limit = { has_trait = magic_potential_3 } value = 3 }
+}
+
 mage_level = {
 	value = var:mage_xp
 	if = {
