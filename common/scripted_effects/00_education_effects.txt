@@ -999,6 +999,30 @@ display_correct_education_trait_gain_tooltip_effect = {
 			add_trait_force_tooltip = education_learning_4
 		}
 	}
+	if = { # Arcane education
+		limit = { has_trait = education_arcane_1 }
+		show_as_tooltip = {
+			add_trait_force_tooltip = education_arcane_1
+		}
+	}
+	if = {
+		limit = { has_trait = education_arcane_2 }
+		show_as_tooltip = {
+			add_trait_force_tooltip = education_arcane_2
+		}
+	}
+	if = {
+		limit = { has_trait = education_arcane_3 }
+		show_as_tooltip = {
+			add_trait_force_tooltip = education_arcane_3
+		}
+	}
+	if = {
+		limit = { has_trait = education_arcane_4 }
+		show_as_tooltip = {
+			add_trait_force_tooltip = education_arcane_4
+		}
+	}
 	if = { # Knighthood innovation
 		limit = { has_trait = education_martial_prowess_1 }
 		show_as_tooltip = {
@@ -1322,6 +1346,13 @@ rank_up_education_effect = {
 				rank = 1
 			}
 		}
+		else_if = {
+			limit = { has_trait = education_arcane }
+			change_trait_rank = {
+				trait = education_arcane
+				rank = 1
+			}
+		}
 	}
 }
 
@@ -1364,6 +1395,21 @@ results_of_university_education_points_effect = {
 			change_variable = {
 				name = education_learning_variable
 				add = 12 #They should reach the top if they're not completely dumb
+			}
+		}
+		else_if = {
+			limit = { has_focus = education_arcane }
+			change_variable = {
+				name = education_learning_variable
+				add = 8 #They should reach the top if they're not completely dumb
+			}
+			change_variable = {
+				name = education_martial_variable
+				add = 2
+			}
+			change_variable = {
+				name = education_diplomacy_variable
+				add = 2
 			}
 		}
 		remove_character_flag = studying_at_university
@@ -1473,6 +1519,31 @@ dynasty_legacy_education_boost_effect = {
 					change_variable = {
 						name = education_learning_variable
 						add = 3
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_focus = education_arcane }
+			random_list = {
+				60 = {
+					change_variable = {
+						name = education_learning_variable
+						add = 2
+					}
+					change_variable = {
+						name = education_martial_variable
+						add = 1
+					}
+				}
+				40 = {
+					change_variable = {
+						name = education_learning_variable
+						add = 3
+					}
+					change_variable = {
+						name = education_martial_variable
+						add = 2
 					}
 				}
 			}
