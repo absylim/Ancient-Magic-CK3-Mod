@@ -1,4 +1,4 @@
-quarterly_playable_pulse = {
+﻿quarterly_playable_pulse = {
 	events = {
 		ancient_magic_aura_update_events.001
 		ancient_magic_mana_gen_checks_events.001
@@ -8,5 +8,72 @@ quarterly_playable_pulse = {
 		ancient_magic_mana_gen_checks_events.001
 		delay = { months = 3 }
 		ancient_magic_mana_gen_checks_events.001
+	}
+}
+
+#Check immortals to see if they've been initialized
+random_yearly_everyone_pulse = {
+	on_actions = {
+		check_lifetime_flags_for_immortal
+	}
+}
+
+check_lifetime_flags_for_immortal = {
+	trigger = {
+		is_immortal = yes
+		is_ai = no # Because they aren't real people :(
+		NOT = { has_game_rule = none_immortal_lifetime_events_reset }
+		immortal_has_lifetime_flags = yes
+	}
+	effect = {
+		add_immortal_years_since_lifetime_reset = yes
+		if = {
+			limit = {
+				has_game_rule = 1_immortal_lifetime_events_reset
+				var:immortal_years_since_lifetime_reset >= 1
+			}
+			reset_immortal_years_since_lifetime_reset = yes
+			immortal_remove_lifetime_flags = yes
+		}
+		else_if = {
+			limit = {
+				has_game_rule = 10_immortal_lifetime_events_reset
+				var:immortal_years_since_lifetime_reset >= 10
+			}
+			reset_immortal_years_since_lifetime_reset = yes
+			immortal_remove_lifetime_flags = yes
+		}
+		else_if = {
+			limit = {
+				has_game_rule = 25_immortal_lifetime_events_reset
+				var:immortal_years_since_lifetime_reset >= 25
+			}
+			reset_immortal_years_since_lifetime_reset = yes
+			immortal_remove_lifetime_flags = yes
+		}
+		else_if = {
+			limit = {
+				has_game_rule = 50_immortal_lifetime_events_reset
+				var:immortal_years_since_lifetime_reset >= 50
+			}
+			reset_immortal_years_since_lifetime_reset = yes
+			immortal_remove_lifetime_flags = yes
+		}
+		else_if = {
+			limit = {
+				has_game_rule = 75_immortal_lifetime_events_reset
+				var:immortal_years_since_lifetime_reset >= 75
+			}
+			reset_immortal_years_since_lifetime_reset = yes
+			immortal_remove_lifetime_flags = yes
+		}
+		else_if = {
+			limit = {
+				has_game_rule = 100_immortal_lifetime_events_reset
+				var:immortal_years_since_lifetime_reset >= 100
+			}
+			reset_immortal_years_since_lifetime_reset = yes
+			immortal_remove_lifetime_flags = yes
+		}
 	}
 }
