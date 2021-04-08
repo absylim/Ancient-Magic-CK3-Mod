@@ -1,0 +1,10 @@
+has_arcane_education_affinity_childhood_trait_trigger = {
+	OR = {
+		has_trait = genius
+		has_trait = magic_potential
+	}
+}
+
+has_arcane_education_disaffinity_childhood_trait_trigger = {
+	has_trait = lazy
+}
