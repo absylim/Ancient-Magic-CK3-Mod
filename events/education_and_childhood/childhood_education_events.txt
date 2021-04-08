@@ -1,6 +1,6 @@
-#Education events for children
+﻿#Education events for children
 
-namespace = ancient_magic_childhood_education
+namespace = childhood_education
 
 ####################################################################
 
@@ -12,25 +12,25 @@ namespace = ancient_magic_childhood_education
 
 
 #Notification event for educator about child switching focus
-ancient_magic_childhood_education.0004 = {
+childhood_education.0004 = {
 	type = character_event
-	title = ancient_magic_childhood_education.0004.t
+	title = childhood_education.0004.t
 	desc = {
-		desc = ancient_magic_childhood_education.0004.opening
+		desc = childhood_education.0004.opening
 		first_valid = {
 			triggered_desc = {
 				trigger= {
 					has_character_flag = matching_education
 				}
-				desc = ancient_magic_childhood_education.0004.desc1
+				desc = childhood_education.0004.desc1
 			}
 			triggered_desc = {
 				trigger= {
 					has_character_flag = previously_matching_education
 				}
-				desc = ancient_magic_childhood_education.0004.desc2
+				desc = childhood_education.0004.desc2
 			}
-			desc = ancient_magic_childhood_education.0004.desc_fallback
+			desc = childhood_education.0004.desc_fallback
 		}
 	}
 	theme = education
@@ -174,7 +174,7 @@ ancient_magic_childhood_education.0004 = {
 	}
 
 	option = {
-		name = ancient_magic_childhood_education.0004.a
+		name = childhood_education.0004.a
 	}
 
 	after = {
@@ -190,7 +190,7 @@ ancient_magic_childhood_education.0004 = {
 	}
 }
 
-ancient_magic_childhood_education.0005 = {
+childhood_education.0005 = {
 	hidden = yes
 	trigger = {
 		OR = {
@@ -214,7 +214,7 @@ ancient_magic_childhood_education.0005 = {
 # System by Petter Vilberg
 ########################
 
-ancient_magic_childhood_education.1001 = {
+childhood_education.1001 = {
 	hidden = yes
 
 	trigger = {
@@ -324,7 +324,7 @@ ancient_magic_childhood_education.1001 = {
 
 			#Send event about converting both
 			trigger_event = {
-				id = ancient_magic_childhood_education.1011
+				id = childhood_education.1011
 				days = { 1 100 }
 			}
 		}
@@ -335,7 +335,7 @@ ancient_magic_childhood_education.1001 = {
 
 			#Send event about converting faith
 			trigger_event = {
-				id = ancient_magic_childhood_education.1021
+				id = childhood_education.1021
 				days = { 1 100 }
 			}
 		}
@@ -346,7 +346,7 @@ ancient_magic_childhood_education.1001 = {
 
 			#Send event about converting culture
 			trigger_event = {
-				id = ancient_magic_childhood_education.1031
+				id = childhood_education.1031
 				days = { 1 100 }
 			}
 		}
@@ -355,10 +355,10 @@ ancient_magic_childhood_education.1001 = {
 
 
 #Double conversion
-ancient_magic_childhood_education.1011 = {
+childhood_education.1011 = {
 	type = character_event
-	title = ancient_magic_childhood_education.1011.t
-	desc = ancient_magic_childhood_education.1011.desc
+	title = childhood_education.1011.t
+	desc = childhood_education.1011.desc
 	theme = education
 	left_portrait = scope:guardian
 
@@ -375,7 +375,7 @@ ancient_magic_childhood_education.1011 = {
 	}
 
 	option = {
-		name = ancient_magic_childhood_education.1011.a
+		name = childhood_education.1011.a
 		set_character_faith = scope:guardian.faith
 		set_culture = scope:guardian.culture
 		hidden_effect = {
@@ -387,17 +387,17 @@ ancient_magic_childhood_education.1011 = {
 				}
 			}
 			scope:guardian = {
-				trigger_event = ancient_magic_childhood_education.1012
+				trigger_event = childhood_education.1012
 			}
 		}
 	}
 }
 
 #Message to Guardian
-ancient_magic_childhood_education.1012 = {
+childhood_education.1012 = {
 	type = character_event
-	title = ancient_magic_childhood_education.1012.t
-	desc = ancient_magic_childhood_education.1012.desc
+	title = childhood_education.1012.t
+	desc = childhood_education.1012.desc
 	theme = education
 	left_portrait = scope:ward
 
@@ -462,7 +462,7 @@ ancient_magic_childhood_education.1012 = {
 	}
 
 	option = {
-		name = ancient_magic_childhood_education.1012.a
+		name = childhood_education.1012.a
 		trigger = {
 			NOT = {
 				is_parent_of = scope:ward
@@ -471,7 +471,7 @@ ancient_magic_childhood_education.1012 = {
 	}
 
 	option = {
-		name = ancient_magic_childhood_education.1012.a
+		name = childhood_education.1012.a
 		trigger = {
 			is_parent_of = scope:ward
 		}
@@ -480,10 +480,10 @@ ancient_magic_childhood_education.1012 = {
 
 
 #Convert Faith
-ancient_magic_childhood_education.1021 = {
+childhood_education.1021 = {
 	type = character_event
-	title = ancient_magic_childhood_education.1021.t
-	desc = ancient_magic_childhood_education.1021.desc
+	title = childhood_education.1021.t
+	desc = childhood_education.1021.desc
 	theme = education
 	left_portrait = scope:guardian
 
@@ -500,21 +500,21 @@ ancient_magic_childhood_education.1021 = {
 	}
 
 	option = {
-		name = ancient_magic_childhood_education.1021.a
+		name = childhood_education.1021.a
 		set_character_faith = scope:guardian.faith
 		hidden_effect = {
 			scope:guardian = {
-				trigger_event = ancient_magic_childhood_education.1022
+				trigger_event = childhood_education.1022
 			}
 		}
 	}
 }
 
 #Message to Guardian
-ancient_magic_childhood_education.1022 = {
+childhood_education.1022 = {
 	type = character_event
-	title = ancient_magic_childhood_education.1022.t
-	desc = ancient_magic_childhood_education.1022.desc
+	title = childhood_education.1022.t
+	desc = childhood_education.1022.desc
 	theme = education
 	left_portrait = scope:ward
 
@@ -578,16 +578,16 @@ ancient_magic_childhood_education.1022 = {
 	}
 
 	option = {
-		name = ancient_magic_childhood_education.1022.a
+		name = childhood_education.1022.a
 	}
 }
 
 
 #Convert Culture
-ancient_magic_childhood_education.1031 = {
+childhood_education.1031 = {
 	type = character_event
-	title = ancient_magic_childhood_education.1031.t
-	desc = ancient_magic_childhood_education.1031.desc
+	title = childhood_education.1031.t
+	desc = childhood_education.1031.desc
 	theme = education
 	left_portrait = scope:guardian
 
@@ -604,21 +604,21 @@ ancient_magic_childhood_education.1031 = {
 	}
 
 	option = {
-		name = ancient_magic_childhood_education.1031.a
+		name = childhood_education.1031.a
 		set_culture = scope:guardian.culture
 		hidden_effect = {
 			scope:guardian = {
-				trigger_event = ancient_magic_childhood_education.1032
+				trigger_event = childhood_education.1032
 			}
 		}
 	}
 }
 
 #Message to Guardian
-ancient_magic_childhood_education.1032 = {
+childhood_education.1032 = {
 	type = character_event
-	title = ancient_magic_childhood_education.1032.t
-	desc = ancient_magic_childhood_education.1032.desc
+	title = childhood_education.1032.t
+	desc = childhood_education.1032.desc
 	theme = education
 	left_portrait = scope:ward
 
@@ -682,7 +682,7 @@ ancient_magic_childhood_education.1032 = {
 	}
 
 	option = {
-		name = ancient_magic_childhood_education.1032.a
+		name = childhood_education.1032.a
 	}
 }
 
@@ -694,7 +694,7 @@ ancient_magic_childhood_education.1032 = {
 #########################
 
 #Assign education focus
-ancient_magic_childhood_education.9001 = {
+childhood_education.9001 = {
 	hidden = yes
 	immediate = {
 		add_character_flag = natural_education_progression
@@ -709,7 +709,7 @@ ancient_magic_childhood_education.9001 = {
 
 
 #To gain education points
-ancient_magic_childhood_education.9002 = {
+childhood_education.9002 = {
 	hidden = yes
 
 	immediate = {
@@ -718,7 +718,7 @@ ancient_magic_childhood_education.9002 = {
 }
 
 #Patronage-focused / scholarly spouse may add points
-ancient_magic_childhood_education.9003 = {
+childhood_education.9003 = {
 	hidden = yes
 
 	immediate = {
@@ -727,7 +727,7 @@ ancient_magic_childhood_education.9003 = {
 }
 
 # Pedagogy effect
-ancient_magic_childhood_education.9004 = {
+childhood_education.9004 = {
 	hidden = yes
 
 	trigger = {
@@ -776,7 +776,7 @@ ancient_magic_childhood_education.9004 = {
 			80 = { }
 			4 = { # Gain Diplomacy
 				send_interface_toast = {
-					title = ancient_magic_childhood_education.9004.child_message
+					title = childhood_education.9004.child_message
 					left_icon = scope:guardian
 					
 					add_diplomacy_skill = 1
@@ -790,7 +790,7 @@ ancient_magic_childhood_education.9004 = {
 				scope:guardian = {
 					send_interface_message = {
 						type = event_diplomacy_good
-						title = ancient_magic_childhood_education.9004.guardian_message
+						title = childhood_education.9004.guardian_message
 						left_icon = scope:child
 
 						show_as_tooltip = {
@@ -809,7 +809,7 @@ ancient_magic_childhood_education.9004 = {
 			}
 			4 = { # Gain Martial
 				send_interface_toast = {
-					title = ancient_magic_childhood_education.9004.child_message
+					title = childhood_education.9004.child_message
 					left_icon = scope:guardian
 
 					add_martial_skill = 1
@@ -823,7 +823,7 @@ ancient_magic_childhood_education.9004 = {
 				scope:guardian = {
 					send_interface_message = {
 						type = event_martial_good
-						title = ancient_magic_childhood_education.9004.guardian_message
+						title = childhood_education.9004.guardian_message
 						left_icon = scope:child
 
 						show_as_tooltip = {
@@ -842,7 +842,7 @@ ancient_magic_childhood_education.9004 = {
 			}
 			4 = { # Gain Learning
 				send_interface_toast = {
-					title = ancient_magic_childhood_education.9004.child_message
+					title = childhood_education.9004.child_message
 					left_icon = scope:guardian
 
 					add_learning_skill = 1
@@ -856,7 +856,7 @@ ancient_magic_childhood_education.9004 = {
 				scope:guardian = {
 					send_interface_message = {
 						type = event_learning_good
-						title = ancient_magic_childhood_education.9004.guardian_message
+						title = childhood_education.9004.guardian_message
 						left_icon = scope:child
 
 						show_as_tooltip = {
@@ -875,7 +875,7 @@ ancient_magic_childhood_education.9004 = {
 			}
 			4 = { # Gain Intrigue
 				send_interface_toast = {
-					title = ancient_magic_childhood_education.9004.child_message
+					title = childhood_education.9004.child_message
 					left_icon = scope:guardian
 
 					add_intrigue_skill = 1
@@ -889,7 +889,7 @@ ancient_magic_childhood_education.9004 = {
 				scope:guardian = {
 					send_interface_message = {
 						type = event_intrigue_good
-						title = ancient_magic_childhood_education.9004.guardian_message
+						title = childhood_education.9004.guardian_message
 						left_icon = scope:child
 
 						show_as_tooltip = {
@@ -908,7 +908,7 @@ ancient_magic_childhood_education.9004 = {
 			}
 			4 = { # Gain Stewardship
 				send_interface_toast = {
-					title = ancient_magic_childhood_education.9004.child_message
+					title = childhood_education.9004.child_message
 					left_icon = scope:guardian
 
 					add_stewardship_skill = 1
@@ -922,7 +922,7 @@ ancient_magic_childhood_education.9004 = {
 				scope:guardian = {
 					send_interface_message = {
 						type = event_stewardship_good
-						title = ancient_magic_childhood_education.9004.guardian_message
+						title = childhood_education.9004.guardian_message
 						left_icon = scope:child
 
 						show_as_tooltip = {
@@ -941,7 +941,7 @@ ancient_magic_childhood_education.9004 = {
 			}
 			2 = { # Gain Prowess
 				send_interface_toast = {
-					title = ancient_magic_childhood_education.9004.child_message
+					title = childhood_education.9004.child_message
 					left_icon = scope:guardian
 					
 					add_prowess_skill = 1
@@ -955,7 +955,7 @@ ancient_magic_childhood_education.9004 = {
 				scope:guardian = {
 					send_interface_message = {
 						type = event_prowess_good
-						title = ancient_magic_childhood_education.9004.guardian_message
+						title = childhood_education.9004.guardian_message
 						left_icon = scope:child
 
 						show_as_tooltip = {
@@ -978,7 +978,7 @@ ancient_magic_childhood_education.9004 = {
 
 
 #To check if character needs education boost or not
-ancient_magic_childhood_education.9103 = {
+childhood_education.9103 = {
 	hidden = yes
 
 	trigger = {

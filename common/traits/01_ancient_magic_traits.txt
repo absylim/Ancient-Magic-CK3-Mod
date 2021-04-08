@@ -140,9 +140,9 @@ education_arcane_2 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_arcane_learning_2_desc
+				desc = trait_education_arcane_2_desc
 			}
-			desc = trait_arcane_learning_2_character_desc
+			desc = trait_education_arcane_2_character_desc
 		}
 	}
 
@@ -164,9 +164,9 @@ education_arcane_3 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_arcane_learning_3_desc
+				desc = trait_education_arcane_3_desc
 			}
-			desc = trait_arcane_learning_3_character_desc
+			desc = trait_education_arcane_3_character_desc
 		}
 	}
 
@@ -188,9 +188,9 @@ education_arcane_4 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_arcane_learning_4_desc
+				desc = trait_education_arcane_4_desc
 			}
-			desc = trait_arcane_learning_4_character_desc
+			desc = trait_education_arcane_4_character_desc
 		}
 	}
 	

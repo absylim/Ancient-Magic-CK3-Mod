@@ -1,14 +1,14 @@
 #Education focuses for Ancient Magic
 
 #Arcane knowlage
-arcane_learning = {
+education_arcane = {
 	education = yes
 	focus_id = 10101
 	
 	skill = learning
 
 	desc = {
-		desc = arcane_learning_desc
+		desc = education_arcane_desc
 		first_valid = {
 			triggered_desc = {
 				trigger = { has_arcane_education_affinity_childhood_trait_trigger = yes }
@@ -83,7 +83,7 @@ arcane_learning = {
 				}
 				random_relation = {
 					type = guardian
-					trigger_event = ancient_magic_childhood_education.0004
+					trigger_event = childhood_education.0004
 				}
 			}
 		}
