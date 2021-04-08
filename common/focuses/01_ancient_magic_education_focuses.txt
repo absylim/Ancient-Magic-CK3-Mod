@@ -1,11 +1,9 @@
 #Education focuses for Ancient Magic
 
-namespace = AMEdu
-
 #Arcane knowlage
 arcane_learning = {
 	education = yes
-	focus_id = AMEdu.01
+	focus_id = 10101
 	
 	skill = learning
 
