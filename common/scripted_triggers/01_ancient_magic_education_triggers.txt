@@ -8,3 +8,12 @@ has_arcane_education_affinity_childhood_trait_trigger = {
 has_arcane_education_disaffinity_childhood_trait_trigger = {
 	has_trait = lazy
 }
+
+has_education_arcane_trigger = {
+	OR = {
+		has_trait = education_arcane_1
+		has_trait = education_arcane_2
+		has_trait = education_arcane_3
+		has_trait = education_arcane_4
+	}
+}
