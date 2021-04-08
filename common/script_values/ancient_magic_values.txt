@@ -7,7 +7,7 @@ mage_potency = {
 
 # No-brainer value in a magic mod.
 # Uses - Is a character even possibly educated? 'mage_education > 0' Is the character not educated? 'mage_education < 1' How much education does this mage have? 'mage_education >= x'
-#mage_education = {
+#mage_education = { # UNCOMMENT WHEN SYSTEM IN PLACE!!!
 #	value = 0
 #	if = { limit = { has_trait = education_arcane_1 } value = 1 } if = { limit = { has_trait = education_arcane_2 } value = 2 } if = { limit = { has_trait = education_arcane_3 } value = 3 }
 #	if = { limit = { has_trait = education_arcane_4 } value = 4 }
