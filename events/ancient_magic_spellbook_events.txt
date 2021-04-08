@@ -1394,11 +1394,12 @@ ancient_magic_spellbook_events.502 = {
 		}
 		change_mana = { VALUE = -600 }
 		add_trait = undead
+		add_character_flag = immune_to_disease
 	}
 	
 	option = {
 		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.005 #add_character_flag = immune_to_disease if trait flag doesn't work
+		trigger_event = ancient_magic_spellbook_events.005
 	}
 }
 
@@ -1429,7 +1430,7 @@ ancient_magic_spellbook_events.503 = {
 	
 	option = {
 		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.005 #add_character_flag = immune_to_disease if trait flag doesn't work
+		trigger_event = ancient_magic_spellbook_events.005
 	}
 }
 

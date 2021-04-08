@@ -62,7 +62,6 @@ undead = {
 	general_opinion = -30
 	same_opinion = 30
 	dread_baseline_add = 10
-	flag = immune_to_disease # Add character flag doesn't work in this context
 }
 deacon_of_death = {
 	index = 9008
