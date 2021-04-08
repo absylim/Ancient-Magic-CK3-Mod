@@ -83,7 +83,7 @@ arcane_learning = {
 				}
 				random_relation = {
 					type = guardian
-					trigger_event = childhood_education.0004
+					trigger_event = ancient_magic_childhood_education.0004
 				}
 			}
 		}
