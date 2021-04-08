@@ -1,4 +1,4 @@
-change_mage_xp = {
+﻿change_mage_xp = {
 	if = {
 		limit = {
 			NOT = { exists = var:mage_xp }

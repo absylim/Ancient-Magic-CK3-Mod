@@ -1,4 +1,4 @@
-open_spellbook_decision = {
+﻿open_spellbook_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
 
 	ai_check_interval = 0

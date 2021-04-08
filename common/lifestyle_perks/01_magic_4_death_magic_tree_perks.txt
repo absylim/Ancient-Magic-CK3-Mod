@@ -1,4 +1,4 @@
-death_mage_perk = {
+﻿death_mage_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = death_magic
 	position = { 2 0 }

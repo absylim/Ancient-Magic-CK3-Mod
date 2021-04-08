@@ -1,4 +1,4 @@
-arcane_studies_perk = {
+﻿arcane_studies_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = advanced_arcana
 	position = { 2 0 }

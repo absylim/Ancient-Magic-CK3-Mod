@@ -1,4 +1,4 @@
-domination_mage_perk = {
+﻿domination_mage_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = domination_magic
 	position = { 2 0 }

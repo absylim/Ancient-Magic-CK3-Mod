@@ -1,4 +1,4 @@
-ancient_magic_academy_01 = {
+﻿ancient_magic_academy_01 = {
 	construction_time = slow_construction_time
 	
 	can_construct_potential = {

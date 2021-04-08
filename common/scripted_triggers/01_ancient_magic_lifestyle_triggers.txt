@@ -1,4 +1,4 @@
-has_focus_arcane = {
+﻿has_focus_arcane = {
 	OR = {
 		has_focus = magic_arcana_focus
 		has_focus = magic_meditation_focus

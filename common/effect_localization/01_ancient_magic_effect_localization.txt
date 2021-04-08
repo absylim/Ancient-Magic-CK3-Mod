@@ -1,4 +1,4 @@
-change_mana = {
+﻿change_mana = {
 	first_past = I_GAINED_MANA_EFFECT
 	first_past_neg = I_LOST_MANA_EFFECT
 	global_past = GAINED_MANA_EFFECT

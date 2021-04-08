@@ -1,4 +1,4 @@
-mage_level = {
+﻿mage_level = {
 	value = var:mage_xp
 	if = {
 		limit = { has_trait = magic_potential_1 }

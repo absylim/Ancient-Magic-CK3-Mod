@@ -1,4 +1,4 @@
-#Education focuses for Ancient Magic
+﻿#Education focuses for Ancient Magic
 
 #Arcane knowlage
 education_arcane = {

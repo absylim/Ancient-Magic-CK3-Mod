@@ -1,4 +1,4 @@
-immortal = {
+﻿immortal = {
 	index = 9001
 	
 	immortal = yes

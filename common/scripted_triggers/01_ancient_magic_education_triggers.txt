@@ -1,4 +1,4 @@
-#children
+﻿#children
 has_arcane_education_affinity_childhood_trait_trigger = {
 	OR = {
 		has_trait = intellect_good

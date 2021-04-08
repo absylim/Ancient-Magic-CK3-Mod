@@ -1,4 +1,4 @@
-biomancy_mage_perk = {
+﻿biomancy_mage_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = biomancy_magic
 	position = { 2 0 }
