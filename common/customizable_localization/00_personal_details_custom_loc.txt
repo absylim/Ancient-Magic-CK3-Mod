@@ -353,6 +353,12 @@ education_focus_child = {
 		}
 	}
 	text = {
+		localization_key = education_arcane_loc
+		trigger = {
+			exists = var:education_arcane_variable
+		}
+	}
+	text = {
 		localization_key = education_stewardship_loc
 		trigger = {
 			exists = var:education_stewardship_variable
