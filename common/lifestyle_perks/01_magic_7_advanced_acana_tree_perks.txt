@@ -12,9 +12,12 @@
 		value = 0
 		if = {
 			limit = {
-				has_trait = magic_potential
+				OR = {
+					has_trait = magic_potential	
+					has_trait = education_arcane
+				}
 			}
-			add = 9999
+			add = 0
 		}
 		if = {
 			limit = {
