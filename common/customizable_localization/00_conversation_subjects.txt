@@ -42,6 +42,14 @@
 		trigger = { has_education_intrigue_trigger = yes }
 		localization_key = education_conversation_subject_intrigue_2 #dagger-smiths
 	}
+	text = {
+		trigger = { has_education_arcane_trigger = yes }
+		localization_key = education_conversation_subject_arcane_1 #mistic covenant
+	}
+	text = {
+		trigger = { has_education_arcane_trigger = yes }
+		localization_key = education_conversation_subject_arcane_2 #arcane powers
+	}
 }
 
 #A subject of interest to a character, might contain pronouns such as "his wife"
