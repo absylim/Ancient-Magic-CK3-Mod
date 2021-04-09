@@ -1,6 +1,9 @@
 ﻿l_english:
 #traits
  trait_education_arcane_1:0 "Apprentice wizard"
+ trait_education_arcane_2:0 "Mediocre wizard"
+ trait_education_arcane_3:0 "Wizard"
+ trait_education_arcane_4:0 "Elite wizard"
 #events
 #education
  education_arcane:0 "Arcane Education" 
