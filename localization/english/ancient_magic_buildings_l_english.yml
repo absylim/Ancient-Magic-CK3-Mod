@@ -1,0 +1,16 @@
+﻿l_english:
+#buildings
+ building_type_ancient_magic_academy_01:0 "Arcane Univeristy"
+ building_type_ancient_magic_academy_01_desc:0 "A place to study the arcane arts"
+ building_ancient_magic_academy_01:0 "School of Magic"
+ building_ancient_magic_academy_01_desc:0 "A small repository of arcane technics"
+ building_ancient_magic_academy_02:0 "Magic Acamedy"
+ building_ancient_magic_academy_02_desc:0 "A great repository of arcane knowledge"
+ building_type_ancient_magic_mana_circle_01:0 "Mana Circle"
+ building_type_ancient_magic_mana_circle_01_desc:0 "A point of leyline convergence from which mana can be extracted"
+ building_ancient_magic_mana_circle_01:0 "Stone Circle"
+ building_ancient_magic_mana_circle_01_desc:0 "A cirle of arcane stones to focalise mana"
+ building_ancient_magic_mana_circle_02:0 "Standing Stone Circle"
+ building_ancient_magic_mana_circle_02_desc:0 "A circle of large standing stones to extract large amounts mana"
+ building_ancient_magic_mana_circle_03:0 "Great Henge"
+ building_ancient_magic_mana_circle_03_desc:0 "A circle of great dolmens able to pull great amouts of mana from natural leylines"
