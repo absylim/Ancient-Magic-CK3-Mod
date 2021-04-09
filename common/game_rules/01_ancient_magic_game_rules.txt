@@ -1,4 +1,4 @@
-PC_magic_level = {
+﻿PC_magic_level = {
 	default = PC_magic_level_decision
 
 	PC_magic_level_decision = {
@@ -59,4 +59,36 @@ NPC_magic_level = {
 	NPC_magic_level_3 = {
 
 	}	
+}
+
+enable_immortal_periodic_lifetime_events_reset = {
+	default = 75_immortal_lifetime_events_reset
+
+	none_immortal_lifetime_events_reset = {
+		# Just tells us not to reset
+	}
+
+	1_immortal_lifetime_events_reset = {
+		# Just tells us when to reset
+	}
+
+	10_immortal_lifetime_events_reset = {
+		# Just tells us when to reset
+	}
+
+	25_immortal_lifetime_events_reset = {
+		# Just tells us when to reset
+	}
+
+	50_immortal_lifetime_events_reset = {
+		# Just tells us when to reset
+	}
+
+	75_immortal_lifetime_events_reset = {
+		# Just tells us when to reset
+	}
+
+	100_immortal_lifetime_events_reset = {
+		# Just tells us when to reset
+	}
 }

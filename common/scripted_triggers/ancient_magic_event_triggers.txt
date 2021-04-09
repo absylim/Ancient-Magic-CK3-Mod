@@ -1,0 +1,13 @@
+﻿immortal_has_lifetime_flags = {
+	OR = {
+        # Thank you to Nope (Vampires and Lycans mod) for doing the
+        # work to find these flags. You saved me some time.
+		
+        has_character_flag = has_refunded_perks
+		has_character_flag = declared_major_religious_war_flag
+		has_character_flag = has_created_a_faith
+		has_character_flag = converted_culture_this_lifetime
+		has_character_flag = used_lifetime_invasion
+		has_character_flag = used_lifetime_subjugation
+	}
+}
