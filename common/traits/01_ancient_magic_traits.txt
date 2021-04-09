@@ -128,7 +128,8 @@ education_arcane_1 = {
 education_arcane_2 = {
 	index = 9102
 	minimum_age = 16
-	learning = 4
+	learning = 3
+	prowess = 1
 	education = yes
 	monthly_ancient_magic_lifestyle_xp_gain_mult = 0.2
 	
@@ -152,7 +153,8 @@ education_arcane_2 = {
 education_arcane_3 = {
 	index = 9103
 	minimum_age = 16
-	learning = 6
+	learning = 4
+	prowess = 2
 	education = yes
 	monthly_ancient_magic_lifestyle_xp_gain_mult = 0.3
 	
@@ -176,7 +178,8 @@ education_arcane_3 = {
 education_arcane_4 = {
 	index = 9104
 	minimum_age = 16
-	learning = 8
+	learning = 6
+	prowess = 4
 	education = yes
 	monthly_ancient_magic_lifestyle_xp_gain_mult = 0.4
 	
