@@ -2,7 +2,6 @@
 has_arcane_education_affinity_childhood_trait_trigger = {
 	OR = {
 		has_trait = intellect_good
-		has_trait = magic_potential
 		has_trait = curious
 		has_trait = pensive
 	}
@@ -22,7 +21,6 @@ had_arcane_education_affinity_childhood_trait_trigger = {
 		var:childhood_trait_type = flag:curious
 		
 		has_trait = intellect_good
-		has_trait = magic_potential
 	}
 }
 
