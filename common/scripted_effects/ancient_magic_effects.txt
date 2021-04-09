@@ -1,0 +1,45 @@
+﻿change_mage_xp = {
+	if = {
+		limit = {
+			NOT = { exists = var:mage_xp }
+		}
+		set_variable = {
+			name = mage_xp
+			value = 0
+		}
+	}
+	change_variable = { name = mage_xp add = $VALUE$ }
+}
+
+immortal_remove_lifetime_flags = {
+	if = { limit = { has_character_flag = has_refunded_perks } remove_character_flag = has_refunded_perks }
+	if = { limit = { has_character_flag = declared_major_religious_war_flag } remove_character_flag = declared_major_religious_war_flag }
+	if = { limit = { has_character_flag = has_created_a_faith } remove_character_flag = has_created_a_faith }
+	if = { limit = { has_character_flag = converted_culture_this_lifetime } remove_character_flag = converted_culture_this_lifetime }
+	if = { limit = { has_character_flag = used_lifetime_invasion } remove_character_flag = used_lifetime_invasion }
+	if = { limit = { has_character_flag = used_lifetime_subjugation } remove_character_flag = used_lifetime_subjugation }
+}
+
+init_immortal_years_since_lifetime_reset = {
+	if = {
+		limit = {
+			NOT = { exists = var:immortal_years_since_lifetime_reset }
+		}
+		set_variable = {
+			name = immortal_years_since_lifetime_reset
+			value = 0
+		}
+	}
+}
+
+reset_immortal_years_since_lifetime_reset = {
+	set_variable = {
+		name = immortal_years_since_lifetime_reset
+		value = 0
+	}
+}
+
+add_immortal_years_since_lifetime_reset = {
+	init_immortal_years_since_lifetime_reset = yes
+	change_variable = { name = immortal_years_since_lifetime_reset add = 1 }
+}
