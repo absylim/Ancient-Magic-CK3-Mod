@@ -1,4 +1,4 @@
-golem = {
+﻿golem = {
 	type = heavy_infantry
 	
 	can_recruit = no

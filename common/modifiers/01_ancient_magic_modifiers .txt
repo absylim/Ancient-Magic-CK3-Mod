@@ -1,4 +1,4 @@
-magic_haste_modifier = {
+﻿magic_haste_modifier = {
 	icon = martial_positive
 	movement_speed = 0.3
 	stacking = yes

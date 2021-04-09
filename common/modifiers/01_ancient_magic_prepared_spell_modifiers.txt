@@ -1,4 +1,4 @@
-entrance_spell_modifier = {
+﻿entrance_spell_modifier = {
 	icon = martial_positive
 }
 

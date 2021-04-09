@@ -1,4 +1,4 @@
-open_spellbook_interaction = {
+﻿open_spellbook_interaction = {
 	category = AMS_magic_interactions
 
 	desc = open_spellbook_interaction_desc

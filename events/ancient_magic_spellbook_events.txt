@@ -1,4 +1,4 @@
-namespace = ancient_magic_spellbook_events
+﻿namespace = ancient_magic_spellbook_events
 
 #magic type selection
 ancient_magic_spellbook_events.001 = {

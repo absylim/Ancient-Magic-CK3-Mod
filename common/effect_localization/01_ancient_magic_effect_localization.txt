@@ -1,4 +1,4 @@
-change_mana = {
+﻿change_mana = {
 	first_past = I_GAINED_MANA_EFFECT
 	first_past_neg = I_LOST_MANA_EFFECT
 	global_past = GAINED_MANA_EFFECT
@@ -34,15 +34,15 @@ greater_heal_perk_effect = {
 }
 
 golem_creation_perk_effect = {
-	gobal = GOLEM_CREATION_PERK_EFFECT
+	global = GOLEM_CREATION_PERK_EFFECT
 }
 
 avatar_of_life_perk_effect = {
-	gobal = AVATAR_OF_LIFE_PERK_EFFECT
+	global = AVATAR_OF_LIFE_PERK_EFFECT
 }
 
 purity_of_body_perk_effect = {
-	gobal = PURITY_OF_BODY_PERK_EFFECT
+	global = PURITY_OF_BODY_PERK_EFFECT
 }
 
 lord_of_the_elements_perk_effect = {

@@ -1,4 +1,4 @@
-domination_mage_perk = {
+﻿domination_mage_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = domination_magic
 	position = { 2 0 }
@@ -8,7 +8,10 @@ domination_mage_perk = {
 		value = 11
 		if = {
 			limit = {
-				has_trait = magic_potential
+				OR = {
+					has_trait = magic_potential	
+					has_trait = education_arcane
+				}
 			}
 			add = 1989
 		}

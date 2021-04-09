@@ -34,7 +34,7 @@
 		}
 	}
 	
-	focus_id = 10001
+	focus_id = 9501
 }
 
 magic_meditation_focus = {
@@ -62,7 +62,7 @@ magic_meditation_focus = {
 		}
 	}
 	
-	focus_id = 10002
+	focus_id = 9502
 }
 
 magic_mana_focus = {
@@ -88,5 +88,5 @@ magic_mana_focus = {
 		}
 	}
 	
-	focus_id = 10003
+	focus_id = 9503
 }

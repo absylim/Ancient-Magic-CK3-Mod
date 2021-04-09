@@ -1,4 +1,4 @@
-namespace = ancient_magic_gain_talent_events
+﻿namespace = ancient_magic_gain_talent_events
 
 ancient_magic_gain_talent_events.001 = {
 	title = ancient_magic_gain_talent_events.001.t

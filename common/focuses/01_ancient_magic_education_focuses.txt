@@ -1,0 +1,107 @@
+﻿#Education focuses for Ancient Magic
+
+#Arcane knowlage
+education_arcane = {
+	education = yes
+	focus_id = 5
+	
+	skill = learning
+
+	desc = {
+		desc = education_arcane_desc
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_arcane_education_affinity_childhood_trait_trigger = yes }
+				desc = education_arcane_tt.affinity
+			}
+			triggered_desc = {
+				trigger = { has_arcane_education_disaffinity_childhood_trait_trigger = yes }
+				desc = education_arcane_tt.disaffinity
+			}
+		}
+		desc = line_break
+	}
+
+	is_default = {
+		has_trait = magic_potential
+	}
+
+	is_good_for = {
+		has_arcane_education_affinity_childhood_trait_trigger = yes
+	}
+
+	is_bad_for = {
+		has_arcane_education_disaffinity_childhood_trait_trigger = yes
+	}
+	
+	on_change_to = {
+		if = {
+			limit = {
+				exists = var:education_point_gain_variable
+			}
+			change_variable = {
+				name = education_point_gain_variable
+				multiply = point_conversion_factor
+			}
+			set_variable = {
+				name = education_arcane_variable
+				value = var:education_point_gain_variable
+			}
+			remove_variable = education_point_gain_variable
+		}
+	}
+	
+	on_change_from = {
+		if = {
+			limit = {
+				is_alive = yes
+				is_adult = no
+			}
+			add_character_flag = arcane_previous_education
+			if = {
+				limit = {
+					has_variable = education_arcane_variable
+				}
+				set_variable = {
+					name = education_point_gain_variable
+					value = var:education_learning_variable
+				}
+				remove_variable = education_learning_variable
+			}
+			else = {
+				set_variable = {
+					name = education_point_gain_variable
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					any_relation = {
+						type = guardian
+						NOT = { is_parent_of = root }
+					}
+				}
+				random_relation = {
+					type = guardian
+					trigger_event = childhood_education.0004
+				}
+			}
+		}
+	}
+
+	auto_selection_weight = {
+		value = 100
+		if = {
+			limit = { has_arcane_education_affinity_childhood_trait_trigger = yes }
+			add = 900
+		}
+		if = {
+			limit = { has_arcane_education_disaffinity_childhood_trait_trigger = yes }
+			add = -900
+		}
+	}
+		
+	modifier = {
+		learning = 1
+	}
+}
