@@ -1,0 +1,14 @@
+﻿l_english:
+ arcane_good_trait_match_good_outcome:0 "Always the curious, knowledge-hungry child genial and magicaly gifted, [ROOT.Char.GetFirstName] has shown an affinity for arcane arts from an early age."
+ arcane_good_trait_match_bad_outcome:0 "Despite being a curious child, eager to learn and magicaly gifted, [ROOT.Char.GetFirstNamePossessive] attention drifted elsewhere as [ROOT.Char.GetSheHe] grew older."
+ arcane_bad_trait_match_good_outcome:0 "Despite always seeming like such an inattentive and not the brightest child, [ROOT.Char.GetFirstName] has proven that focused studiousness is not all that makes a mage."
+ arcane_bad_trait_match_bad_outcome:0 "Having been such an inattentive and not brightest child, it is not difficult to see why [ROOT.Char.GetFirstName] has had a hard time getting to grips with arcane."
+ arcane_neutral_trait_match_good_outcome:0 "With sufficient tutelage, even a child that has displayed little natural inclination towards arcane, such as [ROOT.Char.GetFirstName], can come to truly understand any spell and mystery."
+ arcane_neutral_trait_match_bad_outcome:0 "For the longest time I was hoping that good tutelage and some magic talent would be enough to teach [ROOT.Char.GetFirstName] the intricacies of any kind of scholarship. All efforts have come to naught, however."
+
+  
+ education_arcane_1_outcome_description:0 "The pursuit of knowledge of arcane never seemed to properly fasten root in [ROOT.Char.GetHerHis] mind, and now time spent among books and tomes seems to be more of a chore for [ROOT.Char.GetHerHim] than a joy."
+ education_arcane_2_outcome_description:0 "Hardly studious, [ROOT.Char.GetSheHe] at least managed to memorize certain spells. [ROOT.Char.GetSheHe|U] will probably never master more complex arcane arts, but [ROOT.Char.GetSheHe] might lern one or two."
+ education_arcane_3_outcome_description:0 "An avid learner, [ROOT.Char.GetSheHe] has become quite the purveyor of knowledge of arcane, and has proven [ROOT.Char.GetHerselfHimself] fully capable of structuring advanced spells and more complex arcane knowlage."
+ education_arcane_4_outcome_description:0 "[ROOT.Char.GetHerHis|U] understanding of arcane and mysterious is impressive, and [ROOT.Char.GetSheHe] often engages in debate with [ROOT.Char.GetHerHis] former teachers. Even at such a young age [ROOT.Char.GetSheHe] can be seen using more advanced spells and comming to underestand the unknown."
+
