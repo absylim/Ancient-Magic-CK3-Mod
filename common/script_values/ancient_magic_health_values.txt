@@ -1,0 +1,284 @@
+﻿### RECOVERY TIMES ###
+mana_devouring_min_recovery_time = minimum_recovery_time
+mana_devouring_max_recovery_time = 20950
+
+
+#################
+#	Weight
+################
+#These values are used to calculate the target weight that characters will trend towards once every three years
+
+character_weight_base_value = {
+	add = 0
+	#Any modifiers that will affect weight?
+	if = {
+		limit = {
+			is_ai = yes # Players gaining weight is handled through health.5004
+			has_character_modifier = gaining_weight_modifier
+		}
+		add = 35
+	}
+	if = {
+		limit = {
+			is_ai = yes # Players losing weight is handled through health.5005
+			has_character_modifier = losing_weight_modifier
+		}
+		add = -35
+	}
+	if = {
+		limit = {
+			has_character_modifier = fasting_bad_modifier
+		}
+		add = -10
+	}
+
+	#Any activities attended/other things that will affect weight?
+	if = {
+		limit = {
+			has_variable = character_weight_variable
+		}
+		add = var:character_weight_variable
+	}
+
+	# PRISON/STARVATION
+	if = {
+		limit = {
+			is_imprisoned = yes
+		}
+		if = {
+			limit = {
+				is_in_prison_type = dungeon
+			}
+			add = -75
+		}
+		else = {
+			add = -30
+		}
+	}
+
+	# DISEASE
+	if = {
+		limit = {
+			has_trait = consumption
+		}
+		add = -75
+	}
+	if = {
+		limit = {
+			has_trait = cancer
+		}
+		add = -50
+	}
+	if = {
+		limit = {
+			has_trait = great_pox
+		}
+		add = -35
+	}
+	if = {
+		limit = {
+			has_trait = leper
+		}
+		add = -15
+	}
+	if = {
+		limit = {
+			has_trait = mana_devouring_2
+		}
+		add = -75
+	}
+
+	########
+	#Trait check
+	########
+	#ADD
+	if = {
+		limit = { has_trait = gluttonous }
+		add = 50
+	}
+	if = {
+		limit = { has_trait = comfort_eater }
+		add = 25
+	}
+	if = {
+		limit = { has_trait = drunkard }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = hashishiyah }
+		add = 20
+	}
+	if = {
+		limit = { has_trait = lazy }
+		add = 10
+	}
+	if = {
+		limit = { has_trait = greedy }
+		add = 10
+	}
+	if = {
+		limit = { has_trait = calm }
+		add = 10
+	}
+	if = {
+		limit = { has_trait = trusting }
+		add = 10
+	}
+	if = {
+		limit = { has_trait = gregarious }
+		add = 10
+	}
+	if = {
+		limit = { has_trait = patient }
+		add = 5
+	}
+	if = {
+		limit = { has_trait = arrogant }
+		add = 5
+	}
+	if = {
+		limit = { has_trait = ambitious	}
+		add = 5
+	}
+
+	if = {
+		limit = {
+			has_trait = lifestyle_reveler
+		}
+		if = {
+			limit = {
+				has_trait = reveler_3
+			}
+			add = 15
+		}
+		else_if = {
+			limit = {
+				has_trait = reveler_2
+			}
+			add = 10
+		}
+		else = {
+			add = 5
+		}
+	}
+
+	#SUBTRACT
+	if = {
+		limit = { has_trait = shy }
+		add = -5
+	}	
+	if = {
+		limit = { has_trait = zealous }
+		add = -5
+	}
+	if = {
+		limit = { has_trait = craven }
+		add = -5
+	}
+	if = {
+		limit = { has_trait = impatient }
+		add = -10
+	}
+	if = {
+		limit = { has_trait = fickle}
+		add = -10
+	}
+	if = {
+		limit = { has_trait = vengeful }
+		add = -10
+	}
+	if = {
+		limit = { has_trait = wrathful }
+		add = -10
+	}
+	if = {
+		limit = { has_trait = humble }
+		add = -10
+	}
+	if = {
+		limit = { has_trait = content }
+		add = -15
+	}
+	if = {
+		limit = { has_trait = generous }
+		add = -15
+	}
+	if = {
+		limit = { has_trait = diligent }
+		add = -15 # Further 'moderation' impact below.
+	}
+	if = {
+		limit = { has_trait = temperate }
+		add = -20 # Further 'moderation' impact below.
+	}
+	if = {
+		limit = { has_trait = reclusive }
+		add = -20
+	}
+	if = {
+		limit = { has_trait = paranoid }
+		add = -25
+	}
+	if = {
+		limit = { has_trait = inappetetic }
+		add = -50
+	}
+
+	# MODERATION - reduces weight if overweight, and increases it if underweight
+	if = {
+		limit = {
+			has_trait = athletic
+		}
+		multiply = 0.8
+	}
+	if = {
+		limit = {
+			has_trait = physique_good_1
+		}
+		multiply = 0.9
+	}
+	if = {
+		limit = {
+			has_trait = physique_good_2
+		}
+		multiply = 0.8
+	}
+	if = {
+		limit = {
+			has_trait = physique_good_3
+		}
+		multiply = 0.7
+	}
+	if = {
+		limit = {
+			has_trait = temperate
+		}
+		multiply = 0.9
+	}
+	if = {
+		limit = {
+			has_trait = diligent
+		}
+		multiply = 0.9
+	}
+
+	#Bad physique has the opposite effect, making you skew even further towards extremes
+	if = {
+		limit = {
+			has_trait = physique_bad_1
+		}
+		multiply = 1.1
+	}
+	if = {
+		limit = {
+			has_trait = physique_bad_2
+		}
+		multiply = 1.2
+	}
+	if = {
+		limit = {
+			has_trait = physique_bad_3
+		}
+		multiply = 1.3
+	}
+}
