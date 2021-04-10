@@ -97,10 +97,47 @@ master_of_puppets = {
 }
 
 ##############################################
+############## HEALTH ########################
+##############################################
+
+mana_devouring_1 = {
+	index = 9051
+	
+	health = -1
+	prowess = -2
+	fertility = -0.1
+	learning = -3
+
+	health_trait = yes
+
+	dread_baseline_add = -10
+	dread_loss_mult = 1
+	
+	change_mana_gen = -50
+	
+	ruler_designer_cost = -15
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_ill_desc
+			}
+			desc = trait_ill_character_desc
+		}
+	}
+
+	ai_energy = -25
+	
+}
+
+##############################################
 ############## EDUCATIONS ####################
 ##############################################
 
-#Arcane Education
+#ARCANE OUTCOMES
 education_arcane_1 = {
 	index = 9101
 	minimum_age = 16
