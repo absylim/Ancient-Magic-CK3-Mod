@@ -32,10 +32,6 @@ can_contract_magical_disease_trigger = {
 	#No disease stacking
 	OR = {
 		can_get_non_epidemic_disease_trigger = yes
-		OR = {
-			scope:disease_type_for_trigger = flag:bubonic_plague
-			scope:disease_type_for_trigger = flag:smallpox
-		}
 	}
 
 	#Cooldown is over
@@ -46,3 +42,14 @@ can_contract_magical_disease_trigger = {
 	}
 }
 
+
+######################
+# TREATMENT TRIGGERS #
+######################
+
+
+has_treatable_magical_disease_trigger = {
+	OR = {
+		has_trait = mana_devouring
+	}
+}

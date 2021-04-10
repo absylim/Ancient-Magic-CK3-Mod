@@ -1,0 +1,501 @@
+﻿####################
+# DISEASE EFFECTS  #
+####################
+
+#Adds the disease in question and sends notifications to everyone who should know. Checks validity and sends treatment event. Needs the arguments DISEASE (trait name, only exception is early_great_pox - it should be added as great_pox and then the effect will figure out whether the character should have early_great_pox first) and TREATMENT_EVENT (yes/no). Does NOT send an event to the character who gets the disease.
+contract_magical_disease_effect = {
+	if = { #Is the disease valid?
+		limit = { can_contract__magical_disease_trigger = { DISEASE = $DISEASE$ } }
+
+		hidden_effect = {
+			#SET SCOPES
+			save_scope_as = sick_character
+
+			save_scope_value_as = {
+				name = disease_type
+				value = flag:$DISEASE$
+			}
+
+			save_temporary_scope_value_as = {
+				name = treatment_event
+				value = flag:$TREATMENT_EVENT$
+			}
+
+			#Data collection
+			disease_data_save_contraction_effect = { DISEASE = $DISEASE$ }
+
+
+			#TREATMENT EVENT
+			if = {
+				limit = {
+					scope:treatment_event = flag:yes
+					court_physician_available_trigger = yes
+				}
+
+				trigger_event = {
+					id = AMHealth.3100
+					days = 5
+				}
+			}
+			else_if = {
+				limit = { scope:treatment_event = flag:no } #This is just here to stop errors
+			}
+		}
+
+
+		#NON-CONTAGIOUS DISEASES
+		if = {
+			limit = {
+				OR = {
+					scope:disease_type = flag:mana_devouring
+				}
+			}
+
+			add_trait_force_tooltip = $DISEASE$
+		}
+		
+		#RECOVERY
+		if = { #mana devouring
+			limit = { scope:disease_type = flag:mana_devouring }
+			trigger_event = {
+				id = AMHealth.1101
+				days = { mana_devouring_recovery_min mana_devouring_recovery_max }
+			}
+		}
+
+		#NOTIFICATIONS: CONTAGIOUS DISEASE, FAMILY & SEX PARTNER STD, NOTIFICATIONS & LIEGE TREATMENT EVENTS
+
+		#List creation:
+		#Imprisoner/court owner if contagious
+		if = {
+			limit = {
+				OR = {
+					scope:disease_type = flag:smallpox
+					scope:disease_type = flag:bubonic_plague
+				}
+				is_ruler = no
+				has_health_court_owner_trigger = yes #Imprisoner or court owner
+			}
+			save_health_court_owner_effect = { SCOPE_NAME = health_court_owner }#Imprisoner or court owner
+
+			scope:health_court_owner = {
+				if = {
+					limit = { NOT = { is_in_list = disase_notification_list } }
+					add_to_temporary_list = disase_notification_list
+				}
+			}
+		}
+		#Sex partners if STD
+		if = {
+			limit = {
+				OR = {
+					scope:disease_type = flag:lovers_pox
+					scope:disease_type = flag:early_great_pox
+					scope:disease_type = flag:great_pox
+				}
+			}
+			every_consort = {
+				limit = {
+					#is_imprisoned = no
+					NOT = { is_in_list = disase_notification_list }
+				}
+				add_to_temporary_list = disase_notification_list
+			}
+			every_relation = {
+				type = lover
+				limit = {
+					#is_imprisoned = no
+					NOT = { is_in_list = disase_notification_list }
+				}
+				add_to_temporary_list = disase_notification_list
+			}
+		}
+		
+		#Family if the disease is somewhat dangerous
+		if = {
+			limit = {
+				sick_enough_for_relative_to_care_trigger = yes
+			}
+			every_parent = {
+				limit = {
+					is_landed = yes
+					NOT = { is_in_list = disase_notification_list }
+				}
+				add_to_temporary_list = disase_notification_list
+			}
+			every_spouse = {
+				limit = {
+					is_landed = yes
+					NOT = { is_in_list = disase_notification_list }
+				}
+				add_to_temporary_list = disase_notification_list
+			}
+			every_heir_title = {
+				limit = {
+					exists = holder
+				}
+				holder = {
+					if = {
+						limit = {
+							player_heir = scope:sick_character
+							NOT = { is_in_list = disase_notification_list }
+						}
+						add_to_temporary_list = disase_notification_list
+					}
+				}
+			}
+		}
+		
+
+		#Go through list and send notifications
+		every_in_list = {
+			list = disase_notification_list
+
+			#Send a contagion warning/treatment event
+			if = {
+				limit = {
+					OR = {
+						scope:disease_type = flag:smallpox
+						scope:disease_type = flag:bubonic_plague
+					}
+					scope:sick_character = { has_health_court_owner_trigger = yes }
+					trigger_if = {
+						limit = { exists = scope:trigger_health_court_owner } #Set by trigger above
+						this = scope:trigger_health_court_owner
+					}
+				}
+				#Event if important sick character or this is start of outbreak
+				if = {
+					limit = {
+						OR = {
+							has_new_contagious_disease_outbreak_story_trigger = yes
+							trigger_if = {
+								limit = { exists = player_heir }
+								player_heir = scope:sick_character
+							}
+							is_parent_of = scope:sick_character
+							is_spouse_of = scope:sick_character
+						}
+					}
+					trigger_event = health.2101
+				}
+				#Otherwise feed message
+				else_if = {
+					limit = { is_ai = no } #AIs don't care about updates
+					save_temporary_scope_as = message_receiver
+					if = {
+						limit = {
+							scope:disease_type = flag:smallpox
+						}
+						send_interface_message = {
+							title = health_smallpox_spreads_message
+							left_icon = scope:sick_character
+							show_as_tooltip = {
+								scope:sick_character = { add_trait_force_tooltip = $DISEASE$ }
+							}
+						}
+					}
+					else = {
+						send_interface_message = {
+							title = health_bubonic_plague_spreads_message
+							left_icon = scope:sick_character
+							show_as_tooltip = {
+								scope:sick_character = { add_trait_force_tooltip = $DISEASE$ }
+							}
+						}
+					}
+				}
+			}
+			#Send a STD warning event
+			else_if = {
+				limit = {
+					OR = {
+						scope:disease_type = flag:lovers_pox
+						scope:disease_type = flag:early_great_pox
+						scope:disease_type = flag:great_pox
+					}
+					OR = {
+						is_consort_of = scope:sick_character
+						has_relation_lover = scope:sick_character
+					}
+				}
+				scope:sick_character = { save_scope_as = std_partner }
+				if = {
+					limit = { scope:disease_type = flag:great_pox }
+					trigger_event = {
+						id = health.2002 #Partner has great pox
+						days = { 7 14 }
+					}
+				}
+				else = {
+					trigger_event = {
+						id = health.2001 #Partner has lover's pox/early great great pox
+						days = { 7 14 }
+					}
+				}
+			}
+			#Send a notification/treatment event to family
+			else_if = {
+				limit = {
+					OR = {
+						#It's a player heir
+						trigger_if = {
+							limit = { exists = player_heir }
+							player_heir = scope:sick_character
+						}
+						#Or a child/spouse who is really sick or this character has to pick their treatment
+						AND = {
+							OR = {
+								is_parent_of = scope:sick_character
+								is_spouse_of = scope:sick_character
+							}
+							OR = {
+								#The sick character is dying
+								health < death_chance_dying_health
+								#This character gets to pick sick character's treatment
+								trigger_if = {
+									limit = { exists = scope:sick_character.liege }
+									this = scope:sick_character.liege
+									scope:sick_character = { liege_picks_treatment_trigger = yes }
+								}
+							}
+						}
+					}
+				}
+				trigger_event = {
+					id = health.2201 #Important character is sick
+					days = 3
+				}
+				#set a variable, so you are sure to get a follow-up
+				if = {
+					limit = { is_ai = no }
+					scope:sick_character = {
+						add_to_variable_list = {
+							name = recovery_event_receivers
+							target = prev
+						}
+					}
+				}
+			}
+			#Send a feed message
+			else = {	
+				save_scope_as = message_receiver
+				send_interface_message = {
+					left_icon = scope:sick_character
+					title = disease_contraction_feed_message.t
+					show_as_tooltip = {
+						scope:sick_character = {	
+							if = {
+								limit = { scope:disease_type = flag:early_great_pox }
+								add_trait_force_tooltip = early_great_pox
+							}
+							else = {
+								add_trait_force_tooltip = $DISEASE$
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Removes the disease in question and sends notifications to everyone who should know. Needs the arguments DISEASE (trait name, only exception is early_great_pox - it should be removed as great_pox). Does NOT send an event to the character who gets the disease.
+recover_from_magical_disease_effect = {
+	hidden_effect = {
+		save_scope_value_as = {
+			name = disease_type
+			value = flag:$DISEASE$
+		}
+
+		if = {
+			limit = {
+				has_trait = early_great_pox
+				scope:disease_type = flag:great_pox
+			}
+			save_scope_value_as = {
+				name = disease_type
+				value = flag:early_great_pox
+			}
+		}	
+	}
+
+	if = { #They actually have the disease you want to remove
+		limit = { has_trait = $DISEASE$ }
+
+		save_scope_as = sick_character
+
+		#Notifications (first, because some notifications need to check health which are changed when traits are removed)
+		hidden_effect = {
+
+			#IMPORTANT CHARACTER (add to list)
+			if = {
+				limit = { #The disease has to be somewhat dangerous
+					OR = {
+						health < death_chance_dying_health
+						NOR = {
+							scope:disease_type = flag:mana_devouring
+						}
+					}
+				}
+				every_parent = {
+					limit = { is_landed = yes }
+					add_to_temporary_list = disase_notification_list
+				}
+				every_child = {
+					limit = { is_landed = yes }
+					add_to_temporary_list = disase_notification_list
+				}
+				every_spouse = {
+					limit = {
+						is_landed = yes
+						NOT = { is_in_list = disase_notification_list }
+					}
+					add_to_temporary_list = disase_notification_list
+				}
+				every_heir_title = {
+					limit = {
+						exists = holder
+					}
+					holder = {
+						if = {
+							limit = {
+								exists = player_heir
+								player_heir = scope:sick_character
+								NOT = { is_in_list = disase_notification_list }
+							}
+							add_to_temporary_list = disase_notification_list
+						}
+					}
+				}
+			}
+
+			#PARTNERS WHO WANT TO KNOW ABOUT STDS (add to list)
+			if = {
+				limit = {
+					OR = {
+						scope:disease_type = flag:great_pox
+						scope:disease_type = flag:lovers_pox
+						scope:disease_type = flag:early_great_pox
+					}
+				}
+				every_relation = {
+					type = lover
+					limit = {
+						is_landed = yes
+						NOT = { is_in_list = disase_notification_list }
+					}
+					add_to_temporary_list = disase_notification_list
+				}
+				every_concubine = {
+					limit = {
+						is_landed = yes
+						NOT = { is_in_list = disase_notification_list }
+					}
+					add_to_temporary_list = disase_notification_list
+				}
+			}
+
+			#IMPOTANT CHARACTER NOTIFICATION EVENT
+			every_parent = {
+				limit = {
+					inform_about_relative_recovery_trigger = yes
+				}
+				add_to_temporary_list = disase_notification_list
+			}
+			every_spouse = {
+				limit = {
+					inform_about_relative_recovery_trigger = yes
+					NOT = { is_in_list = disase_notification_list }
+				}
+				add_to_temporary_list = disase_notification_list
+			}
+			every_heir_title = {
+				limit = {
+					exists = holder
+				}
+				holder = {
+					if = {
+						limit = {
+							player_heir = scope:sick_character
+							inform_about_relative_recovery_trigger = yes
+							NOT = { is_in_list = disase_notification_list }
+						}
+						add_to_temporary_list = disase_notification_list
+					}
+				}
+			}
+
+			#Go through list and send notifications
+			every_in_list = {
+				list = disase_notification_list
+				
+				if = {
+					limit = {
+						OR = {
+							#This character received an event when
+							scope:sick_character = {
+								is_target_in_variable_list = {
+									name = recovery_event_receivers
+									target = prev
+								}
+							}
+							#It's your player heir
+							trigger_if = {
+								limit = { exists = player_heir }
+								player_heir = scope:sick_character
+							}
+						}
+					}
+					trigger_event = AMHealth.2202
+				}
+				else = {
+					save_scope_as = message_receiver
+					send_interface_message = {
+						left_icon = scope:sick_character
+						title = disease_recovery_feed_message.t
+						show_as_tooltip = {
+							scope:sick_character = {	
+								if = {
+									limit = { scope:disease_type = flag:early_great_pox }
+									remove_trait_force_tooltip = early_great_pox
+								}
+								else = {
+									remove_trait_force_tooltip = $DISEASE$
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		clear_variable_list = recovery_event_receivers
+
+		#TRAIT REMOVAL
+		remove_trait = $DISEASE$
+
+		#IMMUNITY
+		hidden_effect = {
+			if = {
+				limit = { scope:disease_type = flag:mana_devouring }
+				add_character_flag = disease_immunity_mana_devouring
+			}
+		}
+	}
+}
+
+#Triggers an event removing the disease (if you meet the conditions) and notifying everyone who should know. Needs the arguments DISEASE trait name. No events exist for leper, lovers_pox and early_great_pox.
+
+recover_from_magical_disease_notify_effect = {
+	save_scope_value_as = {
+		name = disease_type
+		value = flag:$DISEASE$
+	}
+	
+	if = {
+		limit = { scope:disease_type = flag:mana_devouring }
+		trigger_event = { id = health.1106 days = { 5 15 } }
+	}
+}
+
