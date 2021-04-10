@@ -100,7 +100,8 @@ master_of_puppets = {
 ############## HEALTH ########################
 ##############################################
 
-mana_devouring_1 = {
+#Mana devouring stage 1 - Mana devouring
+mana_devouring_1 = { 
 	index = 9051
 	
 	health = -1
@@ -113,7 +114,7 @@ mana_devouring_1 = {
 	dread_baseline_add = -10
 	dread_loss_mult = 1
 	
-	change_mana_gen = -50
+	change_mana_gen = -150
 	
 	ruler_designer_cost = -15
 
@@ -123,14 +124,53 @@ mana_devouring_1 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_ill_desc
+				desc = trait_mana_devouring_1_desc
 			}
-			desc = trait_ill_character_desc
+			desc = trait_mana_devouring_1_character_desc
 		}
 	}
 
 	ai_energy = -25
 	
+	group = mana_devouring
+	level = 1	
+}
+#Mana devouring stage 2 - Body devouring
+mana_devouring_2 = { 
+	index = 9051
+	
+	martial = -4
+	intrigue = -4
+	learning = -5
+	health = -4
+	prowess = -8
+	fertility = -0.75
+
+	health_trait = yes
+
+	dread_baseline_add = -20
+	dread_loss_mult = 1
+	
+	change_mana_gen = -150
+	
+	ruler_designer_cost = -75
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_mana_devouring_2_desc
+			}
+			desc = trait_mana_devouring_2_character_desc
+		}
+	}
+
+	ai_energy = -40
+	
+	group = mana_devouring
+	level = 2	
 }
 
 ##############################################
