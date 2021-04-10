@@ -56,7 +56,12 @@
  #Magical diseases
  rule_ancient_magical_diseases:0 "Ancient Magical Diseases"
  setting_none_ancient_magical_diseases:0 "None"
+ setting_none_ancient_magical_diseases_desc:0 "None"
  setting_few_ancient_magical_diseases:0 "Few"
+ setting_few_ancient_magical_diseases_desc:0 "Getting magical disease is even rarer in most case then getting a cancer"
  setting_moderate_ancient_magical_diseases:0 "Moderate"
+ setting_moderate_ancient_magical_diseases_desc:0 "Moderate numebr of magical diseases"
  setting_lot_ancient_magical_diseases:0 "Lot"
+ setting_lot_ancient_magical_diseases_desc:0 "High chance of getting magical disease"
  setting_hell_ancient_magical_diseases:0 "Hell"
+ setting_hell_ancient_magical_diseases_desc:0 "Getting deadly disease is as easy as getting ill. What do you expet from Hell ?"
