@@ -1,5 +1,5 @@
 ﻿l_english:
- #Magic potential
+ #Player's magic potential
  rule_PC_magic_level:0 "Player Magic Potential"
  setting_PC_magic_level_decision:0 "Decision"
  setting_PC_magic_level_decision_desc:0 "PC magic potential will be decided via decision"
@@ -9,6 +9,8 @@
  setting_PC_magic_level_2_desc:0 "You will start with Magic Potential"
  setting_PC_magic_level_3:0 "Major Magic Potential"
  setting_PC_magic_level_3_desc:0 "You will start with Major Magic Potential"
+ 
+ #Number of NPC that have Magical potential
  rule_NPC_magic_chance:0 "NPC Magic chance"
  setting_NPC_magic_chance_0:0 "0%"
  setting_NPC_magic_chance_0_desc:0 "No NPC will start the game with magic potential"
@@ -22,6 +24,8 @@
  setting_NPC_magic_chance_05_desc:0 "NPCs will have 50% chance of starting the game with magic potential"
  setting_NPC_magic_chance_1:0 "100%"
  setting_NPC_magic_chance_1_desc:0 "NPCs will have 100% chance of starting the game with magic potential"
+ 
+ #How high is averange Magical potential
  rule_NPC_magic_level:0 "NPC Magic Potential"
  setting_NPC_magic_level_random:0 "Random"
  setting_NPC_magic_level_random_desc:0 "NPCs who where given magic will each be given a random power lvl weighted towards lower levels"
@@ -31,6 +35,7 @@
  setting_NPC_magic_level_2_desc:0 "NPCs who where given magic will have Magic Potential"
  setting_NPC_magic_level_3:0 "Major Magic Potential"
  setting_NPC_magic_level_3_desc:0 "NPCs who where given magic will have Major Magic Potential"
+ 
  #Immortal rules
  rule_enable_immortal_periodic_lifetime_events_reset:0 "Immortal Life Events Reset"
  setting_none_immortal_lifetime_events_reset:0 "Disable"
@@ -47,3 +52,11 @@
  setting_75_immortal_lifetime_events_reset_desc:0 "Every 75 years immortal rulers may refund perks, use 'once per lifetime' casus belli like subjugation, create a new faith, or convert their culture."
  setting_100_immortal_lifetime_events_reset:0 "Every Hundred Years"
  setting_100_immortal_lifetime_events_reset_desc:0 "Every 100 years immortal rulers may refund perks, use 'once per lifetime' casus belli like subjugation, create a new faith, or convert their culture."
+ 
+ #Magical diseases
+ rule_ancient_magical_diseases:0 "Ancient Magical Diseases"
+ setting_none_ancient_magical_diseases:0 "None"
+ setting_few_ancient_magical_diseases:0 "Few"
+ setting_moderate_ancient_magical_diseases:0 "Moderate"
+ setting_lot_ancient_magical_diseases:0 "Lot"
+ setting_hell_ancient_magical_diseases:0 "Hell"
