@@ -92,3 +92,24 @@ enable_immortal_periodic_lifetime_events_reset = {
 		# Just tells us when to reset
 	}
 }
+
+#Magic disease
+ancient_magical_diseases = {
+	default = few_ancient_magical_diseases
+	
+	none_ancient_magical_diseases = {
+		
+	}
+	few_ancient_magical_diseases = {
+		
+	}
+	moderate_ancient_magical_diseases = {
+		
+	}
+	lot_ancient_magical_diseases = {
+		
+	}
+	hell_ancient_magical_diseases = {
+		
+	}
+}
