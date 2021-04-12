@@ -1,0 +1,94 @@
+﻿SpellTargetHerselfHimself = {
+    type = character
+
+    text = {
+        localization_key = SPELL_TARGET_HERSELF_HIMSELF
+        trigger = {
+            this = scope:second
+        }
+    }
+
+    text = {
+        localization_key = SPELL_TARGET_INTERACTION
+        fallback = yes
+    }
+}
+
+SpellTargetYourself = {
+    type = character
+
+    text = {
+        localization_key = SPELL_TARGET_YOURSELF
+        trigger = {
+            this = scope:second
+        }
+    }
+
+    text = {
+        localization_key = SPELL_TARGET
+        fallback = yes
+    }
+}
+
+SpellTargetYourHerHim = {
+    type = character
+
+    text = {
+        localization_key = SPELL_TARGET_YOUR
+        trigger = {
+            this = scope:second
+        }
+    }
+    text = {
+        localization_key = SPELL_TARGET_HER_HIM
+        fallback = yes
+    }
+}
+
+SpellTargetYouHerHim = {
+    type = character
+    
+    text = {
+        localization_key = SPELL_TARGET_YOU
+        trigger = {
+            this = scope:second
+        }
+    }
+
+    text = {
+        localization_key = SPELL_TARGET_HER_HIM
+        fallback = yes
+    }
+}
+
+SpellTargetYou = {
+    type = character
+
+    text = {
+        localization_key = SPELL_TARGET_YOU
+        trigger = {
+            this = scope:second
+        }
+    }
+
+    text = {
+        localization_key = SPELL_TARGET
+        fallback = yes
+    }
+}
+
+SpellTargetIsYouAre = {
+    type = character
+
+    text = {
+        localization_key = SPELL_TARGET_YOU_ARE
+        trigger = {
+            this = scope:second
+        }
+    }
+
+    text = {
+        localization_key = SPELL_TARGET_IS
+        fallback = yes
+    }
+}

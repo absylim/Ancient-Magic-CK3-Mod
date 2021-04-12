@@ -1,4 +1,4 @@
-open_spellbook_interaction = {
+﻿open_spellbook_interaction = {
 	category = AMS_magic_interactions
 
 	desc = open_spellbook_interaction_desc
@@ -8,7 +8,16 @@ open_spellbook_interaction = {
 			has_trait = mage
 		}
 	}
-	
+
+	is_valid = {
+		scope:actor = {
+			custom_description = {
+				text = open_spellbook_interaction.tt
+				NOT = { has_character_flag = am_spell_resolution }
+			}
+		}
+	}
+
 	ai_will_do = {
 		base = 0
 	}
@@ -16,7 +25,11 @@ open_spellbook_interaction = {
 	auto_accept = yes
 	
 	on_accept = {
+		scope:recipient = {
+			save_scope_as = am_spell_target
+		}
 		scope:actor = { 
+			save_scope_as = am_spell_caster
 			trigger_event = ancient_magic_spellbook_events.001
 		}
 	}
@@ -372,11 +385,15 @@ drain_life_interaction = {
 	on_accept = {
 		scope:actor = { 
 			remove_character_modifier = drain_life_spell_modifier
-			add_character_modifier = stolen_lifeforce_modifier
+			# Made an oops here. This should give it to them permanently
+			# See ancient_magic_spellbook_events.txt for usage.
+			# If that is the behavior you want, you should adjust what I did.
+			add_character_modifier = stolen_lifeforce_modifier # = { modifier = && months =}
 			months = 6
 		}
 		scope:recipient = {
-			add_character_modifier = drained_modifier
+			# Same as above.
+			add_character_modifier = drained_modifier # = { modifier = && months = }
 			months = 6
 		}
 	}

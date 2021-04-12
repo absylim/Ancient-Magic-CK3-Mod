@@ -43,3 +43,91 @@ add_immortal_years_since_lifetime_reset = {
 	init_immortal_years_since_lifetime_reset = yes
 	change_variable = { name = immortal_years_since_lifetime_reset add = 1 }
 }
+
+increase_vanilla_trait_rank = {
+	if = {
+		limit = {
+			has_trait = $TRAIT_PREFIX$_bad_3
+		}
+		remove_trait = $TRAIT_PREFIX$_bad_3
+		add_trait = $TRAIT_PREFIX$_bad_2
+	}
+	else_if = {
+		limit = {
+			has_trait = $TRAIT_PREFIX$_bad_2
+		}
+		remove_trait = $TRAIT_PREFIX$_bad_2
+		add_trait = $TRAIT_PREFIX$_bad_1
+	}
+	else_if = {
+		limit = {
+			has_trait = $TRAIT_PREFIX$_bad_1
+		}
+		remove_trait = $TRAIT_PREFIX$_bad_1
+	}
+	else_if = {
+		limit = {
+			NOT = { has_trait = $TRAIT_PREFIX$_good }
+			NOT = { has_trait = $TRAIT_PREFIX$_bad }
+		}
+		add_trait = $TRAIT_PREFIX$_good_1
+	}
+	else_if = {
+		limit = {
+			has_trait = $TRAIT_PREFIX$_good_1
+		}
+		remove_trait = $TRAIT_PREFIX$_good_1
+		add_trait = $TRAIT_PREFIX$_good_2
+	}
+	else_if = {
+		limit = {
+			has_trait = $TRAIT_PREFIX$_good_2
+		}
+		remove_trait = $TRAIT_PREFIX$_good_2
+		add_trait = $TRAIT_PREFIX$_good_3
+	}
+}
+
+decrease_vanilla_trait_rank = {
+	if = {
+		limit = {
+			has_trait = $TRAIT_PREFIX$_good_3
+		}
+		remove_trait = $TRAIT_PREFIX$_good_3
+		add_trait = $TRAIT_PREFIX$_good_2
+	}
+	else_if = {
+		limit = {
+			has_trait = $TRAIT_PREFIX$_good_2
+		}
+		remove_trait = $TRAIT_PREFIX$_good_2
+		add_trait = $TRAIT_PREFIX$_good_1
+	}
+	else_if = {
+		limit = {
+			has_trait = $TRAIT_PREFIX$_good_1
+		}
+		remove_trait = $TRAIT_PREFIX$_good_1
+	}
+	else_if = {
+		limit = {
+			NOT = { has_trait = $TRAIT_PREFIX$_good }
+			NOT = { has_trait = $TRAIT_PREFIX$_bad }
+		}
+		add_trait = $TRAIT_PREFIX$_bad_1
+	}
+	else_if = {
+		limit = {
+			has_trait = $TRAIT_PREFIX$_bad_1
+		}
+		remove_trait = $TRAIT_PREFIX$_bad_1
+		add_trait = $TRAIT_PREFIX$_bad_2
+	}
+	else_if = {
+		limit = {
+			has_trait = $TRAIT_PREFIX$_bad_2
+		}
+		remove_trait = $TRAIT_PREFIX$_bad_2
+		add_trait = $TRAIT_PREFIX$_bad_3
+	}
+}

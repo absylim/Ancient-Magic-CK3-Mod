@@ -2,16 +2,18 @@
 # Uses - Is a character even possibly a mage? 'mage_potency > 0' Is the character not a mage? 'mage_potency < 1' How much potential does this mage have? 'mage_potency >= x'
 mage_potency = {
 	value = 0
-	if = { limit = { has_trait = magic_potential_1 } value = 1 } if = { limit = { has_trait = magic_potential_2 } value = 2 } if = { limit = { has_trait = magic_potential_3 } value = 3 }
+	if = { limit = { has_trait = magic_potential_1 } value = 1 } 
+	if = { limit = { has_trait = magic_potential_2 } value = 2 } 
+	if = { limit = { has_trait = magic_potential_3 } value = 3 }
 }
 
-# No-brainer value in a magic mod.
-# Uses - Is a character even possibly educated? 'mage_education > 0' Is the character not educated? 'mage_education < 1' How much education does this mage have? 'mage_education >= x'
-#mage_education = { # UNCOMMENT WHEN SYSTEM IN PLACE!!!
-#	value = 0
-#	if = { limit = { has_trait = education_arcane_1 } value = 1 } if = { limit = { has_trait = education_arcane_2 } value = 2 } if = { limit = { has_trait = education_arcane_3 } value = 3 }
-#	if = { limit = { has_trait = education_arcane_4 } value = 4 }
-#}
+mage_education = {
+	value = 0
+	if = { limit = { has_trait = education_arcane_1 } value = 1 } 
+	if = { limit = { has_trait = education_arcane_2 } value = 2 } 
+	if = { limit = { has_trait = education_arcane_3 } value = 3 }
+	if = { limit = { has_trait = education_arcane_4 } value = 4 }
+}
 
 mage_level = {
 	value = var:mage_xp
@@ -28,6 +30,7 @@ mage_level = {
 		divide = 75
 	}
 	add = 1
+	floor = yes
 }
 
 mage_xp_per_perk = 15
@@ -49,4 +52,13 @@ arcana_max_mana_per_perk = {
 arcana_mana_gen_per_perk = {
 	value = mana_gen_per_perk
 	multiply = 2
+}
+
+mage_xp_to_next_level = {
+	value = mage_level
+	add = 1
+	if = { limit = { mage_potency = 1 } multiply = 150 } 
+	if = { limit = { mage_potency = 2 } multiply = 100 } 
+	if = { limit = { mage_potency = 3 } multiply = 75 }
+	#subtract = var:mage_xp
 }

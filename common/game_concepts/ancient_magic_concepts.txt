@@ -1,0 +1,8 @@
+﻿mage_level = {
+}
+
+magic_potential = {
+}
+
+mana = {
+}

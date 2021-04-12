@@ -1,0 +1,11 @@
+﻿l_english:
+ SPELL_TARGET_HERSELF_HIMSELF:0 "[ROOT.GetCharacter.GetHerselfHimself]"
+ SPELL_TARGET_INTERACTION:0 "[second.GetFirstNameNoTooltip]"
+ AM_ERROR_SPELL_TARGET_HERSELF_HIMSELF:0 "A.M. Error (CustomLoc 'SpellTargetHerselfHimself' ) *Probable Scoping Issue*"
+ SPELL_TARGET_YOURSELF:0 "yourself"
+ SPELL_TARGET:0 "[second.GetFirstNameNoTooltip]"
+ SPELL_TARGET_HER_HIM:0 "[second.GetHerHim]"
+ SPELL_TARGET_YOU:0 "you"
+ SPELL_TARGET_YOUR:0 "your"
+ SPELL_TARGET_YOU_ARE:0 "you are"
+ SPELL_TARGET_IS:0 "[second.GetFirstNameNoTooltip] is"

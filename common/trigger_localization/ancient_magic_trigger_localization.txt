@@ -1,0 +1,11 @@
+﻿casting_low_mana_spell = {
+	global = CASTING_LOW_MANA_SPELL
+}
+
+casting_low_skill_spell = {
+	global = CASTING_LOW_SKILL_SPELL
+}
+
+casting_null_blood_spell = {
+	global = CASTING_NULL_BLOOD_SPELL
+}

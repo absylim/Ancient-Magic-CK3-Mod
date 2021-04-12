@@ -10,6 +10,8 @@ open_spellbook_decision = {
 	desc = open_spellbook_decision_desc
 	
 	effect = {
+		save_scope_as = am_spell_target
+		save_scope_as = am_spell_caster
 		trigger_event = ancient_magic_spellbook_events.001
 	}	
 
