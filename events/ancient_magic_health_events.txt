@@ -2,9 +2,10 @@
 
 namespace = AMHealth
 
-#MANA DEVOURING: by Donekulda
+#Magical diseases: by Donekulda
 #	0001-0099: becoming ill
-#	0101-0199: 
+#	0101-0199: recovery
+#   3100-3200: Treatment
 
 
 #########################
@@ -478,6 +479,35 @@ AMHealth.2202 = {
 	}
 }
 
+#####################
+#   Monthly check   # by Donekulda
+#####################
+
+AMHealth.3001 = {
+	hidden = yes
+	trigger = {
+		OR = { has_trait = mana }
+	}
+	
+	if = {
+		limit = {
+			has_flag = flag:mana_devouring_1
+			has_trait = mana
+			var:mana <= 0
+			var:mana_gen <= 0
+		}
+		immediate = { trigger_event = AMHealth.0002 } # Evolve mana devouring into body devouring
+	}
+	elsif = {
+		limit = {
+			has_flag = flag:mana_devouring_2
+			has_trait = mana
+			var:mana >= 200
+			var:mana_gen >= 1
+		}
+		immediate = { trigger_event = AMHealth.1103 } # Devolve body devouring into mana devouring
+	}
+}
 
 #####################
 # DISEASE TREATMENT # by Mathilda Bjarnehed & additional texts by Milla Isaksson
@@ -805,4 +835,5 @@ AMHealth.3102 = {
 		ai_chance = { base = 0 }
 	}
 }
+
 

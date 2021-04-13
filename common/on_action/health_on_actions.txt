@@ -130,6 +130,19 @@ disease_outbreak_pulse = {
 	}
 }
 
+#Check disease for evolution or devolution
+quarterly_playable_pulse = {
+	events = {
+		AMHealth.3001
+		delay = { months = 1 }
+		AMHealth.3001
+		delay = { months = 2 }
+		AMHealth.3001
+		delay = { months = 3 }
+		AMHealth.3001
+	}
+}
+
 wounded_recovery_pulse = {
 	trigger = {
 		OR = {
