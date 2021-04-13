@@ -23,3 +23,9 @@
  AMHealth.1103.t:1 "[SCOPE.Custom('EventTitleDisease')]: Uf, this was close"
  AMHealth.1103.desc:0 "After i partialy refiled my mana pool, the disease recede into the First Stage, and atleast stoped devouring my body!"
  AMHealth.1103.a:0 "I must more careful in future!"
+ 
+ 
+ 
+#DISEASES DESC
+ disease_mana_devouring_1:0 "mana devouring"
+ disease_mana_devouring_2:0 "body devouring"

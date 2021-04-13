@@ -47,7 +47,8 @@ contract_magical_disease_effect = {
 		if = {
 			limit = {
 				OR = {
-					scope:disease_type = flag:mana_devouring
+					scope:disease_type = flag:mana_devouring_1
+					scope:disease_type = flag:mana_devouring_2
 				}
 			}
 
@@ -56,9 +57,16 @@ contract_magical_disease_effect = {
 		
 		#RECOVERY
 		if = { #mana devouring
-			limit = { scope:disease_type = flag:mana_devouring }
+			limit = { scope:disease_type = flag:mana_devouring_1 }
 			trigger_event = {
 				id = AMHealth.1101
+				days = { mana_devouring_recovery_min mana_devouring_recovery_max }
+			}
+		}
+		elsif = { #mana devouring
+			limit = { scope:disease_type = flag:mana_devouring_2 }
+			trigger_event = {
+				id = AMHealth.1102
 				days = { mana_devouring_recovery_min mana_devouring_recovery_max }
 			}
 		}
@@ -334,7 +342,8 @@ recover_from_magical_disease_effect = {
 					OR = {
 						health < death_chance_dying_health
 						NOR = {
-							scope:disease_type = flag:mana_devouring
+							scope:disease_type = flag:mana_devouring_1
+							scope:disease_type = flag:mana_devouring_2
 						}
 					}
 				}
@@ -478,8 +487,14 @@ recover_from_magical_disease_effect = {
 		#IMMUNITY
 		hidden_effect = {
 			if = {
-				limit = { scope:disease_type = flag:mana_devouring }
-				add_character_flag = disease_immunity_mana_devouring
+				limit = { scope:disease_type = flag:mana_devouring_1 }
+				add_character_flag = disease_immunity_mana_devouring_1
+				add_character_flag = disease_immunity_mana_devouring_2
+			}
+			elsif = {
+				limit = { scope:disease_type = flag:mana_devouring_2 }
+				add_character_flag = disease_immunity_mana_devouring_1
+				add_character_flag = disease_immunity_mana_devouring_2
 			}
 		}
 	}
@@ -494,8 +509,33 @@ recover_from_magical_disease_notify_effect = {
 	}
 	
 	if = {
-		limit = { scope:disease_type = flag:mana_devouring }
-		trigger_event = { id = health.1106 days = { 5 15 } }
+		limit = { scope:disease_type = flag:mana_devouring_1 }
+		trigger_event = { id = AMHealth.1101 days = { 5 15 } }
+	}
+	elsif = {
+		limit = { scope:disease_type = flag:mana_devouring_2 }
+		trigger_event = { id = AMHealth.1102 days = { 5 15 } }
 	}
 }
 
+
+#Who treats a sick character?
+decide_who_picks_magical_disease_treatment_effect = {
+	if = {
+		limit = {
+			liege_picks_treatment_trigger = yes
+		}
+		liege = {
+			trigger_event = {
+				id = AMHealth.3102 #Liege decides
+				days = { physician_treatment_delay_subject_min physician_treatment_delay_subject_max }
+			}
+		}
+	}
+	else = {
+		trigger_event = {
+			id = AMHealth.3101 #I decide
+			days = { physician_treatment_delay_ruler_min physician_treatment_delay_ruler_max }
+		}
+	}
+}
