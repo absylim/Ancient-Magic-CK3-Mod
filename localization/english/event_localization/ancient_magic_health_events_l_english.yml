@@ -1,2 +1,25 @@
 ﻿l_english:
- AMHealth.0001.t:0 ""
+#MANA DEVOURING
+ AMHealth.0001.t:1 "[SCOPE.Custom('EventTitleDisease')]: Where is my Mana"
+ AMHealth.0001.desc:0 "The loss of mana is making me weaker by day. I must save my mana, so that my mana pool doenst dry up and alto that it doesnt evolves into something worse."
+ AMHealth.0001.court_physician.desc:0 ""
+ AMHealth.0001.a:0 "I must save my mana!"
+ #Body Devouring (Mana devouring second stage)
+ AMHealth.0002.t:1 "[SCOPE.Custom('EventTitleDisease')]: Oh im screwd"
+ AMHealth.0002.desc:0 "After i depleted my mana pool, the ilness started to look for other nutrient and it chose ME!"
+ AMHealth.0002.court_physician.desc:0 ""
+ AMHealth.0002.a:0 "I must save my mana!"
+ 
+ #Rocovery fisrt stage
+ AMHealth.1101.t:1 "[SCOPE.Custom('EventTitleDisease')]: My mana is Back!"
+ AMHealth.1101.desc:0 "I woke this morning and saw rays of sunshine falling through my window, it took me a moment to realize that my mana isnt being depleted and even my body is feeling better then before."
+ AMHealth.1101.a:0 "Uf, this was truly uncomfroftable experience"
+ #Rocovery second stage - body imunity
+ AMHealth.1102.t:1 "[SCOPE.Custom('EventTitleDisease')]: Im saved!"
+ AMHealth.1102.desc:0 "I woke this morning and saw rays of sunshine falling through my window, and when i sitep i found out that my body is no more sore! Even my mana is getting back!"
+ AMHealth.1102.a:0 "Time to get back into my study!"
+
+ #Rocovery second stage - refiled mana pool
+ AMHealth.1103.t:1 "[SCOPE.Custom('EventTitleDisease')]: Uf, this was close"
+ AMHealth.1103.desc:0 "After i partialy refiled my mana pool, the disease recede into the First Stage, and atleast stoped devouring my body!"
+ AMHealth.1103.a:0 "I must more careful in future!"
