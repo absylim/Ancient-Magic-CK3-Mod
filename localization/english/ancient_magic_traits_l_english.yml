@@ -1,5 +1,4 @@
 ﻿l_english:
-#traits
  trait_immortal:0 "Immortal"
  trait_immortal_desc:0 "This character is an immortal."
  trait_magic_potential_1:0 "Minor Magic Potential"
@@ -26,3 +25,9 @@
  trait_architect_of_bloodlines_desc:0 "This character has mastered the art of fleshsculpting and can shape bloodlines for generations"
  trait_master_of_puppets:0 "Master of Puppets"
  trait_master_of_puppets_desc:0 "This character has mastered the magic of the mind and can bend others to their will"
+
+#Diseases
+ trait_mana_devouring_1:0 "Mana Devouring"
+ trait_mana_devouring_1_desc:0 "Disease with which are afflicted mainly those with the gift of magic. It causes continusous mana depletion."
+ trait_mana_devouring_2:0 "Body Devouring"
+ trait_mana_devouring_2_desc:0 "Second stage of Mana devouring. Because of not enough mana, the disease started to consume ones body."

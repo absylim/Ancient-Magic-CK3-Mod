@@ -2,3 +2,21 @@
 	public_knowledge = yes
 	icon = "death_murder.dds"
 }
+
+death_mana_devouring_1 = {
+	natural = yes
+	natural_death_trigger = {
+		has_trait = mana_devouring_1
+	}
+	priority = 40
+	icon = "death_disease.dds"
+}
+
+death_mana_devouring_2 = {
+	natural = yes
+	natural_death_trigger = {
+		has_trait = mana_devouring_2
+	}
+	priority = 70
+	icon = "death_disease.dds"
+}
