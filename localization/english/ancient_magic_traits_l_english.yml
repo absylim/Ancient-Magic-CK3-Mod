@@ -27,4 +27,7 @@
  trait_master_of_puppets_desc:0 "This character has mastered the magic of the mind and can bend others to their will"
 
 #Diseases
- trait_mana_devouring:0 "Mana Devouring"
+ trait_mana_devouring_1:0 "Mana Devouring"
+ trait_mana_devouring_1_desc:0 "Disease with which are afflicted mainly those with the gift of magic. It causes continusous mana depletion."
+ trait_mana_devouring_2:0 "Body Devouring"
+ trait_mana_devouring_2_desc:0 "Second stage of Mana devouring. Because of not enough mana, the disease started to consume ones body."
