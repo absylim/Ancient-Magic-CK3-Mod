@@ -137,7 +137,7 @@ mana_devouring_1 = {
 }
 #Mana devouring stage 2 - Body devouring
 mana_devouring_2 = { 
-	index = 9051
+	index = 9052
 	
 	martial = -4
 	intrigue = -4
