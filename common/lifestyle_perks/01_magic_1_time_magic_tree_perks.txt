@@ -164,10 +164,6 @@ mass_celerity_perk = {
 	
 	parent = celerity_perk
 	
-	character_modifier = {
-		movement_speed = 0.25
-		retreat_losses = -0.2
-	}
 	effect = {
 		custom_description_no_bullet = {
 			text = mana_gen_magic_perk_effect
