@@ -1,16 +1,43 @@
-domination_mage_perk = {
+﻿domination_mage_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = domination_magic
 	position = { 2 0 }
 	icon = node_diplomacy
 	
 	auto_selection_weight = {
-		value = 0
+		value = 11
 		if = {
 			limit = {
-				has_trait = magic_potential
+				OR = {
+					has_trait = magic_potential	
+					has_trait = education_arcane
+				}
 			}
-			add = 9999
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = shy
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = paranoid
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = lustful
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = deceitful
+			}
+			multiply = 2
 		}
 		if = {
 			limit = {

@@ -1,4 +1,4 @@
-ancient_magic_hook_undead_master = {
+﻿ancient_magic_hook_undead_master = {
 	strong = yes
 	expiration_days = -1
 }

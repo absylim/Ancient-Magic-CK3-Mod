@@ -1,0 +1,65 @@
+﻿can_get_non_epidemic_magical_disease_trigger = { #Diseases shouldn't stack. Don't add a non-epidemic disease if you have another, unless that disease is lover's pox
+	NOR = {
+		has_trait = mana_devouring
+	}
+}
+
+#Takes argument disease
+can_contract_magical_disease_trigger = {
+	save_temporary_scope_as = sick_character_check
+
+	# Is not immune to disease
+	NOT = { has_character_flag = immune_to_disease }
+	
+	#Checks if the person is gifted with magic, as magical diseases are only contractable by those with the gift
+	OR = {
+		has_trait = mana
+	}
+
+	#Doesn't already have the trait
+	NOT = { has_trait = $DISEASE$ }
+
+	save_temporary_scope_value_as = {
+		name = disease_type_for_trigger
+		value = flag:$DISEASE$
+	}
+
+	#Secondary requirements (mutually exclusive diseases or immunity)
+	OR = {
+		NOR = { #No secondary requirement
+		}
+		AND = {
+			scope:disease_type_for_trigger = flag:mana_devouring_1
+			NOT = { has_character_flag = disease_immunity_mana_devouring_1 }
+		}
+		AND = {
+			scope:disease_type_for_trigger = flag:mana_devouring_2
+			NOT = { has_character_flag = disease_immunity_mana_devouring_2 }
+		}
+	}
+
+	#No disease stacking
+	OR = {
+		can_get_non_epidemic_disease_trigger = yes
+	}
+
+	#Cooldown is over
+	NOR = {
+		has_character_flag = contraction_cooldown_general #Haven't had a disease for 2 years
+		#No specific cooldowns:
+		#Mana devourin, after one time you are immune
+	}
+}
+
+
+######################
+# TREATMENT TRIGGERS #
+######################
+
+
+has_treatable_magical_disease_trigger = {
+	OR = {
+		has_trait = mana_devouring
+	}
+}
+

@@ -1,3 +1,7 @@
+﻿##################################################
+############ Arcane university ###################
+##################################################
+
 ancient_magic_academy_01 = {
 	construction_time = slow_construction_time
 	
@@ -7,14 +11,20 @@ ancient_magic_academy_01 = {
 	
 	is_enabled = {
 		county.duchy.holder = county.holder
-		building_disable_if_vastly_over_domain_limit_trigger = yes
+		building_ancient_magic_mage_buildings_requirement = yes
 	}
 	show_disabled = yes
 	
 	cost_gold = expensive_building_tier_2_cost
 	
 	character_modifier = {
-		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.25
+		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.1
+	}
+	county_modifier = {
+		development_growth_factor = 0.05
+	}
+	province_modifier = {
+		fort_level = normal_building_fort_level_tier_1 #Mages
 	}
 	
 	next_building = ancient_magic_academy_02
@@ -24,7 +34,11 @@ ancient_magic_academy_01 = {
 	type = duchy_capital
 	
 	ai_value = {
-		base = 0
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
 	}
 }
 
@@ -33,18 +47,72 @@ ancient_magic_academy_02 = {
 	
 	can_construct_potential = {
 		building_ancient_magic_mage_buildings_requirement = yes
+		scope:holder = {
+			mage_level >=5
+		}
 	}
 	
 	is_enabled = {
-		county.duchy.holder = county.holder
-		building_disable_if_vastly_over_domain_limit_trigger = yes
+		building_ancient_magic_mage_buildings_requirement = yes
 	}
 	show_disabled = yes
 	
 	cost_gold = expensive_building_tier_4_cost
 	
 	character_modifier = {
-		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.5
+		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.2
+	}
+	county_modifier = {
+		development_growth_factor = 0.1
+	}
+	province_modifier = {
+		fort_level = normal_building_fort_level_tier_3 #Professors
+	}
+	
+	type_icon = "icon_building_university.dds"
+
+	next_building = ancient_magic_academy_03
+	
+	type = duchy_capital
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+		modifier = {
+			factor = 2
+			mage_level >=6
+		}
+	}
+}
+
+ancient_magic_academy_03 = {
+	construction_time = very_slow_construction_time
+	
+	can_construct_potential = {
+		building_ancient_magic_mage_buildings_requirement = yes
+		scope:holder = {
+			mage_level >=7
+		}
+	}
+	
+	is_enabled = {
+		building_ancient_magic_mage_buildings_requirement = yes
+	}
+	show_disabled = yes
+	
+	cost_gold = expensive_building_tier_6_cost
+	
+	character_modifier = {
+		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.4
+	}
+	county_modifier = {
+		development_growth_factor = 0.15
+	}
+	province_modifier = {
+		fort_level = normal_building_fort_level_tier_5 #Professors and Archmage
 	}
 	
 	flag = fully_upgraded_duchy_capital_building
@@ -54,16 +122,27 @@ ancient_magic_academy_02 = {
 	type = duchy_capital
 	
 	ai_value = {
-		base = 0
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+		modifier = {
+			factor = 2
+			mage_level >=8
+		}
 	}
 }
+
+##################################################
+############ Mana circle #########################
+##################################################
 
 ancient_magic_mana_circle_01 = {
 	construction_time = slow_construction_time
 
 	is_enabled = {
-		county.duchy.holder = county.holder
-		building_disable_if_vastly_over_domain_limit_trigger = yes
+		building_ancient_magic_mage_buildings_requirement = yes
 	}
 	
 	can_construct_potential = {
@@ -86,7 +165,11 @@ ancient_magic_mana_circle_01 = {
 	type_icon = "icon_structure_stonehenge.dds"
 	
 	ai_value = {
-		base = 0
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
 	}
 }
 
@@ -94,8 +177,7 @@ ancient_magic_mana_circle_02 = {
 	construction_time = slow_construction_time
 
 	is_enabled = {
-		county.duchy.holder = county.holder
-		building_disable_if_vastly_over_domain_limit_trigger = yes
+		building_ancient_magic_mage_buildings_requirement = yes
 	}
 	
 	can_construct_potential = {
@@ -118,16 +200,19 @@ ancient_magic_mana_circle_02 = {
 	type_icon = "icon_structure_stonehenge.dds"
 	
 	ai_value = {
-		base = 0
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
 	}
 }
 
 ancient_magic_mana_circle_03 = {
-	construction_time = slow_construction_time
+	construction_time = very_slow_construction_time
 
 	is_enabled = {
-		county.duchy.holder = county.holder
-		building_disable_if_vastly_over_domain_limit_trigger = yes
+		building_ancient_magic_mage_buildings_requirement = yes
 	}
 	
 	can_construct_potential = {
@@ -150,7 +235,17 @@ ancient_magic_mana_circle_03 = {
 	type_icon = "icon_structure_stonehenge.dds"
 
 	ai_value = {
-		base = 0
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
 	}
 }
+
+##################################################
+############ Arcane Tower ########################
+##################################################
+
+
 	

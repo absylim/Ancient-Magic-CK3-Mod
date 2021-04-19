@@ -1,4 +1,4 @@
-action_can_spend_perk_point = {
+﻿action_can_spend_perk_point = {
 }
 
 action_lifestyle_ancient_magic = {

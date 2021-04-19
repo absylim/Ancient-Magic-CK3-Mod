@@ -1,16 +1,55 @@
-death_mage_perk = {
+﻿death_mage_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = death_magic
 	position = { 2 0 }
 	icon = node_diplomacy
 	
 	auto_selection_weight = {
-		value = 0
+		value = 11
 		if = {
 			limit = {
-				has_trait = magic_potential
+				OR = {
+					has_trait = magic_potential	
+					has_trait = education_arcane
+				}
 			}
-			add = 9999
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = ambitious
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = sadistic
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = cruel
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = arrogant
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = craven
+			}
+			add = 200
+		}
+		if = {
+			limit = {
+				NOT = { is_immortal = yes }
+			}
+			multiply = 2
 		}
 		if = {
 			limit = {

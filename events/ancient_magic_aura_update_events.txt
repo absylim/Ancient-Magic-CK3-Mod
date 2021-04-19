@@ -1,4 +1,4 @@
-namespace = ancient_magic_aura_update_events
+﻿namespace = ancient_magic_aura_update_events
 
 ancient_magic_aura_update_events.001 = {
 	hidden = yes

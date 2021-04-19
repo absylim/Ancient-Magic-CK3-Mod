@@ -1,7 +1,10 @@
 ﻿ancient_magic_lifestyle = {
 	
 	is_valid = {
-		has_trait = magic_potential	
+		OR = {
+			has_trait = magic_potential	
+			has_trait = education_arcane
+		}
 	}
 
 	xp_per_level = 1000

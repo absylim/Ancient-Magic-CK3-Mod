@@ -1,4 +1,4 @@
-namespace = ancient_magic_mana_gen_checks_events
+﻿namespace = ancient_magic_mana_gen_checks_events
 
 ancient_magic_mana_gen_checks_events.001 = {
 	hidden = yes

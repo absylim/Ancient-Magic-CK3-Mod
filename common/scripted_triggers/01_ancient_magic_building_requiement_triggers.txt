@@ -1,4 +1,4 @@
-building_ancient_magic_mage_buildings_requirement = {
+﻿building_ancient_magic_mage_buildings_requirement = {
 	scope:holder = {
 		has_trait = mage
 	}

@@ -1,4 +1,4 @@
-visual_traits_undead = {
+﻿visual_traits_undead = {
 
 	undead = {
 

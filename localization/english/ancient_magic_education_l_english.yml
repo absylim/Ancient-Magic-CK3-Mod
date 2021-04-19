@@ -1,0 +1,17 @@
+﻿l_english:
+#traits
+ trait_education_arcane_1:0 "Apprentice wizard"
+ trait_education_arcane_1_character_desc:0 "This is an apprentice wizard (place-holder for you)"
+ trait_education_arcane_2:0 "Mediocre wizard"
+ trait_education_arcane_2_character_desc:0 "This is a mediocre wizard (place-holder for you)"
+ trait_education_arcane_3:0 "Wizard"
+ trait_education_arcane_3_character_desc:0 "This is a true wizard (place-holder for you)"
+ trait_education_arcane_4:0 "Elite wizard"
+ trait_education_arcane_4_character_desc:0 "This is a truly elite wizard (place-holder for you)"
+ #events
+ #education
+ education_arcane:0 "Arcane Education" 
+ education_arcane_desc:0 "The study of Arcane Arts, and path to immortality and supreme power."
+ education_arcane_effect_desc:0 "Choosing this [education_focus|E] will also have the following effects:"
+ education_arcane_tt.affinity:0 "\n\n#P [ROOT.Char.Custom('ChildhoodPersonalityTrait')] children often do well with a Learning Education.#!"
+ education_arcane_tt.disaffinity:0 "\n\n#N [ROOT.Char.Custom('ChildhoodPersonalityTrait')] children might struggle with a Learning Education.#!"

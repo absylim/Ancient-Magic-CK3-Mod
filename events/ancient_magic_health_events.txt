@@ -1,0 +1,839 @@
+﻿#Events managing health concerns around ancient magic
+
+namespace = AMHealth
+
+#Magical diseases: by Donekulda
+#	0001-0099: becoming ill
+#	0101-0199: recovery
+#   3100-3200: Treatment
+
+
+#########################
+#########################
+# MANA DEVOURING EVENTS #
+#########################
+#########################
+
+#You contract mana devouring
+AMHealth.0001 = {
+	type = character_event
+	title = AMHealth.0001.t
+	desc = {
+		desc = AMHealth.0001.desc
+		triggered_desc = {
+			trigger = {
+				court_physician_available_trigger = yes
+				liege_picks_treatment_trigger = no
+			}
+			desc = AMHealth.0001.court_physician.desc
+		}
+	}
+	
+	theme = healthcare
+	left_portrait = {
+		character = root
+		animation = sick
+	}
+	right_portrait = {
+		character = scope:physician
+		triggered_animation = {
+			trigger = { scope:physician = { health_event_is_worried_trigger = { CHARACTER = root } } }
+			animation = worry
+		}
+		triggered_animation = {
+			trigger = { scope:physician = { ai_rationality >= 0 } } #Don't look rational if you're not
+			animation = personality_rational
+		}
+		animation = idle
+	}
+
+	trigger = {
+		can_contract_disease_trigger = { DISEASE = mana_devouring }
+	}
+
+	weight_multiplier = {
+		base = 1
+
+		modifier = {
+			health <= fine_health
+			factor = 1.1
+		}
+		modifier = {
+			health <= poor_health
+			factor = 1.1
+		}
+		modifier = {
+			is_adult = no
+			factor = 1.3
+		}
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_illness"
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+		contract_magical_disease_effect = { DISEASE = mana_devouring_1 TREATMENT_EVENT = no } #Adds the trait, sends event "health.2201" to those who care
+	}
+
+	###NO COURT PHYSICIAN OPTIONS###
+	#Find physician
+	option = {
+		trigger = {
+			NOT = { exists = scope:physician }
+			is_landed = yes
+		}
+		name = health.3101.e
+		find_court_physician_effect = yes
+		ai_chance = { base = 5 }
+	}
+
+	#OK
+	option = {
+		trigger = {
+			trigger_if = {
+				limit = { exists = scope:physician }
+				liege_picks_treatment_trigger = yes
+			}
+			trigger_else = {
+				always = yes
+			}
+		}
+		name = AMHealth.0001.a
+		ai_chance = { base = 1 }
+	}
+
+	###COURT PHYSICIAN OPTIONS###
+	#Safe treatment
+	option = {
+		trigger = {
+			exists = scope:physician
+			liege_picks_treatment_trigger = no
+		}
+		name = health.3101.a
+		safe_disease_treatment_effect = { PATIENT = root TREATMENT_PICKER = root }
+		ai_chance = { base = 10 }
+	}
+
+	#Risky treatment
+	option = {
+		trigger = {
+			exists = scope:physician
+			liege_picks_treatment_trigger = no
+		}
+		name = health.3101.b
+		risky_disease_treatment_effect = { PATIENT = root TREATMENT_PICKER = root }
+		ai_chance = { base = 1 }
+	}
+	
+	#Mystic treatment
+	option = {
+		trigger = {
+			court_physician_available_trigger = yes
+			liege_picks_treatment_trigger = no
+			scope:physician = { has_trait = lifestyle_mystic }
+		}
+		name = health.3101.c
+		mystic_disease_treatment_effect = { PATIENT = root TREATMENT_PICKER = root }
+		ai_chance = {
+			base = 0.5
+			modifier = {
+				add = -0.5
+				ai_zeal >= 0
+			}
+		}
+	}
+
+	#No treatment
+	option = {
+		trigger = {
+			exists = scope:physician
+			liege_picks_treatment_trigger = no
+		}
+		name = health.3101.d
+		no_disease_treatment_effect = yes
+		ai_chance = { base = 0 }
+	}
+
+}
+
+#Mana devouring evolves
+AMHealth.0002 = {
+	type = character_event
+	title = AMHealth.0002.t
+	desc = {
+		desc = AMHealth.0002.desc
+		triggered_desc = {
+			trigger = {
+				court_physician_available_trigger = yes
+				liege_picks_treatment_trigger = no
+			}
+			desc = AMHealth.0002.court_physician.desc
+		}
+	}
+	
+	theme = healthcare
+	left_portrait = {
+		character = root
+		animation = sick
+	}
+	right_portrait = {
+		character = scope:physician
+		triggered_animation = {
+			trigger = { scope:physician = { health_event_is_worried_trigger = { CHARACTER = root } } }
+			animation = worry
+		}
+		triggered_animation = {
+			trigger = { scope:physician = { ai_rationality >= 0 } } #Don't look rational if you're not
+			animation = personality_rational
+		}
+		animation = idle
+	}
+
+	trigger = {
+		can_contract_disease_trigger = { DISEASE = mana_devouring }
+		mana <= 0
+	}
+
+	weight_multiplier = {
+		base = 1
+
+		modifier = {
+			health <= fine_health
+			factor = 1.1
+		}
+		modifier = {
+			health <= poor_health
+			factor = 1.1
+		}
+		modifier = {
+			is_adult = no
+			factor = 1.3
+		}
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_illness"
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+		remove_trait = mana_devouring_1
+		remove_trait_force_tooltip = mana_devouring_1
+		contract_magical_disease_effect = { DISEASE = mana_devouring_2 TREATMENT_EVENT = no } #Adds the trait, sends event "health.2201" to those who care
+	}
+
+	###NO COURT PHYSICIAN OPTIONS###
+	#Find physician
+	option = {
+		trigger = {
+			NOT = { exists = scope:physician }
+			is_landed = yes
+		}
+		name = health.3101.e
+		find_court_physician_effect = yes
+		ai_chance = { base = 5 }
+	}
+
+	#OK
+	option = {
+		trigger = {
+			trigger_if = {
+				limit = { exists = scope:physician }
+				liege_picks_treatment_trigger = yes
+			}
+			trigger_else = {
+				always = yes
+			}
+		}
+		name = AMHealth.0002.a
+		ai_chance = { base = 1 }
+	}
+
+	###COURT PHYSICIAN OPTIONS###
+	#Safe treatment
+	option = {
+		trigger = {
+			exists = scope:physician
+			liege_picks_treatment_trigger = no
+		}
+		name = health.3101.a
+		safe_disease_treatment_effect = { PATIENT = root TREATMENT_PICKER = root }
+		ai_chance = { base = 10 }
+	}
+
+	#Risky treatment
+	option = {
+		trigger = {
+			exists = scope:physician
+			liege_picks_treatment_trigger = no
+		}
+		name = health.3101.b
+		risky_disease_treatment_effect = { PATIENT = root TREATMENT_PICKER = root }
+		ai_chance = { base = 1 }
+	}
+	
+	#Mystic treatment
+	option = {
+		trigger = {
+			court_physician_available_trigger = yes
+			liege_picks_treatment_trigger = no
+			scope:physician = { has_trait = lifestyle_mystic }
+		}
+		name = health.3101.c
+		mystic_disease_treatment_effect = { PATIENT = root TREATMENT_PICKER = root }
+		ai_chance = {
+			base = 0.5
+			modifier = {
+				add = -0.5
+				ai_zeal >= 0
+			}
+		}
+	}
+
+	#No treatment
+	option = {
+		trigger = {
+			exists = scope:physician
+			liege_picks_treatment_trigger = no
+		}
+		name = health.3101.d
+		no_disease_treatment_effect = yes
+		ai_chance = { base = 0 }
+	}
+
+}
+
+
+
+##################
+# RECOVERY EVENTS
+##################
+
+#Recover from mana_devouring_1
+AMHealth.1101 = {
+	type = character_event
+	title = AMHealth.1101.t
+	desc = AMHealth.1101.desc
+	theme = recovery
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	trigger = {
+		has_trait = mana_devouring
+	}
+
+
+	immediate = {
+		play_music_cue = "mx_cue_peace_ensues"
+		recover_from_disease_effect = { DISEASE = mana_devouring_1 } #Removes the trait, sends event "health.2202" to those who care
+		remove_disease_treatment_effect = yes
+	}
+
+	option = {
+		name = AMHealth.1101.a
+	}
+}
+
+#Recover from mana_devouring_2 (imunity)
+AMHealth.1102 = {
+	type = character_event
+	title = AMHealth.1102.t
+	desc = AMHealth.1102.desc
+	theme = recovery
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	trigger = {
+		has_trait = mana_devouring
+	}
+
+
+	immediate = {
+		play_music_cue = "mx_cue_peace_ensues"
+		recover_from_disease_effect = { DISEASE = mana_devouring_2 } #Removes the trait, sends event "health.2202" to those who care
+		remove_disease_treatment_effect = yes
+	}
+
+	option = {
+		name = AMHealth.1102.a
+	}
+}
+
+#Recover from mana_devouring_2 (recesion to first stage)
+AMHealth.1103 = {
+	type = character_event
+	title = AMHealth.1103.t
+	desc = AMHealth.1103.desc
+	theme = recovery
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+
+	trigger = {
+		has_trait = mana_devouring
+	}
+
+
+	immediate = {
+		play_music_cue = "mx_cue_peace_ensues"
+		remove_trait = mana_devouring_2
+		remove_trait_force_tooltip = mana_devouring_2
+		contract_magical_disease_effect = { DISEASE = mana_devouring_1 TREATMENT_EVENT = no }
+	}
+
+	option = {
+		name = AMHealth.1103.a
+	}
+}
+
+##########################################################
+# SOMEONE IMPORTANT/CONTAGIOUS/STD PARTNER HAS RECOVERED # By Mathilda Bjarnehed
+##########################################################
+
+AMHealth.2202 = {
+	type = character_event
+	title = health.2202.t
+	desc = {
+		desc = health.2202.desc
+		first_valid = { #Disease type
+			triggered_desc = {
+				trigger = { scope:disease_type = flag:mana_devouring_1 }
+				desc = disease_mana_devouring_1
+			}
+			triggered_desc = {
+				trigger = { scope:disease_type = flag:mana_devouring_2 }
+				desc = disease_mana_devouring_2
+			}
+			desc = missing_illness
+		}
+	}
+	theme = recovery
+	left_portrait = scope:sick_character
+
+	trigger = {
+		scope:sick_character = { is_alive = yes }
+	}
+
+	immediate = {
+		show_as_tooltip = {
+			if = {
+				limit = { scope:disease_type = flag:mana_devouring_1 }
+				scope:sick_character = { remove_trait_force_tooltip = mana_devouring_1 }
+			}
+			elsif = {
+				limit = { scope:disease_type = flag:mana_devouring_2 }
+				scope:sick_character = { remove_trait_force_tooltip = mana_devouring_2 }
+			}
+		}
+	}
+
+	option = {
+		name = { #So happy!
+			trigger = { health_2202_happy_recovery_trigger = yes }
+			text = health.2202.a.happy
+		}
+
+		name = { #So angry!
+			trigger = {
+				health_2202_happy_recovery_trigger = no
+				health_2202_angry_recovery_trigger = yes
+			}
+			text = health.2202.a.angry
+		}
+
+		name = { #So relieved!
+			trigger = {
+				health_2202_happy_recovery_trigger = no
+				health_2202_angry_recovery_trigger = no
+				health_2202_contagious_recovery_trigger = yes
+			}
+			text = health.2202.a.relieved
+		}
+
+		name = { #So neutral...
+			trigger = {
+				health_2202_happy_recovery_trigger = no
+				health_2202_angry_recovery_trigger = no
+				health_2202_contagious_recovery_trigger = no
+			}
+			text = health.2202.a.neutral
+		}
+
+		if = {
+			limit = {
+				OR = {
+					scope:disease_type = flag:lovers_pox
+					scope:disease_type = flag:early_great_pox
+					scope:disease_type = flag:great_pox
+				}
+				scope:sick_character = {
+					has_std_trigger = no
+					has_character_modifier = rejected_from_marriage_bed_modifier
+				}
+			}
+			scope:sick_character = {
+				remove_character_modifier = rejected_from_marriage_bed_modifier
+			}
+		}
+	}
+}
+
+#####################
+#   Monthly check   # by Donekulda
+#####################
+
+AMHealth.3001 = {
+	hidden = yes
+	trigger = {
+		OR = { has_trait = mana }
+	}
+	
+	if = {
+		limit = {
+			has_flag = flag:mana_devouring_1
+			has_trait = mana
+			var:mana <= 0
+			var:mana_gen <= 0
+		}
+		immediate = { trigger_event = AMHealth.0002 } # Evolve mana devouring into body devouring
+	}
+	elsif = {
+		limit = {
+			has_flag = flag:mana_devouring_2
+			has_trait = mana
+			var:mana >= 200
+			var:mana_gen >= 1
+		}
+		immediate = { trigger_event = AMHealth.1103 } # Devolve body devouring into mana devouring
+	}
+}
+
+#####################
+# DISEASE TREATMENT # by Mathilda Bjarnehed & additional texts by Milla Isaksson
+#####################
+
+#Who should decide about my treatment?
+AMHealth.3100 = {
+	hidden = yes
+
+	trigger = {
+		has_treatable_magical_disease_trigger = yes
+		has_recent_treatment_trigger = no
+		court_physician_available_trigger = yes
+	}
+
+	immediate = {
+		set_worst_disease_effect = yes
+		save_scope_as = sick_character
+		decide_who_picks_disease_treatment_effect = yes #Sends health.3101 to me or 3102 to liege
+	}
+
+	on_trigger_fail = {
+		#No disease/no physician: do nothing (if we hire a new physician, they will treat everyone upon being hired)
+		#Has a disease but treatment is still active? Try again
+		if = {
+			limit = {
+				has_treatable_disease_trigger = yes
+				has_recent_treatment_trigger = yes #Only difference
+				court_physician_available_trigger = yes
+			}
+			trigger_event = { id = AMHealth.3100 years = 1 }
+		}
+	}
+}
+
+
+#I pick my treatment (court physician was recently hired OR treating after last treatment ran out OR liege let me pick for myself)
+AMHealth.3101 = {
+	type = character_event
+	title = health.3101.t
+	desc = {
+		desc = health.3101.start.desc
+		first_valid = { #Disease type
+			triggered_desc = {
+				trigger = { scope:disease_type = flag:mana_devouring }
+				desc = disease_mana_devouring
+			}
+			desc = missing_illness
+		}
+		random_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						OR = {
+							health >= death_chance_starts_health
+						}
+						scope:physician = {
+							NOR = {
+								has_trait = lifestyle_physician
+								has_trait = lifestyle_mystic
+							}
+						}
+					}
+				}
+				desc = health.3101.safe_recommendation.desc
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						health < death_chance_starts_health
+						scope:physician = {
+							NOR = {
+								has_trait = lifestyle_physician
+								has_trait = lifestyle_mystic
+							}
+						}
+					}
+					NOT = { has_trait = lifestyle_mystic }
+				}
+				desc = health.3101.risky_recommendation.desc
+			}
+			triggered_desc = {
+				trigger = {
+					scope:physician = { has_trait = lifestyle_mystic }
+				}
+				desc = health.3101.mystic_recommendation.desc
+			}
+		}
+		desc = health.3101.end.desc
+	}
+	theme = healthcare
+	left_portrait = {
+		character = scope:physician
+		triggered_animation = {
+			trigger = { scope:physician = { health_event_is_worried_trigger = { CHARACTER = root } } }
+			animation = worry
+		}
+		triggered_animation = {
+			trigger = { scope:physician = { ai_rationality >= 0 } } #Don't look rational if you're not
+			animation = personality_rational
+		}
+		animation = idle
+	}
+	
+	trigger = {
+		has_treatable_disease_trigger = yes
+		court_physician_available_trigger = yes
+	}
+
+	weight_multiplier = {
+		base = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			save_court_physician_as_effect = { SCOPE_NAME = physician }
+			set_worst_disease_effect = yes
+		}
+	}
+
+	#Safe
+	option = {
+		name = health.3101.a
+		safe_disease_treatment_effect = { PATIENT = root TREATMENT_PICKER = root }
+		ai_chance = { base = 10 }
+	}
+
+	#Risky
+	option = {
+		name = health.3101.b
+		risky_disease_treatment_effect = { PATIENT = root TREATMENT_PICKER = root }
+		ai_chance = { base = 1 }
+	}
+	
+	#Mystic
+	option = {
+		trigger = {
+			scope:physician = { has_trait = lifestyle_mystic }
+		}
+		name = health.3101.c
+		mystic_disease_treatment_effect = { PATIENT = root TREATMENT_PICKER = root }
+		ai_chance = {
+			base = 0.5
+			modifier = {
+				add = -0.5
+				ai_zeal >= 0
+			}
+		}
+	}
+
+	#No treatment
+	option = {
+		name = health.3101.d
+		no_disease_treatment_effect = yes
+		ai_chance = { base = 0 }
+	}
+}
+
+#Important courtier sick: I pick treatment for them (court physician was recently hired OR treating after last treatment ran out)
+AMHealth.3102 = {
+	type = character_event
+	title = health.3102.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+			    trigger = {
+					scope:sick_character = scope:physician
+			    }
+			    desc = health.3102.start.desc_sick_physician
+			}
+			desc = health.3102.start.desc
+		}
+		first_valid = { #Disease type
+			triggered_desc = {
+				trigger = { scope:disease_type = flag:mana_devouring }
+				desc = disease_mana_devouring
+			}
+			desc = missing_illness
+		}
+		random_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						OR = {
+							scope:sick_character = { health >= death_chance_starts_health }
+						}
+						scope:physician = {
+							NOR = {
+								has_trait = lifestyle_physician
+								has_trait = lifestyle_mystic
+							}
+						}
+					}
+				}
+				desc = health.3101.safe_recommendation.desc
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						scope:sick_character = { health < death_chance_starts_health }
+						scope:physician = {
+							NOR = {
+								has_trait = lifestyle_physician
+								has_trait = lifestyle_mystic
+							}
+						}
+					}
+					NOT = { has_trait = lifestyle_mystic }
+				}
+				desc = health.3101.risky_recommendation.desc
+			}
+			triggered_desc = {
+				trigger = {
+					scope:physician = {
+						OR = {
+							has_trait = lifestyle_mystic
+							ai_zeal <= medium_negative_ai_value
+						}
+					}
+				}
+				desc = health.3101.mystic_recommendation.desc
+			}
+		}
+		desc = health.3101.end.desc
+	}
+	theme = healthcare
+	left_portrait = {
+		character = scope:sick_character
+		animation = sick
+	}
+	right_portrait = {
+		trigger = {
+			root_picks_treatment_for_sick_character_trigger = yes
+			NOT = { scope:sick_character = scope:physician }
+		}
+		character = scope:physician
+		triggered_animation = {
+			trigger = { scope:physician = { health_event_is_worried_trigger = { CHARACTER = scope:sick_character } } }
+			animation = worry
+		}
+		animation = personality_rational
+	}
+	
+	trigger = {
+		scope:sick_character = {
+			has_treatable_disease_trigger = yes
+			is_alive = yes
+		}
+		court_physician_available_trigger = yes
+	}
+
+	weight_multiplier = {
+		base = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			save_court_physician_as_effect = { SCOPE_NAME = physician }
+			scope:sick_character = { set_worst_disease_effect = yes }
+		}
+	}
+
+	#Safe
+	option = {
+		name = health.3102.a
+		safe_disease_treatment_effect = { PATIENT = scope:sick_character TREATMENT_PICKER = root }
+		ai_chance = { base = 10 }
+	}
+
+	#Risky
+	option = {
+		name = health.3102.b
+		risky_disease_treatment_effect = { PATIENT = scope:sick_character TREATMENT_PICKER = root }
+		ai_chance = { base = 1 }
+	}
+	
+	#Mystic
+	option = {
+		trigger = {
+			scope:physician = { has_trait = lifestyle_mystic }
+		}
+		name = {
+			trigger = { scope:sick_character = scope:physician }
+			text = health.3102.c_sick_physician
+		}
+		name = health.3102.c
+		mystic_disease_treatment_effect = { PATIENT = scope:sick_character TREATMENT_PICKER = root }
+		ai_chance = {
+			base = 0.5
+			modifier = {
+				add = -0.5
+				ai_zeal >= 0
+			}
+		}
+	}
+
+	#No treatment
+	option = {
+		name = health.3102.d
+		deny_treatment_effect = { PATIENT = scope:sick_character TREATMENT_PICKER = root }
+		ai_chance = { base = 1 }
+	}
+
+	#Let them pick
+	option = {
+		name = {
+			trigger = {
+				OR = {
+					scope:sick_character = { is_adult = yes }
+					NOT = { scope:sick_character = scope:physician }
+				}
+			}
+			text = health.3102.e_adult
+		}
+		name = {
+			trigger = {
+				OR = {
+					scope:sick_character = { is_adult = no }
+					scope:sick_character = scope:physician
+				}
+			}
+			text = health.3102.e_child
+		}
+		scope:sick_character = { pick_own_disease_treatment_effect = yes }	
+		ai_chance = { base = 0 }
+	}
+}
+
+
