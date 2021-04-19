@@ -11,6 +11,59 @@
 	change_variable = { name = mage_xp add = $VALUE$ }
 }
 
+change_mana = {
+	if = {
+		limit = {
+			$VALUE$ > 0
+		}
+		custom_description = {
+			text = positive_mana_cost
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$VALUE$ < 0
+		}
+		custom_description = {
+			text = negative_mana_cost
+			value = $VALUE$
+		}
+	}
+	change_variable = { name = mana add = $VALUE$ }
+}
+
+change_mana_gen = {
+	if = {
+		limit = {
+			NOT = { exists = var:mana_gen }
+		}
+		set_variable = {
+			name = mana_gen
+			value = 0
+		}
+	}
+	if = {
+		limit = {
+			$VALUE$ > 0
+		}
+		custom_description = {
+			text = positive_mana_drain
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$VALUE$ < 0
+		}
+		custom_description = {
+			text = negative_mana_drain
+			value = $VALUE$
+		}
+	}
+	change_variable = { name = mana_gen add = $VALUE$ }
+}
+
 immortal_remove_lifetime_flags = {
 	if = { limit = { has_character_flag = has_refunded_perks } remove_character_flag = has_refunded_perks }
 	if = { limit = { has_character_flag = declared_major_religious_war_flag } remove_character_flag = declared_major_religious_war_flag }
@@ -129,5 +182,64 @@ decrease_vanilla_trait_rank = {
 		}
 		remove_trait = $TRAIT_PREFIX$_bad_2
 		add_trait = $TRAIT_PREFIX$_bad_3
+	}
+}
+
+check_enough_mana = {
+	if = {
+		limit = {
+			scope:am_spell_caster.var:mana < $SPELL_COST$
+		}
+		add_character_flag = casting_low_mana_spell
+	}
+}
+
+check_enough_skill = {
+	if = {
+		limit = {
+			NOT = { has_perk = $SPELL_PERK$ }
+		}
+		add_character_flag = casting_low_skill_spell
+	}
+}
+
+am_remove_minor_illness = {
+	remove_trait = smallpox
+	remove_trait = sickly
+	remove_trait = ill
+	remove_trait = early_great_pox
+	remove_trait = lovers_pox
+	remove_trait = wounded_1
+	remove_trait = infirm
+}
+
+am_remove_greater_illness = {
+	remove_trait = pneumonic
+	remove_trait = great_pox
+	remove_trait = leper
+	remove_trait = wounded_2
+	remove_trait = maimed
+	remove_trait = gout_ridden
+	remove_trait = consumption
+	remove_trait = cancer
+	remove_trait = typhus
+	remove_trait = bubonic_plague
+}
+
+am_remove_critical_illness = {
+	remove_trait = wounded_3
+	remove_trait = one_eyed
+	remove_trait = one_legged
+	remove_trait = disfigured
+	remove_trait = scarred
+	remove_trait = eunuch
+	remove_trait = blind
+	remove_trait = incapable
+}
+
+add_drained_modifier_scope_work_around = {
+	add_character_modifier = {
+		modifier = drained_modifier
+		years = $YEARS$
 	}
 }

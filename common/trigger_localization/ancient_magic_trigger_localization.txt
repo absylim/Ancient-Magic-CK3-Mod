@@ -9,3 +9,19 @@ casting_low_skill_spell = {
 casting_null_blood_spell = {
 	global = CASTING_NULL_BLOOD_SPELL
 }
+
+is_living_immortal = {
+	global = IS_LIVING_IMMORTAL
+}
+
+casting_null_spell = {
+	global = CATING_NULL_SPELL
+}
+
+auras_and_rituals_target_caster = {
+	global = MUST_TARGET_CASTER
+}
+
+living_earthworks_desc = {
+	global = living_earthworks_desc
+}

@@ -100,8 +100,9 @@ flaming_weapons_modifier = {
 
 living_earthworks_modifier = {
 	icon = martial_positive
-	fort_level = 0.5
+	hide_effects = yes # Custom localization (living_earthworks_modifier_desc)
 	stacking = yes
+	fort_level = 0.5
 }
 
 control_water_modifier = {

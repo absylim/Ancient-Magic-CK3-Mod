@@ -1,8 +1,159 @@
 ﻿mage_level = {
+    alias = { mage_talent }
 }
 
 magic_potential = {
+    alias = { mage_potency }
 }
 
 mana = {
+    alias = { magical_power }
+}
+
+mana_cost = {
+    alias = { spell_energy mana_draw }
+}
+
+mana_drain = {
+}
+
+magic_talent = {
+    alias = { magic_skill magic_talent magical_skill magical_talent skill_in_a_magic_school talent_in_a_magic_school }
+}
+
+mage_spell = {
+}
+
+mage_aura = {
+}
+
+mage_ritual = {
+}
+
+minor_health_issues = {
+}
+
+serious_health_issues = {
+}
+
+worst_health_issues = {
+}
+
+chronomancy = {
+    alias = { time_magic time_mage skip_mage chronomancer }
+}
+
+chiromancy = {
+    alias = { healing_magic healer_mage chiromancer white_mage }
+}
+
+elomancy = {
+    alias = { battle_magic elomancer battle_mage elementalist war_mage elementalism }
+}
+
+necromancy = {
+    alias = { death_magic necromancer death_mage pale_mage black_mage }
+}
+
+biomancy = {
+    alias = { nature_magic druid_mage nature_mage biomancer  }
+}
+
+mensomancy = {
+    alias = { psychomancy psychomancer mensomancer mentalism mentalist }
+}
+
+school_of_magic = {
+    alias = { magic_school magical_school magic_discipline magical_discipline }
+}
+
+undead = {
+    alias = { lesser_undead greater_undead }
+}
+
+# SPELL DESCRIPTIONS
+# Chronomancy
+control_aging = {
+}
+
+haste = {
+}
+
+glimpse_the_future = {
+}
+
+financial_times = {
+}
+
+celerity = {
+}
+
+slowness = {
+}
+
+mass_slowness = {
+}
+
+temporal_manipulation = {
+}
+
+# Chiromancy
+healing_spell = {
+}
+
+# Elomancy
+create_golems = {
+}
+
+stone_golems = {
+    alias = { stone_golem }
+}
+
+lava_golems = {
+    alias = { lava_golem }
+}
+
+flame_aura = {
+}
+
+flaming_weapons = {
+}
+
+living_earthworks = {
+}
+
+control_water = {
+}
+
+drought_spell = {
+}
+
+cloak_of_elements = {
+}
+
+create_undead = {
+}
+
+pestilence = {
+}
+
+consume_life = {
+}
+
+aura_of_death = {
+}
+
+manipulate_blood = {
+}
+
+conception = {
+}
+
+manipulate_mind = {
+}
+
+aura_of_majesty = {
+}
+
+aura_of_truth = {
 }
