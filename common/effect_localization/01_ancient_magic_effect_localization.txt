@@ -72,3 +72,19 @@ death_stare_perk_effect = {
 deacon_of_death_perk_effect = {
 	global = DEACON_OF_DEATH_PERK_EFFECT
 }
+
+negative_mana_cost = {
+	global = NEGATIVE_MANA_COST
+}
+
+positive_mana_cost = {
+	global = POSITIVE_MANA_COST
+}
+
+negative_mana_drain = {
+	global = NEGATIVE_MANA_DRAIN
+}
+
+positive_mana_drain = {
+	global = POSITIVE_MANA_DRAIN
+}

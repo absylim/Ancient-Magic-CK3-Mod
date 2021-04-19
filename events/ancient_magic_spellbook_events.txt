@@ -64,36 +64,60 @@ ancient_magic_spellbook_events.002 = {
 		name = ancient_magic_spellbook_events.002.a
 		trigger_event = ancient_magic_spellbook_events.201
 	}
-	option = {
-		name = ancient_magic_spellbook_events.002.b
-		trigger_event = ancient_magic_spellbook_events.202
-	}
+	# Haste
 	option = {
 		name = ancient_magic_spellbook_events.002.c
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.203
 	}
+	# Glimpse The Future
 	option = {
 		name = ancient_magic_spellbook_events.002.d
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.204
 	}
+	# Financial Times
 	option = {
 		name = ancient_magic_spellbook_events.002.e
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.205
 	}
+	# Celerity
 	option = {
 		name = ancient_magic_spellbook_events.002.f
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.206
 	}
+	# Slowness
 	option = {
 		name = ancient_magic_spellbook_events.002.g
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.207
 	}
+	# Mass Slowness
 	option = {
 		name = ancient_magic_spellbook_events.002.h
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.208
 	}
+	# Temporal Manipulation
 	option = {
 		name = ancient_magic_spellbook_events.002.i
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.209
 	}
 	option = {
@@ -115,14 +139,6 @@ ancient_magic_spellbook_events.003 = {
 		trigger_event = ancient_magic_spellbook_events.301
 	}
 	option = {
-		name = ancient_magic_spellbook_events.003.b
-		trigger_event = ancient_magic_spellbook_events.302
-	}
-	option = {
-		name = ancient_magic_spellbook_events.003.c
-		trigger_event = ancient_magic_spellbook_events.303
-	}
-	option = {
 		name = ancient_magic_spellbook_events_back
 		trigger_event = ancient_magic_spellbook_events.001
 	}
@@ -138,35 +154,66 @@ ancient_magic_spellbook_events.004 = {
 	
 	option = {
 		name = ancient_magic_spellbook_events.004.a
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.401
 	}
 	option = {
 		name = ancient_magic_spellbook_events.004.b
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.402
 	}
 	option = {
 		name = ancient_magic_spellbook_events.004.c
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.403
 	}
 	option = {
 		name = ancient_magic_spellbook_events.004.d
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.404
 	}
 	option = {
 		name = ancient_magic_spellbook_events.004.e
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.405
 	}
 	option = {
 		name = ancient_magic_spellbook_events.004.f
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.406
 	}
 	option = {
 		name = ancient_magic_spellbook_events.004.g
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.407
 	}
 	option = {
-		name = ancient_magic_spellbook_events.004.h
-		trigger_event = ancient_magic_spellbook_events.408
+		name = CASTER_ONLY
+		trigger = {
+			custom_description = {
+				text = auras_and_rituals_target_caster
+				NOT = { scope:am_spell_caster = scope:am_spell_target }
+				always = no
+			}
+		}
+		show_as_unavailable = {
+			always = yes
+			NOT = { scope:am_spell_caster = scope:am_spell_target }
+		}
 	}
 	option = {
 		name = ancient_magic_spellbook_events_back
@@ -182,37 +229,28 @@ ancient_magic_spellbook_events.005 = {
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
 	
+	# Create Undead
 	option = {
 		name = ancient_magic_spellbook_events.005.a
 		trigger_event = ancient_magic_spellbook_events.501
 	}
+	# Pestilence
 	option = {
 		name = ancient_magic_spellbook_events.005.b
 		trigger_event = ancient_magic_spellbook_events.502
 	}
+	# Consume Life
 	option = {
 		name = ancient_magic_spellbook_events.005.c
 		trigger_event = ancient_magic_spellbook_events.503
 	}
+	# Aura of Death
 	option = {
 		name = ancient_magic_spellbook_events.005.d
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.504
-	}
-	option = {
-		name = ancient_magic_spellbook_events.005.e
-		trigger_event = ancient_magic_spellbook_events.505
-	}
-	option = {
-		name = ancient_magic_spellbook_events.005.f
-		trigger_event = ancient_magic_spellbook_events.506
-	}
-	option = {
-		name = ancient_magic_spellbook_events.005.g
-		trigger_event = ancient_magic_spellbook_events.507
-	}
-	option = {
-		name = ancient_magic_spellbook_events.005.h
-		trigger_event = ancient_magic_spellbook_events.508
 	}
 	option = {
 		name = ancient_magic_spellbook_events_back
@@ -233,17 +271,46 @@ ancient_magic_spellbook_events.006 = {
 		trigger_event = ancient_magic_spellbook_events.601 # Manipulate Blood (601 - 604)
 	}
 	option = {
-		name = ancient_magic_spellbook_events.006.d
-		trigger_event = ancient_magic_spellbook_events.604 # Fertility Control
-	}
-	option = {
 		name = ancient_magic_spellbook_events.006.e
-		trigger_event = ancient_magic_spellbook_events.605 # Impregnate
+		trigger = {
+			OR = {
+				scope:am_spell_caster = scope:am_spell_target
+				AND = {
+					NOT = { scope:am_spell_caster = scope:am_spell_target }
+					scope:am_spell_target = {
+						is_pregnant = no # Lets nip this one in the bud
+					}
+				}
+			}
+			scope:am_spell_target = {
+				age >= 16 # Lets nip this one in the bud
+			}
+			scope:am_spell_caster = {
+				age >= 16 # Shouldn't be possible, but just in case
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				scope:am_spell_target = {
+					age < 16
+				}
+				scope:am_spell_caster = {
+					age < 16
+				}
+				AND = {
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					scope:am_spell_target = {
+						is_pregnant = yes
+					}
+				}
+			}
+		}
+		trigger_event = ancient_magic_spellbook_events.605 # Conception
 	}
-	option = {
-		name = ancient_magic_spellbook_events.006.f
-		trigger_event = ancient_magic_spellbook_events.606 # Sculpt Flesh
-	}
+	#option = {
+	#	name = ancient_magic_spellbook_events.006.e
+	#	trigger_event = ancient_magic_spellbook_events.606 # Aura of Verdancy (Increases Supply Limit)
+	#}
 	option = {
 		name = ancient_magic_spellbook_events_back
 		trigger_event = ancient_magic_spellbook_events.001
@@ -258,38 +325,34 @@ ancient_magic_spellbook_events.007 = {
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
 	
+	# Manipulate Mind - Target Only
 	option = {
 		name = ancient_magic_spellbook_events.007.a
+		trigger = {
+			NOT = { scope:am_spell_caster = scope:am_spell_target }
+		}
+		show_as_unavailable = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
 		trigger_event = ancient_magic_spellbook_events.701
 	}
-	option = {
-		name = ancient_magic_spellbook_events.007.b
-		trigger_event = ancient_magic_spellbook_events.702
-	}
+	# Beguiling Aura - Self Only
 	option = {
 		name = ancient_magic_spellbook_events.007.c
-		trigger_event = ancient_magic_spellbook_events.703
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
+		trigger_event = ancient_magic_spellbook_events.702
 	}
+	# Enchanting Aura - Self Only
 	option = {
 		name = ancient_magic_spellbook_events.007.d
-		trigger_event = ancient_magic_spellbook_events.704
+		trigger = {
+			scope:am_spell_caster = scope:am_spell_target
+		}
+		trigger_event = ancient_magic_spellbook_events.703
 	}
-	option = {
-		name = ancient_magic_spellbook_events.007.e
-		trigger_event = ancient_magic_spellbook_events.705
-	}
-	option = {
-		name = ancient_magic_spellbook_events.007.f
-		trigger_event = ancient_magic_spellbook_events.706
-	}
-	option = {
-		name = ancient_magic_spellbook_events.007.g
-		trigger_event = ancient_magic_spellbook_events.707
-	}
-	option = {
-		name = ancient_magic_spellbook_events.007.h
-		trigger_event = ancient_magic_spellbook_events.708
-	}
+	# Back
 	option = {
 		name = ancient_magic_spellbook_events_back
 		trigger_event = ancient_magic_spellbook_events.001
@@ -298,10 +361,74 @@ ancient_magic_spellbook_events.007 = {
 
 #time spells
 
-# Halt Aging
+# Change Aging
 ancient_magic_spellbook_events.201 = {
 	title = ancient_magic_spellbook_events.201.t
-	desc = ancient_magic_spellbook_events.201.desc
+	desc = {
+		# Common opening...
+		desc = ancient_magic_spellbook_events.201.desc
+		# Are we talking to an immortal?
+		triggered_desc = {
+			trigger = {
+				scope:am_spell_target = {
+					is_immortal = yes
+				}
+			}
+			desc = ancient_magic_spellbook_events.201.desc.a.x
+		}
+		triggered_desc = {
+			trigger = {
+				scope:am_spell_target = {
+					is_immortal = no
+				}
+			}
+			desc = ancient_magic_spellbook_events.201.desc.b.x
+		}
+		
+		# Did they gain immortality from this spell?
+		triggered_desc = {
+			trigger = {
+				scope:am_spell_target = {
+					has_trait = immortal
+				}
+			}
+			desc = ancient_magic_spellbook_events.201.desc.x.a
+		}
+		
+		# Are they a líché?
+		triggered_desc = {
+			trigger = {
+				scope:am_spell_target = {
+					has_trait = undead
+				}
+			}
+			desc = ancient_magic_spellbook_events.201.desc.x.b
+		}
+
+		# Are they innately immortal?
+		triggered_desc = {
+			trigger = {
+				scope:am_spell_target = {
+					has_trait = master_of_time
+					NOT = { has_trait = undead }
+				}
+			}
+			desc = ancient_magic_spellbook_events.201.desc.x.c
+		}
+
+		# Do we not know what they are?
+		triggered_desc = {
+			trigger = {
+				scope:am_spell_target = {
+					is_immortal = yes
+					NOT = { has_trait = undead }
+					NOT = { has_trait = immortal }
+					NOT = { has_trait = master_of_time }
+				}
+			}
+			desc = ancient_magic_spellbook_events.201.desc.x.d
+		}
+	}
 	theme = education
 	left_portrait = {
 		character = scope:am_spell_caster
@@ -309,68 +436,264 @@ ancient_magic_spellbook_events.201 = {
 	}
 	right_portrait = { 
 		character = scope:am_spell_target
-		animation = fear
+		animation = ecstasy
+	}
+
+	immediate = {
+		scope:am_spell_caster = {
+			if = {
+				limit = {
+					var:mana < 500
+				}
+				add_character_flag = casting_low_mana_spell
+			}
+			if = {
+				limit = {
+					NOT = { has_perk = master_of_time_perk }
+				}
+				add_character_flag = casting_low_skill_spell
+			}
+		}
+	}
+
+	# Stop Aging
+	option = {
+		name = ancient_magic_spellbook_events.201.a
+		trigger = {
+			scope:am_spell_target = {
+				is_immortal = no
+			}
+		}
+		show_as_unavailable = {
+			scope:am_spell_target = {
+				is_immortal = yes
+			}
+		}
+		scope:am_spell_caster = {
+			add_character_flag = casting_halt_aging_spell
+			trigger_event = ancient_magic_spellbook_events.202
+		}
+	}
+
+	# Restart Aging
+	option = {
+		name = ancient_magic_spellbook_events.201.b
+		trigger = {
+			scope:am_spell_target = {
+				is_immortal = yes
+				#NOT = { has_trait = undead }
+			}
+		}
+		show_as_unavailable = {
+			scope:am_spell_target = {
+				is_immortal = no
+			}
+		}
+		scope:am_spell_caster = {
+			add_character_flag = casting_restart_aging_spell
+			trigger_event = ancient_magic_spellbook_events.202
+		}
+	}
+
+	# You messed up son. You took the easy way to immortality...
+	#option = {
+	#	name = ancient_magic_spellbook_events.201.c
+	#	trigger = {
+	#		scope:am_spell_target = {
+	#			has_trait = undead
+	#		}
+	#		has_game_rule = undead_can_be_revived
+	#	}
+	#	# Triggers an event to undo your undeath (WIP)
+	#}
+
+	option = {
+		name = ancient_magic_spellbook_events_back
+		remove_character_flag = casting_low_mana_spell
+		remove_character_flag = casting_low_skill_spell
+		trigger_event = ancient_magic_spellbook_events.002
+	}
+}
+
+ancient_magic_spellbook_events.202 = {
+	title = ancient_magic_spellbook_events.201.t # Intentional
+	desc = {
+		# Is the character immortal? If so, how does that affect your goal?
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_halt_aging_spell
+					NOR = {
+						has_character_flag = casting_low_mana_spell
+						has_character_flag = casting_low_skill_spell
+					}
+				}
+				desc = ancient_magic_spellbook_events.202.desc.a
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_restart_aging_spell
+					NOR = {
+						has_character_flag = casting_low_mana_spell
+						has_character_flag = casting_low_skill_spell
+					}
+					scope:am_spell_target = {
+						has_trait = immortal
+					}
+				}
+				desc = ancient_magic_spellbook_events.202.desc.b
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_restart_aging_spell
+					NOR = {
+						has_character_flag = casting_low_mana_spell
+						has_character_flag = casting_low_skill_spell
+					}
+					scope:am_spell_target = {
+						has_trait = master_of_time
+					}
+				}
+				desc = ancient_magic_spellbook_events.202.desc.c
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_restart_aging_spell
+					NOR = {
+						has_character_flag = casting_low_mana_spell
+						has_character_flag = casting_low_skill_spell
+					}
+					scope:am_spell_target = {
+						is_unliving_immortal = yes
+					}
+				}
+				desc = ancient_magic_spellbook_events.202.desc.d
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_restart_aging_spell
+					NOR = {
+						has_character_flag = casting_low_mana_spell
+						has_character_flag = casting_low_skill_spell
+					}
+					scope:am_spell_target = {
+						NOR = {
+							is_immortal = yes
+							is_living_immortal = no
+							is_unliving_immortal = no
+						}
+					}
+				}
+				desc = ancient_magic_spellbook_events.202.desc.e
+			}
+
+			# Do you have the skill, but not enough mana?
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_low_mana_spell
+					NOT = { has_character_flag = casting_low_skill_spell }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Do you have enough mana, but not the skill?
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_low_skill_spell
+					NOT = { has_character_flag = casting_low_mana_spell }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			# Do you have neither the mana or the skill?
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_low_mana_spell
+					has_character_flag = casting_low_skill_spell
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+		}
+	}
+	theme = education
+	left_portrait = {
+		character = scope:am_spell_caster
+		animation = ecstasy
+	}
+	right_portrait = { 
+		character = scope:am_spell_target
+		animation = ecstasy
 	}
 	
 	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events_cast
 		trigger = {
 			scope:am_spell_caster = {
-				var:mana >= 500
-				has_trait = master_of_time
+				custom_description = {
+					text = casting_low_mana_spell
+					NOT = { has_character_flag = casting_low_mana_spell }
+				}
+				custom_description = {
+					text = casting_low_skill_spell
+					NOT = { has_character_flag = casting_low_skill_spell }
+				}
+				custom_description = {
+					text = casting_null_spell
+					has_character_flag = casting_halt_aging_spell
+				}
 			}
 			scope:am_spell_target = {
-				NOT = { has_trait = master_of_time }
 				NOT = { has_trait = immortal }
-				NOT = { has_trait = undead }
 			}
 		}
 		show_as_unavailable = {
 			OR = {
 				scope:am_spell_caster = {
 					OR = {
-						var:mana < 500
-						NOT = { has_trait = master_of_time }
+						custom_description = {
+							text = casting_low_mana_spell
+							has_character_flag = casting_low_mana_spell
+						}
+						custom_description = {
+							text = casting_low_skill_spell
+							has_character_flag = casting_low_skill_spell
+						}
 					}
 				}
 				scope:am_spell_target = {
-					OR = {
-						has_trait = master_of_time
-						has_trait = immortal
-						has_trait = undead
-					}
+					has_trait = immortal
 				}
 			}
+			custom_description = {
+				text = casting_null_spell
+				has_character_flag = casting_halt_aging_spell
+			}
 		}
-		change_mana = { VALUE = -500 }
-		
+		scope:am_spell_caster = {
+			change_mana = { VALUE = -500 }
+			remove_character_flag = am_spell_resolution
+			remove_character_flag = casting_restart_aging_spell
+			remove_character_flag = casting_halt_aging_spell
+		}
 		scope:am_spell_target = {
 			add_trait = immortal
 		}
-
-		remove_character_flag = am_spell_resolution
 	}
-	
-	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.002
-	}
-}
 
-# Restart Aging
-ancient_magic_spellbook_events.202 = {
-	title = ancient_magic_spellbook_events.202.t
-	desc = ancient_magic_spellbook_events.202.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
 	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events_cast
 		trigger = {
 			scope:am_spell_caster = {
-				var:mana >= 500
-				has_trait = master_of_time
+				custom_description = {
+					text = casting_low_mana_spell
+					NOT = { has_character_flag = casting_low_mana_spell }
+				}
+				custom_description = {
+					text = casting_low_skill_spell
+					NOT = { has_character_flag = casting_low_skill_spell }
+				}
+				custom_description = {
+					text = casting_null_spell
+					has_character_flag = casting_restart_aging_spell
+				}
 			}
 			scope:am_spell_target = {
 				has_trait = immortal
@@ -380,34 +703,101 @@ ancient_magic_spellbook_events.202 = {
 			OR = {
 				scope:am_spell_caster = {
 					OR = {
-						var:mana < 500
-						NOT = { has_trait = master_of_time }
+						custom_description = {
+							text = casting_low_mana_spell
+							has_character_flag = casting_low_mana_spell
+						}
+						custom_description = {
+							text = casting_low_skill_spell
+							has_character_flag = casting_low_skill_spell
+						}
 					}
 				}
 				scope:am_spell_target = {
 					NOT = { has_trait = immortal }
 				}
 			}
+			custom_description = {
+				text = casting_null_spell
+				has_character_flag = casting_restart_aging_spell
+			}
 		}
-		change_mana = { VALUE = -500 }
-		
+		scope:am_spell_caster = {
+			change_mana = { VALUE = -500 }
+			remove_character_flag = am_spell_resolution
+			remove_character_flag = casting_restart_aging_spell
+			remove_character_flag = casting_halt_aging_spell
+		}
 		scope:am_spell_target = {
 			remove_trait = immortal
 		}
-
-		remove_character_flag = am_spell_resolution
 	}
 	
 	option = {
 		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.002
+		remove_character_flag = casting_restart_aging_spell
+		remove_character_flag = casting_halt_aging_spell
+		trigger_event = ancient_magic_spellbook_events.201
 	}
 }
 
 # Haste
 ancient_magic_spellbook_events.203 = {
 	title = ancient_magic_spellbook_events.203.t
-	desc = ancient_magic_spellbook_events.203.desc
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 15
+					}
+					NOT = { has_perk = mass_celerity_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = mass_celerity_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = magic_haste_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 15
+					NOT = { has_character_modifier = magic_haste_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = magic_haste_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.203.desc
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
@@ -415,18 +805,17 @@ ancient_magic_spellbook_events.203 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			NOT = { has_character_modifier = magic_haste_modifier }
 			var:mana >= 100
+			var:mana_gen >= 15
 			has_perk = mass_celerity_perk
-			NOT = {
-				has_character_modifier = magic_haste_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = magic_haste_modifier }
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
-				has_character_modifier = magic_haste_modifier
+				var:mana_gen < 15
+				NOT = { has_perk = mass_celerity_perk }
 			}
 		}
 
@@ -445,15 +834,12 @@ ancient_magic_spellbook_events.203 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = mass_celerity_perk
 			has_character_modifier = magic_haste_modifier
+			has_perk = mass_celerity_perk
 		}
 		show_as_unavailable = {
-			var:mana < 100
-			NOT = {
-				has_character_modifier = magic_haste_modifier
-			}
+			has_character_modifier = magic_haste_modifier
+			NOT = { has_perk = mass_celerity_perk }
 		}
 
 		change_mana_gen = { VALUE = 15 }
@@ -476,7 +862,60 @@ ancient_magic_spellbook_events.203 = {
 # Glimpse the Future
 ancient_magic_spellbook_events.204 = {
 	title = ancient_magic_spellbook_events.204.t
-	desc = ancient_magic_spellbook_events.204.desc
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 15
+					}
+					NOT = { has_perk = glimpse_the_future_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = glimpse_the_future_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = glimpse_the_future_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 15
+					NOT = { has_character_modifier = glimpse_the_future_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = glimpse_the_future_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.204.desc
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
@@ -484,18 +923,17 @@ ancient_magic_spellbook_events.204 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			NOT = { has_character_modifier = glimpse_the_future_modifier }
 			var:mana >= 100
+			var:mana_gen >= 15
 			has_perk = glimpse_the_future_perk
-			NOT = {
-				has_character_modifier = glimpse_the_future_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = glimpse_the_future_modifier }
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
-				has_character_modifier = glimpse_the_future_modifier
+				var:mana_gen < 15
+				NOT = { has_perk = glimpse_the_future_perk }
 			}
 		}
 
@@ -514,15 +952,12 @@ ancient_magic_spellbook_events.204 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = glimpse_the_future_perk
 			has_character_modifier = glimpse_the_future_modifier
+			has_perk = glimpse_the_future_perk
 		}
 		show_as_unavailable = {
-			var:mana < 100
-			NOT = {
-				has_character_modifier = glimpse_the_future_modifier
-			}
+			has_character_modifier = glimpse_the_future_modifier
+			NOT = { has_perk = glimpse_the_future_perk }
 		}
 
 		change_mana_gen = { VALUE = 15 }
@@ -544,7 +979,60 @@ ancient_magic_spellbook_events.204 = {
 # Financial Times
 ancient_magic_spellbook_events.205 = {
 	title = ancient_magic_spellbook_events.205.t
-	desc = ancient_magic_spellbook_events.205.desc
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 15
+					}
+					NOT = { has_perk = finacial_times_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = finacial_times_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = finacial_times_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 15
+					NOT = { has_character_modifier = finacial_times_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = finacial_times_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.205.desc
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
@@ -552,18 +1040,17 @@ ancient_magic_spellbook_events.205 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			NOT = { has_character_modifier = finacial_times_modifier}
 			var:mana >= 100
+			var:mana_gen >= 15
 			has_perk = finacial_times_perk
-			NOT = {
-				has_character_modifier = finacial_times_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = finacial_times_modifier }
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
-				has_character_modifier = finacial_times_modifier
+				var:mana_gen < 15
+				NOT = { has_perk = finacial_times_perk }
 			}
 		}
 
@@ -582,15 +1069,12 @@ ancient_magic_spellbook_events.205 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = finacial_times_perk
 			has_character_modifier = finacial_times_modifier
+			has_perk = finacial_times_perk
 		}
 		show_as_unavailable = {
-			var:mana >= 100
-			NOT = {
-				has_character_modifier = finacial_times_modifier
-			}
+			has_character_modifier = finacial_times_modifier
+			NOT = { has_perk = finacial_times_perk }
 		}
 
 		change_mana_gen = { VALUE = 15 }
@@ -612,7 +1096,60 @@ ancient_magic_spellbook_events.205 = {
 # Celerity
 ancient_magic_spellbook_events.206 = {
 	title = ancient_magic_spellbook_events.206.t
-	desc = ancient_magic_spellbook_events.206.desc
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 15
+					}
+					NOT = { has_perk = celerity_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = celerity_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = celerity_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 15
+					NOT = { has_character_modifier = celerity_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = celerity_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.206.desc
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
@@ -620,18 +1157,17 @@ ancient_magic_spellbook_events.206 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			NOT = { has_character_modifier = celerity_modifier }
 			var:mana >= 100
+			var:mana_gen >= 15
 			has_perk = celerity_perk
-			NOT = {
-				has_character_modifier = celerity_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = celerity_modifier }
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
-				has_character_modifier = celerity_modifier
+				var:mana_gen < 15
+				NOT = { has_perk = celerity_perk }
 			}
 		}
 
@@ -650,15 +1186,12 @@ ancient_magic_spellbook_events.206 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = celerity_perk
 			has_character_modifier = celerity_modifier
+			has_perk = celerity_perk
 		}
 		show_as_unavailable = {
-			var:mana >= 100
-			NOT = {
-				has_character_modifier = celerity_modifier
-			}
+			has_character_modifier = celerity_modifier
+			NOT = { has_perk = celerity_perk }
 		}
 
 		change_mana_gen = { VALUE = 15 }
@@ -680,7 +1213,60 @@ ancient_magic_spellbook_events.206 = {
 # Slowness
 ancient_magic_spellbook_events.207 = {
 	title = ancient_magic_spellbook_events.207.t
-	desc = ancient_magic_spellbook_events.207.desc
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 15
+					}
+					NOT = { has_perk = slowness_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = slowness_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = slowness_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 15
+					NOT = { has_character_modifier = slowness_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = slowness_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.207.desc
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
@@ -688,18 +1274,17 @@ ancient_magic_spellbook_events.207 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			NOT = { has_character_modifier = slowness_modifier }
 			var:mana >= 100
+			var:mana_gen >= 15
 			has_perk = slowness_perk
-			NOT = {
-				has_character_modifier = slowness_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = slowness_modifier }
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
-				has_character_modifier = slowness_modifier
+				var:mana_gen < 15
+				NOT = { has_perk = slowness_perk }
 			}
 		}
 
@@ -718,15 +1303,12 @@ ancient_magic_spellbook_events.207 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = slowness_perk
 			has_character_modifier = slowness_modifier
+			has_perk = slowness_perk
 		}
 		show_as_unavailable = {
-			var:mana < 100
-			NOT = {
-				has_character_modifier = slowness_modifier
-			}
+			has_character_modifier = slowness_modifier
+			NOT = { has_perk = slowness_perk }
 		}
 
 		change_mana_gen = { VALUE = 15 }
@@ -748,7 +1330,60 @@ ancient_magic_spellbook_events.207 = {
 # Mass Slowness
 ancient_magic_spellbook_events.208 = {
 	title = ancient_magic_spellbook_events.208.t
-	desc = ancient_magic_spellbook_events.208.desc
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 15
+					}
+					NOT = { has_perk = mass_slowness_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = mass_slowness_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = mass_slowness_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 15
+					NOT = { has_character_modifier = mass_slowness_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = mass_slowness_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.208.desc
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
@@ -756,18 +1391,17 @@ ancient_magic_spellbook_events.208 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			NOT = { has_character_modifier = mass_slowness_modifier }
 			var:mana >= 100
+			var:mana_gen >= 15
 			has_perk = mass_slowness_perk
-			NOT = {
-				has_character_modifier = mass_slowness_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = mass_slowness_modifier }
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
-				has_character_modifier = mass_slowness_modifier
+				var:mana_gen < 15
+				NOT = { has_perk = mass_slowness_perk }
 			}
 		}
 
@@ -786,15 +1420,12 @@ ancient_magic_spellbook_events.208 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = mass_slowness_perk
 			has_character_modifier = mass_slowness_modifier
+			has_perk = mass_slowness_perk
 		}
 		show_as_unavailable = {
-			var:mana < 100
-			NOT = {
-				has_character_modifier = mass_slowness_modifier
-			}
+			has_character_modifier = mass_slowness_modifier
+			NOT = { has_perk = mass_slowness_perk }
 		}
 
 		change_mana_gen = { VALUE = 15 }
@@ -816,7 +1447,60 @@ ancient_magic_spellbook_events.208 = {
 # Temporal Manipulation
 ancient_magic_spellbook_events.209 = {
 	title = ancient_magic_spellbook_events.209.t
-	desc = ancient_magic_spellbook_events.209.desc
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 30
+					}
+					NOT = { has_perk = temporal_manipulation_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = temporal_manipulation_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = temporal_manipulation_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 30
+					NOT = { has_character_modifier = temporal_manipulation_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = temporal_manipulation_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.209.desc
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
@@ -824,18 +1508,17 @@ ancient_magic_spellbook_events.209 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			NOT = { has_character_modifier = temporal_manipulation_modifier }
 			var:mana >= 100
+			var:mana_gen >= 30
 			has_perk = temporal_manipulation_perk
-			NOT = {
-				has_character_modifier = temporal_manipulation_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = temporal_manipulation_modifier }
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
-				has_character_modifier = temporal_manipulation_modifier
+				var:mana_gen < 30
+				NOT = { has_perk = temporal_manipulation_perk }
 			}
 		}
 
@@ -854,15 +1537,12 @@ ancient_magic_spellbook_events.209 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = temporal_manipulation_perk
 			has_character_modifier = temporal_manipulation_modifier
+			has_perk = temporal_manipulation_perk
 		}
 		show_as_unavailable = {
-			var:mana > 100
-			NOT = {
-				has_character_modifier = temporal_manipulation_modifier
-			}
+			has_character_modifier = temporal_manipulation_modifier
+			NOT = { has_perk = temporal_manipulation_perk }
 		}
 
 		change_mana_gen = { VALUE = 30 }
@@ -883,280 +1563,345 @@ ancient_magic_spellbook_events.209 = {
 
 #life spells
 
-# Minor Restoration
+# Heal
 ancient_magic_spellbook_events.301 = {
 	title = ancient_magic_spellbook_events.301.t
-	desc = ancient_magic_spellbook_events.301.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
-	option = {
-		name = ancient_magic_spellbook_cast_spell
-		trigger = {
-			scope:am_spell_caster = {
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill to cast?
+			triggered_desc = {
+				trigger = {
+					var:mana < 50
+					NOT = { has_perk = heal_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 50
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = heal_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+		}
+		# What ails the target, and can you fix it?
+		
+		# Common opening string...
+		triggered_desc = {
+			trigger = {
 				var:mana >= 50
 				has_perk = heal_perk
 			}
-			scope:am_spell_target = {
-				OR = {
-					has_trait = smallpox
-					has_trait = sickly
-					has_trait = ill
-					has_trait = early_great_pox
-					has_trait = lovers_pox
-					has_trait = wounded_1
-					has_trait = infirm
+			desc = ancient_magic_spellbook_events.301.desc.a.x.x.x
+		}
+
+		# Common minor ailment string...
+		triggered_desc = {
+			trigger = {
+				var:mana >= 50
+				has_perk = heal_perk
+				scope:am_spell_target = {
+					am_has_minor_illness = yes
 				}
 			}
+			desc = ancient_magic_spellbook_events.301.desc.a.a.x.x
+		}
+		# Can you fix the minor ailment...?
+		first_valid = {
+			# Minor Ailments...
+			triggered_desc = {
+				trigger = {
+					var:mana >= 50
+					has_perk = heal_perk
+					scope:am_spell_target = {
+						am_has_minor_illness = yes
+					}
+				}
+				desc = ancient_magic_spellbook_events.301.desc.a.a.a.x
+			}
+		}
+		# Common greater ailment string...
+		triggered_desc = {
+			trigger = {
+				var:mana >= 50
+				has_perk = heal_perk
+				scope:am_spell_target = {
+					am_has_greater_illness = yes
+				}
+			}
+			desc = ancient_magic_spellbook_events.301.desc.a.b.x.x
+		}
+		# Greater Ailment...
+		first_valid = {
+			# Not enough mana or skill...
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					var:mana >= 50
+					has_perk = heal_perk
+					NOT = { has_perk = greater_heal_perk }
+					scope:am_spell_target = {
+						am_has_greater_illness = yes
+					}
+				}
+				desc = ancient_magic_spellbook_events.301.desc.a.b.a.x
+			}
+			# Not enough mana...
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					var:mana >= 50
+					has_perk = heal_perk
+					has_perk = greater_heal_perk
+					scope:am_spell_target = {
+						am_has_greater_illness = yes
+					}
+				}
+				desc = ancient_magic_spellbook_events.301.desc.a.b.b.x
+			}
+			# Not enough skill...
+			triggered_desc = {
+				trigger = {
+					var:mana >= 100
+					has_perk = heal_perk
+					NOT = { has_perk = greater_heal_perk }
+					scope:am_spell_target = {
+						am_has_greater_illness = yes
+					}
+				}
+				desc = ancient_magic_spellbook_events.301.desc.a.b.c.x
+			}
+			# Can heal the greater illness...
+			triggered_desc = {
+				trigger = {
+					var:mana >= 100
+					has_perk = heal_perk
+					has_perk = greater_heal_perk
+					scope:am_spell_target = {
+						am_has_greater_illness = yes
+					}
+				}
+				desc = ancient_magic_spellbook_events.301.desc.a.b.d.x
+			}
+		}
+			
+		# Common critical ailment string...
+		triggered_desc = {
+			trigger = {
+				var:mana >= 50
+				has_perk = heal_perk
+				scope:am_spell_target = {
+					am_has_critical_illness = yes
+				}
+			}
+			desc = ancient_magic_spellbook_events.301.desc.a.c.x.x
+		}
+
+		# Critical Ailment...
+		first_valid = {
+			# Not enough mana or skill...
+			triggered_desc = {
+				trigger = {
+					var:mana < 200
+					var:mana >= 50
+					has_perk = heal_perk
+					NOT = { has_trait = avatar_of_life }
+					scope:am_spell_target = {
+						am_has_critical_illness = yes
+					}
+				}
+				desc = ancient_magic_spellbook_events.301.desc.a.c.a.x
+			}
+			# Not enough mana...
+			triggered_desc = {
+				trigger = {
+					var:mana < 200
+					var:mana >= 50
+					has_perk = heal_perk
+					has_trait = avatar_of_life
+					scope:am_spell_target = {
+						am_has_critical_illness = yes
+					}
+				}
+				desc = ancient_magic_spellbook_events.301.desc.a.c.b.x
+			}
+			# Not enough skill...
+			triggered_desc = {
+				trigger = {
+					var:mana >= 200
+					has_perk = heal_perk
+					NOT = { has_trait = avatar_of_life }
+					scope:am_spell_target = {
+						am_has_critical_illness = yes
+					}
+				}
+				desc = ancient_magic_spellbook_events.301.desc.a.c.c.x
+			}
+			# Has been healed of a critical ailment in the last five years
+			triggered_desc = {
+				trigger = {
+					var:mana >= 200
+					has_perk = heal_perk
+					has_trait = avatar_of_life
+					scope:am_spell_target = {
+						am_has_critical_illness = yes
+						has_character_modifier = full_restoration_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events.301.desc.a.c.d.x
+			}
+			# Can heal the critical illness...
+			triggered_desc = {
+				trigger = {
+					var:mana >= 200
+					has_perk = heal_perk
+					has_trait = avatar_of_life
+					scope:am_spell_target = {
+						am_has_critical_illness = yes
+					}
+				}
+				desc = ancient_magic_spellbook_events.301.desc.a.c.e.x
+			}
+		}
+		# Common closing
+		triggered_desc = {
+			trigger = {
+				var:mana >= 50
+				has_perk = heal_perk
+				scope:am_spell_target = {
+					OR = {
+						am_has_minor_illness = yes
+						AND = {
+							scope:am_spell_caster = { var:mana >= 100 has_perk = greater_heal_perk }
+							am_has_greater_illness = yes
+						}
+						AND = {
+							scope:am_spell_caster = { var:mana >= 200 has_trait = avatar_of_life }
+							NOT = { has_character_modifier = full_restoration_modifier }
+							am_has_critical_illness = yes
+						}
+					}
+				}
+			}
+			desc = ancient_magic_spellbook_events.301.desc.x.x.x.a
+		}
+	}
+	theme = physical_health
+	left_portrait = scope:am_spell_caster
+	right_portrait = {
+		character = scope:am_spell_target
+		animation = severelyinjured
+	}
+	# Minor Ailments
+	option = {
+		name = ancient_magic_spellbook_events.301.a
+		trigger = {
+			scope:am_spell_target = {
+				am_has_minor_illness = yes
+			}
+			var:mana >= 50
+			has_perk = heal_perk
 		}
 		show_as_unavailable = {
+			scope:am_spell_target = {
+				am_has_minor_illness = yes
+			}
 			OR = {
-				scope:am_spell_caster = {
-					OR = {
-						var:mana < 50
-						NOT = { has_perk = heal_perk }
-					}
-				}
-				scope:am_spell_target = {
-					NOR = {
-						has_trait = smallpox
-						has_trait = sickly
-						has_trait = ill
-						has_trait = early_great_pox
-						has_trait = lovers_pox
-						has_trait = wounded_1
-						has_trait = infirm
-					}
-				}
+				var:mana < 50
+				NOT = { has_perk = heal_perk }
 			}
 		}
-		
 		scope:am_spell_caster = {
 			change_mana = { VALUE = -50 }
+			remove_character_flag = am_spell_resolution
 		}
-		
 		scope:am_spell_target = {
-			remove_trait = smallpox
-			remove_trait = sickly
-			remove_trait = ill
-			remove_trait = early_great_pox
-			remove_trait = lovers_pox
-			remove_trait = wounded_1
-			remove_trait = infirm
+			am_remove_minor_illness = yes
 		}
-
-		remove_character_flag = am_spell_resolution
 	}
-	
+	# <= Greater Ailments
 	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.003
-	}
-}
-
-# Major Restoration
-ancient_magic_spellbook_events.302 = {
-	title = ancient_magic_spellbook_events.302.t
-	desc = ancient_magic_spellbook_events.302.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
-	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.301.b
 		trigger = {
-			scope:am_spell_caster = {
-				var:mana>= 100
-				has_perk = greater_heal_perk
-			}
 			scope:am_spell_target = {
-				OR = { 
-					has_trait = pneumonic
-					has_trait = great_pox
-					has_trait = leper
-					has_trait = wounded_2
-					has_trait = maimed
-					has_trait = gout_ridden
-					has_trait = consumption
-					has_trait = cancer
-					has_trait = typhus
-					has_trait = bubonic_plague
-				}
+				am_has_greater_illness = yes
 			}
+			var:mana >= 100
+			has_perk = greater_heal_perk
 		}
 		show_as_unavailable = {
+			scope:am_spell_target = {
+				am_has_greater_illness = yes
+			}
 			OR = {
-				scope:am_spell_caster = {
-					OR = {
-						var:mana < 100
-						NOT = { has_perk = greater_heal_perk }
-					}
-				}
-				scope:am_spell_target = {
-					NOR = { 
-						has_trait = pneumonic
-						has_trait = great_pox
-						has_trait = leper
-						has_trait = wounded_2
-						has_trait = maimed
-						has_trait = gout_ridden
-						has_trait = consumption
-						has_trait = cancer
-						has_trait = typhus
-						has_trait = bubonic_plague
-					}
-				}
+				var:mana < 100
+				NOT = { has_perk = greater_heal_perk }
 			}
 		}
 		scope:am_spell_caster = {
 			change_mana = { VALUE = -100 }
+			remove_character_flag = am_spell_resolution
 		}
-		
 		scope:am_spell_target = {
-			remove_trait = pneumonic
-			remove_trait = great_pox
-			remove_trait = leper
-			remove_trait = wounded_2
-			remove_trait = maimed
-			remove_trait = gout_ridden
-			remove_trait = consumption
-			remove_trait = cancer
-			remove_trait = typhus
-			remove_trait = bubonic_plague
+			am_remove_minor_illness = yes
+			am_remove_greater_illness = yes
 		}
-
-		remove_character_flag = am_spell_resolution
 	}
-	
+	# <= Critical Ailments
 	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.003
-	}
-}
-
-# Full Restoration
-ancient_magic_spellbook_events.303 = {
-	title = ancient_magic_spellbook_events.303.t
-	desc = ancient_magic_spellbook_events.303.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
-	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.301.c
 		trigger = {
-			scope:am_spell_caster = {
-				var:mana >= 100
-				has_trait = avatar_of_life
-			}
 			scope:am_spell_target = {
-				OR = {
-					has_trait = smallpox
-					has_trait = sickly
-					has_trait = ill
-					has_trait = early_great_pox
-					has_trait = lovers_pox
-					has_trait = wounded_1
-					has_trait = infirm
-					has_trait = pneumonic
-					has_trait = great_pox
-					has_trait = leper
-					has_trait = wounded_2
-					has_trait = wounded_3
-					has_trait = maimed
-					has_trait = incapable
-					has_trait = gout_ridden
-					has_trait = consumption
-					has_trait = cancer
-					has_trait = typhus
-					has_trait = bubonic_plague
-					has_trait = one_eyed
-					has_trait = one_legged
-					has_trait = disfigured
-					has_trait = scarred
-					has_trait = eunuch
-					has_trait = blind
-				}
+				am_has_critical_illness = yes
+				NOT = { has_character_modifier = full_restoration_modifier }
 			}
+			var:mana >= 200
+			has_trait = avatar_of_life
 		}
 		show_as_unavailable = {
+			scope:am_spell_target = {
+				am_has_critical_illness = yes
+			}
 			OR = {
-				scope:am_spell_caster = {
-					OR = {
-						var:mana < 100
-						NOT = { has_perk = greater_heal_perk }
-					}
-				}
+				var:mana < 200
+				NOT = { has_trait = avatar_of_life }
 				scope:am_spell_target = {
-					NOR = {
-						has_trait = smallpox
-						has_trait = sickly
-						has_trait = ill
-						has_trait = early_great_pox
-						has_trait = lovers_pox
-						has_trait = wounded_1
-						has_trait = infirm
-						has_trait = pneumonic
-						has_trait = great_pox
-						has_trait = leper
-						has_trait = wounded_2
-						has_trait = wounded_3
-						has_trait = maimed
-						has_trait = incapable
-						has_trait = gout_ridden
-						has_trait = consumption
-						has_trait = cancer
-						has_trait = typhus
-						has_trait = bubonic_plague
-						has_trait = one_eyed
-						has_trait = one_legged
-						has_trait = disfigured
-						has_trait = scarred
-						has_trait = eunuch
-						has_trait = blind
-					}
+					has_character_modifier = full_restoration_modifier
 				}
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -100 }
+			change_mana = { VALUE = -200 }
+			remove_character_flag = am_spell_resolution
 		}
-		
 		scope:am_spell_target = {
-			remove_trait = smallpox
-			remove_trait = sickly
-			remove_trait = ill
-			remove_trait = early_great_pox
-			remove_trait = lovers_pox
-			remove_trait = wounded_1
-			remove_trait = infirm
-			remove_trait = pneumonic
-			remove_trait = great_pox
-			remove_trait = leper
-			remove_trait = wounded_2
-			remove_trait = wounded_3
-			remove_trait = maimed
-			remove_trait = incapable
-			remove_trait = gout_ridden
-			remove_trait = consumption
-			remove_trait = cancer
-			remove_trait = typhus
-			remove_trait = bubonic_plague
-			remove_trait = one_eyed
-			remove_trait = one_legged
-			remove_trait = disfigured
-			remove_trait = scarred
-			remove_trait = eunuch
-			remove_trait = blind
+			am_remove_minor_illness = yes
+			am_remove_greater_illness = yes
+			am_remove_critical_illness = yes
 			add_character_modifier = {
 				modifier = full_restoration_modifier
 				years = 5
 			}
 		}
+	}
 
-
-		remove_character_flag = am_spell_resolution
+	option = {
+		name = ancient_magic_spellbook_events.301.d
+		trigger = {
+			always = no
+		}
+		show_as_unavailable = {
+			scope:am_spell_target = {
+				am_has_minor_illness = no
+				am_has_greater_illness = no
+				am_has_critical_illness = no
+			}
+		}
 	}
 	
 	option = {
@@ -1165,82 +1910,240 @@ ancient_magic_spellbook_events.303 = {
 	}
 }
 
-#elemental spells
+# Elomancy Spells
 
-# Stone Golems
+# Create Golem
 ancient_magic_spellbook_events.401 = {
 	title = ancient_magic_spellbook_events.401.t
-	desc = ancient_magic_spellbook_events.401.desc
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill to cast?
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_perk = golem_creation_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = golem_creation_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+		}
+		# Common opening. If you see this you can at least create basic golems...
+		triggered_desc = {
+			trigger = {
+				var:mana >= 100
+				has_perk = golem_creation_perk
+				NAND = {
+					has_character_modifier = golem_cooldown_modifier
+					has_character_modifier = lava_golem_cooldown_modifier
+				}
+			}
+			desc = ancient_magic_spellbook_events.401.desc.a.x.x.x.x
+		}
+		# Is the basic golem spell on cooldown?
+		first_valid = {
+			# It is not...
+			triggered_desc = {
+				trigger = {
+					var:mana >= 100
+					has_perk = golem_creation_perk
+					NOT = { has_character_modifier = golem_cooldown_modifier }
+					NAND = {
+						has_character_modifier = golem_cooldown_modifier
+						has_character_modifier = lava_golem_cooldown_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events.401.desc.a.a.x.x.x
+			}
+			# It is...
+			triggered_desc = {
+				trigger = {
+					var:mana >= 100
+					has_perk = golem_creation_perk
+					has_character_modifier = golem_cooldown_modifier
+					NOT = { has_character_modifier = lava_golem_cooldown_modifier }
+				}
+				desc = ancient_magic_spellbook_events.401.desc.a.b.x.x.x
+			}
+		}
+		# Can you create lava golems?
+		first_valid = {
+			# Can create lava golems...
+			triggered_desc = {
+				trigger = {
+					var:mana >= 400
+					has_perk = lord_of_the_elements_perk
+					has_perk = golem_creation_perk
+					NAND = {
+						has_character_modifier = golem_cooldown_modifier
+						has_character_modifier = lava_golem_cooldown_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events.401.desc.a.x.a.x.x
+			}
+			# Not enough mana or skill to create them...
+			triggered_desc = {
+				trigger = {
+					var:mana >= 100
+					var:mana < 400
+					has_perk = golem_creation_perk
+					NOT = { has_perk = lord_of_the_elements_perk }
+					NAND = {
+						has_character_modifier = golem_cooldown_modifier
+						has_character_modifier = lava_golem_cooldown_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events.401.desc.a.x.b.x.x
+			}
+			# Not enough mana to create them...
+			triggered_desc = {
+				trigger = {
+					var:mana >= 100
+					var_mana < 400
+					has_perk = golem_creation_perk
+					has_perk = lord_of_the_elements_perk
+					NAND = {
+						has_character_modifier = golem_cooldown_modifier
+						has_character_modifier = lava_golem_cooldown_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events.401.desc.a.x.c.x.x
+			}
+			# Not enough skill to create them...
+			triggered_desc = {
+				trigger = {
+					var:mana >= 400
+					has_perk = golem_creation_perk
+					has_perk = lord_of_the_elements_perk
+					NAND = {
+						has_character_modifier = golem_cooldown_modifier
+						has_character_modifier = lava_golem_cooldown_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events.401.desc.a.x.d.x.x
+			}
+		}
+		# Is the lava golem spell on cooldown?
+		first_valid = {
+			# It is not...
+			triggered_desc = {
+				trigger = {
+					var:mana >= 400
+					has_perk = golem_creation_perk
+					has_perk = lord_of_the_elements_perk
+					NOT = { has_character_modifier = lava_golem_cooldown_modifier }
+					NAND = {
+						has_character_modifier = golem_cooldown_modifier
+						has_character_modifier = lava_golem_cooldown_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events.401.desc.a.x.a.a.x
+			}
+			# It is...
+			triggered_desc = {
+				trigger = {
+					var:mana >= 400
+					has_perk = golem_creation_perk
+					has_perk = lord_of_the_elements_perk
+					has_character_modifier = lava_golem_cooldown_modifier
+					NOT = { has_character_modifier = golem_cooldown_modifier }
+				}
+				desc = ancient_magic_spellbook_events.401.desc.a.x.a.b.x
+			}
+		}
+		# Closing if the spell can be cast...
+		triggered_desc = {
+			trigger = {
+				OR = {
+					AND = {
+						var:mana >= 100
+						has_perk = golem_creation_perk
+						NOT = { has_character_modifier = golem_cooldown_modifier }
+					}
+					AND = {
+						var:mana >= 400
+						has_perk = lord_of_the_elements_perk
+						NOT = { has_character_modifier = lava_golem_cooldown_modifier }
+					}
+				}
+			}
+			desc = ancient_magic_spellbook_events.401.desc.x.x.x.x.a
+		}
+		# Closing if the spell can't be cast because of cooldowns...
+		triggered_desc = {
+			trigger = {
+				var:mana >= 100
+				has_perk = golem_creation_perk
+				has_perk = lord_of_the_elements_perk
+				AND = {
+					has_character_modifier = golem_cooldown_modifier
+					has_character_modifier = lava_golem_cooldown_modifier
+				}
+			}
+			desc = ancient_magic_spellbook_events.401.desc.x.x.x.x.b
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
+	#right_portrait = scope:am_spell_target
+
 	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.401.a
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
 			var:mana >= 100
 			has_perk = golem_creation_perk
 			NOT = { has_character_modifier = golem_cooldown_modifier }
 		}
-
 		show_as_unavailable = {
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
 				NOT = { has_perk = golem_creation_perk }
 				has_character_modifier = golem_cooldown_modifier
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -100 }
-			spawn_army = {
-				name = golem_army
-				uses_supply = no
-				inheritable = no
-				men_at_arms = {
-					type = golem
-					stacks = mage_level
+			scope:am_spell_caster = {
+				change_mana = { VALUE = -100 }
+				spawn_army = {
+					name = golem_army
+					uses_supply = no
+					inheritable = no
+					men_at_arms = {
+						type = golem
+						stacks = mage_level
+					}
+					levy = 0
+					location = scope:am_spell_target.location # Makes sense to me...
 				}
-				levy = 0
-				location = scope:am_spell_target.location # Makes sense to me...
-			}
-			add_character_modifier = {
-				modifier = golem_cooldown_modifier
-				years = 5
+				add_character_modifier = {
+					modifier = golem_cooldown_modifier
+					years = 5
+				}
+				remove_character_flag = am_spell_resolution
 			}
 		}
-
-		remove_character_flag = am_spell_resolution
 	}
-	
 	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.004
-	}
-}
-
-# Lava Golems
-ancient_magic_spellbook_events.402 = {
-	title = ancient_magic_spellbook_events.402.t
-	desc = ancient_magic_spellbook_events.402.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
-	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.401.b
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
 			var:mana >= 400
-			has_trait = lord_of_the_elements
+			has_perk = lord_of_the_elements_perk
 			NOT = { has_character_modifier = lava_golem_cooldown_modifier }
 		}
 		show_as_unavailable = {
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 400
-				NOT = { has_trait = lord_of_the_elements }
+				NOT = { has_perk = lord_of_the_elements_perk }
 				has_character_modifier = lava_golem_cooldown_modifier
 			}
 		}
@@ -1261,11 +2164,9 @@ ancient_magic_spellbook_events.402 = {
 				modifier = lava_golem_cooldown_modifier
 				years = 5
 			}
-
 			remove_character_flag = am_spell_resolution
 		}
 	}
-	
 	option = {
 		name = ancient_magic_spellbook_events_back
 		trigger_event = ancient_magic_spellbook_events.004
@@ -1273,28 +2174,80 @@ ancient_magic_spellbook_events.402 = {
 }
 
 # Flame Aura
-ancient_magic_spellbook_events.403 = {
-	title = ancient_magic_spellbook_events.403.t
-	desc = ancient_magic_spellbook_events.403.desc
+ancient_magic_spellbook_events.402 = {
+	title = ancient_magic_spellbook_events.402.t
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 15
+					}
+					NOT = { has_perk = flame_aura_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = flame_aura_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = flame_aura_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 15
+					NOT = { has_character_modifier = flame_aura_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = flame_aura_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.402.desc
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			NOT = { has_character_modifier = flame_aura_modifier }
 			var:mana >= 100
+			var:mana_gen >= 15
 			has_perk = flame_aura_perk
-			NOT = {
-				has_character_modifier = flame_aura_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = flame_aura_modifier }
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
-				has_character_modifier = flame_aura_modifier
+				var:mana_gen < 15
+				NOT = { has_perk = flame_aura_perk }
 			}
 		}
 
@@ -1313,15 +2266,12 @@ ancient_magic_spellbook_events.403 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = flame_aura_perk
 			has_character_modifier = flame_aura_modifier
+			has_perk = flame_aura_perk
 		}
 		show_as_unavailable = {
-			var:mana < 100
-			NOT = {
-				has_character_modifier = flame_aura_modifier
-			}
+			has_character_modifier = flame_aura_modifier
+			NOT = { has_perk = flame_aura_perk }
 		}
 
 		change_mana_gen = { VALUE = 15 }
@@ -1341,28 +2291,80 @@ ancient_magic_spellbook_events.403 = {
 }
 
 # Flaming Weapons
-ancient_magic_spellbook_events.404 = {
-	title = ancient_magic_spellbook_events.404.t
-	desc = ancient_magic_spellbook_events.404.desc
+ancient_magic_spellbook_events.403 = {
+	title = ancient_magic_spellbook_events.403.t
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 15
+					}
+					NOT = { has_perk = flaming_weapons_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = flaming_weapons_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = flame_aura_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 15
+					NOT = { has_character_modifier = flame_aura_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = flame_aura_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.403.desc
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			NOT = { has_character_modifier = flaming_weapons_modifier }
 			var:mana >= 100
+			var:mana_gen >= 15
 			has_perk = flaming_weapons_perk
-			NOT = {
-				has_character_modifier = flaming_weapons_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = flaming_weapons_modifier }
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
-				has_character_modifier = flaming_weapons_modifier
+				var:mana_gen < 15
+				NOT = { has_perk = flaming_weapons_perk }
 			}
 		}
 
@@ -1381,15 +2383,12 @@ ancient_magic_spellbook_events.404 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = flaming_weapons_perk
 			has_character_modifier = flaming_weapons_modifier
+			has_perk = flaming_weapons_perk
 		}
 		show_as_unavailable = {
-			var:mana < 100
-			NOT = {
-				has_character_modifier = flaming_weapons_modifier
-			}
+			has_character_modifier = flaming_weapons_modifier
+			NOT = { has_perk = flaming_weapons_perk }
 		}
 
 		change_mana_gen = { VALUE = 15 }
@@ -1409,28 +2408,80 @@ ancient_magic_spellbook_events.404 = {
 }
 
 # Living Earthworks
-ancient_magic_spellbook_events.405 = {
-	title = ancient_magic_spellbook_events.405.t
-	desc = ancient_magic_spellbook_events.405.desc
+ancient_magic_spellbook_events.404 = {
+	title = ancient_magic_spellbook_events.404.t
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 15
+					}
+					NOT = { has_perk = living_earthworks_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = living_earthworks_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = living_earthworks_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 15
+					NOT = { has_character_modifier = living_earthworks_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = living_earthworks_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.404.desc
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			NOT = { has_character_modifier = living_earthworks_modifier }
 			var:mana >= 100
+			var:mana_gen >= 15
 			has_perk = living_earthworks_perk
-			NOT = {
-				has_character_modifier = living_earthworks_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = living_earthworks_modifier }
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
-				has_character_modifier = living_earthworks_modifier
+				var:mana_gen < 15
+				NOT = { has_perk = living_earthworks_perk }
 			}
 		}
 
@@ -1449,15 +2500,12 @@ ancient_magic_spellbook_events.405 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = living_earthworks_perk
 			has_character_modifier = living_earthworks_modifier
+			has_perk = living_earthworks_perk
 		}
 		show_as_unavailable = {
-			var:mana < 100
-			NOT = {
-				has_character_modifier = living_earthworks_modifier
-			}
+			has_character_modifier = living_earthworks_modifier
+			NOT = { has_perk = living_earthworks_perk }
 		}
 
 		change_mana_gen = { VALUE = 15 }
@@ -1477,28 +2525,80 @@ ancient_magic_spellbook_events.405 = {
 }
 
 # Control Water
-ancient_magic_spellbook_events.406 = {
-	title = ancient_magic_spellbook_events.406.t
-	desc = ancient_magic_spellbook_events.406.desc
+ancient_magic_spellbook_events.405 = {
+	title = ancient_magic_spellbook_events.405.t
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 15
+					}
+					NOT = { has_perk = control_water_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = control_water_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = control_water_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 15
+					NOT = { has_character_modifier = control_water_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = control_water_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.405.desc
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			NOT = { has_character_modifier = control_water_modifier }
 			var:mana >= 100
+			var:mana_gen >= 15
 			has_perk = control_water_perk
-			NOT = {
-				has_character_modifier = control_water_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = control_water_modifier }
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
-				has_character_modifier = control_water_modifier
+				var:mana_gen < 15
+				NOT = { has_perk = control_water_perk }
 			}
 		}
 
@@ -1517,15 +2617,12 @@ ancient_magic_spellbook_events.406 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = control_water_perk
 			has_character_modifier = control_water_modifier
+			has_perk = control_water_perk
 		}
 		show_as_unavailable = {
-			var:mana < 100
-			NOT = {
-				has_character_modifier = control_water_modifier
-			}
+			has_character_modifier = control_water_modifier
+			NOT = { has_perk = control_water_perk }
 		}
 
 		change_mana_gen = { VALUE = 15 }
@@ -1545,28 +2642,80 @@ ancient_magic_spellbook_events.406 = {
 }
 
 # Drought
-ancient_magic_spellbook_events.407 = {
-	title = ancient_magic_spellbook_events.407.t
-	desc = ancient_magic_spellbook_events.407.desc
+ancient_magic_spellbook_events.406 = {
+	title = ancient_magic_spellbook_events.406.t
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 15
+					}
+					NOT = { has_perk = drought_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = drought_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = drought_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 15
+					NOT = { has_character_modifier = drought_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = drought_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.406.desc
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			NOT = { has_character_modifier = drought_modifier }
 			var:mana >= 100
+			var:mana_gen >= 15
 			has_perk = drought_perk
-			NOT = {
-				has_character_modifier = drought_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = drought_modifier }
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
-				has_character_modifier = drought_modifier
+				var:mana_gen < 15
+				NOT = { has_perk = drought_perk }
 			}
 		}
 
@@ -1585,15 +2734,12 @@ ancient_magic_spellbook_events.407 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = drought_perk
 			has_character_modifier = drought_modifier
+			has_perk = drought_perk
 		}
 		show_as_unavailable = {
-			var:mana < 100
-			NOT = {
-				has_character_modifier = drought_modifier
-			}
+			has_character_modifier = drought_modifier
+			NOT = { has_perk = drought_perk }
 		}
 
 		change_mana_gen = { VALUE = 15 }
@@ -1613,28 +2759,80 @@ ancient_magic_spellbook_events.407 = {
 }
 
 # Cloak of Elements
-ancient_magic_spellbook_events.408 = {
-	title = ancient_magic_spellbook_events.408.t
-	desc = ancient_magic_spellbook_events.408.desc
+ancient_magic_spellbook_events.407 = {
+	title = ancient_magic_spellbook_events.407.t
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 30
+					}
+					NOT = { has_perk = elemental_warrior_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = elemental_warrior_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = elemental_warrior_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 30
+					NOT = { has_character_modifier = elemental_warrior_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = elemental_warrior_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.407.desc
+		}
+	}
 	theme = education
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			NOT = { has_character_modifier = elemental_warrior_modifier }
 			var:mana >= 100
+			var:mana_gen >= 30
 			has_perk = elemental_warrior_perk
-			NOT = {
-				has_character_modifier = elemental_warrior_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = elemental_warrior_modifier }
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				var:mana < 100
-				has_character_modifier = elemental_warrior_modifier
+				var:mana_gen < 30
+				NOT = { has_perk = elemental_warrior_perk }
 			}
 		}
 
@@ -1682,33 +2880,181 @@ ancient_magic_spellbook_events.408 = {
 
 #death spells
 
-# Raise Undead Horde
+# Create Undead
 ancient_magic_spellbook_events.501 = {
 	title = ancient_magic_spellbook_events.501.t
-	desc = ancient_magic_spellbook_events.501.desc
-	theme = education
+	desc = {
+		# Are you casting on yourself...? (Description Ends if not...)
+		first_valid = {
+			# Yes - Continue
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_caster = scope:am_spell_target
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.a
+			}
+			# No - End Desc
+			triggered_desc = {
+				trigger = {
+					NOT = { scope:am_spell_caster = scope:am_spell_target }
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.b
+			}
+		}
+		# Has the caster cast the spell recently...? (Description Ends if yes...)
+		first_valid = {
+			# No - Continue
+			triggered_desc = {
+				trigger = {
+					NOT = { has_character_modifier = undead_horde_cooldown_modifier }
+					scope:am_spell_caster = scope:am_spell_target
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.a.a
+			}
+			# Yes - End Desc
+			triggered_desc = {
+				trigger = {
+					has_character_modifier = undead_horde_cooldown_modifier
+					scope:am_spell_caster = scope:am_spell_target
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.a.b
+			}
+		}
+		# Do you have enough mana and skill...? (Description Ends if not...)
+		first_valid = {
+			# Not enough mana or skill - End Desc
+			triggered_desc = {
+				trigger = {
+					var:mana < 200
+					NOT = { has_perk = necromancy_perk }
+					NOT = { has_character_modifier = undead_horde_cooldown_modifier }
+					scope:am_spell_caster = scope:am_spell_target
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.a.a.a
+			}
+			# Not enough mana - End Desc
+			triggered_desc = {
+				trigger = {
+					var:mana < 200
+					has_perk = necromancy_perk
+					NOT = { has_character_modifier = undead_horde_cooldown_modifier }
+					scope:am_spell_caster = scope:am_spell_target
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.a.a.b
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana >= 200
+					NOT = { has_perk = necromancy_perk }
+					NOT = { has_character_modifier = undead_horde_cooldown_modifier }
+					scope:am_spell_caster = scope:am_spell_target
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.a.a.c
+			}
+			# Yes - Continue
+			triggered_desc = {
+				trigger = {
+					var:mana >= 200
+					has_perk = necromancy_perk
+					NOT = { has_character_modifier = undead_horde_cooldown_modifier }
+					scope:am_spell_caster = scope:am_spell_target
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.a.a.d
+			}	
+		}
+		# Common opening for 'create greater undead'...
+		first_valid = {
+			# Is a 'deacon of death' - Continue
+			triggered_desc = {
+				trigger = {
+					has_perk = deacon_of_death_perk
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.x.a
+			}
+			# Is not a 'deacon of death' - End Desc
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = deacon_of_death_perk }
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.x.b
+			}
+		}
+		# Is the target already a greater undead?
+		first_valid = {
+			# Is not undead - Continue
+			triggered_desc = {
+				trigger = {
+					has_perk = deacon_of_death_perk
+					scope:am_spell_target = {
+						NOT = { has_trait = undead }
+					}
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.x.a.a
+			}
+			# Is undead - End Desc
+			triggered_desc = {
+				trigger = {
+					has_perk = deacon_of_death_perk
+					scope:am_spell_target = {
+						has_trait = undead
+					}
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.x.a.b
+			}
+		}
+		# Have enough mana?
+		first_valid = {
+			# Not enough mana - End Desc
+			triggered_desc = {
+				trigger = {
+					var:mana < 600
+					has_perk = deacon_of_death_perk
+					NOT = { has_character_modifier = undead_horde_cooldown_modifier }
+					scope:am_spell_target = {
+						NOT = { has_trait = undead }
+					}
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.x.a.a.a
+			}
+			# Yes - Continue
+			triggered_desc = {
+				trigger = {
+					var:mana >= 600
+					has_perk = deacon_of_death_perk
+					NOT = { has_character_modifier = undead_horde_cooldown_modifier }
+					scope:am_spell_target = {
+						NOT = { has_trait = undead }
+					}
+				}
+				desc = ancient_magic_spellbook_events.501.desc.x.x.a.a.b
+			}	
+		}
+	}
+	theme = death
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
-	
+
 	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.501.a
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
-			var:mana >= 200
+			scope:am_spell_target = scope:am_spell_caster
 			has_perk = necromancy_perk
+			var:mana >= 200
 			NOT = { has_character_modifier = undead_horde_cooldown_modifier }
 		}
 		show_as_unavailable = {
 			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster } # Should auras be targeted?
-				var:mana < 200
+				NOT = { scope:am_spell_target = scope:am_spell_caster }
 				NOT = { has_perk = necromancy_perk }
+				var:mana < 200
 				has_character_modifier = undead_horde_cooldown_modifier
 			}
 		}
-		scope:am_spell_target = {
+		scope:am_spell_caster = {
 			change_mana = { VALUE = -200 }
-
+			remove_character_flag = am_spell_resolution
+		}
+		scope:am_spell_target = {
 			spawn_army = {
 				name = undead_horde
 				uses_supply = no
@@ -1724,83 +3070,22 @@ ancient_magic_spellbook_events.501 = {
 				modifier = undead_horde_cooldown_modifier
 				years = 2
 			}
-
-			remove_character_flag = am_spell_resolution
 		}
 	}
-	
-	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.005
-	}
-}
 
-# Become Líché
-ancient_magic_spellbook_events.502 = {
-	title = ancient_magic_spellbook_events.502.t
-	desc = ancient_magic_spellbook_events.502.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
 	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.501.b
 		trigger = {
-			scope:am_spell_target = scope:am_spell_caster # Should auras be targeted?
+			has_perk = deacon_of_death_perk
 			var:mana >= 600
-			NOT = { has_trait = undead }
-			has_trait = deacon_of_death
-		}
-		show_as_unavailable = {
-			OR = {
-				NOT = { scope:am_spell_target = scope:am_spell_caster }
-				var:mana < 600
-				has_trait = undead
-				NOT = { has_trait = deacon_of_death }
-			}
-		}
-		scope:am_spell_target = {
-			change_mana = { VALUE = -600 }
-			add_trait = undead
-			add_character_flag = immune_to_disease
-
-			remove_character_flag = am_spell_resolution
-		}
-	}
-	
-	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.005
-	}
-}
-
-# Grant Unlife
-ancient_magic_spellbook_events.503 = {
-	title = ancient_magic_spellbook_events.503.t
-	desc = ancient_magic_spellbook_events.503.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
-	option = {
-		name = ancient_magic_spellbook_cast_spell
-		trigger = {
-			scope:am_spell_caster = {
-				var:mana >= 600
-				has_trait = deacon_of_death
-			}
 			scope:am_spell_target = {
-				NOT = { has_trait = undead } # Other immortals? (Decided no (Possible líché content))
+				NOT = { has_trait = undead }
 			}
 		}
 		show_as_unavailable = {
 			OR = {
-				scope:am_spell_caster = {
-					OR = {
-						var:mana < 600
-						NOT = { has_trait = deacon_of_death}
-					}
-				}
+				NOT = { has_perk = deacon_of_death_perk }
+				var:mana < 600
 				scope:am_spell_target = {
 					has_trait = undead
 				}
@@ -1808,18 +3093,15 @@ ancient_magic_spellbook_events.503 = {
 		}
 		scope:am_spell_caster = {
 			change_mana = { VALUE = -600 }
-			add_hook = {
-				target = scope:am_spell_target
-				type = ancient_magic_hook_undead_master
+			remove_character_flag = am_spell_resolution
+		}
+		scope:am_spell_target = {
+			custom_description = {
+				text = target_becomes_undead
+				add_trait = undead
+				add_character_flag = immune_to_disease
 			}
 		}
-		
-		scope:am_spell_target = {
-			add_trait = undead
-			add_character_flag = immune_to_disease
-		}
-
-		remove_character_flag = am_spell_resolution
 	}
 	
 	option = {
@@ -1828,17 +3110,84 @@ ancient_magic_spellbook_events.503 = {
 	}
 }
 
-# Inflict Illness
-ancient_magic_spellbook_events.504 = {
-	title = ancient_magic_spellbook_events.504.t
-	desc = ancient_magic_spellbook_events.504.desc
-	theme = education
+# Pestilence
+ancient_magic_spellbook_events.502 = {
+	title = ancient_magic_spellbook_events.502.t
+	desc = {
+		# Casting on yourself?
+		first_valid = {
+			# No - Continue
+			triggered_desc = {
+				trigger = {
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+				}
+				desc = ancient_magic_spellbook_events.502.desc.x.a
+			}
+			# Yes - End Desc
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = scope:am_spell_caster
+				}
+				desc = ancient_magic_spellbook_events.502.desc.x.b
+			}
+		}
+		# Has Inflict Illness Perk?
+		first_valid = {
+			# Yes - Continue
+			triggered_desc = {
+				trigger = {
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					has_perk = inflict_illness_perk
+				}
+				desc = ancient_magic_spellbook_events.502.desc.x.a.a
+			}
+			# No - End Desc
+			triggered_desc = {
+				trigger = {
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					NOT = { has_perk = inflict_illness_perk }
+				}
+				desc = ancient_magic_spellbook_events.502.desc.x.a.b
+			}
+		}
+		# Has plague lord perk?
+		triggered_desc = {
+			trigger = {
+				NOT = { scope:am_spell_target = scope:am_spell_caster }
+				has_perk = plague_lord_perk
+			}
+			desc = ancient_magic_spellbook_events.502.desc.x.a.a.a
+		}
+		# Has enough mana for either spell?
+		first_valid = {
+			# Enough mana for illness...
+			triggered_desc = {
+				trigger = {
+					has_perk = inflict_illness_perk
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					var:mana >= 50
+				}
+				desc = ancient_magic_spellbook_events.502.desc.x.a.a.a.a
+			}
+			# Not enough mana for either...
+			triggered_desc = {
+				trigger = {
+					has_perk = inflict_illness_perk
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					var:mana < 50
+				}
+				desc = ancient_magic_spellbook_events.502.desc.x.a.a.a.b
+			}
+		}
+	}
+	theme = death
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
 	
 	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.502.a
 		trigger = {
+			NOT = { scope:am_spell_caster = scope:am_spell_target }
 			scope:am_spell_caster = {
 				var:mana >= 50
 				has_perk = inflict_illness_perk
@@ -1849,6 +3198,7 @@ ancient_magic_spellbook_events.504 = {
 		}
 		show_as_unavailable = {
 			OR = {
+				scope:am_spell_caster = scope:am_spell_target
 				scope:am_spell_caster = {
 					OR = {
 						var:mana < 50
@@ -1862,32 +3212,18 @@ ancient_magic_spellbook_events.504 = {
 		}
 		scope:am_spell_caster = {
 			change_mana = { VALUE = -50 }
+			remove_character_flag = am_spell_resolution
 		}
 
 		scope:am_spell_target = {
-			add_trait = ill
+			contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
 		}
-
-		remove_character_flag = am_spell_resolution
 	}
-	
-	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.005
-	}
-}
 
-# Spread Plague
-ancient_magic_spellbook_events.505 = {
-	title = ancient_magic_spellbook_events.505.t
-	desc = ancient_magic_spellbook_events.505.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
 	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.502.b
 		trigger = {
+			NOT = { scope:am_spell_caster = scope:am_spell_target }
 			scope:am_spell_caster = {
 				var:mana >= 300
 				has_perk = plague_lord_perk
@@ -1898,6 +3234,7 @@ ancient_magic_spellbook_events.505 = {
 		}
 		show_as_unavailable = {
 			OR = {
+				scope:am_spell_caster = scope:am_spell_target
 				scope:am_spell_caster = {
 					OR = {
 						var:mana < 300
@@ -1915,7 +3252,7 @@ ancient_magic_spellbook_events.505 = {
 		}
 
 		scope:am_spell_target = {
-			add_trait = bubonic_plague
+			contract_disease_effect = { DISEASE = bubonic_plague TREATMENT_EVENT = yes }
 		}
 	}
 	
@@ -1925,27 +3262,149 @@ ancient_magic_spellbook_events.505 = {
 	}
 }
 
-# Drain Life
-ancient_magic_spellbook_events.506 = {
-	title = ancient_magic_spellbook_events.506.t
-	desc = ancient_magic_spellbook_events.506.desc
-	theme = education
+# Consume Life
+ancient_magic_spellbook_events.503 = {
+	title = ancient_magic_spellbook_events.503.t
+	desc = {
+		# Casting on yourself or character that has already been drained?
+		first_valid = {
+			# No - Continue
+			triggered_desc = {
+				trigger = {
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					scope:am_spell_target = {
+						NOT = { has_character_modifier = drained_modifier }
+					}
+				}
+				desc = ancient_magic_spellbook_events.503.desc.x.a
+			}
+			# Yes - End Desc
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = scope:am_spell_caster
+				}
+				desc = ancient_magic_spellbook_events.503.desc.x.b
+			}
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = drained_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events.503.desc.x.c
+			}
+		}
+		# Has Drain Life Perk?
+		first_valid = {
+			# Yes - Continue
+			triggered_desc = {
+				trigger = {
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					has_perk = drain_life_perk
+					scope:am_spell_target = {
+						NOT = { has_character_modifier = drained_modifier }
+					}
+				}
+				desc = ancient_magic_spellbook_events.503.desc.x.a.a
+			}
+			# No - End Desc
+			triggered_desc = {
+				trigger = {
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					NOT = { has_perk = drain_life_perk }
+					scope:am_spell_target = {
+						NOT = { has_character_modifier = drained_modifier }
+					}
+				}
+				desc = ancient_magic_spellbook_events.503.desc.x.a.b
+			}
+		}
+		# Has Death Stare Perk?
+		triggered_desc = {
+			trigger = {
+				NOT = { scope:am_spell_target = scope:am_spell_caster }
+				has_perk = death_stare_perk
+				scope:am_spell_target = {
+					NOT = { has_character_modifier = drained_modifier }
+				}
+			}
+			desc = ancient_magic_spellbook_events.503.desc.x.a.a.a
+		}
+		triggered_desc = {
+			trigger = {
+				NOT = { scope:am_spell_target = scope:am_spell_caster }
+				has_perk = death_stare_perk
+				scope:am_spell_target = {
+					has_character_modifier = drained_modifier
+				}
+			}
+			desc = ancient_magic_spellbook_events.503.desc.x.a.a.b
+		}
+		# Has enough mana for either spell?
+		first_valid = {
+			# Enough mana for 'drain life'...
+			triggered_desc = {
+				trigger = {
+					has_perk = drain_life_perk
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					var:mana >= 50
+					scope:am_spell_target = {
+						NOT = { has_character_modifier = drained_modifier }
+					}
+				}
+				desc = ancient_magic_spellbook_events.503.desc.x.a.a.a.a
+			}
+			# Not enough mana for either...
+			triggered_desc = {
+				trigger = {
+					has_perk = drain_life_perk
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					var:mana < 50
+					scope:am_spell_target = {
+						NOT = { has_character_modifier = drained_modifier }
+					}
+				}
+				desc = ancient_magic_spellbook_events.503.desc.x.a.a.a.b
+			}
+			# Not enough mana to drain completely...
+			triggered_desc = {
+				trigger = {
+					has_perk = death_stare_perk
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					var:mana < 600
+					scope:am_spell_target = {
+						has_character_modifier = drained_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events.503.desc.x.a.a.a.c
+			}
+		}
+	}
+	theme = death
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
 	
 	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.503.a
 		trigger = {
+			NOT = { scope:am_spell_caster = scope:am_spell_target }
 			scope:am_spell_caster = {
 				var:mana >= 200
 				has_perk = drain_life_perk
 			}
 			scope:am_spell_target = {
-				NOT = { has_character_modifier = drained_modifier }
+				NOR = {
+					has_character_modifier = drained_modifier
+					has_trait = undead
+					has_trait = immortal
+					has_trait = master_of_time
+					has_trait = avatar_of_life
+				}
 			}
 		}
 		show_as_unavailable = {
 			OR = {
+				scope:am_spell_caster = scope:am_spell_target
 				scope:am_spell_caster = {
 					OR = {
 						var:mana < 200
@@ -1953,50 +3412,39 @@ ancient_magic_spellbook_events.506 = {
 					}
 				}
 				scope:am_spell_target = {
-					has_character_modifier = drained_modifier
+					OR = {
+						has_character_modifier = drained_modifier
+						has_trait = undead
+						has_trait = immortal
+						has_trait = master_of_time
+						has_trait = avatar_of_life
+					}
 				}
 			}
 		}
 		scope:am_spell_caster = {
 			change_mana = { VALUE = -200 }
-			remove_character_modifier = drain_life_spell_modifier
 			add_character_modifier = {
 				modifier = stolen_lifeforce_modifier
-				years = mage_potency
+				years = mage_level
 			}
 			remove_character_flag = am_spell_resolution
 		}
 		scope:am_spell_target = {
-			add_character_modifier = {
-				modifier = drained_modifier
-				years = mage_potency
-			}
+			add_drained_modifier_scope_work_around = { YEARS = mage_level_value_conversion }
 		}
 	}
-	
-	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.005
-	}
-}
 
-# Death Stare
-ancient_magic_spellbook_events.507 = {
-	title = ancient_magic_spellbook_events.507.t
-	desc = ancient_magic_spellbook_events.507.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
 	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.503.b
 		trigger = {
+			NOT = { scope:am_spell_caster = scope:am_spell_target }
 			scope:am_spell_caster = {
 				var:mana >= 600
 				has_perk = death_stare_perk
 			}
 			scope:am_spell_target = {
-				NOR = { 
+				NOR = {
 					has_trait = undead
 					has_trait = immortal
 					has_trait = master_of_time
@@ -2006,6 +3454,7 @@ ancient_magic_spellbook_events.507 = {
 		}
 		show_as_unavailable = {			
 			OR = {
+				scope:am_spell_caster = scope:am_spell_target
 				scope:am_spell_caster = {
 					OR = {
 						var:mana < 600
@@ -2039,28 +3488,80 @@ ancient_magic_spellbook_events.507 = {
 }
 
 # Aura of Death
-ancient_magic_spellbook_events.508 = {
-	title = ancient_magic_spellbook_events.508.t
-	desc = ancient_magic_spellbook_events.508.desc
-	theme = education
+ancient_magic_spellbook_events.504 = {
+	title = ancient_magic_spellbook_events.504.t
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 30
+					}
+					NOT = { has_perk = aura_of_death_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = aura_of_death_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = aura_of_death_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 30
+					NOT = { has_character_modifier = aura_of_death_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = aura_of_death_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.504.desc
+		}
+	}
+	theme = death
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_caster = scope:am_spell_target # Should auras be targeted?
+			NOT = { has_character_modifier = aura_of_death_modifier }
 			var:mana >= 100
+			var:mana_gen >= 30
 			has_perk = aura_of_death_perk
-			NOT = {
-				has_character_modifier = aura_of_death_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = aura_of_death_modifier }
 			OR = {
-				NOT = { scope:am_spell_caster = scope:am_spell_target }
 				var:mana < 100
-				has_character_modifier = aura_of_death_modifier
+				var:mana_gen < 30
+				NOT = { has_perk = aura_of_death_perk }
 			}
 		}
 
@@ -2079,15 +3580,12 @@ ancient_magic_spellbook_events.508 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = aura_of_death_perk
 			has_character_modifier = aura_of_death_modifier
+			has_perk = aura_of_death_perk
 		}
 		show_as_unavailable = {
-			var:mana > 100
-			NOT = {
-				has_character_modifier = aura_of_death_modifier
-			}
+			has_character_modifier = aura_of_death_modifier
+			NOT = { has_perk = aura_of_death_perk }
 		}
 
 		change_mana_gen = { VALUE = 30 }
@@ -2106,7 +3604,7 @@ ancient_magic_spellbook_events.508 = {
 	}
 }
 
-#Biomancy spells
+#Biomancy Spells
 
 # Manipulate Blood - Good, Bad, or Ugly?
 ancient_magic_spellbook_events.601 = {
@@ -2141,18 +3639,151 @@ ancient_magic_spellbook_events.601 = {
 ancient_magic_spellbook_events.602 = {
 	title = ancient_magic_spellbook_events.602.t
 	desc = {
-		desc = ancient_magic_spellbook_events.602.desc
-		triggered_desc = {
-			trigger = {
-				has_character_flag = casting_good_blood_spell
+		# Where is this target at, genetically speaking?
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						am_genetic_level >= 9
+					}
+				}
+				desc = ancient_magic_spellbook_events.602.desc.a
 			}
-			desc = ancient_magic_spellbook_events.602.desc.a
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						am_genetic_level >= 6
+					}
+				}
+				desc = ancient_magic_spellbook_events.602.desc.b
+			}
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						am_genetic_level >= 3
+					}
+				}
+				desc = ancient_magic_spellbook_events.602.desc.c
+			}
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						am_genetic_level >= 0
+					}
+				}
+				desc = ancient_magic_spellbook_events.602.desc.d
+			}
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						am_genetic_level <= -9
+					}
+				}
+				desc = ancient_magic_spellbook_events.602.desc.g
+			}
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						am_genetic_level <= -6
+					}
+				}
+				desc = ancient_magic_spellbook_events.602.desc.f
+			}
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						am_genetic_level <= -3
+					}
+				}
+				desc = ancient_magic_spellbook_events.602.desc.e
+			}
 		}
-		triggered_desc = {
-			trigger = {
-				has_character_flag = casting_bad_blood_spell
+		# What is the caster's goal?
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_good_blood_spell
+				}
+				desc = ancient_magic_spellbook_events.602.desc.x.a
 			}
-			desc = ancient_magic_spellbook_events.602.desc.b
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_bad_blood_spell
+				}
+				desc = ancient_magic_spellbook_events.602.desc.x.b
+			}
+		}
+		# What is the caster's level of skill?
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_good_blood_spell
+					has_perk = architect_of_bloodlines_perk
+				}
+				desc = ancient_magic_spellbook_events.602.desc.x.x.a
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_bad_blood_spell
+					has_perk = architect_of_bloodlines_perk
+				}
+				desc = ancient_magic_spellbook_events.602.desc.x.x.b
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_good_blood_spell
+					has_perk = perfect_trait_perk
+				}
+				desc = ancient_magic_spellbook_events.602.desc.x.x.c
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_bad_blood_spell
+					has_perk = criple_trait_perk
+				}
+				desc = ancient_magic_spellbook_events.602.desc.x.x.d
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_good_blood_spell
+					has_perk = improve_trait_perk
+				}
+				desc = ancient_magic_spellbook_events.602.desc.x.x.e
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = casting_bad_blood_spell
+					has_perk = weaken_trait_perk
+				}
+				desc = ancient_magic_spellbook_events.602.desc.x.x.f
+			}
+			triggered_desc = {
+				trigger = {
+					NOR = {
+						has_perk = weaken_trait_perk
+						has_perk = improve_trait_perk
+						has_perk = criple_trait_perk
+						has_perk = perfect_trait_perk
+						has_perk = architect_of_bloodlines_perk
+					}
+				}
+				desc = ancient_magic_spellbook_events.602.desc.x.x.g
+			}
+		}
+		# Is the caster a flesh-sculpter?
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_perk = sculpter_of_flesh_perk
+				}
+				desc = ancient_magic_spellbook_events.602.desc.x.x.x.a
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = sculpter_of_flesh_perk }
+				}
+				desc = ancient_magic_spellbook_events.602.desc.x.x.x.b
+			}
 		}
 	}
 	theme = physical_health
@@ -2162,6 +3793,38 @@ ancient_magic_spellbook_events.602 = {
 	# Beauty
 	option = {
 		name = ancient_magic_spellbook_events.602.a
+		trigger = {
+			OR = {
+				AND = {
+					scope:am_spell_target = {
+						am_beauty_level < 3
+					}
+					has_character_flag = casting_good_blood_spell
+				}
+				AND = {
+					scope:am_spell_target = {
+						am_beauty_level > -3
+					}
+					has_character_flag = casting_bad_blood_spell
+				}
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				AND = {
+					has_character_flag = casting_good_blood_spell
+					scope:am_spell_target = {
+						am_beauty_level >= 3
+					}
+				}
+				AND = {
+					has_character_flag = casting_bad_blood_spell
+					scope:am_spell_target = {
+						am_beauty_level <= -3
+					}
+				}
+			}
+		}
 		scope:am_spell_caster = {
 			add_character_flag = casting_beauty_blood_spell
 			trigger_event = ancient_magic_spellbook_events.603
@@ -2171,6 +3834,38 @@ ancient_magic_spellbook_events.602 = {
 	# Physique
 	option = {
 		name = ancient_magic_spellbook_events.602.b
+		trigger = {
+			OR = {
+				AND = {
+					scope:am_spell_target = {
+						am_physique_level < 3
+					}
+					has_character_flag = casting_good_blood_spell
+				}
+				AND = {
+					scope:am_spell_target = {
+						am_physique_level > -3
+					}
+					has_character_flag = casting_bad_blood_spell
+				}
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				AND = {
+					has_character_flag = casting_good_blood_spell
+					scope:am_spell_target = {
+						am_beauty_level >= 3
+					}
+				}
+				AND = {
+					has_character_flag = casting_bad_blood_spell
+					scope:am_spell_target = {
+						am_beauty_level <= -3
+					}
+				}
+			}
+		}
 		scope:am_spell_caster = {
 			add_character_flag = casting_physique_blood_spell
 			trigger_event = ancient_magic_spellbook_events.603
@@ -2180,9 +3875,55 @@ ancient_magic_spellbook_events.602 = {
 	# Intellect
 	option = {
 		name = ancient_magic_spellbook_events.602.c
+		trigger = {
+			OR = {
+				AND = {
+					scope:am_spell_target = {
+						am_intellect_level < 3
+					}
+					has_character_flag = casting_good_blood_spell
+				}
+				AND = {
+					scope:am_spell_target = {
+						am_intellect_level > -3
+					}
+					has_character_flag = casting_bad_blood_spell
+				}
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				AND = {
+					has_character_flag = casting_good_blood_spell
+					scope:am_spell_target = {
+						am_beauty_level >= 3
+					}
+				}
+				AND = {
+					has_character_flag = casting_bad_blood_spell
+					scope:am_spell_target = {
+						am_beauty_level <= -3
+					}
+				}
+			}
+		}
 		scope:am_spell_caster = {
 			add_character_flag = casting_intellect_blood_spell
 			trigger_event = ancient_magic_spellbook_events.603
+		}
+	}
+	# Other (Flesh Sculpting)
+	option = {
+		name = ancient_magic_spellbook_events.602.d
+		trigger = {
+			has_perk = sculpter_of_flesh_perk
+		}
+		show_as_unavailable = {
+			NOT = { has_perk = sculpter_of_flesh_perk }
+		}
+		scope:am_spell_caster = {
+			add_character_flag = casting_other_blood_spell
+			trigger_event = ancient_magic_spellbook_events.604
 		}
 	}
 
@@ -3067,24 +4808,1020 @@ ancient_magic_spellbook_events.603 = {
 	}
 }
 
-# Fertility Control
+# Sculpt Flesh
 ancient_magic_spellbook_events.604 = {
 	title = ancient_magic_spellbook_events.604.t
 	desc = ancient_magic_spellbook_events.604.desc
-	theme = education
+	theme = physical_health
+	left_portrait = scope:am_spell_caster
+	right_portrait = scope:am_spell_target
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { exists = var:sculpt_page }
+			}
+			set_variable = {
+				name = sculpt_page
+				value = 0
+			}
+		}
+	}
+	
+	# Albino - Page 0
+	option = {
+		name = ancient_magic_spellbook_events.604.a.a
+		trigger = {
+			var:sculpt_page = 0
+			var:mana >= 300
+			scope:am_spell_target = {
+				NOT = { has_trait = albino }
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 0
+			NOT = { has_trait = albino }
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			add_trait = albino
+		}
+	}
+	option = {
+		name = ancient_magic_spellbook_events.604.a.b
+		trigger = {
+			var:sculpt_page = 0
+			var:mana >= 300
+			scope:am_spell_target = {
+				has_trait = albino
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 0
+			has_trait = albino
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			remove_trait = albino
+		}
+	}
+	
+	# Stuttering - Page 0
+	option = {
+		name = ancient_magic_spellbook_events.604.b.a
+		trigger = {
+			var:sculpt_page = 0
+			var:mana >= 300
+			scope:am_spell_target = {
+				NOT = { has_trait = stuttering }
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 0
+			NOT = { has_trait = stuttering }
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			add_trait = stuttering
+		}
+	}
+	option = {
+		name = ancient_magic_spellbook_events.604.b.b
+		trigger = {
+			var:sculpt_page = 0
+			var:mana >= 300
+			scope:am_spell_target = {
+				has_trait = stuttering
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 0
+			has_trait = stuttering
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			remove_trait = stuttering
+		}
+	}
+	# Giant - Page 1
+	option = {
+		name = ancient_magic_spellbook_events.604.c.a
+		trigger = {
+			var:sculpt_page = 1
+			var:mana >= 300
+			scope:am_spell_target = {
+				NOT = { has_trait = giant }
+				NOT = { has_trait = dwarf }
+			}
+		}
+		show_as_unavailable = {
+			scope:am_spell_target = {
+				var:sculpt_page = 1
+				NOT = { has_trait = giant }
+				OR = {
+					var:mana < 300
+					has_trait = dwarf
+				}
+			}
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			add_trait = giant
+		}
+	}
+	option = {
+		name = ancient_magic_spellbook_events.604.c.b
+		trigger = {
+			var:sculpt_page = 1
+			var:mana >= 300
+			scope:am_spell_target = {
+				has_trait = giant
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 1
+			has_trait = giant
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			remove_trait = giant
+		}
+	}
+	# Lisping - Page 1
+	option = {
+		name = ancient_magic_spellbook_events.604.d.a
+		trigger = {
+			var:sculpt_page = 1
+			var:mana >= 300
+			scope:am_spell_target = {
+				NOT = { has_trait = lisping }
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 1
+			NOT = { has_trait = lisping }
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			add_trait = lisping
+		}
+	}
+	option = {
+		name = ancient_magic_spellbook_events.604.d.b
+		trigger = {
+			var:sculpt_page = 1
+			var:mana >= 300
+			scope:am_spell_target = {
+				has_trait = lisping
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 1
+			has_trait = lisping
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			remove_trait = lisping
+		}
+	}
+	# Scales - Page 2
+	option = {
+		name = ancient_magic_spellbook_events.604.e.a
+		trigger = {
+			var:sculpt_page = 2
+			var:mana >= 300
+			scope:am_spell_target = {
+				NOT = { has_trait = scaly }
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 2
+			NOT = { has_trait = scaly }
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			add_trait = scaly
+		}
+	}
+	option = {
+		name = ancient_magic_spellbook_events.604.e.b
+		trigger = {
+			var:sculpt_page = 2
+			scope:am_spell_target = {
+				has_trait = scaly
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 2
+			has_trait = scaly
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			remove_trait = scaly
+		}
+	}
+	# Clubfooted - Page 2
+	option = {
+		name = ancient_magic_spellbook_events.604.f.a
+		trigger = {
+			var:sculpt_page = 2
+			var:mana >= 300
+			scope:am_spell_target = {
+				NOT = { has_trait = clubfooted }
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 2
+			NOT = { has_trait = clubfooted }
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			add_trait = clubfooted
+		}
+	}
+	option = {
+		name = ancient_magic_spellbook_events.604.f.b
+		trigger = {
+			var:sculpt_page = 2
+			var:mana >= 300
+			scope:am_spell_target = {
+				has_trait = clubfooted
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 2
+			has_trait = clubfooted
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			remove_trait = clubfooted
+		}
+	}
+	# Hunchback - Page 3
+	option = {
+		name = ancient_magic_spellbook_events.604.g.a
+		trigger = {
+			var:sculpt_page = 3
+			var:mana >= 300
+			scope:am_spell_target = {
+				NOT = { has_trait = hunchbacked }
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 3
+			NOT = { has_trait = hunchbacked }
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			add_trait = hunchbacked
+		}
+	}
+	option = {
+		name = ancient_magic_spellbook_events.604.g.b
+		trigger = {
+			var:sculpt_page = 3
+			scope:am_spell_target = {
+				has_trait = hunchbacked
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 3
+			has_trait = hunchbacked
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			remove_trait = hunchbacked
+		}
+	}
+	# Dwarf - Page 3
+	option = {
+		name = ancient_magic_spellbook_events.604.h.a
+		trigger = {
+			var:sculpt_page = 3
+			var:mana >= 300
+			scope:am_spell_target = {
+				NOT = { has_trait = dwarf }
+				NOT = { has_trait = giant }
+			}
+		}
+		show_as_unavailable = {
+			scope:am_spell_target = {
+				var:sculpt_page = 3
+				NOT = { has_trait = dwarf }
+				OR = {
+					var:mana < 300
+					has_trait = giant
+				}
+			}
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			add_trait = dwarf
+		}
+	}
+	option = {
+		name = ancient_magic_spellbook_events.604.h.b
+		trigger = {
+			var:sculpt_page = 3
+			var:mana >= 300
+			scope:am_spell_target = {
+				has_trait = dwarf
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 3
+			has_trait = dwarf
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			remove_trait = dwarf
+		}
+	}
+	# Strong - Page 4
+	option = {
+		name = ancient_magic_spellbook_events.604.i.a
+		trigger = {
+			var:sculpt_page = 4
+			var:mana >= 300
+			scope:am_spell_target = {
+				NOT = { has_trait = strong }
+				NOT = { has_trait = weak }
+				NOT = { has_trait = physique_bad }
+			}
+		}
+		show_as_unavailable = {
+			scope:am_spell_target = {
+				var:sculpt_page = 4
+				NOT = { has_trait = strong }
+				OR = {
+					var:mana < 300
+					has_trait = weak
+					has_trait = physique_bad
+				}
+			}
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			add_trait = strong
+		}
+	}
+	option = {
+		name = ancient_magic_spellbook_events.604.i.b
+		trigger = {
+			var:sculpt_page = 4
+			var:mana >= 300
+			scope:am_spell_target = {
+				has_trait = strong
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 4
+			has_trait = strong
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			remove_trait = strong
+		}
+	}
+	# Weak - Page 4
+	option = {
+		name = ancient_magic_spellbook_events.604.j.a
+		trigger = {
+			var:sculpt_page = 4
+			var:mana >= 300
+			scope:am_spell_target = {
+				NOT = { has_trait = weak }
+				NOT = { has_trait = strong }
+				NOT = { has_trait = physique_good }
+			}
+		}
+		show_as_unavailable = {
+			scope:am_spell_target = {
+				var:sculpt_page = 4
+				NOT = { has_trait = weak }
+				OR = {
+					var:mana < 300
+					has_trait = strong
+					has_trait = physique_good
+				}
+			}
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			add_trait = weak
+		}
+	}
+	option = {
+		name = ancient_magic_spellbook_events.604.j.b
+		trigger = {
+			var:sculpt_page = 4
+			var:mana >= 300
+			scope:am_spell_target = {
+				has_trait = weak
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 4
+			has_trait = weak
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			remove_trait = weak
+		}
+	}
+	# Blind - Page 4
+	option = {
+		name = ancient_magic_spellbook_events.604.k.a
+		trigger = {
+			var:sculpt_page = 4
+			var:mana >= 300
+			scope:am_spell_target = {
+				NOT = { has_trait = blind }
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 4
+			NOT = { has_trait = blind }
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			add_trait = blind
+		}
+	}
+	option = {
+		name = ancient_magic_spellbook_events.604.k.b
+		trigger = {
+			var:sculpt_page = 4
+			var:mana >= 300
+			scope:am_spell_target = {
+				has_trait = blind
+			}
+		}
+		show_as_unavailable = {
+			var:sculpt_page = 4
+			has_trait = blind
+			var:mana < 300
+		}
+		scope:am_spell_caster = {
+			remove_character_flag = casting_lesser_blood_spell
+			remove_character_flag = casting_moderate_blood_spell
+			remove_character_flag = casting_greater_blood_spell
+			remove_character_flag = casting_null_blood_spell
+			remove_character_flag = casting_low_mana_spell
+			remove_character_flag = casting_low_skill_spell
+			remove_character_flag = casting_good_blood_spell
+			remove_character_flag = casting_bad_blood_spell
+			remove_character_flag = casting_beauty_blood_spell
+			remove_character_flag = casting_physique_blood_spell
+			remove_character_flag = casting_intellect_blood_spell
+			remove_character_flag = am_spell_resolution
+			set_variable = { name = sculpt_page value = 0 }
+			change_mana = { VALUE = -300 }
+		}
+		scope:am_spell_target = {
+			remove_trait = blind
+		}
+	}
+
+	# Next Page - Display Other Event Options
+	option = {
+		name = ancient_magic_spellbook_events_next_page
+		trigger = {
+			var:sculpt_page < 4
+		}
+		change_variable = {
+			name = sculpt_page
+			add = 1
+		}
+		trigger_event = ancient_magic_spellbook_events.604
+	}
+
+	# Previous Page - Display Previous Event Options
+	option = {
+		name = ancient_magic_spellbook_events_previous_page
+		trigger = {
+			var:sculpt_page > 0
+		}
+		change_variable = {
+			name = sculpt_page
+			subtract = 1
+		}
+		trigger_event = ancient_magic_spellbook_events.604
+	}
+
+	# Go Back
+	option = {
+		name = ancient_magic_spellbook_events_back
+		trigger = {
+			var:sculpt_page < 1
+		}
+		trigger_event = ancient_magic_spellbook_events.602
+	}
+}
+
+# Conception
+ancient_magic_spellbook_events.605 = {
+	title = ancient_magic_spellbook_events.605.t
+	desc = {
+		# Casting on yourself?
+		first_valid = {
+			# Yes - We'll assume you want to change fertility
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = scope:am_spell_caster
+				}
+				desc = ancient_magic_spellbook_events.605.desc.a
+			}
+			# No -- We'll assume you want to impregnate
+			triggered_desc = {
+				trigger = {
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+				}
+				desc = ancient_magic_spellbook_events.605.desc.b
+			}
+		}
+		# Fertility - Enough Mana and skill?
+		first_valid = {
+			# Neither
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = fertility_control_perk }
+					scope:am_spell_target = scope:am_spell_caster
+					var:mana < 100
+				}
+				desc = ancient_magic_spellbook_events.605.desc.a.a
+			}
+			# Mana
+			triggered_desc = {
+				trigger = {
+					has_perk = fertility_control_perk
+					scope:am_spell_target = scope:am_spell_caster
+					var:mana < 100
+				}
+				desc = ancient_magic_spellbook_events.605.desc.a.b
+			}
+			# Skill
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = fertility_control_perk }
+					scope:am_spell_target = scope:am_spell_caster
+					var:mana >= 100
+				}
+				desc = ancient_magic_spellbook_events.605.desc.a.c
+			}
+			# Both
+			triggered_desc = {
+				trigger = {
+					has_perk = fertility_control_perk
+					scope:am_spell_target = scope:am_spell_caster
+					var:mana >= 100
+				}
+				desc = ancient_magic_spellbook_events.605.desc.a.d
+			}
+		}
+		# Impregnate - Enough Mana and skill?
+		first_valid = {
+			# Neither
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = impregnate_perk }
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					var:mana < 300
+				}
+				desc = ancient_magic_spellbook_events.605.desc.b.a
+			}
+			# Mana
+			triggered_desc = {
+				trigger = {
+					has_perk = impregnate_perk
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					var:mana < 300
+				}
+				desc = ancient_magic_spellbook_events.605.desc.b.b
+			}
+			# Skill
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = impregnate_perk }
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					var:mana >= 300
+				}
+				desc = ancient_magic_spellbook_events.605.desc.b.c
+			}
+			# Both
+			triggered_desc = {
+				trigger = {
+					has_perk = impregnate_perk
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					var:mana >= 300
+				}
+				desc = ancient_magic_spellbook_events.605.desc.b.d
+			}
+		}
+		# Impregnate - Is the victim of the opposite sex?
+		first_valid = {
+			# Yes - Good to go
+			triggered_desc = {
+				trigger = {
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					var:mana >= 300
+					has_perk = impregnate_perk
+					OR = {
+						AND = {
+							scope:am_spell_target = {
+								is_female = yes
+							}
+							scope:am_spell_caster = {
+								is_female = no
+							}
+						}
+						AND = {
+							scope:am_spell_target = {
+								is_female = no
+							}
+							scope:am_spell_caster = {
+								is_female = yes
+							}
+						}
+					}
+				}
+				desc = ancient_magic_spellbook_events.605.desc.b.x.a
+			}
+			# Nope
+			triggered_desc = {
+				trigger = {
+					NOT = { scope:am_spell_target = scope:am_spell_caster }
+					var:mana >= 300
+					has_perk = impregnate_perk
+					OR = {
+						AND = {
+							scope:am_spell_target = {
+								is_female = yes
+							}
+							scope:am_spell_caster = {
+								is_female = yes
+							}
+						}
+						AND = {
+							scope:am_spell_target = {
+								is_female = no
+							}
+							scope:am_spell_caster = {
+								is_female = no
+							}
+						}
+					}
+				}
+				desc = ancient_magic_spellbook_events.605.desc.b.x.b
+			}
+		}
+	}
+	theme = love
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
 	
 	option = {
-		name = ancient_magic_spellbook_events.604.a
+		name = ancient_magic_spellbook_events.605.a
 		trigger = {
 			scope:am_spell_caster = scope:am_spell_target
 			var:mana >= 100
 			has_perk = fertility_control_perk
 		}
 		show_as_unavailable = {
+			scope:am_spell_caster = scope:am_spell_target
 			OR = {
-				NOT = { scope:am_spell_caster = scope:am_spell_target }
 				var:mana < 100
 				NOT = { has_perk = fertility_control_perk }
 			}
@@ -3104,7 +5841,7 @@ ancient_magic_spellbook_events.604 = {
 	}
 	
 	option = {
-		name = ancient_magic_spellbook_events.604.b
+		name = ancient_magic_spellbook_events.605.b
 		trigger = {
 			scope:am_spell_caster = scope:am_spell_target
 			var:mana >= 100
@@ -3115,8 +5852,8 @@ ancient_magic_spellbook_events.604 = {
 			}
 		}
 		show_as_unavailable = {
+			scope:am_spell_caster = scope:am_spell_target
 			OR = {
-				NOT = { scope:am_spell_caster = scope:am_spell_target }
 				var:mana < 100
 				NOT = { has_perk = fertility_control_perk }
 				NOR = {
@@ -3145,15 +5882,15 @@ ancient_magic_spellbook_events.604 = {
 	}
 	
 	option = {
-		name = ancient_magic_spellbook_events.604.c
+		name = ancient_magic_spellbook_events.605.c
 		trigger = {
 			scope:am_spell_caster = scope:am_spell_target
 			var:mana >= 100
 			has_perk = fertility_control_perk
 		}
 		show_as_unavailable = {
+			scope:am_spell_caster = scope:am_spell_target
 			OR = {
-				NOT = { scope:am_spell_caster = scope:am_spell_target }
 				var:mana < 100
 				NOT = {
 					has_perk = fertility_control_perk
@@ -3175,31 +5912,16 @@ ancient_magic_spellbook_events.604 = {
 	}
 	
 	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.006
-	}
-}
-
-# Impregnate
-ancient_magic_spellbook_events.605 = {
-	title = ancient_magic_spellbook_events.605.t
-	desc = ancient_magic_spellbook_events.605.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
-	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.605.d
 		trigger = {
+			NOT = { scope:am_spell_caster = scope:am_spell_target }
 			scope:am_spell_caster = {
 				var:mana >= 300
 				has_perk = impregnate_perk
-				NOT = { has_trait = undead }
+				#NOT = { has_trait = undead } - Design choice
 			}
 			scope:am_spell_target = {
-				age >= 16
-				NOT = { has_trait = pregnant }
-				NOT = { has_trait = undead }
+				#NOT = { has_trait = undead } - Design choice liche can use magic to have children.
 				OR = {
 					AND = {
 						scope:am_spell_caster = {
@@ -3221,19 +5943,18 @@ ancient_magic_spellbook_events.605 = {
 			}
 		}
 		show_as_unavailable = {
+			NOT = { scope:am_spell_caster = scope:am_spell_target }
 			OR = {
 				scope:am_spell_caster = {
 					OR = {
 						var:mana < 300
 						NOT = { has_perk = impregnate_perk }
-						has_trait = undead
+						#has_trait = undead
 					}
 				}
 				scope:am_spell_target = {
 					OR = {
-						age < 16
-						has_trait = pregnant
-						has_trait = undead
+						#has_trait = undead
 						AND = {
 							scope:am_spell_caster = {
 								is_female = no
@@ -3283,224 +6004,386 @@ ancient_magic_spellbook_events.605 = {
 	}
 }
 
-# Sculpt Flesh
-ancient_magic_spellbook_events.606 = {
-	title = ancient_magic_spellbook_events.606.t
-	desc = ancient_magic_spellbook_events.606.desc
-	theme = physical_health
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+# Mensomancy Spells - Sorry. I thought it was appropriate to break the next person's brain.
+# Do yourself a favor. start this one over unless you want a puzzle. It's intentionally confusing. ;)
 
-	# Which Trait?
-	option = {
-		name = ancient_magic_spellbook_events.606.a
-		trigger = {
-			scope:am_spell_target = {
-				NOT = { has_trait = albino}
-			}
-		}
-		scope:am_spell_caster = {
-			add_character_flag = casting_sculpt_albino
-			trigger_event = ancient_magic_spellbook.607
-		}
-	}
-	option = {
-		name = ancient_magic_spellbook_events.606.a
-		trigger = {
-			scope:am_spell_target = {
-				NOT = { has_trait = stuttering}
-			}
-		}
-		scope:am_spell_caster = {
-			add_character_flag = casting_sculpt_stuttering
-			trigger_event = ancient_magic_spellbook.607
-		}
-	}
-	option = {
-		name = ancient_magic_spellbook_events.606.a
-		trigger = {
-			scope:am_spell_target = {
-				NOT = { has_trait = giant}
-			}
-		}
-		scope:am_spell_caster = {
-			add_character_flag = casting_sculpt_giant
-			trigger_event = ancient_magic_spellbook.607
-		}
-	}
-	option = {
-		name = ancient_magic_spellbook_events.606.a
-		trigger = {
-			scope:am_spell_target = {
-				NOT = { has_trait = lisping}
-			}
-		}
-		scope:am_spell_caster = {
-			add_character_flag = casting_sculpt_lisping
-			trigger_event = ancient_magic_spellbook.607
-		}
-	}
-	option = {
-		name = ancient_magic_spellbook_events.606.a
-		trigger = {
-			scope:am_spell_target = {
-				NOT = { has_trait = scaly}
-			}
-		}
-		scope:am_spell_caster = {
-			add_character_flag = casting_sculpt_scaly
-			trigger_event = ancient_magic_spellbook.607
-		}
-	}
-	option = {
-		name = ancient_magic_spellbook_events.606.a
-		trigger = {
-			scope:am_spell_target = {
-				NOT = { has_trait = clubfooted}
-			}
-		}
-		scope:am_spell_caster = {
-			add_character_flag = casting_clubfooted_sculpt
-			trigger_event = ancient_magic_spellbook.607
-		}
-	}
-	option = {
-		name = ancient_magic_spellbook_events.606.a
-		trigger = {
-			scope:am_spell_target = {
-				NOT = { has_trait = hunchbacked}
-			}
-		}
-		scope:am_spell_caster = {
-			add_character_flag = casting_hunchbacked_sculpt
-			trigger_event = ancient_magic_spellbook.607
-		}
-	}
-	option = {
-		name = ancient_magic_spellbook_events.606.a
-		trigger = {
-			scope:am_spell_target = {
-				NOT = { has_trait = dwarf}
-			}
-		}
-		scope:am_spell_caster = {
-			add_character_flag = casting_dwarf_sculpt
-			trigger_event = ancient_magic_spellbook.607
-		}
-	}
-	option = {
-		name = ancient_magic_spellbook_events.606.a
-		trigger = {
-			scope:am_spell_target = {
-				NOT = { has_trait = strong}
-			}
-		}
-		scope:am_spell_caster = {
-			add_character_flag = casting_strong_sculpt
-			trigger_event = ancient_magic_spellbook.607
-		}
-	}
-	option = {
-		name = ancient_magic_spellbook_events.606.a
-		trigger = {
-			scope:am_spell_target = {
-				NOT = { has_trait = weak}
-			}
-		}
-		scope:am_spell_caster = {
-			add_character_flag = casting_weak_sculpt
-			trigger_event = ancient_magic_spellbook.607
-		}
-	}
-	option = {
-		name = ancient_magic_spellbook_events.606.a
-		trigger = {
-			scope:am_spell_target = {
-				NOT = { has_trait = blind}
-			}
-		}
-		scope:am_spell_caster = {
-			add_character_flag = casting_blind_sculpt
-			trigger_event = ancient_magic_spellbook.607
-		}
-	}
-
-	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.006
-	}
-}
-
-
-
-#ancient_magic_spellbook_events.606 = {
-#	title = ancient_magic_spellbook_events.606.t
-#	desc = ancient_magic_spellbook_events.606.desc
-#	theme = education
-#	left_portrait = scope:am_spell_caster
-#	right_portrait = scope:am_spell_target
-#	
-#	option = {
-#		name = ancient_magic_spellbook_cast_spell
-#		trigger = {
-#			var:mana >= 300
-#			has_perk = sculpter_of_flesh_perk
-#			NOT = {
-#				has_character_modifier = sculpter_of_flesh_spell_modifier
-#			}
-#		}
-#		show_as_unavailable = {
-#			OR = {
-#				var:mana < 300
-#				has_character_modifier = sculpter_of_flesh_spell_modifier
-#				NOT = {
-#					has_perk = sculpter_of_flesh_perk
-#				}
-#			}
-#		}
-#		change_mana = { VALUE = -300 }
-#		add_character_modifier = {
-#			modifier = sculpter_of_flesh_spell_modifier
-#			months = 6
-#		}
-#
-#		remove_character_flag = am_spell_resolution
-#	}
-#	
-	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.006
-	}
-}
-
-#mensomancy
-
-# Entrance
+# Manipulate Mind - Combines: 
+#'Incite Lust/Obedience', 'Form Friendship/Rivalry', 'Dominate', and 'Mind Control'
 ancient_magic_spellbook_events.701 = {
 	title = ancient_magic_spellbook_events.701.t
-	desc = ancient_magic_spellbook_events.701.desc
-	theme = education
+	desc = {
+		first_valid = {
+			# High brain or low brain?
+			triggered_desc = {
+				trigger = {
+					NOR = {
+						has_character_flag = target_limbic_system
+						has_character_flag = target_cerebral_cortex
+					}
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x
+			}
+		}
+		# What are you targeting in the limbic system?
+		triggered_desc = {
+			trigger = {
+				has_character_flag = target_limbic_system
+				NOR = {
+					has_character_flag = target_companionship
+					has_character_flag = target_aggression
+				}
+			}
+			desc = ancient_magic_spellbook_events.701.desc.x.a
+		}
+		# Are you able to manipulate the target's feelings of companionship?
+		first_valid = {
+			# All Three
+			triggered_desc = {
+				trigger = {
+					has_character_flag = target_companionship
+					has_perk = friendship_perk
+					has_perk = entrance_perk
+					AND = {
+						has_perk = incite_lust_perk
+						scope:am_spell_target = {
+							age >= 16
+						}
+					}
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x.a.a
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = target_companionship
+					calc_true_if = {
+						amount >= 2
+						has_perk = friendship_perk
+						has_perk = entrance_perk
+						AND = {
+							has_perk = incite_lust_perk
+							scope:am_spell_target = {
+								age >= 16
+							}
+						}
+					}
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x.a.b
+			}
+			# Only feelings of lust
+			triggered_desc = {
+				trigger = {
+					has_character_flag = target_companionship
+					has_perk = incite_lust_perk
+					NOT = { has_perk = friendship_perk }
+					scope:am_spell_target = {
+						age >= 16
+					}
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x.a.c
+			}
+			# Only feelings of friendship
+			triggered_desc = {
+				trigger = {
+					has_character_flag = target_companionship
+					has_perk = friendship_perk
+					OR = {
+						NOT = { has_perk = incite_lust_perk }
+						AND = {
+							has_perk = incite_lust_perk
+							scope:am_spell_target = {
+								age < 16
+							}
+						}
+					}
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x.a.d
+			}
+			# Only feeling of adoration
+			triggered_desc = {
+				trigger = {
+					has_character_flag = target_companionship
+					has_perk = entrance_perk
+					NOT = { has_perk = friendship_perk }
+					OR = {
+						NOT = { has_perk = incite_lust_perk }
+						AND = {
+							has_perk = incite_lust_perk
+							scope:am_spell_target = {
+								age < 16
+							}
+						}
+					}
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x.a.e
+			}
+			# None
+			triggered_desc = {
+				trigger = {
+					has_character_flag = target_companionship
+					NOR = {
+						has_perk = friendship_perk
+						has_perk = incite_lust_perk
+					}
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x.a.f
+			}
+		}
+		# Are you able to manipulate the target's feelings of aggression?
+		first_valid = {
+			# Both
+			triggered_desc = {
+				trigger = {
+					has_character_flag = target_aggression
+					has_perk = friendship_perk
+					has_perk = incite_obedience_perk
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x.b.a
+			}
+			# Only feelings of submission
+			triggered_desc = {
+				trigger = {
+					has_character_flag = target_aggression
+					has_perk = incite_obedience_perk
+					NOT = { has_perk = friendship_perk }
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x.b.b
+			}
+			# Only feelings of rivalry
+			triggered_desc = {
+				trigger = {
+					has_character_flag = target_aggression
+					has_perk = friendship_perk
+					NOT = { has_perk = incite_obedience_perk }
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x.b.c
+			}
+			# None
+			triggered_desc = {
+				trigger = {
+					has_character_flag = target_aggression
+					NOR = {
+						has_perk = friendship_perk
+						has_perk = incite_obedience_perk
+					}
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x.b.d
+			}
+		}
+		# Domination or Direct Control?
+		triggered_desc = {
+			trigger = {
+				has_character_flag = target_cerebral_cortex
+			}
+			desc = ancient_magic_spellbook_events.701.desc.x.c
+		}
+		
+		# Are you able to manipulate the target's higher brain functions?
+		first_valid = {
+			# Both
+			triggered_desc = {
+				trigger = {
+					has_character_flag = target_cerebral_cortex
+					has_perk = master_of_puppets_perk
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x.c.a
+			}
+			# Only Domination
+			triggered_desc = {
+				trigger = {
+					has_character_flag = target_cerebral_cortex
+					NOT = { has_perk = master_of_puppets_perk }
+					has_perk = dominate_perk
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x.c.b
+			}
+			# None
+			triggered_desc = {
+				trigger = {
+					has_character_flag = target_cerebral_cortex
+					NOR = {
+						has_perk = master_of_puppets_perk
+						has_perk = dominate_perk
+					}
+				}
+				desc = ancient_magic_spellbook_events.701.desc.x.c.c
+			}
+		}
+	}
+	theme = mental_break
 	left_portrait = scope:am_spell_caster
 	right_portrait = scope:am_spell_target
-	
+
+#The Limbic System ('a' branch):
+	# Target the Limbic System
 	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.701.a
 		trigger = {
-			scope:am_spell_caster = scope:am_spell_target
-			var:mana >= 100
-			has_perk = entrance_perk
+			NOR = {
+				has_character_flag = target_limbic_system
+				has_character_flag = target_cerebral_cortex
+			}
+		}
+		add_character_flag = target_limbic_system
+		trigger_event = ancient_magic_spellbook_events.701
+	}
+
+	# Limbic System > Companionship
+	option = {
+		name = ancient_magic_spellbook_events.701.a.a
+		trigger = {
+			has_character_flag = target_limbic_system
+			NOR = {
+				has_character_flag = target_companionship
+				has_character_flag = target_aggression
+			}
+		}
+		add_character_flag = target_companionship
+		trigger_event = ancient_magic_spellbook_events.701
+	}
+
+	# Limbic System > Aggression
+	option = {
+		name = ancient_magic_spellbook_events.701.a.b
+		trigger = {
+			has_character_flag = target_limbic_system
+			NOR = {
+				has_character_flag = target_companionship
+				has_character_flag = target_aggression
+			}
+		}
+		add_character_flag = target_aggression
+		trigger_event = ancient_magic_spellbook_events.701
+	}
+
+	# Limbic System  > Go Back
+	option = {
+		name = ancient_magic_spellbook_events_back
+		trigger = {
+			has_character_flag = target_limbic_system
+			NOR = {
+				has_character_flag = target_companionship
+				has_character_flag = target_aggression
+			}
+		}
+		remove_character_flag = target_limbic_system
+		trigger_event = ancient_magic_spellbook_events.701
+	}
+	
+	# Limbic System > Companionship > Lust
+	option = {
+		name = ancient_magic_spellbook_events.701.a.a.a
+		trigger = { 
+			has_character_flag = target_limbic_system
+			has_character_flag = target_companionship
+			var:mana >= 300
+			has_perk = incite_lust_perk
+			scope:am_spell_target = {
+				age >= 16
+				NOT = { has_relation_lover = scope:am_spell_caster }
+			}
 		}
 		show_as_unavailable = {
+			has_character_flag = target_limbic_system
+			has_character_flag = target_companionship
 			OR = {
-				NOT = { scope:am_spell_caster = scope:am_spell_target }
+				var:mana < 300
+				has_character_modifier = incite_lust_spell_modifier
+				NOT = { has_perk = incite_lust_perk }
+				age < 16
+				has_relation_lover = scope:am_spell_caster
+			}
+		}
+		scope:am_spell_caster = {
+			change_mana = { VALUE = -300 }
+			remove_character_flag = am_spell_resolution
+			remove_character_flag = target_limbic_system
+			remove_character_flag = target_companionship
+			remove_character_flag = target_aggression
+			remove_character_flag = target_cerebral_cortex
+		}
+		scope:am_spell_target = {
+			set_relation_lover = scope:am_spell_caster
+		}
+	}
+
+	# Limbic System > Companionship > Friendship
+	option = {
+		name = ancient_magic_spellbook_events.701.a.a.b
+		trigger = {
+			has_character_flag = target_limbic_system
+			has_character_flag = target_companionship
+			scope:am_spell_caster = {
+				var:mana >= 400
+				has_perk = friendship_perk
+			}
+			scope:am_spell_target = {
+				NOT = { has_relation_friend = scope:am_spell_caster }
+			}
+		}
+		show_as_unavailable = {
+			has_character_flag = target_limbic_system
+			has_character_flag = target_companionship
+			OR = {
+				scope:am_spell_caster = {
+					var:mana < 400
+					NOT = { has_perk = friendship_perk }
+				}
+				scope:am_spell_target = {
+					has_relation_friend = scope:am_spell_caster
+				}
+			}
+		}
+		scope:am_spell_caster = {
+			change_mana = { VALUE = -400 }
+			remove_character_flag = am_spell_resolution
+			remove_character_flag = target_limbic_system
+			remove_character_flag = target_companionship
+			remove_character_flag = target_aggression
+			remove_character_flag = target_cerebral_cortex
+		}
+		scope:am_spell_target = {
+			set_relation_friend = scope:am_spell_caster
+		}
+	}
+
+	# Limbic System > Companionship > Opinion
+	option = {
+		name = ancient_magic_spellbook_events.701.a.a.c
+		trigger = {
+			has_character_flag = target_limbic_system
+			has_character_flag = target_companionship
+			var:mana >= 100
+			has_perk = entrance_perk
+			scope:am_spell_target = {
+				NOT = {
+					has_opinion_modifier = {
+						target = scope:am_spell_caster
+						modifier = entrance_spell_opinion
+					}
+				}
+			}
+		}
+		show_as_unavailable = {
+			has_character_flag = target_limbic_system
+			has_character_flag = target_companionship
+			OR = {
 				var:mana < 100
-				has_character_modifier = entrance_spell_modifier
 				NOT = { has_perk = entrance_perk }
+				scope:am_spell_target = {
+					has_opinion_modifier = {
+						target = scope:am_spell_caster
+						modifier = entrance_spell_opinion
+					}
+				}
 			}
 		}
 		scope:am_spell_caster = {
 			change_mana = { VALUE = -100 }
 			remove_character_flag = am_spell_resolution
+			remove_character_flag = target_limbic_system
+			remove_character_flag = target_companionship
+			remove_character_flag = target_aggression
+			remove_character_flag = target_cerebral_cortex
 		}
 		scope:am_spell_target = {
 			add_opinion = {
@@ -3509,125 +6392,166 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 	}
-	
-	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.007
-	}
-}
 
-# Incite Lust
-ancient_magic_spellbook_events.702 = {
-	title = ancient_magic_spellbook_events.702.t
-	desc = ancient_magic_spellbook_events.702.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
+	# Limbic System > Aggression > Rivalry
 	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.701.a.b.a
 		trigger = {
-			scope:am_spell_caster = scope:am_spell_target
-			var:mana >= 300
-			has_perk = incite_lust_perk
+			has_character_flag = target_limbic_system
+			has_character_flag = target_aggression
+			scope:am_spell_caster = {
+				var:mana >= 400
+				has_perk = friendship_perk
+			}
+			scope:am_spell_target = {
+				NOT = { has_relation_rival = scope:am_spell_caster }
+			}
 		}
 		show_as_unavailable = {
+			has_character_flag = target_limbic_system
+			has_character_flag = target_companionship
 			OR = {
-				NOT = { scope:am_spell_caster = scope:am_spell_target }
-				var:mana < 300
-				has_character_modifier = incite_lust_spell_modifier
-				NOT = { has_perk = incite_lust_perk }
+				scope:am_spell_caster = {
+					var:mana < 400
+					NOT = { has_perk = friendship_perk }
+				}
+				scope:am_spell_target = {
+					has_relation_rival = scope:am_spell_caster
+				}
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -300 }
+			change_mana = { VALUE = -400 }
 			remove_character_flag = am_spell_resolution
+			remove_character_flag = target_limbic_system
+			remove_character_flag = target_companionship
+			remove_character_flag = target_aggression
+			remove_character_flag = target_cerebral_cortex
 		}
 		scope:am_spell_target = {
-			set_relation_lover = scope:am_spell_caster
+			set_relation_rival = scope:am_spell_caster
 		}
 	}
-	
-	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.007
-	}
-}
 
-# Incite Obedience
-ancient_magic_spellbook_events.703 = {
-	title = ancient_magic_spellbook_events.703.t
-	desc = ancient_magic_spellbook_events.703.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
+	# Limbic System > Aggression > Obedience
 	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.701.a.b.b
 		trigger = {
-			NOT = { scope:am_spell_caster = scope:am_spell_target }
+			has_character_flag = target_limbic_system
+			has_character_flag = target_aggression
 			var:mana >= 200
 			has_perk = incite_obedience_perk
+			NOR = {
+				has_hook_of_type = {
+					target = scope:am_spell_target
+					type = ancient_magic_hook_obedient
+				}
+				has_hook_of_type = {
+					target = scope:am_spell_target
+					type = ancient_magic_hook_dominated
+				}
+				has_hook_of_type = {
+					target = scope:am_spell_target
+					type = ancient_magic_hook_puppet
+				}
+			}
 		}
 		show_as_unavailable = {
+			has_character_flag = target_limbic_system
+			has_character_flag = target_aggression
 			OR = {
-				scope:am_spell_caster = scope:am_spell_target
 				var:mana < 200
-				has_character_modifier = incite_obedience_spell_modifier
 				NOT = { has_perk = incite_obedience_perk }
+				has_hook_of_type = {
+					target = scope:am_spell_target
+					type = ancient_magic_hook_obedient
+				}
+				has_hook_of_type = {
+					target = scope:am_spell_target
+					type = ancient_magic_hook_dominated
+				}
+				has_hook_of_type = {
+					target = scope:am_spell_target
+					type = ancient_magic_hook_puppet
+				}
 			}
 		}
 		scope:am_spell_caster = {
 			change_mana = { VALUE = -200 }
 			remove_character_flag = am_spell_resolution
+			remove_character_flag = target_limbic_system
+			remove_character_flag = target_companionship
+			remove_character_flag = target_aggression
+			remove_character_flag = target_cerebral_cortex
 			add_hook = {
 				target = scope:am_spell_target
 				type = ancient_magic_hook_obedient
 			}
 		}
 	}
-	
+
+	# Limbic System > Aggression / Companionship > Go Back
 	option = {
 		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.007
+		trigger = {
+			OR = {
+				has_character_flag = target_companionship
+				has_character_flag = target_aggression
+			}
+		}
+		remove_character_flag = target_companionship
+		remove_character_flag = target_aggression
+		trigger_event = ancient_magic_spellbook_events.701
 	}
-}
 
-# Dominate
-ancient_magic_spellbook_events.704 = {
-	title = ancient_magic_spellbook_events.704.t
-	desc = ancient_magic_spellbook_events.704.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
+# The Cerebral Cortex ('b' branch):
+	# Target the cerebral cortex
 	option = {
-		name = ancient_magic_spellbook_cast_spell
+		name = ancient_magic_spellbook_events.701.b
+		trigger = {
+			NOR = {
+				has_character_flag = target_limbic_system
+				has_character_flag = target_cerebral_cortex
+			}
+		}
+		add_character_flag = target_cerebral_cortex
+		trigger_event = ancient_magic_spellbook_events.701
+	}
+
+	# Cerebral Cortex > Dominate
+	option = {
+		name = ancient_magic_spellbook_events.701.b.a
 		trigger = {
 			scope:am_spell_caster = {
-				NOT = { scope:am_spell_caster = scope:am_spell_target }
+				has_character_flag = target_cerebral_cortex
 				var:mana >= 400
 				has_perk = dominate_perk
-				NOT = {
+				NOR = {
 					has_hook_of_type = {
 						target = scope:am_spell_target
 						type = ancient_magic_hook_dominated
+					}
+					has_hook_of_type = {
+						target = scope:am_spell_target
+						type = ancient_magic_hook_puppet
 					}
 				}
 			}
 		}
 		show_as_unavailable = {
 			scope:am_spell_caster = {
+				has_character_flag = target_cerebral_cortex
 				OR = {
-					scope:am_spell_caster = scope:am_spell_target
 					var:mana < 400
 					has_character_modifier = dominate_spell_modifier
-					NOT = {
-						has_perk = dominate_perk
-					}
+					NOT = { has_perk = dominate_perk }
 					has_hook_of_type = {
 						target = scope:am_spell_target
 						type = ancient_magic_hook_dominated
+					}
+					has_hook_of_type = {
+						target = scope:am_spell_target
+						type = ancient_magic_hook_puppet
 					}
 				}
 			}
@@ -3635,42 +6559,158 @@ ancient_magic_spellbook_events.704 = {
 		scope:am_spell_caster = {
 			change_mana = { VALUE = -400 }
 			remove_character_flag = am_spell_resolution
+			remove_character_flag = target_limbic_system
+			remove_character_flag = target_companionship
+			remove_character_flag = target_aggression
+			remove_character_flag = target_cerebral_cortex
 			add_hook = {
 				target = scope:am_spell_target
 				type = ancient_magic_hook_dominated
 			}
 		}
 	}
-	
+
+	# Cerebral Cortex > Mind Control
 	option = {
+		name = ancient_magic_spellbook_events.701.b.b
+		trigger = {
+			scope:am_spell_caster = {
+				has_character_flag = target_cerebral_cortex
+				var:mana >= 600
+				has_perk = master_of_puppets_perk
+				NOT = {
+					has_hook_of_type = {
+						target = scope:am_spell_target
+						type = ancient_magic_hook_puppet
+					}
+				}
+			}
+		}
+		show_as_unavailable = {
+			scope:am_spell_caster = {
+				has_character_flag = target_cerebral_cortex
+				OR = {
+					var:mana < 600
+					NOT = { has_perk = master_of_puppets_perk }
+					has_hook_of_type = {
+						target = scope:am_spell_target
+						type = ancient_magic_hook_puppet
+					}
+				}
+			}
+		}
+		scope:am_spell_caster = {
+			change_mana = { VALUE = -600 }
+			remove_character_flag = am_spell_resolution
+			remove_character_flag = target_limbic_system
+			remove_character_flag = target_companionship
+			remove_character_flag = target_aggression
+			remove_character_flag = target_cerebral_cortex
+			add_hook = {
+				target = scope:am_spell_target
+				type = ancient_magic_hook_puppet
+			}
+		}
+	}
+
+	# Cerebral Cortex > Go Back
+	option = {
+		name = ancient_magic_spellbook_events_back
+		trigger = {
+			has_character_flag = target_cerebral_cortex
+		}
+		remove_character_flag = target_cerebral_cortex
+		trigger_event = ancient_magic_spellbook_events.701
+	}
+
+	# Go Back - Main
+	option = {
+		trigger = {
+			NOR = {
+				has_character_flag = target_limbic_system
+				has_character_flag = target_cerebral_cortex
+			}
+		}
 		name = ancient_magic_spellbook_events_back
 		trigger_event = ancient_magic_spellbook_events.007
 	}
 }
 
 # Beguiling Aura
-ancient_magic_spellbook_events.705 = {
-	title = ancient_magic_spellbook_events.705.t
-	desc = ancient_magic_spellbook_events.705.desc
-	theme = education
+ancient_magic_spellbook_events.702 = {
+	title = ancient_magic_spellbook_events.702.t
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 15
+					}
+					NOT = { has_perk = beguiling_aura_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = beguiling_aura_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = beguiling_aura_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 15
+					NOT = { has_character_modifier = beguiling_aura_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = beguiling_aura_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.702.desc
+		}
+	}
+	theme = mental_break
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_caster = scope:am_spell_target
+			NOT = { has_character_modifier = beguiling_aura_modifier }
 			var:mana >= 100
+			var:mana_gen >= 15
 			has_perk = beguiling_aura_perk
-			NOT = {
-				has_character_modifier = beguiling_aura_modifier
-			}
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = beguiling_aura_modifier }
 			OR = {
-				NOT = { scope:am_spell_caster = scope:am_spell_target }
 				var:mana < 100
-				has_character_modifier = beguiling_aura_modifier
+				var:mana_gen < 15
+				NOT = { has_perk = beguiling_aura_perk }
 			}
 		}
 
@@ -3709,110 +6749,7 @@ ancient_magic_spellbook_events.705 = {
 
 		remove_character_flag = am_spell_resolution
 	}
-	
-	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.007
-	}
-}
 
-# Friendship
-ancient_magic_spellbook_events.706 = {
-	title = ancient_magic_spellbook_events.706.t
-	desc = ancient_magic_spellbook_events.706.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
-	option = {
-		name = ancient_magic_spellbook_cast_spell
-		trigger = {
-			scope:am_spell_caster = {
-				NOT = { scope:am_spell_caster = scope:am_spell_target }
-				var:mana >= 400
-				has_perk = friendship_perk
-			}
-			scope:am_spell_target = {
-				NOT = { has_relation_friend = scope:am_spell_caster }
-			}
-		}
-		show_as_unavailable = {
-			OR = {
-				scope:am_spell_caster = {
-					OR = {
-						scope:am_spell_caster = scope:am_spell_target
-						var:mana < 400
-						NOT = {
-							has_perk = friendship_perk
-						}
-					}
-				}
-				scope:am_spell_target = {
-					has_relation_friend = scope:am_spell_caster
-				}
-			}
-		}
-		scope:am_spell_caster = {
-			change_mana = { VALUE = -400 }
-			remove_character_flag = am_spell_resolution
-		}
-		scope:am_spell_target = {
-			set_relation_friend = scope:am_spell_caster
-		}
-	}
-	
-	option = {
-		name = ancient_magic_spellbook_events_back
-		trigger_event = ancient_magic_spellbook_events.007
-	}
-}
-
-# Mind Control
-ancient_magic_spellbook_events.707 = {
-	title = ancient_magic_spellbook_events.707.t
-	desc = ancient_magic_spellbook_events.707.desc
-	theme = education
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
-	
-	option = {
-		name = ancient_magic_spellbook_cast_spell
-		trigger = {
-			scope:am_spell_caster = {
-				NOT = { scope:am_spell_caster = scope:am_spell_target }
-				var:mana >= 600
-				has_perk = master_of_puppets_perk
-			}
-			scope:am_spell_target = {
-				NOT = {
-					has_hook_of_type = {
-						target = scope:am_spell_caster
-						type = ancient_magic_hook_puppet
-					}
-				}
-			}
-		}
-		show_as_unavailable = {
-			OR = {
-				scope:am_spell_caster = {
-					scope:am_spell_caster = scope:am_spell_target
-					var:mana < 600
-					NOT = {
-						has_perk = master_of_puppets_perk
-					}
-				}
-			}
-		}
-		scope:am_spell_caster = {
-			change_mana = { VALUE = -600 }
-			remove_character_flag = am_spell_resolution
-			add_hook = {
-				target = scope:am_spell_target
-				type = ancient_magic_hook_puppet
-			}
-		}
-	}
-	
 	option = {
 		name = ancient_magic_spellbook_events_back
 		trigger_event = ancient_magic_spellbook_events.007
@@ -3820,37 +6757,83 @@ ancient_magic_spellbook_events.707 = {
 }
 
 # Enchanting Aura
-ancient_magic_spellbook_events.708 = {
-	title = ancient_magic_spellbook_events.708.t
-	desc = ancient_magic_spellbook_events.708.desc
-	theme = education
+ancient_magic_spellbook_events.703 = {
+	title = ancient_magic_spellbook_events.703.t
+	desc = {
+		first_valid = {
+			# Does the caster have enough mana and skill
+			triggered_desc = {
+				trigger = {
+					OR = {
+						var:mana < 100
+						var:mana_gen < 15
+					}
+					NOT = { has_perk = enchanting_aura_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { has_perk = enchanting_aura_perk }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_skill_spell
+			}
+			triggered_desc = {
+				trigger = {
+					var:mana < 100
+					NOT = { has_character_modifier = enchanting_aura_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_mana_spell
+			}
+			# Can the caster sustain the drain?
+			triggered_desc = {
+				trigger = {
+					var:mana_gen < 15
+					NOT = { has_character_modifier = enchanting_aura_modifier }
+				}
+				desc = ancient_magic_spellbook_events_casting_low_drain_spell
+			}
+			# Is the caster the target of this aura?
+			#triggered_desc = {
+			#	trigger = {
+			#		NOT = { scope:am_spell_target = scope:am_spell_caster }
+			#	}
+			#	desc = ancient_magic_spellbook_events_casting_aura_on_target
+			#}
+			# Does the caster already have the aura?
+			triggered_desc = {
+				trigger = {
+					scope:am_spell_target = {
+						has_character_modifier = enchanting_aura_modifier
+					}
+				}
+				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
+			}
+			# The spell goes off as expected
+			desc = ancient_magic_spellbook_events.703.desc
+		}
+	}
+	theme = mental_break
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			scope:am_spell_caster = {
-				scope:am_spell_caster = scope:am_spell_target
-				var:mana >= 100
-				has_perk = enchanting_aura_perk
-				NOT = {
-					has_character_modifier = enchanting_aura_modifier
-				}
-			}
+			NOT = { has_character_modifier = enchanting_aura_modifier }
+			var:mana >= 100
+			var:mana_gen >= 30
+			has_perk = enchanting_aura_perk
 		}
 		show_as_unavailable = {
+			NOT = { has_character_modifier = enchanting_aura_modifier }
 			OR = {
-				scope:am_spell_caster = {
-					OR = {
-						NOT = { scope:am_spell_caster = scope:am_spell_target }
-						var:mana < 100
-						has_character_modifier = enchanting_aura_modifier
-						has_perk = enchanting_aura_perk
-					}
-				}
+				var:mana < 100
+				var:mana_gen < 30
+				NOT = { has_perk = enchanting_aura_perk }
 			}
 		}
+
 		change_mana = { VALUE = -100 }
 
 		change_mana_gen = { VALUE = -30 }
