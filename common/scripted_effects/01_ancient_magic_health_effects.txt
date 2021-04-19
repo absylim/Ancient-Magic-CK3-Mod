@@ -63,7 +63,7 @@ contract_magical_disease_effect = {
 				days = { mana_devouring_recovery_min mana_devouring_recovery_max }
 			}
 		}
-		elsif = { #mana devouring
+		else_if = { #mana devouring
 			limit = { scope:disease_type = flag:mana_devouring_2 }
 			trigger_event = {
 				id = AMHealth.1102
@@ -491,7 +491,7 @@ recover_from_magical_disease_effect = {
 				add_character_flag = disease_immunity_mana_devouring_1
 				add_character_flag = disease_immunity_mana_devouring_2
 			}
-			elsif = {
+			else_if = {
 				limit = { scope:disease_type = flag:mana_devouring_2 }
 				add_character_flag = disease_immunity_mana_devouring_1
 				add_character_flag = disease_immunity_mana_devouring_2
@@ -512,7 +512,7 @@ recover_from_magical_disease_notify_effect = {
 		limit = { scope:disease_type = flag:mana_devouring_1 }
 		trigger_event = { id = AMHealth.1101 days = { 5 15 } }
 	}
-	elsif = {
+	else_if = {
 		limit = { scope:disease_type = flag:mana_devouring_2 }
 		trigger_event = { id = AMHealth.1102 days = { 5 15 } }
 	}

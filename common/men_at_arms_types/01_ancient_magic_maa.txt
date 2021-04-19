@@ -1,0 +1,21 @@
+ancestral_guardians = {
+	type = heavy_infantry
+	
+	damage = 40
+	toughness = 40
+	pursuit = 40
+	screen = 40
+	
+	counters = {
+		pikemen = 1
+		archers = 1
+		heavy_infantry = 1
+		heavy_cavalry = 1
+		skirmishers = 1
+		light_cavalry = 1
+	}
+	
+	max_sub_regiments = 1
+	
+	stack = ancestral_guardians_stack
+}

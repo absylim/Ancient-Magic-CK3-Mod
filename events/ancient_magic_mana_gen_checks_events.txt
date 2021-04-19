@@ -170,5 +170,25 @@ ancient_magic_mana_gen_checks_events.001 = {
 			change_mana_gen = { VALUE = -100 }
 			remove_character_flag = ancient_magic_mana_focus_mana_added
 		}
+		if= {
+			limit = {
+				number_maa_regiments_of_type = {
+					type = ancestral_guardians
+					value > var:ancestral_guardians_count
+				}
+			}
+			change_mana_gen = { VALUE = minus_ancestral_guardians_upkeep }
+			change_ancestral_guardians_count = { VALUE = 1}
+		}
+		if= {
+			limit = {
+				number_maa_regiments_of_type = {
+					type = ancestral_guardians
+					value < var:ancestral_guardians_count
+				}
+			}
+			change_mana_gen = { VALUE = add_ancestral_guardians_upkeep }
+			change_ancestral_guardians_count = { VALUE = -1}
+		}
 	}
 }

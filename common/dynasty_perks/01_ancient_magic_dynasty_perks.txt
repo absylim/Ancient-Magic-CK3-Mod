@@ -1,0 +1,46 @@
+# ARCANE LEGACIES
+
+arcane_legacy_1 = { # Powerful blood
+	legacy = arcane_legacy_track
+
+	ai_chance = {
+		value = 3
+		if = {
+			limit = {
+				can_start_new_legacy_track_trigger = no
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				has_trait = mage
+			}
+			multiply = 5
+		}
+	}
+
+	effect = {
+		# Effect is applied in the on action 'on_birth_child'
+		custom_description_no_bullet = {
+			text = arcane_legacy_1_effect
+		}
+	}
+}
+
+arcane_legacy_2 = { # Placeholder
+	legacy = arcane_legacy_track
+}
+
+arcane_legacy_3 = { # Placeholder
+	legacy = arcane_legacy_track
+}
+
+arcane_legacy_4 = { # Placeholder
+	legacy = arcane_legacy_track
+}
+
+arcane_legacy_5 = { # Placeholder
+	legacy = arcane_legacy_track
+
+	unlock_maa = ancestral_guardians
+}
