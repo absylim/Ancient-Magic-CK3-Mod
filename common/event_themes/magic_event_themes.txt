@@ -1,0 +1,87 @@
+﻿# Magic Theme (Unified)
+
+magic = {
+    icon = {
+        reference = "gfx/interface/icons/event_types/type_magic.dds"
+    }
+    sound = {
+        reference = "event:/SFX/Events/Themes/sfx_event_theme_type_learning"
+    }
+    background = {
+        event_background = study
+    }
+}
+
+# Magic Themes (Schools of Magic)
+
+chronomancy = {
+    icon = {
+        reference = "gfx/interface/icons/event_types/type_magic.dds"
+    }
+    sound = {
+        reference = "event:/SFX/Events/Themes/sfx_event_theme_type_learning"
+    }
+    background = {
+        event_background = study
+    }
+}
+
+chiromancy = {
+    icon = {
+        reference = "gfx/interface/icons/event_types/type_magic.dds"
+    }
+    sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_health_good"
+	}
+    background = {
+        event_background = sitting_room
+    }
+}
+
+elomancy = {
+    icon = {
+        reference = "gfx/interface/icons/event_types/type_magic.dds"
+    }
+    sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_war"
+	}
+    background = {
+        event_background = battlefield
+    }
+}
+
+necromancy = {
+    icon = {
+        reference = "gfx/interface/icons/event_types/type_magic.dds"
+    }
+    sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_war"
+	}
+	background = {
+		event_background = battlefield
+	}
+}
+
+biomancy = {
+    icon = {
+        reference = "gfx/interface/icons/event_types/type_magic.dds"
+    }
+    sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+	}
+    background = {
+        event_background = wilderness
+    }
+}
+
+mensomancy = {
+    icon = {
+        reference = "gfx/interface/icons/event_types/type_magic.dds"
+    }
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_stress"
+	}
+	background = {
+		event_background = study
+	}
+}
