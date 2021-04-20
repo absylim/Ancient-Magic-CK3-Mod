@@ -20,8 +20,8 @@
  AMHealth.1102.a:0 "I'm just happy it's over."
 
  #Rocovery second stage - refiled mana pool
- AMHealth.1103.t:1 "[SCOPE.Custom('EventTitleDisease')]: Uf, this was close"
- AMHealth.1103.desc:0 "After i partialy refiled my mana pool, the disease recede into the First Stage, and atleast stoped devouring my body!"
+ AMHealth.1103.t:1 "[SCOPE.Custom('EventTitleDisease')]: Partial Will Recovery"
+ AMHealth.1103.desc:0 "After I managed to recover some of my depleted magical energy, the supernatural disease which has been afflicting me has fallen into remission. It has stopped consuming my physical health and has resumed consuming my [mana|El]@aura_active_icon! instead. I should take care not to over do it in the future."
  AMHealth.1103.a:0 "What good is a wizard without magic though?"
  
  
