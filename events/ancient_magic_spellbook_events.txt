@@ -14,7 +14,13 @@ ancient_magic_spellbook_events.001 = {
 	}
 	theme = magic
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = worry
+	}
 	
 	immediate = {
 		add_character_flag = am_spell_resolution
@@ -58,10 +64,22 @@ ancient_magic_spellbook_events.002 = {
 	desc = ancient_magic_spellbook_events.002.desc
 	theme = chronomancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = worry
+	}
 	
 	option = {
 		name = ancient_magic_spellbook_events.002.a
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		show_as_unavailable = {
+			scope:am_spell_target = scope:am_spell_caster # If you can cast the spell, you don't need to.
+		}
 		trigger_event = ancient_magic_spellbook_events.201
 	}
 	# Haste
@@ -132,7 +150,13 @@ ancient_magic_spellbook_events.003 = {
 	desc = ancient_magic_spellbook_events.003.desc
 	theme = chiromancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = worry
+	}
 	
 	option = {
 		name = ancient_magic_spellbook_events.003.a
@@ -150,7 +174,13 @@ ancient_magic_spellbook_events.004 = {
 	desc = ancient_magic_spellbook_events.004.desc
 	theme = elomancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = worry
+	}
 	
 	option = {
 		name = ancient_magic_spellbook_events.004.a
@@ -227,7 +257,13 @@ ancient_magic_spellbook_events.005 = {
 	desc = ancient_magic_spellbook_events.005.desc
 	theme = necromancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = beg
+	}
 	
 	# Create Undead
 	option = {
@@ -264,7 +300,13 @@ ancient_magic_spellbook_events.006 = {
 	desc = ancient_magic_spellbook_events.006.desc
 	theme = biomancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = worry
+	}
 	
 	option = {
 		name = ancient_magic_spellbook_events.006.a
@@ -323,7 +365,13 @@ ancient_magic_spellbook_events.007 = {
 	desc = ancient_magic_spellbook_events.007.desc
 	theme = mensomancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = paranoia
+	}
 	
 	# Manipulate Mind - Target Only
 	option = {
@@ -434,7 +482,10 @@ ancient_magic_spellbook_events.201 = {
 		character = scope:am_spell_caster
 		animation = ecstasy
 	}
-	right_portrait = { 
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
 		character = scope:am_spell_target
 		animation = ecstasy
 	}
@@ -618,7 +669,10 @@ ancient_magic_spellbook_events.202 = {
 		character = scope:am_spell_caster
 		animation = ecstasy
 	}
-	right_portrait = { 
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
 		character = scope:am_spell_target
 		animation = ecstasy
 	}
@@ -799,8 +853,11 @@ ancient_magic_spellbook_events.203 = {
 		}
 	}
 	theme = chronomancy
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	left_portrait = {
+		character = scope:am_spell_caster
+		animation = ecstasy
+	}
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
@@ -917,8 +974,11 @@ ancient_magic_spellbook_events.204 = {
 		}
 	}
 	theme = chronomancy
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	left_portrait = {
+		character = scope:am_spell_caster
+		animation = ecstasy
+	}
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
@@ -1034,8 +1094,11 @@ ancient_magic_spellbook_events.205 = {
 		}
 	}
 	theme = chronomancy
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	left_portrait = {
+		character = scope:am_spell_caster
+		animation = ecstasy
+	}
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
@@ -1151,8 +1214,11 @@ ancient_magic_spellbook_events.206 = {
 		}
 	}
 	theme = chronomancy
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	left_portrait = {
+		character = scope:am_spell_caster
+		animation = ecstasy
+	}
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
@@ -1268,8 +1334,11 @@ ancient_magic_spellbook_events.207 = {
 		}
 	}
 	theme = chronomancy
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	left_portrait = {
+		character = scope:am_spell_caster
+		animation = ecstasy
+	}
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
@@ -1385,8 +1454,11 @@ ancient_magic_spellbook_events.208 = {
 		}
 	}
 	theme = chronomancy
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	left_portrait = {
+		character = scope:am_spell_caster
+		animation = ecstasy
+	}
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
@@ -1502,8 +1574,11 @@ ancient_magic_spellbook_events.209 = {
 		}
 	}
 	theme = chronomancy
-	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	left_portrait = {
+		character = scope:am_spell_caster
+		animation = ecstasy
+	}
+	#right_portrait = scope:am_spell_target
 	
 	option = {
 		name = ancient_magic_spellbook_activate_aura
@@ -1794,8 +1869,11 @@ ancient_magic_spellbook_events.301 = {
 	theme = chiromancy
 	left_portrait = scope:am_spell_caster
 	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
 		character = scope:am_spell_target
-		animation = severelyinjured
+		animation = pain
 	}
 	# Minor Ailments
 	option = {
@@ -3032,7 +3110,13 @@ ancient_magic_spellbook_events.501 = {
 	}
 	theme = necromancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = beg
+	}
 
 	option = {
 		name = ancient_magic_spellbook_events.501.a
@@ -3182,7 +3266,13 @@ ancient_magic_spellbook_events.502 = {
 	}
 	theme = necromancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = beg
+	}
 	
 	option = {
 		name = ancient_magic_spellbook_events.502.a
@@ -3382,7 +3472,13 @@ ancient_magic_spellbook_events.503 = {
 	}
 	theme = necromancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = beg
+	}
 	
 	option = {
 		name = ancient_magic_spellbook_events.503.a
@@ -3612,7 +3708,13 @@ ancient_magic_spellbook_events.601 = {
 	desc = ancient_magic_spellbook_events.601.desc
 	theme = biomancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = worry
+	}
 
 	# Good
 	option = {
@@ -3788,7 +3890,13 @@ ancient_magic_spellbook_events.602 = {
 	}
 	theme = biomancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = worry
+	}
 
 	# Beauty
 	option = {
@@ -4047,7 +4155,13 @@ ancient_magic_spellbook_events.603 = {
 	}
 	theme = biomancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = worry
+	}
 
 	immediate = {
 		# Put it all together for localization, trigger, and option:
@@ -4814,7 +4928,13 @@ ancient_magic_spellbook_events.604 = {
 	desc = ancient_magic_spellbook_events.604.desc
 	theme = biomancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = worry
+	}
 
 	immediate = {
 		if = {
@@ -5810,7 +5930,13 @@ ancient_magic_spellbook_events.605 = {
 	}
 	theme = biomancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = worry
+	}
 	
 	option = {
 		name = ancient_magic_spellbook_events.605.a
@@ -6211,7 +6337,13 @@ ancient_magic_spellbook_events.701 = {
 	}
 	theme = mensomancy
 	left_portrait = scope:am_spell_caster
-	right_portrait = scope:am_spell_target
+	right_portrait = {
+		trigger = {
+			NOT = { scope:am_spell_target = scope:am_spell_caster }
+		}
+		character = scope:am_spell_target
+		animation = paranoia
+	}
 
 #The Limbic System ('a' branch):
 	# Target the Limbic System
