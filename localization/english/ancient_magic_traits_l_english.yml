@@ -28,6 +28,6 @@
 
 #Diseases
  trait_mana_devouring_1:0 "Mana Devouring"
- trait_mana_devouring_1_desc:0 "Disease with which are afflicted mainly those with the gift of magic. It causes continusous mana depletion."
+ trait_mana_devouring_1_desc:0 "This character has contracted a disease which mostly afflicts those with magic potential. It causes continuous [mana_drain|E]."
  trait_mana_devouring_2:0 "Body Devouring"
- trait_mana_devouring_2_desc:0 "Second stage of Mana devouring. Because of not enough mana, the disease started to consume ones body."
+ trait_mana_devouring_2_desc:0 "This character has an advanced mana devouring disease. Because [ROOT.GetSheHe] no longer has enough [mana|El] to manage the illness, it has begun to consume [ROOT.GetHerHis] body."

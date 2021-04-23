@@ -1,8 +1,8 @@
 ﻿l_english:
 #intrigue menu
  open_spellbook_decision:0 "Open Spellbook"
- open_spellbook_decision_tooltip:0 "Open your spellbook"
- open_spellbook_decision_desc:0 "Open your spellbook."
+ open_spellbook_decision_tooltip:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] casts a spell on [ROOT.GetCharacter.GetHerselfHimself]."
+ open_spellbook_decision_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] casts a spell on [ROOT.GetCharacter.GetHerselfHimself]."
  open_spellbook_decision_confirm:0 "Open Spellbook"
  gain_potential_decision:0 "Gain Magical Potential"
  gain_potential_decision_tooltip:0 "Gain Magical Potential"
@@ -11,7 +11,7 @@
  
 #interactions
  open_spellbook_interaction:0 "Open Spellbook"
- open_spellbook_interaction_desc:0 "Open Spellbook"
+ open_spellbook_interaction_desc:0 "[actor.GetFirstNameNoTooltip] casts a spell on [actor.Custom2('SpellTargetHerselfHimself', SCOPE.sC('recipient'))]."
  halt_aging_interaction:0 "Grant Gift of Time"
  halt_aging_interaction_desc:0 "Use your temporal mastery to halt the aging process."
  start_aging_interaction:0 "Revoke Gift of Time"
