@@ -17,29 +17,44 @@ mage_education = { # UNCOMMENT WHEN SYSTEM IN PLACE!!!
 	else_if = { limit = { has_trait = education_arcane_4 } value = 4 }
 }
 
-mage_level = {
-	value = var:mage_xp
+mage_level_divider = {
+	value = 200
 	if = {
-		limit = { has_trait = magic_potential_1 }
-		divide = 150
+		limit = {  has_trait = magic_potential_1 }
+		value = 150
 	}
 	else_if = {
 		limit = { has_trait = magic_potential_2 }
-		divide = 100
+		value = 100
 	}
 	else_if = {
 		limit = { has_trait = magic_potential_3 }
-		divide = 75
+		value = 75
 	}
+	if = {
+		limit = {  this.dynasty = { has_dynasty_perk = arcane_legacy_4 }}
+		add = -5
+	}
+}
+
+mage_level = {
+	value = var:mage_xp
+	divide = mage_level_divider
 	add = 1
 	floor = yes
+}
+
+mage_xp_to_next_level = {
+	value = mage_level
+	add = 1
+	multiply = mage_level_divider
 }
 
 mage_xp_per_perk = 15
 
 max_mana_per_perk = 30
 
-mana_gen_per_perk = 3
+mana_gen_per_perk = 2
 
 arcana_mage_xp_per_perk = {
 	value = mage_xp_per_perk
@@ -54,15 +69,6 @@ arcana_max_mana_per_perk = {
 arcana_mana_gen_per_perk = {
 	value = mana_gen_per_perk
 	multiply = 2
-}
-
-mage_xp_to_next_level = {
-	value = mage_level
-	add = 1
-	if = { limit = { mage_potency = 1 } multiply = 150 } 
-	if = { limit = { mage_potency = 2 } multiply = 100 } 
-	if = { limit = { mage_potency = 3 } multiply = 75 }
-	#subtract = var:mage_xp
 }
 
 # Note: This value is a work-around for 'consume life' not giving the 'drained' modifier
@@ -240,4 +246,3 @@ am_genetic_level = {
 	add = am_physique_level
 	add = am_intellect_level
 }
-#############################################################################################

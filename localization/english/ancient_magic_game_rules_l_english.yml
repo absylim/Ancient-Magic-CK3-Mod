@@ -3,6 +3,8 @@
  rule_PC_magic_level:0 "Player Magic Potential"
  setting_PC_magic_level_decision:0 "Decision"
  setting_PC_magic_level_decision_desc:0 "PC magic potential will be decided via decision"
+ setting_PC_magic_level_0:0 "No Change"
+ setting_PC_magic_level_0_desc:0 "You will not be granted Magic Potential"
  setting_PC_magic_level_1:0 "Minor Magic Potential"
  setting_PC_magic_level_1_desc:0 "You will start with Minor Magic Potential"
  setting_PC_magic_level_2:0 "Magic Potential"
