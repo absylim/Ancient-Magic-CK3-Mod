@@ -242,7 +242,7 @@ city_of_magic_01 = {
 	}
 	
 	flag = city
-	next_building = city_02
+	next_building = city_of_magic_02
 
 	type_icon = "icon_building_guild_halls.dds"
 	
@@ -255,9 +255,58 @@ city_of_magic_01 = {
 			}
 		}		
 		modifier = {
+			add = 20
+			scope:holder = {
+				AND = {
+					has_trait = magic_potential
+					scope:religion = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}			
+		modifier = {
+			add = 100
+			scope:holder = {
+				AND = {
+					has_trait = magic_potential
+					scope:religion = {
+						has_doctrine_parameter = witchcraft_accepted
+					}
+				}
+			}
+		}			
+		modifier = {
+			divide = 10
+			scope:holder = {
+				AND = {
+					NOT = { has_trait = magic_potential }
+					scope:religion = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}		
+		modifier = {
 			factor = 0
 			scope:holder = {
-				has_government = theocracy_government
+				AND = {
+					has_government = theocracy_government
+					scope:religion = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}	
+		modifier = {
+			add = 50
+			scope:holder = {
+				AND = {
+					has_government = theocracy_government
+					scope:religion = {
+						has_doctrine_parameter = witchcraft_accepted
+					}
+				}
 			}
 		}
 		modifier = {
@@ -265,7 +314,7 @@ city_of_magic_01 = {
 			county = {
 				NOT = {
 					any_county_province = {
-						has_building_or_higher = city_01
+						has_building_or_higher = city_of_magic_01
 					}
 				}
 			}
@@ -503,7 +552,7 @@ city_of_magic_02 = {
 		monthly_income = good_building_tax_tier_4
 	}
 	flag = city
-	next_building = city_03
+	next_building = city_of_magic_03
 	ai_value = {
 		base = 6		
 		modifier = {
@@ -692,7 +741,7 @@ city_of_magic_03 = {
 		}
 	}
 	cost_gold = main_building_tier_3_cost
-	next_building = city_04
+	next_building = city_of_magic_04
 	
 	levy = poor_building_levy_tier_6
 	garrison = normal_building_garrison_tier_3
@@ -917,7 +966,7 @@ AM_guild_halls_01 = {
 	construction_time = standard_construction_time
 
 	can_construct_potential = {
-		has_building_or_higher = city_01
+		has_building_or_higher = city_of_magic_01
 	}
 
 	can_construct_showing_failures_only = {
@@ -933,7 +982,7 @@ AM_guild_halls_01 = {
 		development_growth_factor = 0.05
 	}
 	
-	next_building = guild_halls_02
+	next_building = AM_guild_halls_02
 
 	type_icon = "icon_building_guild_halls.dds"
 	
@@ -952,7 +1001,7 @@ AM_guild_halls_02 = {
 	construction_time = standard_construction_time
 
 	can_construct_potential = {
-		has_building_or_higher = city_01
+		has_building_or_higher = city_of_magic_01
 		culture = {
 			has_innovation = innovation_crop_rotation
 		}
@@ -971,7 +1020,7 @@ AM_guild_halls_02 = {
 		development_growth_factor = 0.1
 	}
 	
-	next_building = guild_halls_03
+	next_building = AM_guild_halls_03
 	ai_value = {
 		base = 0
 		modifier = {
@@ -987,7 +1036,7 @@ AM_guild_halls_03 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		has_building_or_higher = city_02
+		has_building_or_higher = city_of_magic_02
 		culture = {
 			has_innovation = innovation_manorialism
 		}
@@ -1006,7 +1055,7 @@ AM_guild_halls_03 = {
 		development_growth_factor = 0.15
 	}
 	
-	next_building = guild_halls_04
+	next_building = AM_guild_halls_04
 	ai_value = {
 		base = 0
 		modifier = {
@@ -1022,7 +1071,7 @@ AM_guild_halls_04 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		has_building_or_higher = city_02
+		has_building_or_higher = city_of_magic_02
 		culture = {
 			has_innovation = innovation_manorialism
 		}
@@ -1041,7 +1090,7 @@ AM_guild_halls_04 = {
 		development_growth_factor = 0.2
 	}
 	
-	next_building = guild_halls_05
+	next_building = AM_guild_halls_05
 	ai_value = {
 		base = 0
 		modifier = {
@@ -1057,7 +1106,7 @@ AM_guild_halls_05 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		has_building_or_higher = city_03
+		has_building_or_higher = city_of_magic_03
 		culture = {
 			has_innovation = innovation_windmills
 		}
@@ -1076,7 +1125,7 @@ AM_guild_halls_05 = {
 		development_growth_factor = 0.25
 	}
 	
-	next_building = guild_halls_06
+	next_building = AM_guild_halls_06
 	ai_value = {
 		base = 0
 		modifier = {
@@ -1092,7 +1141,7 @@ AM_guild_halls_06 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		has_building_or_higher = city_03
+		has_building_or_higher = city_of_magic_03
 		culture = {
 			has_innovation = innovation_windmills
 		}
@@ -1111,7 +1160,7 @@ AM_guild_halls_06 = {
 		development_growth_factor = 0.3
 	}
 	
-	next_building = guild_halls_07
+	next_building = AM_guild_halls_07
 	ai_value = {
 		base = 0
 		modifier = {
@@ -1127,7 +1176,7 @@ AM_guild_halls_07 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		has_building_or_higher = city_04
+		has_building_or_higher = city_of_magic_04
 		culture = {
 			has_innovation = innovation_cranes
 		}
@@ -1146,7 +1195,7 @@ AM_guild_halls_07 = {
 		development_growth_factor = 0.35
 	}
 	
-	next_building = guild_halls_08
+	next_building = AM_guild_halls_08
 	ai_value = {
 		base = 0
 		modifier = {
@@ -1162,7 +1211,7 @@ AM_guild_halls_08 = {
 	construction_time = standard_construction_time
 
 	can_construct = {
-		has_building_or_higher = city_04
+		has_building_or_higher = city_of_magic_04
 		culture = {
 			has_innovation = innovation_cranes
 		}
