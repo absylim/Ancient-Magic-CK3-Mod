@@ -246,3 +246,16 @@ am_genetic_level = {
 	add = am_physique_level
 	add = am_intellect_level
 }
+
+rank_1_arcane_education_chance = {
+	value = var:education_rank_1_multiplier
+}
+rank_2_arcane_education_chance = {
+	value = var:education_rank_2_multiplier
+}
+rank_3_arcane_education_chance = {
+	value = var:education_rank_3_multiplier
+}
+rank_4_arcane_education_chance = {
+	value = var:education_rank_4_multiplier
+}

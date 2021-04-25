@@ -42,12 +42,12 @@ education_point_acquisition_effect = {
 		education_point_acquisition_support_effect = { SKILL = intrigue }
 	}
 	else_if = {
-		limit = { has_focus = education_arcane }
+		limit = { has_focus = education_learning }
 		education_point_acquisition_support_effect = { SKILL = learning }
 	}
 	else_if = {
-		limit = { has_focus = education_learning }
-		education_point_acquisition_support_effect = { SKILL = learning }
+		limit = { has_focus = education_arcane }
+		education_point_acquisition_support_effect = { SKILL = arcane }
 	}
 }
 
@@ -1550,4 +1550,332 @@ dynasty_legacy_education_boost_effect = {
 		}
 	}
 }
+
+results_of_patronage_spouse_education_points_effect = {
+	if = {
+		limit = { has_variable = patronage_spouse_tutor }
+
+		var:patronage_spouse_tutor = {
+			save_scope_as = patronage_spouse_tutor
+		}
+
+		#Checks their current level
+		if = {
+			limit = { education_points_equals_education_rank = { RANK = 1 } }
+			save_scope_value_as = {
+				name = education_rank_before_patronage
+				value = 1
+			}
+		}
+		else_if = {
+			limit = { education_points_equals_education_rank = { RANK = 2 } }
+			save_scope_value_as = {
+				name = education_rank_before_patronage
+				value = 2
+			}
+		}
+		else_if = {
+			limit = { education_points_equals_education_rank = { RANK = 3 } }
+			save_scope_value_as = {
+				name = education_rank_before_patronage
+				value = 3
+			}
+		}
+		else_if = {
+			limit = { education_points_equals_education_rank = { RANK = 4 } }
+			save_scope_value_as = {
+				name = education_rank_before_patronage
+				value = 4
+			}
+		}
+		#Adding the points to the current education
+		if = {
+			limit = { has_focus = education_diplomacy }
+			change_variable = {
+				name = education_diplomacy_variable
+				add = var:patronage_spouse_tutor_points
+			}
+		}
+		else_if = {
+			limit = { has_focus = education_martial }
+			change_variable = {
+				name = education_martial_variable
+				add = var:patronage_spouse_tutor_points
+			}
+		}
+		else_if = {
+			limit = { has_focus = education_stewardship }
+			change_variable = {
+				name = education_stewardship_variable
+				add = var:patronage_spouse_tutor_points
+			}
+		}
+		else_if = {
+			limit = { has_focus = education_intrigue }
+			change_variable = {
+				name = education_intrigue_variable
+				add = var:patronage_spouse_tutor_points
+			}
+		}
+		else_if = {
+			limit = { has_focus = education_learning }
+			change_variable = {
+				name = education_learning_variable
+				add = var:patronage_spouse_tutor_points
+			}
+		}
+		else_if = {
+			limit = { has_focus = education_arcane }
+			change_variable = {
+				name = education_arcane_variable
+				add = var:patronage_spouse_tutor_points
+			}
+		}
+
+		#Checks their new level
+		if = {
+			limit = { education_points_equals_education_rank = { RANK = 1 } }
+			save_scope_value_as = {
+				name = education_rank_after_patronage
+				value = 1
+			}
+		}
+		else_if = {
+			limit = { education_points_equals_education_rank = { RANK = 2 } }
+			save_scope_value_as = {
+				name = education_rank_after_patronage
+				value = 2
+			}
+		}
+		else_if = {
+			limit = { education_points_equals_education_rank = { RANK = 3 } }
+			save_scope_value_as = {
+				name = education_rank_after_patronage
+				value = 3
+			}
+		}
+		else_if = {
+			limit = { education_points_equals_education_rank = { RANK = 4 } }
+			save_scope_value_as = {
+				name = education_rank_after_patronage
+				value = 4
+			}
+		}
+
+		#Sets flag for result
+		if = {
+			limit = {
+				exists = scope:education_rank_before_patronage
+				exists = scope:education_rank_after_patronage
+			}
+			if = {
+				limit = { #+1
+					OR = {
+						AND = {
+							scope:education_rank_before_patronage = 1
+							scope:education_rank_after_patronage = 2
+						}
+						AND = {
+							scope:education_rank_before_patronage = 2
+							scope:education_rank_after_patronage = 3
+						}
+						AND = {
+							scope:education_rank_before_patronage = 3
+							scope:education_rank_after_patronage = 4
+						}
+					}
+				}
+				save_scope_value_as = {
+					name = education_rank_patronage_bonus
+					value = flag:1
+				}
+			}
+			else_if = { #+2 or more
+				limit = { NOT = { scope:education_rank_after_patronage = scope:education_rank_before_patronage } }
+				save_scope_value_as = {
+					name = education_rank_patronage_bonus
+					value = flag:2_or_more
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				exists = scope:education_rank_patronage_bonus
+				scope:education_rank_patronage_bonus = flag:1
+				scope:education_rank_patronage_bonus = flag:2_or_more
+			}
+		}
+
+		if = {
+			limit = {
+				has_variable = patronage_spouse_tutor_points
+			}
+			remove_variable = patronage_spouse_tutor_points
+		}
+		#Got to keep the tutor var for now, but it is automatically cleared with time
+	}
+}
+
+calc_arcane_education = {
+	set_variable = {
+		name = education_rank_1_multiplier
+		value = 10
+	}
+	set_variable = {
+		name = education_rank_2_multiplier
+		value = 10
+	}
+	set_variable = {
+		name = education_rank_3_multiplier
+		value = 0
+	}
+	set_variable = {
+		name = education_rank_4_multiplier
+		value = 0
+	}
+	if = {
+		limit = {
+			has_trait = intellect_good
+		}
+		change_variable = {
+			name = education_rank_3_multiplier
+			add = 10
+		}
+		change_variable = {
+			name = education_rank_4_multiplier
+			add = 10
+		}
+	}
+	if = {
+		limit = {
+			has_trait = curious
+		}
+		change_variable = {
+			name = education_rank_3_multiplier
+			add = 10
+		}
+		change_variable = {
+			name = education_rank_4_multiplier
+			add = 10
+		}
+	}
+	if = {
+		limit = {
+			has_trait = magic_potential_1
+		}
+		change_variable = {
+			name = education_rank_3_multiplier
+			add = 10
+		}
+		change_variable = {
+			name = education_rank_4_multiplier
+			add = 10
+		}
+	}
+	if = {
+		limit = {
+			has_trait = magic_potential_2
+		}
+		change_variable = {
+			name = education_rank_3_multiplier
+			add = 20
+		}
+		change_variable = {
+			name = education_rank_4_multiplier
+			add = 20
+		}
+	}
+	if = {
+		limit = {
+			has_trait = magic_potential_3
+		}
+		change_variable = {
+			name = education_rank_3_multiplier
+			add = 30
+		}
+		change_variable = {
+			name = education_rank_4_multiplier
+			add = 30
+		}
+	}
+	#scope:guardian = {
+	#	if = {
+	#		limit = {
+	#			has_trait_rank = education_arcane_1
+	#		}
+	#		root = {
+	#			change_variable = {
+	#				name = education_rank_1_multiplier
+	#				multiply = 2
+	#			}
+	#		}
+	#	}
+	#	if = {
+	#		limit = {
+	#			has_trait_rank = education_arcane_2
+	#		}
+	#		root = {
+	#			change_variable = {
+	#				name = education_rank_2_multiplier
+	#				multiply = 2
+	#			}
+	#		}
+	#	}
+	#	if = {
+	#		limit = {
+	#			has_trait_rank = education_arcane_3
+	#		}
+	#		root = {
+	#			change_variable = {
+	#				name = education_rank_3_multiplier
+	#				multiply = 2
+	#			}
+	#		}
+	#	}
+	#	if = {
+	#		limit = {
+	#			has_trait_rank = education_arcane_4
+	#		}
+	#		root = {
+	#			change_variable = {
+	#				name = education_rank_4_multiplier
+	#				multiply = 2
+	#			}
+	#		}
+	#	}
+	#}
+	random_list = {
+		1 = {
+			add_trait = education_arcane_1
+			modifier = {
+				multiply = rank_1_arcane_education_chance
+			}
+		}
+		1 = {
+			add_trait = education_arcane_2
+			modifier = {
+				multiply = rank_2_arcane_education_chance
+			}
+		}
+		1 = {
+			add_trait = education_arcane_3
+			modifier = {
+				multiply = rank_3_arcane_education_chance
+			}
+		}
+		1 = {
+			add_trait = education_arcane_4
+			modifier = {
+				multiply = rank_4_arcane_education_chance
+			}
+		}
+	}
+	remove_variable = education_rank_1_multiplier
+	remove_variable = education_rank_2_multiplier
+	remove_variable = education_rank_3_multiplier
+	remove_variable = education_rank_4_multiplier
+}
+
+
 

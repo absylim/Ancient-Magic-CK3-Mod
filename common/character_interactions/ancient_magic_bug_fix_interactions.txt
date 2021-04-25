@@ -1,0 +1,29 @@
+﻿ancient_magic_end_ward_interaction = {
+	category = AMS_magic_interactions
+
+	desc = friendship_spell_interaction_desc
+	
+	is_shown = {
+        scope:recipient = {
+			age >= 16
+            num_of_relation_guardian > 0
+		}
+        debug_only = yes
+	}
+	
+	ai_will_do = {
+		base = 0
+	}
+	
+	auto_accept = yes
+	
+	on_accept = {
+		scope:recipient = {
+			random_relation = {
+			    type = guardian
+			    save_scope_as = educator
+		    }
+            remove_relation_guardian = scope:educator
+		}
+	}
+}
