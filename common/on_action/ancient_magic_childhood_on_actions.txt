@@ -1,4 +1,4 @@
-on_16th_birthday_AM = {
+on_16th_birthday = {
 	trigger = { age = 16 }
 
 	events = {

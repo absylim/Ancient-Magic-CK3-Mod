@@ -5,7 +5,7 @@ namespace = AM_coming_of_age
 #Arcana - notification event for child
 #by Linnéa Thimrén and Petter Vilberg and Donekulda
 AM_coming_of_age.0001 = {
-		title = coming_of_age.0001.t
+	title = coming_of_age.0001.t
 	desc = {
 		triggered_desc = {
 			trigger = {
@@ -240,7 +240,7 @@ AM_coming_of_age.0001 = {
 	left_portrait = root
 	
 	trigger = {
-		has_focus = education_diplomacy
+		has_focus = education_arcane
 	}
 
 	immediate = {
