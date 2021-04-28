@@ -1,0 +1,9 @@
+on_16th_birthday_AM = {
+	trigger = { age = 16 }
+
+	events = {
+		AM_coming_of_age.0001 #Arcane
+		delay = { days = 1 }
+		childhood_education.0006 #To remove education focus
+	}
+}

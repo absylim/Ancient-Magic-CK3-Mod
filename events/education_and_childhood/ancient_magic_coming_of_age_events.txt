@@ -1,0 +1,307 @@
+#Events dealing with coming of age
+
+namespace = AM_coming_of_age
+
+#Arcana - notification event for child
+#by Linnéa Thimrén and Petter Vilberg and Donekulda
+AM_coming_of_age.0001 = {
+		title = coming_of_age.0001.t
+	desc = {
+		triggered_desc = {
+			trigger = {
+				exists = scope:educator
+			}
+			desc = {
+				first_valid = {
+					triggered_desc = {
+						trigger = {
+							has_character_flag = studied_at_university
+						}
+						desc = coming_of_age.0001.educator_university
+					}
+					desc = coming_of_age.0001.educator
+				}
+			}
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_trait_rank = {
+						trait = education_diplomacy
+						rank = 1
+					}
+				}
+				desc = {
+					desc = coming_of_age.0001.desc1
+					first_valid = {
+						triggered_desc = {
+							trigger = {
+								has_arcane_education_affinity_childhood_trait_trigger = yes
+							}
+							desc = coming_of_age.0001.desc1_good_trait
+						}
+						triggered_desc = {
+							trigger = {
+								has_arcane_education_disaffinity_childhood_trait_trigger = yes
+							}
+							desc = coming_of_age.0001.desc1_bad_trait
+						}
+						desc = coming_of_age.0001.desc1_fallback_trait
+					}
+				}
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_rank = {
+						trait = education_arcane
+						rank = 2
+					}
+				}
+				desc = {
+					desc = coming_of_age.0001.desc2
+					first_valid = {
+						triggered_desc = {
+							trigger = {
+								has_arcane_education_affinity_childhood_trait_trigger = yes
+							}
+							desc = coming_of_age.0001.desc2_good_trait
+						}
+						triggered_desc = {
+							trigger = {
+								has_arcane_education_disaffinity_childhood_trait_trigger = yes
+							}
+							desc = coming_of_age.0001.desc2_bad_trait
+						}
+						desc = coming_of_age.0001.desc2_fallback_trait
+					}
+				}
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_rank = {
+						trait = education_arcane
+						rank = 3
+					}
+				}
+				desc = {
+					desc = coming_of_age.0001.desc3
+					first_valid = {
+						triggered_desc = {
+							trigger = {
+								has_arcane_education_affinity_childhood_trait_trigger = yes
+							}
+							desc = coming_of_age.0001.desc3_good_trait
+						}
+						triggered_desc = {
+							trigger = {
+								has_arcane_education_disaffinity_childhood_trait_trigger = yes
+							}
+							desc = coming_of_age.0001.desc3_bad_trait
+						}
+						desc = coming_of_age.0001.desc3_fallback_trait
+					}
+				}
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_rank = {
+						trait = education_arcane
+						rank = 4
+					}
+				}
+				desc = {
+					desc = coming_of_age.0001.desc4
+					first_valid = {
+						triggered_desc = {
+							trigger = {
+								has_arcane_education_affinity_childhood_trait_trigger = yes
+							}
+							desc = coming_of_age.0001.desc4_good_trait
+						}
+						triggered_desc = {
+							trigger = {
+								has_arcane_education_disaffinity_childhood_trait_trigger = yes
+							}
+							desc = coming_of_age.0001.desc4_bad_trait
+						}
+						desc = coming_of_age.0001.desc4_fallback_trait
+					}
+				}
+			}
+		}
+		first_valid = { #If a learned court owner spouse has improved education
+			triggered_desc = {
+				trigger = {
+					exists = scope:education_rank_patronage_bonus
+					scope:education_rank_patronage_bonus = flag:1
+				}
+				desc = coming_of_age.0001.patronaged_spouse_plus_1.desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:education_rank_patronage_bonus
+					scope:education_rank_patronage_bonus = flag:2_or_more
+				}
+				desc = coming_of_age.0001.patronaged_spouse_plus_2_or_more.desc
+			}
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						any_relation = { type = friend always = yes }
+						exists = var:had_childhood_crush_variable
+						exists = var:had_childhood_bully_variable
+						exists = var:had_childhood_victim_variable
+					}
+				}
+				desc = {
+					desc = coming_of_age.0001.relationships
+					triggered_desc = {
+						trigger = {
+							any_relation = { type = friend always = yes }
+						}
+						desc = coming_of_age.0001.friend
+					}
+					triggered_desc = {
+						trigger = {
+							exists = var:had_childhood_crush_variable
+						}
+						desc = coming_of_age.0001.crush
+					}
+					first_valid = {
+						triggered_desc = {
+							trigger = {
+								AND = {
+									exists = var:had_childhood_bully_variable
+									NOT = { has_character_flag = bully_destroyed_toy }
+								}
+							}
+							desc = coming_of_age.0001.bully1
+						}
+						triggered_desc = {
+							trigger = {
+								AND = {
+									exists = var:had_childhood_bully_variable
+									has_character_flag = bully_destroyed_toy
+								}
+							}
+							desc = coming_of_age.0001.bully2
+						}
+					}
+					first_valid = {
+						triggered_desc = {
+							trigger = {
+								AND = {
+									exists = var:had_childhood_victim_variable
+									scope:victim = {
+										NOT = { has_character_flag = bully_destroyed_toy }
+									}
+								}
+							}
+							desc = coming_of_age.0001.victim1
+						}
+						triggered_desc = {
+							trigger = {
+								AND = {
+									exists = var:had_childhood_victim_variable
+									scope:victim = {
+										has_character_flag = bully_destroyed_toy
+									}
+								}
+							}
+							desc = coming_of_age.0001.victim2
+						}
+					}
+					triggered_desc = {
+						trigger = {
+							any_relation = { type = friend always = no }
+						}
+						desc = coming_of_age.0001.relationships_end
+					}
+				}
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = {
+						OR = {
+							any_relation = { type = friend always = yes }
+							exists = var:had_childhood_crush_variable
+							exists = var:had_childhood_bully_variable
+							exists = var:had_childhood_victim_variable
+						}
+					}
+				}
+				desc = coming_of_age.0001.no_relationships
+			}
+		}
+	}
+	theme = education
+	left_portrait = root
+	
+	trigger = {
+		has_focus = education_diplomacy
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		save_event_targets_from_childhood_effect = yes
+		random_relation = {
+			type = guardian
+			save_scope_as = educator
+		}
+		results_of_patronage_spouse_education_points_effect = yes #patronage/high learning spouses of court owner can add points
+		results_of_university_education_points_effect = yes #Did you send the child to university? Lucky them!
+		dynasty_legacy_education_boost_effect = yes # Adds a few points if you have the second Kin legacy
+		if = {
+			limit = {
+				var:education_arcane_variable <= education_level_1
+			}
+			
+			set_trait_rank = {
+				trait = education_arcane
+				rank = 1
+			}
+		}
+		else_if = {
+			limit = {
+				var:education_arcane_variable <= education_level_2
+			}
+			
+			set_trait_rank = {
+				trait = education_arcane
+				rank = 2
+			}
+		}
+		else_if = {
+			limit = {
+				var:education_arcane_variable <= education_level_3
+			}
+			
+			set_trait_rank = {
+				trait = education_arcane
+				rank = 3
+			}
+		}
+		else = {
+			
+			set_trait_rank = {
+				trait = education_arcane
+				rank = 4
+			}
+		}
+		save_childhood_trait_as_variable_effect = yes
+		education_complete_notification_effect = yes
+		wrap_up_education_effect = yes
+		custom_tooltip_diplomacy_coming_of_age_effect = yes
+		show_as_tooltip = { remove_variables_and_trait_coming_of_age_effect = yes }#To give a good tooltip
+	}
+
+	option = {
+		name = coming_of_age.0001.a
+	}
+	after = {
+		remove_variable = education_arcane_variable
+		hidden_effect = { remove_variables_and_trait_coming_of_age_effect = yes }
+	}
+}
