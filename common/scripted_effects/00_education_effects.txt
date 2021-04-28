@@ -42,8 +42,8 @@ education_point_acquisition_effect = {
 		education_point_acquisition_support_effect = { SKILL = intrigue }
 	}
 	else_if = {
-		limit = { has_focus = education_learning }
-		education_point_acquisition_support_effect = { SKILL = learning }
+		limit = { has_focus = education_arcane }
+		education_point_acquisition_support_effect = { SKILL = arcane }
 	}
 	else_if = {
 		limit = { has_focus = education_arcane }
@@ -1400,16 +1400,8 @@ results_of_university_education_points_effect = {
 		else_if = {
 			limit = { has_focus = education_arcane }
 			change_variable = {
-				name = education_learning_variable
-				add = 8 #They should reach the top if they're not completely dumb
-			}
-			change_variable = {
-				name = education_martial_variable
-				add = 2
-			}
-			change_variable = {
-				name = education_diplomacy_variable
-				add = 2
+				name = education_arcane_variable
+				add = 12 #They should reach the top if they're not completely dumb
 			}
 		}
 		remove_character_flag = studying_at_university
@@ -1528,22 +1520,14 @@ dynasty_legacy_education_boost_effect = {
 			random_list = {
 				60 = {
 					change_variable = {
-						name = education_learning_variable
+						name = education_arcane_variable
 						add = 2
-					}
-					change_variable = {
-						name = education_martial_variable
-						add = 1
 					}
 				}
 				40 = {
 					change_variable = {
-						name = education_learning_variable
+						name = education_arcane_variable
 						add = 3
-					}
-					change_variable = {
-						name = education_martial_variable
-						add = 2
 					}
 				}
 			}
