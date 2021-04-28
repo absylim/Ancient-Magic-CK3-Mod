@@ -227,6 +227,17 @@ childhood_education.0005 = {
 			has_focus = education_stewardship
 			has_focus = education_learning
 			has_focus = education_intrigue
+		}
+	}
+	immediate = {
+		set_focus = no
+	}
+}
+
+childhood_education.0006 = {
+	hidden = yes
+	trigger = {
+		OR = {
 			has_focus = education_arcane
 		}
 	}

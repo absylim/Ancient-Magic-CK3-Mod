@@ -258,6 +258,7 @@ education_points_equals_education_rank = {
 		education_points_and_focus_equals_education_rank = { RANK = $RANK$ FOCUS = stewardship }
 		education_points_and_focus_equals_education_rank = { RANK = $RANK$ FOCUS = intrigue }
 		education_points_and_focus_equals_education_rank = { RANK = $RANK$ FOCUS = learning }
+		education_points_and_focus_equals_education_rank = { RANK = $RANK$ FOCUS = arcane }
 	}
 }
 
