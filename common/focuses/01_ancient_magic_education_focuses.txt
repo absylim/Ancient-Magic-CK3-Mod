@@ -64,9 +64,9 @@ education_arcane = {
 				}
 				set_variable = {
 					name = education_point_gain_variable
-					value = var:education_learning_variable
+					value = var:education_arcane_variable
 				}
-				remove_variable = education_learning_variable
+				remove_variable = education_arcane_variable
 			}
 			else = {
 				set_variable = {
