@@ -172,9 +172,9 @@ ancient_magic_mana_gen_checks_events.001 = {
 		}
 		if= {
 			limit = {
-				has_dynasty_perk = arcane_legacy_2
+				this.dynasty = { has_dynasty_perk = arcane_legacy_2 }
 				NOT = {
-					has_character_flag = aarcane_legacy_2_mana_added
+					has_character_flag = arcane_legacy_2_mana_added
 				}
 			}
 			change_mana_gen = { VALUE = 10 }
@@ -184,7 +184,7 @@ ancient_magic_mana_gen_checks_events.001 = {
 			limit = {
 				has_character_flag = arcane_legacy_2_mana_added
 				NOT = {
-					has_dynasty_perk = arcane_legacy_2
+					this.dynasty = { has_dynasty_perk = arcane_legacy_2 }
 				}
 			}
 			change_mana_gen = { VALUE = -10 }
@@ -192,19 +192,19 @@ ancient_magic_mana_gen_checks_events.001 = {
 		}
 		if= {
 			limit = {
-				has_dynasty_perk = arcane_legacy_3
+				this.dynasty = { has_dynasty_perk = arcane_legacy_3 }
 				NOT = {
-					has_character_flag = aarcane_legacy_3_mana_added
+					has_character_flag = arcane_legacy_3_mana_added
 				}
 			}
-			change_mana_gen = { VALUE = 100 }
+			change_max_mana = { VALUE = 100 }
 			add_character_flag = arcane_legacy_3_mana_added
 		}
 		if= {
 			limit = {
 				has_character_flag = arcane_legacy_3_mana_added
 				NOT = {
-					has_dynasty_perk = arcane_legacy_3
+					this.dynasty = { has_dynasty_perk = arcane_legacy_3 }
 				}
 			}
 			change_max_mana = { VALUE = -100 }
