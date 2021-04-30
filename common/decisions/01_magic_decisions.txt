@@ -53,3 +53,37 @@ gain_potential_decision = {
 		base = 0
 	}
 }
+
+immortal_suicide_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+
+	desc = commit_suicide_decision_desc
+	selection_tooltip = commit_suicide_decision_tooltip
+
+	is_shown = {
+		is_adult = yes
+		NOT = { can_execute_decision = initiate_consolamentum_decision }
+		NOT = { can_execute_decision = commit_suicide_decision }
+		age > 100
+	}
+
+	cooldown = { days = 1825 }
+
+	effect = {
+		show_as_tooltip = {
+			committed_suicide_effect = yes
+		}
+		
+		custom_tooltip = commit_suicide_decision_effect_tooltip
+		trigger_event = health.6001
+		
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

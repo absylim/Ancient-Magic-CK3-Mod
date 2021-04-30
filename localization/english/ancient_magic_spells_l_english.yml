@@ -455,7 +455,11 @@
  aura_of_death_modifier:0 "Aura of Death"
 
 #hooks
- undead_master:0 "Undead Master"
+ ancient_magic_hook_undead_master:0 "Undead Master"
+ ancient_magic_hook_puppet:0 "Puppet"
+ ancient_magic_hook_obedient:0 "Obedient"
+ ancient_magic_hook_dominated:0 "Dominated"
+
 #death reasons
  death_stare:0 "Death Stare"
 #game rules

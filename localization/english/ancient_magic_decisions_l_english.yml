@@ -8,6 +8,10 @@
  gain_potential_decision_tooltip:0 "Gain Magical Potential"
  gain_potential_decision_desc:0 "Gain Magical Potential."
  gain_potential_decision_confirm:0 "Gain Magical Potential"
+
+ immortal_suicide_decision:1 "Attempt Suicide"
+ immortal_suicide_decision_desc:0 "There is only darkness and pain. People tell me it will get better, but how do they know? And what does that help me in this moment? It is time to shed the trappings of this mortal realm."
+ immortal_suicide_decision_confirm:0 "My time has come"
  
 #interactions
  open_spellbook_interaction:0 "Open Spellbook"
