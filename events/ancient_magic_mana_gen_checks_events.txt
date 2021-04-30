@@ -172,23 +172,43 @@ ancient_magic_mana_gen_checks_events.001 = {
 		}
 		if= {
 			limit = {
-				number_maa_regiments_of_type = {
-					type = ancestral_guardians
-					value > var:ancestral_guardians_count
+				has_dynasty_perk = arcane_legacy_2
+				NOT = {
+					has_character_flag = aarcane_legacy_2_mana_added
 				}
 			}
-			change_mana_gen = { VALUE = minus_ancestral_guardians_upkeep }
-			change_ancestral_guardians_count = { VALUE = 1}
+			change_mana_gen = { VALUE = 10 }
+			add_character_flag = arcane_legacy_2_mana_added
 		}
 		if= {
 			limit = {
-				number_maa_regiments_of_type = {
-					type = ancestral_guardians
-					value < var:ancestral_guardians_count
+				has_character_flag = arcane_legacy_2_mana_added
+				NOT = {
+					has_dynasty_perk = arcane_legacy_2
 				}
 			}
-			change_mana_gen = { VALUE = add_ancestral_guardians_upkeep }
-			change_ancestral_guardians_count = { VALUE = -1}
+			change_mana_gen = { VALUE = -10 }
+			remove_character_flag = arcane_legacy_2_mana_added
+		}
+		if= {
+			limit = {
+				has_dynasty_perk = arcane_legacy_3
+				NOT = {
+					has_character_flag = aarcane_legacy_3_mana_added
+				}
+			}
+			change_mana_gen = { VALUE = 100 }
+			add_character_flag = arcane_legacy_3_mana_added
+		}
+		if= {
+			limit = {
+				has_character_flag = arcane_legacy_3_mana_added
+				NOT = {
+					has_dynasty_perk = arcane_legacy_3
+				}
+			}
+			change_max_mana = { VALUE = -100 }
+			remove_character_flag = arcane_legacy_3_mana_added
 		}
 	}
 }
