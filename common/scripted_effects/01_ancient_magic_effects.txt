@@ -251,8 +251,6 @@ remove_aura_modifier = {
 		}
 		custom_description = {
 			text = remove_aura_modifier_effect_desc
-			remove_all_character_modifier_instances = $AURA$_modifier
-			remove_all_character_modifier_instances = finacial_times_modifier # Mispelling breaking
 			remove_character_modifier = $AURA$_modifier_1
 			remove_character_modifier = $AURA$_modifier_2
 			remove_character_modifier = $AURA$_modifier_3
