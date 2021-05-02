@@ -25,22 +25,24 @@ ancient_magic_spellbook_events.001 = {
 	immediate = {
 		add_character_flag = am_spell_resolution
 		# Compatability Measure - Removes all old modifiers (Remove after Next update)
-		remove_all_character_modifier_instances = magic_haste_modifier
-		remove_all_character_modifier_instances = beguiling_aura_modifier
-		remove_all_character_modifier_instances = enchanting_aura_modifier
-		remove_all_character_modifier_instances = glimpse_the_future_modifier
-		remove_all_character_modifier_instances = finacial_times_modifier
-		remove_all_character_modifier_instances = celerity_modifier
-		remove_all_character_modifier_instances = slowness_modifier
-		remove_all_character_modifier_instances = mass_slowness_modifier
-		remove_all_character_modifier_instances = temporal_manipulation_modifier
-		remove_all_character_modifier_instances = flame_aura_modifier
-		remove_all_character_modifier_instances = flaming_weapons_modifier
-		remove_all_character_modifier_instances = living_earthworks_modifier
-		remove_all_character_modifier_instances = control_water_modifier
-		remove_all_character_modifier_instances = drought_modifier
-		remove_all_character_modifier_instances = elemental_warrior_modifier
-		remove_all_character_modifier_instances = aura_of_death_modifier
+		hidden_effect = {
+			remove_all_character_modifier_instances = magic_haste_modifier
+			remove_all_character_modifier_instances = beguiling_aura_modifier
+			remove_all_character_modifier_instances = enchanting_aura_modifier
+			remove_all_character_modifier_instances = glimpse_the_future_modifier
+			remove_all_character_modifier_instances = finacial_times_modifier
+			remove_all_character_modifier_instances = celerity_modifier
+			remove_all_character_modifier_instances = slowness_modifier
+			remove_all_character_modifier_instances = mass_slowness_modifier
+			remove_all_character_modifier_instances = temporal_manipulation_modifier
+			remove_all_character_modifier_instances = flame_aura_modifier
+			remove_all_character_modifier_instances = flaming_weapons_modifier
+			remove_all_character_modifier_instances = living_earthworks_modifier
+			remove_all_character_modifier_instances = control_water_modifier
+			remove_all_character_modifier_instances = drought_modifier
+			remove_all_character_modifier_instances = elemental_warrior_modifier
+			remove_all_character_modifier_instances = aura_of_death_modifier
+		}
 	}
 
 	option = {
