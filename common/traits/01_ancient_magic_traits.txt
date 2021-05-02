@@ -73,6 +73,67 @@ undead = {
 	general_opinion = -30
 	same_opinion = 30
 	dread_baseline_add = 10
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = this
+					OR = {
+						mage_potency > 0
+						mage_education > 0
+					}
+				}
+				desc = trait_liche
+			}
+			desc = trait_undead_fallback
+		}
+	}
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = this
+					OR = {
+						mage_potency > 0
+						mage_education > 0
+					}
+				}
+				desc = trait_liche_desc_scoped
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+					OR = {
+						mage_potency > 0
+						mage_education > 0
+					}
+				}
+				desc = trait_liche_desc_no_scope
+			}
+			triggered_desc = {
+				trigger = {
+					exists = this
+					NOR = {
+						mage_potency > 0
+						mage_education > 0
+					}
+				}
+				desc = trait_undead_desc_scoped
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+					NOR = {
+						mage_potency > 0
+						mage_education > 0
+					}
+				}
+				desc = trait_undead_desc_no_scope
+			}
+		}
+	}
 }
 deacon_of_death = {
 	index = 9008
