@@ -820,7 +820,7 @@ ancient_magic_spellbook_events.203 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = magic_haste_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = magic_haste } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -828,7 +828,7 @@ ancient_magic_spellbook_events.203 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = magic_haste_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = magic_haste } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -843,7 +843,7 @@ ancient_magic_spellbook_events.203 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = magic_haste_modifier
+						has_any_spell_aura_modifier = { AURA = magic_haste }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -862,13 +862,19 @@ ancient_magic_spellbook_events.203 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = magic_haste_modifier }
-			var:mana >= 100
-			var:mana_gen >= 15
+			NOT = { has_any_spell_aura_modifier = { AURA = magic_haste } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 15
+			}
 			has_perk = mass_celerity_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = magic_haste_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = magic_haste } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
@@ -880,10 +886,7 @@ ancient_magic_spellbook_events.203 = {
 
 		change_mana_gen = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = magic_haste_modifier
-		}
+		add_aura_modifier = { AURA = magic_haste }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -891,20 +894,12 @@ ancient_magic_spellbook_events.203 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = magic_haste_modifier
-			has_perk = mass_celerity_perk
-		}
-		show_as_unavailable = {
-			has_character_modifier = magic_haste_modifier
-			NOT = { has_perk = mass_celerity_perk }
+			has_any_spell_aura_modifier = { AURA = magic_haste }
 		}
 
 		change_mana_gen = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = magic_haste_modifier
-		}
+		remove_aura_modifier = { AURA = magic_haste }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -941,7 +936,7 @@ ancient_magic_spellbook_events.204 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = glimpse_the_future_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = glimpse_the_future } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -949,7 +944,7 @@ ancient_magic_spellbook_events.204 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = glimpse_the_future_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = glimpse_the_future } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -964,7 +959,7 @@ ancient_magic_spellbook_events.204 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = glimpse_the_future_modifier
+						has_any_spell_aura_modifier = { AURA = glimpse_the_future }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -983,13 +978,19 @@ ancient_magic_spellbook_events.204 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = glimpse_the_future_modifier }
-			var:mana >= 100
-			var:mana_gen >= 15
+			NOT = { has_any_spell_aura_modifier = { AURA = glimpse_the_future } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 15
+			}
 			has_perk = glimpse_the_future_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = glimpse_the_future_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = glimpse_the_future } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
@@ -1001,10 +1002,7 @@ ancient_magic_spellbook_events.204 = {
 
 		change_mana_gen = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = glimpse_the_future_modifier
-		}
+		add_aura_modifier = { AURA = glimpse_the_future }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1012,20 +1010,12 @@ ancient_magic_spellbook_events.204 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = glimpse_the_future_modifier
-			has_perk = glimpse_the_future_perk
-		}
-		show_as_unavailable = {
-			has_character_modifier = glimpse_the_future_modifier
-			NOT = { has_perk = glimpse_the_future_perk }
+			has_any_spell_aura_modifier = { AURA = glimpse_the_future }
 		}
 
 		change_mana_gen = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = glimpse_the_future_modifier
-		}
+		remove_aura_modifier = { AURA = glimpse_the_future }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1061,7 +1051,7 @@ ancient_magic_spellbook_events.205 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = finacial_times_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = financial_times } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -1069,7 +1059,7 @@ ancient_magic_spellbook_events.205 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = finacial_times_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = financial_times } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -1084,7 +1074,7 @@ ancient_magic_spellbook_events.205 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = finacial_times_modifier
+						has_any_spell_aura_modifier = { AURA = financial_times }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -1103,13 +1093,19 @@ ancient_magic_spellbook_events.205 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = finacial_times_modifier}
-			var:mana >= 100
-			var:mana_gen >= 15
+			NOT = { has_any_spell_aura_modifier = { AURA = financial_times }}
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 15
+			}
 			has_perk = finacial_times_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = finacial_times_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = financial_times } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
@@ -1121,10 +1117,7 @@ ancient_magic_spellbook_events.205 = {
 
 		change_mana_gen = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = finacial_times_modifier
-		}
+		add_aura_modifier = { AURA = financial_times }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1132,20 +1125,12 @@ ancient_magic_spellbook_events.205 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = finacial_times_modifier
-			has_perk = finacial_times_perk
-		}
-		show_as_unavailable = {
-			has_character_modifier = finacial_times_modifier
-			NOT = { has_perk = finacial_times_perk }
+			has_any_spell_aura_modifier = { AURA = financial_times }
 		}
 
 		change_mana_gen = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = finacial_times_modifier
-		}
+		remove_aura_modifier = { AURA = financial_times }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1181,7 +1166,7 @@ ancient_magic_spellbook_events.206 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = celerity_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = celerity } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -1189,7 +1174,7 @@ ancient_magic_spellbook_events.206 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = celerity_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = celerity } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -1204,7 +1189,7 @@ ancient_magic_spellbook_events.206 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = celerity_modifier
+						has_any_spell_aura_modifier = { AURA = celerity }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -1223,13 +1208,19 @@ ancient_magic_spellbook_events.206 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = celerity_modifier }
-			var:mana >= 100
-			var:mana_gen >= 15
+			NOT = { has_any_spell_aura_modifier = { AURA = celerity } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 15
+			}
 			has_perk = celerity_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = celerity_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = celerity } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
@@ -1241,10 +1232,7 @@ ancient_magic_spellbook_events.206 = {
 
 		change_mana_gen = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = celerity_modifier
-		}
+		add_aura_modifier = { AURA = celerity }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1252,20 +1240,12 @@ ancient_magic_spellbook_events.206 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = celerity_modifier
-			has_perk = celerity_perk
-		}
-		show_as_unavailable = {
-			has_character_modifier = celerity_modifier
-			NOT = { has_perk = celerity_perk }
+			has_any_spell_aura_modifier = { AURA = celerity }
 		}
 
 		change_mana_gen = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = celerity_modifier
-		}
+		remove_aura_modifier = { AURA = celerity }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1301,7 +1281,7 @@ ancient_magic_spellbook_events.207 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = slowness_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = slowness } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -1309,7 +1289,7 @@ ancient_magic_spellbook_events.207 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = slowness_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = slowness } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -1324,7 +1304,7 @@ ancient_magic_spellbook_events.207 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = slowness_modifier
+						has_any_spell_aura_modifier = { AURA = slowness }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -1343,13 +1323,19 @@ ancient_magic_spellbook_events.207 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = slowness_modifier }
-			var:mana >= 100
-			var:mana_gen >= 15
+			NOT = { has_any_spell_aura_modifier = { AURA = slowness } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 15
+			}
 			has_perk = slowness_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = slowness_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = slowness } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
@@ -1361,10 +1347,7 @@ ancient_magic_spellbook_events.207 = {
 
 		change_mana_gen = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = slowness_modifier
-		}
+		add_aura_modifier = { AURA = slowness }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1372,20 +1355,12 @@ ancient_magic_spellbook_events.207 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = slowness_modifier
-			has_perk = slowness_perk
-		}
-		show_as_unavailable = {
-			has_character_modifier = slowness_modifier
-			NOT = { has_perk = slowness_perk }
+			has_any_spell_aura_modifier = { AURA = slowness }
 		}
 
 		change_mana_gen = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = slowness_modifier
-		}
+		remove_aura_modifier = { AURA = slowness }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1421,7 +1396,7 @@ ancient_magic_spellbook_events.208 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = mass_slowness_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = mass_slowness } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -1429,7 +1404,7 @@ ancient_magic_spellbook_events.208 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = mass_slowness_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = mass_slowness } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -1444,7 +1419,7 @@ ancient_magic_spellbook_events.208 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = mass_slowness_modifier
+						has_any_spell_aura_modifier = { AURA = mass_slowness }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -1463,13 +1438,19 @@ ancient_magic_spellbook_events.208 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = mass_slowness_modifier }
-			var:mana >= 100
-			var:mana_gen >= 15
+			NOT = { has_any_spell_aura_modifier = { AURA = mass_slowness } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 15
+			}
 			has_perk = mass_slowness_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = mass_slowness_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = mass_slowness } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
@@ -1481,10 +1462,7 @@ ancient_magic_spellbook_events.208 = {
 
 		change_mana_gen = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = mass_slowness_modifier
-		}
+		add_aura_modifier = { AURA = mass_slowness }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1492,20 +1470,12 @@ ancient_magic_spellbook_events.208 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = mass_slowness_modifier
-			has_perk = mass_slowness_perk
-		}
-		show_as_unavailable = {
-			has_character_modifier = mass_slowness_modifier
-			NOT = { has_perk = mass_slowness_perk }
+			has_any_spell_aura_modifier = { AURA = mass_slowness }
 		}
 
 		change_mana_gen = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = mass_slowness_modifier
-		}
+		remove_aura_modifier = { AURA = mass_slowness}
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1541,7 +1511,7 @@ ancient_magic_spellbook_events.209 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = temporal_manipulation_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = temporal_manipulation } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -1549,7 +1519,7 @@ ancient_magic_spellbook_events.209 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 30
-					NOT = { has_character_modifier = temporal_manipulation_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = temporal_manipulation } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -1564,7 +1534,7 @@ ancient_magic_spellbook_events.209 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = temporal_manipulation_modifier
+						has_any_spell_aura_modifier = { AURA = temporal_manipulation }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -1583,13 +1553,19 @@ ancient_magic_spellbook_events.209 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = temporal_manipulation_modifier }
-			var:mana >= 100
-			var:mana_gen >= 30
+			NOT = { has_any_spell_aura_modifier = { AURA = temporal_manipulation } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 30
+			}
 			has_perk = temporal_manipulation_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = temporal_manipulation_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = temporal_manipulation } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 30
@@ -1601,10 +1577,7 @@ ancient_magic_spellbook_events.209 = {
 
 		change_mana_gen = { VALUE = -30 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = temporal_manipulation_modifier
-		}
+		add_aura_modifier = { AURA = temporal_manipulation }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1612,20 +1585,12 @@ ancient_magic_spellbook_events.209 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = temporal_manipulation_modifier
-			has_perk = temporal_manipulation_perk
-		}
-		show_as_unavailable = {
-			has_character_modifier = temporal_manipulation_modifier
-			NOT = { has_perk = temporal_manipulation_perk }
+			has_any_spell_aura_modifier = { AURA = temporal_manipulation }
 		}
 
 		change_mana_gen = { VALUE = 30 }
 
-		while = {
-			count = 100
-			remove_character_modifier = temporal_manipulation_modifier
-		}
+		remove_aura_modifier = { AURA = temporal_manipulation }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1882,7 +1847,10 @@ ancient_magic_spellbook_events.301 = {
 			scope:am_spell_target = {
 				am_has_minor_illness = yes
 			}
-			var:mana >= 50
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 50
+			}
 			has_perk = heal_perk
 		}
 		show_as_unavailable = {
@@ -1909,7 +1877,10 @@ ancient_magic_spellbook_events.301 = {
 			scope:am_spell_target = {
 				am_has_greater_illness = yes
 			}
-			var:mana >= 100
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
 			has_perk = greater_heal_perk
 		}
 		show_as_unavailable = {
@@ -1938,7 +1909,10 @@ ancient_magic_spellbook_events.301 = {
 				am_has_critical_illness = yes
 				NOT = { has_character_modifier = full_restoration_modifier }
 			}
-			var:mana >= 200
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 200
+			}
 			has_trait = avatar_of_life
 		}
 		show_as_unavailable = {
@@ -2178,7 +2152,10 @@ ancient_magic_spellbook_events.401 = {
 	option = {
 		name = ancient_magic_spellbook_events.401.a
 		trigger = {
-			var:mana >= 100
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
 			has_perk = golem_creation_perk
 			NOT = { has_character_modifier = golem_cooldown_modifier }
 		}
@@ -2214,7 +2191,10 @@ ancient_magic_spellbook_events.401 = {
 	option = {
 		name = ancient_magic_spellbook_events.401.b
 		trigger = {
-			var:mana >= 400
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 400
+			}
 			has_perk = lord_of_the_elements_perk
 			NOT = { has_character_modifier = lava_golem_cooldown_modifier }
 		}
@@ -2276,7 +2256,7 @@ ancient_magic_spellbook_events.402 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = flame_aura_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = flame_aura } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -2284,7 +2264,7 @@ ancient_magic_spellbook_events.402 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = flame_aura_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = flame_aura } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -2299,7 +2279,7 @@ ancient_magic_spellbook_events.402 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = flame_aura_modifier
+						has_any_spell_aura_modifier = { AURA = flame_aura }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -2315,13 +2295,19 @@ ancient_magic_spellbook_events.402 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = flame_aura_modifier }
-			var:mana >= 100
-			var:mana_gen >= 15
+			NOT = { has_any_spell_aura_modifier = { AURA = flame_aura } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 15
+			}
 			has_perk = flame_aura_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = flame_aura_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = flame_aura } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
@@ -2333,10 +2319,7 @@ ancient_magic_spellbook_events.402 = {
 
 		change_mana_gen = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = flame_aura_modifier
-		}
+		add_aura_modifier = { AURA = flame_aura }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2344,20 +2327,12 @@ ancient_magic_spellbook_events.402 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = flame_aura_modifier
-			has_perk = flame_aura_perk
-		}
-		show_as_unavailable = {
-			has_character_modifier = flame_aura_modifier
-			NOT = { has_perk = flame_aura_perk }
+			has_any_spell_aura_modifier = { AURA = flame_aura }
 		}
 
 		change_mana_gen = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = flame_aura_modifier
-		}
+		remove_aura_modifier = { AURA = flame_aura }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2393,7 +2368,7 @@ ancient_magic_spellbook_events.403 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = flame_aura_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = flaming_weapons } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -2401,7 +2376,7 @@ ancient_magic_spellbook_events.403 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = flame_aura_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = flaming_weapons } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -2416,7 +2391,7 @@ ancient_magic_spellbook_events.403 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = flame_aura_modifier
+						has_any_spell_aura_modifier = { AURA = flaming_weapons }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -2432,13 +2407,19 @@ ancient_magic_spellbook_events.403 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = flaming_weapons_modifier }
-			var:mana >= 100
-			var:mana_gen >= 15
+			NOT = { has_any_spell_aura_modifier = { AURA = flaming_weapons } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 15
+			}
 			has_perk = flaming_weapons_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = flaming_weapons_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = flaming_weapons } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
@@ -2450,10 +2431,7 @@ ancient_magic_spellbook_events.403 = {
 
 		change_mana_gen = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = flaming_weapons_modifier
-		}
+		add_aura_modifier = { AURA = flaming_weapons }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2461,20 +2439,12 @@ ancient_magic_spellbook_events.403 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = flaming_weapons_modifier
-			has_perk = flaming_weapons_perk
-		}
-		show_as_unavailable = {
-			has_character_modifier = flaming_weapons_modifier
-			NOT = { has_perk = flaming_weapons_perk }
+			has_any_spell_aura_modifier = { AURA = flaming_weapons }
 		}
 
 		change_mana_gen = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = flaming_weapons_modifier
-		}
+		remove_aura_modifier = { AURA = flaming_weapons }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2510,7 +2480,7 @@ ancient_magic_spellbook_events.404 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = living_earthworks_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = living_earthworks } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -2518,7 +2488,7 @@ ancient_magic_spellbook_events.404 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = living_earthworks_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = living_earthworks } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -2533,7 +2503,7 @@ ancient_magic_spellbook_events.404 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = living_earthworks_modifier
+						has_any_spell_aura_modifier = { AURA = living_earthworks }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -2549,13 +2519,19 @@ ancient_magic_spellbook_events.404 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = living_earthworks_modifier }
-			var:mana >= 100
-			var:mana_gen >= 15
+			NOT = { has_any_spell_aura_modifier = { AURA = living_earthworks } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 15
+			}
 			has_perk = living_earthworks_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = living_earthworks_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = living_earthworks } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
@@ -2567,10 +2543,7 @@ ancient_magic_spellbook_events.404 = {
 
 		change_mana_gen = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = living_earthworks_modifier
-		}
+		add_aura_modifier = { AURA = living_earthworks }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2578,20 +2551,12 @@ ancient_magic_spellbook_events.404 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = living_earthworks_modifier
-			has_perk = living_earthworks_perk
-		}
-		show_as_unavailable = {
-			has_character_modifier = living_earthworks_modifier
-			NOT = { has_perk = living_earthworks_perk }
+			has_any_spell_aura_modifier = { AURA = living_earthworks }
 		}
 
 		change_mana_gen = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = living_earthworks_modifier
-		}
+		remove_aura_modifier = { AURA = living_earthworks }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2627,7 +2592,7 @@ ancient_magic_spellbook_events.405 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = control_water_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = control_water } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -2635,7 +2600,7 @@ ancient_magic_spellbook_events.405 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = control_water_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = control_water } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -2650,7 +2615,7 @@ ancient_magic_spellbook_events.405 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = control_water_modifier
+						has_any_spell_aura_modifier = { AURA = control_water }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -2666,13 +2631,19 @@ ancient_magic_spellbook_events.405 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = control_water_modifier }
-			var:mana >= 100
-			var:mana_gen >= 15
+			NOT = { has_any_spell_aura_modifier = { AURA = control_water } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 15
+			}
 			has_perk = control_water_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = control_water_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = control_water } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
@@ -2684,10 +2655,7 @@ ancient_magic_spellbook_events.405 = {
 
 		change_mana_gen = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = control_water_modifier
-		}
+		add_aura_modifier = { AURA = control_water }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2695,20 +2663,12 @@ ancient_magic_spellbook_events.405 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = control_water_modifier
-			has_perk = control_water_perk
-		}
-		show_as_unavailable = {
-			has_character_modifier = control_water_modifier
-			NOT = { has_perk = control_water_perk }
+			has_any_spell_aura_modifier = { AURA = control_water }
 		}
 
 		change_mana_gen = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = control_water_modifier
-		}
+		remove_aura_modifier = { AURA = control_water }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2744,7 +2704,7 @@ ancient_magic_spellbook_events.406 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = drought_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = drought } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -2752,7 +2712,7 @@ ancient_magic_spellbook_events.406 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = drought_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = drought } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -2767,7 +2727,7 @@ ancient_magic_spellbook_events.406 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = drought_modifier
+						has_any_spell_aura_modifier = { AURA = drought }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -2783,13 +2743,19 @@ ancient_magic_spellbook_events.406 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = drought_modifier }
-			var:mana >= 100
-			var:mana_gen >= 15
+			NOT = { has_any_spell_aura_modifier = { AURA = drought } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 15
+			}
 			has_perk = drought_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = drought_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = drought } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
@@ -2801,10 +2767,7 @@ ancient_magic_spellbook_events.406 = {
 
 		change_mana_gen = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = drought_modifier
-		}
+		add_aura_modifier = { AURA = drought }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2812,20 +2775,12 @@ ancient_magic_spellbook_events.406 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = drought_modifier
-			has_perk = drought_perk
-		}
-		show_as_unavailable = {
-			has_character_modifier = drought_modifier
-			NOT = { has_perk = drought_perk }
+			has_any_spell_aura_modifier = { AURA = drought }
 		}
 
 		change_mana_gen = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = drought_modifier
-		}
+		remove_aura_modifier = { AURA = drought }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2861,7 +2816,7 @@ ancient_magic_spellbook_events.407 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = elemental_warrior_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = elemental_warrior } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -2869,7 +2824,7 @@ ancient_magic_spellbook_events.407 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 30
-					NOT = { has_character_modifier = elemental_warrior_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = elemental_warrior } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -2884,7 +2839,7 @@ ancient_magic_spellbook_events.407 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = elemental_warrior_modifier
+						has_any_spell_aura_modifier = { AURA = elemental_warrior }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -2900,13 +2855,19 @@ ancient_magic_spellbook_events.407 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = elemental_warrior_modifier }
-			var:mana >= 100
-			var:mana_gen >= 30
+			NOT = { has_any_spell_aura_modifier = { AURA = elemental_warrior } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 30
+			}
 			has_perk = elemental_warrior_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = elemental_warrior_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = elemental_warrior } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 30
@@ -2918,10 +2879,7 @@ ancient_magic_spellbook_events.407 = {
 
 		change_mana_gen = { VALUE = -30 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = elemental_warrior_modifier
-		}
+		add_aura_modifier = { AURA = elemental_warrior }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2929,23 +2887,12 @@ ancient_magic_spellbook_events.407 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = elemental_warrior_perk
-			has_character_modifier = elemental_warrior_modifier
-		}
-		show_as_unavailable = {
-			var:mana < 100
-			NOT = {
-				has_character_modifier = elemental_warrior_modifier
-			}
+			has_any_spell_aura_modifier = { AURA = elemental_warrior }
 		}
 
 		change_mana_gen = { VALUE = 30 }
 
-		while = {
-			count = 100
-			remove_character_modifier = elemental_warrior_modifier
-		}
+		remove_aura_modifier = { AURA = elemental_warrior }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -3123,7 +3070,10 @@ ancient_magic_spellbook_events.501 = {
 		trigger = {
 			scope:am_spell_target = scope:am_spell_caster
 			has_perk = necromancy_perk
-			var:mana >= 200
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 200
+			}
 			NOT = { has_character_modifier = undead_horde_cooldown_modifier }
 		}
 		show_as_unavailable = {
@@ -3161,7 +3111,10 @@ ancient_magic_spellbook_events.501 = {
 		name = ancient_magic_spellbook_events.501.b
 		trigger = {
 			has_perk = deacon_of_death_perk
-			var:mana >= 600
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 600
+			}
 			scope:am_spell_target = {
 				NOT = { has_trait = undead }
 			}
@@ -3279,7 +3232,10 @@ ancient_magic_spellbook_events.502 = {
 		trigger = {
 			NOT = { scope:am_spell_caster = scope:am_spell_target }
 			scope:am_spell_caster = {
-				var:mana >= 50
+				custom_description = {
+					text = enough_mana_trigger_desc
+					var:mana >= 50
+				}
 				has_perk = inflict_illness_perk
 			}
 			scope:am_spell_target = {
@@ -3315,7 +3271,10 @@ ancient_magic_spellbook_events.502 = {
 		trigger = {
 			NOT = { scope:am_spell_caster = scope:am_spell_target }
 			scope:am_spell_caster = {
-				var:mana >= 300
+				custom_description = {
+					text = enough_mana_trigger_desc
+					var:mana >= 300
+				}
 				has_perk = plague_lord_perk
 			}
 			scope:am_spell_target = {
@@ -3485,7 +3444,10 @@ ancient_magic_spellbook_events.503 = {
 		trigger = {
 			NOT = { scope:am_spell_caster = scope:am_spell_target }
 			scope:am_spell_caster = {
-				var:mana >= 200
+				custom_description = {
+					text = enough_mana_trigger_desc
+					var:mana >= 200
+				}
 				has_perk = drain_life_perk
 			}
 			scope:am_spell_target = {
@@ -3536,7 +3498,10 @@ ancient_magic_spellbook_events.503 = {
 		trigger = {
 			NOT = { scope:am_spell_caster = scope:am_spell_target }
 			scope:am_spell_caster = {
-				var:mana >= 600
+				custom_description = {
+					text = enough_mana_trigger_desc
+					var:mana >= 600
+				}
 				has_perk = death_stare_perk
 			}
 			scope:am_spell_target = {
@@ -3608,7 +3573,7 @@ ancient_magic_spellbook_events.504 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = aura_of_death_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = aura_of_death } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -3616,7 +3581,7 @@ ancient_magic_spellbook_events.504 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 30
-					NOT = { has_character_modifier = aura_of_death_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = aura_of_death } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -3631,7 +3596,7 @@ ancient_magic_spellbook_events.504 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = aura_of_death_modifier
+						has_any_spell_aura_modifier = { AURA = aura_of_death }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -3647,13 +3612,19 @@ ancient_magic_spellbook_events.504 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = aura_of_death_modifier }
-			var:mana >= 100
-			var:mana_gen >= 30
+			NOT = { has_any_spell_aura_modifier = { AURA = aura_of_death } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 30
+			}
 			has_perk = aura_of_death_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = aura_of_death_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = aura_of_death } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 30
@@ -3665,10 +3636,7 @@ ancient_magic_spellbook_events.504 = {
 
 		change_mana_gen = { VALUE = -30 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = aura_of_death_modifier
-		}
+		add_aura_modifier = { AURA = aura_of_death }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -3676,20 +3644,12 @@ ancient_magic_spellbook_events.504 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = aura_of_death_modifier
-			has_perk = aura_of_death_perk
-		}
-		show_as_unavailable = {
-			has_character_modifier = aura_of_death_modifier
-			NOT = { has_perk = aura_of_death_perk }
+			has_any_spell_aura_modifier = { AURA = aura_of_death }
 		}
 
 		change_mana_gen = { VALUE = 30 }
 
-		while = {
-			count = 100
-			remove_character_modifier = aura_of_death_modifier
-		}
+		remove_aura_modifier = { AURA = aura_of_death }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -4953,7 +4913,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.a.a
 		trigger = {
 			var:sculpt_page = 0
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				NOT = { has_trait = albino }
 			}
@@ -4987,7 +4950,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.a.b
 		trigger = {
 			var:sculpt_page = 0
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				has_trait = albino
 			}
@@ -5023,7 +4989,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.b.a
 		trigger = {
 			var:sculpt_page = 0
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				NOT = { has_trait = stuttering }
 			}
@@ -5057,7 +5026,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.b.b
 		trigger = {
 			var:sculpt_page = 0
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				has_trait = stuttering
 			}
@@ -5092,7 +5064,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.c.a
 		trigger = {
 			var:sculpt_page = 1
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				NOT = { has_trait = giant }
 				NOT = { has_trait = dwarf }
@@ -5132,7 +5107,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.c.b
 		trigger = {
 			var:sculpt_page = 1
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				has_trait = giant
 			}
@@ -5167,7 +5145,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.d.a
 		trigger = {
 			var:sculpt_page = 1
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				NOT = { has_trait = lisping }
 			}
@@ -5201,7 +5182,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.d.b
 		trigger = {
 			var:sculpt_page = 1
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				has_trait = lisping
 			}
@@ -5236,7 +5220,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.e.a
 		trigger = {
 			var:sculpt_page = 2
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				NOT = { has_trait = scaly }
 			}
@@ -5304,7 +5291,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.f.a
 		trigger = {
 			var:sculpt_page = 2
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				NOT = { has_trait = clubfooted }
 			}
@@ -5338,7 +5328,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.f.b
 		trigger = {
 			var:sculpt_page = 2
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				has_trait = clubfooted
 			}
@@ -5373,7 +5366,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.g.a
 		trigger = {
 			var:sculpt_page = 3
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				NOT = { has_trait = hunchbacked }
 			}
@@ -5441,7 +5437,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.h.a
 		trigger = {
 			var:sculpt_page = 3
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				NOT = { has_trait = dwarf }
 				NOT = { has_trait = giant }
@@ -5481,7 +5480,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.h.b
 		trigger = {
 			var:sculpt_page = 3
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				has_trait = dwarf
 			}
@@ -5516,7 +5518,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.i.a
 		trigger = {
 			var:sculpt_page = 4
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				NOT = { has_trait = strong }
 				NOT = { has_trait = weak }
@@ -5558,7 +5563,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.i.b
 		trigger = {
 			var:sculpt_page = 4
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				has_trait = strong
 			}
@@ -5593,7 +5601,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.j.a
 		trigger = {
 			var:sculpt_page = 4
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				NOT = { has_trait = weak }
 				NOT = { has_trait = strong }
@@ -5635,7 +5646,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.j.b
 		trigger = {
 			var:sculpt_page = 4
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				has_trait = weak
 			}
@@ -5670,7 +5684,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.k.a
 		trigger = {
 			var:sculpt_page = 4
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				NOT = { has_trait = blind }
 			}
@@ -5704,7 +5721,10 @@ ancient_magic_spellbook_events.604 = {
 		name = ancient_magic_spellbook_events.604.k.b
 		trigger = {
 			var:sculpt_page = 4
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			scope:am_spell_target = {
 				has_trait = blind
 			}
@@ -5942,7 +5962,10 @@ ancient_magic_spellbook_events.605 = {
 		name = ancient_magic_spellbook_events.605.a
 		trigger = {
 			scope:am_spell_caster = scope:am_spell_target
-			var:mana >= 100
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
 			has_perk = fertility_control_perk
 		}
 		show_as_unavailable = {
@@ -5970,7 +5993,10 @@ ancient_magic_spellbook_events.605 = {
 		name = ancient_magic_spellbook_events.605.b
 		trigger = {
 			scope:am_spell_caster = scope:am_spell_target
-			var:mana >= 100
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
 			has_perk = fertility_control_perk
 			OR = {
 				has_character_modifier = biomantic_infertility_modifier
@@ -6011,7 +6037,10 @@ ancient_magic_spellbook_events.605 = {
 		name = ancient_magic_spellbook_events.605.c
 		trigger = {
 			scope:am_spell_caster = scope:am_spell_target
-			var:mana >= 100
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
 			has_perk = fertility_control_perk
 		}
 		show_as_unavailable = {
@@ -6042,7 +6071,10 @@ ancient_magic_spellbook_events.605 = {
 		trigger = {
 			NOT = { scope:am_spell_caster = scope:am_spell_target }
 			scope:am_spell_caster = {
-				var:mana >= 300
+				custom_description = {
+					text = enough_mana_trigger_desc
+					var:mana >= 300
+				}
 				has_perk = impregnate_perk
 				#NOT = { has_trait = undead } - Design choice
 			}
@@ -6407,7 +6439,10 @@ ancient_magic_spellbook_events.701 = {
 		trigger = { 
 			has_character_flag = target_limbic_system
 			has_character_flag = target_companionship
-			var:mana >= 300
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 300
+			}
 			has_perk = incite_lust_perk
 			scope:am_spell_target = {
 				age >= 16
@@ -6445,7 +6480,10 @@ ancient_magic_spellbook_events.701 = {
 			has_character_flag = target_limbic_system
 			has_character_flag = target_companionship
 			scope:am_spell_caster = {
-				var:mana >= 400
+				custom_description = {
+					text = enough_mana_trigger_desc
+					var:mana >= 400
+				}
 				has_perk = friendship_perk
 			}
 			scope:am_spell_target = {
@@ -6484,7 +6522,10 @@ ancient_magic_spellbook_events.701 = {
 		trigger = {
 			has_character_flag = target_limbic_system
 			has_character_flag = target_companionship
-			var:mana >= 100
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
 			has_perk = entrance_perk
 			scope:am_spell_target = {
 				NOT = {
@@ -6532,7 +6573,10 @@ ancient_magic_spellbook_events.701 = {
 			has_character_flag = target_limbic_system
 			has_character_flag = target_aggression
 			scope:am_spell_caster = {
-				var:mana >= 400
+				custom_description = {
+					text = enough_mana_trigger_desc
+					var:mana >= 400
+				}
 				has_perk = friendship_perk
 			}
 			scope:am_spell_target = {
@@ -6571,7 +6615,10 @@ ancient_magic_spellbook_events.701 = {
 		trigger = {
 			has_character_flag = target_limbic_system
 			has_character_flag = target_aggression
-			var:mana >= 200
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 200
+			}
 			has_perk = incite_obedience_perk
 			NOR = {
 				has_hook_of_type = {
@@ -6656,7 +6703,10 @@ ancient_magic_spellbook_events.701 = {
 		trigger = {
 			scope:am_spell_caster = {
 				has_character_flag = target_cerebral_cortex
-				var:mana >= 400
+				custom_description = {
+					text = enough_mana_trigger_desc
+					var:mana >= 400
+				}
 				has_perk = dominate_perk
 				NOR = {
 					has_hook_of_type = {
@@ -6708,7 +6758,10 @@ ancient_magic_spellbook_events.701 = {
 		trigger = {
 			scope:am_spell_caster = {
 				has_character_flag = target_cerebral_cortex
-				var:mana >= 600
+				custom_description = {
+					text = enough_mana_trigger_desc
+					var:mana >= 6000
+				}
 				has_perk = master_of_puppets_perk
 				NOT = {
 					has_hook_of_type = {
@@ -6793,7 +6846,7 @@ ancient_magic_spellbook_events.702 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = beguiling_aura_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = beguiling_aura } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -6801,7 +6854,7 @@ ancient_magic_spellbook_events.702 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = beguiling_aura_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = beguiling_aura } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -6816,7 +6869,7 @@ ancient_magic_spellbook_events.702 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = beguiling_aura_modifier
+						has_any_spell_aura_modifier = { AURA = beguiling_aura }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -6832,13 +6885,19 @@ ancient_magic_spellbook_events.702 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = beguiling_aura_modifier }
-			var:mana >= 100
-			var:mana_gen >= 15
+			NOT = { has_any_spell_aura_modifier = { AURA = beguiling_aura } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 15
+			}
 			has_perk = beguiling_aura_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = beguiling_aura_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = beguiling_aura } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
@@ -6850,10 +6909,7 @@ ancient_magic_spellbook_events.702 = {
 
 		change_mana_gen = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = beguiling_aura_modifier
-		}
+		add_aura_modifier = { AURA = beguiling_aura }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -6861,23 +6917,15 @@ ancient_magic_spellbook_events.702 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
+			has_any_spell_aura_modifier = { AURA = beguiling_aura }
 			var:mana >= 100
+			var:mana_gen >= 15
 			has_perk = beguiling_aura_perk
-			has_character_modifier = beguiling_aura_modifier
-		}
-		show_as_unavailable = {
-			var:mana < 100
-			NOT = {
-				has_character_modifier = beguiling_aura_modifier
-			}
 		}
 
 		change_mana_gen = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = beguiling_aura_modifier
-		}
+		remove_aura_modifier = { AURA = beguiling_aura }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -6913,7 +6961,7 @@ ancient_magic_spellbook_events.703 = {
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = enchanting_aura_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = enchanting_aura } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -6921,7 +6969,7 @@ ancient_magic_spellbook_events.703 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = enchanting_aura_modifier }
+					NOT = { has_any_spell_aura_modifier = { AURA = enchanting_aura } }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -6936,7 +6984,7 @@ ancient_magic_spellbook_events.703 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = enchanting_aura_modifier
+						has_any_spell_aura_modifier = { AURA = enchanting_aura }
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -6952,13 +7000,19 @@ ancient_magic_spellbook_events.703 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = enchanting_aura_modifier }
-			var:mana >= 100
-			var:mana_gen >= 30
+			NOT = { has_any_spell_aura_modifier = { AURA = enchanting_aura } }
+			custom_description = {
+				text = enough_mana_trigger_desc
+				var:mana >= 100
+			}
+			custom_description = {
+				text = enough_mana_gen_trigger_desc
+				var:mana_gen >= 30
+			}
 			has_perk = enchanting_aura_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = enchanting_aura_modifier }
+			NOT = { has_any_spell_aura_modifier = { AURA = enchanting_aura } }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 30
@@ -6970,10 +7024,7 @@ ancient_magic_spellbook_events.703 = {
 
 		change_mana_gen = { VALUE = -30 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = enchanting_aura_modifier
-		}
+		add_aura_modifier = { AURA = enchanting_aura }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -6981,23 +7032,12 @@ ancient_magic_spellbook_events.703 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			var:mana >= 100
-			has_perk = enchanting_aura_perk
-			has_character_modifier = enchanting_aura_modifier
-		}
-		show_as_unavailable = {
-			var:mana < 100
-			NOT = {
-				has_character_modifier = enchanting_aura_modifier
-			}
+			has_any_spell_aura_modifier = { AURA = enchanting_aura }
 		}
 
 		change_mana_gen = { VALUE = 30 }
 
-		while = {
-			count = 100
-			remove_character_modifier = enchanting_aura_modifier
-		}
+		remove_aura_modifier = { AURA = enchanting_aura }
 
 		remove_character_flag = am_spell_resolution
 	}

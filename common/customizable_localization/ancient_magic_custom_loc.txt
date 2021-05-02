@@ -177,7 +177,7 @@ HasteManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_15_GREEN
         trigger = {
-            has_character_modifier = magic_haste_modifier
+            has_any_spell_aura_modifier = { AURA = magic_haste }
         }
     }
     text = {
@@ -192,7 +192,7 @@ HasteActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = magic_haste_modifier
+            has_any_spell_aura_modifier = { AURA = magic_haste }
         }
     }
     text = {
@@ -207,7 +207,7 @@ GlimpseManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_15_GREEN
         trigger = {
-            has_character_modifier = glimpse_the_future_modifier
+            has_any_spell_aura_modifier = { AURA = glimpse_the_future }
         }
     }
     text = {
@@ -222,7 +222,7 @@ GlimpseActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = glimpse_the_future_modifier
+            has_any_spell_aura_modifier = { AURA = glimpse_the_future }
         }
     }
     text = {
@@ -238,7 +238,7 @@ TimesManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_15_GREEN
         trigger = {
-            has_character_modifier = finacial_times_modifier
+            has_any_spell_aura_modifier = { AURA = financial_times }
         }
     }
     text = {
@@ -253,7 +253,7 @@ TimesActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = finacial_times_modifier
+            has_any_spell_aura_modifier = { AURA = financial_times }
         }
     }
     text = {
@@ -268,7 +268,7 @@ CelerityManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_15_GREEN
         trigger = {
-            has_character_modifier = celerity_modifier
+            has_any_spell_aura_modifier = { AURA = celerity }
         }
     }
     text = {
@@ -283,7 +283,7 @@ CelerityActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = celerity_modifier
+            has_any_spell_aura_modifier = { AURA = celerity }
         }
     }
     text = {
@@ -298,7 +298,7 @@ SlownessManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_15_GREEN
         trigger = {
-            has_character_modifier = slowness_modifier
+            has_any_spell_aura_modifier = { AURA = slowness }
         }
     }
     text = {
@@ -313,7 +313,7 @@ SlownessActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = slowness_modifier
+            has_any_spell_aura_modifier = { AURA = slowness }
         }
     }
     text = {
@@ -328,7 +328,7 @@ MassSlownessManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_15_GREEN
         trigger = {
-            has_character_modifier = mass_slowness_modifier
+            has_any_spell_aura_modifier = { AURA = mass_slowness }
         }
     }
     text = {
@@ -343,7 +343,7 @@ MassSlownessActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = mass_slowness_modifier
+            has_any_spell_aura_modifier = { AURA = mass_slowness }
         }
     }
     text = {
@@ -358,7 +358,7 @@ TemporalManipulationManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_30_GREEN
         trigger = {
-            has_character_modifier = temporal_manipulation_modifier
+            has_any_spell_aura_modifier = { AURA = temporal_manipulation }
         }
     }
     text = {
@@ -373,7 +373,7 @@ TemporalManipulationActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = temporal_manipulation_modifier
+            has_any_spell_aura_modifier = { AURA = temporal_manipulation }
         }
     }
     text = {
@@ -388,7 +388,7 @@ FlameAuraManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_15_GREEN
         trigger = {
-            has_character_modifier = flame_aura_modifier
+            has_any_spell_aura_modifier = { AURA = flame_aura }
         }
     }
     text = {
@@ -403,7 +403,7 @@ FlameAuraActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = flame_aura_modifier
+            has_any_spell_aura_modifier = { AURA = flame_aura }
         }
     }
     text = {
@@ -418,7 +418,7 @@ FlamingWeaponsManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_15_GREEN
         trigger = {
-            has_character_modifier = flaming_weapons_modifier
+            has_any_spell_aura_modifier = { AURA = flaming_weapons }
         }
     }
     text = {
@@ -433,7 +433,7 @@ FlamingWeaponsActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = flaming_weapons_modifier
+            has_any_spell_aura_modifier = { AURA = flaming_weapons }
         }
     }
     text = {
@@ -448,7 +448,7 @@ LivingEarthworksManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_15_GREEN
         trigger = {
-            has_character_modifier = living_earthworks_modifier
+            has_any_spell_aura_modifier = { AURA = living_earthworks }
         }
     }
     text = {
@@ -463,7 +463,7 @@ LivingEarthworksActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = living_earthworks_modifier
+            has_any_spell_aura_modifier = { AURA = living_earthworks }
         }
     }
     text = {
@@ -478,7 +478,7 @@ ControlWaterManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_15_GREEN
         trigger = {
-            has_character_modifier = control_water_modifier
+            has_any_spell_aura_modifier = { AURA = control_water }
         }
     }
     text = {
@@ -493,7 +493,7 @@ ControlWaterActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = control_water_modifier
+            has_any_spell_aura_modifier = { AURA = control_water }
         }
     }
     text = {
@@ -508,7 +508,7 @@ DroughtManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_15_GREEN
         trigger = {
-            has_character_modifier = drought_modifier
+            has_any_spell_aura_modifier = { AURA = drought }
         }
     }
     text = {
@@ -523,7 +523,7 @@ DroughtActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = drought_modifier
+            has_any_spell_aura_modifier = { AURA = drought }
         }
     }
     text = {
@@ -538,7 +538,7 @@ CloakOfElementsManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_30_GREEN
         trigger = {
-            has_character_modifier = elemental_warrior_modifier
+            has_any_spell_aura_modifier = { AURA = elemental_warrior }
         }
     }
     text = {
@@ -553,11 +553,26 @@ CloakOfElementsActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = elemental_warrior_modifier
+            has_any_spell_aura_modifier = { AURA = elemental_warrior }
         }
     }
     text = {
         localization_key = AURA_INACTIVE
+        fallback = yes
+    }
+}
+
+AuraOfDeathManaDrainGreenRed = {
+    type = character
+
+    text = {
+        localization_key = MANA_DRAIN_30_GREEN
+        trigger = {
+            has_any_spell_aura_modifier = { AURA = aura_of_death }
+        }
+    }
+    text = {
+        localization_key = MANA_DRAIN_30_RED
         fallback = yes
     }
 }
@@ -568,11 +583,26 @@ AuraOfDeathActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = aura_of_death_modifier
+            has_any_spell_aura_modifier = { AURA = aura_of_death }
         }
     }
     text = {
         localization_key = AURA_INACTIVE
+        fallback = yes
+    }
+}
+
+AuraOfMajestyManaDrainGreenRed = {
+    type = character
+
+    text = {
+        localization_key = MANA_DRAIN_15_GREEN
+        trigger = {
+            has_any_spell_aura_modifier = { AURA = beguiling_aura }
+        }
+    }
+    text = {
+        localization_key = MANA_DRAIN_15_RED
         fallback = yes
     }
 }
@@ -583,11 +613,26 @@ AuraOfMajestyActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = beguiling_aura_modifier
+            has_any_spell_aura_modifier = { AURA = beguiling_aura }
         }
     }
     text = {
         localization_key = AURA_INACTIVE
+        fallback = yes
+    }
+}
+
+AuraOfTruthManaDrainGreenRed = {
+    type = character
+
+    text = {
+        localization_key = MANA_DRAIN_15_GREEN
+        trigger = {
+            has_any_spell_aura_modifier = { AURA = enchanting_aura }
+        }
+    }
+    text = {
+        localization_key = MANA_DRAIN_15_RED
         fallback = yes
     }
 }
@@ -598,7 +643,7 @@ AuraOfTruthActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = enchanting_aura_modifier
+            has_any_spell_aura_modifier = { AURA = enchanting_aura }
         }
     }
     text = {

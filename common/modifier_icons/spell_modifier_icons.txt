@@ -1,0 +1,90 @@
+﻿#example = {
+#	positive = "gfx/interface/icons/example_positive.dds" # Will be used if >= 0 or if `negative` isn't set
+#	negative = "gfx/interface/icons/example_negative.dds" # Will be used if < 0 (optional)
+#	default = yes # The first one in the file with this flag will be used as default
+#}
+
+default = {
+	positive = "gfx/interface/icons/modifiers/_default.dds"
+	default = yes
+}
+
+haste = {
+    positive = "gfx/interface/icons/modifiers/haste_positive.dds"
+    negative = "gfx/interface/icons/modifiers/haste_negative.dds"
+}
+
+beguiling_aura = {
+    positive = "gfx/interface/icons/modifiers/beguiling_aura_positive.dds"
+    negative = "gfx/interface/icons/modifiers/beguiling_aura_negative.dds"
+}
+
+enchanting_aura = {
+    positive = "gfx/interface/icons/modifiers/enchanting_aura_positive.dds"
+    negative = "gfx/interface/icons/modifiers/enchanting_aura_negative.dds"
+}
+
+glimpse_the_future = {
+    positive = "gfx/interface/icons/modifiers/glimpse_the_future_positive.dds"
+    negative = "gfx/interface/icons/modifiers/glimpse_the_future_negative.dds"
+}
+
+financial_times = {
+    positive = "gfx/interface/icons/modifiers/financial_times_positive.dds"
+    negative = "gfx/interface/icons/modifiers/financial_times_negative.dds"
+}
+
+celerity = {
+    positive = "gfx/interface/icons/modifiers/celerity_positive.dds"
+    negative = "gfx/interface/icons/modifiers/celerity_negative.dds"
+}
+
+slowness = {
+    positive = "gfx/interface/icons/modifiers/slowness_positive.dds"
+    negative = "gfx/interface/icons/modifiers/slowness_negative.dds"
+}
+
+mass_slowness = {
+    positive = "gfx/interface/icons/modifiers/mass_slowness_positive.dds"
+    negative = "gfx/interface/icons/modifiers/mass_slowness_negative.dds"
+}
+
+temporal_manipulation = {
+    positive = "gfx/interface/icons/modifiers/temporal_manipulation_positive.dds"
+    negative = "gfx/interface/icons/modifiers/temporal_manipulation_negative.dds"
+}
+
+flame_aura = {
+    positive = "gfx/interface/icons/modifiers/flame_aura_positive.dds"
+    negative = "gfx/interface/icons/modifiers/flame_aura_negative.dds"
+}
+
+flaming_weapons = {
+    positive = "gfx/interface/icons/modifiers/flaming_weapons_positive.dds"
+    negative = "gfx/interface/icons/modifiers/flaming_weapons_negative.dds"
+}
+
+living_earthworks = {
+    positive = "gfx/interface/icons/modifiers/living_earthworks_positive.dds"
+    negative = "gfx/interface/icons/modifiers/living_earthworks_negative.dds"
+}
+
+control_water = {
+    positive = "gfx/interface/icons/modifiers/control_water_positive.dds"
+    negative = "gfx/interface/icons/modifiers/control_water_negative.dds"
+}
+
+drought = {
+    positive = "gfx/interface/icons/modifiers/drought_positive.dds"
+    negative = "gfx/interface/icons/modifiers/drought_negative.dds"
+}
+
+elemental_warrior = {
+    positive = "gfx/interface/icons/modifiers/elemental_warrior_positive.dds"
+    negative = "gfx/interface/icons/modifiers/elemental_warrior_negative.dds"
+}
+
+aura_of_death = {
+    positive = "gfx/interface/icons/modifiers/aura_of_death_positive.dds"
+    negative = "gfx/interface/icons/modifiers/aura_of_death_negative.dds"
+}

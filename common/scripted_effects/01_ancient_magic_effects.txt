@@ -243,3 +243,202 @@ add_drained_modifier_scope_work_around = {
 		years = $YEARS$
 	}
 }
+
+remove_aura_modifier = {
+	if = {
+		limit = {
+			has_any_spell_aura_modifier = { AURA = $AURA$ }
+		}
+		custom_description = {
+			text = remove_aura_modifier_effect_desc
+			remove_all_character_modifier_instances = $AURA$_modifier
+			remove_all_character_modifier_instances = finacial_times_modifier # Mispelling breaking
+			remove_character_modifier = $AURA$_modifier_1
+			remove_character_modifier = $AURA$_modifier_2
+			remove_character_modifier = $AURA$_modifier_3
+			remove_character_modifier = $AURA$_modifier_4
+			remove_character_modifier = $AURA$_modifier_5
+			remove_character_modifier = $AURA$_modifier_6
+			remove_character_modifier = $AURA$_modifier_7
+			remove_character_modifier = $AURA$_modifier_8
+			remove_character_modifier = $AURA$_modifier_9
+			remove_character_modifier = $AURA$_modifier_10
+			remove_character_modifier = $AURA$_modifier_11
+			remove_character_modifier = $AURA$_modifier_12
+			remove_character_modifier = $AURA$_modifier_13
+			remove_character_modifier = $AURA$_modifier_14
+			remove_character_modifier = $AURA$_modifier_15
+			remove_character_modifier = $AURA$_modifier_16
+			remove_character_modifier = $AURA$_modifier_17
+			remove_character_modifier = $AURA$_modifier_18
+			remove_character_modifier = $AURA$_modifier_19
+			remove_character_modifier = $AURA$_modifier_20
+		}
+	}
+	else = {
+		hidden_effect = yes
+		remove_all_character_modifier_instances = $AURA$_modifier
+		remove_character_modifier = $AURA$_modifier_1
+		remove_character_modifier = $AURA$_modifier_2
+		remove_character_modifier = $AURA$_modifier_3
+		remove_character_modifier = $AURA$_modifier_4
+		remove_character_modifier = $AURA$_modifier_5
+		remove_character_modifier = $AURA$_modifier_6
+		remove_character_modifier = $AURA$_modifier_7
+		remove_character_modifier = $AURA$_modifier_8
+		remove_character_modifier = $AURA$_modifier_9
+		remove_character_modifier = $AURA$_modifier_10
+		remove_character_modifier = $AURA$_modifier_11
+		remove_character_modifier = $AURA$_modifier_12
+		remove_character_modifier = $AURA$_modifier_13
+		remove_character_modifier = $AURA$_modifier_14
+		remove_character_modifier = $AURA$_modifier_15
+		remove_character_modifier = $AURA$_modifier_16
+		remove_character_modifier = $AURA$_modifier_17
+		remove_character_modifier = $AURA$_modifier_18
+		remove_character_modifier = $AURA$_modifier_19
+		remove_character_modifier = $AURA$_modifier_20
+	}
+}
+# AURA List:
+# magic_haste, beguiling_aura, enchanting_aura, glimpse_the_future, financial_times,
+# celerity, slowness, mass_slowness, temporal_manipulation, flame_aura, flaming_weapons,
+# living_earthworks, control_water, drought, elemental_warrior, aura_of_death
+#
+# Level is a value between 1-20 (Usually equivalent to mage_level value)
+
+add_aura_modifier = {
+	remove_aura_modifier = { AURA = $AURA$ }
+	if = {
+		limit = {
+			mage_level < 1 # Here in case of some funkiness with mage_level
+		}
+		add_character_modifier = $AURA$_modifier_1
+	}
+	else_if = {
+		limit = {
+			mage_level = 1
+		}
+		add_character_modifier = $AURA$_modifier_1
+	}
+	else_if = {
+		limit = {
+			mage_level = 2
+		}
+		add_character_modifier = $AURA$_modifier_2
+	}
+	else_if = {
+		limit = {
+			mage_level = 3
+		}
+		add_character_modifier = $AURA$_modifier_3
+	}
+	else_if = {
+		limit = {
+			mage_level = 4
+		}
+		add_character_modifier = $AURA$_modifier_4
+	}
+	else_if = {
+		limit = {
+			mage_level = 5
+		}
+		add_character_modifier = $AURA$_modifier_5
+	}
+	else_if = {
+		limit = {
+			mage_level = 6
+		}
+		add_character_modifier = $AURA$_modifier_6
+	}
+	else_if = {
+		limit = {
+			mage_level = 7
+		}
+		add_character_modifier = $AURA$_modifier_7
+	}
+	else_if = {
+		limit = {
+			mage_level = 8
+		}
+		add_character_modifier = $AURA$_modifier_8
+	}
+	else_if = {
+		limit = {
+			mage_level = 9
+		}
+		add_character_modifier = $AURA$_modifier_9
+	}
+	else_if = {
+		limit = {
+			mage_level = 10
+		}
+		add_character_modifier = $AURA$_modifier_10
+	}
+	else_if = {
+		limit = {
+			mage_level = 11
+		}
+		add_character_modifier = $AURA$_modifier_11
+	}
+	else_if = {
+		limit = {
+			mage_level = 12
+		}
+		add_character_modifier = $AURA$_modifier_12
+	}
+	else_if = {
+		limit = {
+			mage_level = 13
+		}
+		add_character_modifier = $AURA$_modifier_13
+	}
+	else_if = {
+		limit = {
+			mage_level = 14
+		}
+		add_character_modifier = $AURA$_modifier_14
+	}
+	else_if = {
+		limit = {
+			mage_level = 15
+		}
+		add_character_modifier = $AURA$_modifier_15
+	}
+	else_if = {
+		limit = {
+			mage_level = 16
+		}
+		add_character_modifier = $AURA$_modifier_16
+	}
+	else_if = {
+		limit = {
+			mage_level = 17
+		}
+		add_character_modifier = $AURA$_modifier_17
+	}
+	else_if = {
+		limit = {
+			mage_level = 18
+		}
+		add_character_modifier = $AURA$_modifier_18
+	}
+	else_if = {
+		limit = {
+			mage_level = 19
+		}
+		add_character_modifier = $AURA$_modifier_19
+	}
+	else_if = {
+		limit = {
+			mage_level = 20
+		}
+		add_character_modifier = $AURA$_modifier_20
+	}
+	else_if = {
+		limit = {
+			mage_level > 20 # Here in case of some funkiness with mage_level
+		}
+		add_character_modifier = $AURA$_modifier_20
+	}
+}

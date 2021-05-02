@@ -1,7 +1,124 @@
-﻿magic_haste_modifier = {
-	icon = martial_positive
+﻿# Legacy ##################################
+# Remove after an update or two and update the modifier update event (Currently removes these)
+# These are here to prevent a graphical error for players that have
+# These auras active.
+magic_haste_modifier = {icon = magic_negative}
+beguiling_aura_modifier = {icon = magic_negative}
+enchanting_aura_modifier = {icon = magic_negative}
+glimpse_the_future_modifier = {icon = magic_negative}
+finacial_times_modifier = {icon = magic_negative}
+celerity_modifier = {icon = magic_negative}
+slowness_modifier = {icon = magic_negative}
+mass_slowness_modifier = {icon = magic_negative}
+temporal_manipulation_modifier = {icon = magic_negative}
+flame_aura_modifier = {icon = magic_negative}
+flaming_weapons_modifier = {icon = magic_negative}
+living_earthworks_modifier = {icon = magic_negative}
+control_water_modifier = {icon = magic_negative}
+drought_modifier = {icon = magic_negative}
+elemental_warrior_modifier = {icon = magic_negative}
+aura_of_death_modifier = {icon = magic_negative}
+
+# Haste ###################################
+magic_haste_modifier_1 = {
+	icon = haste_positive
 	movement_speed = 0.3
-	stacking = yes
+	#stacking = yes
+}
+magic_haste_modifier_2 = {
+	icon = haste_positive
+	movement_speed = 0.6
+	#stacking = yes
+}
+magic_haste_modifier_3 = {
+	icon = haste_positive
+	movement_speed = 0.9
+	#stacking = yes
+}
+magic_haste_modifier_4 = {
+	icon = haste_positive
+	movement_speed = 1.2
+	#stacking = yes
+}
+magic_haste_modifier_5 = {
+	icon = haste_positive
+	movement_speed = 1.5
+	#stacking = yes
+}
+magic_haste_modifier_6 = {
+	icon = haste_positive
+	movement_speed = 1.8
+	#stacking = yes
+}
+magic_haste_modifier_7 = {
+	icon = haste_positive
+	movement_speed = 2.1
+	#stacking = yes
+}
+magic_haste_modifier_8 = {
+	icon = haste_positive
+	movement_speed = 2.4
+	#stacking = yes
+}
+magic_haste_modifier_9 = {
+	icon = haste_positive
+	movement_speed = 2.7
+	#stacking = yes
+}
+magic_haste_modifier_10 = {
+	icon = haste_positive
+	movement_speed = 3
+	#stacking = yes
+}
+magic_haste_modifier_11 = {
+	icon = haste_positive
+	movement_speed = 3.3
+	#stacking = yes
+}
+magic_haste_modifier_12 = {
+	icon = haste_positive
+	movement_speed = 3.6
+	#stacking = yes
+}
+magic_haste_modifier_13 = {
+	icon = haste_positive
+	movement_speed = 3.9
+	#stacking = yes
+}
+magic_haste_modifier_14 = {
+	icon = haste_positive
+	movement_speed = 4.2
+	#stacking = yes
+}
+magic_haste_modifier_15 = {
+	icon = haste_positive
+	movement_speed = 4.5
+	#stacking = yes
+}
+magic_haste_modifier_16 = {
+	icon = haste_positive
+	movement_speed = 4.8
+	#stacking = yes
+}
+magic_haste_modifier_17 = {
+	icon = haste_positive
+	movement_speed = 5.1
+	#stacking = yes
+}
+magic_haste_modifier_18 = {
+	icon = haste_positive
+	movement_speed = 5.4
+	#stacking = yes
+}
+magic_haste_modifier_19 = {
+	icon = haste_positive
+	movement_speed = 5.7
+	#stacking = yes
+}
+magic_haste_modifier_20 = {
+	icon = haste_positive
+	movement_speed = 6
+	#stacking = yes
 }
 
 golem_cooldown_modifier = {
@@ -36,99 +153,1654 @@ biomantic_infertility_modifier = {
 	fertility = -10
 }
 
-beguiling_aura_modifier = {
-	icon = martial_positive
+# Beguiling Aura ##################################
+beguiling_aura_modifier_1 = {
+	icon = beguiling_aura_positive
 	general_opinion = 3
-	stacking = yes
+	#stacking = yes
+}
+beguiling_aura_modifier_2 = {
+	icon = beguiling_aura_positive
+	general_opinion = 6
+	#stacking = yes
+}
+beguiling_aura_modifier_3 = {
+	icon = beguiling_aura_positive
+	general_opinion = 9
+	#stacking = yes
+}
+beguiling_aura_modifier_4 = {
+	icon = beguiling_aura_positive
+	general_opinion = 12
+	#stacking = yes
+}
+beguiling_aura_modifier_5 = {
+	icon = beguiling_aura_positive
+	general_opinion = 15
+	#stacking = yes
+}
+beguiling_aura_modifier_6 = {
+	icon = beguiling_aura_positive
+	general_opinion = 18
+	#stacking = yes
+}
+beguiling_aura_modifier_7 = {
+	icon = beguiling_aura_positive
+	general_opinion = 21
+	#stacking = yes
+}
+beguiling_aura_modifier_8 = {
+	icon = beguiling_aura_positive
+	general_opinion = 24
+	#stacking = yes
+}
+beguiling_aura_modifier_9 = {
+	icon = beguiling_aura_positive
+	general_opinion = 27
+	#stacking = yes
+}
+beguiling_aura_modifier_10 = {
+	icon = beguiling_aura_positive
+	general_opinion = 30
+	#stacking = yes
+}
+beguiling_aura_modifier_11 = {
+	icon = beguiling_aura_positive
+	general_opinion = 33
+	#stacking = yes
+}
+beguiling_aura_modifier_12 = {
+	icon = beguiling_aura_positive
+	general_opinion = 36
+	#stacking = yes
+}
+beguiling_aura_modifier_13 = {
+	icon = beguiling_aura_positive
+	general_opinion = 39
+	#stacking = yes
+}
+beguiling_aura_modifier_14 = {
+	icon = beguiling_aura_positive
+	general_opinion = 42
+	#stacking = yes
+}
+beguiling_aura_modifier_15 = {
+	icon = beguiling_aura_positive
+	general_opinion = 45
+	#stacking = yes
+}
+beguiling_aura_modifier_16 = {
+	icon = beguiling_aura_positive
+	general_opinion = 48
+	#stacking = yes
+}
+beguiling_aura_modifier_17 = {
+	icon = beguiling_aura_positive
+	general_opinion = 51
+	#stacking = yes
+}
+beguiling_aura_modifier_18 = {
+	icon = beguiling_aura_positive
+	general_opinion = 54
+	#stacking = yes
+}
+beguiling_aura_modifier_19 = {
+	icon = beguiling_aura_positive
+	general_opinion = 57
+	#stacking = yes
+}
+beguiling_aura_modifier_20 = {
+	icon = beguiling_aura_positive
+	general_opinion = 60
+	#stacking = yes
 }
 
-enchanting_aura_modifier = {
-	icon = martial_positive
+
+# Enchanting Aura ##########################
+enchanting_aura_modifier_1 = {
+	icon = enchanting_aura_positive
 	hostile_scheme_resistance_mult = 0.05
-	stacking = yes
+	#stacking = yes
+}
+enchanting_aura_modifier_2 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.1
+	#stacking = yes
+}
+enchanting_aura_modifier_3 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.15
+	#stacking = yes
+}
+enchanting_aura_modifier_4 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.2
+	#stacking = yes
+}
+enchanting_aura_modifier_5 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.25
+	#stacking = yes
+}
+enchanting_aura_modifier_6 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.3
+	#stacking = yes
+}
+enchanting_aura_modifier_7 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.35
+	#stacking = yes
+}
+enchanting_aura_modifier_8 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.4
+	#stacking = yes
+}
+enchanting_aura_modifier_9 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.45
+	#stacking = yes
+}
+enchanting_aura_modifier_10 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.5
+	#stacking = yes
+}
+enchanting_aura_modifier_11 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.55
+	#stacking = yes
+}
+enchanting_aura_modifier_12 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.6
+	#stacking = yes
+}
+enchanting_aura_modifier_13 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.65
+	#stacking = yes
+}
+enchanting_aura_modifier_14 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.7
+	#stacking = yes
+}
+enchanting_aura_modifier_15 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.75
+	#stacking = yes
+}
+enchanting_aura_modifier_16 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.8
+	#stacking = yes
+}
+enchanting_aura_modifier_17 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.85
+	#stacking = yes
+}
+enchanting_aura_modifier_18 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.9
+	#stacking = yes
+}
+enchanting_aura_modifier_19 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 0.95
+	#stacking = yes
+}
+enchanting_aura_modifier_20 = {
+	icon = enchanting_aura_positive
+	hostile_scheme_resistance_mult = 1
+	#stacking = yes
 }
 
-glimpse_the_future_modifier = {
-	icon = martial_positive
+# Glimpse The Future ###################################
+glimpse_the_future_modifier_1 = {
+	icon = glimpse_the_future_positive
 	cultural_head_fascination_mult = 0.2
-	stacking = yes
+	#stacking = yes
+}
+glimpse_the_future_modifier_2 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 0.4
+	#stacking = yes
+}
+glimpse_the_future_modifier_3 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 0.6
+	#stacking = yes
+}
+glimpse_the_future_modifier_4 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 0.8
+	#stacking = yes
+}
+glimpse_the_future_modifier_5 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 1
+	#stacking = yes
+}
+glimpse_the_future_modifier_6 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 1.2
+	#stacking = yes
+}
+glimpse_the_future_modifier_7 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 1.4
+	#stacking = yes
+}
+glimpse_the_future_modifier_8 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 1.6
+	#stacking = yes
+}
+glimpse_the_future_modifier_9 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 1.8
+	#stacking = yes
+}
+glimpse_the_future_modifier_10 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 2
+	#stacking = yes
+}
+glimpse_the_future_modifier_11 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 2.2
+	#stacking = yes
+}
+glimpse_the_future_modifier_12 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 2.4
+	#stacking = yes
+}
+glimpse_the_future_modifier_13 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 2.6
+	#stacking = yes
+}
+glimpse_the_future_modifier_14 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 2.8
+	#stacking = yes
+}
+glimpse_the_future_modifier_15 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 3
+	#stacking = yes
+}
+glimpse_the_future_modifier_16 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 3.2
+	#stacking = yes
+}
+glimpse_the_future_modifier_17 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 3.4
+	#stacking = yes
+}
+glimpse_the_future_modifier_18 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 3.6
+	#stacking = yes
+}
+glimpse_the_future_modifier_19 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 3.8
+	#stacking = yes
+}
+glimpse_the_future_modifier_20 = {
+	icon = glimpse_the_future_positive
+	cultural_head_fascination_mult = 4
+	#stacking = yes
 }
 
-finacial_times_modifier = {
-	icon = martial_positive
+# Financial Times ######################################
+financial_times_modifier_1 = {
+	icon = financial_times_positive
 	monthly_income_mult = 0.1
-	stacking = yes
+	#stacking = yes
+}
+financial_times_modifier_2 = {
+	icon = financial_times_positive
+	monthly_income_mult = 0.2
+	#stacking = yes
+}
+financial_times_modifier_3 = {
+	icon = financial_times_positive
+	monthly_income_mult = 0.3
+	#stacking = yes
+}
+financial_times_modifier_4 = {
+	icon = financial_times_positive
+	monthly_income_mult = 0.4
+	#stacking = yes
+}
+financial_times_modifier_5 = {
+	icon = financial_times_positive
+	monthly_income_mult = 0.5
+	#stacking = yes
+}
+financial_times_modifier_6 = {
+	icon = financial_times_positive
+	monthly_income_mult = 0.6
+	#stacking = yes
+}
+financial_times_modifier_7 = {
+	icon = financial_times_positive
+	monthly_income_mult = 0.7
+	#stacking = yes
+}
+financial_times_modifier_8 = {
+	icon = financial_times_positive
+	monthly_income_mult = 0.8
+	#stacking = yes
+}
+financial_times_modifier_9 = {
+	icon = financial_times_positive
+	monthly_income_mult = 0.9
+	#stacking = yes
+}
+financial_times_modifier_10 = {
+	icon = financial_times_positive
+	monthly_income_mult = 1
+	#stacking = yes
+}
+financial_times_modifier_11 = {
+	icon = financial_times_positive
+	monthly_income_mult = 1.1
+	#stacking = yes
+}
+financial_times_modifier_12 = {
+	icon = financial_times_positive
+	monthly_income_mult = 1.2
+	#stacking = yes
+}
+financial_times_modifier_13 = {
+	icon = financial_times_positive
+	monthly_income_mult = 1.3
+	#stacking = yes
+}
+financial_times_modifier_14 = {
+	icon = financial_times_positive
+	monthly_income_mult = 1.4
+	#stacking = yes
+}
+financial_times_modifier_15 = {
+	icon = financial_times_positive
+	monthly_income_mult = 1.5
+	#stacking = yes
+}
+financial_times_modifier_16 = {
+	icon = financial_times_positive
+	monthly_income_mult = 1.6
+	#stacking = yes
+}
+financial_times_modifier_17 = {
+	icon = financial_times_positive
+	monthly_income_mult = 1.7
+	#stacking = yes
+}
+financial_times_modifier_18 = {
+	icon = financial_times_positive
+	monthly_income_mult = 1.8
+	#stacking = yes
+}
+financial_times_modifier_19 = {
+	icon = financial_times_positive
+	monthly_income_mult = 1.9
+	#stacking = yes
+}
+financial_times_modifier_20 = {
+	icon = financial_times_positive
+	monthly_income_mult = 2
+	#stacking = yes
 }
 
-celerity_modifier = {
-	icon = martial_positive
+# Celerity   ###########################################
+celerity_modifier_1 = {
+	icon = celerity_positive
 	prowess = 2
-	stacking = yes
+	#stacking = yes
+}
+celerity_modifier_2 = {
+	icon = celerity_positive
+	prowess = 4
+	#stacking = yes
+}
+celerity_modifier_3 = {
+	icon = celerity_positive
+	prowess = 6
+	#stacking = yes
+}
+celerity_modifier_4 = {
+	icon = celerity_positive
+	prowess = 8
+	#stacking = yes
+}
+celerity_modifier_5 = {
+	icon = celerity_positive
+	prowess = 10
+	#stacking = yes
+}
+celerity_modifier_6 = {
+	icon = celerity_positive
+	prowess = 12
+	#stacking = yes
+}
+celerity_modifier_7 = {
+	icon = celerity_positive
+	prowess = 14
+	#stacking = yes
+}
+celerity_modifier_8 = {
+	icon = celerity_positive
+	prowess = 16
+	#stacking = yes
+}
+celerity_modifier_9 = {
+	icon = celerity_positive
+	prowess = 18
+	#stacking = yes
+}
+celerity_modifier_10 = {
+	icon = celerity_positive
+	prowess = 20
+	#stacking = yes
+}
+celerity_modifier_11 = {
+	icon = celerity_positive
+	prowess = 22
+	#stacking = yes
+}
+celerity_modifier_12 = {
+	icon = celerity_positive
+	prowess = 24
+	#stacking = yes
+}
+celerity_modifier_13 = {
+	icon = celerity_positive
+	prowess = 26
+	#stacking = yes
+}
+celerity_modifier_14 = {
+	icon = celerity_positive
+	prowess = 28
+	#stacking = yes
+}
+celerity_modifier_15 = {
+	icon = celerity_positive
+	prowess = 30
+	#stacking = yes
+}
+celerity_modifier_16 = {
+	icon = celerity_positive
+	prowess = 32
+	#stacking = yes
+}
+celerity_modifier_17 = {
+	icon = celerity_positive
+	prowess = 34
+	#stacking = yes
+}
+celerity_modifier_18 = {
+	icon = celerity_positive
+	prowess = 36
+	#stacking = yes
+}
+celerity_modifier_19 = {
+	icon = celerity_positive
+	prowess = 38
+	#stacking = yes
+}
+celerity_modifier_20 = {
+	icon = celerity_positive
+	prowess = 40
+	#stacking = yes
 }
 
-slowness_modifier = {
-	icon = martial_positive
+# Slowness #############################################
+slowness_modifier_1 = {
+	icon = slowness_positive
 	prowess = 2
-	stacking = yes
+	#stacking = yes
+}
+slowness_modifier_2 = {
+	icon = slowness_positive
+	prowess = 4
+	#stacking = yes
+}
+slowness_modifier_3 = {
+	icon = slowness_positive
+	prowess = 6
+	#stacking = yes
+}
+slowness_modifier_4 = {
+	icon = slowness_positive
+	prowess = 8
+	#stacking = yes
+}
+slowness_modifier_5 = {
+	icon = slowness_positive
+	prowess = 10
+	#stacking = yes
+}
+slowness_modifier_6 = {
+	icon = slowness_positive
+	prowess = 12
+	#stacking = yes
+}
+slowness_modifier_7 = {
+	icon = slowness_positive
+	prowess = 14
+	#stacking = yes
+}
+slowness_modifier_8 = {
+	icon = slowness_positive
+	prowess = 16
+	#stacking = yes
+}
+slowness_modifier_9 = {
+	icon = slowness_positive
+	prowess = 18
+	#stacking = yes
+}
+slowness_modifier_10 = {
+	icon = slowness_positive
+	prowess = 20
+	#stacking = yes
+}
+slowness_modifier_11 = {
+	icon = slowness_positive
+	prowess = 22
+	#stacking = yes
+}
+slowness_modifier_12 = {
+	icon = slowness_positive
+	prowess = 24
+	#stacking = yes
+}
+slowness_modifier_13 = {
+	icon = slowness_positive
+	prowess = 26
+	#stacking = yes
+}
+slowness_modifier_14 = {
+	icon = slowness_positive
+	prowess = 28
+	#stacking = yes
+}
+slowness_modifier_15 = {
+	icon = slowness_positive
+	prowess = 30
+	#stacking = yes
+}
+slowness_modifier_16 = {
+	icon = slowness_positive
+	prowess = 32
+	#stacking = yes
+}
+slowness_modifier_17 = {
+	icon = slowness_positive
+	prowess = 34
+	#stacking = yes
+}
+slowness_modifier_18 = {
+	icon = slowness_positive
+	prowess = 36
+	#stacking = yes
+}
+slowness_modifier_19 = {
+	icon = slowness_positive
+	prowess = 38
+	#stacking = yes
+}
+slowness_modifier_20 = {
+	icon = slowness_positive
+	prowess = 40
+	#stacking = yes
 }
 
-mass_slowness_modifier = {
-	icon = martial_positive
+# Mass Slowness ########################################
+mass_slowness_modifier_1 = {
+	icon = mass_slowness_positive
 	advantage = 1
 	hard_casualty_modifier = -0.1
-	stacking = yes
+	#stacking = yes
+}
+mass_slowness_modifier_2 = {
+	icon = mass_slowness_positive
+	advantage = 2
+	hard_casualty_modifier = -0.2
+	#stacking = yes
+}
+mass_slowness_modifier_3 = {
+	icon = mass_slowness_positive
+	advantage = 3
+	hard_casualty_modifier = -0.3
+	#stacking = yes
+}
+mass_slowness_modifier_4 = {
+	icon = mass_slowness_positive
+	advantage = 4
+	hard_casualty_modifier = -0.4
+	#stacking = yes
+}
+mass_slowness_modifier_5 = {
+	icon = mass_slowness_positive
+	advantage = 5
+	hard_casualty_modifier = -0.5
+	#stacking = yes
+}
+mass_slowness_modifier_6 = {
+	icon = mass_slowness_positive
+	advantage = 6
+	hard_casualty_modifier = -0.6
+	#stacking = yes
+}
+mass_slowness_modifier_7 = {
+	icon = mass_slowness_positive
+	advantage = 7
+	hard_casualty_modifier = -0.7
+	#stacking = yes
+}
+mass_slowness_modifier_8 = {
+	icon = mass_slowness_positive
+	advantage = 8
+	hard_casualty_modifier = -0.8
+	#stacking = yes
+}
+mass_slowness_modifier_9 = {
+	icon = mass_slowness_positive
+	advantage = 9
+	hard_casualty_modifier = -0.9
+	#stacking = yes
+}
+mass_slowness_modifier_10 = {
+	icon = mass_slowness_positive
+	advantage = 10
+	hard_casualty_modifier = -1
+	#stacking = yes
+}
+mass_slowness_modifier_11 = {
+	icon = mass_slowness_positive
+	advantage = 11
+	hard_casualty_modifier = -1.1
+	#stacking = yes
+}
+mass_slowness_modifier_12 = {
+	icon = mass_slowness_positive
+	advantage = 12
+	hard_casualty_modifier = -1.2
+	#stacking = yes
+}
+mass_slowness_modifier_13 = {
+	icon = mass_slowness_positive
+	advantage = 13
+	hard_casualty_modifier = -1.3
+	#stacking = yes
+}
+mass_slowness_modifier_14 = {
+	icon = mass_slowness_positive
+	advantage = 14
+	hard_casualty_modifier = -1.4
+	#stacking = yes
+}
+mass_slowness_modifier_15 = {
+	icon = mass_slowness_positive
+	advantage = 15
+	hard_casualty_modifier = -1.5
+	#stacking = yes
+}
+mass_slowness_modifier_16 = {
+	icon = mass_slowness_positive
+	advantage = 16
+	hard_casualty_modifier = -1.6
+	#stacking = yes
+}
+mass_slowness_modifier_17 = {
+	icon = mass_slowness_positive
+	advantage = 17
+	hard_casualty_modifier = -1.7
+	#stacking = yes
+}
+mass_slowness_modifier_18 = {
+	icon = mass_slowness_positive
+	advantage = 18
+	hard_casualty_modifier = -1.8
+	#stacking = yes
+}
+mass_slowness_modifier_19 = {
+	icon = mass_slowness_positive
+	advantage = 19
+	hard_casualty_modifier = -1.9
+	#stacking = yes
+}
+mass_slowness_modifier_20 = {
+	icon = mass_slowness_positive
+	advantage = 20
+	hard_casualty_modifier = -2
+	#stacking = yes
 }
 
-temporal_manipulation_modifier = {
-	icon = martial_positive
+# Temporal Manipulation ###############################
+temporal_manipulation_modifier_1 = {
+	icon = temporal_manipulation_positive
 	build_speed = -0.05
-	stacking = yes
+	#stacking = yes
+}
+temporal_manipulation_modifier_2 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.1
+	#stacking = yes
+}
+temporal_manipulation_modifier_3 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.15
+	#stacking = yes
+}
+temporal_manipulation_modifier_4 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.2
+	#stacking = yes
+}
+temporal_manipulation_modifier_5 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.25
+	#stacking = yes
+}
+temporal_manipulation_modifier_6 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.3
+	#stacking = yes
+}
+temporal_manipulation_modifier_7 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.35
+	#stacking = yes
+}
+temporal_manipulation_modifier_8 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.4
+	#stacking = yes
+}
+temporal_manipulation_modifier_9 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.45
+	#stacking = yes
+}
+temporal_manipulation_modifier_10 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.5
+	#stacking = yes
+}
+temporal_manipulation_modifier_11 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.55
+	#stacking = yes
+}
+temporal_manipulation_modifier_12 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.6
+	#stacking = yes
+}
+temporal_manipulation_modifier_13 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.65
+	#stacking = yes
+}
+temporal_manipulation_modifier_14 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.7
+	#stacking = yes
+}
+temporal_manipulation_modifier_15 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.75
+	#stacking = yes
+}
+temporal_manipulation_modifier_16 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.8
+	#stacking = yes
+}
+temporal_manipulation_modifier_17 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.85
+	#stacking = yes
+}
+temporal_manipulation_modifier_18 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.9
+	#stacking = yes
+}
+temporal_manipulation_modifier_19 = {
+	icon = temporal_manipulation_positive
+	build_speed = -0.95
+	#stacking = yes
+}
+temporal_manipulation_modifier_20 = {
+	icon = temporal_manipulation_positive
+	build_speed = -1
+	#stacking = yes
 }
 
-flame_aura_modifier = {
-	icon = martial_positive
+# Flame Aura ##########################################
+flame_aura_modifier_1 = {
+	icon = flame_aura_positive
 	prowess = 2
-	stacking = yes
+	#stacking = yes
+}
+flame_aura_modifier_2 = {
+	icon = flame_aura_positive
+	prowess = 4
+	#stacking = yes
+}
+flame_aura_modifier_3 = {
+	icon = flame_aura_positive
+	prowess = 6
+	#stacking = yes
+}
+flame_aura_modifier_4 = {
+	icon = flame_aura_positive
+	prowess = 8
+	#stacking = yes
+}
+flame_aura_modifier_5 = {
+	icon = flame_aura_positive
+	prowess = 10
+	#stacking = yes
+}
+flame_aura_modifier_6 = {
+	icon = flame_aura_positive
+	prowess = 12
+	#stacking = yes
+}
+flame_aura_modifier_7 = {
+	icon = flame_aura_positive
+	prowess = 14
+	#stacking = yes
+}
+flame_aura_modifier_8 = {
+	icon = flame_aura_positive
+	prowess = 16
+	#stacking = yes
+}
+flame_aura_modifier_9 = {
+	icon = flame_aura_positive
+	prowess = 18
+	#stacking = yes
+}
+flame_aura_modifier_10 = {
+	icon = flame_aura_positive
+	prowess = 20
+	#stacking = yes
+}
+flame_aura_modifier_11 = {
+	icon = flame_aura_positive
+	prowess = 22
+	#stacking = yes
+}
+flame_aura_modifier_12 = {
+	icon = flame_aura_positive
+	prowess = 24
+	#stacking = yes
+}
+flame_aura_modifier_13 = {
+	icon = flame_aura_positive
+	prowess = 26
+	#stacking = yes
+}
+flame_aura_modifier_14 = {
+	icon = flame_aura_positive
+	prowess = 28
+	#stacking = yes
+}
+flame_aura_modifier_15 = {
+	icon = flame_aura_positive
+	prowess = 30
+	#stacking = yes
+}
+flame_aura_modifier_16 = {
+	icon = flame_aura_positive
+	prowess = 32
+	#stacking = yes
+}
+flame_aura_modifier_17 = {
+	icon = flame_aura_positive
+	prowess = 34
+	#stacking = yes
+}
+flame_aura_modifier_18 = {
+	icon = flame_aura_positive
+	prowess = 36
+	#stacking = yes
+}
+flame_aura_modifier_19 = {
+	icon = flame_aura_positive
+	prowess = 38
+	#stacking = yes
+}
+flame_aura_modifier_20 = {
+	icon = flame_aura_positive
+	prowess = 40
+	#stacking = yes
 }
 
-flaming_weapons_modifier = {
-	icon = martial_positive
+# Flaming Weapons #####################################
+flaming_weapons_modifier_1 = {
+	icon = flaming_weapons_positive
 	advantage = 1
 	enemy_hard_casualty_modifier = 0.1
-	stacking = yes
+	#stacking = yes
+}
+flaming_weapons_modifier_2 = {
+	icon = flaming_weapons_positive
+	advantage = 2
+	enemy_hard_casualty_modifier = 0.2
+	#stacking = yes
+}
+flaming_weapons_modifier_3 = {
+	icon = flaming_weapons_positive
+	advantage = 3
+	enemy_hard_casualty_modifier = 0.3
+	#stacking = yes
+}
+flaming_weapons_modifier_4 = {
+	icon = flaming_weapons_positive
+	advantage = 4
+	enemy_hard_casualty_modifier = 0.4
+	#stacking = yes
+}
+flaming_weapons_modifier_5 = {
+	icon = flaming_weapons_positive
+	advantage = 5
+	enemy_hard_casualty_modifier = 0.5
+	#stacking = yes
+}
+flaming_weapons_modifier_6 = {
+	icon = flaming_weapons_positive
+	advantage = 6
+	enemy_hard_casualty_modifier = 0.6
+	#stacking = yes
+}
+flaming_weapons_modifier_7 = {
+	icon = flaming_weapons_positive
+	advantage = 7
+	enemy_hard_casualty_modifier = 0.7
+	#stacking = yes
+}
+flaming_weapons_modifier_8 = {
+	icon = flaming_weapons_positive
+	advantage = 8
+	enemy_hard_casualty_modifier = 0.8
+	#stacking = yes
+}
+flaming_weapons_modifier_9 = {
+	icon = flaming_weapons_positive
+	advantage = 9
+	enemy_hard_casualty_modifier = 0.9
+	#stacking = yes
+}
+flaming_weapons_modifier_10 = {
+	icon = flaming_weapons_positive
+	advantage = 10
+	enemy_hard_casualty_modifier = 1
+	#stacking = yes
+}
+flaming_weapons_modifier_11 = {
+	icon = flaming_weapons_positive
+	advantage = 11
+	enemy_hard_casualty_modifier = 1.1
+	#stacking = yes
+}
+flaming_weapons_modifier_12 = {
+	icon = flaming_weapons_positive
+	advantage = 12
+	enemy_hard_casualty_modifier = 1.2
+	#stacking = yes
+}
+flaming_weapons_modifier_13 = {
+	icon = flaming_weapons_positive
+	advantage = 13
+	enemy_hard_casualty_modifier = 1.3
+	#stacking = yes
+}
+flaming_weapons_modifier_14 = {
+	icon = flaming_weapons_positive
+	advantage = 14
+	enemy_hard_casualty_modifier = 1.4
+	#stacking = yes
+}
+flaming_weapons_modifier_15 = {
+	icon = flaming_weapons_positive
+	advantage = 15
+	enemy_hard_casualty_modifier = 1.5
+	#stacking = yes
+}
+flaming_weapons_modifier_16 = {
+	icon = flaming_weapons_positive
+	advantage = 16
+	enemy_hard_casualty_modifier = 1.6
+	#stacking = yes
+}
+flaming_weapons_modifier_17 = {
+	icon = flaming_weapons_positive
+	advantage = 17
+	enemy_hard_casualty_modifier = 1.7
+	#stacking = yes
+}
+flaming_weapons_modifier_18 = {
+	icon = flaming_weapons_positive
+	advantage = 18
+	enemy_hard_casualty_modifier = 1.8
+	#stacking = yes
+}
+flaming_weapons_modifier_19 = {
+	icon = flaming_weapons_positive
+	advantage = 19
+	enemy_hard_casualty_modifier = 1.9
+	#stacking = yes
+}
+flaming_weapons_modifier_20 = {
+	icon = flaming_weapons_positive
+	advantage = 20
+	enemy_hard_casualty_modifier = 2
+	#stacking = yes
 }
 
-living_earthworks_modifier = {
-	icon = martial_positive
+# Living Earthworks ###################################
+living_earthworks_modifier_1 = { # Requires custom loc to display below one
+	icon = living_earthworks_positive
 	hide_effects = yes # Custom localization (living_earthworks_modifier_desc)
-	stacking = yes
+	#stacking = yes
 	fort_level = 0.5
 }
+living_earthworks_modifier_2 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 1
+}
+living_earthworks_modifier_3 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 1.5
+}
+living_earthworks_modifier_4 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 2
+}
+living_earthworks_modifier_5 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 2.5
+}
+living_earthworks_modifier_6 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 3
+}
+living_earthworks_modifier_7 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 3.5
+}
+living_earthworks_modifier_8 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 4
+}
+living_earthworks_modifier_9 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 4.5
+}
+living_earthworks_modifier_10 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 5
+}
+living_earthworks_modifier_11 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 5.5
+}
+living_earthworks_modifier_12 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 6
+}
+living_earthworks_modifier_13 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 6.5
+}
+living_earthworks_modifier_14 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 7
+}
+living_earthworks_modifier_15 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 7.5
+}
+living_earthworks_modifier_16 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 8
+}
+living_earthworks_modifier_17 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 8.5
+}
+living_earthworks_modifier_18 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 9
+}
+living_earthworks_modifier_19 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 9.5
+}
+living_earthworks_modifier_20 = {
+	icon = living_earthworks_positive
+	#stacking = yes
+	fort_level = 10
+}
 
-control_water_modifier = {
-	icon = martial_positive
+# Control Water #######################################
+control_water_modifier_1 = {
+	icon = control_water_positive
 	naval_movement_speed_mult = 0.1
-	stacking = yes
+	#stacking = yes
+}
+control_water_modifier_2 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 0.2
+	#stacking = yes
+}
+control_water_modifier_3 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 0.3
+	#stacking = yes
+}
+control_water_modifier_4 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 0.4
+	#stacking = yes
+}
+control_water_modifier_5 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 0.5
+	#stacking = yes
+}
+control_water_modifier_6 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 0.6
+	#stacking = yes
+}
+control_water_modifier_7 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 0.7
+	#stacking = yes
+}
+control_water_modifier_8 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 0.8
+	#stacking = yes
+}
+control_water_modifier_9 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 0.9
+	#stacking = yes
+}
+control_water_modifier_10 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 1
+	#stacking = yes
+}
+control_water_modifier_11 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 1.1
+	#stacking = yes
+}
+control_water_modifier_12 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 1.2
+	#stacking = yes
+}
+control_water_modifier_13 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 1.3
+	#stacking = yes
+}
+control_water_modifier_14 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 1.4
+	#stacking = yes
+}
+control_water_modifier_15 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 1.5
+	#stacking = yes
+}
+control_water_modifier_16 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 1.6
+	#stacking = yes
+}
+control_water_modifier_17 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 1.7
+	#stacking = yes
+}
+control_water_modifier_18 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 1.8
+	#stacking = yes
+}
+control_water_modifier_19 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 1.9
+	#stacking = yes
+}
+control_water_modifier_20 = {
+	icon = control_water_positive
+	naval_movement_speed_mult = 2
+	#stacking = yes
 }
 
-drought_modifier = {
-	icon = martial_positive
+# Drought #############################################
+drought_modifier_1 = {
+	icon = drought_positive
 	siege_phase_time = -0.1
-	stacking = yes
+	#stacking = yes
+}
+drought_modifier_2 = {
+	icon = drought_positive
+	siege_phase_time = -0.2
+	#stacking = yes
+}
+drought_modifier_3 = {
+	icon = drought_positive
+	siege_phase_time = -0.3
+	#stacking = yes
+}
+drought_modifier_4 = {
+	icon = drought_positive
+	siege_phase_time = -0.4
+	#stacking = yes
+}
+drought_modifier_5 = {
+	icon = drought_positive
+	siege_phase_time = -0.5
+	#stacking = yes
+}
+drought_modifier_6 = {
+	icon = drought_positive
+	siege_phase_time = -0.6
+	#stacking = yes
+}
+drought_modifier_7 = {
+	icon = drought_positive
+	siege_phase_time = -0.7
+	#stacking = yes
+}
+drought_modifier_8 = {
+	icon = drought_positive
+	siege_phase_time = -0.8
+	#stacking = yes
+}
+drought_modifier_9 = {
+	icon = drought_positive
+	siege_phase_time = -0.9
+	#stacking = yes
+}
+drought_modifier_10 = {
+	icon = drought_positive
+	siege_phase_time = -1
+	#stacking = yes
+}
+drought_modifier_11 = {
+	icon = drought_positive
+	siege_phase_time = -1.1
+	#stacking = yes
+}
+drought_modifier_12 = {
+	icon = drought_positive
+	siege_phase_time = -1.2
+	#stacking = yes
+}
+drought_modifier_13 = {
+	icon = drought_positive
+	siege_phase_time = -1.3
+	#stacking = yes
+}
+drought_modifier_14 = {
+	icon = drought_positive
+	siege_phase_time = -1.4
+	#stacking = yes
+}
+drought_modifier_15 = {
+	icon = drought_positive
+	siege_phase_time = -1.5
+	#stacking = yes
+}
+drought_modifier_16 = {
+	icon = drought_positive
+	siege_phase_time = -1.6
+	#stacking = yes
+}
+drought_modifier_17 = {
+	icon = drought_positive
+	siege_phase_time = -1.7
+	#stacking = yes
+}
+drought_modifier_18 = {
+	icon = drought_positive
+	siege_phase_time = -1.8
+	#stacking = yes
+}
+drought_modifier_19 = {
+	icon = drought_positive
+	siege_phase_time = -1.9
+	#stacking = yes
+}
+drought_modifier_20 = {
+	icon = drought_positive
+	siege_phase_time = -2
+	#stacking = yes
 }
 
-elemental_warrior_modifier = {
-	icon = martial_positive
+# Elemental Warrior ###################################
+elemental_warrior_modifier_1 = {
+	icon = elemental_warrior_positive
 	siege_phase_time = -0.1
 	naval_movement_speed_mult = 0.1
 	fort_level = 0.5
 	enemy_hard_casualty_modifier = 0.1
 	prowess = 2
-	stacking = yes
+	#stacking = yes
+}
+elemental_warrior_modifier_2 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -0.2
+	naval_movement_speed_mult = 0.2
+	fort_level = 1
+	enemy_hard_casualty_modifier = 0.2
+	prowess = 4
+	#stacking = yes
+}
+elemental_warrior_modifier_3 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -0.3
+	naval_movement_speed_mult = 0.3
+	fort_level = 1.5
+	enemy_hard_casualty_modifier = 0.3
+	prowess = 6
+	#stacking = yes
+}
+elemental_warrior_modifier_4 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -0.4
+	naval_movement_speed_mult = 0.4
+	fort_level = 2
+	enemy_hard_casualty_modifier = 0.4
+	prowess = 8
+	#stacking = yes
+}
+elemental_warrior_modifier_5 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -0.5
+	naval_movement_speed_mult = 0.5
+	fort_level = 2.5
+	enemy_hard_casualty_modifier = 0.5
+	prowess = 10
+	#stacking = yes
+}
+elemental_warrior_modifier_6 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -0.6
+	naval_movement_speed_mult = 0.6
+	fort_level = 3
+	enemy_hard_casualty_modifier = 0.6
+	prowess = 12
+	#stacking = yes
+}
+elemental_warrior_modifier_7 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -0.7
+	naval_movement_speed_mult = 0.7
+	fort_level = 3.5
+	enemy_hard_casualty_modifier = 0.7
+	prowess = 14
+	#stacking = yes
+}
+elemental_warrior_modifier_8 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -0.8
+	naval_movement_speed_mult = 0.8
+	fort_level = 4
+	enemy_hard_casualty_modifier = 0.8
+	prowess = 16
+	#stacking = yes
+}
+elemental_warrior_modifier_9 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -0.9
+	naval_movement_speed_mult = 0.9
+	fort_level = 4.5
+	enemy_hard_casualty_modifier = 0.9
+	prowess = 18
+	#stacking = yes
+}
+elemental_warrior_modifier_10 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -1
+	naval_movement_speed_mult = 1
+	fort_level = 5
+	enemy_hard_casualty_modifier = 1
+	prowess = 20
+	#stacking = yes
+}
+elemental_warrior_modifier_11 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -1.1
+	naval_movement_speed_mult = 1.1
+	fort_level = 5.5
+	enemy_hard_casualty_modifier = 1.1
+	prowess = 22
+	#stacking = yes
+}
+elemental_warrior_modifier_12 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -1.2
+	naval_movement_speed_mult = 1.2
+	fort_level = 6
+	enemy_hard_casualty_modifier = 1.2
+	prowess = 24
+	#stacking = yes
+}
+elemental_warrior_modifier_13 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -1.3
+	naval_movement_speed_mult = 1.3
+	fort_level = 6.5
+	enemy_hard_casualty_modifier = 1.3
+	prowess = 26
+	#stacking = yes
+}
+elemental_warrior_modifier_14 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -1.4
+	naval_movement_speed_mult = 1.4
+	fort_level = 7
+	enemy_hard_casualty_modifier = 1.4
+	prowess = 28
+	#stacking = yes
+}
+elemental_warrior_modifier_15 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -1.5
+	naval_movement_speed_mult = 1.5
+	fort_level = 7.5
+	enemy_hard_casualty_modifier = 1.5
+	prowess = 30
+	#stacking = yes
+}
+elemental_warrior_modifier_16 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -1.6
+	naval_movement_speed_mult = 1.6
+	fort_level = 8
+	enemy_hard_casualty_modifier = 1.6
+	prowess = 32
+	#stacking = yes
+}
+elemental_warrior_modifier_17 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -1.7
+	naval_movement_speed_mult = 1.7
+	fort_level = 8.5
+	enemy_hard_casualty_modifier = 1.7
+	prowess = 34
+	#stacking = yes
+}
+elemental_warrior_modifier_18 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -1.8
+	naval_movement_speed_mult = 1.8
+	fort_level = 9
+	enemy_hard_casualty_modifier = 1.8
+	prowess = 36
+	#stacking = yes
+}
+elemental_warrior_modifier_19 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -1.9
+	naval_movement_speed_mult = 1.9
+	fort_level = 9.5
+	enemy_hard_casualty_modifier = 1.9
+	prowess = 38
+	#stacking = yes
+}
+elemental_warrior_modifier_20 = {
+	icon = elemental_warrior_positive
+	siege_phase_time = -2
+	naval_movement_speed_mult = 2
+	fort_level = 10
+	enemy_hard_casualty_modifier = 2
+	prowess = 40
+	#stacking = yes
 }
 
-aura_of_death_modifier = {
-	icon = martial_positive
+# Aura of Death #######################################
+aura_of_death_modifier_1 = {
+	icon = aura_of_death_positive
 	dread_baseline_add = 5
-	stacking = yes
+	#stacking = yes
+}
+aura_of_death_modifier_2 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 10
+	#stacking = yes
+}
+aura_of_death_modifier_3 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 15
+	#stacking = yes
+}
+aura_of_death_modifier_4 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 20
+	#stacking = yes
+}
+aura_of_death_modifier_5 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 25
+	#stacking = yes
+}
+aura_of_death_modifier_6 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 30
+	#stacking = yes
+}
+aura_of_death_modifier_7 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 35
+	#stacking = yes
+}
+aura_of_death_modifier_8 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 40
+	#stacking = yes
+}
+aura_of_death_modifier_9 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 45
+	#stacking = yes
+}
+aura_of_death_modifier_10 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 50
+	#stacking = yes
+}
+aura_of_death_modifier_11 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 55
+	#stacking = yes
+}
+aura_of_death_modifier_12 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 60
+	#stacking = yes
+}
+aura_of_death_modifier_13 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 65
+	#stacking = yes
+}
+aura_of_death_modifier_14 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 70
+	#stacking = yes
+}
+aura_of_death_modifier_15 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 75
+	#stacking = yes
+}
+aura_of_death_modifier_16 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 80
+	#stacking = yes
+}
+aura_of_death_modifier_17 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 85
+	#stacking = yes
+}
+aura_of_death_modifier_18 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 90
+	#stacking = yes
+}
+aura_of_death_modifier_19 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 95
+	#stacking = yes
+}
+aura_of_death_modifier_20 = {
+	icon = aura_of_death_positive
+	dread_baseline_add = 100
+	#stacking = yes
 }

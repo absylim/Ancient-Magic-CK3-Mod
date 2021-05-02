@@ -212,7 +212,7 @@
  ancient_magic_spellbook_events.401.desc.x.x.x.x.a:0 "with a cacophany of shifting earth, you prepare to invest [mana|El] into your spell construct. The only thing left is to determine the nature of the servants that you wish to create. What will they be?"
  ancient_magic_spellbook_events.401.desc.x.x.x.x.b:0 "You consider the enormous preparation that goes into the creation of golems, the deep complexity of the routines which govern their behavior, and the necessity of care required to ensure that no detail is out of place.\n\nYou decide that you are simply not ready to create more. If you attempt the spell now, the best case scenario is that it will fail. The worst case is that it will fail... #N Explosively#!. You'll just have to wait until you are prepared for the ritual."
  ancient_magic_spellbook_events.401.a:0 "Stone Golems"
- ancient_magic_spellbook_events.401.b:0 "Lave Golems"
+ ancient_magic_spellbook_events.401.b:0 "Lava Golems"
 
  ancient_magic_spellbook_events.402.t:0 "[flame_aura|E] ([mage_aura|E])                                                          [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.402.desc:0 "You bend your thoughts and intent into a state of rage, and an undeniable need for destruction, pressing that white hot spark out, until the world around you seems on the verge of burning under the assault of your will, and then you stoke the flames higher, feeding into them every sleight, every set-back, every moment when you've lost your temper, until your spell is on the verge of manifesting. Will you feed it [mana|El]?"

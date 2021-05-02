@@ -1,6 +1,5 @@
 ﻿immortal = {
 	index = 9001
-	
 	immortal = yes
 	
 	ruler_designer_cost = 100
@@ -53,13 +52,13 @@ magic_potential_3 = {
 
 architect_of_bloodlines = {
 	index = 9005
-	
+	shown_in_ruler_designer = no
 	ruler_designer_cost = 50
 }
 
 master_of_time = {
 	index = 9006
-	
+	shown_in_ruler_designer = no
 	immortal = yes
 	
 	ruler_designer_cost = 50
@@ -77,22 +76,22 @@ undead = {
 }
 deacon_of_death = {
 	index = 9008
-	
+	shown_in_ruler_designer = no
 	ruler_designer_cost = 50
 }
 avatar_of_life = {
 	index = 9009
-	
+	shown_in_ruler_designer = no
 	ruler_designer_cost = 50
 }
 lord_of_the_elements = {
 	index = 9010
-	
+	shown_in_ruler_designer = no
 	ruler_designer_cost = 50
 }
 master_of_puppets = {
 	index = 9011
-	
+	shown_in_ruler_designer = no
 	ruler_designer_cost = 50
 }
 
@@ -103,7 +102,7 @@ master_of_puppets = {
 #Mana devouring stage 1 - Mana devouring
 mana_devouring_1 = { 
 	index = 9051
-	
+	shown_in_ruler_designer = no
 	health = -1
 	prowess = -2
 	fertility = -0.1
@@ -138,7 +137,7 @@ mana_devouring_1 = {
 #Mana devouring stage 2 - Body devouring
 mana_devouring_2 = { 
 	index = 9052
-	
+	shown_in_ruler_designer = no
 	martial = -4
 	intrigue = -4
 	learning = -5

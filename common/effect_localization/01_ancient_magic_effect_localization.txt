@@ -88,3 +88,7 @@ negative_mana_drain = {
 positive_mana_drain = {
 	global = POSITIVE_MANA_DRAIN
 }
+
+remove_aura_modifier_effect_desc = {
+	global = REMOVE_AURA_MODIFIER_EFFECT_DESC
+}

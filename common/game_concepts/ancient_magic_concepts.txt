@@ -11,10 +11,13 @@ mana = {
 }
 
 mana_cost = {
-    alias = { spell_energy mana_draw }
+    alias = { spell_energy }
 }
 
 mana_drain = {
+}
+
+mana_draw = {
 }
 
 magic_talent = {

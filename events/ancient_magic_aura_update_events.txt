@@ -4,261 +4,102 @@ ancient_magic_aura_update_events.001 = {
 	hidden = yes
 	
 	immediate = {
+        
         if = {
 			limit = {
-				has_character_modifier = magic_haste_modifier
+				has_any_spell_aura_modifier = { AURA = magic_haste }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = magic_haste_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = magic_haste_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = magic_haste }
 		}
         if = {
 			limit = {
-				has_character_modifier = glimpse_the_future_modifier
+				has_any_spell_aura_modifier = { AURA = glimpse_the_future }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = glimpse_the_future_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = glimpse_the_future_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = glimpse_the_future }
 		}
         if = {
 			limit = {
-				has_character_modifier = finacial_times_modifier
+				has_any_spell_aura_modifier = { AURA = financial_times }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = finacial_times_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = finacial_times_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = financial_times }
 		}
         if = {
 			limit = {
-				has_character_modifier = celerity_modifier
+				has_any_spell_aura_modifier = { AURA = celerity }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = celerity_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = celerity_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = celerity }
 		}
         if = {
 			limit = {
-				has_character_modifier = slowness_modifier
+				has_any_spell_aura_modifier = { AURA = slowness }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = slowness_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = slowness_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = slowness }
 		}
         if = {
 			limit = {
-				has_character_modifier = mass_slowness_modifier
+				has_any_spell_aura_modifier = { AURA = mass_slowness }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = mass_slowness_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = mass_slowness_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = mass_slowness }
 		}
         if = {
 			limit = {
-				has_character_modifier = temporal_manipulation_modifier
+				has_any_spell_aura_modifier = { AURA = temporal_manipulation }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = temporal_manipulation_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = temporal_manipulation_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = temporal_manipulation }
 		}
         if = {
 			limit = {
-				has_character_modifier = flame_aura_modifier
+				has_any_spell_aura_modifier = { AURA = flame_aura }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = flame_aura_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = flame_aura_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = flame_aura }
 		}
         if = {
 			limit = {
-				has_character_modifier = Flaming_weapons_modifier
+				has_any_spell_aura_modifier = { AURA = flaming_weapons }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = Flaming_weapons_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = Flaming_weapons_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = flaming_weapons }
 		}
         if = {
 			limit = {
-				has_character_modifier = living_earthworks_modifier
+				has_any_spell_aura_modifier = { AURA = living_earthworks }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = living_earthworks_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = living_earthworks_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = living_earthworks }
 		}
         if = {
 			limit = {
-				has_character_modifier = control_water_modifier
+				has_any_spell_aura_modifier = { AURA = control_water }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = control_water_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = control_water_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = control_water }
 		}
         if = {
 			limit = {
-				has_character_modifier = drought_modifier
+				has_any_spell_aura_modifier = { AURA = drought }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = drought_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = drought_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = drought }
 		}
         if = {
 			limit = {
-				has_character_modifier = elemental_warrior_modifier
+				has_any_spell_aura_modifier = { AURA = elemental_warrior }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = elemental_warrior_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = elemental_warrior_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = elemental_warrior }
 		}
         if = {
 			limit = {
-				has_character_modifier = aura_of_death_modifier
+				has_any_spell_aura_modifier = { AURA = aura_of_death }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = aura_of_death_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = aura_of_death_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = aura_of_death }
 		}
         if = {
 			limit = {
-				has_character_modifier = beguiling_aura_modifier
+				has_any_spell_aura_modifier = { AURA = beguiling_aura }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = beguiling_aura_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = beguiling_aura_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = beguiling_aura }
 		}
         if = {
 			limit = {
-				has_character_modifier = beguiling_aura_modifier
+				has_any_spell_aura_modifier = { AURA = enchanting_aura }
 			}
-			while = {
-                count = 100
-                remove_character_modifier = beguiling_aura_modifier
-		    }
-            while = {
-                count = mage_level
-                add_character_modifier = {
-                    modifier = beguiling_aura_modifier
-                    mode = add
-                }
-            }
+			add_aura_modifier = { AURA = enchanting_aura }
 		}
     }
 }

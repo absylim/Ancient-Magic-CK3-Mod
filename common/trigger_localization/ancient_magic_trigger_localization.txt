@@ -25,3 +25,11 @@ auras_and_rituals_target_caster = {
 living_earthworks_desc = {
 	global = living_earthworks_desc
 }
+
+enough_mana_trigger_desc = {
+	global = ENOUGH_MANA_TRIGGER_DESC
+}
+
+enough_mana_gen_trigger_desc = {
+	global = ENOUGH_MANA_GEN_TRIGGER_DESC
+}
