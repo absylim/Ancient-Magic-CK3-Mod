@@ -453,3 +453,122 @@ add_aura_modifier = {
 		add_character_modifier = $AURA$_modifier_20
 	}
 }
+
+# Compatability Measure - Updates old modifiers (Remove after Next update)
+legacy_aura_update_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_character_modifier = magic_haste_modifier
+			}
+			add_aura_modifier = { AURA = magic_haste }
+		}
+		if = {
+			limit = {
+				has_character_modifier = beguiling_aura_modifier
+			}
+			add_aura_modifier = { AURA = beguiling_aura }
+		}
+		if = {
+			limit = {
+				has_character_modifier = enchanting_aura_modifier
+			}
+			add_aura_modifier = { AURA = enchanting_aura }
+		}
+		if = {
+			limit = {
+				has_character_modifier = glimpse_the_future_modifier
+			}
+			add_aura_modifier = { AURA = glimpse_the_future }
+		}
+		if = {
+			limit = {
+				has_character_modifier = finacial_times_modifier
+			}
+			add_aura_modifier = { AURA = financial_times }
+		}
+		if = {
+			limit = {
+				has_character_modifier = celerity_modifier
+			}
+			add_aura_modifier = { AURA = celerity }
+		}
+		if = {
+			limit = {
+				has_character_modifier = slowness_modifier
+			}
+			add_aura_modifier = { AURA = slowness}
+		}
+		if = {
+			limit = {
+				has_character_modifier = mass_slowness_modifier
+			}
+			add_aura_modifier = { AURA = mass_slowness }
+		}
+		if = {
+			limit = {
+				has_character_modifier = temporal_manipulation_modifier
+			}
+			add_aura_modifier = { AURA = temporal_manipulation }
+		}
+		if = {
+			limit = {
+				has_character_modifier = flame_aura_modifier
+			}
+			add_aura_modifier = { AURA = flame_aura }
+		}
+		if = {
+			limit = {
+				has_character_modifier = flaming_weapons_modifier
+			}
+			add_aura_modifier = { AURA = flaming_weapons }
+		}
+		if = {
+			limit = {
+				has_character_modifier = living_earthworks_modifier
+			}
+			add_aura_modifier = { AURA = living_earthworks }
+		}
+		if = {
+			limit = {
+				has_character_modifier = control_water_modifier
+			}
+			add_aura_modifier = { AURA = control_water}
+		}
+		if = {
+			limit = {
+				has_character_modifier = drought_modifier
+			}
+			add_aura_modifier = { AURA = drought }
+		}
+		if = {
+			limit = {
+				has_character_modifier = elemental_warrior_modifier
+			}
+			add_aura_modifier = { AURA = elemental_warrior }
+		}
+		if = {
+			limit = {
+				has_character_modifier = aura_of_death_modifier
+			}
+			add_aura_modifier = { AURA = aura_of_death }
+		}
+		
+		remove_all_character_modifier_instances = magic_haste_modifier
+		remove_all_character_modifier_instances = beguiling_aura_modifier
+		remove_all_character_modifier_instances = enchanting_aura_modifier
+		remove_all_character_modifier_instances = glimpse_the_future_modifier
+		remove_all_character_modifier_instances = finacial_times_modifier
+		remove_all_character_modifier_instances = celerity_modifier
+		remove_all_character_modifier_instances = slowness_modifier
+		remove_all_character_modifier_instances = mass_slowness_modifier
+		remove_all_character_modifier_instances = temporal_manipulation_modifier
+		remove_all_character_modifier_instances = flame_aura_modifier
+		remove_all_character_modifier_instances = flaming_weapons_modifier
+		remove_all_character_modifier_instances = living_earthworks_modifier
+		remove_all_character_modifier_instances = control_water_modifier
+		remove_all_character_modifier_instances = drought_modifier
+		remove_all_character_modifier_instances = elemental_warrior_modifier
+		remove_all_character_modifier_instances = aura_of_death_modifier
+	}
+}
