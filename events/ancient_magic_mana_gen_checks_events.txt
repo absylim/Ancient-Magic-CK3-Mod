@@ -128,7 +128,7 @@ ancient_magic_mana_gen_checks_events.001 = {
 				}
 			}
 			change_mana_gen = { VALUE = -90 }
-			remove_character_flag = ancient_magic_mana_circle_32_mana_added
+			remove_character_flag = ancient_magic_mana_circle_03_mana_added
 		}
 		if= {
 			limit = {
