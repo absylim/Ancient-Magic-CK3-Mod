@@ -64,6 +64,19 @@ change_mana_gen = {
 	change_variable = { name = mana_gen add = $VALUE$ }
 }
 
+change_ancestral_guardians_count = {
+	if = {
+		limit = {
+			NOT = { exists = var:ancestral_guardians_count }
+		}
+		set_variable = {
+			name = ancestral_guardians_count
+			value = 0
+		}
+	}
+	change_variable = { name = ancestral_guardians_count add = $VALUE$ }
+}
+
 immortal_remove_lifetime_flags = {
 	if = { limit = { has_character_flag = has_refunded_perks } remove_character_flag = has_refunded_perks }
 	if = { limit = { has_character_flag = declared_major_religious_war_flag } remove_character_flag = declared_major_religious_war_flag }
