@@ -77,13 +77,3 @@ check_lifetime_flags_for_immortal = {
 		}
 	}
 }
-
-on_16th_birthday = {
-	trigger = { age = 16 }
-
-	events = {
-		arcane_coming_of_age.0001#Arcane
-		delay = { days = 1 }
-		arcane_coming_of_age.0003 #To remove arcane focus
-	}
-}
