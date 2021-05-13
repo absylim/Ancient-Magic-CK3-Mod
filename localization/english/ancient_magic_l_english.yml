@@ -10,3 +10,6 @@
 
 #hooks
  undead_master:0 "Undead Master"
+ 
+#faith
+ witchcraft_illegal_name:0 "Witchraft is Criminal"

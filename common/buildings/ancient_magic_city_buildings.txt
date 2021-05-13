@@ -228,6 +228,9 @@ city_of_magic_01 = {
 		culture = {
 			has_innovation = innovation_city_planning
 		}
+		faith = {
+			NOT = { has_doctrine_parameter = witchcraft_illegal }
+		}
 	}
 	
 	can_construct_showing_failures_only = {
@@ -264,7 +267,7 @@ city_of_magic_01 = {
 			scope:holder = {
 				AND = {
 					has_trait = magic_potential
-					scope:religion = {
+					scope:faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -275,7 +278,7 @@ city_of_magic_01 = {
 			scope:holder = {
 				AND = {
 					has_trait = magic_potential
-					scope:religion = {
+					scope:faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
@@ -286,7 +289,7 @@ city_of_magic_01 = {
 			scope:holder = {
 				AND = {
 					NOT = { has_trait = magic_potential }
-					scope:religion = {
+					scope:faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -297,7 +300,7 @@ city_of_magic_01 = {
 			scope:holder = {
 				AND = {
 					has_government = theocracy_government
-					scope:religion = {
+					scope:faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -308,7 +311,7 @@ city_of_magic_01 = {
 			scope:holder = {
 				AND = {
 					has_government = theocracy_government
-					scope:religion = {
+					scope:faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
@@ -568,6 +571,61 @@ city_of_magic_02 = {
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
+		}		
+		modifier = {
+			add = 20
+			scope:holder = {
+				AND = {
+					has_trait = magic_potential
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}			
+		modifier = {
+			add = 100
+			scope:holder = {
+				AND = {
+					has_trait = magic_potential
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_accepted
+					}
+				}
+			}
+		}			
+		modifier = {
+			divide = 10
+			scope:holder = {
+				AND = {
+					NOT = { has_trait = magic_potential }
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}		
+		modifier = {
+			factor = 0
+			scope:holder = {
+				AND = {
+					has_government = theocracy_government
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}	
+		modifier = {
+			add = 50
+			scope:holder = {
+				AND = {
+					has_government = theocracy_government
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_accepted
+					}
+				}
+			}
 		}
 	}
 }
@@ -769,6 +827,61 @@ city_of_magic_03 = {
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
+		}		
+		modifier = {
+			add = 20
+			scope:holder = {
+				AND = {
+					has_trait = magic_potential
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}			
+		modifier = {
+			add = 100
+			scope:holder = {
+				AND = {
+					has_trait = magic_potential
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_accepted
+					}
+				}
+			}
+		}			
+		modifier = {
+			divide = 10
+			scope:holder = {
+				AND = {
+					NOT = { has_trait = magic_potential }
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}		
+		modifier = {
+			factor = 0
+			scope:holder = {
+				AND = {
+					has_government = theocracy_government
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}	
+		modifier = {
+			add = 50
+			scope:holder = {
+				AND = {
+					has_government = theocracy_government
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_accepted
+					}
+				}
+			}
 		}
 	}
 }
@@ -969,6 +1082,61 @@ city_of_magic_04 = {
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
+		}		
+		modifier = {
+			add = 20
+			scope:holder = {
+				AND = {
+					has_trait = magic_potential
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}			
+		modifier = {
+			add = 100
+			scope:holder = {
+				AND = {
+					has_trait = magic_potential
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_accepted
+					}
+				}
+			}
+		}			
+		modifier = {
+			divide = 10
+			scope:holder = {
+				AND = {
+					NOT = { has_trait = magic_potential }
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}		
+		modifier = {
+			factor = 0
+			scope:holder = {
+				AND = {
+					has_government = theocracy_government
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}	
+		modifier = {
+			add = 50
+			scope:holder = {
+				AND = {
+					has_government = theocracy_government
+					scope:faith = {
+						has_doctrine_parameter = witchcraft_accepted
+					}
+				}
+			}
 		}
 	}
 }

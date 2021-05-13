@@ -20,3 +20,17 @@
  building_ancient_magic_mana_circle_03:0 "Great Henge"
  building_ancient_magic_mana_circle_03_desc:0 "A circle of great dolmens able to pull great amouts of mana from natural leylines"
  
+ #HOLDING
+ city_of_magic_holding:0 "City of Magic"
+ tribal_holding_concept_key:0 "[city of magic|E]"
+ building_type_city_of_magic_01:0 "City of Magic"
+ building_type_city_of_magic_01_desc:1 "A populous city which houses a large number of mages, schollars, merchants, and hard-working townsfolk. This city should be build on #S Focal point#! so that it can draw the power from it for its future development."
+ building_city_of_magic_01:1 "Magical Village Center"
+ building_city_of_magic_01_desc:0 "A populous city which houses a large number of mages, schollars, merchants, and hard-working townsfolk."
+ building_city_of_magic_02:1 "City of Magic"
+ building_city_of_magic_02_desc:1 "This city has attracted the attention of traders and craftsmen from all around, with wealthy merchants setting up shop and diligent craftsmen erecting new houses almost daily."
+ building_city_of_magic_03:1 "Floating City"
+ building_city_of_magic_03_desc:1 "No longer content with just occupying its original area, the city now subsumes nearby farmland into its prosperous center. The city is vast and full of wealth and opportunity."
+ building_city_of_magic_04:1 "Ancient Magical City"
+ building_city_of_magic_04_desc:1 "This city is known far and wide for the bountiful opportunities that lie within — it is said that even the lowliest peasant can find fortune here. Houses line the streets for as far as the eye can see, with carts and animals busy transporting goods wherever you look."
+ 
