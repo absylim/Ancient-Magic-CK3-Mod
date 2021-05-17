@@ -2,4 +2,8 @@
 	events = {
 		ancient_magic_gain_talent_events.002
 	}
+	effect = {
+		populate_ley_lines = yes
+		populate_focal_point = yes
+	}
 }

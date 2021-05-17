@@ -1,7 +1,46 @@
-create_focus_points = {
-	
+#########################################
+#############   ley line    #############
+#########################################
+
+create_ley_lines = {
+	title:$TITLE$ = {
+		title_province = {
+			add_province_modifier = {
+				modifier = ley_line_modifier
+			}
+		}
+	}
 }
 
-AM_create_ley_lines = {
-	
+populate_ley_lines = {
+	create_ley_lines = { TITLE = c_wiltshire }
+}
+
+#########################################
+#############  FOCAL POINT  #############
+#########################################
+
+create_focal_points = {
+	title:$TITLE$ = {
+		title_province = {
+			add_province_modifier = {
+				modifier = focal_point_modifier
+			}
+		}
+	}
+}
+
+populate_focal_point = {
+	#Africa
+	create_focal_points = { TITLE = c_giza }
+	create_focal_points = { TITLE = c_fes }
+	create_focal_points = { TITLE = c_nyene }
+	#Europe
+	create_focal_points = { TITLE = c_anglesey }
+	create_focal_points = { TITLE = b_seesjarvi }
+	#Asia
+	create_focal_points = { TITLE = b_jaman_akkul }
+	create_focal_points = { TITLE = c_zabulistan }
+	create_focal_points = { TITLE = c_sungqu }
+	create_focal_points = { TITLE = b_kartaszevo }
 }

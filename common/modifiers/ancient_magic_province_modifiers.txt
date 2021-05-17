@@ -1,0 +1,8 @@
+﻿ley_line_modifier = {
+	supply_limit_mult = 0.05
+}
+
+focal_point_modifier = {
+	supply_limit_mult = 0.15
+	build_speed = -0.05
+}
