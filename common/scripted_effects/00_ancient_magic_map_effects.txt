@@ -25,7 +25,7 @@ create_ley_lines = {
 }
 
 populate_ley_lines = {
-	create_ley_lines = { TITLE = c_wiltshire }
+	create_ley_lines = { TITLE = b_salisbury }
 }
 
 #########################################

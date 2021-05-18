@@ -551,6 +551,7 @@ city_of_magic_02 = {
 		culture = {
 			has_innovation = innovation_manorialism
 		}
+		building_magical_low_requirement = yes
 	}
 	cost_gold = 1100
 	
@@ -807,6 +808,7 @@ city_of_magic_03 = {
 		culture = {
 			has_innovation = innovation_windmills
 		}
+		building_magical_high_requirement = yes
 	}
 	cost_gold = 1500
 	
@@ -1063,6 +1065,7 @@ city_of_magic_04 = {
 		culture = {
 			has_innovation = innovation_cranes
 		}
+		building_magical_high_requirement = yes
 	}
 	cost_gold = 1700
 	

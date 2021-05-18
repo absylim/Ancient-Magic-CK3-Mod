@@ -4,6 +4,18 @@
 	}
 }
 
+building_magical_low_requirement = {
+	OR={
+		has_province_modifier = ley_line_modifier
+		has_province_modifier = focal_point_modifier
+	}
+}
+
+building_magical_high_requirement = {
+	OR={
+		has_province_modifier = focal_point_modifier
+	}
+}
 
 ######################################################################
 # Holding Level
