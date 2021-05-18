@@ -12,8 +12,13 @@ create_ley_lines = {
 		}
 		if = {
 			limit = {tier = tier_county} 
-			title_province = {
-				add_county_modifier = ley_line_modifier
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_barony
+				}
+				title_province = {
+					add_province_modifier = ley_line_modifier
+				}
 			}
 		}
 	}
@@ -37,8 +42,13 @@ create_focal_points = {
 		}
 		if = {
 			limit = {tier = tier_county} 
-			title_province = {
-				add_county_modifier = focal_point_modifier
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_barony
+				}
+				title_province = {
+					add_province_modifier = focal_point_modifier
+				}
 			}
 		}
 	}
