@@ -3,8 +3,8 @@
 mage_potency = {
 	value = 0
 	if = { limit = { has_trait = magic_potential_1 } value = 1 } 
-	elsif = { limit = { has_trait = magic_potential_2 } value = 2 } 
-	elsif = { limit = { has_trait = magic_potential_3 } value = 3 }
+	else_if = { limit = { has_trait = magic_potential_2 } value = 2 } 
+	else_if = { limit = { has_trait = magic_potential_3 } value = 3 }
 }
 
 # No-brainer value in a magic mod.
@@ -12,33 +12,49 @@ mage_potency = {
 mage_education = { # UNCOMMENT WHEN SYSTEM IN PLACE!!!
 	value = 0
 	if = { limit = { has_trait = education_arcane_1 } value = 1 } 
-	elsif = { limit = { has_trait = education_arcane_2 } value = 2 } 
-	elsif = { limit = { has_trait = education_arcane_3 } value = 3 }
-	elsif = { limit = { has_trait = education_arcane_4 } value = 4 }
+	else_if = { limit = { has_trait = education_arcane_2 } value = 2 } 
+	else_if = { limit = { has_trait = education_arcane_3 } value = 3 }
+	else_if = { limit = { has_trait = education_arcane_4 } value = 4 }
+}
+
+mage_level_divider = {
+	value = 200
+	if = {
+		limit = {  has_trait = magic_potential_1 }
+		value = 150
+	}
+	else_if = {
+		limit = { has_trait = magic_potential_2 }
+		value = 100
+	}
+	else_if = {
+		limit = { has_trait = magic_potential_3 }
+		value = 75
+	}
+	if = {
+		limit = {  this.dynasty = { has_dynasty_perk = arcane_legacy_4 }}
+		add = -5
+	}
 }
 
 mage_level = {
 	value = var:mage_xp
-	if = {
-		limit = { has_trait = magic_potential_1 }
-		divide = 150
-	}
-	elsif = {
-		limit = { has_trait = magic_potential_2 }
-		divide = 100
-	}
-	elsif = {
-		limit = { has_trait = magic_potential_3 }
-		divide = 75
-	}
+	divide = mage_level_divider
 	add = 1
+	floor = yes
+}
+
+mage_xp_to_next_level = {
+	value = mage_level
+	add = 1
+	multiply = mage_level_divider
 }
 
 mage_xp_per_perk = 15
 
 max_mana_per_perk = 30
 
-mana_gen_per_perk = 3
+mana_gen_per_perk = 2
 
 arcana_mage_xp_per_perk = {
 	value = mage_xp_per_perk
@@ -53,4 +69,180 @@ arcana_max_mana_per_perk = {
 arcana_mana_gen_per_perk = {
 	value = mana_gen_per_perk
 	multiply = 2
+}
+
+# Note: This value is a work-around for 'consume life' not giving the 'drained' modifier
+# 	    for the correct number of years. Removing it will break that spell!
+############################################################################################
+mage_level_value_conversion = {
+	value = 0
+	if = {
+		limit = {
+			exists = scope:am_spell_caster
+		}
+		add = scope:am_spell_caster.mage_level
+	}
+}
+
+# Note: The following values are here to stream-line the scripting for the 'manipulate blood'
+#       spell. Removing them will break that spell!
+############################################################################################
+# Used to gauge character's beauty level for biomancy spell
+am_beauty_level = {
+	value = 0
+	if = {
+		limit = {
+			has_trait = beauty_good
+		}
+		if = {
+			limit = {
+				has_trait = beauty_good_1
+			}
+			add = 1
+		}
+		else_if = {
+			limit = {
+				has_trait = beauty_good_2
+			}
+			add = 2
+		}
+		else_if = {
+			limit = {
+				has_trait = beauty_good_3
+			}
+			add = 3
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = beauty_bad
+		}
+		if = {
+			limit = {
+				has_trait = beauty_bad_1
+			}
+			subtract = 1
+		}
+		else_if = {
+			limit = {
+				has_trait = beauty_bad_2
+			}
+			subtract = 2
+		}
+		else_if = {
+			limit = {
+				has_trait = beauty_bad_3
+			}
+			subtract = 3
+		}
+	}
+}
+
+# Used to gauge character's physique level for biomancy spell
+am_physique_level = {
+	value = 0
+	if = {
+		limit = {
+			has_trait = physique_good
+		}
+		if = {
+			limit = {
+				has_trait = physique_good_1
+			}
+			add = 1
+		}
+		else_if = {
+			limit = {
+				has_trait = physique_good_2
+			}
+			add = 2
+		}
+		else_if = {
+			limit = {
+				has_trait = physique_good_3
+			}
+			add = 3
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = physique_bad
+		}
+		if = {
+			limit = {
+				has_trait = physique_bad_1
+			}
+			subtract = 1
+		}
+		else_if = {
+			limit = {
+				has_trait = physique_bad_2
+			}
+			subtract = 2
+		}
+		else_if = {
+			limit = {
+				has_trait = physique_bad_3
+			}
+			subtract = 3
+		}
+	}
+}
+
+# Used to gauge character's intellect level for biomancy spell
+am_intellect_level = {
+	value = 0
+	if = {
+		limit = {
+			has_trait = intellect_good
+		}
+		if = {
+			limit = {
+				has_trait = intellect_good_1
+			}
+			add = 1
+		}
+		else_if = {
+			limit = {
+				has_trait = intellect_good_2
+			}
+			add = 2
+		}
+		else_if = {
+			limit = {
+				has_trait = intellect_good_3
+			}
+			add = 3
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = intellect_bad
+		}
+		if = {
+			limit = {
+				has_trait = intellect_bad_1
+			}
+			subtract = 1
+		}
+		else_if = {
+			limit = {
+				has_trait = intellect_bad_2
+			}
+			subtract = 2
+		}
+		else_if = {
+			limit = {
+				has_trait = intellect_bad_3
+			}
+			subtract = 3
+		}
+	}
+}
+
+# Used to determine if anything else can be done.
+am_genetic_level = {
+	value = am_beauty_level
+	add = am_physique_level
+	add = am_intellect_level
 }

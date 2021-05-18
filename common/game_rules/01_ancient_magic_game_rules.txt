@@ -1,8 +1,12 @@
 ﻿PC_magic_level = {
-	default = PC_magic_level_decision
+	default = PC_magic_level_0
 
 	PC_magic_level_decision = {
 
+	}
+
+	PC_magic_level_0 = {
+	
 	}
 	
 	PC_magic_level_1 = {

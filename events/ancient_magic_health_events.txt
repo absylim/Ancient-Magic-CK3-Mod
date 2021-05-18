@@ -421,7 +421,7 @@ AMHealth.2202 = {
 				limit = { scope:disease_type = flag:mana_devouring_1 }
 				scope:sick_character = { remove_trait_force_tooltip = mana_devouring_1 }
 			}
-			elsif = {
+			else_if = {
 				limit = { scope:disease_type = flag:mana_devouring_2 }
 				scope:sick_character = { remove_trait_force_tooltip = mana_devouring_2 }
 			}
@@ -498,7 +498,7 @@ AMHealth.3001 = {
 		}
 		immediate = { trigger_event = AMHealth.0002 } # Evolve mana devouring into body devouring
 	}
-	elsif = {
+	else_if = {
 		limit = {
 			has_flag = flag:mana_devouring_2
 			has_trait = mana

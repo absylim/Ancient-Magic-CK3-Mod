@@ -72,3 +72,39 @@ death_stare_perk_effect = {
 deacon_of_death_perk_effect = {
 	global = DEACON_OF_DEATH_PERK_EFFECT
 }
+
+negative_mana_cost = {
+	global = NEGATIVE_MANA_COST
+}
+
+positive_mana_cost = {
+	global = POSITIVE_MANA_COST
+}
+
+negative_mana_drain = {
+	global = NEGATIVE_MANA_DRAIN
+}
+
+positive_mana_drain = {
+	global = POSITIVE_MANA_DRAIN
+}
+
+arcane_legacy_1_effect = {
+	global = ARCANE_LEGACY_1_EFFECT_LOC
+}
+
+arcane_legacy_2_effect = {
+	global = ARCANE_LEGACY_2_EFFECT_LOC
+}
+
+arcane_legacy_3_effect = {
+	global = ARCANE_LEGACY_3_EFFECT_LOC
+}
+
+arcane_legacy_4_effect = {
+	global = ARCANE_LEGACY_4_EFFECT_LOC
+}
+
+arcane_legacy_5_effect = {
+	global = ARCANE_LEGACY_5_EFFECT_LOC
+}

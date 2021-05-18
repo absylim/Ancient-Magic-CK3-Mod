@@ -1,28 +1,28 @@
 ﻿l_english:
 #MANA DEVOURING
- AMHealth.0001.t:1 "[SCOPE.Custom('EventTitleDisease')]: Where is my Mana"
- AMHealth.0001.desc:0 "The loss of mana is making me weaker by day. I must save my mana, so that my mana pool doenst dry up and alto that it doesnt evolves into something worse."
- AMHealth.0001.court_physician.desc:0 ""
- AMHealth.0001.a:0 "I must save my mana!"
+ AMHealth.0001.t:1 "[SCOPE.Custom('EventTitleDisease')]: An Ailment of The Will"
+ AMHealth.0001.desc:0 "I've contracted some kind of supernatural disease which is sapping my [mana|El]. Ancient practioners called it 'the wizard's consumption' because of the tendency of the afflicted's body to wither, almost like those suffering from consumption.\n\nBut this is no disease of the body, or even of the mind. It is an affliction of my magic, or perhaps that innate trait which allows me to manipulate arcane forces. The disease will feed on my [mana|El]@aura_active_icon!, greatly hindering my ability to draw it to me. I just hope that I have enough, or the sickness will begin to drain my physical vitality instead."
+ AMHealth.0001.court_physician.desc:0 "Your aura does not look well, my [ROOT.Char.GetLadyLord]. This is most serious... We must treat you at once!"
+ AMHealth.0001.a:0 "This isn't good..."
  #Body Devouring (Mana devouring second stage)
- AMHealth.0002.t:1 "[SCOPE.Custom('EventTitleDisease')]: Oh im screwd"
- AMHealth.0002.desc:0 "After i depleted my mana pool, the ilness started to look for other nutrient and it chose ME!"
- AMHealth.0002.court_physician.desc:0 ""
- AMHealth.0002.a:0 "I must save my mana!"
+ AMHealth.0002.t:1 "[SCOPE.Custom('EventTitleDisease')]: Consumed"
+ AMHealth.0002.desc:0 "The supernatural disease has run out of [mana|El] to feed on, and now it's begun to consume my physical vitality instead, eating away at me. I've never felt more ill in my life and, if I don't get more [mana|El] soon, I fear that I may waste away completely..."
+ AMHealth.0002.court_physician.desc:0 "The affliction has spread to your body, my [ROOT.Char.GetLadyLord]. We need to get you some [mana|El] at once!"
+ AMHealth.0002.a:0 "I'm being eaten alive..."
  
  #Rocovery fisrt stage
- AMHealth.1101.t:1 "[SCOPE.Custom('EventTitleDisease')]: My mana is Back!"
- AMHealth.1101.desc:0 "I woke this morning and saw rays of sunshine falling through my window, it took me a moment to realize that my mana isnt being depleted and even my body is feeling better then before."
- AMHealth.1101.a:0 "Uf, this was truly uncomfroftable experience"
+ AMHealth.1101.t:1 "[SCOPE.Custom('EventTitleDisease')]: Will Recovery"
+ AMHealth.1101.desc:0 "I woke this morning and saw rays of sunshine falling through my window, it took me a moment to realize that my [mana|El]@aura_active_icon! isnt being depleted, and even my body is feeling better than before. Whatever the ailment was, it has passed. My magic is back to normal."
+ AMHealth.1101.a:0 "I'm just happy it's over."
  #Rocovery second stage - body imunity
- AMHealth.1102.t:1 "[SCOPE.Custom('EventTitleDisease')]: Im saved!"
- AMHealth.1102.desc:0 "I woke this morning and saw rays of sunshine falling through my window, and when i sitep i found out that my body is no more sore! Even my mana is getting back!"
- AMHealth.1102.a:0 "Time to get back into my study!"
+ AMHealth.1102.t:1 "[SCOPE.Custom('EventTitleDisease')]: Will Recovery"
+ AMHealth.1102.desc:0 "I woke this morning and saw rays of sunshine falling through my window, it took me a moment to realize that my [mana|El]@aura_active_icon! isnt being depleted, and I'm slowly regaining weight. Whatever the ailment was, it has passed. My magic is back to normal."
+ AMHealth.1102.a:0 "I'm just happy it's over."
 
  #Rocovery second stage - refiled mana pool
- AMHealth.1103.t:1 "[SCOPE.Custom('EventTitleDisease')]: Uf, this was close"
- AMHealth.1103.desc:0 "After i partialy refiled my mana pool, the disease recede into the First Stage, and atleast stoped devouring my body!"
- AMHealth.1103.a:0 "I must more careful in future!"
+ AMHealth.1103.t:1 "[SCOPE.Custom('EventTitleDisease')]: Partial Will Recovery"
+ AMHealth.1103.desc:0 "After I managed to recover some of my depleted magical energy, the supernatural disease which has been afflicting me has fallen into remission. It has stopped consuming my physical health and has resumed consuming my [mana|El]@aura_active_icon! instead. I should take care not to over do it in the future."
+ AMHealth.1103.a:0 "What good is a wizard without magic though?"
  
  
  
