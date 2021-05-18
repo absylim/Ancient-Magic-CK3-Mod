@@ -4,9 +4,16 @@
 
 create_ley_lines = {
 	title:$TITLE$ = {
-		title_province = {
-			add_province_modifier = {
-				modifier = ley_line_modifier
+		if = {
+			limit = {tier = tier_barony} 
+			title_province = {
+				add_province_modifier = ley_line_modifier
+			}
+		}
+		if = {
+			limit = {tier = tier_county} 
+			title_province = {
+				add_county_modifier = ley_line_modifier
 			}
 		}
 	}
@@ -22,9 +29,16 @@ populate_ley_lines = {
 
 create_focal_points = {
 	title:$TITLE$ = {
-		title_province = {
-			add_province_modifier = {
-				modifier = focal_point_modifier
+		if = {
+			limit = {tier = tier_barony} 
+			title_province = {
+				add_province_modifier = focal_point_modifier
+			}
+		}
+		if = {
+			limit = {tier = tier_county} 
+			title_province = {
+				add_county_modifier = focal_point_modifier
 			}
 		}
 	}

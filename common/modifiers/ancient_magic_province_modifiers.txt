@@ -3,6 +3,7 @@
 }
 
 focal_point_modifier = {
+	icon = focal_point
 	supply_limit_mult = 0.15
 	build_speed = -0.05
 }
