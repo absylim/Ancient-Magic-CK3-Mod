@@ -1,4 +1,5 @@
 ﻿ley_line_modifier = {
+	icon = ley_line_black
 	supply_limit_mult = 0.05
 }
 
