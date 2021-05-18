@@ -1,15 +1,3 @@
 ﻿l_english:
- PLACEHOLDER_EFFECT:0 "Placeholder"
-#regiments
- golem:0 "Stone Golems"
- lava_golem:0 "Lava Golems"
- golem_army:0 "Stone Golems"
- lava_golem_army:0 "Lava Golems"
- undead:0 "Undead"
- undead_horde:0 "Undead Horde"
-
-#hooks
- undead_master:0 "Undead Master"
- 
 #faith
  witchcraft_illegal_name:0 "Witchraft is Criminal"
