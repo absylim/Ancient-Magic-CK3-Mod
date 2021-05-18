@@ -50,3 +50,7 @@
  drought_modifier:0 "Drought"
  elemental_warrior_modifier:0 "Cloak of Elements"
  aura_of_death_modifier:0 "Aura of Death"
+ 
+#Ley Lines
+ focal_point_modifier:0 "Focal Point"
+ ley_line_modifier:0 "Ley line"
