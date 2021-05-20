@@ -25,7 +25,138 @@ create_ley_lines = {
 }
 
 populate_ley_lines = {
+	#Europe
 	create_ley_lines = { TITLE = b_salisbury }
+	create_ley_lines = { TITLE = b_olbia_ETEL }
+	create_ley_lines = { TITLE = b_voznessensk }
+	create_ley_lines = { TITLE = b_pervomaisk }
+	create_ley_lines = { TITLE = b_kashan }
+	create_ley_lines = { TITLE = b_cherkassy }
+	create_ley_lines = { TITLE = b_lubny }
+	create_ley_lines = { TITLE = b_priluk }
+	create_ley_lines = { TITLE = b_borzna }
+	create_ley_lines = { TITLE = b_novgorod_seversky }
+	create_ley_lines = { TITLE = b_starodub }
+	create_ley_lines = { TITLE = b_mglin }
+	create_ley_lines = { TITLE = b_roslavl }
+	create_ley_lines = { TITLE = b_yelnya }
+	create_ley_lines = { TITLE = b_dorogobyzh }
+	create_ley_lines = { TITLE = b_dukhovshchina }
+	create_ley_lines = { TITLE = b_ozerski }
+	create_ley_lines = { TITLE = b_andreapol }
+	create_ley_lines = { TITLE = b_klichen }
+	create_ley_lines = { TITLE = b_valday }
+	create_ley_lines = { TITLE = b_tikhvin }
+	create_ley_lines = { TITLE = b_podporozhye }
+	create_ley_lines = { TITLE = b_soutjarvi }
+	create_ley_lines = { TITLE = b_onegaborg }
+	create_ley_lines = { TITLE = b_lizmajarvi }
+	create_ley_lines = { TITLE = b_seesjarvi }
+	create_ley_lines = { TITLE = b_tungut }
+	create_ley_lines = { TITLE = b_kem }
+	create_ley_lines = { TITLE = b_kuusema }
+	create_ley_lines = { TITLE = b_koutajoki }
+	create_ley_lines = { TITLE = c_akkel }
+	create_ley_lines = { TITLE = b_maselk }
+	create_ley_lines = { TITLE = b_kiilt }
+	create_ley_lines = { TITLE = b_iraklio }
+	create_ley_lines = { TITLE = b_rethymno }
+	create_ley_lines = { TITLE = b_monemvasia }
+	create_ley_lines = { TITLE = b_lacedaemonia }
+	create_ley_lines = { TITLE = b_karytaina }
+	create_ley_lines = { TITLE = b_andravida }
+	create_ley_lines = { TITLE = b_cephalonia }
+	create_ley_lines = { TITLE = c_lecce }
+	create_ley_lines = { TITLE = b_bari }
+	create_ley_lines = { TITLE = b_vieste }
+	create_ley_lines = { TITLE = b_macerata }
+	create_ley_lines = { TITLE = b_ancona }
+	create_ley_lines = { TITLE = b_pesaro }
+	create_ley_lines = { TITLE = b_rimini }
+	create_ley_lines = { TITLE = b_ravenna }
+	create_ley_lines = { TITLE = b_comacchio }
+	create_ley_lines = { TITLE = b_cona }
+	create_ley_lines = { TITLE = b_guastalla }
+	create_ley_lines = { TITLE = b_mantua }
+	create_ley_lines = { TITLE = b_chiari }
+	create_ley_lines = { TITLE = b_bergamo }
+	create_ley_lines = { TITLE = b_como }
+	create_ley_lines = { TITLE = b_bellinzona }
+	create_ley_lines = { TITLE = b_lucerne }
+	create_ley_lines = { TITLE = b_biel }
+	create_ley_lines = { TITLE = b_morteau }
+	create_ley_lines = { TITLE = b_vesoul }
+	create_ley_lines = { TITLE = b_lure }
+	create_ley_lines = { TITLE = b_champs }
+	create_ley_lines = { TITLE = b_grand }
+	create_ley_lines = { TITLE = b_joinville }
+	create_ley_lines = { TITLE = b_bar_sur_aube }
+	create_ley_lines = { TITLE = b_vitry_en_perthois }
+	create_ley_lines = { TITLE = b_epernay }
+	create_ley_lines = { TITLE = b_chateau_thierry }
+	create_ley_lines = { TITLE = b_crepy }
+	create_ley_lines = { TITLE = b_senlis }
+	create_ley_lines = { TITLE = b_clermont }
+	create_ley_lines = { TITLE = b_beauvais }
+	create_ley_lines = { TITLE = b_aumale }
+	create_ley_lines = { TITLE = b_eu }
+	create_ley_lines = { TITLE = b_arun }
+	create_ley_lines = { TITLE = b_chichester }
+	create_ley_lines = { TITLE = b_basingstoke }
+	create_ley_lines = { TITLE = b_winchester }
+	create_ley_lines = { TITLE = b_basingstoke }
+	create_ley_lines = { TITLE = b_ramsbury }
+	create_ley_lines = { TITLE = b_winchcombe }
+	create_ley_lines = { TITLE = b_gloucester }
+	create_ley_lines = { TITLE = b_worcester }
+	create_ley_lines = { TITLE = b_wigmore }
+	create_ley_lines = { TITLE = b_bishops_castle }
+	create_ley_lines = { TITLE = b_welshpool }
+	create_ley_lines = { TITLE = b_corwen }
+	create_ley_lines = { TITLE = b_llandudno }
+	create_ley_lines = { TITLE = b_caernarfon }
+	create_ley_lines = { TITLE = b_dundalk }
+	create_ley_lines = { TITLE = b_clogher }
+	create_ley_lines = { TITLE = b_belcoo }
+	create_ley_lines = { TITLE = b_donegal }
+	#Africa
+	create_ley_lines = { TITLE = b_abu_ghalib }
+	create_ley_lines = { TITLE = b_minuf }
+	create_ley_lines = { TITLE = b_ibyar }
+	create_ley_lines = { TITLE = b_burullus }
+	create_ley_lines = { TITLE = c_al-buhaira }
+	create_ley_lines = { TITLE = b_wadi_natrun }
+	create_ley_lines = { TITLE = b_qara }
+	create_ley_lines = { TITLE = b_wadi_masus }
+	create_ley_lines = { TITLE = b_jabal_al-gharbi }
+	create_ley_lines = { TITLE = b_benghazi }
+	create_ley_lines = { TITLE = b_jerba }
+	create_ley_lines = { TITLE = b_al_hamma }
+	create_ley_lines = { TITLE = b_taqyus }
+	create_ley_lines = { TITLE = b_hamma }
+	create_ley_lines = { TITLE = b_bousaada }
+	create_ley_lines = { TITLE = b_ashir_banya }
+	create_ley_lines = { TITLE = b_askedal }
+	create_ley_lines = { TITLE = b_mecheria }
+	create_ley_lines = { TITLE = b_tafraoua-sebdou }
+	create_ley_lines = { TITLE = b_tlemcen }
+	create_ley_lines = { TITLE = b_wajda }
+	create_ley_lines = { TITLE = b_saa }
+	create_ley_lines = { TITLE = b_taza }
+	create_ley_lines = { TITLE = b_tahlit }
+	create_ley_lines = { TITLE = b_kasr_al-kabir }
+	#Asia
+	create_ley_lines = { TITLE = b_side }
+	create_ley_lines = { TITLE = b_selge }
+	create_ley_lines = { TITLE = b_antiochia }
+	create_ley_lines = { TITLE = b_amorion }
+	create_ley_lines = { TITLE = b_nakoleia }
+	create_ley_lines = { TITLE = b_midaeum }
+	create_ley_lines = { TITLE = b_dorylaion }
+	create_ley_lines = { TITLE = b_soegud }
+	create_ley_lines = { TITLE = b_oka }
+	create_ley_lines = { TITLE = b_tarsos }
+	create_ley_lines = { TITLE = b_prusias_ad_hypium }
 }
 
 #########################################
@@ -56,8 +187,8 @@ create_focal_points = {
 
 populate_focal_point = {
 	#Africa
-	create_focal_points = { TITLE = c_giza }
-	create_focal_points = { TITLE = c_fes }
+	create_focal_points = { TITLE = b_gizeh }
+	create_focal_points = { TITLE = b_wargha }
 	create_focal_points = { TITLE = c_nyene }
 	#Europe
 	create_focal_points = { TITLE = c_anglesey }
