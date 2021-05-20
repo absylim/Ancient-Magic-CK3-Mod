@@ -119,6 +119,51 @@ populate_ley_lines = {
 	create_ley_lines = { TITLE = b_clogher }
 	create_ley_lines = { TITLE = b_belcoo }
 	create_ley_lines = { TITLE = b_donegal }
+	create_ley_lines = { TITLE = b_antequera }
+	create_ley_lines = { TITLE = b_malaga }
+	create_ley_lines = { TITLE = b_cabra }
+	create_ley_lines = { TITLE = b_cordoba }
+	create_ley_lines = { TITLE = b_pedroche }
+	create_ley_lines = { TITLE = b_alarcos }
+	create_ley_lines = { TITLE = b_malagon }
+	create_ley_lines = { TITLE = b_lapueblademontalban }
+	create_ley_lines = { TITLE = b_toledo }
+	create_ley_lines = { TITLE = b_maqueda }
+	create_ley_lines = { TITLE = b_segovia }
+	create_ley_lines = { TITLE = b_cuellar }
+	create_ley_lines = { TITLE = b_valladolid }
+	create_ley_lines = { TITLE = b_lerma }
+	create_ley_lines = { TITLE = b_burgos }
+	create_ley_lines = { TITLE = b_sedano }
+	create_ley_lines = { TITLE = b_amaya }
+	create_ley_lines = { TITLE = b_reinosa }
+	create_ley_lines = { TITLE = b_santiallana }
+	create_ley_lines = { TITLE = b_quimper }
+	create_ley_lines = { TITLE = b_brest }
+	create_ley_lines = { TITLE = b_st_pol_de_leon }
+	create_ley_lines = { TITLE = b_launceston }
+	create_ley_lines = { TITLE = b_okehampton }
+	create_ley_lines = { TITLE = b_barnstaple }
+	create_ley_lines = { TITLE = b_carmarthen }
+	create_ley_lines = { TITLE = b_fishguard }
+	create_ley_lines = { TITLE = b_cardigan }
+	create_ley_lines = { TITLE = b_llyn }
+	create_ley_lines = { TITLE = b_caernarfon }
+	create_ley_lines = { TITLE = c_isle_of_man }
+	create_ley_lines = { TITLE = b_wigtown }
+	create_ley_lines = { TITLE = c_carrick }
+	create_ley_lines = { TITLE = c_ayrshire }
+	create_ley_lines = { TITLE = b_glasgow }
+	create_ley_lines = { TITLE = b_meneith }
+	create_ley_lines = { TITLE = b_callander }
+	create_ley_lines = { TITLE = b_aberfeldy }
+	create_ley_lines = { TITLE = b_badenoch }
+	create_ley_lines = { TITLE = b_inverness }
+	create_ley_lines = { TITLE = b_dingwall }
+	create_ley_lines = { TITLE = b_tain }
+	create_ley_lines = { TITLE = b_dornoch }
+	create_ley_lines = { TITLE = b_durness }
+	create_ley_lines = { TITLE = b_torshavn }
 	#Africa
 	create_ley_lines = { TITLE = b_abu_ghalib }
 	create_ley_lines = { TITLE = b_minuf }
@@ -145,6 +190,7 @@ populate_ley_lines = {
 	create_ley_lines = { TITLE = b_taza }
 	create_ley_lines = { TITLE = b_tahlit }
 	create_ley_lines = { TITLE = b_kasr_al-kabir }
+	create_ley_lines = { TITLE = b_ghumira }
 	#Asia
 	create_ley_lines = { TITLE = b_side }
 	create_ley_lines = { TITLE = b_selge }
