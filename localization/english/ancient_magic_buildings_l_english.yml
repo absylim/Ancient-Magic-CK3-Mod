@@ -22,14 +22,14 @@
  
  #HOLDING
  city_of_magic_holding:0 "City of Magic"
- tribal_holding_concept_key:0 "[city of magic|E]"
+ tribal_holding_concept_key:0 "[city_of_magic|E]"
  building_type_city_of_magic_01:0 "City of Magic"
- building_type_city_of_magic_01_desc:1 "A populous city which houses a large number of mages, schollars, merchants, and hard-working townsfolk. This city should be build on #S Ley line#! or even better #S Focal Point#! so that it can draw the power from it for its future development."
+ building_type_city_of_magic_01_desc:1 "A populous city which houses a large number of mages, schollars, merchants, and hard-working townsfolk. This city should be build on [ley_line|E]! or even better [focal_point|E] so that it can draw the power from it for its future development."
  building_city_of_magic_01:1 "Magical Village Center"
  building_city_of_magic_01_desc:0 "A populous city which houses a large number of mages, schollars, merchants, and hard-working townsfolk."
  building_city_of_magic_02:1 "City of Magic"
- building_city_of_magic_02_desc:1 "This city has attracted the attention of traders, wizards, schollars and craftsmen from all around, with wealthy merchants setting up shop, wizars building their magic towers that are tapping into the #S Ley Line#!, schollar founding their universities and diligent craftsmen erecting new houses almost daily."
+ building_city_of_magic_02_desc:1 "This city has attracted the attention of traders, wizards, schollars and craftsmen from all around, with wealthy merchants setting up shop, wizars building their magic towers that are tapping into the [ley_line|E], schollar founding their universities and diligent craftsmen erecting new houses almost daily."
  building_city_of_magic_03:1 "Floating City"
- building_city_of_magic_03_desc:1 "No longer content with just occupying its original area, the city now moves intself into the sky, which is possible due to close aproximity to #S Focal Point#!. The city is vast and full of wealth of knwolage and opportunity to became great mage."
+ building_city_of_magic_03_desc:1 "No longer content with just occupying its original area, the city now moves intself into the sky, which is possible due to close aproximity to [focal_point|E]. The city is vast and full of wealth of knwolage and opportunity to became great mage."
  building_city_of_magic_04:1 "Ancient Magical City"
  building_city_of_magic_04_desc:1 "This city is renown as of the centers of Magic world. The mana here is so concetrated that it can be nearly seen. Its known that some of the best Mages in history live and lived in this Magic place."

@@ -6,14 +6,20 @@
 
 building_magical_low_requirement = {
 	OR={
-		has_province_modifier = ley_line_modifier
+		custom_description = {
+			text = has_ley_line_modifier
+			OR = { has_province_modifier = ley_line_modifier }	
+		}
 		building_magical_high_requirement = yes
 	}
 }
 
 building_magical_high_requirement = {
 	OR={
-		has_province_modifier = focal_point_modifier
+		custom_description = {
+			text = has_focal_point_modifier
+			OR = { has_province_modifier = focal_point_modifier }	
+		}
 	}
 }
 
