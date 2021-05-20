@@ -71,6 +71,21 @@ undead = {
     alias = { lesser_undead greater_undead }
 }
 
+city_of_magic = {
+}
+
+##################################################
+############ Ley Line System #####################
+##################################################
+ley_line = {
+	texture = "gfx/interface/icons/modifiers/ley_line.dds"
+	alias = { ley_lines }
+}
+
+focal_point = {
+	texture = "gfx/interface/icons/modifiers/focal_point.dds"
+}
+
 # SPELL DESCRIPTIONS
 # Chronomancy
 control_aging = {
