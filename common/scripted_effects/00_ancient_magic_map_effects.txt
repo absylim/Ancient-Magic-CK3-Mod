@@ -1,0 +1,279 @@
+#########################################
+#############   ley line    #############
+#########################################
+
+create_ley_lines = {
+	title:$TITLE$ = {
+		if = {
+			limit = {tier = tier_barony} 
+			title_province = {
+				add_province_modifier = ley_line_modifier
+			}
+		}
+		if = {
+			limit = {tier = tier_county} 
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_barony
+				}
+				title_province = {
+					add_province_modifier = ley_line_modifier
+				}
+			}
+		}
+	}
+}
+
+populate_ley_lines = {
+	#Europe
+	create_ley_lines = { TITLE = b_salisbury }
+	create_ley_lines = { TITLE = b_olbia_ETEL }
+	create_ley_lines = { TITLE = b_voznessensk }
+	create_ley_lines = { TITLE = b_pervomaisk }
+	create_ley_lines = { TITLE = b_kashan }
+	create_ley_lines = { TITLE = b_cherkassy }
+	create_ley_lines = { TITLE = b_lubny }
+	create_ley_lines = { TITLE = b_priluk }
+	create_ley_lines = { TITLE = b_borzna }
+	create_ley_lines = { TITLE = b_novgorod_seversky }
+	create_ley_lines = { TITLE = b_starodub }
+	create_ley_lines = { TITLE = b_mglin }
+	create_ley_lines = { TITLE = b_roslavl }
+	create_ley_lines = { TITLE = b_yelnya }
+	create_ley_lines = { TITLE = b_dorogobyzh }
+	create_ley_lines = { TITLE = b_dukhovshchina }
+	create_ley_lines = { TITLE = b_ozerski }
+	create_ley_lines = { TITLE = b_andreapol }
+	create_ley_lines = { TITLE = b_klichen }
+	create_ley_lines = { TITLE = b_valday }
+	create_ley_lines = { TITLE = b_tikhvin }
+	create_ley_lines = { TITLE = b_podporozhye }
+	create_ley_lines = { TITLE = b_soutjarvi }
+	create_ley_lines = { TITLE = b_onegaborg }
+	create_ley_lines = { TITLE = b_lizmajarvi }
+	create_ley_lines = { TITLE = b_tungut }
+	create_ley_lines = { TITLE = b_kem }
+	create_ley_lines = { TITLE = b_kuusema }
+	create_ley_lines = { TITLE = b_koutajoki }
+	create_ley_lines = { TITLE = c_akkel }
+	create_ley_lines = { TITLE = b_maselk }
+	create_ley_lines = { TITLE = b_kiilt }
+	create_ley_lines = { TITLE = b_iraklio }
+	create_ley_lines = { TITLE = b_rethymno }
+	create_ley_lines = { TITLE = b_monemvasia }
+	create_ley_lines = { TITLE = b_lacedaemonia }
+	create_ley_lines = { TITLE = b_karytaina }
+	create_ley_lines = { TITLE = b_andravida }
+	create_ley_lines = { TITLE = b_cephalonia }
+	create_ley_lines = { TITLE = c_lecce }
+	create_ley_lines = { TITLE = b_bari }
+	create_ley_lines = { TITLE = b_vieste }
+	create_ley_lines = { TITLE = b_macerata }
+	create_ley_lines = { TITLE = b_ancona }
+	create_ley_lines = { TITLE = b_pesaro }
+	create_ley_lines = { TITLE = b_rimini }
+	create_ley_lines = { TITLE = b_ravenna }
+	create_ley_lines = { TITLE = b_comacchio }
+	create_ley_lines = { TITLE = b_cona }
+	create_ley_lines = { TITLE = b_guastalla }
+	create_ley_lines = { TITLE = b_mantua }
+	create_ley_lines = { TITLE = b_chiari }
+	create_ley_lines = { TITLE = b_bergamo }
+	create_ley_lines = { TITLE = b_como }
+	create_ley_lines = { TITLE = b_bellinzona }
+	create_ley_lines = { TITLE = b_lucerne }
+	create_ley_lines = { TITLE = b_biel }
+	create_ley_lines = { TITLE = b_morteau }
+	create_ley_lines = { TITLE = b_vesoul }
+	create_ley_lines = { TITLE = b_lure }
+	create_ley_lines = { TITLE = b_champs }
+	create_ley_lines = { TITLE = b_grand }
+	create_ley_lines = { TITLE = b_joinville }
+	create_ley_lines = { TITLE = b_bar_sur_aube }
+	create_ley_lines = { TITLE = b_vitry_en_perthois }
+	create_ley_lines = { TITLE = b_epernay }
+	create_ley_lines = { TITLE = b_chateau_thierry }
+	create_ley_lines = { TITLE = b_crepy }
+	create_ley_lines = { TITLE = b_senlis }
+	create_ley_lines = { TITLE = b_clermont }
+	create_ley_lines = { TITLE = b_beauvais }
+	create_ley_lines = { TITLE = b_aumale }
+	create_ley_lines = { TITLE = b_eu }
+	create_ley_lines = { TITLE = b_arun }
+	create_ley_lines = { TITLE = b_chichester }
+	create_ley_lines = { TITLE = b_basingstoke }
+	create_ley_lines = { TITLE = b_winchester }
+	create_ley_lines = { TITLE = b_basingstoke }
+	create_ley_lines = { TITLE = b_ramsbury }
+	create_ley_lines = { TITLE = b_winchcombe }
+	create_ley_lines = { TITLE = b_gloucester }
+	create_ley_lines = { TITLE = b_worcester }
+	create_ley_lines = { TITLE = b_wigmore }
+	create_ley_lines = { TITLE = b_bishops_castle }
+	create_ley_lines = { TITLE = b_welshpool }
+	create_ley_lines = { TITLE = b_corwen }
+	create_ley_lines = { TITLE = b_llandudno }
+	create_ley_lines = { TITLE = b_caernarfon }
+	create_ley_lines = { TITLE = b_dundalk }
+	create_ley_lines = { TITLE = b_clogher }
+	create_ley_lines = { TITLE = b_belcoo }
+	create_ley_lines = { TITLE = b_donegal }
+	create_ley_lines = { TITLE = b_antequera }
+	create_ley_lines = { TITLE = b_malaga }
+	create_ley_lines = { TITLE = b_cabra }
+	create_ley_lines = { TITLE = b_cordoba }
+	create_ley_lines = { TITLE = b_pedroche }
+	create_ley_lines = { TITLE = b_alarcos }
+	create_ley_lines = { TITLE = b_malagon }
+	create_ley_lines = { TITLE = b_lapueblademontalban }
+	create_ley_lines = { TITLE = b_toledo }
+	create_ley_lines = { TITLE = b_maqueda }
+	create_ley_lines = { TITLE = b_segovia }
+	create_ley_lines = { TITLE = b_cuellar }
+	create_ley_lines = { TITLE = b_valladolid }
+	create_ley_lines = { TITLE = b_lerma }
+	create_ley_lines = { TITLE = b_burgos }
+	create_ley_lines = { TITLE = b_sedano }
+	create_ley_lines = { TITLE = b_amaya }
+	create_ley_lines = { TITLE = b_reinosa }
+	create_ley_lines = { TITLE = b_santiallana }
+	create_ley_lines = { TITLE = b_quimper }
+	create_ley_lines = { TITLE = b_brest }
+	create_ley_lines = { TITLE = b_st_pol_de_leon }
+	create_ley_lines = { TITLE = b_launceston }
+	create_ley_lines = { TITLE = b_okehampton }
+	create_ley_lines = { TITLE = b_barnstaple }
+	create_ley_lines = { TITLE = b_carmarthen }
+	create_ley_lines = { TITLE = b_fishguard }
+	create_ley_lines = { TITLE = b_cardigan }
+	create_ley_lines = { TITLE = b_llyn }
+	create_ley_lines = { TITLE = b_caernarfon }
+	create_ley_lines = { TITLE = c_isle_of_man }
+	create_ley_lines = { TITLE = b_wigtown }
+	create_ley_lines = { TITLE = c_carrick }
+	create_ley_lines = { TITLE = c_ayrshire }
+	create_ley_lines = { TITLE = b_glasgow }
+	create_ley_lines = { TITLE = b_meneith }
+	create_ley_lines = { TITLE = b_callander }
+	create_ley_lines = { TITLE = b_aberfeldy }
+	create_ley_lines = { TITLE = b_badenoch }
+	create_ley_lines = { TITLE = b_inverness }
+	create_ley_lines = { TITLE = b_dingwall }
+	create_ley_lines = { TITLE = b_tain }
+	create_ley_lines = { TITLE = b_dornoch }
+	create_ley_lines = { TITLE = b_durness }
+	create_ley_lines = { TITLE = b_torshavn }
+	create_ley_lines = { TITLE = b_waterford }
+	create_ley_lines = { TITLE = b_wexford }
+	create_ley_lines = { TITLE = b_enniscorthy }
+	create_ley_lines = { TITLE = b_furness }
+	create_ley_lines = { TITLE = b_kendal }
+	create_ley_lines = { TITLE = b_appleby }
+	create_ley_lines = { TITLE = b_richmond }
+	create_ley_lines = { TITLE = b_hartlepool }
+	create_ley_lines = { TITLE = b_durham }
+	create_ley_lines = { TITLE = b_jatharr }
+	create_ley_lines = { TITLE = b_heiane }
+	create_ley_lines = { TITLE = b_numedall }
+	create_ley_lines = { TITLE = b_ringariki }
+	create_ley_lines = { TITLE = b_valdres }
+	create_ley_lines = { TITLE = b_hedmork }
+	create_ley_lines = { TITLE = b_suthri_eystridali }
+	create_ley_lines = { TITLE = b_lima }
+	create_ley_lines = { TITLE = b_orsa }
+	create_ley_lines = { TITLE = b_mor }
+	create_ley_lines = { TITLE = b_baldanas }
+	create_ley_lines = { TITLE = b_norale }
+	create_ley_lines = { TITLE = b_mustasaari }
+	create_ley_lines = { TITLE = b_levanluhta }
+	create_ley_lines = { TITLE = b_vuohijarvi }
+	create_ley_lines = { TITLE = c_pielinen }
+	create_ley_lines = { TITLE = b_povenets }
+	create_ley_lines = { TITLE = b_yangary }
+	create_ley_lines = { TITLE = b_yarnema }
+	create_ley_lines = { TITLE = b_ous_vaga }
+	create_ley_lines = { TITLE = b_bereznik }
+	create_ley_lines = { TITLE = b_krasny_bor }
+	create_ley_lines = { TITLE = b_usyorga }
+	#Africa
+	create_ley_lines = { TITLE = b_abu_ghalib }
+	create_ley_lines = { TITLE = b_minuf }
+	create_ley_lines = { TITLE = b_ibyar }
+	create_ley_lines = { TITLE = b_burullus }
+	create_ley_lines = { TITLE = c_al-buhaira }
+	create_ley_lines = { TITLE = b_wadi_natrun }
+	create_ley_lines = { TITLE = b_qara }
+	create_ley_lines = { TITLE = b_wadi_masus }
+	create_ley_lines = { TITLE = b_jabal_al-gharbi }
+	create_ley_lines = { TITLE = b_benghazi }
+	create_ley_lines = { TITLE = b_jerba }
+	create_ley_lines = { TITLE = b_al_hamma }
+	create_ley_lines = { TITLE = b_taqyus }
+	create_ley_lines = { TITLE = b_hamma }
+	create_ley_lines = { TITLE = b_bousaada }
+	create_ley_lines = { TITLE = b_ashir_banya }
+	create_ley_lines = { TITLE = b_askedal }
+	create_ley_lines = { TITLE = b_mecheria }
+	create_ley_lines = { TITLE = b_tafraoua-sebdou }
+	create_ley_lines = { TITLE = b_tlemcen }
+	create_ley_lines = { TITLE = b_wajda }
+	create_ley_lines = { TITLE = b_saa }
+	create_ley_lines = { TITLE = b_taza }
+	create_ley_lines = { TITLE = b_tahlit }
+	create_ley_lines = { TITLE = b_kasr_al-kabir }
+	create_ley_lines = { TITLE = b_ghumira }
+	#Asia
+	create_ley_lines = { TITLE = b_side }
+	create_ley_lines = { TITLE = b_selge }
+	create_ley_lines = { TITLE = b_antiochia }
+	create_ley_lines = { TITLE = b_amorion }
+	create_ley_lines = { TITLE = b_nakoleia }
+	create_ley_lines = { TITLE = b_midaeum }
+	create_ley_lines = { TITLE = b_dorylaion }
+	create_ley_lines = { TITLE = b_soegud }
+	create_ley_lines = { TITLE = b_oka }
+	create_ley_lines = { TITLE = b_tarsos }
+	create_ley_lines = { TITLE = b_prusias_ad_hypium }
+	create_ley_lines = { TITLE = b_kai }
+}
+
+#########################################
+#############  FOCAL POINT  #############
+#########################################
+
+create_focal_points = {
+	title:$TITLE$ = {
+		if = {
+			limit = {tier = tier_barony} 
+			title_province = {
+				add_province_modifier = focal_point_modifier
+			}
+		}
+		if = {
+			limit = {tier = tier_county} 
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_barony
+				}
+				title_province = {
+					add_province_modifier = focal_point_modifier
+				}
+			}
+		}
+	}
+}
+
+populate_focal_point = {
+	#Africa
+	create_focal_points = { TITLE = b_gizeh }
+	create_focal_points = { TITLE = b_wargha }
+	create_focal_points = { TITLE = c_nyene }
+	#Europe
+	create_focal_points = { TITLE = c_anglesey }
+	create_focal_points = { TITLE = b_seesjarvi }
+	#Asia
+	create_focal_points = { TITLE = b_jaman_akkul }
+	create_focal_points = { TITLE = c_zabulistan }
+	create_focal_points = { TITLE = c_sungqu }
+	create_focal_points = { TITLE = b_kartaszevo }
+}

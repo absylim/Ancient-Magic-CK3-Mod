@@ -47,6 +47,8 @@ ancient_magic_academy_02 = {
 	
 	can_construct_potential = {
 		building_ancient_magic_mage_buildings_requirement = yes
+		building_magical_low_requirement = yes
+		building_requirement_castle_city_church = { LEVEL = 01 }
 		scope:holder = {
 			mage_level >=5
 		}
@@ -54,6 +56,7 @@ ancient_magic_academy_02 = {
 	
 	is_enabled = {
 		building_ancient_magic_mage_buildings_requirement = yes
+		building_magical_low_requirement = yes
 	}
 	show_disabled = yes
 	
@@ -93,6 +96,8 @@ ancient_magic_academy_03 = {
 	
 	can_construct_potential = {
 		building_ancient_magic_mage_buildings_requirement = yes
+		building_magical_high_requirement = yes
+		building_requirement_castle_city_church = { LEVEL = 01 }
 		scope:holder = {
 			mage_level >=7
 		}
@@ -100,6 +105,7 @@ ancient_magic_academy_03 = {
 	
 	is_enabled = {
 		building_ancient_magic_mage_buildings_requirement = yes
+		building_magical_high_requirement = yes
 	}
 	show_disabled = yes
 	
@@ -143,11 +149,12 @@ ancient_magic_mana_circle_01 = {
 
 	is_enabled = {
 		building_ancient_magic_mage_buildings_requirement = yes
+		building_magical_low_requirement = yes
 	}
 	
 	can_construct_potential = {
 		building_ancient_magic_mage_buildings_requirement = yes
-		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_magical_low_requirement = yes
 	}
 	
 	next_building = ancient_magic_mana_circle_02
@@ -178,11 +185,12 @@ ancient_magic_mana_circle_02 = {
 
 	is_enabled = {
 		building_ancient_magic_mage_buildings_requirement = yes
+		building_magical_low_requirement = yes
 	}
 	
 	can_construct_potential = {
 		building_ancient_magic_mage_buildings_requirement = yes
-		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_magical_low_requirement = yes
 	}
 	
 	next_building = ancient_magic_mana_circle_03
@@ -213,11 +221,12 @@ ancient_magic_mana_circle_03 = {
 
 	is_enabled = {
 		building_ancient_magic_mage_buildings_requirement = yes
+		building_magical_high_requirement = yes
 	}
 	
 	can_construct_potential = {
-		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_ancient_magic_mage_buildings_requirement = yes
+		building_magical_high_requirement = yes
 	}
 	
 	cost_gold = expensive_building_tier_4_cost

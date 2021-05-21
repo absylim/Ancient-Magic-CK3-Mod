@@ -77,6 +77,15 @@
  game_concept_undead_desc:0 "The undead are people and animals which have died and been reanimated by [necromancy|E]. Most undead, called 'lesser undead' to distinguish them from more sophisticated beings are mindless creatures which only follow whatever instructions their creator invests them with at the time of their creation.\n\nTrue masters of the necromantic arts are able to create more complex forms of undeath, however. These beings, called 'greater undead' retain much of their mind and volition, though are usually still slaves to the spell caster that created them. The exception to this rule is the líché, a powerful undead spell caster which, due to their magical ability, is able to retain their mind and volition, even after their transformation from a living being into an undead creature. Powerful necromancers often choose to pursue this path to immortality, or to impart it on their favored subjects and family."
  game_concept_lesser_undead:0 "lesser undead"
  game_concept_greater_undead:0 "greater undead"
+ #Holding
+ game_concept_city_of_magic:0 "City Of Magic"
+ game_concept_city_of_magic_desc:0 "Magical city that¨s mainly occupied by mages and schollars."
+ #Ley Lines
+ game_concept_ley_line:0 "Ley Line"
+ game_concept_ley_line_desc:0 "Is a 'river' of arcane energies, which goes from one focal point to another. And around those lines is the concentration slightly higher then anywhere else, also its possible with magical constructs to tap into those 'rivers' of Arcane power."
+ game_concept_ley_lines:0 "Ley Lines"
+ game_concept_focal_point:0 "Focal Point"
+ game_concept_focal_point_desc:0 "Is an intersection of river arcane energines called [ley_lines|E]. In the area of these places the arcane energies are the most concentrated o Earth."
  #Spell Explanations:
  game_concept_mage_spell:0 "Spell"
  game_concept_mage_spell_desc:0 "When a [GetTrait('mage').GetName( GetNullCharacter ) |LV] says that they are casting a spell, what they mean is that they are drawing on years of training to put themselves into a certain state of mind. While not necessary, due to the complexity of even the most simple spells, most mages often uses specific spell mnemonics - words and gestures which help them to remember the state of mind a spell requires.\n\nOnce the mage has achieved the necessary state of mind, they "cast" this spell out into the world around them. The ability to "cast" is what distinguishes those with [GetTrait('magic_potential_1').GetName( GetNullCharacter ) |LV] from everyone else in the world. At the end of the day, anyone can achieve the frame of mind required to construct a spell, but only mages may "cast" their thoughts and will into the world around them, a process known as creating a spell construct."

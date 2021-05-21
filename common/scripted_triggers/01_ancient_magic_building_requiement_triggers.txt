@@ -3,3 +3,51 @@
 		has_trait = mage
 	}
 }
+
+building_magical_low_requirement = {
+	OR={
+		custom_description = {
+			text = has_ley_line_modifier
+			OR = { has_province_modifier = ley_line_modifier }	
+		}
+		building_magical_high_requirement = yes
+	}
+}
+
+building_magical_high_requirement = {
+	OR={
+		custom_description = {
+			text = has_focal_point_modifier
+			OR = { has_province_modifier = focal_point_modifier }	
+		}
+	}
+}
+
+######################################################################
+# Holding Level
+######################################################################
+
+building_requirement_castle_city_church = {
+	trigger_if = {
+		limit = { has_holding_type = castle_holding }
+		has_building_or_higher = castle_$LEVEL$
+	}
+	trigger_else_if = {
+		limit = { has_holding_type = city_holding }
+		has_building_or_higher = city_$LEVEL$
+	}
+	trigger_else_if = {
+		limit = { has_holding_type = church_holding }
+		has_building_or_higher = temple_$LEVEL$
+	}
+	trigger_else_if = {
+		limit = { has_holding_type = city_of_magic_holding }
+		has_building_or_higher = city_of_magic_$LEVEL$
+	}
+	trigger_else = {
+		custom_description = {
+			text = "building_requirement_castle_city_church_failed"
+			always = no
+		}
+	}
+}
