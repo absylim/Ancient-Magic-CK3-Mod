@@ -51,7 +51,6 @@ populate_ley_lines = {
 	create_ley_lines = { TITLE = b_soutjarvi }
 	create_ley_lines = { TITLE = b_onegaborg }
 	create_ley_lines = { TITLE = b_lizmajarvi }
-	create_ley_lines = { TITLE = b_seesjarvi }
 	create_ley_lines = { TITLE = b_tungut }
 	create_ley_lines = { TITLE = b_kem }
 	create_ley_lines = { TITLE = b_kuusema }
@@ -164,6 +163,38 @@ populate_ley_lines = {
 	create_ley_lines = { TITLE = b_dornoch }
 	create_ley_lines = { TITLE = b_durness }
 	create_ley_lines = { TITLE = b_torshavn }
+	create_ley_lines = { TITLE = b_waterford }
+	create_ley_lines = { TITLE = b_wexford }
+	create_ley_lines = { TITLE = b_enniscorthy }
+	create_ley_lines = { TITLE = b_furness }
+	create_ley_lines = { TITLE = b_kendal }
+	create_ley_lines = { TITLE = b_appleby }
+	create_ley_lines = { TITLE = b_richmond }
+	create_ley_lines = { TITLE = b_hartlepool }
+	create_ley_lines = { TITLE = b_durham }
+	create_ley_lines = { TITLE = b_jatharr }
+	create_ley_lines = { TITLE = b_heiane }
+	create_ley_lines = { TITLE = b_numedall }
+	create_ley_lines = { TITLE = b_ringariki }
+	create_ley_lines = { TITLE = b_valdres }
+	create_ley_lines = { TITLE = b_hedmork }
+	create_ley_lines = { TITLE = b_suthri_eystridali }
+	create_ley_lines = { TITLE = b_lima }
+	create_ley_lines = { TITLE = b_orsa }
+	create_ley_lines = { TITLE = b_mor }
+	create_ley_lines = { TITLE = b_baldanas }
+	create_ley_lines = { TITLE = b_norale }
+	create_ley_lines = { TITLE = b_mustasaari }
+	create_ley_lines = { TITLE = b_levanluhta }
+	create_ley_lines = { TITLE = b_vuohijarvi }
+	create_ley_lines = { TITLE = c_pielinen }
+	create_ley_lines = { TITLE = b_povenets }
+	create_ley_lines = { TITLE = b_yangary }
+	create_ley_lines = { TITLE = b_yarnema }
+	create_ley_lines = { TITLE = b_ous_vaga }
+	create_ley_lines = { TITLE = b_bereznik }
+	create_ley_lines = { TITLE = b_krasny_bor }
+	create_ley_lines = { TITLE = b_usyorga }
 	#Africa
 	create_ley_lines = { TITLE = b_abu_ghalib }
 	create_ley_lines = { TITLE = b_minuf }
@@ -203,6 +234,7 @@ populate_ley_lines = {
 	create_ley_lines = { TITLE = b_oka }
 	create_ley_lines = { TITLE = b_tarsos }
 	create_ley_lines = { TITLE = b_prusias_ad_hypium }
+	create_ley_lines = { TITLE = b_kai }
 }
 
 #########################################
