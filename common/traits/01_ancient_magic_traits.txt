@@ -74,6 +74,10 @@ undead = {
 	general_opinion = -30
 	same_opinion = 30
 	dread_baseline_add = 10
+	
+	ai_compassion = dominant_positive_ai_value
+	ai_boldness = very_low_positive_ai_value
+	ai_rationality = very_low_positive_ai_value
 }
 deacon_of_death = {
 	index = 9008
