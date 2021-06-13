@@ -3,3 +3,22 @@
 	years = 5
 	decaying = yes
 }
+
+
+witchcraft_allowed = {
+	opinion = 15
+}
+
+necromancy_crime = {
+	opinion = -60
+	imprisonment_reason = yes
+	execute_reason = yes
+}
+
+necromancy_intolerant = {
+	opinion = -30
+}
+
+necromancy_allowed = {
+	opinion = 30
+}

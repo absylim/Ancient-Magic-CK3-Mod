@@ -65,19 +65,61 @@ master_of_time = {
 	ruler_designer_cost = 50
 }
 
+
+mage = {
+	index = 33302
+
+	same_opinion = 20
+	
+	ruler_designer_cost = 10
+	
+	ai_boldness = very_low_positive_ai_value
+    ai_rationality = high_positive_ai_value
+
+    triggered_opinion = {
+        parameter = witchcraft_illegal
+        opinion_modifier = witchcraft_crime
+        ignore_opinion_value_if_same_trait = yes
+    }
+    triggered_opinion = {
+        parameter = witchcraft_shunned
+        opinion_modifier = witchcraft_intolerant
+        ignore_opinion_value_if_same_trait = yes
+    }
+    triggered_opinion = {
+        parameter = witchcraft_accepted
+        opinion_modifier = witchcraft_allowed
+        ignore_opinion_value_if_same_trait = yes
+    }
+}
+
 undead = {
 	index = 9007
 	immortal = yes
 	#fertility = -1000
 	can_have_children = no # Looks better
 	dread_baseline_add = 30
+	attraction_opinion = -30
 	general_opinion = -30
 	same_opinion = 30
 	dread_baseline_add = 10
 	
-	ai_compassion = dominant_positive_ai_value
+	ruler_designer_cost = 10
+	
+	ai_compassion = dominant_negative_ai_value
 	ai_boldness = very_low_positive_ai_value
 	ai_rationality = very_low_positive_ai_value
+
+    triggered_opinion = {
+        parameter = necromancy_illegal
+        opinion_modifier = necromancy_crime
+        ignore_opinion_value_if_same_trait = yes
+    }
+    triggered_opinion = {
+        parameter = necromancy_accepted
+        opinion_modifier = necromancy_allowed
+        ignore_opinion_value_if_same_trait = yes
+    }
 }
 deacon_of_death = {
 	index = 9008

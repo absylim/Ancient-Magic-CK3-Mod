@@ -1,0 +1,8 @@
+﻿l_english:
+#cooldowns
+ witchcraft_allowed:0 "Witchract allowed"
+ undead_crime:0 "Known [GetTrait('undead').GetName( GetNullCharacter )]"
+ necromancy_crime:0 "Known [GetTrait('undead').GetName( GetNullCharacter )]"
+ necromancy_intolerant:0 "Known [GetTrait('undead').GetName( GetNullCharacter )]"
+ necromancy_allowed:0 "Necromancy Accepted"
+ 
