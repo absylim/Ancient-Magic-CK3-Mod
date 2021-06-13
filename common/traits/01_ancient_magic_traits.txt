@@ -4,6 +4,7 @@
 	immortal = yes
 	
 	ruler_designer_cost = 100
+	ai_compassion = very_low_negative_ai_value
 }
 
 magic_potential_1 = {
@@ -55,6 +56,7 @@ architect_of_bloodlines = {
 	index = 9005
 	
 	ruler_designer_cost = 50
+	ai_rationality = very_low_positive_ai_value
 }
 
 master_of_time = {
@@ -63,6 +65,7 @@ master_of_time = {
 	immortal = yes
 	
 	ruler_designer_cost = 50
+	ai_rationality = very_low_positive_ai_value
 }
 
 
@@ -125,9 +128,14 @@ deacon_of_death = {
 	index = 9008
 	
 	ruler_designer_cost = 50
+	ai_compassion = low_negative_ai_value
+	ai_rationality = very_low_positive_ai_value
 }
 avatar_of_life = {
 	index = 9009
+	
+	ai_compassion = low_positive_ai_value
+	ai_rationality = very_low_positive_ai_value
 	
 	ruler_designer_cost = 50
 }
@@ -135,11 +143,13 @@ lord_of_the_elements = {
 	index = 9010
 	
 	ruler_designer_cost = 50
+	ai_rationality = very_low_positive_ai_value
 }
 master_of_puppets = {
 	index = 9011
 	
 	ruler_designer_cost = 50
+	ai_rationality = very_low_positive_ai_value
 }
 
 ##############################################
