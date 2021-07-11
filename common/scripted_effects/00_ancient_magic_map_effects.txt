@@ -195,6 +195,7 @@ populate_ley_lines = {
 	create_ley_lines = { TITLE = b_bereznik }
 	create_ley_lines = { TITLE = b_krasny_bor }
 	create_ley_lines = { TITLE = b_usyorga }
+	
 	#Africa
 	create_ley_lines = { TITLE = b_abu_ghalib }
 	create_ley_lines = { TITLE = b_minuf }
@@ -222,6 +223,123 @@ populate_ley_lines = {
 	create_ley_lines = { TITLE = b_tahlit }
 	create_ley_lines = { TITLE = b_kasr_al-kabir }
 	create_ley_lines = { TITLE = b_ghumira }
+	create_ley_lines = { TITLE = b_al_aliya }
+	create_ley_lines = { TITLE = b_fes }
+	create_ley_lines = { TITLE = b_sefrou }
+	create_ley_lines = { TITLE = b_wazeqqur }
+	create_ley_lines = { TITLE = b_wawmana }
+	create_ley_lines = { TITLE = b_afza }
+	create_ley_lines = { TITLE = b_tudgha }
+	create_ley_lines = { TITLE = b_iguidi_east }
+	create_ley_lines = { TITLE = b_awgham }
+	create_ley_lines = { TITLE = b_akumbu }
+	create_ley_lines = { TITLE = b_west_mema }
+	create_ley_lines = { TITLE = b_kri }
+	create_ley_lines = { TITLE = b_sanado }
+	create_ley_lines = { TITLE = b_taba }
+	create_ley_lines = { TITLE = b_kumya }
+	create_ley_lines = { TITLE = b_sikasso }
+	create_ley_lines = { TITLE = b_bou }
+	create_ley_lines = { TITLE = c_boron }
+	create_ley_lines = { TITLE = c_lobo }
+	create_ley_lines = { TITLE = b_east_kru }
+	create_ley_lines = { TITLE = b_bolm }
+	create_ley_lines = { TITLE = b_kono }
+	create_ley_lines = { TITLE = b_kuramora }
+	create_ley_lines = { TITLE = b_lele }
+	create_ley_lines = { TITLE = b_kisi }
+	create_ley_lines = { TITLE = b_falanko }
+	create_ley_lines = { TITLE = b_macenta }
+	create_ley_lines = { TITLE = b_musadugu }
+	create_ley_lines = { TITLE = b_fwala-konyan }
+	create_ley_lines = { TITLE = b_odienne }
+	create_ley_lines = { TITLE = b_tyeme }
+	create_ley_lines = { TITLE = b_banifing }
+	create_ley_lines = { TITLE = b_degou }
+	create_ley_lines = { TITLE = b_yanfolila }
+	create_ley_lines = { TITLE = b_figuira }
+	create_ley_lines = { TITLE = b_kangaba }
+	create_ley_lines = { TITLE = b_tabon }
+	create_ley_lines = { TITLE = b_birgo }
+	create_ley_lines = { TITLE = b_kita }
+	create_ley_lines = { TITLE = b_badumbe }
+	create_ley_lines = { TITLE = c_yelimane }
+	create_ley_lines = { TITLE = b_guidimaka }
+	create_ley_lines = { TITLE = b_karakoro }
+	create_ley_lines = { TITLE = c_jowol }
+	create_ley_lines = { TITLE = c_dhraina }
+	create_ley_lines = { TITLE = b_busir }
+	create_ley_lines = { TITLE = b_atfih }
+	create_ley_lines = { TITLE = b_qusayr }
+	create_ley_lines = { TITLE = b_north_jbl_quzlum }
+	create_ley_lines = { TITLE = b_central_jbl_quzlum }
+	create_ley_lines = { TITLE = c_aydhab }
+	create_ley_lines = { TITLE = b_dungunab }
+	create_ley_lines = { TITLE = b_gimhile }
+	create_ley_lines = { TITLE = b_mawza }
+	create_ley_lines = { TITLE = b_al-mandab }
+	create_ley_lines = { TITLE = b_berbera }
+	create_ley_lines = { TITLE = b_sheikh }
+	create_ley_lines = { TITLE = b_mudug-sout }
+	create_ley_lines = { TITLE = b_hobyo-north }
+	create_ley_lines = { TITLE = c_faras }
+	create_ley_lines = { TITLE = b_sheikh_dawud }
+	create_ley_lines = { TITLE = b_asyut }
+	create_ley_lines = { TITLE = b_bawit }
+	create_ley_lines = { TITLE = b_ansina }
+	create_ley_lines = { TITLE = b_ihrit }
+	create_ley_lines = { TITLE = b_ahnas }
+	create_ley_lines = { TITLE = b_wadi_el-milk }
+	create_ley_lines = { TITLE = b_akasha }
+	create_ley_lines = { TITLE = b_old_dongola }
+	create_ley_lines = { TITLE = b_diffar }
+	create_ley_lines = { TITLE = b_grnetti }
+	create_ley_lines = { TITLE = b_el-obeid }
+	create_ley_lines = { TITLE = b_sidrah }
+	create_ley_lines = { TITLE = b_liguri }
+	create_ley_lines = { TITLE = b_bawiti }
+	create_ley_lines = { TITLE = c_fayyum }
+	create_ley_lines = { TITLE = b_tibesti_route }
+	create_ley_lines = { TITLE = b_tummo }
+	create_ley_lines = { TITLE = b_djado }
+	create_ley_lines = { TITLE = b_air }
+	create_ley_lines = { TITLE = b_takkeda }
+	create_ley_lines = { TITLE = b_pura }
+	create_ley_lines = { TITLE = b_boromo }
+	create_ley_lines = { TITLE = b_bobo_dyulasso }
+	create_ley_lines = { TITLE = c_wagadugu }
+	create_ley_lines = { TITLE = b_dori }
+	create_ley_lines = { TITLE = b_gabou_bura }
+	create_ley_lines = { TITLE = b_kukiya }
+	create_ley_lines = { TITLE = b_tando_husubiya }
+	create_ley_lines = { TITLE = b_leraba }
+	create_ley_lines = { TITLE = c_loropeni }
+	create_ley_lines = { TITLE = b_kulango }
+	create_ley_lines = { TITLE = b_bouna }
+	create_ley_lines = { TITLE = b_wa }
+	create_ley_lines = { TITLE = b_bole2 }
+	create_ley_lines = { TITLE = b_buipe }
+	create_ley_lines = { TITLE = b_kintampo }
+	create_ley_lines = { TITLE = b_mawli }
+	create_ley_lines = { TITLE = b_salaga }
+	create_ley_lines = { TITLE = b_kete-karachi }
+	create_ley_lines = { TITLE = b_nanumba }
+	create_ley_lines = { TITLE = b_atakpame }
+	create_ley_lines = { TITLE = b_todo }
+	create_ley_lines = { TITLE = b_savalu }
+	create_ley_lines = { TITLE = b_ketu }
+	create_ley_lines = { TITLE = b_ilaro }
+	create_ley_lines = { TITLE = b_abeokuta }
+	create_ley_lines = { TITLE = b_ibadan }
+	create_ley_lines = { TITLE = b_oshun }
+	create_ley_lines = { TITLE = b_siluko }
+	create_ley_lines = { TITLE = b_benin }
+	create_ley_lines = { TITLE = b_edo }
+	create_ley_lines = { TITLE = b_ode_itseriki }
+	create_ley_lines = { TITLE = b_onitsha }
+	create_ley_lines = { TITLE = b_igbo-ukwu }
+	create_ley_lines = { TITLE = c_ibibo }
+	
 	#Asia
 	create_ley_lines = { TITLE = b_side }
 	create_ley_lines = { TITLE = b_selge }
@@ -235,6 +353,20 @@ populate_ley_lines = {
 	create_ley_lines = { TITLE = b_tarsos }
 	create_ley_lines = { TITLE = b_prusias_ad_hypium }
 	create_ley_lines = { TITLE = b_kai }
+	create_ley_lines = { TITLE =  }
+	create_ley_lines = { TITLE =  }
+	create_ley_lines = { TITLE =  }
+	create_ley_lines = { TITLE =  }
+	create_ley_lines = { TITLE =  }
+	create_ley_lines = { TITLE =  }
+	create_ley_lines = { TITLE =  }
+	create_ley_lines = { TITLE =  }
+	create_ley_lines = { TITLE =  }
+	create_ley_lines = { TITLE =  }
+	create_ley_lines = { TITLE =  }
+	create_ley_lines = { TITLE =  }
+	create_ley_lines = { TITLE =  }
+	create_ley_lines = { TITLE =  }
 }
 
 #########################################
