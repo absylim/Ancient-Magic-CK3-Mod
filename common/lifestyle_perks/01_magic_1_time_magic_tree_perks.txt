@@ -80,6 +80,54 @@ glimpse_the_future_perk = {
 	position = { 0 1.25 }
 	icon = node_diplomacy
 	
+	auto_selection_weight = {
+		value = 11
+		if = {
+			limit = {
+				OR = {
+					has_trait = magic_potential	
+					has_trait = education_arcane
+				}
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = ambitious
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = greedy
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = temperate
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = patient
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				NOT = { is_immortal=yes }
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
 	
 	effect = {
 		custom_description_no_bullet = {
@@ -106,7 +154,54 @@ finacial_times_perk = {
 	position = { 0 2.5 }
 	icon = node_diplomacy
 	
-	
+	auto_selection_weight = {
+		value = 11
+		if = {
+			limit = {
+				OR = {
+					has_trait = magic_potential	
+					has_trait = education_arcane
+				}
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = ambitious
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = greedy
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = temperate
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = patient
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				NOT = { is_immortal=yes }
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
 	
 	parent = glimpse_the_future_perk
 	
@@ -135,7 +230,54 @@ celerity_perk = {
 	
 	parent = time_mage_perk
 	
-	
+	auto_selection_weight = {
+		value = 11
+		if = {
+			limit = {
+				OR = {
+					has_trait = magic_potential	
+					has_trait = education_arcane
+				}
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = ambitious
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = greedy
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = temperate
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = patient
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				NOT = { is_immortal=yes }
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
 	
 	effect = {
 		custom_description_no_bullet = {
@@ -160,7 +302,54 @@ mass_celerity_perk = {
 	position = { 2 2.5 }
 	icon = node_diplomacy
 	
-	
+	auto_selection_weight = {
+		value = 11
+		if = {
+			limit = {
+				OR = {
+					has_trait = magic_potential	
+					has_trait = education_arcane
+				}
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = ambitious
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = greedy
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = temperate
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = patient
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				NOT = { is_immortal=yes }
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
 	
 	parent = celerity_perk
 	
@@ -187,7 +376,54 @@ slowness_perk = {
 	position = { 4 1.25 }
 	icon = node_diplomacy
 	
-	
+	auto_selection_weight = {
+		value = 11
+		if = {
+			limit = {
+				OR = {
+					has_trait = magic_potential	
+					has_trait = education_arcane
+				}
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = ambitious
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = greedy
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = temperate
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = patient
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				NOT = { is_immortal=yes }
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
 	
 	parent = time_mage_perk
 
@@ -214,7 +450,54 @@ mass_slowness_perk = {
 	position = { 4 2.5 }
 	icon = node_diplomacy
 	
-	
+	auto_selection_weight = {
+		value = 11
+		if = {
+			limit = {
+				OR = {
+					has_trait = magic_potential	
+					has_trait = education_arcane
+				}
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = ambitious
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = greedy
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = temperate
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = patient
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				NOT = { is_immortal=yes }
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
 	
 	parent = slowness_perk
 	
@@ -241,7 +524,54 @@ temporal_manipulation_perk = {
 	position = { 2 3.75 }
 	icon = node_diplomacy
 	
-	
+	auto_selection_weight = {
+		value = 11
+		if = {
+			limit = {
+				OR = {
+					has_trait = magic_potential	
+					has_trait = education_arcane
+				}
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = ambitious
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = greedy
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = temperate
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = patient
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				NOT = { is_immortal=yes }
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
 	
 	parent = finacial_times_perk
 	parent = mass_celerity_perk
@@ -270,6 +600,54 @@ master_of_time_perk = {
 	position = { 2 5 }
 	icon = master_of_time
 	
+	auto_selection_weight = {
+		value = 11
+		if = {
+			limit = {
+				OR = {
+					has_trait = magic_potential	
+					has_trait = education_arcane
+				}
+			}
+			add = 3000
+		}
+		if = {
+			limit = {
+				has_trait = ambitious
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = greedy
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = temperate
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = patient
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				NOT = { is_immortal=yes }
+			}
+			multiply = 10
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
 	
 	
 	parent = temporal_manipulation_perk
