@@ -1,0 +1,55 @@
+namespace = AM_education_and_talents
+
+AM_education_and_talents.001 = {
+	hidden = yes
+	type = empty
+	immediate = {
+		every_living_character = {
+			trigger_event = AM_education_and_talents.002
+		}
+	}
+}
+
+
+AM_education_and_talents.002 = { #Will give every person who has arcane education magical potential
+	hidden = yes
+	immediate = {
+		if = {
+			limit = {
+				AND = {
+					has_education_arcane_trigger = yes
+					NOR = {
+						has_trait = magic_potential_1 
+						has_trait = magic_potential_2 
+						has_trait = magic_potential_3 
+					}
+				}
+			}
+			random_list = {
+				70 = {
+					add_trait = magic_potential_1
+				}
+				25 = {
+					add_trait = magic_potential_2
+				}
+				5 = {
+					add_trait = magic_potential_3
+				}
+			}
+		}
+	}
+}
+
+#####################################################################
+########################  Ley Lines Effects  ########################
+#####################################################################
+
+AM_education_and_talents.006 = { # Call on birth for check around ley line effects on child
+	hidden = yes
+	if = {
+		limit = {
+			is_capital_on_focal_point = yes
+		}
+		add_gold = 500
+	}
+}

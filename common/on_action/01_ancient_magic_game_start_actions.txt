@@ -1,6 +1,7 @@
 ﻿on_game_start_after_lobby = {
 	events = {
 		ancient_magic_gain_talent_events.002
+		AM_education_and_talents.001
 	}
 	on_actions = { populate_map_with_magic_nodes }
 }
