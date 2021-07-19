@@ -1,4 +1,4 @@
-version="0.13"
+version="0.14"
 tags={
 	"Gameplay"
 	"Character Interactions"
@@ -6,5 +6,5 @@ tags={
 }
 name="Ancient Magic Github"
 picture="thumbnail.png"
-supported_version="1.3.1"
+supported_version="1.4.4"
 remote_file_id="2224273167"
