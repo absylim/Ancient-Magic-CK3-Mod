@@ -91,20 +91,30 @@ positive_mana_drain = {
 
 arcane_legacy_1_effect = {
 	global = ARCANE_LEGACY_1_EFFECT_LOC
+	first = ARCANE_LEGACY_1_EFFECT_LOC
+	third = ARCANE_LEGACY_1_EFFECT_LOC
 }
 
 arcane_legacy_2_effect = {
 	global = ARCANE_LEGACY_2_EFFECT_LOC
+	first = ARCANE_LEGACY_2_EFFECT_LOC
+	third = ARCANE_LEGACY_2_EFFECT_LOC
 }
 
 arcane_legacy_3_effect = {
 	global = ARCANE_LEGACY_3_EFFECT_LOC
+	first = ARCANE_LEGACY_3_EFFECT_LOC
+	third = ARCANE_LEGACY_3_EFFECT_LOC
 }
 
 arcane_legacy_4_effect = {
 	global = ARCANE_LEGACY_4_EFFECT_LOC
+	first = ARCANE_LEGACY_4_EFFECT_LOC
+	third = ARCANE_LEGACY_4_EFFECT_LOC
 }
 
 arcane_legacy_5_effect = {
 	global = ARCANE_LEGACY_5_EFFECT_LOC
+	first = ARCANE_LEGACY_5_EFFECT_LOC
+	third = ARCANE_LEGACY_5_EFFECT_LOC
 }
