@@ -1,0 +1,29 @@
+is_capital_on_focal_point = {
+	exists = capital_barony
+	capital_barony = {
+		title_province = {
+			has_province_modifier = focal_point_modifier
+		}
+	}
+}
+
+is_capital_on_ley_line = {
+	exists = capital_barony
+	capital_barony = {
+		title_province = {
+			has_province_modifier = ley_line_modifier
+		}
+	}
+}
+
+is_located_on_ley_line = {
+	location = {
+		has_province_modifier = ley_line_modifier
+	}
+}
+
+is_located_on_focal_point = {
+	location = {
+		has_province_modifier = focal_point_modifier
+	}
+}

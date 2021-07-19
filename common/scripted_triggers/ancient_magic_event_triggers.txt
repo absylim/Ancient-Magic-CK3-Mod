@@ -65,6 +65,14 @@ am_has_critical_illness = {
 		has_trait = incapable
 	}
 }
+
+has_magical_potential = {
+	OR = {
+		has_trait = magic_potential_1
+		has_trait = magic_potential_2
+		has_trait = magic_potential_3
+	}
+}
 		
 		#trigger_if = {
 		#	limit = {
