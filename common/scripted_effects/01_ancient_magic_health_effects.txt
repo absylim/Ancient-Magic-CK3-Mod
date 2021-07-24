@@ -5,7 +5,7 @@
 #Adds the disease in question and sends notifications to everyone who should know. Checks validity and sends treatment event. Needs the arguments DISEASE (trait name, only exception is early_great_pox - it should be added as great_pox and then the effect will figure out whether the character should have early_great_pox first) and TREATMENT_EVENT (yes/no). Does NOT send an event to the character who gets the disease.
 contract_magical_disease_effect = {
 	if = { #Is the disease valid?
-		limit = { can_contract__magical_disease_trigger = { DISEASE = $DISEASE$ } }
+		limit = { can_contract_magical_disease_trigger = { DISEASE = $DISEASE$ } }
 
 		hidden_effect = {
 			#SET SCOPES
@@ -60,14 +60,14 @@ contract_magical_disease_effect = {
 			limit = { scope:disease_type = flag:mana_devouring_1 }
 			trigger_event = {
 				id = AMHealth.1101
-				days = { mana_devouring_recovery_min mana_devouring_recovery_max }
+				days = { mana_devouring_min_recovery_time mana_devouring_max_recovery_time }
 			}
 		}
 		else_if = { #mana devouring
 			limit = { scope:disease_type = flag:mana_devouring_2 }
 			trigger_event = {
 				id = AMHealth.1102
-				days = { mana_devouring_recovery_min mana_devouring_recovery_max }
+				days = { mana_devouring_min_recovery_time mana_devouring_max_recovery_time }
 			}
 		}
 
