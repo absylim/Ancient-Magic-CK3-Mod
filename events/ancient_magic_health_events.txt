@@ -7,6 +7,49 @@ namespace = AMHealth
 #	0101-0199: recovery
 #   3100-3200: Treatment
 
+#########################
+##  Scripted Triggers ###
+#########################
+
+scripted_trigger AMhealth_2202_happy_recovery_trigger = {
+	OR = {
+		has_relation_lover = scope:sick_character
+		has_relation_friend = scope:sick_character
+		has_relation_best_friend = scope:sick_character
+		has_relation_soulmate = scope:sick_character
+		AND = {
+			scope:sick_character = {
+				opinion = {
+					target = root
+					value > 0
+				}
+				is_of_major_interest_to_root_trigger = yes
+			}
+		}
+	}
+}
+
+scripted_trigger AMhealth_2202_angry_recovery_trigger = {
+	OR = {
+		has_relation_rival = scope:sick_character
+		has_relation_nemesis = scope:sick_character
+		scope:sick_character = {
+			opinion = {
+				target = root
+				value < -35
+			}
+		}
+	}
+}
+
+scripted_trigger AMhealth_2202_contagious_recovery_trigger = {
+	OR = {
+		any_courtier_or_guest = { this = scope:sick_character }
+		any_prisoner = { this = scope:sick_character }
+	}
+	OR = {
+	}
+}
 
 #########################
 #########################
@@ -430,32 +473,32 @@ AMHealth.2202 = {
 
 	option = {
 		name = { #So happy!
-			trigger = { health_2202_happy_recovery_trigger = yes }
+			trigger = { AMhealth_2202_happy_recovery_trigger = yes }
 			text = health.2202.a.happy
 		}
 
 		name = { #So angry!
 			trigger = {
-				health_2202_happy_recovery_trigger = no
-				health_2202_angry_recovery_trigger = yes
+				AMhealth_2202_happy_recovery_trigger = no
+				AMhealth_2202_angry_recovery_trigger = yes
 			}
 			text = health.2202.a.angry
 		}
 
 		name = { #So relieved!
 			trigger = {
-				health_2202_happy_recovery_trigger = no
-				health_2202_angry_recovery_trigger = no
-				health_2202_contagious_recovery_trigger = yes
+				AMhealth_2202_happy_recovery_trigger = no
+				AMhealth_2202_angry_recovery_trigger = no
+				AMhealth_2202_contagious_recovery_trigger = yes
 			}
 			text = health.2202.a.relieved
 		}
 
 		name = { #So neutral...
 			trigger = {
-				health_2202_happy_recovery_trigger = no
-				health_2202_angry_recovery_trigger = no
-				health_2202_contagious_recovery_trigger = no
+				AMhealth_2202_happy_recovery_trigger = no
+				AMhealth_2202_angry_recovery_trigger = no
+				AMhealth_2202_contagious_recovery_trigger = no
 			}
 			text = health.2202.a.neutral
 		}
