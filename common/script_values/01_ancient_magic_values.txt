@@ -30,14 +30,8 @@ mage_education = { # UNCOMMENT WHEN SYSTEM IN PLACE!!!
 
 mage_level_divider = {
 	value = 12
-	while = {
-		count = mage_potency
-		add = -1
-	}
-	while = {
-		count = mage_education
-		add = -1
-	}
+	subtract = mage_potency
+	subtract = mage_education
 	multiply = mage_xp_per_perk
 }
 
@@ -56,7 +50,7 @@ mage_level_base = {
 mage_level = {
 	value = mage_level_base
 	if = {
-		limit = { dynasty.has_dynasty_perk = arcane_legacy_4 }
+		limit = { dynasty = { has_dynasty_perk = arcane_legacy_4 } }
 		add = 1
 	}
 }
@@ -87,13 +81,13 @@ magic_circles_owned_by_character = {
 ancient_magic_mana_gen = {
 	value = num_mage_perks
 	multiply = mana_gen_per_perk
-	while = {
-		count = mage_potency
-		add = mana_gen_per_potency
+	add = {
+		value = mage_potency
+		multiply = mana_gen_per_potency
 	}
-	while = {
-		count = magic_circles_owned_by_character
-		add = mana_gen_per_magic_circle
+	add = {
+		value = magic_circles_owned_by_character
+		multiply = mana_gen_per_magic_circle
 	}
 	if = {
 		limit = { has_focus = magic_arcana_focus }
@@ -104,7 +98,7 @@ ancient_magic_mana_gen = {
 		add = mana_gen_lifestyle
 	}
 	if = {
-		limit = { dynasty.has_dynasty_perk = arcane_legacy_2 }
+		limit = { dynasty = { has_dynasty_perk = arcane_legacy_2 } }
 		add = mana_gen_legacy_2
 	}
 	subtract = var:mana_drain
@@ -113,12 +107,12 @@ ancient_magic_mana_gen = {
 ancient_magic_max_mana = {
 	value = num_mage_perks
 	multiply = max_mana_per_perk
-	while = {
-		count = mage_potency
-		add = max_mana_per_potency
+	add = {
+		value = mage_potency
+		multiply = max_mana_per_potency
 	}
 	if = {
-		limit = { dynasty.has_dynasty_perk = arcane_legacy_3 }
+		limit = { dynasty = { has_dynasty_perk = arcane_legacy_3 } }
 		add = max_mana_legacy_3
 	}
 }
