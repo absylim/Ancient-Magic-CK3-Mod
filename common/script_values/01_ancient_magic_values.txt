@@ -46,7 +46,6 @@ mage_level = {
 
 mage_xp_to_next_level = {
 	value = mage_level
-	add = 1
 	multiply = mage_level_divider
 }
 
