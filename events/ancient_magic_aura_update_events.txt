@@ -5,243 +5,131 @@ ancient_magic_aura_update_events.001 = {
 
 	immediate = {
 		if = {
-			limit = {
-				has_character_modifier = magic_haste_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = magic_haste_modifier
-			}
+			limit = { has_character_modifier = magic_haste_modifier }
+			remove_all_character_modifier_instances = magic_haste_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = magic_haste_modifier
-				}
+				add_character_modifier = { modifier = magic_haste_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = glimpse_the_future_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = glimpse_the_future_modifier
-			}
+			limit = { has_character_modifier = glimpse_the_future_modifier }
+			remove_all_character_modifier_instances = glimpse_the_future_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = glimpse_the_future_modifier
-				}
+				add_character_modifier = { modifier = glimpse_the_future_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = finacial_times_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = finacial_times_modifier
-			}
+			limit = { has_character_modifier = finacial_times_modifier }
+			remove_all_character_modifier_instances = finacial_times_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = finacial_times_modifier
-				}
+				add_character_modifier = { modifier = finacial_times_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = celerity_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = celerity_modifier
-			}
+			limit = { has_character_modifier = celerity_modifier }
+			remove_all_character_modifier_instances = celerity_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = celerity_modifier
-				}
+				add_character_modifier = { modifier = celerity_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = slowness_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = slowness_modifier
-			}
+			limit = { has_character_modifier = slowness_modifier }
+			remove_all_character_modifier_instances = slowness_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = slowness_modifier
-				}
+				add_character_modifier = { modifier = slowness_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = mass_slowness_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = mass_slowness_modifier
-			}
+			limit = { has_character_modifier = mass_slowness_modifier }
+			remove_all_character_modifier_instances = mass_slowness_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = mass_slowness_modifier
-				}
+				add_character_modifier = { modifier = mass_slowness_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = temporal_manipulation_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = temporal_manipulation_modifier
-			}
+			limit = { has_character_modifier = temporal_manipulation_modifier }
+			remove_all_character_modifier_instances = temporal_manipulation_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = temporal_manipulation_modifier
-				}
+				add_character_modifier = { modifier = temporal_manipulation_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = flame_aura_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = flame_aura_modifier
-			}
+			limit = { has_character_modifier = flame_aura_modifier }
+			remove_all_character_modifier_instances = flame_aura_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = flame_aura_modifier
-				}
+				add_character_modifier = { modifier = flame_aura_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = Flaming_weapons_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = Flaming_weapons_modifier
-			}
+			limit = { has_character_modifier = Flaming_weapons_modifier }
+			remove_all_character_modifier_instances = Flaming_weapons_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = Flaming_weapons_modifier
-				}
+				add_character_modifier = { modifier = Flaming_weapons_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = living_earthworks_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = living_earthworks_modifier
-			}
+			limit = { has_character_modifier = living_earthworks_modifier }
+			remove_all_character_modifier_instances = living_earthworks_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = living_earthworks_modifier
-				}
+				add_character_modifier = { modifier = living_earthworks_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = control_water_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = control_water_modifier
-			}
+			limit = { has_character_modifier = control_water_modifier }
+			remove_all_character_modifier_instances = control_water_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = control_water_modifier
-				}
+				add_character_modifier = { modifier = control_water_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = drought_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = drought_modifier
-			}
+			limit = { has_character_modifier = drought_modifier }
+			remove_all_character_modifier_instances = drought_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = drought_modifier
-				}
+				add_character_modifier = { modifier = drought_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = elemental_warrior_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = elemental_warrior_modifier
-			}
+			limit = { has_character_modifier = elemental_warrior_modifier }
+			remove_all_character_modifier_instances = elemental_warrior_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = elemental_warrior_modifier
-				}
+				add_character_modifier = { modifier = elemental_warrior_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = aura_of_death_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = aura_of_death_modifier
-			}
+			limit = { has_character_modifier = aura_of_death_modifier }
+			remove_all_character_modifier_instances = aura_of_death_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = aura_of_death_modifier
-				}
+				add_character_modifier = { modifier = aura_of_death_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = beguiling_aura_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = beguiling_aura_modifier
-			}
+			limit = { has_character_modifier = beguiling_aura_modifier }
+			remove_all_character_modifier_instances = beguiling_aura_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = beguiling_aura_modifier
-				}
+				add_character_modifier = { modifier = beguiling_aura_modifier }
 			}
 		}
 		if = {
-			limit = {
-				has_character_modifier = enchanting_aura_modifier
-			}
-			while = {
-				count = 100
-				remove_character_modifier = enchanting_aura_modifier
-			}
+			limit = { has_character_modifier = enchanting_aura_modifier }
+			remove_all_character_modifier_instances = enchanting_aura_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = {
-					modifier = enchanting_aura_modifier
-				}
+				add_character_modifier = { modifier = enchanting_aura_modifier }
 			}
 		}
 	}
