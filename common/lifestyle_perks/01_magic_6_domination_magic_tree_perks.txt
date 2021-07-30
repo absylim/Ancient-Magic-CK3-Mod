@@ -56,11 +56,9 @@
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
 		add_trait_force_tooltip = mage
 		add_trait_force_tooltip = mana
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	
 	character_modifier = {
@@ -86,9 +84,7 @@ entrance_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	
 	parent = domination_mage_perk
@@ -113,9 +109,7 @@ incite_lust_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 
 	
@@ -143,9 +137,7 @@ incite_obedience_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -170,9 +162,7 @@ dominate_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -195,9 +185,7 @@ beguiling_aura_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	
 	parent = domination_mage_perk
@@ -224,9 +212,7 @@ friendship_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -253,9 +239,7 @@ enchanting_aura_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -281,8 +265,6 @@ master_of_puppets_perk = {
 			text = mage_xp_magic_perk_effect
 		}
 		add_trait_force_tooltip = master_of_puppets
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }

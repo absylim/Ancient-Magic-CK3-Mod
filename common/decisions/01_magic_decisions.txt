@@ -53,3 +53,95 @@ gain_potential_decision = {
 		base = 0
 	}
 }
+
+reset_auras_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+
+	is_shown = {
+		debug_only = yes
+	}
+
+	effect = {
+		custom_tooltip = reset_auras_decision_effect_tooltip
+		
+		any_living_character = {
+			count = all
+			while = {
+				count = 100
+				remove_character_modifier = magic_haste_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = glimpse_the_future_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = finacial_times_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = celerity_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = slowness_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = mass_slowness_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = temporal_manipulation_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = flame_aura_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = Flaming_weapons_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = living_earthworks_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = control_water_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = drought_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = elemental_warrior_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = aura_of_death_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = beguiling_aura_modifier
+			}
+			while = {
+				count = 100
+				remove_character_modifier = enchanting_aura_modifier
+			}
+			remove_character_modifier = biomantic_fertility_modifier
+			remove_character_modifier = biomantic_infertility_modifier
+			set_variable = {
+				name = mana_drain
+				value = 0
+			}
+		}
+	}
+
+	ai_check_interval = 0
+
+	ai_potential = { always = no }
+
+	ai_will_do = { base = 0 }
+}

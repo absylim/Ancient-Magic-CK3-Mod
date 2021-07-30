@@ -104,3 +104,10 @@
  entrance_interaction_desc:0 "Entrance"
  incite_lust_interaction_desc:0 "Incite Lust"
  friendship_spell_interaction_desc:0 "Friendship"
+
+ # debug
+ reset_auras_decision:0 "Reset Auras"
+ reset_auras_decision_tooltip:0 "Reset magical auras"
+ reset_auras_decision_desc:0 "Disables all auras from every character in the game, and sets their active auras to 0"
+ reset_auras_decision_effect_tooltip:0 "Reset all characters' magic auras"
+ reset_auras_decision_confirm:0 "Reset Auras"

@@ -1,13 +1,41 @@
 ﻿quarterly_playable_pulse = {
 	events = {
 		ancient_magic_aura_update_events.001
-		ancient_magic_mana_gen_checks_events.001
 		delay = { months = 1 }
-		ancient_magic_mana_gen_checks_events.001
+		ancient_magic_aura_update_events.001
 		delay = { months = 2 }
-		ancient_magic_mana_gen_checks_events.001
-		delay = { months = 3 }
-		ancient_magic_mana_gen_checks_events.001
+		ancient_magic_aura_update_events.001
+	}
+}
+
+on_reset_mana_system = {
+	effect = {
+		set_variable = {
+			name = max_mana
+			value = 0
+		}
+		set_variable = {
+			name = mana_gen
+			value = 0
+		}
+		trigger_event = { on_action = reset_mana_system }
+	}
+}
+
+reset_mana_system = {
+	on_actions = { ancient_magic_reset_mana_system }
+}
+
+ancient_magic_reset_mana_system = {
+	effect = {
+		change_variable = {
+			name = mana_gen
+			add = ancient_magic_mana_gen
+		}
+		change_variable = {
+			name = max_mana
+			add = ancient_magic_max_mana
+		}
 	}
 }
 

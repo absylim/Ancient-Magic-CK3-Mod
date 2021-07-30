@@ -878,7 +878,7 @@ ancient_magic_spellbook_events.203 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_drain = { VALUE = 15 }
 
 		while = {
 			count = mage_level
@@ -899,7 +899,7 @@ ancient_magic_spellbook_events.203 = {
 			NOT = { has_perk = mass_celerity_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_drain = { VALUE = -15 }
 
 		while = {
 			count = 100
@@ -999,7 +999,7 @@ ancient_magic_spellbook_events.204 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_drain = { VALUE = 15 }
 
 		while = {
 			count = mage_level
@@ -1020,7 +1020,7 @@ ancient_magic_spellbook_events.204 = {
 			NOT = { has_perk = glimpse_the_future_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_drain = { VALUE = -15 }
 
 		while = {
 			count = 100
@@ -1119,7 +1119,7 @@ ancient_magic_spellbook_events.205 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_drain = { VALUE = 15 }
 
 		while = {
 			count = mage_level
@@ -1140,7 +1140,7 @@ ancient_magic_spellbook_events.205 = {
 			NOT = { has_perk = finacial_times_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_drain = { VALUE = -15 }
 
 		while = {
 			count = 100
@@ -1239,7 +1239,7 @@ ancient_magic_spellbook_events.206 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_drain = { VALUE = 15 }
 
 		while = {
 			count = mage_level
@@ -1260,7 +1260,7 @@ ancient_magic_spellbook_events.206 = {
 			NOT = { has_perk = celerity_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_drain = { VALUE = -15 }
 
 		while = {
 			count = 100
@@ -1359,7 +1359,7 @@ ancient_magic_spellbook_events.207 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_drain = { VALUE = 15 }
 
 		while = {
 			count = mage_level
@@ -1380,7 +1380,7 @@ ancient_magic_spellbook_events.207 = {
 			NOT = { has_perk = slowness_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_drain = { VALUE = -15 }
 
 		while = {
 			count = 100
@@ -1479,7 +1479,7 @@ ancient_magic_spellbook_events.208 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_drain = { VALUE = 15 }
 
 		while = {
 			count = mage_level
@@ -1500,7 +1500,7 @@ ancient_magic_spellbook_events.208 = {
 			NOT = { has_perk = mass_slowness_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_drain = { VALUE = -15 }
 
 		while = {
 			count = 100
@@ -1599,7 +1599,7 @@ ancient_magic_spellbook_events.209 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -30 }
+		change_mana_drain = { VALUE = 30 }
 
 		while = {
 			count = mage_level
@@ -1620,7 +1620,7 @@ ancient_magic_spellbook_events.209 = {
 			NOT = { has_perk = temporal_manipulation_perk }
 		}
 
-		change_mana_gen = { VALUE = 30 }
+		change_mana_drain = { VALUE = -30 }
 
 		while = {
 			count = 100
@@ -2331,7 +2331,7 @@ ancient_magic_spellbook_events.402 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_drain = { VALUE = 15 }
 
 		while = {
 			count = mage_level
@@ -2352,7 +2352,7 @@ ancient_magic_spellbook_events.402 = {
 			NOT = { has_perk = flame_aura_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_drain = { VALUE = -15 }
 
 		while = {
 			count = 100
@@ -2448,7 +2448,7 @@ ancient_magic_spellbook_events.403 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_drain = { VALUE = 15 }
 
 		while = {
 			count = mage_level
@@ -2469,7 +2469,7 @@ ancient_magic_spellbook_events.403 = {
 			NOT = { has_perk = flaming_weapons_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_drain = { VALUE = -15 }
 
 		while = {
 			count = 100
@@ -2565,7 +2565,7 @@ ancient_magic_spellbook_events.404 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_drain = { VALUE = 15 }
 
 		while = {
 			count = mage_level
@@ -2586,7 +2586,7 @@ ancient_magic_spellbook_events.404 = {
 			NOT = { has_perk = living_earthworks_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_drain = { VALUE = -15 }
 
 		while = {
 			count = 100
@@ -2682,7 +2682,7 @@ ancient_magic_spellbook_events.405 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_drain = { VALUE = 15 }
 
 		while = {
 			count = mage_level
@@ -2703,7 +2703,7 @@ ancient_magic_spellbook_events.405 = {
 			NOT = { has_perk = control_water_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_drain = { VALUE = -15 }
 
 		while = {
 			count = 100
@@ -2799,7 +2799,7 @@ ancient_magic_spellbook_events.406 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_drain = { VALUE = 15 }
 
 		while = {
 			count = mage_level
@@ -2820,7 +2820,7 @@ ancient_magic_spellbook_events.406 = {
 			NOT = { has_perk = drought_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_drain = { VALUE = -15 }
 
 		while = {
 			count = 100
@@ -2916,7 +2916,7 @@ ancient_magic_spellbook_events.407 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -30 }
+		change_mana_drain = { VALUE = 30 }
 
 		while = {
 			count = mage_level
@@ -2940,7 +2940,7 @@ ancient_magic_spellbook_events.407 = {
 			}
 		}
 
-		change_mana_gen = { VALUE = 30 }
+		change_mana_drain = { VALUE = -30 }
 
 		while = {
 			count = 100
@@ -3663,7 +3663,7 @@ ancient_magic_spellbook_events.504 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -30 }
+		change_mana_drain = { VALUE = 30 }
 
 		while = {
 			count = mage_level
@@ -3684,7 +3684,7 @@ ancient_magic_spellbook_events.504 = {
 			NOT = { has_perk = aura_of_death_perk }
 		}
 
-		change_mana_gen = { VALUE = 30 }
+		change_mana_drain = { VALUE = -30 }
 
 		while = {
 			count = 100
@@ -5958,10 +5958,10 @@ ancient_magic_spellbook_events.605 = {
 				has_character_modifier = biomantic_infertility_modifier
 			}
 			remove_character_modifier = biomantic_infertility_modifier
-			change_mana_gen = { VALUE = 10 }
+			change_mana_drain = { VALUE = -10 }
 		}
 		add_character_modifier = biomantic_fertility_modifier
-		change_mana_gen = { VALUE = -10 }
+		change_mana_drain = { VALUE = 10 }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -5994,14 +5994,14 @@ ancient_magic_spellbook_events.605 = {
 				has_character_modifier = biomantic_infertility_modifier
 			}
 			remove_character_modifier = biomantic_infertility_modifier
-			change_mana_gen = { VALUE = 10 }
+			change_mana_drain = { VALUE = -10 }
 		}
 		if = {
 			limit = {
 				has_character_modifier = biomantic_fertility_modifier
 			}
 			remove_character_modifier = biomantic_fertility_modifier
-			change_mana_gen = { VALUE = 10 }
+			change_mana_drain = { VALUE = -10 }
 		}
 
 		remove_character_flag = am_spell_resolution
@@ -6029,10 +6029,10 @@ ancient_magic_spellbook_events.605 = {
 				has_character_modifier = biomantic_fertility_modifier
 			}
 			remove_character_modifier = biomantic_fertility_modifier
-			change_mana_gen = { VALUE = 10 }
+			change_mana_drain = { VALUE = -10 }
 		}
 		add_character_modifier = biomantic_infertility_modifier
-		change_mana_gen = { VALUE = -10 }
+		change_mana_drain = { VALUE = 10 }
 		
 		remove_character_flag = am_spell_resolution
 	}
@@ -6848,7 +6848,7 @@ ancient_magic_spellbook_events.702 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_drain = { VALUE = 15 }
 
 		while = {
 			count = mage_level
@@ -6872,7 +6872,7 @@ ancient_magic_spellbook_events.702 = {
 			}
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_drain = { VALUE = -15 }
 
 		while = {
 			count = 100
@@ -6968,7 +6968,7 @@ ancient_magic_spellbook_events.703 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -30 }
+		change_mana_drain = { VALUE = 30 }
 
 		while = {
 			count = mage_level
@@ -6992,7 +6992,7 @@ ancient_magic_spellbook_events.703 = {
 			}
 		}
 
-		change_mana_gen = { VALUE = 30 }
+		change_mana_drain = { VALUE = -30 }
 
 		while = {
 			count = 100

@@ -4,19 +4,19 @@
 
 ancient_magic_academy_01 = {
 	construction_time = slow_construction_time
-	
+
 	can_construct_potential = {
 		building_ancient_magic_mage_buildings_requirement = yes
 	}
-	
+
 	is_enabled = {
 		county.duchy.holder = county.holder
 		building_ancient_magic_mage_buildings_requirement = yes
 	}
 	show_disabled = yes
-	
+
 	cost_gold = expensive_building_tier_2_cost
-	
+
 	character_modifier = {
 		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.1
 	}
@@ -26,13 +26,13 @@ ancient_magic_academy_01 = {
 	province_modifier = {
 		fort_level = normal_building_fort_level_tier_1 #Mages
 	}
-	
+
 	next_building = ancient_magic_academy_02
-	
+
 	type_icon = "icon_building_university.dds"
 
 	type = duchy_capital
-	
+
 	ai_value = {
 		base = 20
 		modifier = {
@@ -44,7 +44,7 @@ ancient_magic_academy_01 = {
 
 ancient_magic_academy_02 = {
 	construction_time = slow_construction_time
-	
+
 	can_construct_potential = {
 		building_ancient_magic_mage_buildings_requirement = yes
 		building_magical_low_requirement = yes
@@ -53,15 +53,15 @@ ancient_magic_academy_02 = {
 			mage_level >=5
 		}
 	}
-	
+
 	is_enabled = {
 		building_ancient_magic_mage_buildings_requirement = yes
 		building_magical_low_requirement = yes
 	}
 	show_disabled = yes
-	
+
 	cost_gold = expensive_building_tier_4_cost
-	
+
 	character_modifier = {
 		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.2
 	}
@@ -71,13 +71,13 @@ ancient_magic_academy_02 = {
 	province_modifier = {
 		fort_level = normal_building_fort_level_tier_3 #Professors
 	}
-	
+
 	type_icon = "icon_building_university.dds"
 
 	next_building = ancient_magic_academy_03
-	
+
 	type = duchy_capital
-	
+
 	ai_value = {
 		base = 20
 		modifier = {
@@ -93,7 +93,7 @@ ancient_magic_academy_02 = {
 
 ancient_magic_academy_03 = {
 	construction_time = very_slow_construction_time
-	
+
 	can_construct_potential = {
 		building_ancient_magic_mage_buildings_requirement = yes
 		building_magical_high_requirement = yes
@@ -102,15 +102,15 @@ ancient_magic_academy_03 = {
 			mage_level >=7
 		}
 	}
-	
+
 	is_enabled = {
 		building_ancient_magic_mage_buildings_requirement = yes
 		building_magical_high_requirement = yes
 	}
 	show_disabled = yes
-	
+
 	cost_gold = expensive_building_tier_6_cost
-	
+
 	character_modifier = {
 		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.4
 	}
@@ -120,13 +120,13 @@ ancient_magic_academy_03 = {
 	province_modifier = {
 		fort_level = normal_building_fort_level_tier_5 #Professors and Archmage
 	}
-	
+
 	flag = fully_upgraded_duchy_capital_building
-	
+
 	type_icon = "icon_building_university.dds"
 
 	type = duchy_capital
-	
+
 	ai_value = {
 		base = 20
 		modifier = {
@@ -151,26 +151,30 @@ ancient_magic_mana_circle_01 = {
 		building_ancient_magic_mage_buildings_requirement = yes
 		building_magical_low_requirement = yes
 	}
-	
+
 	can_construct_potential = {
 		building_ancient_magic_mage_buildings_requirement = yes
 		building_magical_low_requirement = yes
 	}
-	
+
 	next_building = ancient_magic_mana_circle_02
-	
+
 	cost_gold = expensive_building_tier_2_cost
-	
+
 	effect = {
 		custom_description_no_bullet = {
 			text = ancient_magic_mana_circle_01
 		}
 	}
-	
+
 	type = duchy_capital
-	
+
 	type_icon = "icon_structure_stonehenge.dds"
-	
+
+	on_complete = {
+		trigger_event = { on_action = on_reset_mana_system }
+	}
+
 	ai_value = {
 		base = 20
 		modifier = {
@@ -187,26 +191,30 @@ ancient_magic_mana_circle_02 = {
 		building_ancient_magic_mage_buildings_requirement = yes
 		building_magical_low_requirement = yes
 	}
-	
+
 	can_construct_potential = {
 		building_ancient_magic_mage_buildings_requirement = yes
 		building_magical_low_requirement = yes
 	}
-	
+
 	next_building = ancient_magic_mana_circle_03
-	
+
 	cost_gold = expensive_building_tier_3_cost
-	
+
 	effect = {
 		custom_description_no_bullet = {
 			text = ancient_magic_mana_circle_01
 		}
 	}
-	
+
 	type = duchy_capital
-	
+
 	type_icon = "icon_structure_stonehenge.dds"
-	
+
+	on_complete = {
+		trigger_event = { on_action = on_reset_mana_system }
+	}
+
 	ai_value = {
 		base = 20
 		modifier = {
@@ -223,25 +231,29 @@ ancient_magic_mana_circle_03 = {
 		building_ancient_magic_mage_buildings_requirement = yes
 		building_magical_high_requirement = yes
 	}
-	
+
 	can_construct_potential = {
 		building_ancient_magic_mage_buildings_requirement = yes
 		building_magical_high_requirement = yes
 	}
-	
+
 	cost_gold = expensive_building_tier_4_cost
-	
+
 	effect = {
 		custom_description_no_bullet = {
 			text = ancient_magic_mana_circle_01
 		}
 	}
-	
+
 	type = duchy_capital
-	
+
 	flag = fully_upgraded_duchy_capital_building
-	
+
 	type_icon = "icon_structure_stonehenge.dds"
+
+	on_complete = {
+		trigger_event = { on_action = on_reset_mana_system }
+	}
 
 	ai_value = {
 		base = 20
@@ -257,4 +269,3 @@ ancient_magic_mana_circle_03 = {
 ##################################################
 
 
-	

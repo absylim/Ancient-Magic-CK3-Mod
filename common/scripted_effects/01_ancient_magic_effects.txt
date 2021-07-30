@@ -1,67 +1,33 @@
-﻿change_mage_xp = {
+﻿change_mana_drain = {
 	if = {
-		limit = {
-			NOT = { exists = var:mage_xp }
-		}
+		limit = { NOT = { exists = var:mana_drain } }
 		set_variable = {
-			name = mage_xp
-			value = 0
-		}
-	}
-	change_variable = { name = mage_xp add = $VALUE$ }
-}
-
-change_mana = {
-	if = {
-		limit = {
-			$VALUE$ > 0
-		}
-		custom_description = {
-			text = positive_mana_cost
-			value = $VALUE$
-		}
-	}
-	else_if = {
-		limit = {
-			$VALUE$ < 0
-		}
-		custom_description = {
-			text = negative_mana_cost
-			value = $VALUE$
-		}
-	}
-	change_variable = { name = mana add = $VALUE$ }
-}
-
-change_mana_gen = {
-	if = {
-		limit = {
-			NOT = { exists = var:mana_gen }
-		}
-		set_variable = {
-			name = mana_gen
+			name = mana_drain
 			value = 0
 		}
 	}
 	if = {
-		limit = {
-			$VALUE$ > 0
-		}
+		limit = { $VALUE$ > 0 }
 		custom_description = {
 			text = positive_mana_drain
-			value = $VALUE$
+			value = {
+				add = $VALUE$
+				multiply = mana_gen_cost_per_aura
+			}
 		}
 	}
 	else_if = {
-		limit = {
-			$VALUE$ < 0
-		}
+		limit = { $VALUE$ < 0 }
 		custom_description = {
 			text = negative_mana_drain
-			value = $VALUE$
+			value = {
+				add = $VALUE$
+				multiply = mana_gen_cost_per_aura
+			}
 		}
 	}
-	change_variable = { name = mana_gen add = $VALUE$ }
+	change_variable = { name = mana_drain add = $VALUE$ }
+	hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 }
 
 change_ancestral_guardians_count = {
