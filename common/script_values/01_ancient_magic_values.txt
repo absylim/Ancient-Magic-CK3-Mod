@@ -1,5 +1,4 @@
 ﻿mage_xp_per_perk = 15
-mana_gen_cost_per_aura = 5
 mana_gen_legacy_2 = 10
 mana_gen_lifestyle = 100
 mana_gen_per_magic_circle = 30

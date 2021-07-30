@@ -10,20 +10,14 @@
 		limit = { $VALUE$ > 0 }
 		custom_description = {
 			text = positive_mana_drain
-			value = {
-				add = $VALUE$
-				multiply = mana_gen_cost_per_aura
-			}
+			value = $VALUE$
 		}
 	}
 	else_if = {
 		limit = { $VALUE$ < 0 }
 		custom_description = {
 			text = negative_mana_drain
-			value = {
-				add = $VALUE$
-				multiply = mana_gen_cost_per_aura
-			}
+			value = $VALUE$
 		}
 	}
 	change_variable = { name = mana_drain add = $VALUE$ }
