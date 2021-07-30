@@ -64,8 +64,7 @@ reset_auras_decision = {
 	effect = {
 		custom_tooltip = reset_auras_decision_effect_tooltip
 		
-		any_living_character = {
-			count = all
+		every_living_character = {
 			while = {
 				count = 100
 				remove_character_modifier = magic_haste_modifier

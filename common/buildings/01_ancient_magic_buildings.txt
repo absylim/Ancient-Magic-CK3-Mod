@@ -161,12 +161,6 @@ ancient_magic_mana_circle_01 = {
 
 	cost_gold = expensive_building_tier_2_cost
 
-	effect = {
-		custom_description_no_bullet = {
-			text = ancient_magic_mana_circle_01
-		}
-	}
-
 	type = duchy_capital
 
 	type_icon = "icon_structure_stonehenge.dds"
@@ -201,12 +195,6 @@ ancient_magic_mana_circle_02 = {
 
 	cost_gold = expensive_building_tier_3_cost
 
-	effect = {
-		custom_description_no_bullet = {
-			text = ancient_magic_mana_circle_01
-		}
-	}
-
 	type = duchy_capital
 
 	type_icon = "icon_structure_stonehenge.dds"
@@ -238,12 +226,6 @@ ancient_magic_mana_circle_03 = {
 	}
 
 	cost_gold = expensive_building_tier_4_cost
-
-	effect = {
-		custom_description_no_bullet = {
-			text = ancient_magic_mana_circle_01
-		}
-	}
 
 	type = duchy_capital
 

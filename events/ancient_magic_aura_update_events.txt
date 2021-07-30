@@ -16,7 +16,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = magic_haste_modifier
-					mode = add
 				}
 			}
 		}
@@ -32,7 +31,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = glimpse_the_future_modifier
-					mode = add
 				}
 			}
 		}
@@ -48,7 +46,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = finacial_times_modifier
-					mode = add
 				}
 			}
 		}
@@ -64,7 +61,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = celerity_modifier
-					mode = add
 				}
 			}
 		}
@@ -80,7 +76,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = slowness_modifier
-					mode = add
 				}
 			}
 		}
@@ -96,7 +91,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = mass_slowness_modifier
-					mode = add
 				}
 			}
 		}
@@ -112,7 +106,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = temporal_manipulation_modifier
-					mode = add
 				}
 			}
 		}
@@ -128,7 +121,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = flame_aura_modifier
-					mode = add
 				}
 			}
 		}
@@ -144,7 +136,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = Flaming_weapons_modifier
-					mode = add
 				}
 			}
 		}
@@ -160,7 +151,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = living_earthworks_modifier
-					mode = add
 				}
 			}
 		}
@@ -176,7 +166,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = control_water_modifier
-					mode = add
 				}
 			}
 		}
@@ -192,7 +181,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = drought_modifier
-					mode = add
 				}
 			}
 		}
@@ -208,7 +196,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = elemental_warrior_modifier
-					mode = add
 				}
 			}
 		}
@@ -224,7 +211,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = aura_of_death_modifier
-					mode = add
 				}
 			}
 		}
@@ -240,7 +226,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = beguiling_aura_modifier
-					mode = add
 				}
 			}
 		}
@@ -256,7 +241,6 @@ ancient_magic_aura_update_events.001 = {
 				count = mage_level
 				add_character_modifier = {
 					modifier = enchanting_aura_modifier
-					mode = add
 				}
 			}
 		}

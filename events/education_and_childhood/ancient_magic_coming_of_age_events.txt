@@ -1,9 +1,9 @@
-#Events dealing with coming of age
+ï»¿#Events dealing with coming of age
 
 namespace = AM_coming_of_age
 
 #Arcana - notification event for child
-#by Linnéa Thimrén and Petter Vilberg and Donekulda
+#by Linnï¿½a Thimrï¿½n and Petter Vilberg and Donekulda
 AM_coming_of_age.0001 = {
 	title = coming_of_age.0001.t
 	desc = {

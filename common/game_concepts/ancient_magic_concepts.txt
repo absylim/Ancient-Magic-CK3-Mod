@@ -18,7 +18,7 @@ mana_drain = {
 }
 
 magic_talent = {
-    alias = { magic_skill magic_talent magical_skill magical_talent skill_in_a_magic_school talent_in_a_magic_school }
+    alias = { magic_skill skill_in_a_magic_school talent_in_a_magic_school }
 }
 
 mage_spell = {
