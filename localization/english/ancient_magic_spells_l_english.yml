@@ -70,7 +70,7 @@
  ancient_magic_spellbook_events_previous_page:0 "Previous Page"
  
  #magic type select
- ancient_magic_spellbook_events.001.t:0 "Spellbook                                                                [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.001.t:0 "Spellbook                                                                [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.001.desc:0 "This is your spellbook. From here you can cast all the spells you have unlocked. Your mage level affects the power of certain spells. Your mage level is [SCOPE.ScriptValue('mage_level')|0], it starts at 1 and increases every 150 mage XP if you have Minor Magic Potential, every 100 for Moderate, and 75 for Major, your mage xp is [ROOT.GetCharacter.MakeScope.Var('mage_xp').GetValue|0]. Target - [am_spell_target.GetFirstNameNoTooltip]"
  ancient_magic_spellbook_events.001.desc.a:0 "Clearing your mind of distractions and bending your thoughts into esoteric patterns, you leaf through the pages of your spellbook and begin to draw your [mana|El] into the semblance of a spell construct. Which school of magic will you be using on [am_spell_target.GetFirstNameNoTooltip]?"
  ancient_magic_spellbook_events.001.desc.b:0 "Clearing your mind of distractions and bending your thoughts into esoteric patterns, you leaf through the pages of your spellbook and begin to draw your [mana|El] into the semblance of a spell construct. Which school of magic will you be using on yourself?"
@@ -82,7 +82,7 @@
  ancient_magic_spellbook_events.001.f:0 "Mensomancy"
  
  #spell select
- ancient_magic_spellbook_events.002.t:0 "[chronomancy|E]                                                           [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.002.t:0 "[chronomancy|E]                                                           [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.002.desc:0 "You order your thoughts into precise geometric patterns, preparing yourself for the highly structured spell mnemonics of the chronomancy [school_of_magic|E]."
  ancient_magic_spellbook_events.002.a:0 "Control Aging"
  ancient_magic_spellbook_events.002.c:0 "Haste [am_spell_target.Custom( 'HasteActiveInactive' )]"
@@ -92,10 +92,10 @@
  ancient_magic_spellbook_events.002.g:0 "Slowness [am_spell_target.Custom( 'SlownessActiveInactive' )]"
  ancient_magic_spellbook_events.002.h:0 "Mass Slowness [am_spell_target.Custom( 'MassSlownessActiveInactive' )]"
  ancient_magic_spellbook_events.002.i:0 "Temporal Manipulation [am_spell_target.Custom( 'TemporalManipulationActiveInactive' )]"
- ancient_magic_spellbook_events.003.t:0 "[chiromancy|E]                                                            [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.003.t:0 "[chiromancy|E]                                                            [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.003.desc:0 "You form your thoughts and spell construct into a relaxing swirl of ordered patterns."
  ancient_magic_spellbook_events.003.a:0 "Healing"
- ancient_magic_spellbook_events.004.t:0 "[elomancy|E]                                                              [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.004.t:0 "[elomancy|E]                                                              [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.004.desc:0 "You bend your thoughts and spell construct into a barely contained structure of hardened will, ready to be released in an instant."
  ancient_magic_spellbook_events.004.a:0 "Create Golems"
  ancient_magic_spellbook_events.004.b:0 "Flame Aura [am_spell_target.Custom( 'FlameAuraActiveInactive' )]"
@@ -104,17 +104,17 @@
  ancient_magic_spellbook_events.004.e:0 "Control Water [am_spell_target.Custom( 'ControlWaterActiveInactive' )]"
  ancient_magic_spellbook_events.004.f:0 "Drought [am_spell_target.Custom( 'DroughtActiveInactive' )]"
  ancient_magic_spellbook_events.004.g:0 "Cloak of Elements [am_spell_target.Custom( 'CloakOfElementsActiveInactive' )]"
- ancient_magic_spellbook_events.005.t:0 "[necromancy|E]                                                            [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.005.t:0 "[necromancy|E]                                                            [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.005.desc:0 "You force your thoughts and spell construct into an alien form of writhing, corrosive, malevolence, which seeps out around you hungrily."
  ancient_magic_spellbook_events.005.a:0 "Create Undead"
  ancient_magic_spellbook_events.005.b:0 "Pestilence"
  ancient_magic_spellbook_events.005.c:0 "Consume Life"
  ancient_magic_spellbook_events.005.d:0 "Aura of Death [am_spell_target.Custom( 'AuraOfDeathActiveInactive' )]"
- ancient_magic_spellbook_events.006.t:0 "[biomancy|E]                                                              [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.006.t:0 "[biomancy|E]                                                              [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.006.desc:0 "You send your thoughts and spell construct outward, sweeping through the natural world about you until you feel at one with it."
  ancient_magic_spellbook_events.006.a:0 "Manipulate Blood"
  ancient_magic_spellbook_events.006.e:0 "Conception"
- ancient_magic_spellbook_events.007.t:0 "[mensomancy|E]                                                            [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.007.t:0 "[mensomancy|E]                                                            [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.007.desc:0 "You forge your thoughts and spell construct into a fine point which dances and twists, vibrating in time with the rhythm of the minds around you."
  ancient_magic_spellbook_events.007.a:0 "Manipulate Mind"
  ancient_magic_spellbook_events.007.c:0 "Aura of Majesty [am_spell_target.Custom( 'AuraOfMajestyActiveInactive' )]"
@@ -132,7 +132,7 @@
  ancient_magic_spellbook_events_cast_spell:0 "Cast Spell"
  #CHRONOMANCY SPELLS*******************************************************************************
  # Control Aging
- ancient_magic_spellbook_events.201.t:0 "[control_aging|E] ([mage_spell|E])                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.201.t:0 "[control_aging|E] ([mage_spell|E])                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.201.desc:0 "Delving your mind into [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))],"
  ancient_magic_spellbook_events.201.desc.a.x:0 "you consider the mastery which was required to halt the ravages of time on this body."
  ancient_magic_spellbook_events.201.desc.b.x:0 "you consider the disorder which is being wrecked upon this body by the ravages of time, and begin constructing a spell to counter that disorder."
@@ -149,35 +149,35 @@
  ancient_magic_spellbook_events.202.desc.e:0 "Banishing your own spell construct, you delve your will into the perplexing nature of the construct within [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))] yet, despite your best efforts, you simply cannot understand its nature, nor any way to dispel it."
  
  # Haste
- ancient_magic_spellbook_events.203.t:0 "[haste|E] ([mage_aura|E])                                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.203.t:0 "[haste|E] ([mage_aura|E])                                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.203.desc:0 "You stretch your hands out to either side and begin to draw the perfect geomatric patterns of the chronomancy [school_of_magic|E] into a rotating swirl about yourself. Your intent clear, and the spell construct drawn, the only thing left to do is to invest your aura with mana. Will you?"
 
  # Glimpse The Future
- ancient_magic_spellbook_events.204.t:0 "[glimpse_the_future|E] ([mage_aura|E])                              [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.204.t:0 "[glimpse_the_future|E] ([mage_aura|E])                              [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.204.desc:0 "You extend your awareness, focusing your perception onto a time in the distant future, trying to make sense of the myriad images which play before your eyes as you build your spell construct. At the moment when you feel as though you could reach out and touch that distant time and place, you gather your [mana|El], ready to cast the spell. Will you?"
  
  # Financial Times
- ancient_magic_spellbook_events.205.t:0 "[financial_times|E] ([mage_aura|E])                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.205.t:0 "[financial_times|E] ([mage_aura|E])                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.205.desc:0 "You extend your awareness, focusing your mind on the fundamental randomness of reality, letting scenario after scenario play out before you. As you weave the intricate patterns of your spell construct, you feel as though you are on the verge of some new kind of understanding. You feel as though someone could roll a die a thousand times and you could say what face it would land on for each. All that's left to do is infuse the spell with [mana|El]. Will you?"
  
  # Celerity
- ancient_magic_spellbook_events.206.t:0 "[celerity|E] ([mage_aura|E])                                              [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.206.t:0 "[celerity|E] ([mage_aura|E])                                              [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.206.desc:0 "You begin to weave intricate geometric patterns around yourself, threading them in and out of your local temporal reference frame, and drawing them tighter, pulling yourself out of step with other's perception of time, and into one where you are moving at a break-neck pace. Your spell construct hums in time with you, whirling about you as you prepare to invest it with [mana|El]. Will you?"
  
  # Slowness
- ancient_magic_spellbook_events.207.t:0 "[slowness|E] ([mage_aura|E])                                              [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.207.t:0 "[slowness|E] ([mage_aura|E])                                              [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.207.desc:0 "You begin to weave intricate geometric patterns around yourself, threading them in and out of your local temporal reference frame, and pushing them outwards, raising the fabric of time into a hill around yourself, and forcing all who approach you to move far more slowly. Your spell construct lets out a glacial, rhythmic hum, swirling listlessly about you as you prepare to invest it with [mana|El]. Will you?"
  
  # Mass Slowness
- ancient_magic_spellbook_events.208.t:0 "[mass_slowness|E] ([mage_aura|E])                                   [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.208.t:0 "[mass_slowness|E] ([mage_aura|E])                                   [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.208.desc:0 "You begin building the [slowness|El] spell-construct which has become second nature to you, then with an irrefutable will, you press the wall of time out from yourself, raising hills in the local time geometry where your subjects are, and leaving everyone else to struggle up those hills. Then, your hands quavering from the mental strain of the spell, you prepare to invest it with [mana|El]. Will you?"
  
  # Temporal Manipulation
- ancient_magic_spellbook_events.209.t:0 "[temporal_manipulation|E] ([mage_aura|E])                   [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.209.t:0 "[temporal_manipulation|E] ([mage_aura|E])                   [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.209.desc:0 "Taking all that you have learned about the manipulation of time up until now, weaving it into a massive spell construct which extends out around you, blanketing everything and everyone in your domain, you reach out with your magical senses and trail your spell through the land itself, taking it tightly with your will and heaving it up into a hill. The temporal geometry of your domain begins to shift, shakily rising up higher, and to your senses it seems as though all of your people are moving in a blur compared to those just outside of your spell construct. Will you invest your spell with [mana|El] to stabilize it?"
 
 #CHIROMANCY SPELLS************************************************************************************
- ancient_magic_spellbook_events.301.t:0 "[healing_spell|E] ([mage_spell|E])                                                    [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.301.t:0 "[healing_spell|E] ([mage_spell|E])                                                    [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.301.desc.a.x.x.x:0 "Already weaving your will into a few simple spell constructs designed to alleviate suffering and heal injury and disease, you take a moment to observe [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))], writing notes as you would with any other patient."
  ancient_magic_spellbook_events.301.desc.a.a.x.x:0 "\n\n#Help In terms of#! #S [minor_health_issues|E]:#!"
  ancient_magic_spellbook_events.301.desc.a.a.a.x:0 "the patient is clearly suffering from some, and any healer worth the name could fix the problem."
@@ -199,7 +199,7 @@
  ancient_magic_spellbook_events.301.d:0 "[am_spell_caster.Custom2('SpellTargetIsIAm', SCOPE.sC('am_spell_target'))] completely healthy."
 
 #ELOMANCY SPELLS****************************************************************************************
- ancient_magic_spellbook_events.401.t:0 "[create_golems|E] ([mage_ritual|E])                                                  [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.401.t:0 "[create_golems|E] ([mage_ritual|E])                                                  [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.401.desc.a.x.x.x.x:0 "Your mind dances as your ritual nears completion. The earth around you trembles as your will grows ever closer to manifesting. In your right hand, you hold your spellbook, which is filled with the complex mnemonics for the spell, and your left hand moves in a blur, holding a carefully crafted stone figurine, darting through the symbolic motions which will inform your creation's behavior.\n\n"
  ancient_magic_spellbook_events.401.desc.a.a.x.x.x:0 "All of your preparations are complete. The earth groans in ascent as you come to the apex of your ritual.\n\n"
  ancient_magic_spellbook_events.401.desc.a.b.x.x.x:0 "Alas, your preparations for the creation of stone golems is not yet complete, so you will not be able to create more of them today.\n\n"
@@ -214,28 +214,28 @@
  ancient_magic_spellbook_events.401.a:0 "Stone Golems"
  ancient_magic_spellbook_events.401.b:0 "Lave Golems"
 
- ancient_magic_spellbook_events.402.t:0 "[flame_aura|E] ([mage_aura|E])                                                          [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.402.t:0 "[flame_aura|E] ([mage_aura|E])                                                          [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.402.desc:0 "You bend your thoughts and intent into a state of rage, and an undeniable need for destruction, pressing that white hot spark out, until the world around you seems on the verge of burning under the assault of your will, and then you stoke the flames higher, feeding into them every sleight, every set-back, every moment when you've lost your temper, until your spell is on the verge of manifesting. Will you feed it [mana|El]?"
  
- ancient_magic_spellbook_events.403.t:0 "[flaming_weapons|E] ([mage_aura|E])                                                     [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.403.t:0 "[flaming_weapons|E] ([mage_aura|E])                                                     [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.403.desc:0 "You bend your thoughts and intent into a state of rage, just as you would while casting a [flame_aura|E] spell, and then you go a step further. You extend your will out wider, touching the soldiers among you with that rage, letting it taste their malice, fear, and rage, feeding it back into them until their weapons begin to let out thin ribbons of smoke. Will you feed the fire [mana|El]?"
 
- ancient_magic_spellbook_events.404.t:0 "[living_earthworks|E] ([mage_aura|E])                                                   [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.404.t:0 "[living_earthworks|E] ([mage_aura|E])                                                   [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.404.desc:0 "You settle your thoughts into a slow and inexorable flow, seeking to align them to the motions of the earth beneath your feet. An age seems to pass within the span of a heart-beat, and then you feel as though you are #S all#!. The feet of people all around you are as the feet of insects crawling on your body, and you feel as though you could swat those insects if you just had a little energy. Will you invest [mana|El] into the spell?"
  living_earthworks_modifier:0 "Living Earthworks"
  living_earthworks_modifier_desc:0 "[fort_level|E]: @fort_icon!#P +0.5#!"
 
- ancient_magic_spellbook_events.405.t:0 "[control_water|E] ([mage_aura|E])                                                       [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.405.t:0 "[control_water|E] ([mage_aura|E])                                                       [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.405.desc:0 "You allow your thoughts to flow, not giving them conscious form, but to just trickle, following the path of least resistance. In this state, you feel akin to the water all around you, the water in the sky, the water in the earth and the sea, and even the water within you and everyone around you. Then, unexpectedly, you #S are the water#!, drifting just as your thoughts drift, and you feel as though you could be given purpose, if you just invested some [mana|El]. Will you?"
 
- ancient_magic_spellbook_events.406.t:0 "[drought_spell|E] ([mage_aura|E])                                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.406.t:0 "[drought_spell|E] ([mage_aura|E])                                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.406.desc:0 "You allow your thoughts to flow, just as you would while casting the [control_water|E] spell and, again, you feel the water all around you. You feel as creatures scrabble for you, you understand their need, and you whimsically wonder what would happen if you simply #S were not there#!. You feel that whimsy propagating out around you, beginning to take root in the clouds and the earth, and you know that it would take only a bit of [mana|El] to make that whimsy become intent. Will you invest it?"
  
- ancient_magic_spellbook_events.407.t:0 "[cloak_of_elements|E] ([mage_aura|E])                                    [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.407.t:0 "[cloak_of_elements|E] ([mage_aura|E])                                    [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.407.desc:0 "Through years of training in the art of being an [elomancer|El], you split your mind into several states simultaneously, letting one burn with rage and fire, another slow to the resonance of the earth, and the last to flow aimlessly with the water and, as you achieve this feat, you become #S everything#!. You understand the elements in a way that few ever do. The earth, in all of its states and forms, is #S you#!. All that you need to do is invest your intent with [mana|E], and it will awaken to serve you. Will you?"
 
  #NECROMANCY SPELLS*************************************************************************************
- ancient_magic_spellbook_events.501.t:0 "[create_undead|E] ([mage_ritual|E])                                      [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.501.t:0 "[create_undead|E] ([mage_ritual|E])                                      [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.501.desc.x:0 "You twist your thoughts into an alien form and begin to weave an insidious spell construct:\n\n"
  ancient_magic_spellbook_events.501.desc.x.a:0 "You send your will into the earth around you, gingerly touching the unmoving bodies which lay in varying states of decay beneath your feet."
  ancient_magic_spellbook_events.501.desc.x.b:0 "Unfortunately, the lesser version of this spell will not be able to affect [am_spell_target.GetFirstNameNoTooltip] while [am_spell_target.GetSheHe] is still alive. You will have to find corpses around #S yourself#! to animate."
@@ -254,7 +254,7 @@
  ancient_magic_spellbook_events.501.a:0 "Create lesser undead"
  ancient_magic_spellbook_events.501.b:0 "Change [am_spell_target.GetFirstNameNoTooltip] into a greater undead"
 
- ancient_magic_spellbook_events.502.t:0 "[pestilence|E] ([mage_spell|E])                                               [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.502.t:0 "[pestilence|E] ([mage_spell|E])                                               [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.502.desc.x.a:0 "Letting your warped thoughts fall into a loose, writhing tangle, swirling in undirected malice, you extend your will out towards [am_spell_target.GetFirstNameNoTooltip], lightly brushing [am_spell_target.GetHerHim] with a sinuous spell construct."
  ancient_magic_spellbook_events.502.desc.x.b:0 "It seems like your mind is going. For a second there, you were creating a spell construct to give yourself... Who knows what kind of disease... Working [necromancy|El] always puts you in an... interesting frame of mind, but not that interesting."
  ancient_magic_spellbook_events.502.desc.x.a.a:0 "It would be so easy to make [am_spell_target.GetHerHis] body crumble. A little push here, a little nudge there, and [am_spell_target.GetFirstNameNoTooltip] would be defenseless against all manner of infections."
@@ -266,7 +266,7 @@
  ancient_magic_spellbook_events.502.a:0 "Infect [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))] with [GetTrait('ill').GetName( GetNullCharacter ) |LVl]"
  ancient_magic_spellbook_events.502.b:0 "Infect [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))] with [GetTrait('bubonic_plague').GetName( GetNullCharacter ) |LVl]"
  
- ancient_magic_spellbook_events.503.t:0 "[consume_life|E] ([mage_spell|E])                                        [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.503.t:0 "[consume_life|E] ([mage_spell|E])                                        [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.503.desc.x.a:0 "You allow the innate hunger of the [necromancy|E] [school_of_magic|E] to take over your mind, twisting your thoughts into something that must more closely resemble those of a beast, or perhaps something worse - a monster, then you extend your hand towards [am_spell_target.GetFirstNameNoTooltip]."
  ancient_magic_spellbook_events.503.desc.x.b:0 "It seems like your mind is going. For a second there, you were creating a spell construct to consume your own life energy. From an academic perspective, the question of what effect that would have on you is fascinating, but it's probably best not to try. The results may be unpredictable."
  ancient_magic_spellbook_events.503.desc.x.c:0 "You let a mad spell construct flow into [am_spell_target.GetFirstNameNoTooltip], allowing your hunger and all-consuming #S need#! to guide it, trying to prise the life out of [am_spell_target.GetHerHim], but you simply cannot draw any more from [am_spell_target.GetHerHim] with the lesser version of this spell."
@@ -280,15 +280,15 @@
  ancient_magic_spellbook_events.503.a:0 "Drain [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))]"
  ancient_magic_spellbook_events.503.b:0 "Drain [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))] completely"
  
- ancient_magic_spellbook_events.504.t:0 "[aura_of_death|E] ([mage_aura|E])                                       [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.504.t:0 "[aura_of_death|E] ([mage_aura|E])                                       [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.504.desc:0 "After so much training in the necromantic arts, assuming the familiar mental state for working spells from the [necromancy|E] [school_of_magic|E] has become second nature to you. While, to you, the mnemonics of this school have always been freeing, a liberation from your humanity, you've always noticed how the people around you stare when you are working your magic. By remaining in this state, by always embracing the madness, you will be able to carry that aura of terror with you everywhere you go..."
 
  #BIOMANCY SPELLS*****************************************************************************************
- ancient_magic_spellbook_events.601.t:0 "[manipulate_blood|E] ([mage_spell|E])                                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.601.t:0 "[manipulate_blood|E] ([mage_spell|E])                                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.601.desc:0 "You grasp that connection to the natural world with your mind and delve into [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))]. The complexity of life is such that you are immediately overwhelmed by the sheer magnitude of the bio-chemistry which shapes [am_spell_caster.Custom2('SpellTargetYouHerHim', SCOPE.sC('am_spell_target'))]. Yet, despite this, you extend your will, striving to bend the structure of [am_spell_caster.Custom2('SpellTargetYourHerHim', SCOPE.sC('am_spell_target'))] blood into a new shape. What is your intent?"
  ancient_magic_spellbook_events.601.a:0 "To help"
  ancient_magic_spellbook_events.601.b:0 "To harm"
- ancient_magic_spellbook_events.602.t:0 "[manipulate_blood|E] ([mage_spell|E])                                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.602.t:0 "[manipulate_blood|E] ([mage_spell|E])                                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.602.desc.a:0 "Your subject, [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))], is a truly remarkable specimen. To your magical senses, [am_spell_caster.Custom2('SpellTargetHerHisYour', SCOPE.sC('am_spell_target'))] blood seems to sing. In every way, from beauty, to physique, to intellect, [am_spell_caster.Custom2('SpellTargetSheHeIsYouAre', SCOPE.sC('am_spell_target'))] absolutely perfect.\n\n"
  ancient_magic_spellbook_events.602.desc.b:0 "Your subject, [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))], is an exemplary specimen. To your magical senses, [am_spell_caster.Custom2('SpellTargetHerHisYour', SCOPE.sC('am_spell_target'))] blood shines shines. In most ways [am_spell_caster.Custom2('SpellTargetSheHeIsYouAre', SCOPE.sC('am_spell_target'))] the ideal of what a human being should be.\n\n"
  ancient_magic_spellbook_events.602.desc.c:0 "Your subject, [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))], has some potential, latent traits which could be awakened with the right manipulation regimen. To your magical senses, [am_spell_caster.Custom2('SpellTargetHerHisYour', SCOPE.sC('am_spell_target'))] blood has a faint glow, which might be made to shine by one with the talent. In one or several ways [am_spell_caster.Custom2('SpellTargetSheHeIsYouAre', SCOPE.sC('am_spell_target'))] excelling as a human being.\n\n"
@@ -311,7 +311,7 @@
  ancient_magic_spellbook_events.602.b:0 "Physique"
  ancient_magic_spellbook_events.602.c:0 "Intellect"
  ancient_magic_spellbook_events.602.d:0 "Something Else"
- ancient_magic_spellbook_events.603.t:0 "[manipulate_blood|E] ([mage_spell|E])                                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.603.t:0 "[manipulate_blood|E] ([mage_spell|E])                                                 [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.603.desc:0 "You begin to feed power into the construct,"
  ancient_magic_spellbook_events.603.desc.a.x.y:0 "while taking care not to harm [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))],"
  ancient_magic_spellbook_events.603.desc.b.x.y:0 "forcing your mind and spell into ever more destructive shapes which bite and tear,"
@@ -322,7 +322,7 @@
  ancient_magic_spellbook_events.603.desc.x.y.b:0 "and feed the spell a vast quantity of [mana|E], until it is on the very cusp of being unleashed."
  ancient_magic_spellbook_events.603.desc.x.y.c:0 "and feed the spell a monumental quantity of [mana|E], until it is on the very cusp of being unleashed."
  ancient_magic_spellbook_events.603.desc.x.y.d:0 "and then, as you begin to raise [mana|E] to cast your spell, you find that there is nothing more to be done... [am_spell_caster.Custom2('SpellTargetIsYouAre', SCOPE.sC('am_spell_target'))] already perfect."
- ancient_magic_spellbook_events.604.t:0 "[manipulate_blood|E] ([mage_spell|E])                                                [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.604.t:0 "[manipulate_blood|E] ([mage_spell|E])                                                [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.604.desc:0 "Surveying [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))] with your magical senses, you see a level of complexity that you would have once been blind to. The human body is made up of billions of tiny... animals... or, perhaps that is ascribing too much complexity to them. They are machines, and even a single, seemingly minor edit to any one of them can create truly interesting and unpredictable results.\n\nWhen that edit is made by the hand of a talented [biomancer|El], truly interesting things can happen. Which traits do you want to produce in [am_spell_caster.Custom2('SpellTargetYourself', SCOPE.sC('am_spell_target'))]?"
  ancient_magic_spellbook_events.604.a.a:0 "Add Albinism"
  ancient_magic_spellbook_events.604.a.b:0 "Remove Albinism"
@@ -347,7 +347,7 @@
  ancient_magic_spellbook_events.604.k.a:0 "Add Blindness"
  ancient_magic_spellbook_events.604.k.b:0 "Remove Blindness"
  
- ancient_magic_spellbook_events.605.t:0 "[conception|E] ([mage_spell|E])                                           [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.605.t:0 "[conception|E] ([mage_spell|E])                                           [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.605.desc.a:0 "Shifting your awareness into your own body, you take a moment to marvel at the complexity of the human form. You consider all of the things that it can do, including its capacity to reproduce itself.\n\n"
  ancient_magic_spellbook_events.605.desc.a.a:0 "But, as you move your awareness into the maelstrom of complexity that is your own physiology, you are overwhelmed by the amount of raw information which you are immediately bombarded with. The only thing that you can discern through the chaos is that you don't have enough [mana|El] to perform this spell."
  ancient_magic_spellbook_events.605.desc.a.b:0 "Using the very first [biomancy|El] mnemonics that every practitioner worth the title '[biomancer|El]' must learn, you consider yourself. As always, you are overwhelmed by the complexity of life at first, but your training allows you to focus in on what you seek. Extending an orderly construct and your will over your reproductive system, you prepare to invest [mana|El] but, then you realize that you do not have enough to cast the spell..."
@@ -366,7 +366,7 @@
  ancient_magic_spellbook_events.605.d:0 "Impregnate"
 
  #MENSOMANCY SPELLS***************************************************************************************
- ancient_magic_spellbook_events.701.t:0 "[manipulate_mind|E] ([mage_spell|E])                                                   [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.701.t:0 "[manipulate_mind|E] ([mage_spell|E])                                                   [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.701.desc.x:0 "You make of your mind a weapon, forcing order onto it, until the world and all the people in it are governed by cold, hard, logic. Your [mensomancy|El] spell construct darts around you like a knife, twitching agitatedly, seeking a target of your choosing.\n\nYou could target [am_spell_target.GetFirstNameNoTooltip]'s limbic system, the simple part of [am_spell_target.GetHerHim] which is governed exclusively by base emotion. Or, if you have the skill, you could attack [am_spell_target.GetHerHis] cerebral cortex, the very seat of [am_spell_target.GetHerHis] consciousness, taking more direct control. Which will it be?"
  ancient_magic_spellbook_events.701.desc.x.a:0 "You make a single surgical strike with the knife-like point of your spell construct, lodging it deep in [am_spell_target.GetFirstNameNoTooltip]'s mind, directing it with cold dispassion as it slithers deep into [am_spell_target.GetHerHis] lower brain.\n\nThe human needs for companionship and their propensity for aggression are powerful motivators. Your spell construct vibrates with anticipation as you decide which part of [am_spell_target.GetFirstNameNoTooltip]'s mind you will affect with this spell."
  ancient_magic_spellbook_events.701.desc.x.a.a:0 "Finally, your spell construct settles its point on a particular region of brain tissue, coiling itself through and around it, and you begin your work, adding to your spell construct, giving it complex instructions which will be placed in the mind of [am_spell_target.GetFirstNameNoTooltip].\n\nYou have attained mastery over this region of the mind through training in the [mensomancy|E] [school_of_magic|E], so the task is child's play for you. [am_spell_target.GetFirstNameNoTooltip]'s mind is yours to do with as you please. You need only invest the [mana|El], and the spell will manifest."
@@ -394,9 +394,9 @@
  ancient_magic_spellbook_events.701.a.b.b:0 "Embed feelings of subservience to you"
  ancient_magic_spellbook_events.701.b.a:0 "Subsume [am_spell_target.GetHerHis] will"
  ancient_magic_spellbook_events.701.b.b:0 "Control [am_spell_target.GetHerHim] directly"
- ancient_magic_spellbook_events.702.t:0 "[aura_of_majesty|E] ([mage_aura|E])                                                     [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.702.t:0 "[aura_of_majesty|E] ([mage_aura|E])                                                     [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.702.desc:0 "Settling your mind into the customary spell mnemonics of the [mensomancy|E] [school_of_magic|E], you spread your arms and begin to construct a large, thinly woven spell construct. You press your will into it, extending it out, letting it flow through every person who focuses on you. As your spell builds, coming closer to the surface of reality, on the verge of manifesting, you can see something akin to admiration kindling in the eyes of your courtiers and subjects alike. Will you invest some [mana|El] to manifest the aura?"
- ancient_magic_spellbook_events.703.t:0 "[aura_of_truth|E] ([mage_aura|E])                                                       [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([ROOT.Var('mage_xp').GetValue|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
+ ancient_magic_spellbook_events.703.t:0 "[aura_of_truth|E] ([mage_aura|E])                                                       [mage_level|E] [SCOPE.ScriptValue('mage_level')|0] ([SCOPE.ScriptValue('mage_xp')|0] / [SCOPE.ScriptValue('mage_xp_to_next_level')|0] xp)"
  ancient_magic_spellbook_events.703.desc:0 "You weave a delicate spell construct out into an area roughly the size of a large room, pouring your will into it, and imprinting a single command within the minds of all in your presence. 'No lies'. Of course, they will never hear the command. You spell is more insidious than that. It promotes and magnifies the natural discomfort that most people feel whenever they tell a lie, but if people want to believe that it somehow forces them to tell the truth, why not let them believe it? Satisfied with your spell construct, you prepare to invest it with [mana|El]."
 
 #regiments
