@@ -135,6 +135,9 @@ reset_auras_decision = {
 				name = mana_drain
 				value = 0
 			}
+			trigger_event = {
+				on_action = on_reset_mana_system
+			}
 		}
 	}
 
