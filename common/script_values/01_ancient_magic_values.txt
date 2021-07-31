@@ -1,4 +1,8 @@
 ﻿mage_xp_per_perk = 15
+mana_drain_large = 30
+mana_drain_average = 15
+mana_drain_small = 10
+mana_drain_disease = 150
 mana_gen_legacy_2 = 10
 mana_gen_lifestyle = 100
 mana_gen_per_magic_circle = 30
@@ -100,7 +104,111 @@ ancient_magic_mana_gen = {
 		limit = { dynasty = { has_dynasty_perk = arcane_legacy_2 } }
 		add = mana_gen_legacy_2
 	}
-	subtract = var:mana_drain
+	subtract = mana_drain
+}
+
+mana_drain = {
+	value = 0
+	if = {
+		limit = { has_trait = mana_devouring }
+		add = mana_drain_disease
+	}
+	add = {
+		value = num_large_auras
+		multiply = mana_drain_large
+	}
+	add = {
+		value = num_average_auras
+		multiply = mana_drain_average
+	}
+	add = {
+		value = num_small_auras
+		multiply = mana_drain_small
+	}
+}
+
+num_large_auras = {
+	value = 0
+	if = {
+		limit = { has_character_modifier = temporal_manipulation_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = elemental_warrior_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = aura_of_death_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = enchanting_aura_modifier }
+		add = 1
+	}
+}
+
+num_average_auras = {
+	value = 0
+	if = {
+		limit = { has_character_modifier = magic_haste_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = glimpse_the_future_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = finacial_times_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = celerity_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = slowness_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = mass_slowness_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = flame_aura_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = flaming_weapons_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = living_earthworks_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = control_water_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = drought_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = beguiling_aura_modifier }
+		add = 1
+	}
+}
+
+num_small_auras = {
+	value = 0
+	if = {
+		limit = { has_character_modifier = biomantic_fertility_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = biomantic_infertility_modifier }
+		add = 1
+	}
 }
 
 ancient_magic_max_mana = {

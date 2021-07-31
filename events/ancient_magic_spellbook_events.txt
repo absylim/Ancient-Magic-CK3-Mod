@@ -878,12 +878,13 @@ ancient_magic_spellbook_events.203 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 15 }
+		change_mana_drain_loc = { VALUE = 15 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = magic_haste_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -899,9 +900,10 @@ ancient_magic_spellbook_events.203 = {
 			NOT = { has_perk = mass_celerity_perk }
 		}
 
-		change_mana_drain = { VALUE = -15 }
+		change_mana_drain_loc = { VALUE = -15 }
 
 		remove_all_character_modifier_instances = magic_haste_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -996,12 +998,13 @@ ancient_magic_spellbook_events.204 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 15 }
+		change_mana_drain_loc = { VALUE = 15 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = glimpse_the_future_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1017,9 +1020,10 @@ ancient_magic_spellbook_events.204 = {
 			NOT = { has_perk = glimpse_the_future_perk }
 		}
 
-		change_mana_drain = { VALUE = -15 }
+		change_mana_drain_loc = { VALUE = -15 }
 
 		remove_all_character_modifier_instances = glimpse_the_future_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1113,12 +1117,13 @@ ancient_magic_spellbook_events.205 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 15 }
+		change_mana_drain_loc = { VALUE = 15 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = finacial_times_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1134,9 +1139,10 @@ ancient_magic_spellbook_events.205 = {
 			NOT = { has_perk = finacial_times_perk }
 		}
 
-		change_mana_drain = { VALUE = -15 }
+		change_mana_drain_loc = { VALUE = -15 }
 
 		remove_all_character_modifier_instances = finacial_times_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1230,12 +1236,13 @@ ancient_magic_spellbook_events.206 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 15 }
+		change_mana_drain_loc = { VALUE = 15 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = celerity_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1251,9 +1258,10 @@ ancient_magic_spellbook_events.206 = {
 			NOT = { has_perk = celerity_perk }
 		}
 
-		change_mana_drain = { VALUE = -15 }
+		change_mana_drain_loc = { VALUE = -15 }
 
 		remove_all_character_modifier_instances = celerity_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1347,12 +1355,13 @@ ancient_magic_spellbook_events.207 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 15 }
+		change_mana_drain_loc = { VALUE = 15 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = slowness_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1368,9 +1377,10 @@ ancient_magic_spellbook_events.207 = {
 			NOT = { has_perk = slowness_perk }
 		}
 
-		change_mana_drain = { VALUE = -15 }
+		change_mana_drain_loc = { VALUE = -15 }
 
 		remove_all_character_modifier_instances = slowness_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1464,12 +1474,13 @@ ancient_magic_spellbook_events.208 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 15 }
+		change_mana_drain_loc = { VALUE = 15 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = mass_slowness_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1485,9 +1496,10 @@ ancient_magic_spellbook_events.208 = {
 			NOT = { has_perk = mass_slowness_perk }
 		}
 
-		change_mana_drain = { VALUE = -15 }
+		change_mana_drain_loc = { VALUE = -15 }
 
 		remove_all_character_modifier_instances = mass_slowness_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1581,12 +1593,13 @@ ancient_magic_spellbook_events.209 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 30 }
+		change_mana_drain_loc = { VALUE = 30 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = temporal_manipulation_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1602,9 +1615,10 @@ ancient_magic_spellbook_events.209 = {
 			NOT = { has_perk = temporal_manipulation_perk }
 		}
 
-		change_mana_drain = { VALUE = -30 }
+		change_mana_drain_loc = { VALUE = -30 }
 
 		remove_all_character_modifier_instances = temporal_manipulation_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2310,12 +2324,13 @@ ancient_magic_spellbook_events.402 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 15 }
+		change_mana_drain_loc = { VALUE = 15 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = flame_aura_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2331,9 +2346,10 @@ ancient_magic_spellbook_events.402 = {
 			NOT = { has_perk = flame_aura_perk }
 		}
 
-		change_mana_drain = { VALUE = -15 }
+		change_mana_drain_loc = { VALUE = -15 }
 
 		remove_all_character_modifier_instances = flame_aura_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2424,12 +2440,13 @@ ancient_magic_spellbook_events.403 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 15 }
+		change_mana_drain_loc = { VALUE = 15 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = flaming_weapons_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2445,9 +2462,10 @@ ancient_magic_spellbook_events.403 = {
 			NOT = { has_perk = flaming_weapons_perk }
 		}
 
-		change_mana_drain = { VALUE = -15 }
+		change_mana_drain_loc = { VALUE = -15 }
 
 		remove_all_character_modifier_instances = flaming_weapons_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2538,12 +2556,13 @@ ancient_magic_spellbook_events.404 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 15 }
+		change_mana_drain_loc = { VALUE = 15 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = living_earthworks_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2559,9 +2578,10 @@ ancient_magic_spellbook_events.404 = {
 			NOT = { has_perk = living_earthworks_perk }
 		}
 
-		change_mana_drain = { VALUE = -15 }
+		change_mana_drain_loc = { VALUE = -15 }
 
 		remove_all_character_modifier_instances = living_earthworks_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2652,12 +2672,13 @@ ancient_magic_spellbook_events.405 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 15 }
+		change_mana_drain_loc = { VALUE = 15 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = control_water_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2673,9 +2694,10 @@ ancient_magic_spellbook_events.405 = {
 			NOT = { has_perk = control_water_perk }
 		}
 
-		change_mana_drain = { VALUE = -15 }
+		change_mana_drain_loc = { VALUE = -15 }
 
 		remove_all_character_modifier_instances = control_water_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2766,12 +2788,13 @@ ancient_magic_spellbook_events.406 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 15 }
+		change_mana_drain_loc = { VALUE = 15 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = drought_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2787,9 +2810,10 @@ ancient_magic_spellbook_events.406 = {
 			NOT = { has_perk = drought_perk }
 		}
 
-		change_mana_drain = { VALUE = -15 }
+		change_mana_drain_loc = { VALUE = -15 }
 
 		remove_all_character_modifier_instances = drought_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2880,12 +2904,13 @@ ancient_magic_spellbook_events.407 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 30 }
+		change_mana_drain_loc = { VALUE = 30 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = elemental_warrior_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2904,9 +2929,10 @@ ancient_magic_spellbook_events.407 = {
 			}
 		}
 
-		change_mana_drain = { VALUE = -30 }
+		change_mana_drain_loc = { VALUE = -30 }
 
 		remove_all_character_modifier_instances = elemental_warrior_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -3624,12 +3650,13 @@ ancient_magic_spellbook_events.504 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 30 }
+		change_mana_drain_loc = { VALUE = 30 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = aura_of_death_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -3645,9 +3672,10 @@ ancient_magic_spellbook_events.504 = {
 			NOT = { has_perk = aura_of_death_perk }
 		}
 
-		change_mana_drain = { VALUE = -30 }
+		change_mana_drain_loc = { VALUE = -30 }
 
 		remove_all_character_modifier_instances = aura_of_death_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -5916,10 +5944,12 @@ ancient_magic_spellbook_events.605 = {
 				has_character_modifier = biomantic_infertility_modifier
 			}
 			remove_character_modifier = biomantic_infertility_modifier
-			change_mana_drain = { VALUE = -10 }
+			change_mana_drain_loc = { VALUE = -10 }
 		}
 		add_character_modifier = biomantic_fertility_modifier
-		change_mana_drain = { VALUE = 10 }
+		change_mana_drain_loc = { VALUE = 10 }
+
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -5952,15 +5982,17 @@ ancient_magic_spellbook_events.605 = {
 				has_character_modifier = biomantic_infertility_modifier
 			}
 			remove_character_modifier = biomantic_infertility_modifier
-			change_mana_drain = { VALUE = -10 }
+			change_mana_drain_loc = { VALUE = -10 }
 		}
 		if = {
 			limit = {
 				has_character_modifier = biomantic_fertility_modifier
 			}
 			remove_character_modifier = biomantic_fertility_modifier
-			change_mana_drain = { VALUE = -10 }
+			change_mana_drain_loc = { VALUE = -10 }
 		}
+
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -5987,10 +6019,12 @@ ancient_magic_spellbook_events.605 = {
 				has_character_modifier = biomantic_fertility_modifier
 			}
 			remove_character_modifier = biomantic_fertility_modifier
-			change_mana_drain = { VALUE = -10 }
+			change_mana_drain_loc = { VALUE = -10 }
 		}
 		add_character_modifier = biomantic_infertility_modifier
-		change_mana_drain = { VALUE = 10 }
+		change_mana_drain_loc = { VALUE = 10 }
+
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 		
 		remove_character_flag = am_spell_resolution
 	}
@@ -6806,12 +6840,13 @@ ancient_magic_spellbook_events.702 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 15 }
+		change_mana_drain_loc = { VALUE = 15 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = beguiling_aura_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -6830,9 +6865,10 @@ ancient_magic_spellbook_events.702 = {
 			}
 		}
 
-		change_mana_drain = { VALUE = -15 }
+		change_mana_drain_loc = { VALUE = -15 }
 
 		remove_all_character_modifier_instances = beguiling_aura_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -6923,12 +6959,13 @@ ancient_magic_spellbook_events.703 = {
 
 		change_mana = { VALUE = -100 }
 
-		change_mana_drain = { VALUE = 30 }
+		change_mana_drain_loc = { VALUE = 30 }
 
 		while = {
 			count = mage_level
 			add_character_modifier = enchanting_aura_modifier
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -6947,9 +6984,10 @@ ancient_magic_spellbook_events.703 = {
 			}
 		}
 
-		change_mana_drain = { VALUE = -30 }
+		change_mana_drain_loc = { VALUE = -30 }
 
 		remove_all_character_modifier_instances = enchanting_aura_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}

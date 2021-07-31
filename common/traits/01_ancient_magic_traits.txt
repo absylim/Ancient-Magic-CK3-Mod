@@ -170,8 +170,6 @@ mana_devouring_1 = {
 	dread_baseline_add = -10
 	dread_loss_mult = 1
 
-	change_mana_drain = 150
-
 	ruler_designer_cost = -15
 
 	desc = {
@@ -206,8 +204,6 @@ mana_devouring_2 = {
 
 	dread_baseline_add = -20
 	dread_loss_mult = 1
-
-	change_mana_drain = 150
 
 	ruler_designer_cost = -75
 

@@ -1,11 +1,4 @@
-﻿change_mana_drain = {
-	if = {
-		limit = { NOT = { exists = var:mana_drain } }
-		set_variable = {
-			name = mana_drain
-			value = 0
-		}
-	}
+﻿change_mana_drain_loc = {
 	if = {
 		limit = { $VALUE$ > 0 }
 		custom_description = {
@@ -20,8 +13,6 @@
 			value = $VALUE$
 		}
 	}
-	change_variable = { name = mana_drain add = $VALUE$ }
-	hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 }
 
 change_ancestral_guardians_count = {
