@@ -64,32 +64,32 @@ reset_auras_decision = {
 	effect = {
 		custom_tooltip = reset_auras_decision_effect_tooltip
 		
-		every_living_character = {
-			if = {
-				limit = { has_trait = mage }
-				remove_all_character_modifier_instances = magic_haste_modifier
-				remove_all_character_modifier_instances = glimpse_the_future_modifier
-				remove_all_character_modifier_instances = finacial_times_modifier
-				remove_all_character_modifier_instances = celerity_modifier
-				remove_all_character_modifier_instances = slowness_modifier
-				remove_all_character_modifier_instances = mass_slowness_modifier
-				remove_all_character_modifier_instances = temporal_manipulation_modifier
-				remove_all_character_modifier_instances = flame_aura_modifier
-				remove_all_character_modifier_instances = Flaming_weapons_modifier
-				remove_all_character_modifier_instances = living_earthworks_modifier
-				remove_all_character_modifier_instances = control_water_modifier
-				remove_all_character_modifier_instances = drought_modifier
-				remove_all_character_modifier_instances = elemental_warrior_modifier
-				remove_all_character_modifier_instances = aura_of_death_modifier
-				remove_all_character_modifier_instances = beguiling_aura_modifier
-				remove_all_character_modifier_instances = enchanting_aura_modifier
-				remove_character_modifier = biomantic_fertility_modifier
-				remove_character_modifier = biomantic_infertility_modifier
-				set_variable = {
-					name = mana_drain
-					value = 0
-				}
-				hidden_effect = {
+		hidden_effect = {
+			every_living_character = {
+				if = {
+					limit = { has_trait = mage }
+					remove_all_character_modifier_instances = magic_haste_modifier
+					remove_all_character_modifier_instances = glimpse_the_future_modifier
+					remove_all_character_modifier_instances = finacial_times_modifier
+					remove_all_character_modifier_instances = celerity_modifier
+					remove_all_character_modifier_instances = slowness_modifier
+					remove_all_character_modifier_instances = mass_slowness_modifier
+					remove_all_character_modifier_instances = temporal_manipulation_modifier
+					remove_all_character_modifier_instances = flame_aura_modifier
+					remove_all_character_modifier_instances = Flaming_weapons_modifier
+					remove_all_character_modifier_instances = living_earthworks_modifier
+					remove_all_character_modifier_instances = control_water_modifier
+					remove_all_character_modifier_instances = drought_modifier
+					remove_all_character_modifier_instances = elemental_warrior_modifier
+					remove_all_character_modifier_instances = aura_of_death_modifier
+					remove_all_character_modifier_instances = beguiling_aura_modifier
+					remove_all_character_modifier_instances = enchanting_aura_modifier
+					remove_character_modifier = biomantic_fertility_modifier
+					remove_character_modifier = biomantic_infertility_modifier
+					set_variable = {
+						name = mana_drain
+						value = 0
+					}
 					trigger_event = {
 						on_action = on_reset_mana_system
 					}
