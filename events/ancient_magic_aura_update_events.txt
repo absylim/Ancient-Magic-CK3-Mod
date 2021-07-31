@@ -3,6 +3,10 @@
 ancient_magic_aura_update_events.001 = {
 	hidden = yes
 
+	trigger = {
+		has_perk = mage
+	}
+
 	immediate = {
 		if = {
 			limit = { has_character_modifier = magic_haste_modifier }
