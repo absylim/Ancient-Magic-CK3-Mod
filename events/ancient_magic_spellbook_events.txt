@@ -901,10 +901,7 @@ ancient_magic_spellbook_events.203 = {
 
 		change_mana_drain = { VALUE = -15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = magic_haste_modifier
-		}
+		remove_all_character_modifier_instances = magic_haste_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1022,10 +1019,7 @@ ancient_magic_spellbook_events.204 = {
 
 		change_mana_drain = { VALUE = -15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = glimpse_the_future_modifier
-		}
+		remove_all_character_modifier_instances = glimpse_the_future_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1142,10 +1136,7 @@ ancient_magic_spellbook_events.205 = {
 
 		change_mana_drain = { VALUE = -15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = finacial_times_modifier
-		}
+		remove_all_character_modifier_instances = finacial_times_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1262,10 +1253,7 @@ ancient_magic_spellbook_events.206 = {
 
 		change_mana_drain = { VALUE = -15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = celerity_modifier
-		}
+		remove_all_character_modifier_instances = celerity_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1382,10 +1370,7 @@ ancient_magic_spellbook_events.207 = {
 
 		change_mana_drain = { VALUE = -15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = slowness_modifier
-		}
+		remove_all_character_modifier_instances = slowness_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1502,10 +1487,7 @@ ancient_magic_spellbook_events.208 = {
 
 		change_mana_drain = { VALUE = -15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = mass_slowness_modifier
-		}
+		remove_all_character_modifier_instances = mass_slowness_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1622,10 +1604,7 @@ ancient_magic_spellbook_events.209 = {
 
 		change_mana_drain = { VALUE = -30 }
 
-		while = {
-			count = 100
-			remove_character_modifier = temporal_manipulation_modifier
-		}
+		remove_all_character_modifier_instances = temporal_manipulation_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2354,10 +2333,7 @@ ancient_magic_spellbook_events.402 = {
 
 		change_mana_drain = { VALUE = -15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = flame_aura_modifier
-		}
+		remove_all_character_modifier_instances = flame_aura_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2471,10 +2447,7 @@ ancient_magic_spellbook_events.403 = {
 
 		change_mana_drain = { VALUE = -15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = flaming_weapons_modifier
-		}
+		remove_all_character_modifier_instances = flaming_weapons_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2588,10 +2561,7 @@ ancient_magic_spellbook_events.404 = {
 
 		change_mana_drain = { VALUE = -15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = living_earthworks_modifier
-		}
+		remove_all_character_modifier_instances = living_earthworks_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2705,10 +2675,7 @@ ancient_magic_spellbook_events.405 = {
 
 		change_mana_drain = { VALUE = -15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = control_water_modifier
-		}
+		remove_all_character_modifier_instances = control_water_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2822,10 +2789,7 @@ ancient_magic_spellbook_events.406 = {
 
 		change_mana_drain = { VALUE = -15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = drought_modifier
-		}
+		remove_all_character_modifier_instances = drought_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2942,10 +2906,7 @@ ancient_magic_spellbook_events.407 = {
 
 		change_mana_drain = { VALUE = -30 }
 
-		while = {
-			count = 100
-			remove_character_modifier = elemental_warrior_modifier
-		}
+		remove_all_character_modifier_instances = elemental_warrior_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -3686,10 +3647,7 @@ ancient_magic_spellbook_events.504 = {
 
 		change_mana_drain = { VALUE = -30 }
 
-		while = {
-			count = 100
-			remove_character_modifier = aura_of_death_modifier
-		}
+		remove_all_character_modifier_instances = aura_of_death_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -6874,10 +6832,7 @@ ancient_magic_spellbook_events.702 = {
 
 		change_mana_drain = { VALUE = -15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = beguiling_aura_modifier
-		}
+		remove_all_character_modifier_instances = beguiling_aura_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -6994,10 +6949,7 @@ ancient_magic_spellbook_events.703 = {
 
 		change_mana_drain = { VALUE = -30 }
 
-		while = {
-			count = 100
-			remove_character_modifier = enchanting_aura_modifier
-		}
+		remove_all_character_modifier_instances = enchanting_aura_modifier
 
 		remove_character_flag = am_spell_resolution
 	}
