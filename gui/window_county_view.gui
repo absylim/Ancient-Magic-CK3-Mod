@@ -963,10 +963,18 @@ window = {
 
 						button_standard = {
 							name = "grant_to_local_noble"
-							visible = "[And( And( And( ObjectsEqual( HoldingView.GetTitle.GetHolder, GetPlayer ), HoldingView.GetTitle.CanUseFindVassal( GetPlayer ) ), HoldingView.GetTitle.IsBarony ), Not(HoldingView.GetTitle.IsLeasedOut))]"
+							visible = "[And( And( And( And( ObjectsEqual( HoldingView.GetTitle.GetHolder, GetPlayer ), HoldingView.GetTitle.CanUseFindVassal( GetPlayer ) ), HoldingView.GetTitle.IsBarony ), Not(HoldingView.GetTitle.IsLeasedOut)), Not( GetScriptedGui('grant_to_mage').IsValid(GuiScope.SetRoot(HoldingView.GetTitle.MakeScope).End)))]"
 							text = "GRANT_TO_LOCAL_NOBLE_HEADER"
 							onclick = "[HoldingView.GetTitle.CreateHolderForBarony]"
 							tooltip = "GRANT_TO_LOCAL_NOBLE_BUTTON_HOLDING_VIEW_TOOLTIP"
+						}
+
+						button_standard = {
+							name = "grant_to_local_mage"
+							visible = "[And( And( And( And( ObjectsEqual( HoldingView.GetTitle.GetHolder, GetPlayer ), HoldingView.GetTitle.CanUseFindVassal( GetPlayer ) ), HoldingView.GetTitle.IsBarony ), Not(HoldingView.GetTitle.IsLeasedOut)), GetScriptedGui('grant_to_mage').IsValid(GuiScope.SetRoot(HoldingView.GetTitle.MakeScope).End))]"
+							text = "GRANT_TO_LOCAL_MAGE_HEADER"
+							onclick = "[GetScriptedGui('grant_to_mage').Execute(GuiScope.SetRoot(HoldingView.GetTitle.MakeScope).End)]"
+							tooltip = "GRANT_TO_LOCAL_MAGE_BUTTON_HOLDING_VIEW_TOOLTIP"
 						}
 
 						expand = {}
