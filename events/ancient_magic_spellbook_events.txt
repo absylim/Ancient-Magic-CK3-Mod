@@ -722,7 +722,7 @@ ancient_magic_spellbook_events.202 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -500 }
+			change_mana_with_tooltip = { VALUE = -500 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = casting_restart_aging_spell
 			remove_character_flag = casting_halt_aging_spell
@@ -777,7 +777,7 @@ ancient_magic_spellbook_events.202 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -500 }
+			change_mana_with_tooltip = { VALUE = -500 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = casting_restart_aging_spell
 			remove_character_flag = casting_halt_aging_spell
@@ -876,7 +876,7 @@ ancient_magic_spellbook_events.203 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -15 }
 
@@ -993,7 +993,7 @@ ancient_magic_spellbook_events.204 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -15 }
 
@@ -1109,7 +1109,7 @@ ancient_magic_spellbook_events.205 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -15 }
 
@@ -1225,7 +1225,7 @@ ancient_magic_spellbook_events.206 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -15 }
 
@@ -1341,7 +1341,7 @@ ancient_magic_spellbook_events.207 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -15 }
 
@@ -1457,7 +1457,7 @@ ancient_magic_spellbook_events.208 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -15 }
 
@@ -1573,7 +1573,7 @@ ancient_magic_spellbook_events.209 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -30 }
 
@@ -1867,7 +1867,7 @@ ancient_magic_spellbook_events.301 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -50 }
+			change_mana_with_tooltip = { VALUE = -50 }
 			remove_character_flag = am_spell_resolution
 		}
 		scope:am_spell_target = {
@@ -1894,7 +1894,7 @@ ancient_magic_spellbook_events.301 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -100 }
+			change_mana_with_tooltip = { VALUE = -100 }
 			remove_character_flag = am_spell_resolution
 		}
 		scope:am_spell_target = {
@@ -1926,7 +1926,7 @@ ancient_magic_spellbook_events.301 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -200 }
+			change_mana_with_tooltip = { VALUE = -200 }
 			remove_character_flag = am_spell_resolution
 		}
 		scope:am_spell_target = {
@@ -2163,7 +2163,7 @@ ancient_magic_spellbook_events.401 = {
 		}
 		scope:am_spell_caster = {
 			scope:am_spell_caster = {
-				change_mana = { VALUE = -100 }
+				change_mana_with_tooltip = { VALUE = -100 }
 				spawn_army = {
 					name = golem_army
 					uses_supply = no
@@ -2198,7 +2198,7 @@ ancient_magic_spellbook_events.401 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -400 }
+			change_mana_with_tooltip = { VALUE = -400 }
 			spawn_army = {
 				name = lava_golem_army
 				uses_supply = no
@@ -2301,7 +2301,7 @@ ancient_magic_spellbook_events.402 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -15 }
 
@@ -2414,7 +2414,7 @@ ancient_magic_spellbook_events.403 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -15 }
 
@@ -2527,7 +2527,7 @@ ancient_magic_spellbook_events.404 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -15 }
 
@@ -2640,7 +2640,7 @@ ancient_magic_spellbook_events.405 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -15 }
 
@@ -2753,7 +2753,7 @@ ancient_magic_spellbook_events.406 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -15 }
 
@@ -2866,7 +2866,7 @@ ancient_magic_spellbook_events.407 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -30 }
 
@@ -3083,7 +3083,7 @@ ancient_magic_spellbook_events.501 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -200 }
+			change_mana_with_tooltip = { VALUE = -200 }
 			remove_character_flag = am_spell_resolution
 		}
 		scope:am_spell_target = {
@@ -3124,7 +3124,7 @@ ancient_magic_spellbook_events.501 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -600 }
+			change_mana_with_tooltip = { VALUE = -600 }
 			remove_character_flag = am_spell_resolution
 		}
 		scope:am_spell_target = {
@@ -3249,7 +3249,7 @@ ancient_magic_spellbook_events.502 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -50 }
+			change_mana_with_tooltip = { VALUE = -50 }
 			remove_character_flag = am_spell_resolution
 		}
 
@@ -3285,7 +3285,7 @@ ancient_magic_spellbook_events.502 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 			remove_character_flag = am_spell_resolution
 		}
 
@@ -3467,7 +3467,7 @@ ancient_magic_spellbook_events.503 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -200 }
+			change_mana_with_tooltip = { VALUE = -200 }
 			add_character_modifier = {
 				modifier = stolen_lifeforce_modifier
 				years = mage_level
@@ -3516,7 +3516,7 @@ ancient_magic_spellbook_events.503 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -600 }
+			change_mana_with_tooltip = { VALUE = -600 }
 			remove_character_flag = am_spell_resolution
 		}
 
@@ -3609,7 +3609,7 @@ ancient_magic_spellbook_events.504 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -30 }
 
@@ -4832,9 +4832,9 @@ ancient_magic_spellbook_events.603 = {
 			}
 			switch = {
 				trigger = has_character_flag
-				casting_lesser_blood_spell = { change_mana = { VALUE = -100 }}
-				casting_moderate_blood_spell = { change_mana = { VALUE = -200 }}
-				casting_greater_blood_spell = { change_mana = { VALUE = -400 }}
+				casting_lesser_blood_spell = { change_mana_with_tooltip = { VALUE = -100 }}
+				casting_moderate_blood_spell = { change_mana_with_tooltip = { VALUE = -200 }}
+				casting_greater_blood_spell = { change_mana_with_tooltip = { VALUE = -400 }}
 			}
 			remove_character_flag = casting_lesser_blood_spell
 			remove_character_flag = casting_moderate_blood_spell
@@ -4921,7 +4921,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = albino
@@ -4955,7 +4955,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = albino
@@ -4991,7 +4991,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = stuttering
@@ -5025,7 +5025,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = stuttering
@@ -5066,7 +5066,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = giant
@@ -5100,7 +5100,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = giant
@@ -5135,7 +5135,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = lisping
@@ -5169,7 +5169,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = lisping
@@ -5204,7 +5204,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = scaly
@@ -5237,7 +5237,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = scaly
@@ -5272,7 +5272,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = clubfooted
@@ -5306,7 +5306,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = clubfooted
@@ -5341,7 +5341,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = hunchbacked
@@ -5374,7 +5374,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = hunchbacked
@@ -5415,7 +5415,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = dwarf
@@ -5449,7 +5449,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = dwarf
@@ -5492,7 +5492,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = strong
@@ -5526,7 +5526,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = strong
@@ -5569,7 +5569,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = weak
@@ -5603,7 +5603,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = weak
@@ -5638,7 +5638,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = blind
@@ -5672,7 +5672,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = blind
@@ -5896,7 +5896,7 @@ ancient_magic_spellbook_events.605 = {
 				NOT = { has_perk = fertility_control_perk }
 			}
 		}
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 		if = {
 			limit = {
 				has_character_modifier = biomantic_infertility_modifier
@@ -5934,7 +5934,7 @@ ancient_magic_spellbook_events.605 = {
 				}
 			}
 		}
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 		if = {
 			limit = {
 				has_character_modifier = biomantic_infertility_modifier
@@ -5971,7 +5971,7 @@ ancient_magic_spellbook_events.605 = {
 				}
 			}
 		}
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 		if = {
 			limit = {
 				has_character_modifier = biomantic_fertility_modifier
@@ -6052,7 +6052,7 @@ ancient_magic_spellbook_events.605 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 			remove_character_flag = am_spell_resolution
 		}
 		scope:am_spell_target = {
@@ -6376,7 +6376,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6416,7 +6416,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -400 }
+			change_mana_with_tooltip = { VALUE = -400 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6460,7 +6460,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -100 }
+			change_mana_with_tooltip = { VALUE = -100 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6503,7 +6503,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -400 }
+			change_mana_with_tooltip = { VALUE = -400 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6559,7 +6559,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -200 }
+			change_mana_with_tooltip = { VALUE = -200 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6639,7 +6639,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -400 }
+			change_mana_with_tooltip = { VALUE = -400 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6682,7 +6682,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -600 }
+			change_mana_with_tooltip = { VALUE = -600 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6796,7 +6796,7 @@ ancient_magic_spellbook_events.702 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -15 }
 
@@ -6912,7 +6912,7 @@ ancient_magic_spellbook_events.703 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
 		change_mana_gen_loc = { VALUE = -30 }
 
