@@ -880,10 +880,7 @@ ancient_magic_spellbook_events.203 = {
 
 		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = magic_haste_modifier
-		}
+		add_character_modifier = magic_haste_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -1000,10 +997,7 @@ ancient_magic_spellbook_events.204 = {
 
 		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = glimpse_the_future_modifier
-		}
+		add_character_modifier = glimpse_the_future_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -1119,10 +1113,7 @@ ancient_magic_spellbook_events.205 = {
 
 		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = finacial_times_modifier
-		}
+		add_character_modifier = finacial_times_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -1238,10 +1229,7 @@ ancient_magic_spellbook_events.206 = {
 
 		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = celerity_modifier
-		}
+		add_character_modifier = celerity_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -1357,10 +1345,7 @@ ancient_magic_spellbook_events.207 = {
 
 		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = slowness_modifier
-		}
+		add_character_modifier = slowness_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -1476,10 +1461,7 @@ ancient_magic_spellbook_events.208 = {
 
 		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = mass_slowness_modifier
-		}
+		add_character_modifier = mass_slowness_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -1595,10 +1577,7 @@ ancient_magic_spellbook_events.209 = {
 
 		change_mana_gen_loc = { VALUE = -30 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = temporal_manipulation_modifier
-		}
+		add_character_modifier = temporal_manipulation_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -2326,10 +2305,7 @@ ancient_magic_spellbook_events.402 = {
 
 		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = flame_aura_modifier
-		}
+		add_character_modifier = flame_aura_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -2442,10 +2418,7 @@ ancient_magic_spellbook_events.403 = {
 
 		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = flaming_weapons_modifier
-		}
+		add_character_modifier = flaming_weapons_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -2558,10 +2531,7 @@ ancient_magic_spellbook_events.404 = {
 
 		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = living_earthworks_modifier
-		}
+		add_character_modifier = living_earthworks_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -2674,10 +2644,7 @@ ancient_magic_spellbook_events.405 = {
 
 		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = control_water_modifier
-		}
+		add_character_modifier = control_water_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -2790,10 +2757,7 @@ ancient_magic_spellbook_events.406 = {
 
 		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = drought_modifier
-		}
+		add_character_modifier = drought_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -2906,10 +2870,7 @@ ancient_magic_spellbook_events.407 = {
 
 		change_mana_gen_loc = { VALUE = -30 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = elemental_warrior_modifier
-		}
+		add_character_modifier = elemental_warrior_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -3652,10 +3613,7 @@ ancient_magic_spellbook_events.504 = {
 
 		change_mana_gen_loc = { VALUE = -30 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = aura_of_death_modifier
-		}
+		add_character_modifier = aura_of_death_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -6842,10 +6800,7 @@ ancient_magic_spellbook_events.702 = {
 
 		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = beguiling_aura_modifier
-		}
+		add_character_modifier = beguiling_aura_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -6961,10 +6916,7 @@ ancient_magic_spellbook_events.703 = {
 
 		change_mana_gen_loc = { VALUE = -30 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = enchanting_aura_modifier
-		}
+		add_character_modifier = enchanting_aura_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
