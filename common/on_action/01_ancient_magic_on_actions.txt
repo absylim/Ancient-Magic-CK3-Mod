@@ -1,14 +1,4 @@
-﻿quarterly_playable_pulse = {
-	events = {
-		ancient_magic_aura_update_events.001
-		delay = { months = 1 }
-		ancient_magic_aura_update_events.001
-		delay = { months = 2 }
-		ancient_magic_aura_update_events.001
-	}
-}
-
-on_reset_mana_system = {
+﻿on_reset_mana_system = {
 	effect = {
 		set_variable = {
 			name = max_mana
@@ -26,6 +16,7 @@ on_reset_mana_system = {
 				value = var:max_mana
 			}
 		}
+		trigger_event = ancient_magic_aura_update_events.001
 	}
 }
 
