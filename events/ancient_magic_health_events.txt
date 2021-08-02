@@ -98,6 +98,26 @@ AMHealth.0001 = {
 		base = 1
 
 		modifier = {
+			NOT = { has_trait = mage }
+			factor = 0
+		}
+		modifier = {
+			has_game_rule = few_ancient_magical_diseases
+			factor = 100
+		}
+		modifier = {
+			has_game_rule = moderate_ancient_magical_diseases
+			factor = 250
+		}
+		modifier = {
+			has_game_rule = lot_ancient_magical_diseases
+			factor = 500
+		}
+		modifier = {
+			has_game_rule = hell_ancient_magical_diseases
+			factor = 4000
+		}
+		modifier = {
 			health <= fine_health
 			factor = 1.1
 		}
@@ -233,7 +253,7 @@ AMHealth.0002 = {
 
 	trigger = {
 		can_contract_disease_trigger = { DISEASE = mana_devouring }
-		mana <= 0
+		var:mana <= 0
 	}
 
 	weight_multiplier = {
@@ -532,23 +552,25 @@ AMHealth.3001 = {
 		OR = { has_trait = mana }
 	}
 	
-	if = {
-		limit = {
-			has_flag = flag:mana_devouring_1
-			has_trait = mana
-			var:mana <= 0
-			var:mana_gen <= 0
+	immediate = {
+		if = {
+			limit = {
+				has_character_flag = flag:mana_devouring_1
+				has_trait = mana
+				var:mana <= 0
+				var:mana_gen <= 0
+			}
+			trigger_event = AMHealth.0002 # Evolve mana devouring into body devouring
 		}
-		immediate = { trigger_event = AMHealth.0002 } # Evolve mana devouring into body devouring
-	}
-	else_if = {
-		limit = {
-			has_flag = flag:mana_devouring_2
-			has_trait = mana
-			var:mana >= 200
-			var:mana_gen >= 1
+		else_if = {
+			limit = {
+				has_character_flag = flag:mana_devouring_2
+				has_trait = mana
+				var:mana >= 200
+				var:mana_gen >= 1
+			}
+			trigger_event = AMHealth.1103 # Devolve body devouring into mana devouring
 		}
-		immediate = { trigger_event = AMHealth.1103 } # Devolve body devouring into mana devouring
 	}
 }
 
@@ -596,7 +618,7 @@ AMHealth.3101 = {
 		first_valid = { #Disease type
 			triggered_desc = {
 				trigger = { scope:disease_type = flag:mana_devouring }
-				desc = disease_mana_devouring
+				desc = disease_mana_devouring_1
 			}
 			desc = missing_illness
 		}
@@ -726,7 +748,7 @@ AMHealth.3102 = {
 		first_valid = { #Disease type
 			triggered_desc = {
 				trigger = { scope:disease_type = flag:mana_devouring }
-				desc = disease_mana_devouring
+				desc = disease_mana_devouring_1
 			}
 			desc = missing_illness
 		}
@@ -878,5 +900,3 @@ AMHealth.3102 = {
 		ai_chance = { base = 0 }
 	}
 }
-
-
