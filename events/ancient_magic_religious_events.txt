@@ -1,4 +1,4 @@
-namespace = am_religious_special
+﻿namespace = am_religious_special
 
 ## Challenge Spiritual Head of Faith for shunned witchcraft
 am_religious_special.1001 = { # Preparation
@@ -6,7 +6,7 @@ am_religious_special.1001 = { # Preparation
 	title = am_religious_special.1001.t
 	desc = am_religious_special.1001.desc
 	theme = faith
-	right_portrait = scope:portrait
+	right_portrait = scope:pope
 	left_portrait = {
 		character = root
 		animation = personality_rational
@@ -15,13 +15,12 @@ am_religious_special.1001 = { # Preparation
 	immediate = {
 		faith.religious_head = {
 			save_scope_as = pope
-			save_scope_as = portrait #For portrait
 		}
 	}
 	option = {
 		name = am_religious_special.1001.a
 		custom_tooltip = am_religious_special.1001.a.tt
-		trigger_event = { 
+		trigger_event = {
 			id = am_religious_special.1002
 			days = 7
 		}
@@ -40,7 +39,7 @@ am_religious_special.1002 = {
 	title = am_religious_special.1002.t
 	desc = am_religious_special.1002.desc
 	theme = faith
-	right_portrait = scope:portrait
+	right_portrait = scope:pope
 	left_portrait = {
 		character = root
 		animation = personality_zealous
@@ -86,8 +85,8 @@ am_religious_special.1002 = {
 							opinion = -50
 						}
 					}
-					stress_impact = { 
-						base = medium_stress_impact_gain 
+					stress_impact = {
+						base = medium_stress_impact_gain
 						zealous = major_stress_impact_gain
 					}
 				}
@@ -137,8 +136,8 @@ am_religious_special.1002 = {
 							opinion = -50
 						}
 					}
-					stress_impact = { 
-						base = medium_stress_impact_gain 
+					stress_impact = {
+						base = medium_stress_impact_gain
 						zealous = major_stress_impact_gain
 					}
 				}
@@ -152,7 +151,7 @@ am_religious_special.1003 = { #Learning Success
 	title = am_religious_special.1003.t
 	desc = am_religious_special.1003.desc
 	theme = faith
-	left_portrait = scope:portrait
+	left_portrait = scope:pope
 	immediate = {
 		am_spiritual_hof_change_witchcraft_shunned_effect = yes
 		play_music_cue = "mx_cue_epic_sacral_moment"
@@ -167,7 +166,7 @@ am_religious_special.1004 = { #Diplomatic Success
 	title = am_religious_special.1004.t
 	desc = am_religious_special.1004.desc
 	theme = faith
-	left_portrait = scope:portrait
+	left_portrait = scope:pope
 	immediate = {
 		am_spiritual_hof_change_witchcraft_shunned_effect = yes
 		play_music_cue = "mx_cue_epic_sacral_moment"
@@ -183,7 +182,7 @@ am_religious_special.1011 = { # Preparation
 	title = am_religious_special.1011.t
 	desc = am_religious_special.1011.desc
 	theme = faith
-	right_portrait = scope:portrait
+	right_portrait = scope:pope
 	left_portrait = {
 		character = root
 		animation = personality_rational
@@ -198,7 +197,7 @@ am_religious_special.1011 = { # Preparation
 	option = {
 		name = am_religious_special.1011.a
 		custom_tooltip = am_religious_special.1011.a.tt
-		trigger_event = { 
+		trigger_event = {
 			id = am_religious_special.1012
 			days = 7
 		}
@@ -217,7 +216,7 @@ am_religious_special.1012 = {
 	title = am_religious_special.1012.t
 	desc = am_religious_special.1012.desc
 	theme = faith
-	right_portrait = scope:portrait
+	right_portrait = scope:pope
 	left_portrait = {
 		character = root
 		animation = personality_zealous
@@ -263,8 +262,8 @@ am_religious_special.1012 = {
 							opinion = -50
 						}
 					}
-					stress_impact = { 
-						base = medium_stress_impact_gain 
+					stress_impact = {
+						base = medium_stress_impact_gain
 						zealous = major_stress_impact_gain
 					}
 				}
@@ -314,8 +313,8 @@ am_religious_special.1012 = {
 							opinion = -50
 						}
 					}
-					stress_impact = { 
-						base = medium_stress_impact_gain 
+					stress_impact = {
+						base = medium_stress_impact_gain
 						zealous = major_stress_impact_gain
 					}
 				}
@@ -329,7 +328,7 @@ am_religious_special.1013 = { #Learning Success
 	title = am_religious_special.1013.t
 	desc = am_religious_special.1013.desc
 	theme = faith
-	left_portrait = scope:portrait
+	left_portrait = scope:pope
 	immediate = {
 		am_spiritual_hof_change_witchcraft_accepted_effect = yes
 		play_music_cue = "mx_cue_epic_sacral_moment"
@@ -344,7 +343,7 @@ am_religious_special.1014 = { #Diplomatic Success
 	title = am_religious_special.1014.t
 	desc = am_religious_special.1014.desc
 	theme = faith
-	left_portrait = scope:portrait
+	left_portrait = scope:pope
 	immediate = {
 		am_spiritual_hof_change_witchcraft_accepted_effect = yes
 		play_music_cue = "mx_cue_epic_sacral_moment"
@@ -360,7 +359,7 @@ am_religious_special.1021 = { # Preparation
 	title = am_religious_special.1021.t
 	desc = am_religious_special.1021.desc
 	theme = faith
-	right_portrait = scope:portrait
+	right_portrait = scope:pope
 	left_portrait = {
 		character = root
 		animation = personality_rational
@@ -369,13 +368,12 @@ am_religious_special.1021 = { # Preparation
 	immediate = {
 		faith.religious_head = {
 			save_scope_as = pope
-			save_scope_as = portrait #For portrait
 		}
 	}
 	option = {
 		name = am_religious_special.1021.a
 		custom_tooltip = am_religious_special.1021.a.tt
-		trigger_event = { 
+		trigger_event = {
 			id = am_religious_special.1022
 			days = 7
 		}
@@ -394,7 +392,7 @@ am_religious_special.1022 = {
 	title = am_religious_special.1022.t
 	desc = am_religious_special.1022.desc
 	theme = faith
-	right_portrait = scope:portrait
+	right_portrait = scope:pope
 	left_portrait = {
 		character = root
 		animation = personality_zealous
@@ -440,8 +438,8 @@ am_religious_special.1022 = {
 							opinion = -50
 						}
 					}
-					stress_impact = { 
-						base = medium_stress_impact_gain 
+					stress_impact = {
+						base = medium_stress_impact_gain
 						zealous = major_stress_impact_gain
 					}
 				}
@@ -491,8 +489,8 @@ am_religious_special.1022 = {
 							opinion = -50
 						}
 					}
-					stress_impact = { 
-						base = medium_stress_impact_gain 
+					stress_impact = {
+						base = medium_stress_impact_gain
 						zealous = major_stress_impact_gain
 					}
 				}
@@ -506,7 +504,7 @@ am_religious_special.1023 = { #Learning Success
 	title = am_religious_special.1023.t
 	desc = am_religious_special.1023.desc
 	theme = faith
-	left_portrait = scope:portrait
+	left_portrait = scope:pope
 	immediate = {
 		am_spiritual_hof_change_witchcraft_crime_effect = yes
 		play_music_cue = "mx_cue_epic_sacral_moment"
@@ -521,7 +519,7 @@ am_religious_special.1024 = { #Diplomatic Success
 	title = am_religious_special.1024.t
 	desc = am_religious_special.1024.desc
 	theme = faith
-	left_portrait = scope:portrait
+	left_portrait = scope:pope
 	immediate = {
 		am_spiritual_hof_change_witchcraft_crime_effect = yes
 		play_music_cue = "mx_cue_epic_sacral_moment"
@@ -537,7 +535,7 @@ am_religious_special.2001 = {
 	title = am_religious_special.2001.t
 	desc = am_religious_special.2001.desc
 	theme = faith
-	right_portrait = scope:portrait
+	right_portrait = scope:chaplain
 	left_portrait = {
 		character = root
 		animation = personality_rational
@@ -546,13 +544,12 @@ am_religious_special.2001 = {
 	immediate = {
 		cp:councillor_court_chaplain = {
 			save_scope_as = chaplain
-			save_scope_as = portrait #For portrait
 		}
 	}
 	option = {
 		name = am_religious_special.2001.a
 		custom_tooltip = am_religious_special.2001.a.tt
-		trigger_event = { 
+		trigger_event = {
 			id = am_religious_special.2002
 			days = 14
 		}
@@ -580,8 +577,8 @@ am_religious_special.2002 = { #First Challenge
 		name = am_religious_special.2002.a
 		custom_tooltip = am_religious_special.2002.a.tt
 		trigger = {
-			NOR = { 
-				has_trait = theologian 
+			NOR = {
+				has_trait = theologian
 				has_trait = scholar
 			}
 		}
@@ -604,7 +601,7 @@ am_religious_special.2002 = { #First Challenge
 				}
 				trigger_event = am_religious_special.2003
 			}
-			50 = {	
+			50 = {
 				desc = am_religious_special.2002.a.bad
 				compare_modifier = {
 					value = scope:duel_value
@@ -645,8 +642,8 @@ am_religious_special.2003 = { #First success, second challenge
 		name = am_religious_special.2003.a
 		custom_tooltip = am_religious_special.2003.a.tt
 		trigger = {
-			NOR = { 
-				has_trait = administrator 
+			NOR = {
+				has_trait = administrator
 				has_trait = overseer
 			}
 		}
@@ -669,7 +666,7 @@ am_religious_special.2003 = { #First success, second challenge
 				}
 				trigger_event = am_religious_special.2009
 			}
-			50 = {	
+			50 = {
 				desc = am_religious_special.2003.bad
 				compare_modifier = {
 					value = scope:duel_value
@@ -684,8 +681,8 @@ am_religious_special.2003 = { #First success, second challenge
 		name = am_religious_special.2003.b
 		custom_tooltip = am_religious_special.2003.b.tt
 		trigger = {
-			NOR = { 
-				has_trait = administrator 
+			NOR = {
+				has_trait = administrator
 				has_trait = overseer
 			}
 		}
@@ -708,7 +705,7 @@ am_religious_special.2003 = { #First success, second challenge
 				}
 				trigger_event = am_religious_special.2009
 			}
-			50 = {	
+			50 = {
 				desc = am_religious_special.2003.bad
 				compare_modifier = {
 					value = scope:duel_value
@@ -748,7 +745,7 @@ am_religious_special.2004 = { #First failure, second challenge
 	option = {
 		name = am_religious_special.2004.a
 		custom_tooltip = am_religious_special.2004.a.tt
-		trigger = { 
+		trigger = {
 			NOT = { has_trait = torturer }
 		}
 		duel = {
@@ -764,7 +761,7 @@ am_religious_special.2004 = { #First failure, second challenge
 				add_prestige = minor_prestige_gain
 				trigger_event = am_religious_special.2006
 			}
-			10 = {	
+			10 = {
 				desc = am_religious_special.2004.a.bad
 				compare_modifier = {
 					value = scope:duel_value
@@ -798,7 +795,7 @@ am_religious_special.2004 = { #First failure, second challenge
 				}
 				trigger_event = am_religious_special.2006
 			}
-			50 = {	
+			50 = {
 				desc = am_religious_special.2004.b.bad
 				compare_modifier = {
 					value = scope:duel_value
@@ -823,8 +820,8 @@ am_religious_special.2005 = { # One success, one failure, last chance
 	title = am_religious_special.2005.t
 	desc = am_religious_special.2005.desc
 	theme = faith
-	right_portrait = { 
-		character = scope:portrait
+	right_portrait = {
+		character = scope:chaplain
 		animation = stress
 	}
 	left_portrait = {
@@ -835,8 +832,8 @@ am_religious_special.2005 = { # One success, one failure, last chance
 	option = {
 		name = am_religious_special.2005.a
 		custom_tooltip = am_religious_special.2005.a.tt
-		trigger = { 
-			NOT = { has_trait = diplomat } 
+		trigger = {
+			NOT = { has_trait = diplomat }
 		}
 		duel = {
 			skill = learning
@@ -865,7 +862,7 @@ am_religious_special.2005 = { # One success, one failure, last chance
 				}
 				trigger_event = am_religious_special.2009
 			}
-			15 = {	
+			15 = {
 				desc = am_religious_special.2005.a.bad
 				compare_modifier = {
 					value = scope:duel_value
@@ -878,7 +875,7 @@ am_religious_special.2005 = { # One success, one failure, last chance
 	option = {
 		name = am_religious_special.2005.b
 		custom_tooltip = am_religious_special.2005.b.tt
-		trigger = { 
+		trigger = {
 			diplomacy >= high_skill_rating
 			NOT = { has_trait = diplomat }
 		}
@@ -909,7 +906,7 @@ am_religious_special.2005 = { # One success, one failure, last chance
 				}
 				trigger_event = am_religious_special.2009
 			}
-			50 = {	
+			50 = {
 				desc = am_religious_special.2005.b.bad
 				compare_modifier = {
 					value = scope:duel_value
@@ -927,15 +924,15 @@ am_religious_special.2005 = { # One success, one failure, last chance
 		trait = diplomat
 		trigger_event = am_religious_special.2009
 	}
-} 
+}
 
 am_religious_special.2006 = { # One failure, one success, last chance
 	type = character_event
 	title = am_religious_special.2006.t
 	desc = am_religious_special.2006.desc
 	theme = faith
-	right_portrait = { 
-		character = scope:portrait
+	right_portrait = {
+		character = scope:chaplain
 		animation = stress
 	}
 	left_portrait = {
@@ -946,8 +943,8 @@ am_religious_special.2006 = { # One failure, one success, last chance
 	option = {
 		name = am_religious_special.2006.a
 		custom_tooltip = am_religious_special.2006.a.tt
-		trigger = { 
-			NOT = { has_trait = diplomat } 
+		trigger = {
+			NOT = { has_trait = diplomat }
 		}
 		duel = {
 			skill = learning
@@ -976,7 +973,7 @@ am_religious_special.2006 = { # One failure, one success, last chance
 				}
 				trigger_event = am_religious_special.2009
 			}
-			10 = {	
+			10 = {
 				desc = am_religious_special.2006.a.bad
 				compare_modifier = {
 					value = scope:duel_value
@@ -989,7 +986,7 @@ am_religious_special.2006 = { # One failure, one success, last chance
 	option = {
 		name = am_religious_special.2006.b
 		custom_tooltip = am_religious_special.2006.b.tt
-		trigger = { 
+		trigger = {
 			diplomacy >= high_skill_rating
 			NOT = { has_trait = diplomat }
 		}
@@ -1020,7 +1017,7 @@ am_religious_special.2006 = { # One failure, one success, last chance
 				}
 				trigger_event = am_religious_special.2009
 			}
-			50 = {	
+			50 = {
 				desc = am_religious_special.2006.b.bad
 				compare_modifier = {
 					value = scope:duel_value
@@ -1045,8 +1042,8 @@ am_religious_special.2009 = { # Success
 	title = am_religious_special.2009.t
 	desc = am_religious_special.2009.desc
 	theme = faith
-	right_portrait = { 
-		character = scope:portrait
+	right_portrait = {
+		character = scope:chaplain
 		animation = happy
 	}
 	left_portrait = {
@@ -1060,7 +1057,6 @@ am_religious_special.2009 = { # Success
 	}
 	option = {
 		name = am_religious_special.2009.a
-		add_realm_law_skip_effects = equal_law
 	}
 	after = {
 		every_ruler = { # Allow other rulers to change gender law
@@ -1085,7 +1081,7 @@ am_religious_special.2010 = { # Failure
 	desc = am_religious_special.2010.desc
 	theme = faith
 	right_portrait = {
-		character = scope:portrait
+		character = scope:chaplain
 		animation = shame
 	}
 	left_portrait = {
@@ -1108,8 +1104,8 @@ am_religious_special.2010 = { # Failure
 	}
 	option = {
 		name = am_religious_special.2010.a
-		stress_impact = { 
-			base = medium_stress_impact_gain 
+		stress_impact = {
+			base = medium_stress_impact_gain
 			zealous = major_stress_impact_gain
 		}
 	}
@@ -1127,7 +1123,6 @@ am_religious_special.2011 = { # Chained event to 2010
 	}
 	option = {
 		name = am_religious_special.2011.a
-		add_realm_law_skip_effects = equal_law
 		ai_chance = {
 			base = 0
 			modifier = {

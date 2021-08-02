@@ -2059,7 +2059,7 @@ ancient_magic_spellbook_events.401 = {
 			triggered_desc = {
 				trigger = {
 					var:mana >= 100
-					var_mana < 400
+					var:mana < 400
 					has_perk = golem_creation_perk
 					has_perk = lord_of_the_elements_perk
 					NAND = {

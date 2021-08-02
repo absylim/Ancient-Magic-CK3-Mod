@@ -4,7 +4,7 @@ ancient_magic_aura_update_events.001 = {
 	hidden = yes
 
 	trigger = {
-		has_perk = mage
+		has_trait = mage
 	}
 
 	immediate = {
@@ -73,11 +73,11 @@ ancient_magic_aura_update_events.001 = {
 			}
 		}
 		if = {
-			limit = { has_character_modifier = Flaming_weapons_modifier }
-			remove_all_character_modifier_instances = Flaming_weapons_modifier
+			limit = { has_character_modifier = flaming_weapons_modifier }
+			remove_all_character_modifier_instances = flaming_weapons_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = { modifier = Flaming_weapons_modifier }
+				add_character_modifier = { modifier = flaming_weapons_modifier }
 			}
 		}
 		if = {
