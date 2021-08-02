@@ -10,7 +10,10 @@
 		}
 		trigger_event = { on_action = reset_mana_system }
 		if = {
-			limit = { var:mana > var:max_mana }
+			limit = {
+				exists = var:mana
+				var:mana > var:max_mana
+			}
 			set_variable = {
 				name = mana
 				value = var:max_mana
