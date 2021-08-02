@@ -12,6 +12,6 @@
 	}
 
 	effect = {
-		grant_to_mage_effect = yes
+		trigger_event = { on_action = grant_to_mage_action }
 	}
 }
