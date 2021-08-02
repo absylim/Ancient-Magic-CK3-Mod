@@ -4,6 +4,7 @@
 		custom_description = {
 			text = positive_mana_cost
 			value = $VALUE$
+		}
 	}
 	else_if = {
 		limit = { $VALUE$ < 0 }
