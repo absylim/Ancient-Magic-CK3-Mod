@@ -58,7 +58,10 @@ reset_mana_system_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
 
 	is_shown = {
-		debug_only = yes
+		OR = {
+			has_perk = finacial_times_perk
+			debug_only = yes
+		}
 	}
 
 	effect = {
@@ -66,6 +69,16 @@ reset_mana_system_decision = {
 		
 		hidden_effect = {
 			every_living_character = {
+				if = {
+					limit = { has_perk = finacial_times_perk }
+					remove_perk = finacial_times_perk
+					add_perk = financial_times_perk
+				}
+				if = {
+					limit = { has_character_modifier = finacial_times_modifier }
+					remove_all_character_modifier_instances = finacial_times_modifier
+					add_character_modifier = financial_times_modifier
+				}
 				if = {
 					limit = { has_trait = mage }
 					trigger_event = { on_action = on_reset_mana_system }

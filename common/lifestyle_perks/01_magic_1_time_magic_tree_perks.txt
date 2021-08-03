@@ -144,7 +144,7 @@ glimpse_the_future_perk = {
 }
 
 
-finacial_times_perk = {
+financial_times_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = time_magic
 	position = { 0 2.5 }
@@ -559,7 +559,7 @@ temporal_manipulation_perk = {
 		}
 	}
 	
-	parent = finacial_times_perk
+	parent = financial_times_perk
 	parent = mass_celerity_perk
 	parent = mass_slowness_perk
 

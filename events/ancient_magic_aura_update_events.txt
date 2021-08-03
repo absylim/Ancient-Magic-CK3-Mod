@@ -25,11 +25,11 @@ ancient_magic_aura_update_events.001 = {
 			}
 		}
 		if = {
-			limit = { has_character_modifier = finacial_times_modifier }
-			remove_all_character_modifier_instances = finacial_times_modifier
+			limit = { has_character_modifier = financial_times_modifier }
+			remove_all_character_modifier_instances = financial_times_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = { modifier = finacial_times_modifier }
+				add_character_modifier = { modifier = financial_times_modifier }
 			}
 		}
 		if = {

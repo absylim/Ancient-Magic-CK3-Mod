@@ -1040,20 +1040,20 @@ ancient_magic_spellbook_events.205 = {
 						var:mana < 100
 						var:mana_gen < 15
 					}
-					NOT = { has_perk = finacial_times_perk }
+					NOT = { has_perk = financial_times_perk }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
 			}
 			triggered_desc = {
 				trigger = {
-					NOT = { has_perk = finacial_times_perk }
+					NOT = { has_perk = financial_times_perk }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_skill_spell
 			}
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = finacial_times_modifier }
+					NOT = { has_character_modifier = financial_times_modifier }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -1061,7 +1061,7 @@ ancient_magic_spellbook_events.205 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = finacial_times_modifier }
+					NOT = { has_character_modifier = financial_times_modifier }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -1076,7 +1076,7 @@ ancient_magic_spellbook_events.205 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = finacial_times_modifier
+						has_character_modifier = financial_times_modifier
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -1095,17 +1095,17 @@ ancient_magic_spellbook_events.205 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = finacial_times_modifier}
+			NOT = { has_character_modifier = financial_times_modifier}
 			var:mana >= 100
 			var:mana_gen >= 15
-			has_perk = finacial_times_perk
+			has_perk = financial_times_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = finacial_times_modifier }
+			NOT = { has_character_modifier = financial_times_modifier }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
-				NOT = { has_perk = finacial_times_perk }
+				NOT = { has_perk = financial_times_perk }
 			}
 		}
 
@@ -1113,7 +1113,7 @@ ancient_magic_spellbook_events.205 = {
 
 		change_mana_gen_loc = { VALUE = -15 }
 
-		add_character_modifier = finacial_times_modifier
+		add_character_modifier = financial_times_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
@@ -1122,17 +1122,17 @@ ancient_magic_spellbook_events.205 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = finacial_times_modifier
-			has_perk = finacial_times_perk
+			has_character_modifier = financial_times_modifier
+			has_perk = financial_times_perk
 		}
 		show_as_unavailable = {
-			has_character_modifier = finacial_times_modifier
-			NOT = { has_perk = finacial_times_perk }
+			has_character_modifier = financial_times_modifier
+			NOT = { has_perk = financial_times_perk }
 		}
 
 		change_mana_gen_loc = { VALUE = 15 }
 
-		remove_all_character_modifier_instances = finacial_times_modifier
+		remove_all_character_modifier_instances = financial_times_modifier
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution

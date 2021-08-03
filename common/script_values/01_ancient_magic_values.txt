@@ -423,7 +423,7 @@ num_mage_perks = {
 	# Time tree
 	if = { limit = { has_perk = time_mage_perk } add = 1 }
 	if = { limit = { has_perk = glimpse_the_future_perk } add = 1 }
-	if = { limit = { has_perk = finacial_times_perk } add = 1 }
+	if = { limit = { has_perk = financial_times_perk } add = 1 }
 	if = { limit = { has_perk = celerity_perk } add = 1 }
 	if = { limit = { has_perk = mass_celerity_perk } add = 1 }
 	if = { limit = { has_perk = slowness_perk } add = 1 }
