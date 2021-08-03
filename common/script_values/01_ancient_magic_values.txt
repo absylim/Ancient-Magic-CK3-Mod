@@ -1,4 +1,5 @@
 ﻿mage_xp_per_perk = 15
+mage_level_legacy_4 = 1
 mana_drain_large = 30
 mana_drain_average = 15
 mana_drain_small = 10
@@ -54,7 +55,7 @@ mage_level = {
 	value = mage_level_base
 	if = {
 		limit = { dynasty = { has_dynasty_perk = arcane_legacy_4 } }
-		add = 1
+		add = mage_level_legacy_4
 	}
 }
 
