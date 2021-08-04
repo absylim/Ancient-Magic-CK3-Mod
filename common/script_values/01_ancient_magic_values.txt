@@ -159,7 +159,7 @@ num_average_auras = {
 		add = 1
 	}
 	if = {
-		limit = { has_character_modifier = finacial_times_modifier }
+		limit = { has_character_modifier = financial_times_modifier }
 		add = 1
 	}
 	if = {
