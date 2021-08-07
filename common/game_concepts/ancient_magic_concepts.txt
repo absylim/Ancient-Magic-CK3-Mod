@@ -71,6 +71,10 @@ undead = {
     alias = { lesser_undead greater_undead }
 }
 
+magocracy = {
+    alias = { magocracies magocratic magocracy_government }
+}
+
 city_of_magic = {
 }
 

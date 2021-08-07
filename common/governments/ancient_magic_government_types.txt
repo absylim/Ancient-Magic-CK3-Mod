@@ -1,26 +1,15 @@
-﻿feudal_government = {
-	create_cadet_branches = yes
-	rulers_should_have_dynasty = yes
-	dynasty_named_realms = yes
+﻿magocracy_government = {
+	primary_holding = city_of_magic_holding
+	valid_holdings = { castle_holding }
+	required_county_holdings = { city_holding castle_holding church_holding }
 
-	fallback = 1
-
-	primary_holding = castle_holding
-	valid_holdings = { city_of_magic_holding }
-	required_county_holdings = { castle_holding city_holding church_holding city_of_magic_holding }
-
-	vassal_contract = {
-		feudal_government_taxes
-		feudal_government_levies
-		special_contract
-		religious_rights
-		fortification_rights
-		coinage_rights
-		succession_rights
-		war_declaration_rights
-		council_rights
-		title_revocation_rights
+	ai = {
+		arrange_marriage = no
+		use_goals = no
+		use_scripted_guis = no
+		perform_religious_reformation = no
 	}
-	
-	color = hsv{ 0.67 1.00 0.78 }
+
+	vassal_contract = { magocracy_government_obligations }
+	color = hsv{ 0.00 1.00 0.98 }
 }
