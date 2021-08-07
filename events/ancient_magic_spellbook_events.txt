@@ -722,7 +722,7 @@ ancient_magic_spellbook_events.202 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -500 }
+			change_mana_with_tooltip = { VALUE = -500 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = casting_restart_aging_spell
 			remove_character_flag = casting_halt_aging_spell
@@ -777,7 +777,7 @@ ancient_magic_spellbook_events.202 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -500 }
+			change_mana_with_tooltip = { VALUE = -500 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = casting_restart_aging_spell
 			remove_character_flag = casting_halt_aging_spell
@@ -876,14 +876,12 @@ ancient_magic_spellbook_events.203 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = magic_haste_modifier
-		}
+		add_character_modifier = magic_haste_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -899,12 +897,10 @@ ancient_magic_spellbook_events.203 = {
 			NOT = { has_perk = mass_celerity_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_gen_loc = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = magic_haste_modifier
-		}
+		remove_all_character_modifier_instances = magic_haste_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -997,14 +993,12 @@ ancient_magic_spellbook_events.204 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = glimpse_the_future_modifier
-		}
+		add_character_modifier = glimpse_the_future_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1020,12 +1014,10 @@ ancient_magic_spellbook_events.204 = {
 			NOT = { has_perk = glimpse_the_future_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_gen_loc = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = glimpse_the_future_modifier
-		}
+		remove_all_character_modifier_instances = glimpse_the_future_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1048,20 +1040,20 @@ ancient_magic_spellbook_events.205 = {
 						var:mana < 100
 						var:mana_gen < 15
 					}
-					NOT = { has_perk = finacial_times_perk }
+					NOT = { has_perk = financial_times_perk }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_and_low_skill_spell
 			}
 			triggered_desc = {
 				trigger = {
-					NOT = { has_perk = finacial_times_perk }
+					NOT = { has_perk = financial_times_perk }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_skill_spell
 			}
 			triggered_desc = {
 				trigger = {
 					var:mana < 100
-					NOT = { has_character_modifier = finacial_times_modifier }
+					NOT = { has_character_modifier = financial_times_modifier }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_mana_spell
 			}
@@ -1069,7 +1061,7 @@ ancient_magic_spellbook_events.205 = {
 			triggered_desc = {
 				trigger = {
 					var:mana_gen < 15
-					NOT = { has_character_modifier = finacial_times_modifier }
+					NOT = { has_character_modifier = financial_times_modifier }
 				}
 				desc = ancient_magic_spellbook_events_casting_low_drain_spell
 			}
@@ -1084,7 +1076,7 @@ ancient_magic_spellbook_events.205 = {
 			triggered_desc = {
 				trigger = {
 					scope:am_spell_target = {
-						has_character_modifier = finacial_times_modifier
+						has_character_modifier = financial_times_modifier
 					}
 				}
 				desc = ancient_magic_spellbook_events_casting_aura_on_character_with_aura
@@ -1103,28 +1095,26 @@ ancient_magic_spellbook_events.205 = {
 	option = {
 		name = ancient_magic_spellbook_activate_aura
 		trigger = {
-			NOT = { has_character_modifier = finacial_times_modifier}
+			NOT = { has_character_modifier = financial_times_modifier}
 			var:mana >= 100
 			var:mana_gen >= 15
-			has_perk = finacial_times_perk
+			has_perk = financial_times_perk
 		}
 		show_as_unavailable = {
-			NOT = { has_character_modifier = finacial_times_modifier }
+			NOT = { has_character_modifier = financial_times_modifier }
 			OR = {
 				var:mana < 100
 				var:mana_gen < 15
-				NOT = { has_perk = finacial_times_perk }
+				NOT = { has_perk = financial_times_perk }
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = finacial_times_modifier
-		}
+		add_character_modifier = financial_times_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1132,20 +1122,18 @@ ancient_magic_spellbook_events.205 = {
 	option = {
 		name = ancient_magic_spellbook_deactivate_aura
 		trigger = {
-			has_character_modifier = finacial_times_modifier
-			has_perk = finacial_times_perk
+			has_character_modifier = financial_times_modifier
+			has_perk = financial_times_perk
 		}
 		show_as_unavailable = {
-			has_character_modifier = finacial_times_modifier
-			NOT = { has_perk = finacial_times_perk }
+			has_character_modifier = financial_times_modifier
+			NOT = { has_perk = financial_times_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_gen_loc = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = finacial_times_modifier
-		}
+		remove_all_character_modifier_instances = financial_times_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1237,14 +1225,12 @@ ancient_magic_spellbook_events.206 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = celerity_modifier
-		}
+		add_character_modifier = celerity_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1260,12 +1246,10 @@ ancient_magic_spellbook_events.206 = {
 			NOT = { has_perk = celerity_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_gen_loc = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = celerity_modifier
-		}
+		remove_all_character_modifier_instances = celerity_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1357,14 +1341,12 @@ ancient_magic_spellbook_events.207 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = slowness_modifier
-		}
+		add_character_modifier = slowness_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1380,12 +1362,10 @@ ancient_magic_spellbook_events.207 = {
 			NOT = { has_perk = slowness_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_gen_loc = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = slowness_modifier
-		}
+		remove_all_character_modifier_instances = slowness_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1477,14 +1457,12 @@ ancient_magic_spellbook_events.208 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = mass_slowness_modifier
-		}
+		add_character_modifier = mass_slowness_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1500,12 +1478,10 @@ ancient_magic_spellbook_events.208 = {
 			NOT = { has_perk = mass_slowness_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_gen_loc = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = mass_slowness_modifier
-		}
+		remove_all_character_modifier_instances = mass_slowness_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1597,14 +1573,12 @@ ancient_magic_spellbook_events.209 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -30 }
+		change_mana_gen_loc = { VALUE = -30 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = temporal_manipulation_modifier
-		}
+		add_character_modifier = temporal_manipulation_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1620,12 +1594,10 @@ ancient_magic_spellbook_events.209 = {
 			NOT = { has_perk = temporal_manipulation_perk }
 		}
 
-		change_mana_gen = { VALUE = 30 }
+		change_mana_gen_loc = { VALUE = 30 }
 
-		while = {
-			count = 100
-			remove_character_modifier = temporal_manipulation_modifier
-		}
+		remove_all_character_modifier_instances = temporal_manipulation_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -1895,7 +1867,7 @@ ancient_magic_spellbook_events.301 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -50 }
+			change_mana_with_tooltip = { VALUE = -50 }
 			remove_character_flag = am_spell_resolution
 		}
 		scope:am_spell_target = {
@@ -1922,7 +1894,7 @@ ancient_magic_spellbook_events.301 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -100 }
+			change_mana_with_tooltip = { VALUE = -100 }
 			remove_character_flag = am_spell_resolution
 		}
 		scope:am_spell_target = {
@@ -1954,7 +1926,7 @@ ancient_magic_spellbook_events.301 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -200 }
+			change_mana_with_tooltip = { VALUE = -200 }
 			remove_character_flag = am_spell_resolution
 		}
 		scope:am_spell_target = {
@@ -2087,7 +2059,7 @@ ancient_magic_spellbook_events.401 = {
 			triggered_desc = {
 				trigger = {
 					var:mana >= 100
-					var_mana < 400
+					var:mana < 400
 					has_perk = golem_creation_perk
 					has_perk = lord_of_the_elements_perk
 					NAND = {
@@ -2191,7 +2163,7 @@ ancient_magic_spellbook_events.401 = {
 		}
 		scope:am_spell_caster = {
 			scope:am_spell_caster = {
-				change_mana = { VALUE = -100 }
+				change_mana_with_tooltip = { VALUE = -100 }
 				spawn_army = {
 					name = golem_army
 					uses_supply = no
@@ -2226,7 +2198,7 @@ ancient_magic_spellbook_events.401 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -400 }
+			change_mana_with_tooltip = { VALUE = -400 }
 			spawn_army = {
 				name = lava_golem_army
 				uses_supply = no
@@ -2329,14 +2301,12 @@ ancient_magic_spellbook_events.402 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = flame_aura_modifier
-		}
+		add_character_modifier = flame_aura_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2352,12 +2322,10 @@ ancient_magic_spellbook_events.402 = {
 			NOT = { has_perk = flame_aura_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_gen_loc = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = flame_aura_modifier
-		}
+		remove_all_character_modifier_instances = flame_aura_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2446,14 +2414,12 @@ ancient_magic_spellbook_events.403 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = flaming_weapons_modifier
-		}
+		add_character_modifier = flaming_weapons_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2469,12 +2435,10 @@ ancient_magic_spellbook_events.403 = {
 			NOT = { has_perk = flaming_weapons_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_gen_loc = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = flaming_weapons_modifier
-		}
+		remove_all_character_modifier_instances = flaming_weapons_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2563,14 +2527,12 @@ ancient_magic_spellbook_events.404 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = living_earthworks_modifier
-		}
+		add_character_modifier = living_earthworks_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2586,12 +2548,10 @@ ancient_magic_spellbook_events.404 = {
 			NOT = { has_perk = living_earthworks_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_gen_loc = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = living_earthworks_modifier
-		}
+		remove_all_character_modifier_instances = living_earthworks_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2680,14 +2640,12 @@ ancient_magic_spellbook_events.405 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = control_water_modifier
-		}
+		add_character_modifier = control_water_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2703,12 +2661,10 @@ ancient_magic_spellbook_events.405 = {
 			NOT = { has_perk = control_water_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_gen_loc = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = control_water_modifier
-		}
+		remove_all_character_modifier_instances = control_water_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2797,14 +2753,12 @@ ancient_magic_spellbook_events.406 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = drought_modifier
-		}
+		add_character_modifier = drought_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2820,12 +2774,10 @@ ancient_magic_spellbook_events.406 = {
 			NOT = { has_perk = drought_perk }
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_gen_loc = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = drought_modifier
-		}
+		remove_all_character_modifier_instances = drought_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2914,14 +2866,12 @@ ancient_magic_spellbook_events.407 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -30 }
+		change_mana_gen_loc = { VALUE = -30 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = elemental_warrior_modifier
-		}
+		add_character_modifier = elemental_warrior_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -2940,12 +2890,10 @@ ancient_magic_spellbook_events.407 = {
 			}
 		}
 
-		change_mana_gen = { VALUE = 30 }
+		change_mana_gen_loc = { VALUE = 30 }
 
-		while = {
-			count = 100
-			remove_character_modifier = elemental_warrior_modifier
-		}
+		remove_all_character_modifier_instances = elemental_warrior_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -3135,7 +3083,7 @@ ancient_magic_spellbook_events.501 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -200 }
+			change_mana_with_tooltip = { VALUE = -200 }
 			remove_character_flag = am_spell_resolution
 		}
 		scope:am_spell_target = {
@@ -3176,7 +3124,7 @@ ancient_magic_spellbook_events.501 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -600 }
+			change_mana_with_tooltip = { VALUE = -600 }
 			remove_character_flag = am_spell_resolution
 		}
 		scope:am_spell_target = {
@@ -3301,7 +3249,7 @@ ancient_magic_spellbook_events.502 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -50 }
+			change_mana_with_tooltip = { VALUE = -50 }
 			remove_character_flag = am_spell_resolution
 		}
 
@@ -3337,7 +3285,7 @@ ancient_magic_spellbook_events.502 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 			remove_character_flag = am_spell_resolution
 		}
 
@@ -3519,7 +3467,7 @@ ancient_magic_spellbook_events.503 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -200 }
+			change_mana_with_tooltip = { VALUE = -200 }
 			add_character_modifier = {
 				modifier = stolen_lifeforce_modifier
 				years = mage_level
@@ -3568,7 +3516,7 @@ ancient_magic_spellbook_events.503 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -600 }
+			change_mana_with_tooltip = { VALUE = -600 }
 			remove_character_flag = am_spell_resolution
 		}
 
@@ -3661,14 +3609,12 @@ ancient_magic_spellbook_events.504 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -30 }
+		change_mana_gen_loc = { VALUE = -30 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = aura_of_death_modifier
-		}
+		add_character_modifier = aura_of_death_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -3684,12 +3630,10 @@ ancient_magic_spellbook_events.504 = {
 			NOT = { has_perk = aura_of_death_perk }
 		}
 
-		change_mana_gen = { VALUE = 30 }
+		change_mana_gen_loc = { VALUE = 30 }
 
-		while = {
-			count = 100
-			remove_character_modifier = aura_of_death_modifier
-		}
+		remove_all_character_modifier_instances = aura_of_death_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -4888,9 +4832,9 @@ ancient_magic_spellbook_events.603 = {
 			}
 			switch = {
 				trigger = has_character_flag
-				casting_lesser_blood_spell = { change_mana = { VALUE = -100 }}
-				casting_moderate_blood_spell = { change_mana = { VALUE = -200 }}
-				casting_greater_blood_spell = { change_mana = { VALUE = -400 }}
+				casting_lesser_blood_spell = { change_mana_with_tooltip = { VALUE = -100 }}
+				casting_moderate_blood_spell = { change_mana_with_tooltip = { VALUE = -200 }}
+				casting_greater_blood_spell = { change_mana_with_tooltip = { VALUE = -400 }}
 			}
 			remove_character_flag = casting_lesser_blood_spell
 			remove_character_flag = casting_moderate_blood_spell
@@ -4977,7 +4921,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = albino
@@ -5011,7 +4955,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = albino
@@ -5047,7 +4991,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = stuttering
@@ -5081,7 +5025,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = stuttering
@@ -5122,7 +5066,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = giant
@@ -5156,7 +5100,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = giant
@@ -5191,7 +5135,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = lisping
@@ -5225,7 +5169,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = lisping
@@ -5260,7 +5204,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = scaly
@@ -5293,7 +5237,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = scaly
@@ -5328,7 +5272,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = clubfooted
@@ -5362,7 +5306,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = clubfooted
@@ -5397,7 +5341,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = hunchbacked
@@ -5430,7 +5374,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = hunchbacked
@@ -5471,7 +5415,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = dwarf
@@ -5505,7 +5449,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = dwarf
@@ -5548,7 +5492,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = strong
@@ -5582,7 +5526,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = strong
@@ -5625,7 +5569,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = weak
@@ -5659,7 +5603,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = weak
@@ -5694,7 +5638,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			add_trait = blind
@@ -5728,7 +5672,7 @@ ancient_magic_spellbook_events.604 = {
 			remove_character_flag = casting_intellect_blood_spell
 			remove_character_flag = am_spell_resolution
 			set_variable = { name = sculpt_page value = 0 }
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 		}
 		scope:am_spell_target = {
 			remove_trait = blind
@@ -5952,16 +5896,18 @@ ancient_magic_spellbook_events.605 = {
 				NOT = { has_perk = fertility_control_perk }
 			}
 		}
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 		if = {
 			limit = {
 				has_character_modifier = biomantic_infertility_modifier
 			}
 			remove_character_modifier = biomantic_infertility_modifier
-			change_mana_gen = { VALUE = 10 }
+			change_mana_gen_loc = { VALUE = 10 }
 		}
 		add_character_modifier = biomantic_fertility_modifier
-		change_mana_gen = { VALUE = -10 }
+		change_mana_gen_loc = { VALUE = -10 }
+
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -5988,21 +5934,23 @@ ancient_magic_spellbook_events.605 = {
 				}
 			}
 		}
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 		if = {
 			limit = {
 				has_character_modifier = biomantic_infertility_modifier
 			}
 			remove_character_modifier = biomantic_infertility_modifier
-			change_mana_gen = { VALUE = 10 }
+			change_mana_gen_loc = { VALUE = 10 }
 		}
 		if = {
 			limit = {
 				has_character_modifier = biomantic_fertility_modifier
 			}
 			remove_character_modifier = biomantic_fertility_modifier
-			change_mana_gen = { VALUE = 10 }
+			change_mana_gen_loc = { VALUE = 10 }
 		}
+
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -6023,16 +5971,18 @@ ancient_magic_spellbook_events.605 = {
 				}
 			}
 		}
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 		if = {
 			limit = {
 				has_character_modifier = biomantic_fertility_modifier
 			}
 			remove_character_modifier = biomantic_fertility_modifier
-			change_mana_gen = { VALUE = 10 }
+			change_mana_gen_loc = { VALUE = 10 }
 		}
 		add_character_modifier = biomantic_infertility_modifier
-		change_mana_gen = { VALUE = -10 }
+		change_mana_gen_loc = { VALUE = -10 }
+
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 		
 		remove_character_flag = am_spell_resolution
 	}
@@ -6102,7 +6052,7 @@ ancient_magic_spellbook_events.605 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 			remove_character_flag = am_spell_resolution
 		}
 		scope:am_spell_target = {
@@ -6426,7 +6376,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -300 }
+			change_mana_with_tooltip = { VALUE = -300 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6466,7 +6416,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -400 }
+			change_mana_with_tooltip = { VALUE = -400 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6510,7 +6460,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -100 }
+			change_mana_with_tooltip = { VALUE = -100 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6553,7 +6503,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -400 }
+			change_mana_with_tooltip = { VALUE = -400 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6609,7 +6559,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -200 }
+			change_mana_with_tooltip = { VALUE = -200 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6689,7 +6639,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -400 }
+			change_mana_with_tooltip = { VALUE = -400 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6732,7 +6682,7 @@ ancient_magic_spellbook_events.701 = {
 			}
 		}
 		scope:am_spell_caster = {
-			change_mana = { VALUE = -600 }
+			change_mana_with_tooltip = { VALUE = -600 }
 			remove_character_flag = am_spell_resolution
 			remove_character_flag = target_limbic_system
 			remove_character_flag = target_companionship
@@ -6846,14 +6796,12 @@ ancient_magic_spellbook_events.702 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -15 }
+		change_mana_gen_loc = { VALUE = -15 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = beguiling_aura_modifier
-		}
+		add_character_modifier = beguiling_aura_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -6872,12 +6820,10 @@ ancient_magic_spellbook_events.702 = {
 			}
 		}
 
-		change_mana_gen = { VALUE = 15 }
+		change_mana_gen_loc = { VALUE = 15 }
 
-		while = {
-			count = 100
-			remove_character_modifier = beguiling_aura_modifier
-		}
+		remove_all_character_modifier_instances = beguiling_aura_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -6966,14 +6912,12 @@ ancient_magic_spellbook_events.703 = {
 			}
 		}
 
-		change_mana = { VALUE = -100 }
+		change_mana_with_tooltip = { VALUE = -100 }
 
-		change_mana_gen = { VALUE = -30 }
+		change_mana_gen_loc = { VALUE = -30 }
 
-		while = {
-			count = mage_level
-			add_character_modifier = enchanting_aura_modifier
-		}
+		add_character_modifier = enchanting_aura_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}
@@ -6992,12 +6936,10 @@ ancient_magic_spellbook_events.703 = {
 			}
 		}
 
-		change_mana_gen = { VALUE = 30 }
+		change_mana_gen_loc = { VALUE = 30 }
 
-		while = {
-			count = 100
-			remove_character_modifier = enchanting_aura_modifier
-		}
+		remove_all_character_modifier_instances = enchanting_aura_modifier
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 
 		remove_character_flag = am_spell_resolution
 	}

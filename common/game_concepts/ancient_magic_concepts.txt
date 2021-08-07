@@ -18,7 +18,7 @@ mana_drain = {
 }
 
 magic_talent = {
-    alias = { magic_skill magic_talent magical_skill magical_talent skill_in_a_magic_school talent_in_a_magic_school }
+    alias = { magic_skill skill_in_a_magic_school talent_in_a_magic_school }
 }
 
 mage_spell = {
@@ -69,6 +69,10 @@ school_of_magic = {
 
 undead = {
     alias = { lesser_undead greater_undead }
+}
+
+magocracy = {
+    alias = { magocracies magocratic magocracy_government }
 }
 
 city_of_magic = {

@@ -1,4 +1,19 @@
-﻿# No-brainer value in a magic mod.
+﻿mage_xp_per_perk = 15
+mage_level_legacy_4 = 1
+mana_drain_large = 30
+mana_drain_average = 15
+mana_drain_small = 10
+mana_drain_disease = 150
+mana_gen_legacy_2 = 10
+mana_gen_lifestyle = 100
+mana_gen_per_magic_circle = 30
+mana_gen_per_perk = 2
+mana_gen_per_potency = 10
+max_mana_legacy_3 = 100
+max_mana_per_perk = 30
+max_mana_per_potency = 100
+
+# No-brainer value in a magic mod.
 # Uses - Is a character even possibly a mage? 'mage_potency > 0' Is the character not a mage? 'mage_potency < 1' How much potential does this mage have? 'mage_potency >= x'
 mage_potency = {
 	value = 0
@@ -18,42 +33,197 @@ mage_education = { # UNCOMMENT WHEN SYSTEM IN PLACE!!!
 }
 
 mage_level_divider = {
-	value = 200
-	if = {
-		limit = {  has_trait = magic_potential_1 }
-		value = 150
-	}
-	else_if = {
-		limit = { has_trait = magic_potential_2 }
-		value = 100
-	}
-	else_if = {
-		limit = { has_trait = magic_potential_3 }
-		value = 75
-	}
-	if = {
-		limit = {  this.dynasty = { has_dynasty_perk = arcane_legacy_4 }}
-		add = -5
-	}
+	value = 12
+	subtract = mage_potency
+	subtract = mage_education
+	multiply = mage_xp_per_perk
 }
 
-mage_level = {
-	value = var:mage_xp
+mage_xp = {
+	value = num_mage_perks
+	multiply = mage_xp_per_perk
+}
+
+mage_level_base = {
+	value = mage_xp
 	divide = mage_level_divider
 	add = 1
 	floor = yes
 }
 
+mage_level = {
+	value = mage_level_base
+	if = {
+		limit = { dynasty = { has_dynasty_perk = arcane_legacy_4 } }
+		add = mage_level_legacy_4
+	}
+}
+
 mage_xp_to_next_level = {
-	value = mage_level
+	value = mage_level_base
 	multiply = mage_level_divider
 }
 
-mage_xp_per_perk = 15
+magic_circles_owned_by_character = {
+	value = 0
+	every_directly_owned_province = {
+		if = {
+			limit = { has_building = ancient_magic_mana_circle_01 }
+			add = 1
+		}
+		if = {
+			limit = { has_building = ancient_magic_mana_circle_02 }
+			add = 2
+		}
+		if = {
+			limit = { has_building = ancient_magic_mana_circle_03 }
+			add = 3
+		}
+	}
+}
 
-max_mana_per_perk = 30
+ancient_magic_mana_gen = {
+	value = num_mage_perks
+	multiply = mana_gen_per_perk
+	add = {
+		value = mage_potency
+		multiply = mana_gen_per_potency
+	}
+	add = {
+		value = magic_circles_owned_by_character
+		multiply = mana_gen_per_magic_circle
+	}
+	if = {
+		limit = { has_focus = magic_arcana_focus }
+		subtract = mana_gen_lifestyle
+	}
+	else_if = {
+		limit = { has_focus = magic_mana_focus }
+		add = mana_gen_lifestyle
+	}
+	if = {
+		limit = { dynasty = { has_dynasty_perk = arcane_legacy_2 } }
+		add = mana_gen_legacy_2
+	}
+	subtract = mana_drain
+}
 
-mana_gen_per_perk = 2
+mana_drain = {
+	value = 0
+	if = {
+		limit = { has_trait = mana_devouring }
+		add = mana_drain_disease
+	}
+	add = {
+		value = num_large_auras
+		multiply = mana_drain_large
+	}
+	add = {
+		value = num_average_auras
+		multiply = mana_drain_average
+	}
+	add = {
+		value = num_small_auras
+		multiply = mana_drain_small
+	}
+}
+
+num_large_auras = {
+	value = 0
+	if = {
+		limit = { has_character_modifier = temporal_manipulation_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = elemental_warrior_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = aura_of_death_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = enchanting_aura_modifier }
+		add = 1
+	}
+}
+
+num_average_auras = {
+	value = 0
+	if = {
+		limit = { has_character_modifier = magic_haste_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = glimpse_the_future_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = financial_times_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = celerity_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = slowness_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = mass_slowness_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = flame_aura_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = flaming_weapons_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = living_earthworks_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = control_water_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = drought_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = beguiling_aura_modifier }
+		add = 1
+	}
+}
+
+num_small_auras = {
+	value = 0
+	if = {
+		limit = { has_character_modifier = biomantic_fertility_modifier }
+		add = 1
+	}
+	if = {
+		limit = { has_character_modifier = biomantic_infertility_modifier }
+		add = 1
+	}
+}
+
+ancient_magic_max_mana = {
+	value = num_mage_perks
+	multiply = max_mana_per_perk
+	add = {
+		value = mage_potency
+		multiply = max_mana_per_potency
+	}
+	if = {
+		limit = { dynasty = { has_dynasty_perk = arcane_legacy_3 } }
+		add = max_mana_legacy_3
+	}
+}
 
 arcana_mage_xp_per_perk = {
 	value = mage_xp_per_perk
@@ -244,4 +414,76 @@ am_genetic_level = {
 	value = am_beauty_level
 	add = am_physique_level
 	add = am_intellect_level
+}
+
+# Note: This value is a work-around for perks firing 'change_mage_perks'
+# 	    more times than they should. Removing it will break everything!
+############################################################################################
+num_mage_perks = {
+	value = 0
+	# Time tree
+	if = { limit = { has_perk = time_mage_perk } add = 1 }
+	if = { limit = { has_perk = glimpse_the_future_perk } add = 1 }
+	if = { limit = { has_perk = financial_times_perk } add = 1 }
+	if = { limit = { has_perk = celerity_perk } add = 1 }
+	if = { limit = { has_perk = mass_celerity_perk } add = 1 }
+	if = { limit = { has_perk = slowness_perk } add = 1 }
+	if = { limit = { has_perk = mass_slowness_perk } add = 1 }
+	if = { limit = { has_perk = temporal_manipulation_perk } add = 1 }
+	if = { limit = { has_perk = master_of_time_perk } add = 1 }
+	
+	# Life tree
+	if = { limit = { has_perk = life_mage_perk } add = 1 }
+	if = { limit = { has_perk = inward_reflection_perk } add = 1 }
+	if = { limit = { has_perk = inward_perfection_perk } add = 1 }
+	if = { limit = { has_perk = heal_perk } add = 1 }
+	if = { limit = { has_perk = greater_heal_perk } add = 1 }
+	if = { limit = { has_perk = battlefield_life_mage_perk } add = 1 }
+	if = { limit = { has_perk = greater_battlefield_life_mage_perk } add = 1 }
+	if = { limit = { has_perk = purity_of_body_perk } add = 1 }
+	if = { limit = { has_perk = avatar_of_life_perk } add = 1 }
+	
+	# Elemental tree
+	if = { limit = { has_perk = elemental_mage_perk } add = 1 }
+	if = { limit = { has_perk = flame_aura_perk } add = 1 }
+	if = { limit = { has_perk = flaming_weapons_perk } add = 1 }
+	if = { limit = { has_perk = living_earthworks_perk } add = 1 }
+	if = { limit = { has_perk = golem_creation_perk } add = 1 }
+	if = { limit = { has_perk = control_water_perk } add = 1 }
+	if = { limit = { has_perk = drought_perk } add = 1 }
+	if = { limit = { has_perk = elemental_warrior_perk } add = 1 }
+	if = { limit = { has_perk = lord_of_the_elements_perk } add = 1 }
+	
+	# Death tree
+	if = { limit = { has_perk = death_mage_perk } add = 1 }
+	if = { limit = { has_perk = inflict_illness_perk } add = 1 }
+	if = { limit = { has_perk = plague_lord_perk } add = 1 }
+	if = { limit = { has_perk = aura_of_death_perk } add = 1 }
+	if = { limit = { has_perk = necromancy_perk } add = 1 }
+	if = { limit = { has_perk = drain_life_perk } add = 1 }
+	if = { limit = { has_perk = death_stare_perk } add = 1 }
+	if = { limit = { has_perk = death_magic_8_perk } add = 1 }
+	if = { limit = { has_perk = deacon_of_death_perk } add = 1 }
+	
+	# Biomancy tree
+	if = { limit = { has_perk = biomancy_mage_perk } add = 1 }
+	if = { limit = { has_perk = improve_trait_perk } add = 1 }
+	if = { limit = { has_perk = perfect_trait_perk } add = 1 }
+	if = { limit = { has_perk = fertility_control_perk } add = 1 }
+	if = { limit = { has_perk = impregnate_perk } add = 1 }
+	if = { limit = { has_perk = weaken_trait_perk } add = 1 }
+	if = { limit = { has_perk = criple_trait_perk } add = 1 }
+	if = { limit = { has_perk = sculpter_of_flesh_perk } add = 1 }
+	if = { limit = { has_perk = architect_of_bloodlines_perk } add = 1 }
+	
+	# Domination tree
+	if = { limit = { has_perk = domination_mage_perk } add = 1 }
+	if = { limit = { has_perk = entrance_perk } add = 1 }
+	if = { limit = { has_perk = incite_lust_perk } add = 1 }
+	if = { limit = { has_perk = incite_obedience_perk } add = 1 }
+	if = { limit = { has_perk = dominate_perk } add = 1 }
+	if = { limit = { has_perk = beguiling_aura_perk } add = 1 }
+	if = { limit = { has_perk = friendship_perk } add = 1 }
+	if = { limit = { has_perk = enchanting_aura_perk } add = 1 }
+	if = { limit = { has_perk = master_of_puppets_perk } add = 1 }
 }

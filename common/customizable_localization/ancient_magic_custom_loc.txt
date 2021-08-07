@@ -253,7 +253,7 @@ TimesActiveInactive = {
     text = {
         localization_key = AURA_ACTIVE
         trigger = {
-            has_character_modifier = finacial_times_modifier
+            has_character_modifier = financial_times_modifier
         }
     }
     text = {

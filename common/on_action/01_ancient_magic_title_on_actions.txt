@@ -1,0 +1,12 @@
+﻿# For those who might have gained/lost an arcane circle building
+on_title_gain = {
+	on_actions = {
+		on_reset_mana_system
+	}
+}
+
+on_title_lost = {
+	on_actions = {
+		on_reset_mana_system
+	}
+}

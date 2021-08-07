@@ -1,5 +1,5 @@
 ﻿l_english:
-#intrigue menu
+ #intrigue menu
  open_spellbook_decision:0 "Open Spellbook"
  open_spellbook_decision_tooltip:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] casts a spell on [ROOT.GetCharacter.GetHerselfHimself]."
  open_spellbook_decision_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] casts a spell on [ROOT.GetCharacter.GetHerselfHimself]."
@@ -8,8 +8,8 @@
  gain_potential_decision_tooltip:0 "Gain Magical Potential"
  gain_potential_decision_desc:0 "Gain Magical Potential."
  gain_potential_decision_confirm:0 "Gain Magical Potential"
- 
-#interactions
+
+ #interactions
  open_spellbook_interaction:0 "Open Spellbook"
  open_spellbook_interaction_desc:0 "[actor.GetFirstNameNoTooltip] casts a spell on [actor.Custom2('SpellTargetHerselfHimself', SCOPE.sC('recipient'))]."
  halt_aging_interaction:0 "Grant Gift of Time"
@@ -104,3 +104,27 @@
  entrance_interaction_desc:0 "Entrance"
  incite_lust_interaction_desc:0 "Incite Lust"
  friendship_spell_interaction_desc:0 "Friendship"
+
+ am_spiritual_hof_change_to_witchcraft_decision:0 "Change Faith's View on $doctrine_witchcraft_name$"
+ am_spiritual_hof_change_to_witchcraft_decision_desc:0 "In order to change the $doctrine_witchcraft_name$ [doctrine|E] of [ROOT.Char.GetFaith.GetName], I will need to convince [ROOT.Char.GetFaith.GetReligiousHead.GetUIName|U] that the new dogma is supported by scripture. I should be cautious, as failure will be costly."
+ am_spiritual_hof_change_to_witchcraft_decision_confirm:0 "Change Doctrine"
+ am_spiritual_hof_change_to_witchcraft_decision_tooltip:0 "You will petition your [head_of_faith|E], [ROOT.Char.GetFaith.GetReligiousHead.GetUINameNoTooltip|U], and attempt to convince them to change the faith's $doctrine_witchcraft_name$ belief."
+ am_convince_hof_witchcraft_shunned_custom_desc:0 "You will attempt to persuade your [GetFaithDoctrine('doctrine_spiritual_head').GetBaseName] [head_of_faith|E] to change your faith's $doctrine_witchcraft_name$ [doctrine|E] to [GetFaithDoctrine('doctrine_witchcraft_shunned').GetBaseName]. A high skill in [learning|E] or [diplomacy|E] is recommended, as well as good relations with your [head_of_faith|E]."
+ am_convince_hof_witchcraft_accepted_custom_desc:0 "You will attempt to persuade your [GetFaithDoctrine('doctrine_spiritual_head').GetBaseName] [head_of_faith|E] to change your faith's $doctrine_witchcraft_name$ [doctrine|E] to [GetFaithDoctrine('doctrine_witchcraft_accepted').GetBaseName]. A high skill in [learning|E] or [diplomacy|E] is recommended, as well as good relations with your [head_of_faith|E]."
+ am_convince_hof_witchcraft_crime_custom_desc:0 "You will attempt to persuade your [GetFaithDoctrine('doctrine_spiritual_head').GetBaseName] [head_of_faith|E] to change your faith's $doctrine_witchcraft_name$ [doctrine|E] to [GetFaithDoctrine('doctrine_witchcraft_crime').GetBaseName]. A high skill in [learning|E] or [diplomacy|E] is recommended, as well as good relations with your [head_of_faith|E]."
+
+ am_no_hof_unreformed_or_tribal_witchcraft_decision:0 "Change Faith's View on $doctrine_witchcraft_name$"
+ am_no_hof_unreformed_or_tribal_witchcraft_decision_desc:0 "My renown as an accomplished and pious leader grants me the respect needed to call a convocation of [ROOT.Char.GetFaith.PriestNeuterPlural] of [ROOT.Char.GetFaith.GetNameNoTooltip] to discuss our view on $doctrine_witchcraft_name$. It won't be easy to sway the [ROOT.Char.GetFaith.PriestNeuterPlural], but the glory I have brought to [ROOT.Char.GetFaith.HighGodName] gives me the authority to at least demand their attention. I have gathered all the scripture and apocrypha I can, and it's time to put it to use."
+ am_no_hof_unreformed_or_tribal_witchcraft_decision_confirm:0 "Call Convocation"
+ am_no_hof_unreformed_or_tribal_witchcraft_decision_tooltip:0 "Call a convocation of [ROOT.Char.GetFaith.PriestNeuterPlural] and attempt to convince them to change the faith's $doctrine_witchcraft_name$ belief."
+ AM_HAS_NO_POWERFUL_VASSAL_FOLLOWING_OWN_FAITH:0 "All or all but one of your [powerful_vassals|E] follow your faith."
+ am_convocation_witchcraft_shunned_custom_desc:0 "You will call a convocation of respected and devout spiritual leaders to attempt to change the faith's $doctrine_witchcraft_name$ [doctrine|E] to [GetFaithDoctrine('doctrine_witchcraft_shunned').GetBaseName]. A high skill in [learning|E] is recommended, as well as good relations with your [GetPlayer.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName]. Other skills may be used depending on the flow of the convocation, and having certain [lifestyle|E] perks are also helpful."
+ am_convocation_witchcraft_accepted_custom_desc:0 "You will call a convocation of respected and devout spiritual leaders to attempt to change the faith's $doctrine_witchcraft_name$ [doctrine|E] to [GetFaithDoctrine('doctrine_witchcraft_accepted').GetBaseName]. A high skill in [learning|E] is recommended, as well as good relations with your [GetPlayer.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName]. Other skills may be used depending on the flow of the convocation, and having certain [lifestyle|E] perks are also helpful."
+ am_convocation_witchcraft_crime_custom_desc:0 "You will call a convocation of respected and devout spiritual leaders to attempt to change the faith's $doctrine_witchcraft_name$ [doctrine|E] to [GetFaithDoctrine('doctrine_witchcraft_crime').GetBaseName]. A high skill in [learning|E] is recommended, as well as good relations with your [GetPlayer.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName]. Other skills may be used depending on the flow of the convocation, and having certain [lifestyle|E] perks are also helpful."
+
+ # debug
+ reset_mana_system_decision:0 "Reset Mana System"
+ reset_mana_system_decision_tooltip:0 "Reset maximum mana and mana regen"
+ reset_mana_system_decision_desc:0 "Recalculates the maximum mana and mana regen for every character in the game. Useful after updating the game."
+ reset_mana_system_decision_effect_tooltip:0 "Reset all characters' mana systems"
+ reset_mana_system_decision_confirm:0 "Reset!"

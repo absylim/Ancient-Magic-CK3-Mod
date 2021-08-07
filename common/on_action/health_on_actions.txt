@@ -89,44 +89,12 @@ disease_outbreak_pulse = {
 		100 = health.1005 	#Typhus, 7x common when commander/combat character
 		100 = health.1006 	#Consumption
 		150 = health.1007 	#Cancer
-		
-		###############################
-		###### Magical diseases #######
-		###############################
-		if = { #Mana devouring
-			limit = {
-				has_trait = mage
-			}
-			if = {
-				limit = {
-					has_game_rule = few_ancient_magical_diseases
-				}
-				100 = AMHealth.0001	#Mana devoring
-			}
-			if = {
-				limit = {
-					has_game_rule = moderate_ancient_magical_diseases
-				}
-				250 = AMHealth.0001	#Mana devoring
-			}
-			if = {
-				limit = {
-					has_game_rule = lot_ancient_magical_diseases
-				}
-				500 = AMHealth.0001	#Mana devoring
-			}
-			if = {
-				limit = {
-					has_game_rule = hell_ancient_magical_diseases
-				}
-				4000 = AMHealth.0001 #Mana devoring
-			}
-		}
-		
 		75 = health.1008 	#Lover's Pox
 		25 = health.1009 	#Great pox
 		2 = health.1010		#Smallpox
 		2 = health.1011		#Bubonic plague, won't happen before 1346
+
+		1 = AMHealth.0001	#Mana devoring (factors in weight_multiplier of event)
 	}
 }
 

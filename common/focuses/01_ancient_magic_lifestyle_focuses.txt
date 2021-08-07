@@ -4,7 +4,14 @@
 	modifier = {
 		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.2
 	}
-
+	
+	on_change_to = {
+		trigger_event = { on_action = on_reset_mana_system }
+	}
+	
+	on_change_from = {
+		trigger_event = { on_action = on_reset_mana_system }
+	}
 
 	auto_selection_weight = {
 		value = 11
@@ -39,6 +46,14 @@
 
 magic_meditation_focus = {
 	lifestyle = ancient_magic_lifestyle
+	
+	on_change_to = {
+		trigger_event = { on_action = on_reset_mana_system }
+	}
+	
+	on_change_from = {
+		trigger_event = { on_action = on_reset_mana_system }
+	}
 
 	auto_selection_weight = {
 		value = 11
@@ -70,6 +85,14 @@ magic_mana_focus = {
 	
 	modifier = {
 		monthly_ancient_magic_lifestyle_xp_gain_mult = -10000
+	}
+	
+	on_change_to = {
+		trigger_event = { on_action = on_reset_mana_system }
+	}
+	
+	on_change_from = {
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 
 	auto_selection_weight = {

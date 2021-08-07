@@ -1,7 +1,7 @@
-republic_government = {
-	primary_holding = city_holding
-	valid_holdings = { castle_holding city_of_magic_holding }
-	required_county_holdings = { city_holding castle_holding church_holding city_of_magic_holding }
+﻿magocracy_government = {
+	primary_holding = city_of_magic_holding
+	valid_holdings = { castle_holding }
+	required_county_holdings = { city_holding castle_holding church_holding }
 
 	ai = {
 		arrange_marriage = no
@@ -10,6 +10,6 @@ republic_government = {
 		perform_religious_reformation = no
 	}
 
-	vassal_contract = { republic_government_obligations }
+	vassal_contract = { magocracy_government_obligations }
 	color = hsv{ 0.00 1.00 0.98 }
 }

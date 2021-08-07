@@ -1,4 +1,35 @@
 ﻿action_can_spend_perk_point = {
+	type = alert
+	check_create_action = {
+
+		if = {
+			limit = {
+				has_any_focus = yes
+				NOT = {
+					has_focus_intrigue = yes
+					has_focus_diplomacy = yes
+					has_focus_learning = yes
+					has_focus_martial = yes
+					has_focus_stewardship = yes
+					has_focus_arcane = yes
+				}
+				perk_points > 0
+				is_adult = yes
+			}
+			try_create_important_action = {
+				important_action_type = action_can_spend_perk_point
+				actor = root
+			}
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			open_view_data = {
+				view = lifestyle
+			}
+		}
+	}
 }
 
 action_lifestyle_ancient_magic = {
@@ -7,7 +38,7 @@ action_lifestyle_ancient_magic = {
 		
 		if = {
 			limit = {
-				has_focus_ancient_magic = yes
+				has_focus_arcane = yes
 				perk_points > 0
 				is_adult = yes
 			}
@@ -16,7 +47,6 @@ action_lifestyle_ancient_magic = {
 				actor = root
 			}
 		}
-		
 	}
 
 	effect = {

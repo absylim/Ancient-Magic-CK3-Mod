@@ -142,7 +142,7 @@ window = {
 					framesize = { 160 160 }
 					size = { 80 80 }
 					onclick = "[CharacterFocusWindow.OnClickSetSelectedFocus('5')]"
-					down = "[CharacterFocusWindow.IsSelectedFocus('5)]"
+					down = "[CharacterFocusWindow.IsSelectedFocus('5')]"
 					clicksound = "event:/SFX/UI/Unique/CharacterLifestyle/sfx_ui_unique_lifestyle_learning"
 					datacontext = "[CharacterFocusWindow.GetFocus( '(int32)5' )]"
 

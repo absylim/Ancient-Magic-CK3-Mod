@@ -1,0 +1,104 @@
+﻿am_spiritual_hof_change_witchcraft_shunned_effect = {
+	if = {
+		limit = {
+			faith = { has_doctrine = doctrine_witchcraft_crime }
+		}
+		faith = {
+			remove_doctrine = doctrine_witchcraft_crime
+			add_doctrine = doctrine_witchcraft_shunned
+		}
+	}
+	if = {
+		limit = {
+			faith = { has_doctrine = doctrine_witchcraft_accepted }
+		}
+		faith = {
+			remove_doctrine = doctrine_witchcraft_accepted
+			add_doctrine = doctrine_witchcraft_shunned
+		}
+	}
+	if = {
+		limit = {
+			faith.religious_head = {
+				exists = this
+				opinion = {
+					target = root
+					value < high_positive_opinion
+				}
+			}
+			OR = {
+				has_hook = faith.religious_head
+				has_strong_usable_hook = faith.religious_head
+			}
+		}
+		use_hook = faith.religious_head
+	}
+}
+
+am_spiritual_hof_change_witchcraft_accepted_effect = {
+	if = {
+		limit = {
+			faith = { has_doctrine = doctrine_witchcraft_shunned }
+		}
+		faith = {
+			remove_doctrine = doctrine_witchcraft_shunned
+			add_doctrine = doctrine_witchcraft_accepted
+		}
+	}
+	if = {
+		limit = {
+			faith.religious_head = {
+				exists = this
+				opinion = {
+					target = root
+					value < high_positive_opinion
+				}
+			}
+			OR = {
+				has_hook = faith.religious_head
+				has_strong_usable_hook = faith.religious_head
+			}
+		}
+		use_hook = faith.religious_head
+	}
+}
+
+am_spiritual_hof_change_witchcraft_crime_effect = {
+	if = {
+		limit = {
+			faith = { has_doctrine = doctrine_witchcraft_shunned }
+		}
+		faith = {
+			remove_doctrine = doctrine_witchcraft_shunned
+			add_doctrine = doctrine_witchcraft_crime
+		}
+	}
+	if = {
+		limit = {
+			faith.religious_head = {
+				exists = this
+				opinion = {
+					target = root
+					value < high_positive_opinion
+				}
+			}
+			OR = {
+				has_hook = faith.religious_head
+				has_strong_usable_hook = faith.religious_head
+			}
+		}
+		use_hook = faith.religious_head
+	}
+}
+
+am_convocation_change_doctrine_effect = {
+	if = {
+		limit = {
+			faith = { has_doctrine = doctrine_gender_male_dominated }
+		}
+		faith = {
+			remove_doctrine = doctrine_gender_male_dominated
+			add_doctrine = doctrine_gender_equal
+		}
+	}
+}

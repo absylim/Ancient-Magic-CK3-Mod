@@ -25,3 +25,7 @@ auras_and_rituals_target_caster = {
 living_earthworks_desc = {
 	global = living_earthworks_desc
 }
+
+am_no_hof_unreformed_or_tribal_witchcraft_decision_requirement = {
+	global = AM_HAS_NO_POWERFUL_VASSAL_FOLLOWING_OWN_FAITH
+}

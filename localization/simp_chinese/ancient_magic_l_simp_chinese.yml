@@ -227,7 +227,7 @@
  ancient_magic_spellbook_events_close:0 "Close Spellbook"
 #magic type select
  ancient_magic_spellbook_events.001.t:0 "Spellbook"
- ancient_magic_spellbook_events.001.desc:0 "This is your spellbook. From here you can cast all the spells you have unlocked. Your mage level affects the power of certain spell. Your mage level is [SCOPE.ScriptValue('mage_level')|0], it starts at 1 and increases every 100 mage XP, your mage xp is [ROOT.GetCharacter.MakeScope.Var('mage_xp').GetValue|0]"
+ ancient_magic_spellbook_events.001.desc:0 "This is your spellbook. From here you can cast all the spells you have unlocked. Your mage level affects the power of certain spell. Your mage level is [SCOPE.ScriptValue('mage_level')|0], it starts at 1 and increases every 100 mage XP, your mage xp is [SCOPE.ScriptValue('mage_xp')|0]"
  ancient_magic_spellbook_events.001.a:0 "Chronomancy"
  ancient_magic_spellbook_events.001.b:0 "Chiromancy"
  ancient_magic_spellbook_events.001.c:0 "Elomancy"

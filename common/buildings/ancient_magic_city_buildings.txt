@@ -243,7 +243,7 @@ city_of_magic_01 = {
 	}
 	
 	levy = poor_building_levy_tier_2
-	garrison = normal_building_garrison_tier_1
+	max_garrison = normal_building_max_garrison_tier_1
 	province_modifier = {
 		monthly_income = good_building_tax_tier_2
 		fort_level = great_building_fort_level_tier_1
@@ -267,7 +267,7 @@ city_of_magic_01 = {
 			scope:holder = {
 				AND = {
 					has_trait = magic_potential
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -278,18 +278,18 @@ city_of_magic_01 = {
 			scope:holder = {
 				AND = {
 					has_trait = magic_potential
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
 			}
 		}			
 		modifier = {
-			divide = 10
+			factor = 0.1
 			scope:holder = {
 				AND = {
 					NOT = { has_trait = magic_potential }
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -300,7 +300,7 @@ city_of_magic_01 = {
 			scope:holder = {
 				AND = {
 					has_government = theocracy_government
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -311,7 +311,7 @@ city_of_magic_01 = {
 			scope:holder = {
 				AND = {
 					has_government = theocracy_government
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
@@ -560,7 +560,7 @@ city_of_magic_02 = {
 	}
 	
 	levy = poor_building_levy_tier_4
-	garrison = normal_building_garrison_tier_2
+	max_garrison = normal_building_max_garrison_tier_2
 	province_modifier = {
 		monthly_income = good_building_tax_tier_4
 		fort_level = good_building_fort_level_tier_2
@@ -578,7 +578,7 @@ city_of_magic_02 = {
 			scope:holder = {
 				AND = {
 					has_trait = magic_potential
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -589,18 +589,18 @@ city_of_magic_02 = {
 			scope:holder = {
 				AND = {
 					has_trait = magic_potential
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
 			}
 		}			
 		modifier = {
-			divide = 10
+			factor = 0.1
 			scope:holder = {
 				AND = {
 					NOT = { has_trait = magic_potential }
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -611,7 +611,7 @@ city_of_magic_02 = {
 			scope:holder = {
 				AND = {
 					has_government = theocracy_government
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -622,7 +622,7 @@ city_of_magic_02 = {
 			scope:holder = {
 				AND = {
 					has_government = theocracy_government
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
@@ -818,7 +818,7 @@ city_of_magic_03 = {
 	next_building = city_of_magic_04
 	
 	levy = poor_building_levy_tier_6
-	garrison = normal_building_garrison_tier_3
+	max_garrison = normal_building_max_garrison_tier_3
 	province_modifier = {
 		monthly_income = good_building_tax_tier_6
 		fort_level = good_building_fort_level_tier_3
@@ -835,7 +835,7 @@ city_of_magic_03 = {
 			scope:holder = {
 				AND = {
 					has_trait = magic_potential
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -846,18 +846,18 @@ city_of_magic_03 = {
 			scope:holder = {
 				AND = {
 					has_trait = magic_potential
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
 			}
 		}			
 		modifier = {
-			divide = 10
+			factor = 0.1
 			scope:holder = {
 				AND = {
 					NOT = { has_trait = magic_potential }
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -868,7 +868,7 @@ city_of_magic_03 = {
 			scope:holder = {
 				AND = {
 					has_government = theocracy_government
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -879,7 +879,7 @@ city_of_magic_03 = {
 			scope:holder = {
 				AND = {
 					has_government = theocracy_government
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
@@ -1074,7 +1074,7 @@ city_of_magic_04 = {
 	}
 	
 	levy = poor_building_levy_tier_8
-	garrison = normal_building_garrison_tier_7
+	max_garrison = normal_building_max_garrison_tier_7
 	province_modifier = {
 		monthly_income = good_building_tax_tier_8
 		fort_level = good_building_fort_level_tier_4
@@ -1091,7 +1091,7 @@ city_of_magic_04 = {
 			scope:holder = {
 				AND = {
 					has_trait = magic_potential
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -1102,18 +1102,18 @@ city_of_magic_04 = {
 			scope:holder = {
 				AND = {
 					has_trait = magic_potential
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
 			}
 		}			
 		modifier = {
-			divide = 10
+			factor = 0.1
 			scope:holder = {
 				AND = {
 					NOT = { has_trait = magic_potential }
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -1124,7 +1124,7 @@ city_of_magic_04 = {
 			scope:holder = {
 				AND = {
 					has_government = theocracy_government
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
@@ -1135,7 +1135,7 @@ city_of_magic_04 = {
 			scope:holder = {
 				AND = {
 					has_government = theocracy_government
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
 				}

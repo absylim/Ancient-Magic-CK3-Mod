@@ -19,7 +19,7 @@ arcane_legacy_1 = { # Powerful blood
 		}
 	}
 
-	# gives chance of gaining lvl 1 potential in newborns, handeled in 01_ancient_magic_child_birth_on_actions
+	# gives chance of gaining lvl 1 potential in newborns, handled in 01_ancient_magic_child_birth_on_actions
 	effect = {
 		custom_description_no_bullet = {
 			text = arcane_legacy_1_effect
@@ -30,18 +30,19 @@ arcane_legacy_1 = { # Powerful blood
 arcane_legacy_2 = { # Placeholder
 	legacy = arcane_legacy_track
 
-	#increases mana gen, handeled in events
+	# increases mana gen, handled in script_values, mana system must be reset
 	effect = {
 		custom_description_no_bullet = {
 			text = arcane_legacy_2_effect
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
 arcane_legacy_3 = { # Placeholder
 	legacy = arcane_legacy_track
 
-	#increases max_mana , handeled in events
+	# increases maximum mana, handled in script_values, mana system must be reset
 	effect = {
 		custom_description_no_bullet = {
 			text = arcane_legacy_3_effect
@@ -52,19 +53,19 @@ arcane_legacy_3 = { # Placeholder
 arcane_legacy_4 = { # Placeholder
 	legacy = arcane_legacy_track
 
-	#lowers xp requirement for mage level, handeled in scripted values
+	# adds 1 to mage level, handled in script_values, mana system must be reset
 	effect = {
 		custom_description_no_bullet = {
 			text = arcane_legacy_4_effect
 		}
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
 arcane_legacy_5 = { # Placeholder
 	legacy = arcane_legacy_track
 
-	# gives chance of improving potential in newborns, handeled in 01_ancient_magic_child_birth_on_actions
-
+	# gives chance of improving potential in newborns, handled in 01_ancient_magic_child_birth_on_actions
 	effect = {
 		custom_description_no_bullet = {
 			text = arcane_legacy_5_effect
