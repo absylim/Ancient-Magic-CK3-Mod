@@ -1,4 +1,8 @@
 ﻿on_reset_mana_system = {
+	trigger = {
+		has_trait = mana
+	}
+
 	effect = {
 		set_variable = {
 			name = max_mana
