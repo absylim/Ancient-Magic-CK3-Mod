@@ -166,7 +166,7 @@ ancient_magic_mana_circle_01 = {
 	type_icon = "icon_structure_stonehenge.dds"
 
 	on_complete = {
-		trigger_event = { on_action = on_reset_mana_system }
+		county.holder = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 
 	ai_value = {
@@ -200,7 +200,7 @@ ancient_magic_mana_circle_02 = {
 	type_icon = "icon_structure_stonehenge.dds"
 
 	on_complete = {
-		trigger_event = { on_action = on_reset_mana_system }
+		county.holder = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 
 	ai_value = {
@@ -234,7 +234,7 @@ ancient_magic_mana_circle_03 = {
 	type_icon = "icon_structure_stonehenge.dds"
 
 	on_complete = {
-		trigger_event = { on_action = on_reset_mana_system }
+		county.holder = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 
 	ai_value = {
