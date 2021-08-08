@@ -922,6 +922,8 @@ widget = {
 						on_start = "[PdxGuiInterruptThenTriggerAllAnimations('hud_tab_glow_council_enter','hud_tab_glow_council_leave')]"
 					}
 				}
+				################################
+				###########
 			}
 
 			widget = {
