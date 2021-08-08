@@ -45,14 +45,14 @@ on_death_magocracy = {
 			}
 		}
 		if = {
-			limit = { holds_valid_merchant_republic = yes house.var:titular_republic = { has_variable = forced_dictatorship has_variable = limited_dictatorship } }
+			limit = { holds_valid_magocracy = yes house.var:titular_republic = { has_variable = forced_dictatorship has_variable = limited_dictatorship } }
 			house.var:titular_republic = {
 				remove_variable = limited_dictatorship
 				remove_variable = forced_dictatorship
 			}
 		}
 		if = {
-			limit = { holds_valid_merchant_republic = yes house.var:titular_republic = { NOT = { has_variable = forced_dictatorship } } }
+			limit = { holds_valid_magocracy = yes house.var:titular_republic = { NOT = { has_variable = forced_dictatorship } } }
 			primary_title = {
 				set_variable = current_death
 				death_republic_succession = yes
@@ -86,7 +86,7 @@ on_death_magocracy = {
 			}
 		}
 		if = {
-			limit = { holds_valid_merchant_republic = yes republic_has_council_form = yes }
+			limit = { holds_valid_magocracy = yes republic_has_council_form = yes }
 			primary_title = {
 				change_variable = {
 					name = nobility_appeasement
@@ -115,7 +115,7 @@ yearly_global_pulse = {
 yearly_republic_check = {
 	effect = {
 		every_living_character = {
-			limit = { is_independent_ruler = yes holds_valid_merchant_republic = yes republic_has_bicameral_form = yes }
+			limit = { is_independent_ruler = yes holds_valid_magocracy = yes republic_has_bicameral_form = yes }
 			primary_title = {
 				clear_variable_list = lower_house_counties
 				generate_counties_for_lower_house = yes
@@ -495,7 +495,7 @@ yearly_republic_check = {
 		}
 		every_living_character = {
 			limit = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				NOT = {
 					republic_has_senate_form = yes
 					republic_has_council_form = yes
@@ -546,8 +546,8 @@ yearly_republic_check = {
 					}
 				}
 				NAND = {
-					holds_valid_merchant_republic = yes
-					liege_or_court_owner = { holds_valid_merchant_republic = yes }
+					holds_valid_magocracy = yes
+					liege_or_court_owner = { holds_valid_magocracy = yes }
 				}
 			}
 			house = {
@@ -572,50 +572,50 @@ yearly_republic_check = {
 					has_government = governor_government
 				}
 				OR = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					AND = {
 						exists = liege_or_court_owner
-						liege_or_court_owner = { holds_valid_merchant_republic = yes }
+						liege_or_court_owner = { holds_valid_magocracy = yes }
 					}
 				}
 				OR = {
 					AND = {
 						OR = {
-							holds_valid_merchant_republic = yes
+							holds_valid_magocracy = yes
 							culture_group = liege_or_court_owner.culture_group
 						}
 						NOT = { republic_has_bicameral_form = yes }
 					}
 					AND = {
 						OR = {
-							holds_valid_merchant_republic = yes
+							holds_valid_magocracy = yes
 							culture = liege_or_court_owner.culture
 						}
 						republic_has_bicameral_form = yes
 						OR = {
 							AND = {
-								holds_valid_merchant_republic = yes
+								holds_valid_magocracy = yes
 								primary_title = { has_variable = same_culture_citizenship }
 							}
 							AND = {
-								liege_or_court_owner = { holds_valid_merchant_republic = yes }
+								liege_or_court_owner = { holds_valid_magocracy = yes }
 								liege_or_court_owner.primary_title = { has_variable = same_culture_citizenship }
 							}
 						}
 					}
 					AND = {
 						OR = {
-							holds_valid_merchant_republic = yes
+							holds_valid_magocracy = yes
 							culture_group = liege_or_court_owner.culture_group
 						}
 						republic_has_bicameral_form = yes
 						OR = {
 							AND = {
-								holds_valid_merchant_republic = yes
+								holds_valid_magocracy = yes
 								primary_title = { has_variable = same_culture_group_citizenship }
 							}
 							AND = {
-								liege_or_court_owner = { holds_valid_merchant_republic = yes }
+								liege_or_court_owner = { holds_valid_magocracy = yes }
 								liege_or_court_owner.primary_title = { has_variable = same_culture_group_citizenship }
 							}
 						}
@@ -624,11 +624,11 @@ yearly_republic_check = {
 						republic_has_bicameral_form = yes
 						OR = {
 							AND = {
-								holds_valid_merchant_republic = yes
+								holds_valid_magocracy = yes
 								primary_title = { has_variable = all_cultures_citizenship }
 							}
 							AND = {
-								liege_or_court_owner = { holds_valid_merchant_republic = yes }
+								liege_or_court_owner = { holds_valid_magocracy = yes }
 								liege_or_court_owner.primary_title = { has_variable = all_cultures_citizenship }
 							}
 						}
@@ -640,34 +640,34 @@ yearly_republic_check = {
 					}
 					AND = {
 						OR = {
-							holds_valid_merchant_republic = yes
+							holds_valid_magocracy = yes
 							faith = liege_or_court_owner.faith
 						}
 						republic_has_bicameral_form = yes
 						OR = {
 							AND = {
-								holds_valid_merchant_republic = yes
+								holds_valid_magocracy = yes
 								primary_title = { has_variable = same_faith_citizenship }
 							}
 							AND = {
-								liege_or_court_owner = { holds_valid_merchant_republic = yes }
+								liege_or_court_owner = { holds_valid_magocracy = yes }
 								liege_or_court_owner.primary_title = { has_variable = same_faith_citizenship }
 							}
 						}
 					}
 					AND = {
 						OR = {
-							holds_valid_merchant_republic = yes
+							holds_valid_magocracy = yes
 							religion = liege_or_court_owner.religion
 						}
 						republic_has_bicameral_form = yes
 						OR = {
 							AND = {
-								holds_valid_merchant_republic = yes
+								holds_valid_magocracy = yes
 								primary_title = { has_variable = same_religion_group_citizenship }
 							}
 							AND = {
-								liege_or_court_owner = { holds_valid_merchant_republic = yes }
+								liege_or_court_owner = { holds_valid_magocracy = yes }
 								liege_or_court_owner.primary_title = { has_variable = same_religion_group_citizenship }
 							}
 						}
@@ -676,11 +676,11 @@ yearly_republic_check = {
 						republic_has_bicameral_form = yes
 						OR = {
 							AND = {
-								holds_valid_merchant_republic = yes
+								holds_valid_magocracy = yes
 								primary_title = { has_variable = all_religions_citizenship }
 							}
 							AND = {
-								liege_or_court_owner = { holds_valid_merchant_republic = yes }
+								liege_or_court_owner = { holds_valid_magocracy = yes }
 								liege_or_court_owner.primary_title = { has_variable = all_religions_citizenship }
 							}
 						}
@@ -698,7 +698,7 @@ yearly_republic_check = {
 				save_temporary_scope_as = important_duchy
 				exists = holder
 				holder = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = scope:important_duchy
 				}
 			}
@@ -708,8 +708,8 @@ yearly_republic_check = {
 				limit = {
 					OR = {
 						AND = { house_head = { is_landed = no NOT = { location = house.var:titular_republic.holder.location } } }
-						AND = { house_head = { is_landed = yes holds_valid_merchant_republic = no NOT = { liege_or_court_owner = house.var:titular_republic.holder } } }
-						AND = { house_head = { holds_valid_merchant_republic = yes NOT = { primary_title = house.var:titular_republic } } }
+						AND = { house_head = { is_landed = yes holds_valid_magocracy = no NOT = { liege_or_court_owner = house.var:titular_republic.holder } } }
+						AND = { house_head = { holds_valid_magocracy = yes NOT = { primary_title = house.var:titular_republic } } }
 						any_house_member = {
 							is_alive = no
 						}
@@ -767,7 +767,7 @@ yearly_republic_check = {
 				save_temporary_scope_as = important_kingdom
 				exists = holder
 				holder = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = scope:important_kingdom
 				}
 			}
@@ -777,8 +777,8 @@ yearly_republic_check = {
 				limit = {
 					OR = {
 						AND = { house_head = { is_landed = no NOT = { location = house.var:titular_republic.holder.location } } }
-						AND = { house_head = { is_landed = yes holds_valid_merchant_republic = no NOT = { liege_or_court_owner = house.var:titular_republic.holder } } }
-						AND = { house_head = { holds_valid_merchant_republic = yes NOT = { primary_title = house.var:titular_republic } } }
+						AND = { house_head = { is_landed = yes holds_valid_magocracy = no NOT = { liege_or_court_owner = house.var:titular_republic.holder } } }
+						AND = { house_head = { holds_valid_magocracy = yes NOT = { primary_title = house.var:titular_republic } } }
 						any_house_member = {
 							is_alive = no
 						}
@@ -836,7 +836,7 @@ yearly_republic_check = {
 				save_temporary_scope_as = important_empire
 				exists = holder
 				holder = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = scope:important_empire
 				}
 			}
@@ -846,8 +846,8 @@ yearly_republic_check = {
 				limit = {
 					OR = {
 						AND = { house_head = { is_landed = no NOT = { location = house.var:titular_republic.holder.location } } }
-						AND = { house_head = { is_landed = yes holds_valid_merchant_republic = no NOT = { liege_or_court_owner = house.var:titular_republic.holder } } }
-						AND = { house_head = { holds_valid_merchant_republic = yes NOT = { primary_title = house.var:titular_republic } } }
+						AND = { house_head = { is_landed = yes holds_valid_magocracy = no NOT = { liege_or_court_owner = house.var:titular_republic.holder } } }
+						AND = { house_head = { holds_valid_magocracy = yes NOT = { primary_title = house.var:titular_republic } } }
 						any_house_member = {
 							is_alive = no
 						}
@@ -921,7 +921,7 @@ yearly_republic_check = {
 			}
 		}
 		every_independent_ruler = {
-			limit = { holds_valid_merchant_republic = yes republic_has_council_form = yes }
+			limit = { holds_valid_magocracy = yes republic_has_council_form = yes }
 			primary_title = {
 				change_variable = {
 					name = nobility_appeasement
@@ -952,7 +952,7 @@ yearly_republic_check = {
 		}
 		every_ruler = {
 			limit = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				exists = house.var:titular_republic
 				house.var:titular_republic = {
 					has_variable = current_dictatorship
@@ -976,7 +976,7 @@ yearly_republic_check = {
 			}
 		}
 		every_ruler = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			if = {
 				limit = {
 					house.var:titular_republic = {
@@ -1068,7 +1068,7 @@ on_game_start = {
 set_up_the_republics = {
 	effect = {
 		every_independent_ruler = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			add_family_to_republic_families = yes
 			every_vassal = {
 				limit = { exists = house is_house_head = yes }
@@ -2624,7 +2624,7 @@ all_houses_maybe_propose_laws = {
 one_year_elections = {
 	effect = {
 		every_living_character = {
-			limit = { holds_valid_merchant_republic = yes primary_title = { exists = var:one_year_term has_variable = one_year_term NOT = { has_variable = current_dictatorship } } }
+			limit = { holds_valid_magocracy = yes primary_title = { exists = var:one_year_term has_variable = one_year_term NOT = { has_variable = current_dictatorship } } }
 			primary_title = {
 				republic_succession = yes
 				republic_council_succesion = yes
@@ -2640,7 +2640,7 @@ one_year_elections = {
 two_year_elections = {
 	effect = {
 		every_living_character = {
-			limit = { holds_valid_merchant_republic = yes primary_title = { exists = var:two_year_term has_variable = two_year_term NOT = { has_variable = current_dictatorship } } }
+			limit = { holds_valid_magocracy = yes primary_title = { exists = var:two_year_term has_variable = two_year_term NOT = { has_variable = current_dictatorship } } }
 			primary_title = {
 				republic_succession = yes
 				republic_council_succesion = yes
@@ -2656,7 +2656,7 @@ two_year_elections = {
 four_year_elections = {
 	effect = {
 		every_living_character = {
-			limit = { holds_valid_merchant_republic = yes primary_title = { exists = var:four_year_term has_variable = four_year_term NOT = { has_variable = current_dictatorship } } }
+			limit = { holds_valid_magocracy = yes primary_title = { exists = var:four_year_term has_variable = four_year_term NOT = { has_variable = current_dictatorship } } }
 			primary_title = {
 				republic_succession = yes
 				republic_council_succesion = yes
@@ -2664,7 +2664,7 @@ four_year_elections = {
 			}
 		}
 		every_living_character = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = {
 				republic_senator_elections = yes
 			}
@@ -2698,7 +2698,7 @@ four_year_elections = {
 ten_year_elections = {
 	effect = {
 		every_living_character = {
-			limit = { holds_valid_merchant_republic = yes primary_title = { exists = var:ten_year_term has_variable = ten_year_term NOT = { has_variable = current_dictatorship } } }
+			limit = { holds_valid_magocracy = yes primary_title = { exists = var:ten_year_term has_variable = ten_year_term NOT = { has_variable = current_dictatorship } } }
 			primary_title = {
 				republic_succession = yes
 				republic_council_succesion = yes
@@ -2714,7 +2714,7 @@ ten_year_elections = {
 twenty_year_elections = {
 	effect = {
 		every_living_character = {
-			limit = { holds_valid_merchant_republic = yes primary_title = { exists = var:twenty_year_term has_variable = twenty_year_term NOT = { has_variable = current_dictatorship } } }
+			limit = { holds_valid_magocracy = yes primary_title = { exists = var:twenty_year_term has_variable = twenty_year_term NOT = { has_variable = current_dictatorship } } }
 			primary_title = {
 				republic_succession = yes
 				republic_council_succesion = yes
@@ -2742,7 +2742,7 @@ on_rank_down = {
 transfer_your_old_republic_variables = {
 	trigger = {
 		exists = scope:title
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 	}
 	effect = {
 		if = {
@@ -2933,7 +2933,7 @@ on_title_destroyed = {
 transfer_your_old_republic_variables_different = {
 	trigger = {
 		exists = scope:landed_title
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 	}
 	effect = {
 		if = {
@@ -3217,7 +3217,7 @@ transfer_your_old_republic_variables_different = {
 transfer_your_old_republic_variables_to_title = {
 	trigger = {
 		exists = this
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 	}
 	effect = {
 		if = {
