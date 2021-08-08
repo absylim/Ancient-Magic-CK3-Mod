@@ -26,7 +26,7 @@
 			OR = {
 				NOT = {
 					republic_has_senate_form = yes
-					republic_has_council_form = yes
+					magocracy_has_council_form = yes
 					republic_has_bicameral_form = yes
 				}
 				AND = {
@@ -38,7 +38,7 @@
 				}
 				AND = {
 					is_independent_ruler = no
-					republic_has_council_form = yes
+					magocracy_has_council_form = yes
 				}
 				AND = {
 					scope:recipient = { is_landed = yes has_government = governor_government }
@@ -46,7 +46,7 @@
 				AND = {
 					OR = {
 						republic_has_senate_form = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 						republic_has_bicameral_form = yes
 					}
 					primary_title = {
@@ -64,7 +64,7 @@
 				AND = {
 					OR = {
 						republic_has_senate_form = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 					}
 					primary_title = {
 						exists = var:leaders_discretion_title_granting
@@ -176,7 +176,7 @@
 	on_accept = {
 		scope:actor = {
 			if = {
-				limit = { holds_valid_merchant_republic = yes }
+				limit = { holds_valid_magocracy = yes }
 				primary_title = {
 					remove_list_variable = {
 						name = valid_grant_targets_list

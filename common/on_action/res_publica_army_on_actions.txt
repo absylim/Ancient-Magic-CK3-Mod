@@ -17,8 +17,8 @@ siege_completion_republics = {
 		if = {
 			limit = {
 				root = {
-					holds_valid_merchant_republic = yes
-					republic_has_council_form = yes
+					holds_valid_magocracy = yes
+					magocracy_has_council_form = yes
 				}
 			}
 			root = {
@@ -47,8 +47,8 @@ siege_completion_republics_loser = {
 		if = {
 			limit = {
 				scope:previous_controller = {
-					holds_valid_merchant_republic = yes
-					republic_has_council_form = yes
+					holds_valid_magocracy = yes
+					magocracy_has_council_form = yes
 				}
 			}
 			scope:previous_controller = {
@@ -89,8 +89,8 @@ on_battle_owner_battle_end = {
 battle_win_republics = {
 	trigger = {
 		scope:victory = yes
-		holds_valid_merchant_republic = yes
-		republic_has_council_form = yes
+		holds_valid_magocracy = yes
+		magocracy_has_council_form = yes
 	}
 	effect = {
 		primary_title = {
@@ -114,8 +114,8 @@ battle_win_republics = {
 battle_lost_republics = {
 	trigger = {
 		scope:victory = no
-		holds_valid_merchant_republic = yes
-		republic_has_council_form = yes
+		holds_valid_magocracy = yes
+		magocracy_has_council_form = yes
 	}
 	effect = {
 		primary_title = {

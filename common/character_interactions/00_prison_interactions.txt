@@ -36,7 +36,7 @@
 			OR = {
 				NOT = {
 					republic_has_senate_form = yes
-					republic_has_council_form = yes
+					magocracy_has_council_form = yes
 				}
 				AND = {
 					is_independent_ruler = no
@@ -44,12 +44,12 @@
 				}
 				AND = {
 					is_independent_ruler = no
-					republic_has_council_form = yes
+					magocracy_has_council_form = yes
 				}
 				AND = {
 					OR = {
 						republic_has_senate_form = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 					}
 					primary_title = {
 						any_in_list = {
@@ -61,7 +61,7 @@
 				AND = {
 					OR = {
 						republic_has_senate_form = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 					}
 					primary_title = {
 						exists = var:leaders_discretion_imprisonment_rights
@@ -331,7 +331,7 @@
 				}
 			}
 			if = {
-				limit = { holds_valid_merchant_republic = yes }
+				limit = { holds_valid_magocracy = yes }
 				primary_title = {
 					remove_list_variable = {
 						name = valid_prison_targets_list

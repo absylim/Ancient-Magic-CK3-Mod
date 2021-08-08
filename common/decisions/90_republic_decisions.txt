@@ -126,14 +126,14 @@ appease_estates_decision = {
 		OR = {
 			AND = {
 				is_independent_ruler = yes
-				holds_valid_merchant_republic = yes
-				republic_has_council_form = yes
+				holds_valid_magocracy = yes
+				magocracy_has_council_form = yes
 			}
 			AND = {
 				is_independent_ruler = no
 				liege_or_court_owner = {
-					holds_valid_merchant_republic = yes
-					republic_has_council_form = yes
+					holds_valid_magocracy = yes
+					magocracy_has_council_form = yes
 				}
 			}
 		}
@@ -172,7 +172,7 @@ attempt_coup_decision = {
 	ai_check_interval = 0
 
 	is_shown = {
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 		NOT = {
 			house.var:titular_republic = {
 				has_variable = current_dictatorship
@@ -305,7 +305,7 @@ give_speech_decision = {
 	is_shown = {
 		is_landed = yes
 		highest_held_title_tier > tier_barony
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 	}
 
 	is_valid_showing_failures_only = {
@@ -391,9 +391,9 @@ call_emergency_vote_decision = {
 		OR = {
 			AND = {
 				is_independent_ruler = yes
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				OR = {
-					republic_has_council_form = yes
+					magocracy_has_council_form = yes
 					republic_has_senate_form = yes
 					republic_has_bicameral_form = yes
 				}
@@ -401,9 +401,9 @@ call_emergency_vote_decision = {
 			AND = {
 				is_independent_ruler = no
 				liege_or_court_owner = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					OR = {
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 						republic_has_senate_form = yes
 						republic_has_bicameral_form = yes
 					}
@@ -520,7 +520,7 @@ attempt_to_become_dictator_decision = {
 	is_shown = {
 		exists = house
 		is_house_head = yes
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 		republic_has_senate_form = yes
 		is_at_war = yes
 		NAND = {
@@ -544,7 +544,7 @@ attempt_to_become_dictator_decision = {
 	ai_potential = {
 		exists = house
 		is_house_head = yes
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 		republic_has_senate_form = yes
 		is_at_war = yes
 		NAND = {
@@ -600,7 +600,7 @@ dictator_levy_extra_tax_decision = {
 	is_shown = {
 		exists = house
 		is_house_head = yes
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 		republic_has_senate_form = yes
 		house.var:titular_republic = { has_variable = current_dictatorship }
 	}
@@ -647,7 +647,7 @@ dictator_levy_extra_tax_decision = {
 	ai_potential = {
 		exists = house
 		is_house_head = yes
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 		republic_has_senate_form = yes
 		house.var:titular_republic = { has_variable = current_dictatorship }
 	}
@@ -688,7 +688,7 @@ dictator_conscript_levies_decision = {
 	is_shown = {
 		exists = house
 		is_house_head = yes
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 		republic_has_senate_form = yes
 		OR = {
 			is_at_war = yes
@@ -747,7 +747,7 @@ dictator_conscript_levies_decision = {
 	ai_potential = {
 		exists = house
 		is_house_head = yes
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 		republic_has_senate_form = yes
 		house.var:titular_republic = { has_variable = current_dictatorship }
 		OR = {
@@ -805,7 +805,7 @@ dictator_resign_position_decision = {
 	is_shown = {
 		exists = house
 		is_house_head = yes
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 		republic_has_senate_form = yes
 		house.var:titular_republic = { has_variable = current_dictatorship has_variable = forced_dictatorship }
 	}
@@ -853,7 +853,7 @@ dictator_enforce_martial_law_decision = {
 	is_shown = {
 		exists = house
 		is_house_head = yes
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 		republic_has_senate_form = yes
 		OR = {
 			is_at_war = yes
@@ -887,7 +887,7 @@ dictator_enforce_martial_law_decision = {
 	ai_potential = {
 		exists = house
 		is_house_head = yes
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 		republic_has_senate_form = yes
 		house.var:titular_republic = { has_variable = current_dictatorship NOT = { has_variable = martial_law } }
 		OR = {
@@ -944,7 +944,7 @@ dictator_end_martial_law_decision = {
 	is_shown = {
 		exists = house
 		is_house_head = yes
-		holds_valid_merchant_republic = yes
+		holds_valid_magocracy = yes
 		republic_has_senate_form = yes
 		OR = {
 			is_at_war = yes

@@ -244,7 +244,7 @@ merchant_republic_events.1009 = { # Becoming a Family
 			}
 			triggered_desc = {
 				trigger = {
-					republic_has_council_form = yes
+					magocracy_has_council_form = yes
 				}
 				desc = merchant_republic_events.1009.council_desc
 			}

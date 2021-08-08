@@ -407,12 +407,12 @@ republic_speech_event.1005 = { # A Rival's Insult
 				OR = {
 					AND = {
 						is_independent_ruler = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 					}
 					AND = {
 						is_independent_ruler = no
 						liege_or_court_owner = {
-							republic_has_council_form = yes
+							magocracy_has_council_form = yes
 						}
 					}
 				}
@@ -445,12 +445,12 @@ republic_speech_event.1005 = { # A Rival's Insult
 				OR = {
 					AND = {
 						is_independent_ruler = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 					}
 					AND = {
 						is_independent_ruler = no
 						liege_or_court_owner = {
-							republic_has_council_form = yes
+							magocracy_has_council_form = yes
 						}
 					}
 				}
@@ -624,12 +624,12 @@ republic_speech_event.1008 = { # Good news ship
 				OR = {
 					AND = {
 						is_independent_ruler = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 					}
 					AND = {
 						is_independent_ruler = no
 						liege_or_court_owner = {
-							republic_has_council_form = yes
+							magocracy_has_council_form = yes
 						}
 					}
 				}
@@ -672,12 +672,12 @@ republic_speech_event.1008 = { # Good news ship
 				OR = {
 					AND = {
 						is_independent_ruler = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 					}
 					AND = {
 						is_independent_ruler = no
 						liege_or_court_owner = {
-							republic_has_council_form = yes
+							magocracy_has_council_form = yes
 						}
 					}
 				}
@@ -720,12 +720,12 @@ republic_speech_event.1008 = { # Good news ship
 				OR = {
 					AND = {
 						is_independent_ruler = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 					}
 					AND = {
 						is_independent_ruler = no
 						liege_or_court_owner = {
-							republic_has_council_form = yes
+							magocracy_has_council_form = yes
 						}
 					}
 				}
@@ -789,12 +789,12 @@ republic_speech_event.1010 = { # Ending
 				OR = {
 					AND = {
 						is_independent_ruler = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 					}
 					AND = {
 						is_independent_ruler = no
 						liege_or_court_owner = {
-							republic_has_council_form = yes
+							magocracy_has_council_form = yes
 						}
 					}
 				}

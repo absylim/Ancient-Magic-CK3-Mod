@@ -23,7 +23,7 @@
 			OR = {
 				NOT = {
 					republic_has_senate_form = yes
-					republic_has_council_form = yes
+					magocracy_has_council_form = yes
 					republic_has_bicameral_form = yes
 				}
 				AND = {
@@ -32,7 +32,7 @@
 				}
 				AND = {
 					is_independent_ruler = no
-					republic_has_council_form = yes
+					magocracy_has_council_form = yes
 				}
 				AND = {
 					is_independent_ruler = no
@@ -41,7 +41,7 @@
 				AND = {
 					OR = {
 						republic_has_senate_form = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 						republic_has_bicameral_form = yes
 					}
 					is_independent_ruler = yes
@@ -55,7 +55,7 @@
 				AND = {
 					OR = {
 						republic_has_senate_form = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 						republic_has_bicameral_form = yes
 					}
 					primary_title = {
@@ -178,7 +178,7 @@
 				}
 			}
 			if = {
-				limit = { holds_valid_merchant_republic = yes }
+				limit = { holds_valid_magocracy = yes }
 				primary_title = {
 					remove_list_variable = {
 						name = valid_war_targets_list
@@ -330,7 +330,7 @@ end_war_attacker_victory_interaction = {
 				}
 			}
 			if = {
-				limit = { holds_valid_merchant_republic = yes republic_has_council_form = yes }
+				limit = { holds_valid_magocracy = yes magocracy_has_council_form = yes }
 				custom_description = {
 					text = effect_change_popular_appeasement_positive
 					value = 10
@@ -389,7 +389,7 @@ end_war_attacker_victory_interaction = {
 				}
 			}
 			if = {
-				limit = { holds_valid_merchant_republic = yes republic_has_council_form = yes }
+				limit = { holds_valid_magocracy = yes magocracy_has_council_form = yes }
 				custom_description = {
 					text = effect_change_popular_appeasement_negative
 					value = 30
@@ -576,7 +576,7 @@ end_war_attacker_white_peace_interaction = {
 				}
 			}
 			if = {
-				limit = { holds_valid_merchant_republic = yes republic_has_council_form = yes }
+				limit = { holds_valid_magocracy = yes magocracy_has_council_form = yes }
 				custom_description = {
 					text = effect_change_popular_appeasement_positive
 					value = 2
@@ -1071,7 +1071,7 @@ end_war_attacker_defeat_interaction = {
 				}
 			}
 			if = {
-				limit = { holds_valid_merchant_republic = yes republic_has_council_form = yes }
+				limit = { holds_valid_magocracy = yes magocracy_has_council_form = yes }
 				custom_description = {
 					text = effect_change_popular_appeasement_negative
 					value = 30
@@ -1115,7 +1115,7 @@ end_war_attacker_defeat_interaction = {
 				}
 			}
 			if = {
-				limit = { holds_valid_merchant_republic = yes republic_has_council_form = yes }
+				limit = { holds_valid_magocracy = yes magocracy_has_council_form = yes }
 				custom_description = {
 					text = effect_change_popular_appeasement_positive
 					value = 10

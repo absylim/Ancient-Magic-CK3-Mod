@@ -1,11 +1,11 @@
 ﻿GetRepublicOwner = {
 	type = character
 	text = {
-		trigger = { holds_valid_merchant_republic = yes }
+		trigger = { holds_valid_magocracy = yes }
 		localization_key = YOU_HOLD_REPUBLIC
 	}
 	text = {
-		trigger = { liege = { holds_valid_merchant_republic = yes } }
+		trigger = { liege = { holds_valid_magocracy = yes } }
 		localization_key = LIEGE_HOLDS_REPUBLIC
 	}
 }
@@ -13,15 +13,15 @@
 GetRepublicOrFeudal = {
 	type = character
 	text = {
-		trigger = { liege = { holds_valid_merchant_republic = yes } house = { exists = var:titular_republic } has_government = feudal_government }
+		trigger = { liege = { holds_valid_magocracy = yes } house = { exists = var:titular_republic } has_government = feudal_government }
 		localization_key = REPUBLIC_AND_FEUDAL
 	}
 	text = {
-		trigger = { OR = { liege = { holds_valid_merchant_republic = yes } holds_valid_merchant_republic = yes } house = { exists = var:titular_republic } NOT = { has_government = feudal_government } }
+		trigger = { OR = { liege = { holds_valid_magocracy = yes } holds_valid_magocracy = yes } house = { exists = var:titular_republic } NOT = { has_government = feudal_government } }
 		localization_key = REPUBLIC_ONLY
 	}
 	text = {
-		trigger = { NOT = { liege = { holds_valid_merchant_republic = yes } house = { exists = var:titular_republic } } has_government = feudal_government }
+		trigger = { NOT = { liege = { holds_valid_magocracy = yes } house = { exists = var:titular_republic } } has_government = feudal_government }
 		localization_key = FEUDAL_ONLY
 	}
 	text = {
@@ -36,7 +36,7 @@ GetDogeConsulCouncilHead = {
 		localization_key = CONSUL
 	}
 	text = {
-		trigger = { republic_has_council_form = yes }
+		trigger = { magocracy_has_council_form = yes }
 		localization_key = COUNCIL_HEAD
 	}
 	text = {
@@ -56,7 +56,7 @@ GetRepublicGoverningBodyType = {
 		localization_key = SENATE_TYPE
 	}
 	text = {
-		trigger = { republic_has_council_form = yes }
+		trigger = { magocracy_has_council_form = yes }
 		localization_key = COUNCIL_TYPE
 	}
 	text = {

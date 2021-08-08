@@ -585,7 +585,7 @@ GetRepublicYeaBlackmail = {
 		trigger = {
 			has_variable_list = blackmailing_house_heads
 			house = { exists = var:titular_republic }
-			house = { var:titular_republic = { holder = { republic_has_council_form = yes } } }
+			house = { var:titular_republic = { holder = { magocracy_has_council_form = yes } } }
 		}
 		localization_key = blackmail_votes_council_yea
 	}
@@ -619,7 +619,7 @@ GetRepublicNayBlackmail = {
 		trigger = {
 			has_variable_list = blackmailing_house_heads
 			house = { exists = var:titular_republic }
-			house = { var:titular_republic = { holder = { republic_has_council_form = yes } } }
+			house = { var:titular_republic = { holder = { magocracy_has_council_form = yes } } }
 		}
 		localization_key = blackmail_votes_council_nay
 	}

@@ -46,7 +46,7 @@
 			OR = {
 				NOT = {
 					republic_has_senate_form = yes
-					republic_has_council_form = yes
+					magocracy_has_council_form = yes
 					republic_has_bicameral_form = yes
 				}
 				AND = {
@@ -59,12 +59,12 @@
 				}
 				AND = {
 					is_independent_ruler = no
-					republic_has_council_form = yes
+					magocracy_has_council_form = yes
 				}
 				AND = {
 					OR = {
 						republic_has_senate_form = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 						republic_has_bicameral_form = yes
 					}
 					primary_title = {
@@ -77,7 +77,7 @@
 				AND = {
 					OR = {
 						republic_has_senate_form = yes
-						republic_has_council_form = yes
+						magocracy_has_council_form = yes
 					}
 					primary_title = {
 						exists = var:leaders_discretion_title_revocation
@@ -239,7 +239,7 @@
 		scope:actor = {
 			trigger_event = char_interaction.0199
 			if = {
-				limit = { holds_valid_merchant_republic = yes }
+				limit = { holds_valid_magocracy = yes }
 				primary_title = {
 					remove_list_variable = {
 						name = valid_revocation_targets_list

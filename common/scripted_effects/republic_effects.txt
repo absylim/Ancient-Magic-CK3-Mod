@@ -385,7 +385,7 @@ add_family_to_republic_families = {
 		}
 	}
 	if = {
-		limit = { liege_or_court_owner = { holds_valid_merchant_republic = yes } }
+		limit = { liege_or_court_owner = { holds_valid_magocracy = yes } }
 		liege_or_court_owner.primary_title = {
 			add_to_variable_list = {
 				name = magocracy_families_list
@@ -395,7 +395,7 @@ add_family_to_republic_families = {
 		}
 	}
 	else_if = {
-		limit = { liege = { holds_valid_merchant_republic = yes } }
+		limit = { liege = { holds_valid_magocracy = yes } }
 		liege.primary_title = {
 			add_to_variable_list = {
 				name = magocracy_families_list
@@ -1267,7 +1267,7 @@ initialize_global_election_terms = {
 
 republic_council_succesion = {
 	if = {
-		limit = { holder = { republic_has_council_form = yes } }
+		limit = { holder = { magocracy_has_council_form = yes } }
 		remove_variable = republic_councillor_1
 		remove_variable = republic_councillor_2
 		remove_variable = republic_councillor_3
