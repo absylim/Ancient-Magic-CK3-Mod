@@ -1,0 +1,58 @@
+﻿#Inspired by Res Publica
+valid_magocracy_holder = { 
+	base = living_character 
+	conditions = { holds_valid_magocracy = yes } 
+}
+
+valid_council_magocracy_holder = { 
+	base = living_character 
+	conditions = { 
+		holds_valid_magocracy = yes 
+		magocracy_has_council_form = yes 
+	} 
+}
+
+valid_republic_coup_enemy_holder = {
+	base = vassal 
+	conditions = {
+		save_temporary_scope_as = this_vassal
+		NOT = {
+			liege = {
+				has_hook = scope:this_vassal
+			}
+			age < 16
+			has_trait = incapable
+		}
+		liege = {
+			holds_valid_magocracy = yes
+		}
+	}
+}
+
+patrician = { 
+	base = living_character 
+	conditions = { 
+		exists = house 
+		is_house_head = yes 
+		is_magus = yes
+		house = { exists = var:titular_republic } 
+	} 
+}
+
+valid_propogandist = { 
+	base = living_character 
+	conditions = { 
+		exists = house 
+		is_house_head = yes 
+		is_magus = yes
+		house = { has_variable_list = propoganda_campaigns_list } 
+	} 
+}
+valid_smearer = { 
+	base = living_character 
+	conditions = { 
+		exists = house 
+		is_house_head = yes 
+		house = { has_variable_list = smear_campaigns_list } 
+	} 
+}

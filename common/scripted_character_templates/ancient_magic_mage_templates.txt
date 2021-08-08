@@ -1,4 +1,4 @@
-wandering_character = {
+wandering_mage_character = {
 	age = { 16 65 }
 	random_traits_list = {
 		count = 1
