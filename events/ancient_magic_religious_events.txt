@@ -1,0 +1,1158 @@
+﻿namespace = am_religious_special
+
+## Challenge Spiritual Head of Faith for shunned witchcraft
+am_religious_special.1001 = { # Preparation
+	type = character_event
+	title = am_religious_special.1001.t
+	desc = am_religious_special.1001.desc
+	theme = faith
+	right_portrait = scope:pope
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	immediate = {
+		faith.religious_head = {
+			save_scope_as = pope
+		}
+	}
+	option = {
+		name = am_religious_special.1001.a
+		custom_tooltip = am_religious_special.1001.a.tt
+		trigger_event = {
+			id = am_religious_special.1002
+			days = 7
+		}
+		faith.religious_head = { add_character_flag = had_am_religious_special_this_lifetime }
+		add_piety = -1500
+	}
+	option = {
+		name = am_religious_special.1001.b
+		custom_tooltip = am_religious_special.1001.b.tt
+		remove_decision_cooldown = am_spiritual_hof_change_to_witchcraft_decision
+	}
+}
+
+am_religious_special.1002 = {
+	type = character_event
+	title = am_religious_special.1002.t
+	desc = am_religious_special.1002.desc
+	theme = faith
+	right_portrait = scope:pope
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	option = { #Learning debate
+		name = am_religious_special.1002.a
+		custom_tooltip = am_religious_special.1002.a.tt
+		duel = {
+			skill = learning
+			target = scope:pope
+			10 = {
+				desc = am_religious_special.1002.a.success
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				opinion_modifier = {
+					who = scope:pope
+					opinion_target = root
+					multiplier = 0.25
+				}
+				modifier = {
+					OR = {
+						has_trait = scholar
+						has_trait = theologian
+					}
+					add = 20
+				}
+				show_as_tooltip = {
+					am_spiritual_hof_change_witchcraft_shunned_effect = yes
+				}
+				trigger_event = am_religious_special.1003
+			}
+			20 = {
+				desc = am_religious_special.1002.a.failure
+				send_interface_toast = {
+					title = am_religious_special.1002.a.failure.toast
+					left_icon = faith.religious_head
+					add_piety = major_piety_loss
+					scope:pope = {
+						add_opinion = {
+							modifier = respect_opinion
+							target = root
+							opinion = -50
+						}
+					}
+					stress_impact = {
+						base = medium_stress_impact_gain
+						zealous = major_stress_impact_gain
+					}
+				}
+			}
+		}
+	}
+	option = { #Diplomatic option
+		name = am_religious_special.1002.b
+		custom_tooltip = am_religious_special.1002.a.tt
+		trigger = { diplomacy >= high_skill_rating }
+		skill = diplomacy
+		duel = {
+			skill = diplomacy
+			value = extremely_high_skill_rating
+			10 = {
+				desc = am_religious_special.1002.a.success
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				opinion_modifier = {
+					who = scope:pope
+					opinion_target = root
+					multiplier = 0.25
+				}
+				modifier = {
+					OR = {
+						has_trait = diplomat
+						has_trait = august
+					}
+					add = 20
+				}
+				show_as_tooltip = {
+					am_spiritual_hof_change_witchcraft_shunned_effect = yes
+				}
+				trigger_event = am_religious_special.1004
+			}
+			20 = {
+				desc = am_religious_special.1002.a.failure
+				send_interface_toast = {
+					title = am_religious_special.1002.a.failure.toast
+					left_icon = faith.religious_head
+					add_piety = major_piety_loss
+					scope:pope = {
+						add_opinion = {
+							modifier = respect_opinion
+							target = root
+							opinion = -50
+						}
+					}
+					stress_impact = {
+						base = medium_stress_impact_gain
+						zealous = major_stress_impact_gain
+					}
+				}
+			}
+		}
+	}
+}
+
+am_religious_special.1003 = { #Learning Success
+	type = character_event
+	title = am_religious_special.1003.t
+	desc = am_religious_special.1003.desc
+	theme = faith
+	left_portrait = scope:pope
+	immediate = {
+		am_spiritual_hof_change_witchcraft_shunned_effect = yes
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	option = {
+		name = am_religious_special.1003.a
+	}
+}
+
+am_religious_special.1004 = { #Diplomatic Success
+	type = character_event
+	title = am_religious_special.1004.t
+	desc = am_religious_special.1004.desc
+	theme = faith
+	left_portrait = scope:pope
+	immediate = {
+		am_spiritual_hof_change_witchcraft_shunned_effect = yes
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	option = {
+		name = am_religious_special.1004.a
+	}
+}
+
+## Challenge Spiritual Head of Faith for shunned witchcraft
+am_religious_special.1011 = { # Preparation
+	type = character_event
+	title = am_religious_special.1011.t
+	desc = am_religious_special.1011.desc
+	theme = faith
+	right_portrait = scope:pope
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	immediate = {
+		faith.religious_head = {
+			save_scope_as = pope
+			save_scope_as = portrait #For portrait
+		}
+	}
+	option = {
+		name = am_religious_special.1011.a
+		custom_tooltip = am_religious_special.1011.a.tt
+		trigger_event = {
+			id = am_religious_special.1012
+			days = 7
+		}
+		faith.religious_head = { add_character_flag = had_am_religious_special_this_lifetime }
+		add_piety = -1500
+	}
+	option = {
+		name = am_religious_special.1011.b
+		custom_tooltip = am_religious_special.1011.b.tt
+		remove_decision_cooldown = am_spiritual_hof_change_to_witchcraft_decision
+	}
+}
+
+am_religious_special.1012 = {
+	type = character_event
+	title = am_religious_special.1012.t
+	desc = am_religious_special.1012.desc
+	theme = faith
+	right_portrait = scope:pope
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	option = { #Learning debate
+		name = am_religious_special.1012.a
+		custom_tooltip = am_religious_special.1012.a.tt
+		duel = {
+			skill = learning
+			target = scope:pope
+			10 = {
+				desc = am_religious_special.1012.a.success
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				opinion_modifier = {
+					who = scope:pope
+					opinion_target = root
+					multiplier = 0.25
+				}
+				modifier = {
+					OR = {
+						has_trait = scholar
+						has_trait = theologian
+					}
+					add = 20
+				}
+				show_as_tooltip = {
+					am_spiritual_hof_change_witchcraft_accepted_effect = yes
+				}
+				trigger_event = am_religious_special.1013
+			}
+			20 = {
+				desc = am_religious_special.1012.a.failure
+				send_interface_toast = {
+					title = am_religious_special.1012.a.failure.toast
+					left_icon = faith.religious_head
+					add_piety = major_piety_loss
+					scope:pope = {
+						add_opinion = {
+							modifier = respect_opinion
+							target = root
+							opinion = -50
+						}
+					}
+					stress_impact = {
+						base = medium_stress_impact_gain
+						zealous = major_stress_impact_gain
+					}
+				}
+			}
+		}
+	}
+	option = { #Diplomatic option
+		name = am_religious_special.1012.b
+		custom_tooltip = am_religious_special.1012.a.tt
+		trigger = { diplomacy >= high_skill_rating }
+		skill = diplomacy
+		duel = {
+			skill = diplomacy
+			value = extremely_high_skill_rating
+			10 = {
+				desc = am_religious_special.1012.a.success
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				opinion_modifier = {
+					who = scope:pope
+					opinion_target = root
+					multiplier = 0.25
+				}
+				modifier = {
+					OR = {
+						has_trait = diplomat
+						has_trait = august
+					}
+					add = 20
+				}
+				show_as_tooltip = {
+					am_spiritual_hof_change_witchcraft_accepted_effect = yes
+				}
+				trigger_event = am_religious_special.1014
+			}
+			20 = {
+				desc = am_religious_special.1012.a.failure
+				send_interface_toast = {
+					title = am_religious_special.1012.a.failure.toast
+					left_icon = faith.religious_head
+					add_piety = major_piety_loss
+					scope:pope = {
+						add_opinion = {
+							modifier = respect_opinion
+							target = root
+							opinion = -50
+						}
+					}
+					stress_impact = {
+						base = medium_stress_impact_gain
+						zealous = major_stress_impact_gain
+					}
+				}
+			}
+		}
+	}
+}
+
+am_religious_special.1013 = { #Learning Success
+	type = character_event
+	title = am_religious_special.1013.t
+	desc = am_religious_special.1013.desc
+	theme = faith
+	left_portrait = scope:pope
+	immediate = {
+		am_spiritual_hof_change_witchcraft_accepted_effect = yes
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	option = {
+		name = am_religious_special.1013.a
+	}
+}
+
+am_religious_special.1014 = { #Diplomatic Success
+	type = character_event
+	title = am_religious_special.1014.t
+	desc = am_religious_special.1014.desc
+	theme = faith
+	left_portrait = scope:pope
+	immediate = {
+		am_spiritual_hof_change_witchcraft_accepted_effect = yes
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	option = {
+		name = am_religious_special.1014.a
+	}
+}
+
+## Challenge Spiritual Head of Faith for accepted witchcraft
+am_religious_special.1021 = { # Preparation
+	type = character_event
+	title = am_religious_special.1021.t
+	desc = am_religious_special.1021.desc
+	theme = faith
+	right_portrait = scope:pope
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	immediate = {
+		faith.religious_head = {
+			save_scope_as = pope
+		}
+	}
+	option = {
+		name = am_religious_special.1021.a
+		custom_tooltip = am_religious_special.1021.a.tt
+		trigger_event = {
+			id = am_religious_special.1022
+			days = 7
+		}
+		faith.religious_head = { add_character_flag = had_am_religious_special_this_lifetime }
+		add_piety = -1500
+	}
+	option = {
+		name = am_religious_special.1021.b
+		custom_tooltip = am_religious_special.1021.b.tt
+		remove_decision_cooldown = am_spiritual_hof_change_to_witchcraft_decision
+	}
+}
+
+am_religious_special.1022 = {
+	type = character_event
+	title = am_religious_special.1022.t
+	desc = am_religious_special.1022.desc
+	theme = faith
+	right_portrait = scope:pope
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	option = { #Learning debate
+		name = am_religious_special.1022.a
+		custom_tooltip = am_religious_special.1022.a.tt
+		duel = {
+			skill = learning
+			target = scope:pope
+			10 = {
+				desc = am_religious_special.1022.a.success
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				opinion_modifier = {
+					who = scope:pope
+					opinion_target = root
+					multiplier = 0.25
+				}
+				modifier = {
+					OR = {
+						has_trait = scholar
+						has_trait = theologian
+					}
+					add = 20
+				}
+				show_as_tooltip = {
+					am_spiritual_hof_change_witchcraft_crime_effect = yes
+				}
+				trigger_event = am_religious_special.1023
+			}
+			20 = {
+				desc = am_religious_special.1022.a.failure
+				send_interface_toast = {
+					title = am_religious_special.1022.a.failure.toast
+					left_icon = faith.religious_head
+					add_piety = major_piety_loss
+					scope:pope = {
+						add_opinion = {
+							modifier = respect_opinion
+							target = root
+							opinion = -50
+						}
+					}
+					stress_impact = {
+						base = medium_stress_impact_gain
+						zealous = major_stress_impact_gain
+					}
+				}
+			}
+		}
+	}
+	option = { #Diplomatic option
+		name = am_religious_special.1022.b
+		custom_tooltip = am_religious_special.1022.a.tt
+		trigger = { diplomacy >= high_skill_rating }
+		skill = diplomacy
+		duel = {
+			skill = diplomacy
+			value = extremely_high_skill_rating
+			10 = {
+				desc = am_religious_special.1022.a.success
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				opinion_modifier = {
+					who = scope:pope
+					opinion_target = root
+					multiplier = 0.25
+				}
+				modifier = {
+					OR = {
+						has_trait = diplomat
+						has_trait = august
+					}
+					add = 20
+				}
+				show_as_tooltip = {
+					am_spiritual_hof_change_witchcraft_crime_effect = yes
+				}
+				trigger_event = am_religious_special.1024
+			}
+			20 = {
+				desc = am_religious_special.1022.a.failure
+				send_interface_toast = {
+					title = am_religious_special.1022.a.failure.toast
+					left_icon = faith.religious_head
+					add_piety = major_piety_loss
+					scope:pope = {
+						add_opinion = {
+							modifier = respect_opinion
+							target = root
+							opinion = -50
+						}
+					}
+					stress_impact = {
+						base = medium_stress_impact_gain
+						zealous = major_stress_impact_gain
+					}
+				}
+			}
+		}
+	}
+}
+
+am_religious_special.1023 = { #Learning Success
+	type = character_event
+	title = am_religious_special.1023.t
+	desc = am_religious_special.1023.desc
+	theme = faith
+	left_portrait = scope:pope
+	immediate = {
+		am_spiritual_hof_change_witchcraft_crime_effect = yes
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	option = {
+		name = am_religious_special.1023.a
+	}
+}
+
+am_religious_special.1024 = { #Diplomatic Success
+	type = character_event
+	title = am_religious_special.1024.t
+	desc = am_religious_special.1024.desc
+	theme = faith
+	left_portrait = scope:pope
+	immediate = {
+		am_spiritual_hof_change_witchcraft_crime_effect = yes
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	option = {
+		name = am_religious_special.1024.a
+	}
+}
+
+## Call Convocation for Equality
+am_religious_special.2001 = {
+	type = character_event
+	title = am_religious_special.2001.t
+	desc = am_religious_special.2001.desc
+	theme = faith
+	right_portrait = scope:chaplain
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	immediate = {
+		cp:councillor_court_chaplain = {
+			save_scope_as = chaplain
+		}
+	}
+	option = {
+		name = am_religious_special.2001.a
+		custom_tooltip = am_religious_special.2001.a.tt
+		trigger_event = {
+			id = am_religious_special.2002
+			days = 14
+		}
+		root = { add_character_flag = had_am_religious_special2_this_lifetime }
+		add_piety = -1000
+	}
+	option = {
+		name = am_religious_special.2001.b
+		custom_tooltip = am_religious_special.2001.b.tt
+		# remove_decision_cooldown = mm_spiritual_hof_change_to_equal_genderview_decision
+	}
+}
+
+am_religious_special.2002 = { #First Challenge
+	type = character_event
+	title = am_religious_special.2002.t
+	desc = am_religious_special.2002.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	option = {
+		name = am_religious_special.2002.a
+		custom_tooltip = am_religious_special.2002.a.tt
+		trigger = {
+			NOR = {
+				has_trait = theologian
+				has_trait = scholar
+			}
+		}
+		duel = {
+			skill = learning
+			value = average_skill_rating
+			50 = {
+				desc = am_religious_special.2002.a.good
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 5
+				}
+				modifier = {
+					add = 10
+					faith = { has_doctrine = doctrine_clerical_gender_either }
+				}
+				modifier = {
+					add = 20
+					faith = { has_doctrine = doctrine_clerical_gender_female_only }
+				}
+				trigger_event = am_religious_special.2003
+			}
+			50 = {
+				desc = am_religious_special.2002.a.bad
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -5
+				}
+				min = 10
+				trigger_event = am_religious_special.2004
+			}
+		}
+	}
+	option = {
+		name = am_religious_special.2002.b
+		custom_tooltip = am_religious_special.2002.b.tt
+		trigger = { has_trait = theologian }
+		trait = theologian
+		trigger_event = am_religious_special.2003
+	}
+	option = {
+		name = am_religious_special.2002.c
+		custom_tooltip = am_religious_special.2002.c.tt
+		trigger = { has_trait = scholar }
+		trait = scholar
+		trigger_event = am_religious_special.2003
+	}
+}
+
+am_religious_special.2003 = { #First success, second challenge
+	type = character_event
+	title = am_religious_special.2003.t
+	desc = am_religious_special.2003.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = happy
+	}
+
+	option = {
+		name = am_religious_special.2003.a
+		custom_tooltip = am_religious_special.2003.a.tt
+		trigger = {
+			NOR = {
+				has_trait = administrator
+				has_trait = overseer
+			}
+		}
+		duel = {
+			skill = stewardship
+			value = average_skill_rating
+			50 = {
+				desc = am_religious_special.2003.a.good
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 5
+				}
+				modifier = {
+					add = 10
+					faith = { has_doctrine = doctrine_clerical_gender_either }
+				}
+				modifier = {
+					add = 20
+					faith = { has_doctrine = doctrine_clerical_gender_female_only }
+				}
+				trigger_event = am_religious_special.2009
+			}
+			50 = {
+				desc = am_religious_special.2003.bad
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -5
+				}
+				min = 10
+				trigger_event = am_religious_special.2005
+			}
+		}
+	}
+	option = {
+		name = am_religious_special.2003.b
+		custom_tooltip = am_religious_special.2003.b.tt
+		trigger = {
+			NOR = {
+				has_trait = administrator
+				has_trait = overseer
+			}
+		}
+		duel = {
+			skill = martial
+			value = average_skill_rating
+			50 = {
+				desc = am_religious_special.2003.good
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 5
+				}
+				modifier = {
+					add = 10
+					faith = { has_doctrine = doctrine_clerical_gender_either }
+				}
+				modifier = {
+					add = 20
+					faith = { has_doctrine = doctrine_clerical_gender_female_only }
+				}
+				trigger_event = am_religious_special.2009
+			}
+			50 = {
+				desc = am_religious_special.2003.bad
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -5
+				}
+				min = 10
+				trigger_event = am_religious_special.2005
+			}
+		}
+	}
+	option = {
+		name = am_religious_special.2002.c
+		custom_tooltip = am_religious_special.2003.c.tt
+		trigger = { has_trait = administrator }
+		trait = administrator
+		trigger_event = am_religious_special.2009
+	}
+	option = {
+		name = am_religious_special.2002.d
+		custom_tooltip = am_religious_special.2003.d.tt
+		trigger = { has_trait = overseer }
+		trait = overseer
+		trigger_event = am_religious_special.2009
+	}
+}
+
+am_religious_special.2004 = { #First failure, second challenge
+	type = character_event
+	title = am_religious_special.2004.t
+	desc = am_religious_special.2004.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+
+	option = {
+		name = am_religious_special.2004.a
+		custom_tooltip = am_religious_special.2004.a.tt
+		trigger = {
+			NOT = { has_trait = torturer }
+		}
+		duel = {
+			skill = prowess
+			value = average_skill_rating
+			15 = {
+				desc = am_religious_special.2004.a.good
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 0.5
+					min = -14
+				}
+				add_prestige = minor_prestige_gain
+				trigger_event = am_religious_special.2006
+			}
+			10 = {
+				desc = am_religious_special.2004.a.bad
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -0.5
+					min = -9
+				}
+				send_interface_toast = {
+					title = am_religious_special.2004.a.bad
+					left_icon = root
+					increase_wounds_effect = { REASON = fight }
+				}
+				trigger_event = am_religious_special.2010
+			}
+		}
+		stress_impact = { craven = major_stress_impact_gain }
+	}
+	option = {
+		name = am_religious_special.2004.b
+		custom_tooltip = am_religious_special.2004.b.tt
+		trigger = {
+			NOT = { has_trait = torturer }
+		}
+		duel = {
+			skill = intrigue
+			value = average_skill_rating
+			50 = {
+				desc = am_religious_special.2004.b.good
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 5
+				}
+				trigger_event = am_religious_special.2006
+			}
+			50 = {
+				desc = am_religious_special.2004.b.bad
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -5
+				}
+				min = 10
+				trigger_event = am_religious_special.2010
+			}
+		}
+	}
+	option = {
+		name = am_religious_special.2004.c
+		custom_tooltip = am_religious_special.2004.c.tt
+		trigger = { has_trait = torturer }
+		trait = torturer
+		trigger_event = am_religious_special.2006
+	}
+}
+
+am_religious_special.2005 = { # One success, one failure, last chance
+	type = character_event
+	title = am_religious_special.2005.t
+	desc = am_religious_special.2005.desc
+	theme = faith
+	right_portrait = {
+		character = scope:chaplain
+		animation = stress
+	}
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	option = {
+		name = am_religious_special.2005.a
+		custom_tooltip = am_religious_special.2005.a.tt
+		trigger = {
+			NOT = { has_trait = diplomat }
+		}
+		duel = {
+			skill = learning
+			target = scope:chaplain
+			10 = {
+				desc = am_religious_special.2005.a.good
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				opinion_modifier = {
+					who = scope:chaplain
+					opinion_target = root
+					multiplier = 0.25
+				}
+				modifier = {
+					add = 10
+					faith = { has_doctrine = doctrine_clerical_gender_either }
+				}
+				modifier = {
+					add = 20
+					faith = { has_doctrine = doctrine_clerical_gender_female_only }
+				}
+				modifier = {
+					add = 5
+					scope:chaplain = { is_female = yes }
+				}
+				trigger_event = am_religious_special.2009
+			}
+			15 = {
+				desc = am_religious_special.2005.a.bad
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				min = 10
+				trigger_event = am_religious_special.2010
+			}
+		}
+	}
+	option = {
+		name = am_religious_special.2005.b
+		custom_tooltip = am_religious_special.2005.b.tt
+		trigger = {
+			diplomacy >= high_skill_rating
+			NOT = { has_trait = diplomat }
+		}
+		duel = {
+			skill = diplomacy
+			value = very_high_skill_rating
+			50 = {
+				desc = am_religious_special.2005.b.good
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				opinion_modifier = {
+					who = scope:chaplain
+					opinion_target = root
+					multiplier = 0.25
+				}
+				modifier = {
+					add = 10
+					faith = { has_doctrine = doctrine_clerical_gender_either }
+				}
+				modifier = {
+					add = 20
+					faith = { has_doctrine = doctrine_clerical_gender_female_only }
+				}
+				modifier = {
+					add = 5
+					scope:chaplain = { is_female = yes }
+				}
+				trigger_event = am_religious_special.2009
+			}
+			50 = {
+				desc = am_religious_special.2005.b.bad
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -5
+				}
+				min = 10
+				trigger_event = am_religious_special.2010
+			}
+		}
+	}
+	option = {
+		name = am_religious_special.2005.c
+		custom_tooltip = am_religious_special.2005.c.tt
+		trigger = { has_trait = diplomat }
+		trait = diplomat
+		trigger_event = am_religious_special.2009
+	}
+}
+
+am_religious_special.2006 = { # One failure, one success, last chance
+	type = character_event
+	title = am_religious_special.2006.t
+	desc = am_religious_special.2006.desc
+	theme = faith
+	right_portrait = {
+		character = scope:chaplain
+		animation = stress
+	}
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	option = {
+		name = am_religious_special.2006.a
+		custom_tooltip = am_religious_special.2006.a.tt
+		trigger = {
+			NOT = { has_trait = diplomat }
+		}
+		duel = {
+			skill = learning
+			target = scope:chaplain
+			20 = {
+				desc = am_religious_special.2006.a.good
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				opinion_modifier = {
+					who = scope:chaplain
+					opinion_target = root
+					multiplier = 0.25
+				}
+				modifier = {
+					add = 10
+					faith = { has_doctrine = doctrine_clerical_gender_either }
+				}
+				modifier = {
+					add = 20
+					faith = { has_doctrine = doctrine_clerical_gender_female_only }
+				}
+				modifier = {
+					add = 5
+					scope:chaplain = { is_female = yes }
+				}
+				trigger_event = am_religious_special.2009
+			}
+			10 = {
+				desc = am_religious_special.2006.a.bad
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				min = 10
+				trigger_event = am_religious_special.2010
+			}
+		}
+	}
+	option = {
+		name = am_religious_special.2006.b
+		custom_tooltip = am_religious_special.2006.b.tt
+		trigger = {
+			diplomacy >= high_skill_rating
+			NOT = { has_trait = diplomat }
+		}
+		duel = {
+			skill = diplomacy
+			value = very_high_skill_rating
+			50 = {
+				desc = am_religious_special.2006.b.good
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				opinion_modifier = {
+					who = scope:chaplain
+					opinion_target = root
+					multiplier = 0.25
+				}
+				modifier = {
+					add = 10
+					faith = { has_doctrine = doctrine_clerical_gender_either }
+				}
+				modifier = {
+					add = 20
+					faith = { has_doctrine = doctrine_clerical_gender_female_only }
+				}
+				modifier = {
+					add = 5
+					scope:chaplain = { is_female = yes }
+				}
+				trigger_event = am_religious_special.2009
+			}
+			50 = {
+				desc = am_religious_special.2006.b.bad
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -5
+				}
+				min = 10
+				trigger_event = am_religious_special.2010
+			}
+		}
+	}
+	option = {
+		name = am_religious_special.2006.c
+		custom_tooltip = am_religious_special.2006.c.tt
+		trigger = { has_trait = diplomat }
+		trait = diplomat
+		trigger_event = am_religious_special.2009
+	}
+}
+
+am_religious_special.2009 = { # Success
+	type = character_event
+	title = am_religious_special.2009.t
+	desc = am_religious_special.2009.desc
+	theme = faith
+	right_portrait = {
+		character = scope:chaplain
+		animation = happy
+	}
+	left_portrait = {
+		character = root
+		animation = war_over_win
+	}
+
+	immediate = {
+		mm_convocation_change_doctrine_effect = yes
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	option = {
+		name = am_religious_special.2009.a
+	}
+	after = {
+		every_ruler = { # Allow other rulers to change gender law
+			limit = {
+				faith = root.faith
+				highest_held_title_tier >= tier_county
+				OR = { # Only tribal, feudal, and clan are affected
+					has_government = tribal_government
+					has_government = feudal_government
+					has_government = clan_government
+				}
+				NOT = { this = root }
+			}
+			trigger_event = am_religious_special.2011 #Send event to all other rulers of the faith
+		}
+	}
+}
+
+am_religious_special.2010 = { # Failure
+	type = character_event
+	title = am_religious_special.2010.t
+	desc = am_religious_special.2010.desc
+	theme = faith
+	right_portrait = {
+		character = scope:chaplain
+		animation = shame
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+	}
+
+	immediate = {
+		add_character_modifier = {
+			modifier = mm_failed_convocation_modifier
+			years = 20
+		}
+		scope:chaplain = {
+			add_opinion = {
+				modifier = respect_opinion
+				target = root
+				opinion = -20
+			}
+		}
+	}
+	option = {
+		name = am_religious_special.2010.a
+		stress_impact = {
+			base = medium_stress_impact_gain
+			zealous = major_stress_impact_gain
+		}
+	}
+}
+
+am_religious_special.2011 = { # Chained event to 2010
+	type = character_event
+	title = am_religious_special.2011.t
+	desc = am_religious_special.2011.desc
+	theme = faith
+	override_background = { event_background = throne_room }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	option = {
+		name = am_religious_special.2011.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				is_female = yes
+				OR = {
+					has_realm_law = male_only_law
+					has_realm_law = male_preference_law
+				}
+				add = 100
+			}
+		}
+	}
+	option = {
+		name = am_religious_special.2011.b
+		custom_tooltip = am_religious_special.2011.b.tt
+		ai_chance = {
+			base = 1
+			modifier = {
+				is_female = no
+				OR = {
+					has_realm_law = male_only_law
+					has_realm_law = male_preference_law
+				}
+				add = 99
+			}
+			modifier = {
+				is_female = no
+				has_trait = zealous
+				factor = 0 # Zealous men place divine authority over their own
+			}
+		}
+	}
+}

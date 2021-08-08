@@ -6,7 +6,7 @@
 
 city_of_magic_01 = {
 	construction_time = slow_construction_time
-	
+
 	asset = {
 		type = pdxmesh
 		names = {
@@ -50,7 +50,7 @@ city_of_magic_01 = {
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/western_city" soundparameter = { "Tier" = 0 } }
 		graphical_regions = { graphical_mediterranean }
 	}
-	
+
 	asset = {
 		type = pdxmesh
 		names = {
@@ -58,7 +58,7 @@ city_of_magic_01 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mena_city" soundparameter = { "Tier" = 0 } }
-		graphical_cultures = { mena_building_gfx }	
+		graphical_cultures = { mena_building_gfx }
 	}
 	asset = {
 		type = pdxmesh
@@ -77,7 +77,7 @@ city_of_magic_01 = {
 		}
 		illustration = @holding_illustration_indian
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mena_city" soundparameter = { "Tier" = 0 } }
-		graphical_cultures = { mena_building_gfx }		
+		graphical_cultures = { mena_building_gfx }
 		graphical_regions = { graphical_india }
 	}
 	asset = {
@@ -87,7 +87,7 @@ city_of_magic_01 = {
 		}
 		illustration = @holding_illustration_mediterranean
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mena_city" soundparameter = { "Tier" = 0 } }
-		graphical_cultures = { mena_building_gfx }		
+		graphical_cultures = { mena_building_gfx }
 		graphical_regions = { graphical_mediterranean }
 	}
 
@@ -98,7 +98,7 @@ city_of_magic_01 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/indian_city" soundparameter = { "Tier" = 0 } }
-		graphical_cultures = { indian_building_gfx }	
+		graphical_cultures = { indian_building_gfx }
 	}
 	asset = {
 		type = pdxmesh
@@ -117,7 +117,7 @@ city_of_magic_01 = {
 		}
 		illustration = @holding_illustration_india
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/indian_city" soundparameter = { "Tier" = 0 } }
-		graphical_cultures = { indian_building_gfx }		
+		graphical_cultures = { indian_building_gfx }
 		graphical_regions = { graphical_india }
 	}
 	asset = {
@@ -127,7 +127,7 @@ city_of_magic_01 = {
 		}
 		illustration = @holding_illustration_mediterranean
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/indian_city" soundparameter = { "Tier" = 0 } }
-		graphical_cultures = { indian_building_gfx }		
+		graphical_cultures = { indian_building_gfx }
 		graphical_regions = { graphical_mediterranean }
 	}
 
@@ -138,7 +138,7 @@ city_of_magic_01 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mediterranean_city" soundparameter = { "Tier" = 0 } }
-		graphical_cultures = { mediterranean_building_gfx }	
+		graphical_cultures = { mediterranean_building_gfx }
 	}
 	asset = {
 		type = pdxmesh
@@ -157,7 +157,7 @@ city_of_magic_01 = {
 		}
 		illustration = @holding_illustration_india
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mediterranean_city" soundparameter = { "Tier" = 0 } }
-		graphical_cultures = { mediterranean_building_gfx }		
+		graphical_cultures = { mediterranean_building_gfx }
 		graphical_regions = { graphical_india }
 	}
 	asset = {
@@ -167,7 +167,7 @@ city_of_magic_01 = {
 		}
 		illustration = @holding_illustration_mediterranean
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mediterranean_city" soundparameter = { "Tier" = 0 } }
-		graphical_cultures = { mediterranean_building_gfx }			
+		graphical_cultures = { mediterranean_building_gfx }
 		graphical_regions = { graphical_mediterranean }
 	}
 
@@ -180,9 +180,9 @@ city_of_magic_01 = {
 		requires_dlc_flag = the_northern_lords
 		illustration = @holding_illustration_norse
 		soundeffect = { soundeffect = "event:/DLC/FP1/SFX/Ambience/Urban/norse_city_tier_01" }
-		graphical_cultures = { norse_building_gfx }			
+		graphical_cultures = { norse_building_gfx }
 	}
-	
+
 	asset = {
 		type = pdxmesh
 		names = {
@@ -192,7 +192,7 @@ city_of_magic_01 = {
 		illustration = @holding_illustration_norse
 		soundeffect = { soundeffect = "event:/DLC/FP1/SFX/Ambience/Urban/norse_city_tier_01" }
 		graphical_cultures = { norse_building_gfx }
-		graphical_regions = { graphical_mena }		
+		graphical_regions = { graphical_mena }
 	}
 
 	asset = {
@@ -204,7 +204,7 @@ city_of_magic_01 = {
 		illustration = @holding_illustration_norse
 		soundeffect = { soundeffect = "event:/DLC/FP1/SFX/Ambience/Urban/norse_city_tier_01" }
 		graphical_cultures = { norse_building_gfx }
-		graphical_regions = { graphical_mediterranean }		
+		graphical_regions = { graphical_mediterranean }
 	}
 
 	asset = {
@@ -216,14 +216,14 @@ city_of_magic_01 = {
 		illustration = @holding_illustration_norse
 		soundeffect = { soundeffect = "event:/DLC/FP1/SFX/Ambience/Urban/norse_city_tier_01" }
 		graphical_cultures = { norse_building_gfx }
-		graphical_regions = { graphical_india }	
+		graphical_regions = { graphical_india }
 	}
-	
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 		barony_cannot_construct_holding = no
 	}
-	
+
 	can_construct = {
 		culture = {
 			has_innovation = innovation_city_planning
@@ -232,89 +232,43 @@ city_of_magic_01 = {
 			NOT = { has_doctrine_parameter = witchcraft_illegal }
 		}
 	}
-	
+
 	can_construct_showing_failures_only = {
 		building_requirement_tribal_holding_in_county = no
 	}
 	cost_gold = 800
-	
+
 	county_modifier = {
 		development_growth_factor = 0.15
 	}
-	
+
 	levy = poor_building_levy_tier_2
-	garrison = normal_building_garrison_tier_1
+	max_garrison = normal_building_max_garrison_tier_1
+	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_1
 	province_modifier = {
 		monthly_income = good_building_tax_tier_2
 		fort_level = great_building_fort_level_tier_1
 	}
-	
+
 	flag = city
 	next_building = city_of_magic_02
 
 	type_icon = "icon_building_guild_halls.dds"
-	
+
 	ai_value = {
 		base = 0
 		modifier = {
 			add = 100
 			scope:holder = {
+				NOT = { has_government = magocracy_government }
 				domain_limit_available < 1
 			}
-		}		
-		modifier = {
-			add = 20
-			scope:holder = {
-				AND = {
-					has_trait = magic_potential
-					scope:faith = {
-						has_doctrine_parameter = witchcraft_illegal
-					}
-				}
-			}
-		}			
+		}
 		modifier = {
 			add = 100
 			scope:holder = {
-				AND = {
-					has_trait = magic_potential
-					scope:faith = {
-						has_doctrine_parameter = witchcraft_accepted
-					}
-				}
-			}
-		}			
-		modifier = {
-			divide = 10
-			scope:holder = {
-				AND = {
-					NOT = { has_trait = magic_potential }
-					scope:faith = {
-						has_doctrine_parameter = witchcraft_illegal
-					}
-				}
-			}
-		}		
-		modifier = {
-			factor = 0
-			scope:holder = {
-				AND = {
-					has_government = theocracy_government
-					scope:faith = {
-						has_doctrine_parameter = witchcraft_illegal
-					}
-				}
-			}
-		}	
-		modifier = {
-			add = 50
-			scope:holder = {
-				AND = {
-					has_government = theocracy_government
-					scope:faith = {
-						has_doctrine_parameter = witchcraft_accepted
-					}
-				}
+				has_government = magocracy_government
+				domain_limit_available > 0
 			}
 		}
 		modifier = {
@@ -327,12 +281,81 @@ city_of_magic_01 = {
 				}
 			}
 		}
+		modifier = {
+			factor = 2
+			scope:holder = {
+				AND = {
+					has_trait = mage
+					faith = {
+						has_doctrine_parameter = witchcraft_accepted
+					}
+				}
+			}
+		}
+		# implicit `factor = 1` if mage and witchcraft_shunned
+		modifier = {
+			factor = 0.5
+			scope:holder = {
+				AND = {
+					has_trait = mage
+					faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}
+		# implicit `factor = 1` if not mage and witchcraft_accepted
+		modifier = {
+			factor = 0.5
+			scope:holder = {
+				AND = {
+					NOT = { has_trait = mage }
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			scope:holder = {
+				AND = {
+					NOT = { has_trait = mage }
+					faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}
+		# implicit `factor = 1` if theocracy_government and witchcraft_accepted
+		modifier = {
+			factor = 0.5
+			scope:holder = {
+				AND = {
+					has_government = theocracy_government
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			scope:holder = {
+				AND = {
+					has_government = theocracy_government
+					faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}
 	}
 }
 
 city_of_magic_02 = {
 	construction_time = slow_construction_time
-	
+
 	asset = {
 		type = pdxmesh
 		names = {
@@ -376,7 +399,7 @@ city_of_magic_02 = {
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/western_city" soundparameter = { "Tier" = 1 } }
 		graphical_regions = { graphical_mediterranean }
 	}
-	
+
 	asset = {
 		type = pdxmesh
 		names = {
@@ -384,7 +407,7 @@ city_of_magic_02 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mena_city" soundparameter = { "Tier" = 1 } }
-		graphical_cultures = { mena_building_gfx }	
+		graphical_cultures = { mena_building_gfx }
 	}
 	asset = {
 		type = pdxmesh
@@ -403,7 +426,7 @@ city_of_magic_02 = {
 		}
 		illustration = @holding_illustration_indian
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mena_city" soundparameter = { "Tier" = 1 } }
-		graphical_cultures = { mena_building_gfx }		
+		graphical_cultures = { mena_building_gfx }
 		graphical_regions = { graphical_india }
 	}
 	asset = {
@@ -413,7 +436,7 @@ city_of_magic_02 = {
 		}
 		illustration = @holding_illustration_mediterranean
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mena_city" soundparameter = { "Tier" = 1} }
-		graphical_cultures = { mena_building_gfx }		
+		graphical_cultures = { mena_building_gfx }
 		graphical_regions = { graphical_mediterranean }
 	}
 
@@ -424,7 +447,7 @@ city_of_magic_02 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/indian_city" soundparameter = { "Tier" = 1 } }
-		graphical_cultures = { indian_building_gfx }	
+		graphical_cultures = { indian_building_gfx }
 	}
 	asset = {
 		type = pdxmesh
@@ -443,7 +466,7 @@ city_of_magic_02 = {
 		}
 		illustration = @holding_illustration_india
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/indian_city" soundparameter = { "Tier" = 1 } }
-		graphical_cultures = { indian_building_gfx }		
+		graphical_cultures = { indian_building_gfx }
 		graphical_regions = { graphical_india }
 	}
 	asset = {
@@ -453,7 +476,7 @@ city_of_magic_02 = {
 		}
 		illustration = @holding_illustration_mediterranean
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/indian_city" soundparameter = { "Tier" = 1 } }
-		graphical_cultures = { indian_building_gfx }		
+		graphical_cultures = { indian_building_gfx }
 		graphical_regions = { graphical_mediterranean }
 	}
 
@@ -464,7 +487,7 @@ city_of_magic_02 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mediterranean_city" soundparameter = { "Tier" = 1 } }
-		graphical_cultures = { mediterranean_building_gfx }	
+		graphical_cultures = { mediterranean_building_gfx }
 	}
 	asset = {
 		type = pdxmesh
@@ -483,7 +506,7 @@ city_of_magic_02 = {
 		}
 		illustration = @holding_illustration_india
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mediterranean_city" soundparameter = { "Tier" = 1 } }
-		graphical_cultures = { mediterranean_building_gfx }		
+		graphical_cultures = { mediterranean_building_gfx }
 		graphical_regions = { graphical_india }
 	}
 	asset = {
@@ -493,7 +516,7 @@ city_of_magic_02 = {
 		}
 		illustration = @holding_illustration_mediterranean
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mediterranean_city" soundparameter = { "Tier" = 1 } }
-		graphical_cultures = { mediterranean_building_gfx }		
+		graphical_cultures = { mediterranean_building_gfx }
 	}
 
 	### FP1 Norse ###
@@ -505,8 +528,8 @@ city_of_magic_02 = {
 		requires_dlc_flag = the_northern_lords
 		illustration = @holding_illustration_norse
 		soundeffect = { soundeffect = "event:/DLC/FP1/SFX/Ambience/Urban/norse_city_tier_01" }
-		graphical_cultures = { norse_building_gfx }			
-	}	
+		graphical_cultures = { norse_building_gfx }
+	}
 
 	asset = {
 		type = pdxmesh
@@ -517,7 +540,7 @@ city_of_magic_02 = {
 		illustration = @holding_illustration_norse
 		soundeffect = { soundeffect = "event:/DLC/FP1/SFX/Ambience/Urban/norse_city_tier_01" }
 		graphical_cultures = { norse_building_gfx }
-		graphical_regions = { graphical_mena }		
+		graphical_regions = { graphical_mena }
 	}
 
 	asset = {
@@ -529,7 +552,7 @@ city_of_magic_02 = {
 		illustration = @holding_illustration_norse
 		soundeffect = { soundeffect = "event:/DLC/FP1/SFX/Ambience/Urban/norse_city_tier_01" }
 		graphical_cultures = { norse_building_gfx }
-		graphical_regions = { graphical_mediterranean }		
+		graphical_regions = { graphical_mediterranean }
 	}
 
 	asset = {
@@ -541,9 +564,9 @@ city_of_magic_02 = {
 		illustration = @holding_illustration_norse
 		soundeffect = { soundeffect = "event:/DLC/FP1/SFX/Ambience/Urban/norse_city_tier_01" }
 		graphical_cultures = { norse_building_gfx }
-		graphical_regions = { graphical_india }	
+		graphical_regions = { graphical_india }
 	}
-	
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
@@ -554,13 +577,14 @@ city_of_magic_02 = {
 		building_magical_low_requirement = yes
 	}
 	cost_gold = 1100
-	
+
 	county_modifier = {
 		development_growth_factor = 0.30
 	}
-	
+
 	levy = poor_building_levy_tier_4
-	garrison = normal_building_garrison_tier_2
+	max_garrison = normal_building_max_garrison_tier_2
+	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_2
 	province_modifier = {
 		monthly_income = good_building_tax_tier_4
 		fort_level = good_building_fort_level_tier_2
@@ -568,62 +592,89 @@ city_of_magic_02 = {
 	flag = city
 	next_building = city_of_magic_03
 	ai_value = {
-		base = 6		
+		base = 0
+		modifier = {
+			add = 4
+			scope:holder = { NOT = { has_government = magocracy_government } }
+		}
+		modifier = {
+			add = 9
+			scope:holder = { has_government = magocracy_government }
+		}
+		modifier = {
+			factor = 3
+			scope:holder.capital_province = this
+		}
+		modifier = {
+			factor = 0.2
+			combined_building_level <= 4
+			years_from_game_start >= 1
+		}
 		modifier = {
 			factor = 2
-			scope:holder.capital_province = this
-		}		
-		modifier = {
-			add = 20
 			scope:holder = {
 				AND = {
-					has_trait = magic_potential
-					scope:faith = {
-						has_doctrine_parameter = witchcraft_illegal
-					}
-				}
-			}
-		}			
-		modifier = {
-			add = 100
-			scope:holder = {
-				AND = {
-					has_trait = magic_potential
-					scope:faith = {
+					has_trait = mage
+					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
 			}
-		}			
+		}
+		# implicit `factor = 1` if mage and witchcraft_shunned
 		modifier = {
-			divide = 10
+			factor = 0.5
 			scope:holder = {
 				AND = {
-					NOT = { has_trait = magic_potential }
-					scope:faith = {
+					has_trait = mage
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
 			}
-		}		
+		}
+		# implicit `factor = 1` if not mage and witchcraft_accepted
+		modifier = {
+			factor = 0.5
+			scope:holder = {
+				AND = {
+					NOT = { has_trait = mage }
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			scope:holder = {
+				AND = {
+					NOT = { has_trait = mage }
+					faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}
+		# implicit `factor = 1` if theocracy_government and witchcraft_accepted
+		modifier = {
+			factor = 0.5
+			scope:holder = {
+				AND = {
+					has_government = theocracy_government
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
+				}
+			}
+		}
 		modifier = {
 			factor = 0
 			scope:holder = {
 				AND = {
 					has_government = theocracy_government
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
-					}
-				}
-			}
-		}	
-		modifier = {
-			add = 50
-			scope:holder = {
-				AND = {
-					has_government = theocracy_government
-					scope:faith = {
-						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
 			}
@@ -669,7 +720,7 @@ city_of_magic_03 = {
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/western_city" soundparameter = { "Tier" = 2 } }
 		graphical_regions = { graphical_mediterranean }
 	}
-	
+
 	asset = {
 		type = pdxmesh
 		names = {
@@ -677,7 +728,7 @@ city_of_magic_03 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mena_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { mena_building_gfx }	
+		graphical_cultures = { mena_building_gfx }
 	}
 	asset = {
 		type = pdxmesh
@@ -696,7 +747,7 @@ city_of_magic_03 = {
 		}
 		illustration = @holding_illustration_india
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mena_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { mena_building_gfx }		
+		graphical_cultures = { mena_building_gfx }
 		graphical_regions = { graphical_india }
 	}
 	asset = {
@@ -706,7 +757,7 @@ city_of_magic_03 = {
 		}
 		illustration = @holding_illustration_mediterranean
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mena_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { mena_building_gfx }		
+		graphical_cultures = { mena_building_gfx }
 		graphical_regions = { graphical_mediterranean }
 	}
 
@@ -717,7 +768,7 @@ city_of_magic_03 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/indian_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { indian_building_gfx }	
+		graphical_cultures = { indian_building_gfx }
 	}
 	asset = {
 		type = pdxmesh
@@ -736,7 +787,7 @@ city_of_magic_03 = {
 		}
 		illustration = @holding_illustration_india
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/indian_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { indian_building_gfx }		
+		graphical_cultures = { indian_building_gfx }
 		graphical_regions = { graphical_india }
 	}
 	asset = {
@@ -746,7 +797,7 @@ city_of_magic_03 = {
 		}
 		illustration = @holding_illustration_mediterranean
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/indian_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { indian_building_gfx }		
+		graphical_cultures = { indian_building_gfx }
 		graphical_regions = { graphical_mediterranean }
 	}
 
@@ -757,7 +808,7 @@ city_of_magic_03 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mediterranean_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { mediterranean_building_gfx }	
+		graphical_cultures = { mediterranean_building_gfx }
 	}
 	asset = {
 		type = pdxmesh
@@ -776,7 +827,7 @@ city_of_magic_03 = {
 		}
 		illustration = @holding_illustration_india
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mediterranean_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { mediterranean_building_gfx }		
+		graphical_cultures = { mediterranean_building_gfx }
 		graphical_regions = { graphical_india }
 	}
 	asset = {
@@ -786,7 +837,7 @@ city_of_magic_03 = {
 		}
 		illustration = @holding_illustration_mediterranean
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mediterranean_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { mediterranean_building_gfx }		
+		graphical_cultures = { mediterranean_building_gfx }
 	}
 
 	### FP1 Norse ###
@@ -798,9 +849,9 @@ city_of_magic_03 = {
 		requires_dlc_flag = the_northern_lords
 		illustration = @holding_illustration_norse
 		soundeffect = { soundeffect = "event:/DLC/FP1/SFX/Ambience/Urban/norse_city_tier_02" }
-		graphical_cultures = { norse_building_gfx }			
-	}	
-	
+		graphical_cultures = { norse_building_gfx }
+	}
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
@@ -811,76 +862,104 @@ city_of_magic_03 = {
 		building_magical_high_requirement = yes
 	}
 	cost_gold = 1500
-	
+
 	county_modifier = {
 		development_growth_factor = 0.45
 	}
 	next_building = city_of_magic_04
-	
+
 	levy = poor_building_levy_tier_6
-	garrison = normal_building_garrison_tier_3
+	max_garrison = normal_building_max_garrison_tier_3
+	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_3
 	province_modifier = {
 		monthly_income = good_building_tax_tier_6
 		fort_level = good_building_fort_level_tier_3
 	}
 	flag = city
 	ai_value = {
-		base = 5		
+		base = 0
+		modifier = {
+			add = 3
+			scope:holder = { NOT = { has_government = magocracy_government } }
+		}
+		modifier = {
+			add = 8
+			scope:holder = { has_government = magocracy_government }
+		}
+		modifier = {
+			factor = 3
+			scope:holder.capital_province = this
+		}
+		modifier = {
+			factor = 0.2
+			combined_building_level <= 9
+			years_from_game_start >= 1
+		}
 		modifier = {
 			factor = 2
-			scope:holder.capital_province = this
-		}		
-		modifier = {
-			add = 20
 			scope:holder = {
 				AND = {
-					has_trait = magic_potential
-					scope:faith = {
-						has_doctrine_parameter = witchcraft_illegal
-					}
-				}
-			}
-		}			
-		modifier = {
-			add = 100
-			scope:holder = {
-				AND = {
-					has_trait = magic_potential
-					scope:faith = {
+					has_trait = mage
+					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
 			}
-		}			
+		}
+		# implicit `factor = 1` if mage and witchcraft_shunned
 		modifier = {
-			divide = 10
+			factor = 0.5
 			scope:holder = {
 				AND = {
-					NOT = { has_trait = magic_potential }
-					scope:faith = {
+					has_trait = mage
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
 			}
-		}		
+		}
+		# implicit `factor = 1` if not mage and witchcraft_accepted
+		modifier = {
+			factor = 0.5
+			scope:holder = {
+				AND = {
+					NOT = { has_trait = mage }
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			scope:holder = {
+				AND = {
+					NOT = { has_trait = mage }
+					faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}
+		# implicit `factor = 1` if theocracy_government and witchcraft_accepted
+		modifier = {
+			factor = 0.5
+			scope:holder = {
+				AND = {
+					has_government = theocracy_government
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
+				}
+			}
+		}
 		modifier = {
 			factor = 0
 			scope:holder = {
 				AND = {
 					has_government = theocracy_government
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
-					}
-				}
-			}
-		}	
-		modifier = {
-			add = 50
-			scope:holder = {
-				AND = {
-					has_government = theocracy_government
-					scope:faith = {
-						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
 			}
@@ -890,7 +969,7 @@ city_of_magic_03 = {
 
 city_of_magic_04 = {
 	construction_time = very_slow_construction_time
-	
+
 	asset = {
 		type = pdxmesh
 		names = {
@@ -926,7 +1005,7 @@ city_of_magic_04 = {
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/western_city" soundparameter = { "Tier" = 2 } }
 		graphical_regions = { graphical_mediterranean }
 	}
-	
+
 	asset = {
 		type = pdxmesh
 		names = {
@@ -934,7 +1013,7 @@ city_of_magic_04 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mena_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { mena_building_gfx }	
+		graphical_cultures = { mena_building_gfx }
 	}
 	asset = {
 		type = pdxmesh
@@ -953,7 +1032,7 @@ city_of_magic_04 = {
 		}
 		illustration = @holding_illustration_india
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mena_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { mena_building_gfx }		
+		graphical_cultures = { mena_building_gfx }
 		graphical_regions = { graphical_india }
 	}
 	asset = {
@@ -963,7 +1042,7 @@ city_of_magic_04 = {
 		}
 		illustration = @holding_illustration_mediterranean
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mena_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { mena_building_gfx }		
+		graphical_cultures = { mena_building_gfx }
 		graphical_regions = { graphical_mediterranean }
 	}
 
@@ -974,7 +1053,7 @@ city_of_magic_04 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/indian_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { indian_building_gfx }	
+		graphical_cultures = { indian_building_gfx }
 	}
 	asset = {
 		type = pdxmesh
@@ -993,7 +1072,7 @@ city_of_magic_04 = {
 		}
 		illustration = @holding_illustration_india
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/indian_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { indian_building_gfx }		
+		graphical_cultures = { indian_building_gfx }
 		graphical_regions = { graphical_india }
 	}
 	asset = {
@@ -1003,7 +1082,7 @@ city_of_magic_04 = {
 		}
 		illustration = @holding_illustration_mediterranean
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/indian_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { indian_building_gfx }		
+		graphical_cultures = { indian_building_gfx }
 		graphical_regions = { graphical_mediterranean }
 	}
 
@@ -1014,7 +1093,7 @@ city_of_magic_04 = {
 		}
 		illustration = @holding_illustration_western
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mediterranean_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { mediterranean_building_gfx }	
+		graphical_cultures = { mediterranean_building_gfx }
 	}
 	asset = {
 		type = pdxmesh
@@ -1033,7 +1112,7 @@ city_of_magic_04 = {
 		}
 		illustration = @holding_illustration_india
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mediterranean_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { mediterranean_building_gfx }		
+		graphical_cultures = { mediterranean_building_gfx }
 		graphical_regions = { graphical_india }
 	}
 	asset = {
@@ -1043,7 +1122,7 @@ city_of_magic_04 = {
 		}
 		illustration = @holding_illustration_mediterranean
 		soundeffect = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Holdings/City/mediterranean_city" soundparameter = { "Tier" = 2 } }
-		graphical_cultures = { mediterranean_building_gfx }		
+		graphical_cultures = { mediterranean_building_gfx }
 	}
 
 	### FP1 Norse ###
@@ -1055,9 +1134,9 @@ city_of_magic_04 = {
 		requires_dlc_flag = the_northern_lords
 		illustration = @holding_illustration_norse
 		soundeffect = { soundeffect = "event:/DLC/FP1/SFX/Ambience/Urban/norse_city_tier_02" }
-		graphical_cultures = { norse_building_gfx }			
+		graphical_cultures = { norse_building_gfx }
 	}
-	
+
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
@@ -1068,75 +1147,103 @@ city_of_magic_04 = {
 		building_magical_high_requirement = yes
 	}
 	cost_gold = 1700
-	
+
 	county_modifier = {
 		development_growth_factor = 0.6
 	}
-	
+
 	levy = poor_building_levy_tier_8
-	garrison = normal_building_garrison_tier_7
+	max_garrison = normal_building_max_garrison_tier_7
+	garrison_reinforcement_factor = building_garrison_reinforcement_factor_tier_4
 	province_modifier = {
 		monthly_income = good_building_tax_tier_8
 		fort_level = good_building_fort_level_tier_4
 	}
 	flag = city_of_magic
 	ai_value = {
-		base = 4		
+		base = 0
+		modifier = {
+			add = 2
+			scope:holder = { NOT = { has_government = magocracy_government } }
+		}
+		modifier = {
+			add = 7
+			scope:holder = { has_government = magocracy_government }
+		}
+		modifier = {
+			factor = 3
+			scope:holder.capital_province = this
+		}
+		modifier = {
+			factor = 0.2
+			combined_building_level <= 12
+			years_from_game_start >= 1
+		}
 		modifier = {
 			factor = 2
-			scope:holder.capital_province = this
-		}		
-		modifier = {
-			add = 20
 			scope:holder = {
 				AND = {
-					has_trait = magic_potential
-					scope:faith = {
-						has_doctrine_parameter = witchcraft_illegal
-					}
-				}
-			}
-		}			
-		modifier = {
-			add = 100
-			scope:holder = {
-				AND = {
-					has_trait = magic_potential
-					scope:faith = {
+					has_trait = mage
+					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
 			}
-		}			
+		}
+		# implicit `factor = 1` if mage and witchcraft_shunned
 		modifier = {
-			divide = 10
+			factor = 0.5
 			scope:holder = {
 				AND = {
-					NOT = { has_trait = magic_potential }
-					scope:faith = {
+					has_trait = mage
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
 				}
 			}
-		}		
+		}
+		# implicit `factor = 1` if not mage and witchcraft_accepted
+		modifier = {
+			factor = 0.5
+			scope:holder = {
+				AND = {
+					NOT = { has_trait = mage }
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			scope:holder = {
+				AND = {
+					NOT = { has_trait = mage }
+					faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+			}
+		}
+		# implicit `factor = 1` if theocracy_government and witchcraft_accepted
+		modifier = {
+			factor = 0.5
+			scope:holder = {
+				AND = {
+					has_government = theocracy_government
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
+				}
+			}
+		}
 		modifier = {
 			factor = 0
 			scope:holder = {
 				AND = {
 					has_government = theocracy_government
-					scope:faith = {
+					faith = {
 						has_doctrine_parameter = witchcraft_illegal
-					}
-				}
-			}
-		}	
-		modifier = {
-			add = 50
-			scope:holder = {
-				AND = {
-					has_government = theocracy_government
-					scope:faith = {
-						has_doctrine_parameter = witchcraft_accepted
 					}
 				}
 			}
@@ -1168,18 +1275,18 @@ guild_halls_01 = {
 	}
 
 	cost_gold = normal_building_tier_1_cost
-	
+
 	province_modifier = {
 		monthly_income = normal_building_tax_tier_1
 	}
 	county_modifier = {
 		development_growth_factor = 0.05
 	}
-	
+
 	next_building = guild_halls_02
 
 	type_icon = "icon_building_guild_halls.dds"
-	
+
 	ai_value = {
 		base = 500
 		modifier = {
@@ -1209,14 +1316,14 @@ guild_halls_02 = {
 	}
 
 	cost_gold = normal_building_tier_2_cost
-	
+
 	province_modifier = {
 		monthly_income = normal_building_tax_tier_2
 	}
 	county_modifier = {
 		development_growth_factor = 0.1
 	}
-	
+
 	next_building = guild_halls_03
 	ai_value = {
 		base = 0
@@ -1247,14 +1354,14 @@ guild_halls_03 = {
 	}
 
 	cost_gold = normal_building_tier_3_cost
-	
+
 	province_modifier = {
 		monthly_income = normal_building_tax_tier_3
 	}
 	county_modifier = {
 		development_growth_factor = 0.15
 	}
-	
+
 	next_building = guild_halls_04
 	ai_value = {
 		base = 0
@@ -1285,14 +1392,14 @@ guild_halls_04 = {
 	}
 
 	cost_gold = normal_building_tier_4_cost
-	
+
 	province_modifier = {
 		monthly_income = normal_building_tax_tier_4
 	}
 	county_modifier = {
 		development_growth_factor = 0.2
 	}
-	
+
 	next_building = guild_halls_05
 	ai_value = {
 		base = 0
@@ -1323,14 +1430,14 @@ guild_halls_05 = {
 	}
 
 	cost_gold = normal_building_tier_5_cost
-	
+
 	province_modifier = {
 		monthly_income = normal_building_tax_tier_5
 	}
 	county_modifier = {
 		development_growth_factor = 0.25
 	}
-	
+
 	next_building = guild_halls_06
 	ai_value = {
 		base = 0
@@ -1361,14 +1468,14 @@ guild_halls_06 = {
 	}
 
 	cost_gold = normal_building_tier_6_cost
-	
+
 	province_modifier = {
 		monthly_income = normal_building_tax_tier_6
 	}
 	county_modifier = {
 		development_growth_factor = 0.3
 	}
-	
+
 	next_building = guild_halls_07
 	ai_value = {
 		base = 0
@@ -1399,14 +1506,14 @@ guild_halls_07 = {
 	}
 
 	cost_gold = normal_building_tier_7_cost
-	
+
 	province_modifier = {
 		monthly_income = normal_building_tax_tier_7
 	}
 	county_modifier = {
 		development_growth_factor = 0.35
 	}
-	
+
 	next_building = guild_halls_08
 	ai_value = {
 		base = 0
@@ -1435,16 +1542,16 @@ guild_halls_08 = {
 	can_construct_showing_failures_only = {
 		building_requirement_tribal = no
 	}
-	
+
 	cost_gold = normal_building_tier_8_cost
-	
+
 	province_modifier = {
 		monthly_income = normal_building_tax_tier_8
 	}
 	county_modifier = {
 		development_growth_factor = 0.4
 	}
-	
+
 	ai_value = {
 		base = 0
 		modifier = {

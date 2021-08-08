@@ -1,20 +1,4 @@
-republic_government = {
-	primary_holding = city_holding
-	valid_holdings = { castle_holding city_of_magic_holding }
-	required_county_holdings = { city_holding castle_holding church_holding city_of_magic_holding }
-
-	ai = {
-		arrange_marriage = no
-		use_goals = no
-		use_scripted_guis = no
-		perform_religious_reformation = no
-	}
-
-	vassal_contract = { republic_government_obligations }
-	color = hsv{ 0.00 1.00 0.98 }
-}
-
-magocracy_government = {
+﻿magocracy_government = {
 	create_cadet_branches = yes
 	rulers_should_have_dynasty = yes
 	dynasty_named_realms = no

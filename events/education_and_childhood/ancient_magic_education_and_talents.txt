@@ -1,4 +1,4 @@
-namespace = AM_education_and_talents
+﻿namespace = AM_education_and_talents
 
 # by Donekulda
 

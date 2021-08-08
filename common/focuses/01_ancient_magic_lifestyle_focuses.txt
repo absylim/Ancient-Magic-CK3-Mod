@@ -1,10 +1,22 @@
 ﻿magic_arcana_focus = {
 	lifestyle = arcane_lifestyle
 	
+	desc = {
+		desc = magic_arcana_focus_desc
+		desc = line_break
+	}
+	
 	modifier = {
 		monthly_arcane_lifestyle_xp_gain_mult = 0.2
 	}
-
+	
+	on_change_to = {
+		trigger_event = { on_action = on_reset_mana_system }
+	}
+	
+	on_change_from = {
+		trigger_event = { on_action = on_reset_mana_system }
+	}
 
 	auto_selection_weight = {
 		value = 11
@@ -39,6 +51,19 @@
 
 magic_meditation_focus = {
 	lifestyle = arcane_lifestyle
+	
+	desc = {
+		desc = magic_meditation_focus_desc
+		desc = line_break
+	}
+	
+	on_change_to = {
+		trigger_event = { on_action = on_reset_mana_system }
+	}
+	
+	on_change_from = {
+		trigger_event = { on_action = on_reset_mana_system }
+	}
 
 	auto_selection_weight = {
 		value = 11
@@ -68,8 +93,21 @@ magic_meditation_focus = {
 magic_mana_focus = {
 	lifestyle = arcane_lifestyle
 	
+	desc = {
+		desc = magic_mana_focus_desc
+		desc = line_break
+	}
+	
 	modifier = {
 		monthly_arcane_lifestyle_xp_gain_mult = -10000
+	}
+	
+	on_change_to = {
+		trigger_event = { on_action = on_reset_mana_system }
+	}
+	
+	on_change_from = {
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 
 	auto_selection_weight = {

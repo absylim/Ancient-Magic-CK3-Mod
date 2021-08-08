@@ -50,11 +50,9 @@
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
 		add_trait_force_tooltip = mage
 		add_trait_force_tooltip = mana
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	character_modifier = {
 		health = 0.1
@@ -84,9 +82,7 @@ inward_reflection_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	
 	parent = life_mage_perk
@@ -113,9 +109,7 @@ inward_perfection_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	
 	character_modifier = {
@@ -148,9 +142,7 @@ heal_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -178,9 +170,7 @@ greater_heal_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -209,9 +199,7 @@ battlefield_life_mage_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -240,9 +228,7 @@ greater_battlefield_life_mage_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -276,10 +262,8 @@ purity_of_body_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
 		add_character_flag = immune_to_disease
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -307,10 +291,8 @@ avatar_of_life_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
 		add_trait_force_tooltip = avatar_of_life
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 

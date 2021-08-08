@@ -63,11 +63,9 @@
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
 		add_trait_force_tooltip = mage
 		add_trait_force_tooltip = mana
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	character_modifier = {
 		monthly_income_mult = 0.1
@@ -139,14 +137,11 @@ glimpse_the_future_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	
 	parent = time_mage_perk
 }
-
 
 finacial_times_perk = {
 	lifestyle = arcane_lifestyle
@@ -215,9 +210,7 @@ finacial_times_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -289,9 +282,7 @@ celerity_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -363,9 +354,7 @@ mass_celerity_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -437,9 +426,7 @@ slowness_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -511,9 +498,7 @@ mass_slowness_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -573,7 +558,7 @@ temporal_manipulation_perk = {
 		}
 	}
 	
-	parent = finacial_times_perk
+	parent = financial_times_perk
 	parent = mass_celerity_perk
 	parent = mass_slowness_perk
 
@@ -587,9 +572,7 @@ temporal_manipulation_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -663,8 +646,6 @@ master_of_time_perk = {
 			text = mage_xp_magic_perk_effect
 		}
 		add_trait_force_tooltip = master_of_time
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }

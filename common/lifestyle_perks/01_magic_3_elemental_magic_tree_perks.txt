@@ -53,11 +53,9 @@
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
 		add_trait_force_tooltip = mage
 		add_trait_force_tooltip = mana
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -79,9 +77,7 @@ flame_aura_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	
 	parent = elemental_mage_perk
@@ -106,9 +102,7 @@ flaming_weapons_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	
 	parent = flame_aura_perk
@@ -135,9 +129,7 @@ living_earthworks_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -165,9 +157,7 @@ golem_creation_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -194,9 +184,7 @@ control_water_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	
 	parent = elemental_mage_perk
@@ -223,9 +211,7 @@ drought_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -252,9 +238,7 @@ elemental_warrior_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -282,9 +266,7 @@ lord_of_the_elements_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
 		add_trait_force_tooltip = lord_of_the_elements
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }

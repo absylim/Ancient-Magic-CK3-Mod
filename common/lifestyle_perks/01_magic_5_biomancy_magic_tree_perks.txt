@@ -59,11 +59,9 @@
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
 		add_trait_force_tooltip = mage
 		add_trait_force_tooltip = mana
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	character_modifier = {
 		life_expectancy = 2
@@ -91,9 +89,7 @@ improve_trait_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	
 	parent = biomancy_mage_perk
@@ -121,9 +117,7 @@ perfect_trait_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	
 	parent = improve_trait_perk
@@ -153,9 +147,7 @@ fertility_control_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -183,9 +175,7 @@ impregnate_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -211,9 +201,7 @@ weaken_trait_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 	
 	parent = biomancy_mage_perk
@@ -243,9 +231,7 @@ criple_trait_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -275,9 +261,7 @@ sculpter_of_flesh_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -305,9 +289,7 @@ architect_of_bloodlines_perk = {
 		custom_description_no_bullet = {
 			text = mage_xp_magic_perk_effect
 		}
-		change_max_mana = { VALUE = max_mana_per_perk }
-		change_mage_xp = { VALUE = mage_xp_per_perk }
-		change_mana_gen = { VALUE = mana_gen_per_perk }
 		add_trait_force_tooltip = architect_of_bloodlines
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }

@@ -1,67 +1,36 @@
-﻿change_mage_xp = {
+﻿change_mana_with_tooltip = {
 	if = {
-		limit = {
-			NOT = { exists = var:mage_xp }
-		}
-		set_variable = {
-			name = mage_xp
-			value = 0
-		}
-	}
-	change_variable = { name = mage_xp add = $VALUE$ }
-}
-
-change_mana = {
-	if = {
-		limit = {
-			$VALUE$ > 0
-		}
+		limit = { $VALUE$ > 0 }
 		custom_description = {
 			text = positive_mana_cost
 			value = $VALUE$
 		}
 	}
 	else_if = {
-		limit = {
-			$VALUE$ < 0
-		}
+		limit = { $VALUE$ < 0 }
 		custom_description = {
 			text = negative_mana_cost
 			value = $VALUE$
 		}
 	}
-	change_variable = { name = mana add = $VALUE$ }
+	change_mana = { VALUE = $VALUE$ }
 }
 
-change_mana_gen = {
+change_mana_gen_loc = {
 	if = {
-		limit = {
-			NOT = { exists = var:mana_gen }
-		}
-		set_variable = {
-			name = mana_gen
-			value = 0
-		}
-	}
-	if = {
-		limit = {
-			$VALUE$ > 0
-		}
+		limit = { $VALUE$ > 0 }
 		custom_description = {
 			text = positive_mana_drain
 			value = $VALUE$
 		}
 	}
 	else_if = {
-		limit = {
-			$VALUE$ < 0
-		}
+		limit = { $VALUE$ < 0 }
 		custom_description = {
 			text = negative_mana_drain
 			value = $VALUE$
 		}
 	}
-	change_variable = { name = mana_gen add = $VALUE$ }
 }
 
 change_ancestral_guardians_count = {

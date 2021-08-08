@@ -1,0 +1,17 @@
+﻿grant_to_mage = {
+	is_shown = { # Can be omitted as always true
+		always = yes
+	}
+
+	is_valid = {
+		ROOT = {
+			title_province = {
+				has_holding_type = city_of_magic_holding
+			}
+		}
+	}
+
+	effect = {
+		trigger_event = { on_action = grant_to_mage_action }
+	}
+}

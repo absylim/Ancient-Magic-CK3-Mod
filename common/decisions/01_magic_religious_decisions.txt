@@ -1,0 +1,202 @@
+### Decisions related to changing doctrines
+am_spiritual_hof_change_to_witchcraft_decision = { # Challenge Spiritual Head of Faith to debate for witchcraft acceptance
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	major = yes
+	cooldown = { days = 7300 }
+
+	is_shown = {
+		highest_held_title_tier >= 3
+		is_adult = yes
+		OR = {
+			AND = {
+				has_trait = mage
+				OR = {
+					faith = { has_doctrine = doctrine_witchcraft_crime }
+					faith = { has_doctrine = doctrine_witchcraft_shunned }
+				}
+			}
+			AND = {
+				NOT = { has_trait = mage }
+				OR = {
+					faith = { has_doctrine = doctrine_witchcraft_accepted }
+					faith = { has_doctrine = doctrine_witchcraft_shunned }
+				}
+			}
+		}
+		faith = { has_doctrine = doctrine_spiritual_head }
+		exists = faith.religious_head
+		faith.religious_head = {
+			NOT = { has_character_flag = had_am_religious_special_this_lifetime }
+		}
+	}
+
+	is_valid = {
+		OR = {
+			faith.religious_head = {
+				opinion = {
+					target = root
+					value >= high_positive_opinion
+				}
+			}
+			root = { has_strong_usable_hook = faith.religious_head }
+			root = { has_hook = faith.religious_head }
+		}
+		piety_level >= 4
+		piety >= 1500
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+
+	effect = {
+		if = {
+			has_trait = mage
+			if = {
+				limit = { faith = { has_doctrine = doctrine_witchcraft_crime } }
+				trigger_event = am_religious_special.1001
+				show_as_tooltip = {
+					custom_tooltip = am_convince_hof_witchcraft_shunned_custom_desc
+				}
+			}
+			else = {
+				trigger_event = am_religious_special.1011
+				show_as_tooltip = {
+					custom_tooltip = am_convince_hof_witchcraft_accepted_custom_desc
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { faith = { has_doctrine = doctrine_witchcraft_accepted } }
+				trigger_event = am_religious_special.1001
+				show_as_tooltip = {
+					custom_tooltip = am_convince_hof_witchcraft_shunned_custom_desc
+				}
+			}
+			else = {
+				trigger_event = am_religious_special.1021
+				show_as_tooltip = {
+					custom_tooltip = am_convince_hof_witchcraft_crime_custom_desc
+				}
+			}
+		}
+	}
+	
+	ai_check_interval = 0
+	ai_potential = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
+
+am_no_hof_unreformed_or_tribal_witchcraft_decision = { # Call Convocation to establish witchcraft
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	major = yes
+	cooldown = { days = 7300 }
+
+	is_shown = {
+		always = no
+		highest_held_title_tier >= 3
+		is_adult = yes
+		OR = {
+			AND = {
+				has_trait = mage
+				OR = {
+					faith = { has_doctrine = doctrine_witchcraft_crime }
+					faith = { has_doctrine = doctrine_witchcraft_shunned }
+				}
+			}
+			AND = {
+				NOT = { has_trait = mage }
+				OR = {
+					faith = { has_doctrine = doctrine_witchcraft_accepted }
+					faith = { has_doctrine = doctrine_witchcraft_shunned }
+				}
+			}
+		}
+		OR = {
+			faith = { has_doctrine = unreformed_faith_doctrine }
+			has_government = tribal_government
+		}
+		NOR = { 
+			has_character_flag = had_am_religious_special2_this_lifetime
+			exists = faith.religious_head 
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 4 
+		piety_level >= 4
+		piety >= 1500
+		exists = cp:councillor_court_chaplain
+		custom_description = {
+			text = am_no_hof_unreformed_or_tribal_witchcraft_decision_requirement
+
+			trigger_if = {
+				limit = {
+					any_vassal = {
+						is_powerful_vassal = yes
+						faith = root.faith
+					}
+				}
+				any_vassal = {
+					count <= 1
+					is_powerful_vassal = yes
+					NOT = { faith = root.faith } 
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		if = {
+			has_trait = mage
+			if = {
+				limit = { faith = { has_doctrine = doctrine_witchcraft_crime } }
+				trigger_event = am_religious_special.2001
+				show_as_tooltip = {
+					custom_tooltip = am_convocation_witchcraft_shunned_custom_desc
+				}
+			}
+			else = {
+				trigger_event = am_religious_special.2021
+				show_as_tooltip = {
+					custom_tooltip = am_convocation_witchcraft_accepted_custom_desc
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { faith = { has_doctrine = doctrine_witchcraft_accepted } }
+				trigger_event = am_religious_special.2001
+				show_as_tooltip = {
+					custom_tooltip = am_convocation_witchcraft_shunned_custom_desc
+				}
+			}
+			else = {
+				trigger_event = am_religious_special.2041
+				show_as_tooltip = {
+					custom_tooltip = am_convocation_witchcraft_crime_custom_desc
+				}
+			}
+		}
+	}
+	
+	ai_check_interval = 0
+	ai_potential = {
+		always = no
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
