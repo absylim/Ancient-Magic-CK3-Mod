@@ -1,5 +1,5 @@
 ﻿life_mage_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = life_magic
 	position = { 2 0 }
 	icon = node_diplomacy
@@ -62,7 +62,7 @@
 }
 
 inward_reflection_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = life_magic
 	position = { 0 1.25 }
 	icon = node_diplomacy
@@ -94,7 +94,7 @@ inward_reflection_perk = {
 
 
 inward_perfection_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = life_magic
 	position = { 0 2.5 }
 	icon = node_diplomacy
@@ -126,7 +126,7 @@ inward_perfection_perk = {
 }
 
 heal_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = life_magic
 	position = { 2 1.25 }
 	icon = node_diplomacy
@@ -156,7 +156,7 @@ heal_perk = {
 
 
 greater_heal_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = life_magic
 	position = { 2 2.5 }
 	icon = node_diplomacy
@@ -186,7 +186,7 @@ greater_heal_perk = {
 
 
 battlefield_life_mage_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = life_magic
 	position = { 4 1.25 }
 	icon = node_diplomacy
@@ -217,7 +217,7 @@ battlefield_life_mage_perk = {
 
 
 greater_battlefield_life_mage_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = life_magic
 	position = { 4 2.5 }
 	icon = node_diplomacy
@@ -248,7 +248,7 @@ greater_battlefield_life_mage_perk = {
 
 
 purity_of_body_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = life_magic
 	position = { 2 3.75 }
 	icon = node_diplomacy
@@ -285,7 +285,7 @@ purity_of_body_perk = {
 
 
 avatar_of_life_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = life_magic
 	position = { 2 5 }
 	icon = avatar_of_life

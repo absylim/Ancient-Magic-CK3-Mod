@@ -32,7 +32,7 @@ magocracy_government = {
 	}
 	
 	character_modifier = {
-		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.1
+		monthly_arcane_lifestyle_xp_gain_mult = 0.1
 	}
 
 	vassal_contract = {

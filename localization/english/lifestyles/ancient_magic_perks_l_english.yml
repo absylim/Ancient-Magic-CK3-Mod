@@ -78,7 +78,7 @@
  master_of_puppets_perk_name:0 "Master of Puppets"
  
 #effects
- monthly_ancient_magic_lifestyle_xp_gain_mult:0 "Monthly Magic [lifestyle|E] Experience"
+ monthly_arcane_lifestyle_xp_gain_mult:0 "Monthly Magic [lifestyle|E] Experience"
  full_restoration_modifier_effect:0 "Fully Restored"
  MANA_GEN_MAGIC_PERK_EFFECT:0 "Increases monthly mana generation by [EmptyScope.ScriptValue('mana_gen_per_perk')|0]"
  MAX_MANA_MAGIC_PERK_EFFECT:0 "Increases max mana by [EmptyScope.ScriptValue('max_mana_per_perk')|0]"

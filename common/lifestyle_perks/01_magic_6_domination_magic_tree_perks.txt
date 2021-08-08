@@ -1,5 +1,5 @@
 ﻿domination_mage_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = domination_magic
 	position = { 2 0 }
 	icon = node_diplomacy
@@ -69,7 +69,7 @@
 }
 
 entrance_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = domination_magic
 	position = { 0 1.25 }
 	icon = node_diplomacy
@@ -96,7 +96,7 @@ entrance_perk = {
 
 
 incite_lust_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = domination_magic
 	position = { 0 2.5 }
 	icon = node_diplomacy
@@ -124,7 +124,7 @@ incite_lust_perk = {
 
 
 incite_obedience_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = domination_magic
 	position = { 2 1.25 }
 	icon = node_diplomacy
@@ -151,7 +151,7 @@ incite_obedience_perk = {
 
 
 dominate_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = domination_magic
 	position = { 2 2.5 }
 	icon = node_diplomacy
@@ -178,7 +178,7 @@ dominate_perk = {
 
 
 beguiling_aura_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = domination_magic
 	position = { 4 1.25 }
 	icon = node_diplomacy
@@ -205,7 +205,7 @@ beguiling_aura_perk = {
 
 
 friendship_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = domination_magic
 	position = { 4 2.5 }
 	icon = node_diplomacy
@@ -232,7 +232,7 @@ friendship_perk = {
 
 
 enchanting_aura_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = domination_magic
 	position = { 2 3.75 }
 	icon = node_diplomacy
@@ -261,7 +261,7 @@ enchanting_aura_perk = {
 
 
 master_of_puppets_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = domination_magic
 	position = { 2 5 }
 	icon = master_of_puppets

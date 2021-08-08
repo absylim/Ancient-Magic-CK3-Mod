@@ -239,7 +239,7 @@ education_arcane_1 = {
 	minimum_age = 16
 	learning = 2
 	education = yes
-	monthly_ancient_magic_lifestyle_xp_gain_mult = 0.1
+	monthly_arcane_lifestyle_xp_gain_mult = 0.1
 	
 	ruler_designer_cost = 0
 	
@@ -264,7 +264,7 @@ education_arcane_2 = {
 	learning = 3
 	prowess = 1
 	education = yes
-	monthly_ancient_magic_lifestyle_xp_gain_mult = 0.2
+	monthly_arcane_lifestyle_xp_gain_mult = 0.2
 	
 	ruler_designer_cost = 20
 	
@@ -289,7 +289,7 @@ education_arcane_3 = {
 	learning = 4
 	prowess = 2
 	education = yes
-	monthly_ancient_magic_lifestyle_xp_gain_mult = 0.3
+	monthly_arcane_lifestyle_xp_gain_mult = 0.3
 	
 	ruler_designer_cost = 40
 	
@@ -314,7 +314,7 @@ education_arcane_4 = {
 	learning = 6
 	prowess = 4
 	education = yes
-	monthly_ancient_magic_lifestyle_xp_gain_mult = 0.4
+	monthly_arcane_lifestyle_xp_gain_mult = 0.4
 	
 	ruler_designer_cost = 80
 	
