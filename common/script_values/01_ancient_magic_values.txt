@@ -83,48 +83,81 @@ magic_circles_owned_by_character = {
 }
 
 ancient_magic_mana_gen = {
-	value = num_mage_perks
-	multiply = mana_gen_per_perk
-	add = {
-		value = mage_potency
-		multiply = mana_gen_per_potency
-	}
-	add = {
-		value = magic_circles_owned_by_character
-		multiply = mana_gen_per_magic_circle
-	}
-	if = {
-		limit = { has_focus = magic_arcana_focus }
-		subtract = mana_gen_lifestyle
-	}
-	else_if = {
-		limit = { has_focus = magic_mana_focus }
-		add = mana_gen_lifestyle
-	}
+	value = 0
+	add = ancient_magic_mana_gen_gen_only
+	add = ancient_magic_mana_gen_drain_only
+}
+
+ancient_magic_mana_gen_gen_only = {
+	value = 0
+	add = ancient_magic_mana_gen_perks
+	add = ancient_magic_mana_gen_potency
+	add = ancient_magic_mana_gen_circles
+	add = ancient_magic_mana_gen_lifestyle
 	if = {
 		limit = { dynasty = { has_dynasty_perk = arcane_legacy_2 } }
 		add = mana_gen_legacy_2
 	}
-	subtract = mana_drain
 }
 
-mana_drain = {
+ancient_magic_mana_gen_perks = {
+	value = num_mage_perks
+	multiply = mana_gen_per_perk
+}
+
+ancient_magic_mana_gen_potency = {
+	value = mage_potency
+	multiply = mana_gen_per_potency
+}
+
+ancient_magic_mana_gen_circles = {
+	value = magic_circles_owned_by_character
+	multiply = mana_gen_per_magic_circle
+}
+
+ancient_magic_mana_gen_lifestyle = {
+	value = 0
+	if = {
+		limit = { has_focus = magic_mana_focus }
+		add = mana_gen_lifestyle
+	}
+}
+
+ancient_magic_mana_gen_drain_only = {
+	add = ancient_magic_mana_drain_auras
+	add = ancient_magic_mana_drain_lifestyle
+	add = ancient_magic_mana_drain_disease
+}
+
+ancient_magic_mana_drain_auras = {
+	value = 0
+	subtract = {
+		value = num_large_auras
+		multiply = mana_drain_large
+	}
+	subtract = {
+		value = num_average_auras
+		multiply = mana_drain_average
+	}
+	subtract = {
+		value = num_small_auras
+		multiply = mana_drain_small
+	}
+}
+
+ancient_magic_mana_drain_lifestyle = {
+	value = 0
+	if = {
+		limit = { has_focus = magic_arcana_focus }
+		subtract = mana_gen_lifestyle
+	}
+}
+
+ancient_magic_mana_drain_disease = {
 	value = 0
 	if = {
 		limit = { has_trait = mana_devouring }
 		add = mana_drain_disease
-	}
-	add = {
-		value = num_large_auras
-		multiply = mana_drain_large
-	}
-	add = {
-		value = num_average_auras
-		multiply = mana_drain_average
-	}
-	add = {
-		value = num_small_auras
-		multiply = mana_drain_small
 	}
 }
 

@@ -1,0 +1,57 @@
+﻿hud_mana_gen_perks = {
+	is_shown = {
+		num_mage_perks > 0
+	}
+}
+
+hud_mana_gen_potency = {
+	is_shown = {
+		has_trait = magic_potential
+	}
+}
+
+hud_mana_gen_circles = {
+	is_shown = {
+		magic_circles_owned_by_character > 0
+	}
+}
+
+hud_mana_gen_lifestyle = {
+	is_shown = {
+		has_focus = magic_mana_focus
+	}
+}
+
+hud_mana_gen_legacy = {
+	is_shown = {
+		dynasty = { has_dynasty_perk = arcane_legacy_2 }
+	}
+}
+
+hud_mana_drain_auras = {
+	is_shown = {
+		OR = {
+			num_small_auras > 0
+			num_average_auras > 0
+			num_large_auras > 0
+		}
+	}
+}
+
+hud_mana_drain_lifestyle = {
+	is_shown = {
+		has_focus = magic_arcana_focus
+	}
+}
+
+hud_mana_drain_disease1 = {
+	is_shown = {
+		has_trait = mana_devouring_1
+	}
+}
+
+hud_mana_drain_disease2 = {
+	is_shown = {
+		has_trait = mana_devouring_2
+	}
+}
