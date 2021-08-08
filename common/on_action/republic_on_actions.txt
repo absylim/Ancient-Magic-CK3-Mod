@@ -133,7 +133,7 @@ yearly_republic_check = {
 			all_elected_ruler_laws = yes
 			all_bicameral_laws = yes
 		}
-		every_valid_republic_holder = {
+		every_valid_magocracy_holder = {
 			limit = { primary_title.republic_families_size_need < 5 }
 			primary_title = {
 				create_characters_for_republic = yes
@@ -942,7 +942,7 @@ yearly_republic_check = {
 		random_living_character = {
 			initialize_global_election_terms = yes
 		}
-		every_valid_republic_holder = {
+		every_valid_magocracy_holder = {
 			limit = { primary_title = { list_size = { name = republic_families_list value < 5 } } }
 		}
 		if = {
@@ -1158,7 +1158,7 @@ prepare_republic_laws = {
 		all_senate_laws = yes
 		all_elected_ruler_laws = yes
 		all_bicameral_laws = yes
-		every_valid_council_republic_holder = {
+		every_valid_council_magocracy_holder = {
 			primary_title = {
 				post_appeasement_change = yes
 			}
