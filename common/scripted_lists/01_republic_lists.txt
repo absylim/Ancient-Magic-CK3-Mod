@@ -12,7 +12,7 @@ valid_council_magocracy_holder = {
 	} 
 }
 
-valid_republic_coup_enemy_holder = {
+valid_magocracy_coup_enemy_holder = {
 	base = vassal 
 	conditions = {
 		save_temporary_scope_as = this_vassal

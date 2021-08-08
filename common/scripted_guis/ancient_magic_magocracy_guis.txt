@@ -1,103 +1,20 @@
 ﻿#Inspired by Res Publica
-has_republic_government = {
+has_magocracy_government = {
 	scope = character
 	is_shown = {
 		OR = {
-			holds_valid_merchant_republic = yes
+			holds_valid_magocracy = yes
 			liege = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 			}
 		}
 	}
 }
 
-personally_has_republic_government = {
+personally_has_magocracy_government = {
 	scope = character
 	is_shown = {
-		holds_valid_merchant_republic = yes
-	}
-}
-
-has_republic_government_not_senate = {
-	scope = character
-	is_shown = {
-		OR = {
-			AND = {
-				holds_valid_merchant_republic = yes
-				NOT = {
-					republic_has_senate_form = yes
-				}
-			}
-			liege = {
-				AND = {
-					holds_valid_merchant_republic = yes
-					NOT = {
-						republic_has_senate_form = yes
-					}
-				}
-			}
-		}
-	}
-}
-
-has_republic_senate_government = {
-	scope = character
-	is_shown = {
-		OR = {
-			AND = {
-				holds_valid_merchant_republic = yes
-				republic_has_senate_form = yes
-			}
-			liege = {
-				AND = {
-					holds_valid_merchant_republic = yes
-					republic_has_senate_form = yes
-				}
-			}
-		}
-	}
-	is_valid = {
-		custom_description = {
-			text = "holds_the_republic_trigger"
-			is_landed = yes
-			holds_valid_merchant_republic = yes
-		}
-		custom_description = {
-			text = "does_not_have_current_form_trigger"
-			NOT = {
-				republic_has_senate_form = yes
-			}
-		}
-		custom_description = {
-			text = "controls_half_the_republic_trigger"
-			house = {
-				clean_family_votes >= 40
-			}
-		}
-		custom_description = {
-			text = "has_not_reformed_in_hundred_years_trigger"
-			primary_title = {
-				NOT = {
-					has_variable = reformed_recently
-				}
-			}
-		}
-	}
-	effect = {
-		custom_description = {
-			text = "effect_reform_into_senate"
-			reform_into_senate_republic = yes
-		}
-		house = {
-			var:titular_republic = {
-				every_in_list = {
-					variable = republic_families_list
-					house_head = {
-						trigger_event = merchant_republic_events.1009
-					}
-				}
-			}
-		}
+		holds_valid_magocracy = yes
 	}
 }
 
@@ -106,13 +23,13 @@ has_republic_council_government = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
-				republic_has_council_form = yes
+				holds_valid_magocracy = yes
+				magocracy_has_council_form = yes
 			}
 			liege = {
 				AND = {
-					holds_valid_merchant_republic = yes
-					republic_has_council_form = yes
+					holds_valid_magocracy = yes
+					magocracy_has_council_form = yes
 				}
 			}
 		}
@@ -121,12 +38,12 @@ has_republic_council_government = {
 		custom_description = {
 			text = "holds_the_republic_trigger"
 			is_landed = yes
-			holds_valid_merchant_republic = yes
+			holds_valid_magocracy = yes
 		}
 		custom_description = {
 			text = "does_not_have_current_form_trigger"
 			NOT = {
-				republic_has_council_form = yes
+				magocracy_has_council_form = yes
 			}
 		}
 		custom_description = {
@@ -152,7 +69,7 @@ has_republic_council_government = {
 		house = {
 			var:titular_republic = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = merchant_republic_events.1009
 					}
@@ -167,12 +84,12 @@ has_republic_elected_ruler_government = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				republic_has_elected_ruler_form = yes
 			}
 			liege = {
 				AND = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					republic_has_elected_ruler_form = yes
 				}
 			}
@@ -182,7 +99,7 @@ has_republic_elected_ruler_government = {
 		custom_description = {
 			text = "holds_the_republic_trigger"
 			is_landed = yes
-			holds_valid_merchant_republic = yes
+			holds_valid_magocracy = yes
 		}
 		custom_description = {
 			text = "does_not_have_current_form_trigger"
@@ -213,7 +130,7 @@ has_republic_elected_ruler_government = {
 		house = {
 			var:titular_republic = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = merchant_republic_events.1009
 					}
@@ -228,12 +145,12 @@ has_republic_bicameral_government = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				republic_has_bicameral_form = yes
 			}
 			liege = {
 				AND = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					republic_has_bicameral_form = yes
 				}
 			}
@@ -243,7 +160,7 @@ has_republic_bicameral_government = {
 		custom_description = {
 			text = "holds_the_republic_trigger"
 			is_landed = yes
-			holds_valid_merchant_republic = yes
+			holds_valid_magocracy = yes
 		}
 		custom_description = {
 			text = "does_not_have_current_form_trigger"
@@ -274,7 +191,7 @@ has_republic_bicameral_government = {
 		house = {
 			var:titular_republic = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = merchant_republic_events.1009
 					}
@@ -289,7 +206,7 @@ reform_into_feudal_from_republic = {
 		custom_description = {
 			text = "holds_the_republic_trigger"
 			is_landed = yes
-			holds_valid_merchant_republic = yes
+			holds_valid_magocracy = yes
 		}
 		has_realm_law = crown_authority_3
 		custom_description = {
@@ -305,7 +222,7 @@ reform_into_feudal_from_republic = {
 		house = {
 			var:titular_republic = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = merchant_republic_events.1009
 					}
@@ -319,14 +236,14 @@ government_has_life_title_term = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = life_title_term
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = life_title_term
 					}
@@ -336,11 +253,11 @@ government_has_life_title_term = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:life_title_term } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:life_title_term } } }
 		}
 	}
@@ -350,14 +267,14 @@ government_has_twenty_year_term = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = twenty_year_term
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = twenty_year_term
 					}
@@ -367,11 +284,11 @@ government_has_twenty_year_term = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:twenty_year_term } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:twenty_year_term } } }
 		}
 	}
@@ -381,14 +298,14 @@ government_has_ten_year_term = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = ten_year_term
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = ten_year_term
 					}
@@ -398,11 +315,11 @@ government_has_ten_year_term = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:ten_year_term } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:ten_year_term } } }
 		}
 	}
@@ -412,14 +329,14 @@ government_has_four_year_term = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = four_year_term
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = four_year_term
 					}
@@ -429,11 +346,11 @@ government_has_four_year_term = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:four_year_term } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:four_year_term } } }
 		}
 	}
@@ -443,14 +360,14 @@ government_has_two_year_term = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = two_year_term
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = two_year_term
 					}
@@ -460,11 +377,11 @@ government_has_two_year_term = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:two_year_term } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:two_year_term } } }
 		}
 	}
@@ -474,14 +391,14 @@ government_has_one_year_term = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = one_year_term
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = one_year_term
 					}
@@ -491,11 +408,11 @@ government_has_one_year_term = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:one_year_term } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:one_year_term } } }
 		}
 	}
@@ -505,14 +422,14 @@ government_has_senate_vote_war_declaration = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = senate_vote_war_declaration
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = senate_vote_war_declaration
 					}
@@ -522,11 +439,11 @@ government_has_senate_vote_war_declaration = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_war_declaration } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_war_declaration } } }
 		}
 	}
@@ -536,14 +453,14 @@ government_has_council_approval_war_declaration = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = council_approval_war_declaration
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = council_approval_war_declaration
 					}
@@ -553,11 +470,11 @@ government_has_council_approval_war_declaration = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:council_approval_war_declaration } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:council_approval_war_declaration } } }
 		}
 	}
@@ -567,14 +484,14 @@ government_has_leaders_discretion_war_declaration = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = leaders_discretion_war_declaration
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = leaders_discretion_war_declaration
 					}
@@ -584,11 +501,11 @@ government_has_leaders_discretion_war_declaration = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_war_declaration } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_war_declaration } } }
 		}
 	}
@@ -598,14 +515,14 @@ government_has_senate_vote_council_appointment = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = senate_vote_council_appointment
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = senate_vote_council_appointment
 					}
@@ -615,11 +532,11 @@ government_has_senate_vote_council_appointment = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_council_appointment } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_council_appointment } } }
 		}
 	}
@@ -629,14 +546,14 @@ government_has_council_approval_council_appointment = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = council_approval_council_appointment
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = council_approval_council_appointment
 					}
@@ -646,11 +563,11 @@ government_has_council_approval_council_appointment = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:council_approval_council_appointment } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:council_approval_council_appointment } } }
 		}
 	}
@@ -660,14 +577,14 @@ government_has_leaders_discretion_council_appointment = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = leaders_discretion_council_appointment
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = leaders_discretion_council_appointment
 					}
@@ -677,11 +594,11 @@ government_has_leaders_discretion_council_appointment = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_council_appointment } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_council_appointment } } }
 		}
 	}
@@ -691,14 +608,14 @@ government_has_senate_vote_imprisonment_rights = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = senate_vote_imprisonment_rights
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = senate_vote_imprisonment_rights
 					}
@@ -708,11 +625,11 @@ government_has_senate_vote_imprisonment_rights = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_imprisonment_rights } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_imprisonment_rights } } }
 		}
 	}
@@ -722,14 +639,14 @@ government_has_council_approval_imprisonment_rights = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = council_approval_imprisonment_rights
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = council_approval_imprisonment_rights
 					}
@@ -739,11 +656,11 @@ government_has_council_approval_imprisonment_rights = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:council_approval_imprisonment_rights } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:council_approval_imprisonment_rights } } }
 		}
 	}
@@ -753,14 +670,14 @@ government_has_leaders_discretion_imprisonment_rights = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = leaders_discretion_imprisonment_rights
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = leaders_discretion_imprisonment_rights
 					}
@@ -770,11 +687,11 @@ government_has_leaders_discretion_imprisonment_rights = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_imprisonment_rights } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_imprisonment_rights } } }
 		}
 	}
@@ -784,14 +701,14 @@ government_has_senate_vote_title_revocation = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = senate_vote_title_revocation
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = senate_vote_title_revocation
 					}
@@ -801,11 +718,11 @@ government_has_senate_vote_title_revocation = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_title_revocation } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_title_revocation } } }
 		}
 	}
@@ -815,14 +732,14 @@ government_has_council_approval_title_revocation = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = council_approval_title_revocation
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = council_approval_title_revocation
 					}
@@ -832,11 +749,11 @@ government_has_council_approval_title_revocation = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:council_approval_title_revocation } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:council_approval_title_revocation } } }
 		}
 	}
@@ -846,14 +763,14 @@ government_has_leaders_discretion_title_revocation = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = leaders_discretion_title_revocation
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = leaders_discretion_title_revocation
 					}
@@ -863,11 +780,11 @@ government_has_leaders_discretion_title_revocation = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_title_revocation } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_title_revocation } } }
 		}
 	}
@@ -877,14 +794,14 @@ government_has_senate_vote_title_granting = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = senate_vote_title_granting
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = senate_vote_title_granting
 					}
@@ -894,11 +811,11 @@ government_has_senate_vote_title_granting = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_title_granting } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_title_granting } } }
 		}
 	}
@@ -908,14 +825,14 @@ government_has_council_approval_title_granting = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = council_approval_title_granting
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = council_approval_title_granting
 					}
@@ -925,11 +842,11 @@ government_has_council_approval_title_granting = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:council_approval_title_granting } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:council_approval_title_granting } } }
 		}
 	}
@@ -939,14 +856,14 @@ government_has_leaders_discretion_title_granting = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = leaders_discretion_title_granting
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = leaders_discretion_title_granting
 					}
@@ -956,11 +873,11 @@ government_has_leaders_discretion_title_granting = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_title_granting } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_title_granting } } }
 		}
 	}
@@ -1105,7 +1022,7 @@ most_likely_to_succeed = {
 	effect = {
 		house.var:titular_republic = {
 			ordered_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				order_by = family_respect
 				position = 0
 				random_in_list = {
@@ -1126,14 +1043,14 @@ government_has_both_houses_vote_war_declaration = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = both_houses_vote_war_declaration
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = both_houses_vote_war_declaration
 					}
@@ -1143,11 +1060,11 @@ government_has_both_houses_vote_war_declaration = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:both_houses_vote_war_declaration } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:both_houses_vote_war_declaration } } }
 		}
 	}
@@ -1157,14 +1074,14 @@ government_has_higher_house_vote_war_declaration = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = higher_house_vote_war_declaration
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = higher_house_vote_war_declaration
 					}
@@ -1174,11 +1091,11 @@ government_has_higher_house_vote_war_declaration = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:higher_house_vote_war_declaration } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:higher_house_vote_war_declaration } } }
 		}
 	}
@@ -1188,14 +1105,14 @@ government_has_lower_house_vote_war_declaration = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = lower_house_vote_war_declaration
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = lower_house_vote_war_declaration
 					}
@@ -1205,11 +1122,11 @@ government_has_lower_house_vote_war_declaration = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:lower_house_vote_war_declaration } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:lower_house_vote_war_declaration } } }
 		}
 	}
@@ -1219,14 +1136,14 @@ government_has_leaders_discretion_war_declaration = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = leaders_discretion_war_declaration
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = leaders_discretion_war_declaration
 					}
@@ -1236,11 +1153,11 @@ government_has_leaders_discretion_war_declaration = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_war_declaration } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_war_declaration } } }
 		}
 	}
@@ -1251,14 +1168,14 @@ government_has_both_houses_vote_citizenship = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = both_houses_vote_citizenship
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = both_houses_vote_citizenship
 					}
@@ -1268,11 +1185,11 @@ government_has_both_houses_vote_citizenship = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:both_houses_vote_citizenship } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:both_houses_vote_citizenship } } }
 		}
 	}
@@ -1282,14 +1199,14 @@ government_has_higher_house_vote_citizenship = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = higher_house_vote_citizenship
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = higher_house_vote_citizenship
 					}
@@ -1299,11 +1216,11 @@ government_has_higher_house_vote_citizenship = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:higher_house_vote_citizenship } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:higher_house_vote_citizenship } } }
 		}
 	}
@@ -1313,14 +1230,14 @@ government_has_lower_house_vote_citizenship = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = lower_house_vote_citizenship
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = lower_house_vote_citizenship
 					}
@@ -1330,11 +1247,11 @@ government_has_lower_house_vote_citizenship = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:lower_house_vote_citizenship } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:lower_house_vote_citizenship } } }
 		}
 	}
@@ -1344,14 +1261,14 @@ government_has_leaders_discretion_citizenship = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = leaders_discretion_citizenship
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = leaders_discretion_citizenship
 					}
@@ -1361,11 +1278,11 @@ government_has_leaders_discretion_citizenship = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_citizenship } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_citizenship } } }
 		}
 	}
@@ -1375,14 +1292,14 @@ government_has_both_houses_vote_constitutional_amendments = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = both_houses_vote_constitutional_amendments
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = both_houses_vote_constitutional_amendments
 					}
@@ -1392,11 +1309,11 @@ government_has_both_houses_vote_constitutional_amendments = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:both_houses_vote_constitutional_amendments } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:both_houses_vote_constitutional_amendments } } }
 		}
 	}
@@ -1406,14 +1323,14 @@ government_has_higher_house_vote_constitutional_amendments = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = higher_house_vote_constitutional_amendments
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = higher_house_vote_constitutional_amendments
 					}
@@ -1423,11 +1340,11 @@ government_has_higher_house_vote_constitutional_amendments = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:higher_house_vote_constitutional_amendments } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:higher_house_vote_constitutional_amendments } } }
 		}
 	}
@@ -1437,14 +1354,14 @@ government_has_lower_house_vote_constitutional_amendments = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = lower_house_vote_constitutional_amendments
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = lower_house_vote_constitutional_amendments
 					}
@@ -1454,11 +1371,11 @@ government_has_lower_house_vote_constitutional_amendments = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:lower_house_vote_constitutional_amendments } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:lower_house_vote_constitutional_amendments } } }
 		}
 	}
@@ -1468,14 +1385,14 @@ government_has_leaders_discretion_constitutional_amendments = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = leaders_discretion_constitutional_amendments
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = leaders_discretion_constitutional_amendments
 					}
@@ -1485,11 +1402,11 @@ government_has_leaders_discretion_constitutional_amendments = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_constitutional_amendments } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_constitutional_amendments } } }
 		}
 	}
@@ -1499,14 +1416,14 @@ government_has_both_houses_vote_title_powers = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = both_houses_vote_title_powers
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = both_houses_vote_title_powers
 					}
@@ -1516,11 +1433,11 @@ government_has_both_houses_vote_title_powers = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:both_houses_vote_title_powers } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:both_houses_vote_title_powers } } }
 		}
 	}
@@ -1530,14 +1447,14 @@ government_has_higher_house_vote_title_powers = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = higher_house_vote_title_powers
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = higher_house_vote_title_powers
 					}
@@ -1547,11 +1464,11 @@ government_has_higher_house_vote_title_powers = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:higher_house_vote_title_powers } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:higher_house_vote_title_powers } } }
 		}
 	}
@@ -1561,14 +1478,14 @@ government_has_lower_house_vote_title_powers = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = lower_house_vote_title_powers
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = lower_house_vote_title_powers
 					}
@@ -1578,11 +1495,11 @@ government_has_lower_house_vote_title_powers = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:lower_house_vote_title_powers } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:lower_house_vote_title_powers } } }
 		}
 	}
@@ -1592,14 +1509,14 @@ government_has_leaders_discretion_title_powers = {
 	is_shown = {
 		OR = {
 			AND = {
-				holds_valid_merchant_republic = yes
+				holds_valid_magocracy = yes
 				primary_title = {
 					has_variable = leaders_discretion_title_powers
 				}
 			}
 			AND = {
 				liege = {
-					holds_valid_merchant_republic = yes
+					holds_valid_magocracy = yes
 					primary_title = {
 						has_variable = leaders_discretion_title_powers
 					}
@@ -1609,11 +1526,11 @@ government_has_leaders_discretion_title_powers = {
 	}
 	effect = {
 		if = {
-			limit = { holds_valid_merchant_republic = yes }
+			limit = { holds_valid_magocracy = yes }
 			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_title_powers } }
 		}
 		if = {
-			limit = { liege = { holds_valid_merchant_republic = yes } }
+			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_title_powers } } }
 		}
 	}
