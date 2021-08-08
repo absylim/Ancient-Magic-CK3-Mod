@@ -13,7 +13,7 @@
 	}
 }
 
-main_republic_succession = {
+main_magocracy_succession = {
 	holder = { save_scope_as = old_holder }
 	if = {
 		limit = { NOT = { scope:election_winner = scope:old_holder } }
@@ -1415,7 +1415,7 @@ trigger_elected_ruler_quick_election = {
 	}
 }
 
-create_characters_for_republic = {
+create_characters_for_magocracy = {
 	save_scope_as = republic_in_need
 	if = {
 		limit = { republic_families_size_need = 4 }
@@ -1425,6 +1425,7 @@ create_characters_for_republic = {
 			faith = scope:republic_in_need.holder.faith
 			gender_female_chance = 5
 			age = { 30 60 }
+			template = magocracy_councilor_template
 			save_scope_as = new_character
 		}
 		scope:new_character = {
@@ -1440,6 +1441,7 @@ create_characters_for_republic = {
 			faith = scope:republic_in_need.holder.faith
 			gender_female_chance = 5
 			age = { 30 60 }
+			template = magocracy_councilor_template
 			save_scope_as = new_character
 		}
 		scope:new_character = {
@@ -1455,6 +1457,7 @@ create_characters_for_republic = {
 			faith = scope:republic_in_need.holder.faith
 			gender_female_chance = 5
 			age = { 30 60 }
+			template = magocracy_councilor_template
 			save_scope_as = new_character
 		}
 		scope:new_character = {
@@ -1470,6 +1473,7 @@ create_characters_for_republic = {
 			faith = scope:republic_in_need.holder.faith
 			gender_female_chance = 5
 			age = { 30 60 }
+			template = magocracy_councilor_template
 			save_scope_as = new_character
 		}
 		scope:new_character = {

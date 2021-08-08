@@ -136,7 +136,7 @@ yearly_republic_check = {
 		every_valid_magocracy_holder = {
 			limit = { primary_title.republic_families_size_need < 5 }
 			primary_title = {
-				create_characters_for_republic = yes
+				create_characters_for_magocracy = yes
 			}
 		}
 		every_living_character = {

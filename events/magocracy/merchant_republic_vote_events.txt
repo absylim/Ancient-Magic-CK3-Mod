@@ -2667,7 +2667,7 @@ republic_vote_events.1014 = { # Vote Over
 				}
 				scope:electee_five = { save_scope_as = election_winner }
 			}
-			main_republic_succession = yes
+			main_magocracy_succession = yes
 		}
 	}
 }
