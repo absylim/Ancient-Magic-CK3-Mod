@@ -143,10 +143,11 @@ glimpse_the_future_perk = {
 	parent = time_mage_perk
 }
 
-finacial_times_perk = {
+financial_times_perk = {
 	lifestyle = arcane_lifestyle
 	tree = time_magic
 	position = { 0 2.5 }
+	parent = glimpse_the_future_perk
 	icon = node_diplomacy
 	
 	auto_selection_weight = {
@@ -198,7 +199,6 @@ finacial_times_perk = {
 		}
 	}
 	
-	parent = glimpse_the_future_perk
 	
 	effect = {
 		custom_description_no_bullet = {
