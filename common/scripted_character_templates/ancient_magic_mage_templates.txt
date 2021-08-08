@@ -1,9 +1,36 @@
 wandering_mage_character = {
 	age = { 16 65 }
 	random_traits_list = {
-		count = 1
-		mage = {}
+	count = { 0 1 }
+		intellect_good_1 = {}
+		intellect_good_2 = {}
+		intellect_good_3 = {}
 	}
+	random_traits_list = {
+		count = { 0 3 }
+		diplomat = {}
+		family_first = {}
+		august = {}
+		reveler_1 = {}
+		greedy = {}
+		arrogant = {}
+		deceitful = {}
+		gregarious = {}
+		trusting = {}
+		callous = {}
+		fickle = {}
+		forgiving = {}
+		poet = {}
+		chaste = {}
+		content = {}
+		ambitious = {}
+		patient = {}
+		temperate = {}
+		diligent = {}
+		lazy = {}
+		cynical = {}
+	}
+	trait = mage
 	dynasty = none
 	random_traits = yes
 	faith = this.faith
@@ -12,4 +39,31 @@ wandering_mage_character = {
 		min_template_decent_skill
 		max_template_decent_skill
 	}
+	
+	after_creation = {
+		random_list = {
+			50 = { add_arcane_lifestyle_xp = 2000 }
+			30 = { add_arcane_lifestyle_xp = 3000 }
+			15 = { add_arcane_lifestyle_xp = 4000 }
+			5 = { add_arcane_lifestyle_xp = 5000 }
+		}
+		if = {
+			limit = {
+				has_trait = intellect_good_3
+			}
+			random_list = {
+				50 = {}
+				30 = {
+					add_arcane_lifestyle_xp = 500
+				}
+				20 = {
+					add_arcane_lifestyle_xp = 1000
+				}
+				5 = {
+					add_arcane_lifestyle_xp = 1500
+				}
+			}
+		}
+	}
+
 }
