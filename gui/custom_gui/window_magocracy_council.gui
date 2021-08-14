@@ -1,0 +1,217 @@
+
+######################################################
+################## COUNCIL WINDOW ####################
+######################################################
+
+window = {
+	name = "republic_council_window"
+	widgetid = "republic_council_window_id"
+	parentanchor = top|right
+	layer = windows_layer
+	movable = no
+
+	using = Window_Size_MainTab
+
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+		using = Sound_WindowShow_Standard
+		using = Window_Position_MainTab
+
+		on_start = "[GetVariableSystem.Set( 'republic_council_tabs', 'my_republic_council' )]"
+	}
+
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+		using = Sound_WindowHide_Standard
+		using = Window_Position_MainTab_Hide
+	}
+	background = {
+		using = Background_Frame
+		margin = { -5 2 }
+		using = Color_Grey
+
+		spriteType = Corneredtiled
+		spriteborder = { 7 7 }
+		alpha = 0.7
+	}
+						
+	margin_widget = {
+		size = { 100% 100% }
+		margin = { 0 26 }
+		margin_right = 20
+
+		widget = {
+			size = { 100% 100% }
+
+			vbox = {
+				using = Window_Margins
+
+				header_pattern = {
+					layoutpolicy_horizontal = expanding
+
+					blockoverride "header_text"
+					{
+						text = "REPUBLICCOUNCILWINDOW_TITLE"
+					}
+
+					blockoverride "button_close"
+					{
+						onclick = "[RepublicCouncilWindow.Close]"
+					}
+				}
+
+				widget = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+
+					vbox_republic_council_layout = {
+						name = "my_council"
+						visible = "[CouncilWindow.IsPlayerCouncilShown]"
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+
+						using = Animation_Tab_Switch
+					}
+				}
+			}
+		}
+	}
+}
+
+
+######################################################
+################ TYPES AND TEMPLATES #################
+######################################################
+
+types RepublicCouncilWindow {
+	type widget_republic_councillor_item = widget {
+		size = { 200 220 }
+
+		### Required Datacontexts
+		# A council position type
+		# The councillor
+		# The active council task
+		widget = {
+			visible = "[Not(GuiCouncilPosition.ArePotentialTasksVisible)]"
+			size = { 100% 100% }
+
+			state = {
+				name = _show
+				using = Animation_FadeIn_Quick
+			}
+
+			state = {
+				name = _hide
+				using = Animation_FadeOut_Quick
+			}
+
+			portrait_council = {
+				name = "councillor_portrait"
+				datacontext = "[ActiveCouncilTask.GetCouncillor]"
+				visible = "[Character.IsValid]"
+				parentanchor = bottom
+				position = { 0 4 }
+				blockoverride "portrait_button_no_character_text"
+				{
+					text = "PORTRAIT_NO_COUNCILLOR"
+				}
+
+				blockoverride "portrait_button"
+				{
+					using = tooltip_ws
+				}
+			}
+		}
+	}
+}
+
+types RepublicCouncilTaskTypes {
+	
+	type vbox_republic_council_layout = vbox {
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			maximumsize = { -1 932 }
+			spacing = 5
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				margin = { 10 0 }
+				spacing = 5
+				
+				
+				widget_republic_councillor_item = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_republic').Title.MakeScope.Var('councillor_4').House.GetHeadOfHouse]"
+
+					background =  {
+						texture = "gfx/interface/skinned/illustrations/council/bg_council_chancellor.dds"
+						fittype = centercrop
+						alpha = 0.6
+						using = Mask_Rough_Edges
+					}
+
+					background = {
+						texture = "gfx/interface/component_masks/mask_vignette.dds"
+						color = { 0.15 0.15 0.15 1 }
+						alpha = 0.3
+					}
+				}
+
+				
+				widget_republic_councillor_item = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					datacontext = "[CouncilWindow.GetCouncillor('councillor_chancellor')]"
+					datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+					datacontext = "[ActiveCouncilTask.GetPositionType]"
+					datacontext = "[ActiveCouncilTask.GetCouncillor]"
+
+					background =  {
+						texture = "gfx/interface/skinned/illustrations/council/bg_council_chancellor.dds"
+						fittype = centercrop
+						alpha = 0.6
+						using = Mask_Rough_Edges
+					}
+
+					background = {
+						texture = "gfx/interface/component_masks/mask_vignette.dds"
+						color = { 0.15 0.15 0.15 1 }
+						alpha = 0.3
+					}
+				}
+
+				widget_republic_councillor_item = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					datacontext = "[CouncilWindow.GetCouncillor('councillor_chancellor')]"
+					datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+					datacontext = "[ActiveCouncilTask.GetPositionType]"
+					datacontext = "[ActiveCouncilTask.GetCouncillor]"
+
+					background =  {
+						texture = "gfx/interface/skinned/illustrations/council/bg_council_chancellor.dds"
+						fittype = centercrop
+						alpha = 0.6
+						using = Mask_Rough_Edges
+					}
+
+					background = {
+						texture = "gfx/interface/component_masks/mask_vignette.dds"
+						color = { 0.15 0.15 0.15 1 }
+						alpha = 0.3
+					}
+				}
+			}
+
+		}
+
+		expand = {
+			layoutpolicy_vertical = growing
+		}
+	}
+}

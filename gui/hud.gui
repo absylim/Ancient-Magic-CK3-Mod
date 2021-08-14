@@ -922,8 +922,35 @@ widget = {
 						on_start = "[PdxGuiInterruptThenTriggerAllAnimations('hud_tab_glow_council_enter','hud_tab_glow_council_leave')]"
 					}
 				}
-				################################
-				###########
+				######################################
+				########### Republic button ##########
+				######################################
+
+				button_hud_main_tab = {
+					name = "tab_republic"
+					tooltip = "REPUBLIC_BUTTON"
+					datacontext = "[GetScriptedGui( 'has_magocracy_government' )]"
+					visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+					blockoverride "maintab_button"
+					{
+						texture = "gfx/interface/skinned/hud_maintab/maintab_council.dds"
+
+						onclick = "[ToggleGameViewData('republic_council_window', GetPlayer.GetID)]"
+						shortcut = "republic_council_window"
+						down = "[IsGameViewOpen('republic_council_window')]"
+					}
+
+					state = {
+						name = _mouse_hierarchy_enter
+						on_start = "[PdxGuiInterruptThenTriggerAllAnimations('hud_tab_glow_council_leave','hud_tab_glow_council_enter')]"
+					}
+
+					state = {
+						name = _mouse_hierarchy_leave
+						on_start = "[PdxGuiInterruptThenTriggerAllAnimations('hud_tab_glow_council_enter','hud_tab_glow_council_leave')]"
+					}
+				}
 			}
 
 			widget = {

@@ -418,37 +418,6 @@ government_has_one_year_term = {
 	}
 }
 
-government_has_senate_vote_war_declaration = {
-	is_shown = {
-		OR = {
-			AND = {
-				holds_valid_magocracy = yes
-				primary_title = {
-					has_variable = senate_vote_war_declaration
-				}
-			}
-			AND = {
-				liege = {
-					holds_valid_magocracy = yes
-					primary_title = {
-						has_variable = senate_vote_war_declaration
-					}
-				}
-			}
-		}
-	}
-	effect = {
-		if = {
-			limit = { holds_valid_magocracy = yes }
-			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_war_declaration } }
-		}
-		if = {
-			limit = { liege = { holds_valid_magocracy = yes } }
-			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_war_declaration } } }
-		}
-	}
-}
-
 government_has_council_approval_war_declaration = {
 	is_shown = {
 		OR = {
@@ -507,37 +476,6 @@ government_has_leaders_discretion_war_declaration = {
 		if = {
 			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_war_declaration } } }
-		}
-	}
-}
-
-government_has_senate_vote_council_appointment = {
-	is_shown = {
-		OR = {
-			AND = {
-				holds_valid_magocracy = yes
-				primary_title = {
-					has_variable = senate_vote_council_appointment
-				}
-			}
-			AND = {
-				liege = {
-					holds_valid_magocracy = yes
-					primary_title = {
-						has_variable = senate_vote_council_appointment
-					}
-				}
-			}
-		}
-	}
-	effect = {
-		if = {
-			limit = { holds_valid_magocracy = yes }
-			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_council_appointment } }
-		}
-		if = {
-			limit = { liege = { holds_valid_magocracy = yes } }
-			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_council_appointment } } }
 		}
 	}
 }
@@ -604,37 +542,6 @@ government_has_leaders_discretion_council_appointment = {
 	}
 }
 
-government_has_senate_vote_imprisonment_rights = {
-	is_shown = {
-		OR = {
-			AND = {
-				holds_valid_magocracy = yes
-				primary_title = {
-					has_variable = senate_vote_imprisonment_rights
-				}
-			}
-			AND = {
-				liege = {
-					holds_valid_magocracy = yes
-					primary_title = {
-						has_variable = senate_vote_imprisonment_rights
-					}
-				}
-			}
-		}
-	}
-	effect = {
-		if = {
-			limit = { holds_valid_magocracy = yes }
-			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_imprisonment_rights } }
-		}
-		if = {
-			limit = { liege = { holds_valid_magocracy = yes } }
-			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_imprisonment_rights } } }
-		}
-	}
-}
-
 government_has_council_approval_imprisonment_rights = {
 	is_shown = {
 		OR = {
@@ -697,37 +604,6 @@ government_has_leaders_discretion_imprisonment_rights = {
 	}
 }
 
-government_has_senate_vote_title_revocation = {
-	is_shown = {
-		OR = {
-			AND = {
-				holds_valid_magocracy = yes
-				primary_title = {
-					has_variable = senate_vote_title_revocation
-				}
-			}
-			AND = {
-				liege = {
-					holds_valid_magocracy = yes
-					primary_title = {
-						has_variable = senate_vote_title_revocation
-					}
-				}
-			}
-		}
-	}
-	effect = {
-		if = {
-			limit = { holds_valid_magocracy = yes }
-			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_title_revocation } }
-		}
-		if = {
-			limit = { liege = { holds_valid_magocracy = yes } }
-			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_title_revocation } } }
-		}
-	}
-}
-
 government_has_council_approval_title_revocation = {
 	is_shown = {
 		OR = {
@@ -786,37 +662,6 @@ government_has_leaders_discretion_title_revocation = {
 		if = {
 			limit = { liege = { holds_valid_magocracy = yes } }
 			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:leaders_discretion_title_revocation } } }
-		}
-	}
-}
-
-government_has_senate_vote_title_granting = {
-	is_shown = {
-		OR = {
-			AND = {
-				holds_valid_magocracy = yes
-				primary_title = {
-					has_variable = senate_vote_title_granting
-				}
-			}
-			AND = {
-				liege = {
-					holds_valid_magocracy = yes
-					primary_title = {
-						has_variable = senate_vote_title_granting
-					}
-				}
-			}
-		}
-	}
-	effect = {
-		if = {
-			limit = { holds_valid_magocracy = yes }
-			primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_title_granting } }
-		}
-		if = {
-			limit = { liege = { holds_valid_magocracy = yes } }
-			liege = { primary_title = { add_to_variable_list = { name = proposed_laws_list target = flag:senate_vote_title_granting } } }
 		}
 	}
 }
@@ -1623,22 +1468,6 @@ start_smear_campaign = {
 	}
 }
 
-steal_senators = {
-	is_shown = {
-		republic_has_senate_form = yes
-	}
-	effect = {
-		trigger_event = republic_decision_events.1004
-	}
-}
-
-steal_senators_tt = {
-	effect = {
-		gain_senator_count = { GAINS = 1 }
-		scope:house_robbing = { lose_senator_count = { LOSSES = 1 } }
-	}
-}
-
 same_culture_citizenship_propose = {
 	is_valid = {
 		NOT = { house.var:titular_republic = { is_target_in_variable_list = { name = proposed_laws_list target = flag:same_culture_citizenship } } }
@@ -1749,11 +1578,5 @@ de_jure_citizenship_propose = {
 				target = flag:de_jure_citizenship
 			}
 		}
-	}
-}
-
-reform_dictatorship = {
-	is_valid = {
-		NOT = { house.var:titular_republic = { has_variable = current_dictatorship } }
 	}
 }
