@@ -51,12 +51,3 @@ unlock_master_of_puppets_spell = {
 	first = FIRST_UNLOCK_MASTER_OF_PUPPETS_SPELL
 	third = THIRD_UNLOCK_MASTER_OF_PUPPETS_SPELL
 }
-
-convert_undead = {
-	global = GLOBAL_CONVERT_UNDEAD
-	global_past = GLOBAL_CONVERT_UNDEAD_PAST
-	first = FIRST_CONVERT_UNDEAD
-	first_past = FIRST_CONVERT_UNDEAD_PAST
-	third = THIRD_CONVERT_UNDEAD
-	third_past = THIRD_CONVERT_UNDEAD_PAST
-}

@@ -3,7 +3,7 @@
  SPELL_TARGET_INTERACTION: "[second.GetFirstNameNoTooltip]"
  AM_ERROR_SPELL_TARGET_HERSELF_HIMSELF: "A.M. Error (CustomLoc 'SpellTargetHerselfHimself' ) *Probable Scoping Issue*"
  SPELL_TARGET_YOURSELF: "yourself"
- SPELL_TARGET: "[second.GetFirstNameNoTooltip]"
+ SPELL_TARGET: "#V [second.GetTitledFirstName]#!"
  SPELL_TARGET_HER_HIM: "[second.GetHerHim]"
  SPELL_TARGET_SHE_HE: "[second.GetSheHe]"
  SPELL_TARGET_SHE_HE_IS: "[second.GetSheHe] is"

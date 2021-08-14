@@ -34,8 +34,23 @@ unlock_death_stare_spell = {
 	third = THIRD_UNLOCK_DEATH_STARE_SPELL
 }
 
+death_stare = {
+	global = GLOBAL_DEATH_STARE_EFFECT
+	first = FIRST_DEATH_STARE_EFFECT
+	third = THIRD_DEATH_STARE_EFFECT
+}
+
 unlock_deacon_of_death_spell = {
 	global = GLOBAL_UNLOCK_DEACON_OF_DEATH_SPELL
 	first = FIRST_UNLOCK_DEACON_OF_DEATH_SPELL
 	third = THIRD_UNLOCK_DEACON_OF_DEATH_SPELL
+}
+
+convert_undead = {
+	global = GLOBAL_CONVERT_UNDEAD
+	global_past = GLOBAL_CONVERT_UNDEAD_PAST
+	first = FIRST_CONVERT_UNDEAD
+	first_past = FIRST_CONVERT_UNDEAD_PAST
+	third = THIRD_CONVERT_UNDEAD
+	third_past = THIRD_CONVERT_UNDEAD_PAST
 }
