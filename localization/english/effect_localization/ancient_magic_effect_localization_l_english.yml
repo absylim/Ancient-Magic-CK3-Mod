@@ -1,0 +1,33 @@
+﻿l_english:
+ # Perk effects
+ MANA_GEN_MAGIC_PERK_EFFECT: "Increases monthly mana generation by [EmptyScope.ScriptValue('mana_gen_per_perk')|0]"
+ MAX_MANA_MAGIC_PERK_EFFECT: "Increases max mana by [EmptyScope.ScriptValue('max_mana_per_perk')|0]"
+ MAGE_XP_MAGIC_PERK_EFFECT: "Gain [EmptyScope.ScriptValue('mage_xp_per_perk')|0] mage XP"
+ IMMUNE_TO_DISEASE_EFFECT: "Become immune to disease #weak prevents vanilla events from giving you diseases#!"
+
+ # Spell effects
+ GLOBAL_GAIN_MANA: "[Concept('mana','$AURA_ACTIVE$$VALUE|+0$')|E] is gained"
+ FIRST_GAIN_MANA: "You gain [Concept('mana','$AURA_ACTIVE$$VALUE|+0$')|E]"
+ THIRD_GAIN_MANA: "#V [CHARACTER.GetTitledFirstName]#! gains [Concept('mana','$AURA_ACTIVE$$VALUE|+0$')|E]"
+ GLOBAL_SPEND_MANA: "[Concept('mana','$AURA_INACTIVE$$VALUE|+0$')|E] is spent"
+ FIRST_SPEND_MANA: "You spend [Concept('mana','$AURA_INACTIVE$$VALUE|+0$')|E]"
+ THIRD_SPEND_MANA: "#V [CHARACTER.GetTitledFirstName]#! spends [Concept('mana','$AURA_INACTIVE$$VALUE|+0$')|E]"
+ GLOBAL_POSITIVE_MANA_DRAIN: "$DRAIN_ACTIVE$$VALUE|+0$ committed [mana|E] generation is regained"
+ FIRST_POSITIVE_MANA_DRAIN: "You regain $DRAIN_ACTIVE$$VALUE|+0$ committed [mana|E] generation"
+ THIRD_POSITIVE_MANA_DRAIN: "#V [CHARACTER.GetTitledFirstName]#! regains $DRAIN_ACTIVE$$VALUE|+0$ committed [mana|E] generation"
+ GLOBAL_NEGATIVE_MANA_DRAIN: "$DRAIN_INACTIVE$$VALUE|+0$ committed [mana|E] generation is regained"
+ FIRST_NEGATIVE_MANA_DRAIN: "You commit $DRAIN_INACTIVE$$VALUE|+0$ [mana|E] generation"
+ THIRD_NEGATIVE_MANA_DRAIN: "#V [CHARACTER.GetTitledFirstName]#! commits $DRAIN_INACTIVE$$VALUE|+0$ [mana|E] generation"
+
+ # Dynasty perk effects
+ ARCANE_LEGACY_1_EFFECT_LOC: "Improves chances of being born with [magic_potential|E]"
+ ARCANE_LEGACY_2_EFFECT_LOC: "[mana|E] generation per month: #P +[EmptyScope.ScriptValue('mana_gen_legacy_2')|0]#!"
+ ARCANE_LEGACY_3_EFFECT_LOC: "Maximum [mana|E]: #P +[EmptyScope.ScriptValue('max_mana_legacy_3')|0]#!"
+ ARCANE_LEGACY_4_EFFECT_LOC: "[mage_level|E]: #P +[EmptyScope.ScriptValue('mage_level_legacy_4')|0]#!"
+ ARCANE_LEGACY_5_EFFECT_LOC: "Improves chances of being born with greater [magic_potential|E]"
+
+ # Vanilla fixes
+ FIRST_REMOVE_ALL_CHARACTER_MODIFIER_INSTANCES_EFFECT: "You lose all $MODIFIER$ Modifiers"
+ FIRST_REMOVE_ALL_CHARACTER_MODIFIER_INSTANCES_PAST_EFFECT: "You lost all $MODIFIER$ Modifiers"
+ THIRD_REMOVE_ALL_CHARACTER_MODIFIER_INSTANCES_EFFECT: "#V [CHARACTER.GetTitledFirstName]#! loses all $MODIFIER$ Modifiers"
+ THIRD_REMOVE_ALL_CHARACTER_MODIFIER_INSTANCES_PAST_EFFECT: "#V [CHARACTER.GetTitledFirstName]#! lost all $MODIFIER$ Modifiers"

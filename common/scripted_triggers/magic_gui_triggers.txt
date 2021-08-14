@@ -1,0 +1,23 @@
+﻿trigger_magic_is_aura = {
+	switch = {
+		trigger = $SPELL$
+		flag:glimpse_the_future_spell = { always = yes }
+		flag:financial_times_spell = { always = yes }
+		flag:celerity_spell = { always = yes }
+		flag:mass_celerity_spell = { always = yes }
+		flag:slowness_spell = { always = yes }
+		flag:mass_slowness_spell = { always = yes }
+		flag:temporal_manipulation_spell = { always = yes }
+		flag:flame_aura_spell = { always = yes }
+		flag:flaming_weapons_spell = { always = yes }
+		flag:living_earthworks_spell = { always = yes }
+		flag:control_water_spell = { always = yes }
+		flag:drought_spell = { always = yes }
+		flag:elemental_warrior_spell = { always = yes }
+		flag:aura_of_death_spell = { always = yes }
+		flag:fertility_control_spell = { always = yes }
+		flag:beguiling_aura_spell = { always = yes }
+		flag:enchanting_aura_spell = { always = yes }
+		fallback = { always = no }
+	}
+}

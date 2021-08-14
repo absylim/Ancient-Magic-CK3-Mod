@@ -1,0 +1,135 @@
+﻿can_use_magic_window = {
+	is_valid = {
+		has_trait = mage
+	}
+}
+
+is_magic_window_open = {
+	scope = character
+	is_valid = {
+		has_variable = window_magic_view
+	}
+}
+
+toggle_magic_window = {
+	scope = character
+	effect = {
+		if = {
+			limit = {
+				has_variable = window_magic_view
+			}
+			effect_close_magic_window = yes
+		}
+		else = {
+			effect_open_magic_window = yes
+		}
+	}
+}
+
+select_character_target = {
+	scope = character
+	effect = {
+		set_variable = {
+			name = spell_target
+			value = scope:spell_target
+		}
+	}
+}
+
+select_list_option = {
+	scope = character
+	is_shown = {
+		AND = {
+			has_variable = list_option
+			exists = var:list_option
+			var:list_option = scope:list_option
+		}
+	}
+	effect = {
+		set_variable = {
+			name = list_option
+			value = scope:list_option
+		}
+	}
+}
+
+increase_times_repeated = {
+	is_valid = {
+		save_temporary_scope_value_as = {
+			name = potential_repeat_spell
+			value = {
+				value = var:repeat_spell
+				add = 1
+			}
+		}
+		save_temporary_scope_value_as = {
+			name = total_cost
+			value = {
+				value = scope:potential_repeat_spell
+				multiply = scope:spell_cost
+			}
+		}
+		AND = {
+			OR = {
+				NOT = { trigger_magic_is_aura = { SPELL = scope:spell } }
+				scope:potential_repeat_spell < mage_level
+			}
+			scope:total_cost.compare_value < var:mana
+		}
+	}
+	effect = {
+		change_variable = {
+			name = repeat_spell
+			add = 1
+		}
+	}
+}
+
+decrease_times_repeated = {
+	is_valid = {
+		var:repeat_spell > 1
+	}
+	effect = {
+		change_variable = {
+			name = repeat_spell
+			add = -1
+		}
+	}
+}
+
+dummy_spell = {
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		always = no
+	}
+	effect = {}
+}
+
+dummy_spell_spellbook = {
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+dummy_spell_has_properties = {
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+dummy_spell_has_list = {
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}

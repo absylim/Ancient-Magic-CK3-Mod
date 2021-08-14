@@ -1,0 +1,47 @@
+﻿unlock_glimpse_the_future_spell = {
+	custom_description_no_bullet = {
+		text = unlock_glimpse_the_future_spell
+	}
+}
+
+unlock_financial_times_spell = {
+	custom_description_no_bullet = {
+		text = unlock_financial_times_spell
+	}
+}
+
+unlock_celerity_spell = {
+	custom_description_no_bullet = {
+		text = unlock_celerity_spell
+	}
+}
+
+unlock_mass_celerity_spell = {
+	custom_description_no_bullet = {
+		text = unlock_mass_celerity_spell
+	}
+}
+
+unlock_slowness_spell = {
+	custom_description_no_bullet = {
+		text = unlock_slowness_spell
+	}
+}
+
+unlock_mass_slowness_spell = {
+	custom_description_no_bullet = {
+		text = unlock_mass_slowness_spell
+	}
+}
+
+unlock_temporal_manipulation_spell = {
+	custom_description_no_bullet = {
+		text = unlock_temporal_manipulation_spell
+	}
+}
+
+unlock_master_of_time_spell = {
+	custom_description_no_bullet = {
+		text = unlock_master_of_time_spell
+	}
+}

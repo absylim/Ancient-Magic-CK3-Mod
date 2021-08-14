@@ -61,6 +61,7 @@ reset_mana_system_decision = {
 		OR = {
 			has_perk = finacial_times_perk
 			has_variable = mage_xp
+			NOT = { has_global_variable_list = spell_categories_list }
 			debug_only = yes
 		}
 	}
@@ -96,6 +97,7 @@ reset_mana_system_decision = {
 					trigger_event = { on_action = on_reset_mana_system }
 				}
 			}
+			set_up_spells = yes
 		}
 	}
 

@@ -1,0 +1,10 @@
+﻿l_english:
+ #faith
+ cast_spell_interaction: "Cast a Spell"
+ cast_spell_interaction_desc: "[actor.GetNameOrMe|U] cast a spell on [actor.Custom2('SpellTargetYourself',recipient)]"
+ GLOBAL_SPELL_CASTER_EFFECT: "Casts a spell"
+ FIRST_SPELL_CASTER_EFFECT: "You cast a spell"
+ THIRD_SPELL_CASTER_EFFECT: "[ROOT.Char.GetNameOrMe|U] casts a spell"
+ GLOBAL_SPELL_TARGET_EFFECT: "Is targeted by a spell"
+ FIRST_SPELL_TARGET_EFFECT: "You are targeted by a spell"
+ THIRD_SPELL_TARGET_EFFECT: "[ROOT.Char.GetNameOrMe|U] is targeted by a spell"

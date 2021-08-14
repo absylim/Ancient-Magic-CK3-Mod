@@ -132,3 +132,8 @@ aura_of_death_modifier = {
 	dread_baseline_add = 5
 	stacking = yes
 }
+
+full_restoration_modifier = {
+	icon = health_positive
+	health = 100
+}

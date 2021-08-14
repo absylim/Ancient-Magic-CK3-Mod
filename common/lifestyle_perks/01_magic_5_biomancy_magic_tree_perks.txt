@@ -3,13 +3,13 @@
 	tree = biomancy_magic
 	position = { 2 0 }
 	icon = node_diplomacy
-	
+
 	auto_selection_weight = {
 		value = 11
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential	
+					has_trait = magic_potential
 					has_trait = education_arcane
 				}
 			}
@@ -46,25 +46,18 @@
 			multiply = 0
 		}
 	}
+
+	character_modifier = {
+		life_expectancy = 2
+	}
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mage_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		add_trait_force_tooltip = mage
 		add_trait_force_tooltip = mana
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
-	}
-	character_modifier = {
-		life_expectancy = 2
 	}
 }
 
@@ -73,194 +66,138 @@ improve_trait_perk = {
 	tree = biomancy_magic
 	position = { 0 1.25 }
 	icon = node_diplomacy
-	
-	
-	
+
+	parent = biomancy_mage_perk
+
 	effect = {
-		custom_description_no_bullet = {
-			text = improve_trait_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_rewrite_beauty_spell = yes
+		unlock_negative_trait_removal_rewrite_beauty = yes
+		unlock_positive_trait_t1_upgrade_rewrite_beauty = yes
+		unlock_rewrite_physique_spell = yes
+		unlock_negative_trait_removal_rewrite_physique = yes
+		unlock_positive_trait_t1_upgrade_rewrite_physique = yes
+		unlock_rewrite_intellect_spell = yes
+		unlock_negative_trait_removal_rewrite_intellect = yes
+		unlock_positive_trait_t1_upgrade_rewrite_intellect = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
-	
-	parent = biomancy_mage_perk
 }
-
 
 perfect_trait_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = biomancy_magic
 	position = { 0 2.5 }
 	icon = node_diplomacy
-	
-	
-	
+
+	parent = improve_trait_perk
+
 	effect = {
-		custom_description_no_bullet = {
-			text = perfect_trait_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_positive_trait_t2_upgrade_rewrite_beauty = yes
+		unlock_positive_trait_t2_upgrade_rewrite_physique = yes
+		unlock_positive_trait_t2_upgrade_rewrite_intellect = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
-	
-	parent = improve_trait_perk
 }
-
 
 fertility_control_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = biomancy_magic
 	position = { 2 1.25 }
 	icon = node_diplomacy
-	
+
 	parent = biomancy_mage_perk
-	
-	
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = fertility_control_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_fertility_control_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
-
 
 impregnate_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = biomancy_magic
 	position = { 2 2.5 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = fertility_control_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = impregnate_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_impregnate_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
-
 
 weaken_trait_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = biomancy_magic
 	position = { 4 1.25 }
 	icon = node_diplomacy
-	
-	
-	
+
+	parent = biomancy_mage_perk
+
 	effect = {
-		custom_description_no_bullet = {
-			text = weaken_trait_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_rewrite_beauty_spell = yes
+		unlock_positive_trait_removal_rewrite_beauty = yes
+		unlock_negative_trait_t1_upgrade_rewrite_beauty = yes
+		unlock_rewrite_physique_spell = yes
+		unlock_positive_trait_removal_rewrite_physique = yes
+		unlock_negative_trait_t1_upgrade_rewrite_physique = yes
+		unlock_rewrite_intellect_spell = yes
+		unlock_positive_trait_removal_rewrite_intellect = yes
+		unlock_negative_trait_t1_upgrade_rewrite_intellect = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
-	
-	parent = biomancy_mage_perk
 }
-
 
 criple_trait_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = biomancy_magic
 	position = { 4 2.5 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = weaken_trait_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = criple_trait_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_negative_trait_t2_upgrade_rewrite_beauty = yes
+		unlock_negative_trait_t2_upgrade_rewrite_physique = yes
+		unlock_negative_trait_t2_upgrade_rewrite_intellect = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
-
 
 sculpter_of_flesh_perk = {
 	lifestyle = ancient_magic_lifestyle
 	tree = biomancy_magic
 	position = { 2 3.75 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = perfect_trait_perk
 	parent = impregnate_perk
 	parent = criple_trait_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = sculpter_of_flesh_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_sculpter_of_flesh_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -271,24 +208,19 @@ architect_of_bloodlines_perk = {
 	tree = biomancy_magic
 	position = { 2 5 }
 	icon = architect_of_bloodlines
-	
-	
-	
+
 	parent = sculpter_of_flesh_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = architect_of_bloodlines_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_negative_trait_addition_rewrite_beauty = yes
+		unlock_positive_trait_addition_rewrite_beauty = yes
+		unlock_negative_trait_addition_rewrite_physique = yes
+		unlock_positive_trait_addition_rewrite_physique = yes
+		unlock_negative_trait_addition_rewrite_intellect = yes
+		unlock_positive_trait_addition_rewrite_intellect = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		add_trait_force_tooltip = architect_of_bloodlines
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}

@@ -1,0 +1,376 @@
+﻿#Necromancy
+inflict_illness_spell = {
+	scope = character
+	is_shown = {
+		NOT = { this = scope:spell_target }
+		scope:spell_target = { NOT = { has_trait = ill } }
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		scope:spell_target = {
+			add_trait = ill
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+inflict_illness_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = inflict_illness_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+inflict_illness_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+inflict_illness_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+plague_lord_spell = {
+	scope = character
+	is_shown = {
+		NOT = { this = scope:spell_target }
+		scope:spell_target = { NOT = { has_trait = bubonic_plague } }
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		scope:spell_target = {
+			add_trait = bubonic_plague
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+plague_lord_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = plague_lord_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+plague_lord_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+plague_lord_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+aura_of_death_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = aura_of_death_modifier } }
+			add_character_modifier = aura_of_death_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
+		}
+		else = {
+			remove_all_character_modifier_instances = aura_of_death_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_large }
+		}
+	}
+}
+
+aura_of_death_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = aura_of_death_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+aura_of_death_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+aura_of_death_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+necromancy_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		AND = {
+			NOT = { has_character_modifier = undead_horde_cooldown_modifier }
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		spawn_army = {
+			name = undead_horde
+			uses_supply = no
+			inheritable = no
+			men_at_arms = {
+				type = undead
+				stacks = mage_level
+			}
+			location = scope:spell_target.location
+		}
+		add_character_modifier = {
+			modifier = undead_horde_cooldown_modifier
+			years = 2
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+necromancy_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = necromancy_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+necromancy_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+necromancy_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+drain_life_spell = {
+	scope = character
+	is_shown = {
+		NOT = { this = scope:spell_target }
+	}
+	is_valid = {
+		AND = {
+			scope:spell_target = {
+				NOR = {
+					has_character_modifier = drained_modifier
+					has_trait = undead
+					has_trait = immortal
+					has_trait = master_of_time
+					has_trait = avatar_of_life
+				}
+			}
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		save_temporary_scope_as = spell_caster
+		scope:spell_target = {
+			add_character_modifier = {
+				modifier = drained_modifier
+				years = spell_caster_mage_level
+			}
+		}
+		add_character_modifier = {
+			modifier = stolen_lifeforce_modifier
+			years = mage_level
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+drain_life_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = drain_life_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+drain_life_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+drain_life_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+death_stare_spell = {
+	scope = character
+	is_shown = {
+		NOT = { this = scope:spell_target }
+	}
+	is_valid = {
+		AND = {
+			scope:spell_target = {
+				NOR = {
+					has_trait = undead
+					has_trait = immortal
+					has_trait = master_of_time
+					has_trait = avatar_of_life
+				}
+			}
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		save_temporary_scope_as = spell_caster
+		death_stare_effect = { SOURCE = scope:spell_caster TARGET = scope:spell_target }
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+death_stare_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = death_stare_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+death_stare_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+death_stare_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+deacon_of_death_spell = {
+	scope = character
+	is_shown = {
+		NOT = { this = scope:spell_target }
+	}
+	is_valid = {
+		AND = {
+			scope:spell_target = {
+				NOT = { has_trait = undead }
+			}
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		scope:spell_target = { convert_undead = yes }
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+deacon_of_death_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = deacon_of_death_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+deacon_of_death_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+deacon_of_death_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}

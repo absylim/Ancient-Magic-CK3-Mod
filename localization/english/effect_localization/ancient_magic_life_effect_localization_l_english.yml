@@ -1,0 +1,11 @@
+﻿l_english:
+ # Perk effects
+ GLOBAL_UNLOCK_HEAL_PERK_EFFECT: "Unlocks $heal_spell_gui_name$"
+ FIRST_UNLOCK_HEAL_PERK_EFFECT: "Allows you to cast $heal_spell_gui_name$"
+ THIRD_UNLOCK_HEAL_PERK_EFFECT: "Allows #V [CHARACTER.GetTitledFirstName]#! to cast $heal_spell_gui_name$"
+ GLOBAL_UNLOCK_GREATER_HEAL_SPELL: "Unlocks $greater_heal_spell_gui_name$"
+ FIRST_UNLOCK_GREATER_HEAL_SPELL: "Allows you to cast $greater_heal_spell_gui_name$"
+ THIRD_UNLOCK_GREATER_HEAL_SPELL: "Allows #V [CHARACTER.GetTitledFirstName]#! to cast $greater_heal_spell_gui_name$"
+ GLOBAL_UNLOCK_AVATAR_OF_LIFE_SPELL: "Unlocks $avatar_of_life_spell_gui_name$"
+ FIRST_UNLOCK_AVATAR_OF_LIFE_SPELL: "Allows you to cast $avatar_of_life_spell_gui_name$"
+ THIRD_UNLOCK_AVATAR_OF_LIFE_SPELL: "Allows #V [CHARACTER.GetTitledFirstName]#! to cast $avatar_of_life_spell_gui_name$"

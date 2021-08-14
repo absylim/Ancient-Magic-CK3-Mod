@@ -1,0 +1,425 @@
+﻿#Time
+glimpse_the_future_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = glimpse_the_future_modifier } }
+			add_character_modifier = glimpse_the_future_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+		else = {
+			remove_all_character_modifier_instances = glimpse_the_future_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+	}
+}
+
+glimpse_the_future_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = glimpse_the_future_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+glimpse_the_future_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+glimpse_the_future_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+financial_times_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = financial_times_modifier } }
+			add_character_modifier = financial_times_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+		else = {
+			remove_all_character_modifier_instances = financial_times_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+	}
+}
+
+financial_times_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = financial_times_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+financial_times_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+financial_times_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+celerity_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = celerity_modifier } }
+			add_character_modifier = celerity_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+		else = {
+			remove_all_character_modifier_instances = celerity_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+	}
+}
+
+celerity_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = celerity_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+celerity_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+celerity_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+mass_celerity_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = magic_haste_modifier } }
+			add_character_modifier = magic_haste_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+		else = {
+			remove_all_character_modifier_instances = magic_haste_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+	}
+}
+
+mass_celerity_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = mass_celerity_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+mass_celerity_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+mass_celerity_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+slowness_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = slowness_modifier } }
+			add_character_modifier = slowness_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+		else = {
+			remove_all_character_modifier_instances = slowness_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+	}
+}
+
+slowness_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = slowness_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+slowness_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+slowness_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+mass_slowness_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = mass_slowness_modifier } }
+			add_character_modifier = mass_slowness_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+		else = {
+			remove_all_character_modifier_instances = mass_slowness_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+	}
+}
+
+mass_slowness_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = mass_slowness_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+mass_slowness_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+mass_slowness_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+temporal_manipulation_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = temporal_manipulation_modifier } }
+			add_character_modifier = temporal_manipulation_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
+		}
+		else = {
+			remove_all_character_modifier_instances = temporal_manipulation_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_large }
+		}
+	}
+}
+
+temporal_manipulation_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = temporal_manipulation_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+temporal_manipulation_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+temporal_manipulation_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+master_of_time_spell = {
+	scope = character
+	is_shown = {
+		AND = {
+			NOT = { this = scope:spell_target }
+		}
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		scope:spell_target = {
+			if = {
+				limit = { has_trait = immortal }
+				remove_trait = immortal
+			}
+			else = {
+				add_trait = immortal
+			}
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+master_of_time_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = master_of_time_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+master_of_time_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+master_of_time_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}

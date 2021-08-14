@@ -7,7 +7,7 @@ widget = {
 	name = "meta_info"
 	visible = "[IsDefaultGUIMode]"
 	layer = bottom
-
+	magic_window_view = {}
 	using = Animation_ShowHide_Standard
 
 	flowcontainer = {
@@ -581,7 +581,7 @@ widget = {
 		visible = "[And( Not( IsPauseMenuShown ), And(Or(Not(IsObserver), GetPlayer.IsValid), IsDefaultGUIMode))]"
 		parentanchor = top|right
 		position = { 5 105 }
-		size = { 50 375 }
+		size = { 50 450 }
 
 		using = Animation_ShowHide_Quick
 
@@ -663,6 +663,14 @@ widget = {
 					texture = "gfx/interface/skinned/hud_maintab_bg_glow.dds"
 					blend_mode = colordodge
 					translate_uv = { -0.2 -0.79 }
+					alpha = 0
+				}
+
+				modify_texture = {
+					name = "glow_magic"
+					texture = "gfx/interface/skinned/hud_maintab_bg_glow.dds"
+					blend_mode = colordodge
+					translate_uv = { -0.15 -0.68 }
 					alpha = 0
 				}
 
@@ -1033,6 +1041,31 @@ widget = {
 					state = {
 						name = _mouse_hierarchy_leave
 						on_start = "[PdxGuiInterruptThenTriggerAllAnimations('hud_tab_glow_decisions_enter','hud_tab_glow_decisions_leave')]"
+					}
+				}
+
+				button_hud_main_tab = {
+					name = "tab_magic"
+					tooltip = "MAGIC_BUTTON"
+
+					blockoverride "maintab_button"
+					{
+						texture = "gfx/magic/maintab_magic.dds"
+						enabled = "[GetScriptedGui('can_use_magic_window').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						#down = "[GetVariableSystem.Exists('window_magic_view')]"
+						down = "[GetScriptedGui('is_magic_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						#onclick = "[GetVariableSystem.Toggle('window_magic_view')]"
+						onclick = "[GetScriptedGui('toggle_magic_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('actor',GetPlayer.MakeScope).AddScope('recipient',GetPlayer.MakeScope).End)]"
+					}
+
+					state = {
+						name = _mouse_hierarchy_enter
+						on_start = "[PdxGuiInterruptThenTriggerAllAnimations('hud_tab_glow_factions_leave','hud_tab_glow_factions_enter')]"
+					}
+
+					state = {
+						name = _mouse_hierarchy_leave
+						on_start = "[PdxGuiInterruptThenTriggerAllAnimations('hud_tab_glow_factions_enter','hud_tab_glow_factions_leave')]"
 					}
 				}
 			}

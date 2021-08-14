@@ -1,37 +1,12 @@
-﻿on_reset_mana_system = {
-	trigger = {
-		has_trait = mana
-	}
-
-	effect = {
-		set_variable = {
-			name = max_mana
-			value = 0
-		}
-		set_variable = {
-			name = mana_gen
-			value = 0
-		}
-		trigger_event = { on_action = reset_mana_system }
-		if = {
-			limit = {
-				exists = var:mana
-				var:mana > var:max_mana
-			}
-			set_variable = {
-				name = mana
-				value = var:max_mana
-			}
-		}
-		trigger_event = ancient_magic_aura_update_events.001
-	}
-}
-
-reset_mana_system = {
+﻿reset_mana_system = {
 	on_actions = { ancient_magic_reset_mana_system }
 }
 
 ancient_magic_reset_mana_system = {
+	events = {
+		ancient_magic_aura_update_events.001
+	}
+
 	effect = {
 		change_variable = {
 			name = mana_gen

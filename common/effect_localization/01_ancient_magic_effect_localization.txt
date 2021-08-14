@@ -1,160 +1,41 @@
-﻿change_mana = {
-	first_past = I_GAINED_MANA_EFFECT
-	first_past_neg = I_LOST_MANA_EFFECT
-	global_past = GAINED_MANA_EFFECT
-	global_past_neg = LOST_MANA_EFFECT
-	first = I_GAIN_MANA_EFFECT
-	first_neg = I_LOSE_MANA_EFFECT
-	global = GAIN_MANA_EFFECT
-	global_neg = LOSE_MANA_EFFECT
-}
-
-placeholder_effect = {
-	global = PLACEHOLDER_EFFECT
-	first = PLACEHOLDER_EFFECT
-	third = PLACEHOLDER_EFFECT
-}
-
-mana_gen_magic_perk_effect = {
+﻿gain_mana_gen_perk = {
 	global = MANA_GEN_MAGIC_PERK_EFFECT
 	first = MANA_GEN_MAGIC_PERK_EFFECT
 	third = MANA_GEN_MAGIC_PERK_EFFECT
 }
 
-max_mana_magic_perk_effect = {
+gain_max_mana_perk = {
 	global = MAX_MANA_MAGIC_PERK_EFFECT
 	first = MAX_MANA_MAGIC_PERK_EFFECT
 	third = MAX_MANA_MAGIC_PERK_EFFECT
 }
 
-mage_xp_magic_perk_effect = {
+gain_mage_xp_perk = {
 	global = MAGE_XP_MAGIC_PERK_EFFECT
 	first = MAGE_XP_MAGIC_PERK_EFFECT
 	third = MAGE_XP_MAGIC_PERK_EFFECT
 }
 
-heal_perk_effect = {
-	global = HEAL_PERK_EFFECT
-	first = HEAL_PERK_EFFECT
-	third = HEAL_PERK_EFFECT
+immune_to_disease_effect = {
+	global = IMMUNE_TO_DISEASE_EFFECT
+	first = IMMUNE_TO_DISEASE_EFFECT
+	third = IMMUNE_TO_DISEASE_EFFECT
 }
 
-greater_heal_perk_effect = {
-	global = GREATER_HEAL_PERK_EFFECT
-	first = GREATER_HEAL_PERK_EFFECT
-	third = GREATER_HEAL_PERK_EFFECT
+change_mana = {
+	global = GLOBAL_GAIN_MANA
+	global_neg = GLOBAL_SPEND_MANA
+	first = FIRST_GAIN_MANA
+	first_neg = FIRST_SPEND_MANA
+	third = THIRD_GAIN_MANA
+	third_neg = THIRD_SPEND_MANA
 }
 
-golem_creation_perk_effect = {
-	global = GOLEM_CREATION_PERK_EFFECT
-	first = GOLEM_CREATION_PERK_EFFECT
-	third = GOLEM_CREATION_PERK_EFFECT
-}
-
-avatar_of_life_perk_effect = {
-	global = AVATAR_OF_LIFE_PERK_EFFECT
-	first = AVATAR_OF_LIFE_PERK_EFFECT
-	third = AVATAR_OF_LIFE_PERK_EFFECT
-}
-
-purity_of_body_perk_effect = {
-	global = PURITY_OF_BODY_PERK_EFFECT
-	first = PURITY_OF_BODY_PERK_EFFECT
-	third = PURITY_OF_BODY_PERK_EFFECT
-}
-
-lord_of_the_elements_perk_effect = {
-	global = LORD_OF_THE_ELEMENTS_PERK_EFFECT
-	first = LORD_OF_THE_ELEMENTS_PERK_EFFECT
-	third = LORD_OF_THE_ELEMENTS_PERK_EFFECT
-}
-
-inflict_illness_perk_effect = {
-	global = INFLICT_ILLNESS_PERK_EFFECT
-	first = INFLICT_ILLNESS_PERK_EFFECT
-	third = INFLICT_ILLNESS_PERK_EFFECT
-}
-
-plague_lord_perk_effect = {
-	global = PLAGUE_LORD_PERK_EFFECT
-	first = PLAGUE_LORD_PERK_EFFECT
-	third = PLAGUE_LORD_PERK_EFFECT
-}
-
-necromancy_perk_effect = {
-	global = NECROMANCY_PERK_EFFECT
-	first = NECROMANCY_PERK_EFFECT
-	third = NECROMANCY_PERK_EFFECT
-}
-
-drain_life_perk_effect = {
-	global = DRAIN_LIFE_PERK_EFFECT
-	first = DRAIN_LIFE_PERK_EFFECT
-	third = DRAIN_LIFE_PERK_EFFECT
-}
-
-death_stare_perk_effect = {
-	global = DEATH_STARE_PERK_EFFECT
-	first = DEATH_STARE_PERK_EFFECT
-	third = DEATH_STARE_PERK_EFFECT
-}
-
-deacon_of_death_perk_effect = {
-	global = DEACON_OF_DEATH_PERK_EFFECT
-	first = DEACON_OF_DEATH_PERK_EFFECT
-	third = DEACON_OF_DEATH_PERK_EFFECT
-}
-
-negative_mana_cost = {
-	global = NEGATIVE_MANA_COST
-	first = NEGATIVE_MANA_COST
-	third = NEGATIVE_MANA_COST
-}
-
-positive_mana_cost = {
-	global = POSITIVE_MANA_COST
-	first = POSITIVE_MANA_COST
-	third = POSITIVE_MANA_COST
-}
-
-negative_mana_drain = {
-	global = NEGATIVE_MANA_DRAIN
-	first = NEGATIVE_MANA_DRAIN
-	third = NEGATIVE_MANA_DRAIN
-}
-
-positive_mana_drain = {
-	global = POSITIVE_MANA_DRAIN
-	first = POSITIVE_MANA_DRAIN
-	third = POSITIVE_MANA_DRAIN
-}
-
-arcane_legacy_1_effect = {
-	global = ARCANE_LEGACY_1_EFFECT_LOC
-	first = ARCANE_LEGACY_1_EFFECT_LOC
-	third = ARCANE_LEGACY_1_EFFECT_LOC
-}
-
-arcane_legacy_2_effect = {
-	global = ARCANE_LEGACY_2_EFFECT_LOC
-	first = ARCANE_LEGACY_2_EFFECT_LOC
-	third = ARCANE_LEGACY_2_EFFECT_LOC
-}
-
-arcane_legacy_3_effect = {
-	global = ARCANE_LEGACY_3_EFFECT_LOC
-	first = ARCANE_LEGACY_3_EFFECT_LOC
-	third = ARCANE_LEGACY_3_EFFECT_LOC
-}
-
-arcane_legacy_4_effect = {
-	global = ARCANE_LEGACY_4_EFFECT_LOC
-	first = ARCANE_LEGACY_4_EFFECT_LOC
-	third = ARCANE_LEGACY_4_EFFECT_LOC
-}
-
-arcane_legacy_5_effect = {
-	global = ARCANE_LEGACY_5_EFFECT_LOC
-	first = ARCANE_LEGACY_5_EFFECT_LOC
-	third = ARCANE_LEGACY_5_EFFECT_LOC
+change_mana_gen = {
+	global = GLOBAL_POSITIVE_MANA_DRAIN
+	global_neg = GLOBAL_NEGATIVE_MANA_DRAIN
+	first = FIRST_POSITIVE_MANA_DRAIN
+	first_neg = FIRST_NEGATIVE_MANA_DRAIN
+	third = THIRD_POSITIVE_MANA_DRAIN
+	third_neg = THIRD_NEGATIVE_MANA_DRAIN
 }

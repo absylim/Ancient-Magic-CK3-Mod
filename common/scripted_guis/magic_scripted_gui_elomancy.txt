@@ -1,0 +1,444 @@
+﻿#Elemental
+flame_aura_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = flame_aura_modifier } }
+			add_character_modifier = flame_aura_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+		else = {
+			remove_all_character_modifier_instances = flame_aura_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+	}
+}
+
+flame_aura_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = flame_aura_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+flame_aura_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+flame_aura_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+flaming_weapons_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = flaming_weapons_modifier } }
+			add_character_modifier = flaming_weapons_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+		else = {
+			remove_all_character_modifier_instances = flaming_weapons_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+	}
+}
+
+flaming_weapons_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = flaming_weapons_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+flaming_weapons_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+flaming_weapons_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+living_earthworks_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = living_earthworks_modifier } }
+			add_character_modifier = living_earthworks_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+		else = {
+			remove_all_character_modifier_instances = living_earthworks_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+	}
+}
+
+living_earthworks_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = living_earthworks_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+living_earthworks_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+living_earthworks_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+golem_creation_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		AND = {
+			NOR = {
+				has_character_modifier = golem_cooldown_modifier
+				has_character_modifier = lava_golem_cooldown_modifier
+			}
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		spawn_army = {
+			name = golem_army
+			uses_supply = no
+			inheritable = no
+			men_at_arms = {
+				type = golem
+				stacks = mage_level
+			}
+			location = scope:spell_target.location # Makes sense to me...
+		}
+		add_character_modifier = {
+			modifier = golem_cooldown_modifier
+			years = 5
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+golem_creation_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = golem_creation_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+golem_creation_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+golem_creation_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+control_water_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = control_water_modifier } }
+			add_character_modifier = control_water_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+		else = {
+			remove_all_character_modifier_instances = control_water_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+	}
+}
+
+control_water_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = control_water_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+control_water_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+control_water_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+drought_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = drought_modifier } }
+			add_character_modifier = drought_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+		else = {
+			remove_all_character_modifier_instances = drought_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+	}
+}
+
+drought_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = drought_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+drought_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+drought_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+elemental_warrior_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = elemental_warrior_modifier } }
+			add_character_modifier = elemental_warrior_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
+		}
+		else = {
+			remove_all_character_modifier_instances = elemental_warrior_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_large }
+		}
+	}
+}
+
+elemental_warrior_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = elemental_warrior_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+elemental_warrior_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+elemental_warrior_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+lord_of_the_elements_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		AND = {
+			NOR = {
+				has_character_modifier = golem_cooldown_modifier
+				has_character_modifier = lava_golem_cooldown_modifier
+			}
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		spawn_army = {
+			name = lava_golem_army
+			uses_supply = no
+			inheritable = no
+			men_at_arms = {
+				type = lava_golem
+				stacks = mage_level
+			}
+			location = scope:spell_target.location # Makes sense to me...
+		}
+		add_character_modifier = {
+			modifier = lava_golem_cooldown_modifier
+			years = 5
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+lord_of_the_elements_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = lord_of_the_elements_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+lord_of_the_elements_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+lord_of_the_elements_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}

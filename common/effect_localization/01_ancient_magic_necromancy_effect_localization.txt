@@ -1,0 +1,41 @@
+﻿unlock_inflict_illness_spell = {
+	global = GLOBAL_UNLOCK_INFLICT_ILLNESS_SPELL
+	first = FIRST_UNLOCK_INFLICT_ILLNESS_SPELL
+	third = THIRD_UNLOCK_INFLICT_ILLNESS_SPELL
+}
+
+unlock_plague_lord_spell = {
+	global = GLOBAL_UNLOCK_PLAGUE_LORD_SPELL
+	first = FIRST_UNLOCK_PLAGUE_LORD_SPELL
+	third = THIRD_UNLOCK_PLAGUE_LORD_SPELL
+}
+
+unlock_aura_of_death_spell = {
+	global = GLOBAL_UNLOCK_AURA_OF_DEATH_SPELL
+	first = FIRST_UNLOCK_AURA_OF_DEATH_SPELL
+	third = THIRD_UNLOCK_AURA_OF_DEATH_SPELL
+}
+
+unlock_necromancy_spell = {
+	global = GLOBAL_UNLOCK_NECROMANCY_SPELL
+	first = FIRST_UNLOCK_NECROMANCY_SPELL
+	third = THIRD_UNLOCK_NECROMANCY_SPELL
+}
+
+unlock_drain_life_spell = {
+	global = GLOBAL_UNLOCK_DRAIN_LIFE_SPELL
+	first = FIRST_UNLOCK_DRAIN_LIFE_SPELL
+	third = THIRD_UNLOCK_DRAIN_LIFE_SPELL
+}
+
+unlock_death_stare_spell = {
+	global = GLOBAL_UNLOCK_DEATH_STARE_SPELL
+	first = FIRST_UNLOCK_DEATH_STARE_SPELL
+	third = THIRD_UNLOCK_DEATH_STARE_SPELL
+}
+
+unlock_deacon_of_death_spell = {
+	global = GLOBAL_UNLOCK_DEACON_OF_DEATH_SPELL
+	first = FIRST_UNLOCK_DEACON_OF_DEATH_SPELL
+	third = THIRD_UNLOCK_DEACON_OF_DEATH_SPELL
+}

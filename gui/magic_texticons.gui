@@ -1,0 +1,53 @@
+﻿texticon = { 
+	icon = icon_time_category
+	iconsize = {
+		texture = "gfx/magic/time_magic.dds"
+		size = { 80 80 }
+		fontsize = 16
+	}
+}
+
+texticon = { 
+	icon = icon_life_category
+	iconsize = {
+		texture = "gfx/magic/life_magic.dds"
+		size = { 80 80 }
+		fontsize = 16
+	}
+}
+
+texticon = { 
+	icon = icon_elemental_category
+	iconsize = {
+		texture = "gfx/magic/elemental_magic.dds"
+		size = { 80 80 }
+		fontsize = 16
+	}
+}
+
+texticon = { 
+	icon = icon_necromancy_category
+	iconsize = {
+		texture = "gfx/magic/necromancy_magic.dds"
+		size = { 80 80 }
+		fontsize = 16
+	}
+}
+
+texticon = { 
+	icon = icon_biomancy_category
+	iconsize = {
+		texture = "gfx/magic/biomancy_magic.dds"
+		size = { 80 80 }
+		fontsize = 16
+	}
+}
+
+texticon = { 
+	icon = icon_mind_magic_category
+	iconsize = {
+		texture = "gfx/magic/mind_magic.dds"
+		size = { 80 80 }
+		fontsize = 16
+	}
+}

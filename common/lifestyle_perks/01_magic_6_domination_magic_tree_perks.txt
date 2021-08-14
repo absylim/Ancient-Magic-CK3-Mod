@@ -3,13 +3,13 @@
 	tree = domination_magic
 	position = { 2 0 }
 	icon = node_diplomacy
-	
+
 	auto_selection_weight = {
 		value = 11
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential	
+					has_trait = magic_potential
 					has_trait = education_arcane
 				}
 			}
@@ -46,23 +46,18 @@
 			multiply = 0
 		}
 	}
+
+	character_modifier = {
+		general_opinion = 5
+	}
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		add_trait_force_tooltip = mage
 		add_trait_force_tooltip = mana
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
-	}
-	
-	character_modifier = {
-		general_opinion = 5
 	}
 }
 
@@ -71,23 +66,16 @@ entrance_perk = {
 	tree = domination_magic
 	position = { 0 1.25 }
 	icon = node_diplomacy
-	
-	
-	
+
+	parent = domination_mage_perk
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_entrance_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
-	
-	parent = domination_mage_perk
 }
 
 
@@ -96,24 +84,16 @@ incite_lust_perk = {
 	tree = domination_magic
 	position = { 0 2.5 }
 	icon = node_diplomacy
-	
-	
-	
+
+	parent = entrance_perk
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_incite_lust_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
-
-	
-	parent = entrance_perk
 }
 
 
@@ -122,21 +102,14 @@ incite_obedience_perk = {
 	tree = domination_magic
 	position = { 2 1.25 }
 	icon = node_diplomacy
-	
+
 	parent = domination_mage_perk
-	
-	
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_incite_obedience_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -147,21 +120,14 @@ dominate_perk = {
 	tree = domination_magic
 	position = { 2 2.5 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = incite_obedience_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_dominate_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -172,23 +138,16 @@ beguiling_aura_perk = {
 	tree = domination_magic
 	position = { 4 1.25 }
 	icon = node_diplomacy
-	
-	
-	
+
+	parent = domination_mage_perk
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_beguiling_aura_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
-	
-	parent = domination_mage_perk
 }
 
 
@@ -197,21 +156,15 @@ friendship_perk = {
 	tree = domination_magic
 	position = { 4 2.5 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = beguiling_aura_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_friendship_spell = yes
+		unlock_rivalry_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -222,23 +175,16 @@ enchanting_aura_perk = {
 	tree = domination_magic
 	position = { 2 3.75 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = incite_lust_perk
 	parent = dominate_perk
 	parent = friendship_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_enchanting_aura_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -249,21 +195,14 @@ master_of_puppets_perk = {
 	tree = domination_magic
 	position = { 2 5 }
 	icon = master_of_puppets
-	
-	
-	
+
 	parent = enchanting_aura_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_master_of_puppets_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		add_trait_force_tooltip = master_of_puppets
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
