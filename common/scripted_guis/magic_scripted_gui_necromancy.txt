@@ -291,7 +291,10 @@ death_stare_spell = {
 	}
 	effect = {
 		save_temporary_scope_as = spell_caster
-		death_stare_effect = { SOURCE = scope:spell_caster TARGET = scope:spell_target }
+		custom_description = { # "death" effect not initialized before sgui's, use on_action as placeholder
+			text = death_killer
+			trigger_event = { on_action = death_stare_action }
+		}
 		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 	}
 }

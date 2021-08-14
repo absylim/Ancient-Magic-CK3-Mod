@@ -47,12 +47,3 @@ convert_undead = {
 		add_character_flag = immune_to_disease
 	}
 }
-
-death_stare_effect = {
-	$TARGET$ = {
-		death = {
-			killer = $SOURCE$
-			death_reason = death_stare
-		}
-	}
-}

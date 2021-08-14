@@ -88,112 +88,6 @@ add_immortal_years_since_lifetime_reset = {
 	change_variable = { name = immortal_years_since_lifetime_reset add = 1 }
 }
 
-increase_vanilla_trait_rank = {
-	if = {
-		limit = {
-			has_trait = $TRAIT_PREFIX$_bad_3
-		}
-		remove_trait = $TRAIT_PREFIX$_bad_3
-		add_trait = $TRAIT_PREFIX$_bad_2
-	}
-	else_if = {
-		limit = {
-			has_trait = $TRAIT_PREFIX$_bad_2
-		}
-		remove_trait = $TRAIT_PREFIX$_bad_2
-		add_trait = $TRAIT_PREFIX$_bad_1
-	}
-	else_if = {
-		limit = {
-			has_trait = $TRAIT_PREFIX$_bad_1
-		}
-		remove_trait = $TRAIT_PREFIX$_bad_1
-	}
-	else_if = {
-		limit = {
-			NOT = { has_trait = $TRAIT_PREFIX$_good }
-			NOT = { has_trait = $TRAIT_PREFIX$_bad }
-		}
-		add_trait = $TRAIT_PREFIX$_good_1
-	}
-	else_if = {
-		limit = {
-			has_trait = $TRAIT_PREFIX$_good_1
-		}
-		remove_trait = $TRAIT_PREFIX$_good_1
-		add_trait = $TRAIT_PREFIX$_good_2
-	}
-	else_if = {
-		limit = {
-			has_trait = $TRAIT_PREFIX$_good_2
-		}
-		remove_trait = $TRAIT_PREFIX$_good_2
-		add_trait = $TRAIT_PREFIX$_good_3
-	}
-}
-
-decrease_vanilla_trait_rank = {
-	if = {
-		limit = {
-			has_trait = $TRAIT_PREFIX$_good_3
-		}
-		remove_trait = $TRAIT_PREFIX$_good_3
-		add_trait = $TRAIT_PREFIX$_good_2
-	}
-	else_if = {
-		limit = {
-			has_trait = $TRAIT_PREFIX$_good_2
-		}
-		remove_trait = $TRAIT_PREFIX$_good_2
-		add_trait = $TRAIT_PREFIX$_good_1
-	}
-	else_if = {
-		limit = {
-			has_trait = $TRAIT_PREFIX$_good_1
-		}
-		remove_trait = $TRAIT_PREFIX$_good_1
-	}
-	else_if = {
-		limit = {
-			NOT = { has_trait = $TRAIT_PREFIX$_good }
-			NOT = { has_trait = $TRAIT_PREFIX$_bad }
-		}
-		add_trait = $TRAIT_PREFIX$_bad_1
-	}
-	else_if = {
-		limit = {
-			has_trait = $TRAIT_PREFIX$_bad_1
-		}
-		remove_trait = $TRAIT_PREFIX$_bad_1
-		add_trait = $TRAIT_PREFIX$_bad_2
-	}
-	else_if = {
-		limit = {
-			has_trait = $TRAIT_PREFIX$_bad_2
-		}
-		remove_trait = $TRAIT_PREFIX$_bad_2
-		add_trait = $TRAIT_PREFIX$_bad_3
-	}
-}
-
-check_enough_mana = {
-	if = {
-		limit = {
-			scope:am_spell_caster.var:mana < $SPELL_COST$
-		}
-		add_character_flag = casting_low_mana_spell
-	}
-}
-
-check_enough_skill = {
-	if = {
-		limit = {
-			NOT = { has_perk = $SPELL_PERK$ }
-		}
-		add_character_flag = casting_low_skill_spell
-	}
-}
-
 am_remove_minor_illness = {
 	remove_trait = smallpox
 	remove_trait = sickly
@@ -226,13 +120,6 @@ am_remove_critical_illness = {
 	remove_trait = eunuch
 	remove_trait = blind
 	remove_trait = incapable
-}
-
-add_drained_modifier_scope_work_around = {
-	add_character_modifier = {
-		modifier = drained_modifier
-		years = $YEARS$
-	}
 }
 
 ancient_magic_impregnate_effect = {
