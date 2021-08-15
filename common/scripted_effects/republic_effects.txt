@@ -369,7 +369,7 @@ death_republic_succession = {
 	}
 }
 
-add_family_to_republic_families = {
+add_family_to_magocracy_families = {
 	house = {
 		save_scope_as = house_to_add
 		set_variable = {
@@ -451,7 +451,7 @@ set_up_senate_republic = {
 	primary_title = {
 		set_variable = senate_government_republic
 		remove_variable = elected_ruler_republic
-		remove_variable = council_government_republic
+		remove_variable = council_government_magocracy
 		remove_variable = bicameral_government_republic
 		set_variable = {
 			name = senators_count
@@ -484,7 +484,7 @@ set_up_council_republic = {
 	remove_all_current_laws = yes
 	add_realm_law = crown_authority_2
 	primary_title = {
-		set_variable = council_government_republic
+		set_variable = council_government_magocracy
 		remove_variable = elected_ruler_republic
 		remove_variable = senate_government_republic
 		remove_variable = bicameral_government_republic
@@ -529,7 +529,7 @@ set_up_elected_ruler_republic = {
 	add_realm_law = city_succession_law
 	primary_title = {
 		remove_variable = senate_government_republic
-		remove_variable = council_government_republic
+		remove_variable = council_government_magocracy
 		remove_variable = bicameral_government_republic
 		set_variable = elected_ruler_republic
 		set_variable = life_title_term
@@ -544,7 +544,7 @@ set_up_bicameral_republic = {
 		set_variable = bicameral_government_republic
 		remove_variable = elected_ruler_republic
 		remove_variable = senate_government_republic
-		remove_variable = council_government_republic
+		remove_variable = council_government_magocracy
 		set_variable = leaders_discretion_war_declaration
 		set_variable = both_houses_vote_citizenship
 		set_variable = lower_house_vote_title_powers
@@ -1418,7 +1418,7 @@ trigger_elected_ruler_quick_election = {
 create_characters_for_magocracy = {
 	save_scope_as = republic_in_need
 	if = {
-		limit = { republic_families_size_need = 4 }
+		limit = { magocracy_families_size_need = 4 }
 		create_character = {
 			location = scope:republic_in_need.holder.capital_province
 			culture = scope:republic_in_need.holder.culture
@@ -1430,11 +1430,11 @@ create_characters_for_magocracy = {
 		}
 		scope:new_character = {
 			set_employer = scope:republic_in_need.holder
-			add_family_to_republic_families = yes
+			add_family_to_magocracy_families = yes
 		}
 	}
 	if = {
-		limit = { republic_families_size_need = 3 }
+		limit = { magocracy_families_size_need = 3 }
 		create_character = {
 			location = scope:republic_in_need.holder.capital_province
 			culture = scope:republic_in_need.holder.culture
@@ -1446,11 +1446,11 @@ create_characters_for_magocracy = {
 		}
 		scope:new_character = {
 			set_employer = scope:republic_in_need.holder
-			add_family_to_republic_families = yes
+			add_family_to_magocracy_families = yes
 		}
 	}
 	if = {
-		limit = { republic_families_size_need = 2 }
+		limit = { magocracy_families_size_need = 2 }
 		create_character = {
 			location = scope:republic_in_need.holder.capital_province
 			culture = scope:republic_in_need.holder.culture
@@ -1462,11 +1462,11 @@ create_characters_for_magocracy = {
 		}
 		scope:new_character = {
 			set_employer = scope:republic_in_need.holder
-			add_family_to_republic_families = yes
+			add_family_to_magocracy_families = yes
 		}
 	}
 	if = {
-		limit = { republic_families_size_need = 1 }
+		limit = { magocracy_families_size_need = 1 }
 		create_character = {
 			location = scope:republic_in_need.holder.capital_province
 			culture = scope:republic_in_need.holder.culture
@@ -1478,7 +1478,7 @@ create_characters_for_magocracy = {
 		}
 		scope:new_character = {
 			set_employer = scope:republic_in_need.holder
-			add_family_to_republic_families = yes
+			add_family_to_magocracy_families = yes
 		}
 	}
 }
@@ -1624,7 +1624,7 @@ remove_family_from_republic = {
 remove_all_current_laws = {
 	primary_title = {
 		remove_variable = senate_government_republic
-		remove_variable = council_government_republic
+		remove_variable = council_government_magocracy
 		remove_variable = elected_ruler_republic
 		remove_variable = nobility_appeasement
 		remove_variable = clergy_appeasement
@@ -1802,10 +1802,10 @@ change_into_republic_on_start = {
 	trigger_event = republic_decision_events.1003
 	change_government = republic_government
 	add_realm_law = city_succession_law
-	add_family_to_republic_families = yes
+	add_family_to_magocracy_families = yes
 	every_vassal = {
 		limit = { is_house_head = yes }
-		add_family_to_republic_families = yes
+		add_family_to_magocracy_families = yes
 	}
 }
 

@@ -263,7 +263,7 @@ republic_vote_events.1001 = { # Senate Vote - War Declaration
 		}
 		scope:titular_republic = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
 				every_house_member = {
 					add_opinion = {
@@ -273,7 +273,7 @@ republic_vote_events.1001 = { # Senate Vote - War Declaration
 				}
 			}
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
 				every_house_member = {
 					add_opinion = {
@@ -300,7 +300,7 @@ republic_vote_events.1001 = { # Senate Vote - War Declaration
 		}
 		scope:titular_republic = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
 				every_house_member = {
 					add_opinion = {
@@ -310,7 +310,7 @@ republic_vote_events.1001 = { # Senate Vote - War Declaration
 				}
 			}
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
 				every_house_member = {
 					add_opinion = {
@@ -339,7 +339,7 @@ republic_vote_events.1002 = { # Vote Over
 			limit = { primary_title.all_votes_yea > primary_title.all_votes_nay }
 			primary_title = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = republic_vote_events.1003
 						set_variable = a
@@ -530,7 +530,7 @@ republic_vote_events.1002 = { # Vote Over
 			limit = { primary_title.all_votes_yea <= primary_title.all_votes_nay }
 			primary_title = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = republic_vote_events.1003
 						set_variable = b
@@ -544,7 +544,7 @@ republic_vote_events.1002 = { # Vote Over
 		}
 		primary_title = {
 			every_in_list = {
-				variable = republic_families
+				variable = magocracy_families
 				remove_variable = house_votes_yea
 				remove_variable = house_votes_nay
 			}
@@ -1148,7 +1148,7 @@ republic_vote_events.1005 = { # Senate Vote - War Declaration
 		}
 		scope:titular_republic = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
 				every_house_member = {
 					add_opinion = {
@@ -1158,7 +1158,7 @@ republic_vote_events.1005 = { # Senate Vote - War Declaration
 				}
 			}
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
 				every_house_member = {
 					add_opinion = {
@@ -1185,7 +1185,7 @@ republic_vote_events.1005 = { # Senate Vote - War Declaration
 		}
 		scope:titular_republic = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
 				every_house_member = {
 					add_opinion = {
@@ -1195,7 +1195,7 @@ republic_vote_events.1005 = { # Senate Vote - War Declaration
 				}
 			}
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
 				every_house_member = {
 					add_opinion = {
@@ -1224,7 +1224,7 @@ republic_vote_events.1006 = { # Vote Over
 			limit = { primary_title.councillors_voting_aye > primary_title.councillors_voting_nay }
 			primary_title = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = republic_vote_events.1007
 						set_variable = a
@@ -1417,7 +1417,7 @@ republic_vote_events.1006 = { # Vote Over
 			limit = { primary_title.councillors_voting_aye <= primary_title.councillors_voting_nay }
 			primary_title = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = republic_vote_events.1007
 						set_variable = b
@@ -1431,7 +1431,7 @@ republic_vote_events.1006 = { # Vote Over
 		}
 		primary_title = {
 			every_in_list = {
-				variable = republic_families
+				variable = magocracy_families
 				remove_variable = house_votes_yea
 				remove_variable = house_votes_nay
 			}
@@ -1863,7 +1863,7 @@ republic_vote_events.1009 = { # Senate Vote - War Declaration
 		}
 		scope:titular_republic = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
 				every_house_member = {
 					add_opinion = {
@@ -1873,7 +1873,7 @@ republic_vote_events.1009 = { # Senate Vote - War Declaration
 				}
 			}
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
 				every_house_member = {
 					add_opinion = {
@@ -1900,7 +1900,7 @@ republic_vote_events.1009 = { # Senate Vote - War Declaration
 		}
 		scope:titular_republic = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
 				every_house_member = {
 					add_opinion = {
@@ -1910,7 +1910,7 @@ republic_vote_events.1009 = { # Senate Vote - War Declaration
 				}
 			}
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
 				every_house_member = {
 					add_opinion = {
@@ -1939,7 +1939,7 @@ republic_vote_events.1010 = { # Vote Over
 			limit = { primary_title.houses_voting_aye > primary_title.houses_voting_nay }
 			primary_title = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = republic_vote_events.1011
 						set_variable = a
@@ -2009,7 +2009,7 @@ republic_vote_events.1010 = { # Vote Over
 			limit = { primary_title.councillors_voting_aye <= primary_title.councillors_voting_nay }
 			primary_title = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = republic_vote_events.1011
 						set_variable = b
@@ -2023,7 +2023,7 @@ republic_vote_events.1010 = { # Vote Over
 		}
 		primary_title = {
 			every_in_list = {
-				variable = republic_families
+				variable = magocracy_families
 				remove_variable = house_votes_yea
 				remove_variable = house_votes_nay
 			}
@@ -2203,7 +2203,7 @@ republic_vote_events.1013 = { # Senate Vote - War Declaration
 		}
 		scope:titular_republic = {
 			ordered_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				order_by = family_respect
 				position = 0
 				random_in_list = {
@@ -2212,7 +2212,7 @@ republic_vote_events.1013 = { # Senate Vote - War Declaration
 				}
 			}
 			ordered_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				order_by = family_respect
 				position = 1
 				random_in_list = {
@@ -2221,7 +2221,7 @@ republic_vote_events.1013 = { # Senate Vote - War Declaration
 				}
 			}
 			ordered_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				order_by = family_respect
 				position = 2
 				random_in_list = {
@@ -2230,7 +2230,7 @@ republic_vote_events.1013 = { # Senate Vote - War Declaration
 				}
 			}
 			ordered_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				order_by = family_respect
 				position = 3
 				random_in_list = {
@@ -2239,7 +2239,7 @@ republic_vote_events.1013 = { # Senate Vote - War Declaration
 				}
 			}
 			ordered_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				order_by = family_respect
 				position = 4
 				random_in_list = {
@@ -2578,7 +2578,7 @@ republic_vote_events.1014 = { # Vote Over
 	immediate = {
 		primary_title = {
 			ordered_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				order_by = family_respect
 				position = 0
 				random_in_list = {
@@ -2587,7 +2587,7 @@ republic_vote_events.1014 = { # Vote Over
 				}
 			}
 			ordered_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				order_by = family_respect
 				position = 1
 				random_in_list = {
@@ -2596,7 +2596,7 @@ republic_vote_events.1014 = { # Vote Over
 				}
 			}
 			ordered_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				order_by = family_respect
 				position = 2
 				random_in_list = {
@@ -2605,7 +2605,7 @@ republic_vote_events.1014 = { # Vote Over
 				}
 			}
 			ordered_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				order_by = family_respect
 				position = 3
 				random_in_list = {
@@ -2614,7 +2614,7 @@ republic_vote_events.1014 = { # Vote Over
 				}
 			}
 			ordered_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				order_by = family_respect
 				position = 4
 				random_in_list = {
@@ -2700,7 +2700,7 @@ republic_vote_events.1015 = { # Dictatorship
 		custom_tooltip = ALL_VOTES_AYE
 		scope:titular_republic = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
 				house_head = {
 					add_opinion = {
@@ -2710,7 +2710,7 @@ republic_vote_events.1015 = { # Dictatorship
 				}
 			}
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
 				house_head = {
 					add_opinion = {
@@ -2734,7 +2734,7 @@ republic_vote_events.1015 = { # Dictatorship
 		custom_tooltip = ALL_VOTES_NAY
 		scope:titular_republic = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
 				house_head = {
 					add_opinion = {
@@ -2744,7 +2744,7 @@ republic_vote_events.1015 = { # Dictatorship
 				}
 			}
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
 				house_head = {
 					add_opinion = {
@@ -2771,7 +2771,7 @@ republic_vote_events.1016 = { # Dictatorship
 		finish_dictatorship_appointment_effect = yes
 		house.var:titular_republic = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				remove_variable = house_votes_nay
 				remove_variable = house_votes_yea
 				house_head = {

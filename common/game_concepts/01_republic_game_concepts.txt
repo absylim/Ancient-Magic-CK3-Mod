@@ -1,19 +1,18 @@
-﻿republic_family = {
-	alias = { republic_families }
+﻿#inspired by Res Public
+magocracy_family = {
+	alias = { magocracy_families republic_family republic_families }
 }
 leading_family = {}
 republic_respect = {}
 patrician = {}
-senate_government_republic = {}
-bicameral_government_republic = {}
 senator_republic = {
 	alias = { senators_republic }
 }
 councillor_republic = {
 	alias = { councillors_republic }
 }
-council_government_republic = {}
-ruler_government_republic = {}
+council_government_magocracy = {}
+ruler_government_magocracy = {}
 republic_clergy_estate = {
 	alias = { republic_clergy_estate_no_class }
 }

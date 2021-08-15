@@ -66,10 +66,10 @@
 				}
 			}
 		}
-		add_family_to_republic_families = yes
+		add_family_to_magocracy_families = yes
 		every_vassal = {
 			limit = { exists = house is_house_head = yes }
-			add_family_to_republic_families = yes
+			add_family_to_magocracy_families = yes
 		}
 		custom_description = {
 			text = effect_every_county_gain_county_control
@@ -247,10 +247,10 @@ convert_to_republic_decision = {
 				}
 			}
 		}
-		add_family_to_republic_families = yes
+		add_family_to_magocracy_families = yes
 		every_vassal = {
 			limit = { exists = house is_house_head = yes }
-			add_family_to_republic_families = yes
+			add_family_to_magocracy_families = yes
 		}
 		custom_description = {
 			text = effect_every_county_gain_county_control
@@ -445,7 +445,7 @@ call_emergency_vote_decision = {
 					trigger_election_cycle = yes
 				}
 				if = {
-					limit = { exists = var:council_government_republic }
+					limit = { exists = var:council_government_magocracy }
 					trigger_council_election_cycle = yes
 				}
 				if = {
@@ -456,7 +456,7 @@ call_emergency_vote_decision = {
 		}
 		house.var:titular_republic = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { NOT = { root.house = this } }
 				house_head = {
 					add_opinion = {

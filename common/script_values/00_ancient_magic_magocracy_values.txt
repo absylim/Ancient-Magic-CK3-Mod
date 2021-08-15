@@ -326,7 +326,7 @@ houses_nay_dragging_over = {
 	}
 }
 
-republic_families_size_need = {
+magocracy_families_size_need = {
 	value = 0
 	if = { limit = { has_variable_list = magocracy_families_list list_size = { name = magocracy_families_list value < 5 } } every_in_list = { variable = magocracy_families_list add = 1 } }
 	subtract = 5

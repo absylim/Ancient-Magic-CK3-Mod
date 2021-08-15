@@ -134,7 +134,7 @@ yearly_republic_check = {
 			all_bicameral_laws = yes
 		}
 		every_valid_magocracy_holder = {
-			limit = { primary_title.republic_families_size_need < 5 }
+			limit = { primary_title.magocracy_families_size_need < 5 }
 			primary_title = {
 				create_characters_for_magocracy = yes
 			}
@@ -143,23 +143,23 @@ yearly_republic_check = {
 			limit = {
 				any_held_title = {
 					NOT = { this = holder.primary_title }
-					has_variable_list = republic_families_list
+					has_variable_list = magocracy_families_list
 				}
 				NOT = {
-					primary_title = { has_variable_list = republic_families_list }
+					primary_title = { has_variable_list = magocracy_families_list }
 				}
 			}
 			random_held_title = {
-				limit = { NOT = { this = holder.primary_title } has_variable_list = republic_families_list }
+				limit = { NOT = { this = holder.primary_title } has_variable_list = magocracy_families_list }
 				if = {
 					limit = { this = { exists = var:senate_government_republic } }
 					holder.primary_title = { set_variable = senate_government_republic }
 					remove_variable = senate_government_republic
 				}
 				if = {
-					limit = { this = { exists = var:council_government_republic } }
-					holder.primary_title = { set_variable = council_government_republic }
-					remove_variable = council_government_republic
+					limit = { this = { exists = var:council_government_magocracy } }
+					holder.primary_title = { set_variable = council_government_magocracy }
+					remove_variable = council_government_magocracy
 				}
 				if = {
 					limit = { this = { exists = var:elected_ruler_republic } }
@@ -477,11 +477,11 @@ yearly_republic_check = {
 				}
 				this = {
 					every_in_list = {
-						variable = republic_families_list
+						variable = magocracy_families_list
 						save_scope_as = add_to_list_house
 						scope:primary_title_in_question = {
 							add_to_variable_list = {
-								name = republic_families_list
+								name = magocracy_families_list
 								target = scope:add_to_list_house
 							}
 						}
@@ -490,7 +490,7 @@ yearly_republic_check = {
 							value = scope:primary_title_in_question
 						}
 					}
-					clear_variable_list = republic_families_list
+					clear_variable_list = magocracy_families_list
 				}
 			}
 		}
@@ -688,7 +688,7 @@ yearly_republic_check = {
 					}
 				}
 			}
-			add_family_to_republic_families = yes
+			add_family_to_magocracy_families = yes
 			trigger_event = {
 				id = merchant_republic_events.1001
 				days = { 0 50 }
@@ -705,7 +705,7 @@ yearly_republic_check = {
 			}
 			save_scope_as = important_duchy
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = {
 					OR = {
 						AND = { house_head = { is_landed = no NOT = { location = house.var:titular_republic.holder.location } } }
@@ -719,7 +719,7 @@ yearly_republic_check = {
 				save_scope_as = to_remove
 				scope:important_duchy = {
 					remove_list_variable = {
-						name = republic_families_list
+						name = magocracy_families_list
 						target = scope:to_remove
 					}
 				}
@@ -774,7 +774,7 @@ yearly_republic_check = {
 			}
 			save_scope_as = important_kingdom
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = {
 					OR = {
 						AND = { house_head = { is_landed = no NOT = { location = house.var:titular_republic.holder.location } } }
@@ -788,7 +788,7 @@ yearly_republic_check = {
 				save_scope_as = to_remove
 				scope:important_kingdom = {
 					remove_list_variable = {
-						name = republic_families_list
+						name = magocracy_families_list
 						target = scope:to_remove
 					}
 				}
@@ -843,7 +843,7 @@ yearly_republic_check = {
 			}
 			save_scope_as = important_empire
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = {
 					OR = {
 						AND = { house_head = { is_landed = no NOT = { location = house.var:titular_republic.holder.location } } }
@@ -857,7 +857,7 @@ yearly_republic_check = {
 				save_scope_as = to_remove
 				scope:important_empire = {
 					remove_list_variable = {
-						name = republic_families_list
+						name = magocracy_families_list
 						target = scope:to_remove
 					}
 				}
@@ -943,7 +943,7 @@ yearly_republic_check = {
 			initialize_global_election_terms = yes
 		}
 		every_valid_magocracy_holder = {
-			limit = { primary_title = { list_size = { name = republic_families_list value < 5 } } }
+			limit = { primary_title = { list_size = { name = magocracy_families_list value < 5 } } }
 		}
 		if = {
 			limit = { NOT = { has_global_variable = started_campaigns_running } }
@@ -1070,10 +1070,10 @@ set_up_the_republics = {
 	effect = {
 		every_independent_ruler = {
 			limit = { holds_valid_magocracy = yes }
-			add_family_to_republic_families = yes
+			add_family_to_magocracy_families = yes
 			every_vassal = {
 				limit = { exists = house is_house_head = yes }
-				add_family_to_republic_families = yes
+				add_family_to_magocracy_families = yes
 			}
 			every_courtier = {
 				limit = {
@@ -1081,7 +1081,7 @@ set_up_the_republics = {
 					is_house_head = yes
 					culture_group = liege_or_court_owner.culture_group
 				}
-				add_family_to_republic_families = yes
+				add_family_to_magocracy_families = yes
 			}
 		}
 		if = {
@@ -1092,7 +1092,7 @@ set_up_the_republics = {
 				}
 			}
 			title:d_pisa = {
-				set_variable = council_government_republic
+				set_variable = council_government_magocracy
 				remove_variable = elected_ruler_republic
 				remove_variable = senate_government_republic
 				set_variable = council_approval_war_declaration
@@ -2751,8 +2751,8 @@ transfer_your_old_republic_variables = {
 			set_variable = senate_government_republic
 		}
 		if = {
-			limit = { scope:title = { exists = var:council_government_republic } }
-			set_variable = council_government_republic
+			limit = { scope:title = { exists = var:council_government_magocracy } }
+			set_variable = council_government_magocracy
 		}
 		if = {
 			limit = { scope:title = { exists = var:elected_ruler_republic } }
@@ -2908,11 +2908,11 @@ transfer_your_old_republic_variables = {
 		save_scope_as = self
 		scope:title = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				save_scope_as = add_to_list_house
 				scope:self = {
 					add_to_variable_list = {
-						name = republic_families_list
+						name = magocracy_families_list
 						target = scope:add_to_list_house
 					}
 				}
@@ -2942,8 +2942,8 @@ transfer_your_old_republic_variables_different = {
 			set_variable = senate_government_republic
 		}
 		if = {
-			limit = { scope:landed_title = { exists = var:council_government_republic } }
-			set_variable = council_government_republic
+			limit = { scope:landed_title = { exists = var:council_government_magocracy } }
+			set_variable = council_government_magocracy
 		}
 		if = {
 			limit = { scope:landed_title = { exists = var:elected_ruler_republic } }
@@ -3198,11 +3198,11 @@ transfer_your_old_republic_variables_different = {
 		save_scope_as = self
 		scope:landed_title = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				save_scope_as = add_to_list_house
 				scope:self = {
 					add_to_variable_list = {
-						name = republic_families_list
+						name = magocracy_families_list
 						target = scope:add_to_list_house
 					}
 				}
@@ -3227,9 +3227,9 @@ transfer_your_old_republic_variables_to_title = {
 			remove_variable = senate_government_republic
 		}
 		if = {
-			limit = { this = { exists = var:council_government_republic } }
-			primary_title = { set_variable = council_government_republic }
-			remove_variable = council_government_republic
+			limit = { this = { exists = var:council_government_magocracy } }
+			primary_title = { set_variable = council_government_magocracy }
+			remove_variable = council_government_magocracy
 		}
 		if = {
 			limit = { this = { exists = var:elected_ruler_republic } }
@@ -3547,16 +3547,16 @@ transfer_your_old_republic_variables_to_title = {
 		}
 		this = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				save_scope_as = add_to_list_house
 				scope:primary_title_in_question = {
 					add_to_variable_list = {
-						name = republic_families_list
+						name = magocracy_families_list
 						target = scope:add_to_list_house
 					}
 				}
 			}
-			clear_variable_list = republic_families_list
+			clear_variable_list = magocracy_families_list
 		}
 	}
 }
@@ -3572,7 +3572,7 @@ campaigns_running = {
 				save_scope_as = your_house
 				every_in_list = {
 					variable = propoganda_campaigns_list
-					limit = { save_temporary_scope_as = house_testing NOT = { scope:your_house.var:titular_republic = { is_target_in_variable_list = { name = republic_families_list target = scope:house_testing } } } }
+					limit = { save_temporary_scope_as = house_testing NOT = { scope:your_house.var:titular_republic = { is_target_in_variable_list = { name = magocracy_families_list target = scope:house_testing } } } }
 					save_scope_as = house_remove_propo_campaigns
 					scope:your_house = {
 						remove_list_variable = { name = propoganda_campaigns_list target = scope:house_remove_propo_campaigns }
@@ -3603,7 +3603,7 @@ campaigns_running = {
 				save_scope_as = your_house
 				every_in_list = {
 					variable = smear_campaigns_list
-					limit = { save_temporary_scope_as = house_testing NOT = { scope:your_house.var:titular_republic = { is_target_in_variable_list = { name = republic_families_list target = scope:house_testing } } } }
+					limit = { save_temporary_scope_as = house_testing NOT = { scope:your_house.var:titular_republic = { is_target_in_variable_list = { name = magocracy_families_list target = scope:house_testing } } } }
 					save_scope_as = house_remove_smear_campaigns
 					scope:your_house = {
 						remove_list_variable = { name = smear_campaigns_list target = scope:house_remove_smear_campaigns }

@@ -286,7 +286,7 @@ bicameral_vote_events.1001 = { # Senate Vote - War Declaration
 		custom_tooltip = BICAMERAL_VOTES_AYE
 		scope:titular_republic = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
 				every_house_member = {
 					add_opinion = {
@@ -296,7 +296,7 @@ bicameral_vote_events.1001 = { # Senate Vote - War Declaration
 				}
 			}
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
 				every_house_member = {
 					add_opinion = {
@@ -320,7 +320,7 @@ bicameral_vote_events.1001 = { # Senate Vote - War Declaration
 		custom_tooltip = BICAMERAL_VOTES_NAY
 		scope:titular_republic = {
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
 				every_house_member = {
 					add_opinion = {
@@ -330,7 +330,7 @@ bicameral_vote_events.1001 = { # Senate Vote - War Declaration
 				}
 			}
 			every_in_list = {
-				variable = republic_families_list
+				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
 				every_house_member = {
 					add_opinion = {
@@ -399,7 +399,7 @@ bicameral_vote_events.1002 = { # Vote Over
 			}
 			primary_title = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = bicameral_vote_events.1003
 						set_variable = a
@@ -664,7 +664,7 @@ bicameral_vote_events.1002 = { # Vote Over
 			}
 			primary_title = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = bicameral_vote_events.1003
 						set_variable = a
@@ -787,7 +787,7 @@ bicameral_vote_events.1002 = { # Vote Over
 			}
 			primary_title = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = bicameral_vote_events.1003
 						set_variable = a
@@ -881,7 +881,7 @@ bicameral_vote_events.1002 = { # Vote Over
 		else = {
 			primary_title = {
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						trigger_event = bicameral_vote_events.1003
 						set_variable = b
@@ -895,7 +895,7 @@ bicameral_vote_events.1002 = { # Vote Over
 		}
 		primary_title = {
 			every_in_list = {
-				variable = republic_families
+				variable = magocracy_families
 				remove_variable = house_votes_yea
 				remove_variable = house_votes_nay
 			}
@@ -1358,7 +1358,7 @@ bicameral_vote_events.1005 = { # Vote Over
 			if = {
 				limit = { titles_voting_aye >= titles_voting_nay }
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						send_interface_toast = {
 							left_icon = this
@@ -1370,7 +1370,7 @@ bicameral_vote_events.1005 = { # Vote Over
 			if = {
 				limit = { titles_voting_aye < titles_voting_nay }
 				every_in_list = {
-					variable = republic_families_list
+					variable = magocracy_families_list
 					house_head = {
 						send_interface_toast = {
 							left_icon = this

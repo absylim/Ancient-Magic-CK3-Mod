@@ -1,4 +1,5 @@
-﻿elected_rulers_or_patricians = {
+﻿#inspired by Res Public
+elected_rulers_or_patricians = {
 	default = play_elected_rulers
 
 	play_elected_rulers = {
