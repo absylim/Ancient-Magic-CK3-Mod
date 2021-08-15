@@ -1,4 +1,5 @@
-﻿popular_appeasement_angry = {
+﻿# Inspired by mod: Res Public
+popular_appeasement_angry = {
 	icon = social_negative
 	development_growth_factor = -0.4
 	county_opinion_add = -20
