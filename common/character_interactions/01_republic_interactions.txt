@@ -34,6 +34,22 @@
 				}
 			}
 		}
+		modifier = {
+			add = {
+				value = 10
+				scope:recipient = {
+					multiply = mage_level
+				}
+			}
+		}
+		modifier = {
+			multiply = 0
+			scope:recipient = {
+				NOT = {
+					is_magus = yes
+				}
+			}
+		}
 	}
 	ai_frequency = 60
 	
@@ -96,9 +112,7 @@ request_war_interaction = {
 			is_independent_ruler = yes
 			holds_valid_magocracy = yes
 			OR = {
-				republic_has_senate_form = yes
 				magocracy_has_council_form = yes
-				republic_has_bicameral_form = yes
 			}
 			primary_title = {
 				OR = {
@@ -169,8 +183,6 @@ request_title_grants_interaction = {
 			}
 			is_independent_ruler = yes
 			OR = {
-				republic_has_senate_form = yes
-				republic_has_bicameral_form = yes
 				magocracy_has_council_form = yes
 			}
 			primary_title = {
@@ -248,9 +260,7 @@ request_title_revocation_interaction = {
 		}
 		scope:actor = {
 			OR = {
-				republic_has_senate_form = yes
 				magocracy_has_council_form = yes
-				republic_has_bicameral_form = yes
 			}
 			is_independent_ruler = yes
 			primary_title = {

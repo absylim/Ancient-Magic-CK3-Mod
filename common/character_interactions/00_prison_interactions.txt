@@ -35,12 +35,7 @@
 			}
 			OR = {
 				NOT = {
-					republic_has_senate_form = yes
 					magocracy_has_council_form = yes
-				}
-				AND = {
-					is_independent_ruler = no
-					republic_has_senate_form = yes
 				}
 				AND = {
 					is_independent_ruler = no
@@ -48,7 +43,6 @@
 				}
 				AND = {
 					OR = {
-						republic_has_senate_form = yes
 						magocracy_has_council_form = yes
 					}
 					primary_title = {
@@ -60,7 +54,6 @@
 				}
 				AND = {
 					OR = {
-						republic_has_senate_form = yes
 						magocracy_has_council_form = yes
 					}
 					primary_title = {
@@ -109,28 +102,6 @@
 			NOT = { scope:recipient = { has_character_modifier = almohad_leader_modifier } }
 		}
 
-		scope:actor = {
-			OR = {
-				NOT = {
-					republic_has_senate_form = yes
-				}
-				AND = {
-					republic_has_senate_form = yes
-					primary_title = {
-						any_in_list = {
-							variable = valid_prison_targets_list
-							this = scope:recipient
-						}
-					}
-				}
-				AND = {
-					republic_has_senate_form = yes
-					primary_title = {
-						exists = var:leaders_discretion_imprisonment_rights
-					}
-				}
-			}
-		}
 	}
 
 	can_send = {
@@ -138,26 +109,6 @@
 			custom_description = {
 				text = "character_interactions_hostile_actions_disabled_delay"
 				NOT = { has_character_flag = flag_hostile_actions_disabled_delay }
-			}
-			OR = {
-				NOT = {
-					republic_has_senate_form = yes
-				}
-				AND = {
-					republic_has_senate_form = yes
-					primary_title = {
-						any_in_list = {
-							variable = valid_prison_targets_list
-							this = scope:recipient
-						}
-					}
-				}
-				AND = {
-					republic_has_senate_form = yes
-					primary_title = {
-						exists = var:leaders_discretion_imprisonment_rights
-					}
-				}
 			}
 		}
 	}
