@@ -1,7 +1,8 @@
-﻿convert_whole_realm_to_republic_decision = {
+﻿#Inspired by mod Res Public
+convert_whole_realm_to_magocracy_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	major = yes
-	desc = convert_whole_realm_to_republic_decision_desc
+	desc = convert_whole_realm_to_magocracy_decision_desc
 
 	ai_check_interval = 36
 
@@ -49,12 +50,13 @@
 
 	cost = {
 		prestige = 200
+		gold = 500
 	}
 
 	effect = {
 		trigger_event = republic_decision_events.1003
-		change_government = republic_government
-		add_realm_law = city_succession_law
+		change_government = magocracy_government
+		add_realm_law = magocracy_succession_law
 		house = {
 			custom_description = {
 				text = effect_change_family_influence_positive
@@ -68,7 +70,11 @@
 		}
 		add_family_to_magocracy_families = yes
 		every_vassal = {
-			limit = { exists = house is_house_head = yes }
+			limit = { 
+				exists = house 
+				is_house_head = yes 
+				is_magus = yes
+			}
 			add_family_to_magocracy_families = yes
 		}
 		custom_description = {
@@ -234,7 +240,7 @@ convert_to_republic_decision = {
 	}
 
 	effect = {
-		change_government = republic_government
+		change_government = magocracy_government
 		add_realm_law = city_succession_law
 		house = {
 			custom_description = {

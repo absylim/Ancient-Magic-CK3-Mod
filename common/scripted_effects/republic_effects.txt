@@ -126,8 +126,8 @@ main_magocracy_succession = {
 			}
 		}
 		scope:election_winner = {
-			change_government = republic_government
-			add_realm_law = city_succession_law
+			change_government = magocracy_government
+			add_realm_law = magocracy_succession_law
 			add_realm_law = crown_authority_2
 			house = {
 				set_variable = {
@@ -303,8 +303,8 @@ death_republic_succession = {
 			}
 		}
 		scope:election_winner = {
-			change_government = republic_government
-			add_realm_law = city_succession_law
+			change_government = magocracy_government
+			add_realm_law = magocracy_succession_law
 			add_realm_law = crown_authority_2
 			house = {
 				set_variable = {
@@ -446,40 +446,6 @@ change_family_influence_negative = {
 	}
 }
 
-set_up_senate_republic = {
-	remove_all_current_laws = yes
-	primary_title = {
-		set_variable = senate_government_republic
-		remove_variable = elected_ruler_republic
-		remove_variable = council_government_magocracy
-		remove_variable = bicameral_government_republic
-		set_variable = {
-			name = senators_count
-			value = 100
-		}
-		set_variable = senate_vote_war_declaration
-		set_variable = leaders_discretion_council_appointment
-		set_variable = senate_vote_imprisonment_rights
-		set_variable = senate_vote_title_revocation
-		set_variable = senate_vote_title_granting
-		set_variable = one_year_term
-		republic_senator_elections = yes
-	}
-	add_realm_law = crown_authority_2
-	add_realm_law = city_succession_law
-	every_councillor = {
-		save_scope_as = council_new
-		liege_or_court_owner = {
-			primary_title = {
-				add_to_variable_list = {
-					name = valid_council_targets_list
-					target = scope:council_new
-				}
-			}
-		}
-	}
-}
-
 set_up_council_republic = {
 	remove_all_current_laws = yes
 	add_realm_law = crown_authority_2
@@ -509,7 +475,7 @@ set_up_council_republic = {
 		republic_council_succesion = yes
 		post_appeasement_change = yes
 	}
-	add_realm_law = city_succession_law
+	add_realm_law = magocracy_succession_law
 	every_councillor = {
 		save_scope_as = council_new
 		liege_or_court_owner = {
