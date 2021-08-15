@@ -95,7 +95,10 @@ ancient_magic_mana_gen_gen_only = {
 	add = ancient_magic_mana_gen_circles
 	add = ancient_magic_mana_gen_lifestyle
 	if = {
-		limit = { dynasty = { has_dynasty_perk = arcane_legacy_2 } }
+		limit = {
+			exists = dynasty
+			dynasty = { has_dynasty_perk = arcane_legacy_2 }
+		}
 		add = mana_gen_legacy_2
 	}
 }
@@ -253,7 +256,10 @@ ancient_magic_max_mana = {
 		multiply = max_mana_per_potency
 	}
 	if = {
-		limit = { dynasty = { has_dynasty_perk = arcane_legacy_3 } }
+		limit = {
+			exists = dynasty
+			dynasty = { has_dynasty_perk = arcane_legacy_3 }
+		}
 		add = max_mana_legacy_3
 	}
 }
