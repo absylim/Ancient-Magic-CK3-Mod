@@ -446,7 +446,7 @@ change_family_influence_negative = {
 	}
 }
 
-set_up_council_republic = {
+set_up_council_magocracy = {
 	remove_all_current_laws = yes
 	add_realm_law = crown_authority_2
 	primary_title = {

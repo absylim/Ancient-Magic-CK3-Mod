@@ -220,10 +220,10 @@ republic_decision_events.1003 = { # Republic Setup
 	theme = diplomacy
 
 	# Set up Elected Ruler Republic
-	option = {
-		name = republic_decision_events.1003.a
-		set_up_elected_ruler_republic = yes
-	}
+	#option = {
+	#	name = republic_decision_events.1003.a
+	#	set_up_elected_ruler_republic = yes
+	#}
 
 	# Set up Council Republic
 	option = {
@@ -232,17 +232,11 @@ republic_decision_events.1003 = { # Republic Setup
 	}
 
 	# Set up Senate Republic
-	option = {
-		name = republic_decision_events.1003.c
-		set_up_senate_republic = yes
-		trigger_event = republic_decision_events.1005
-	}
-
-	# Set up Bicameral Republic
-	option = {
-		name = republic_decision_events.1003.d
-		set_up_bicameral_republic = yes
-	}
+	#option = {
+	#	name = republic_decision_events.1003.c
+	#	set_up_senate_republic = yes
+	#	trigger_event = republic_decision_events.1005
+	#}
 }
 
 republic_decision_events.1004 = { #Buy off senator
