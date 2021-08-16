@@ -376,7 +376,7 @@ enchanting_aura_spell = { # aura of truth
 			add_character_modifier = enchanting_aura_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = scope:mana_drain_neg }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
 		}
 		else = {
 			remove_all_character_modifier_instances = enchanting_aura_modifier
