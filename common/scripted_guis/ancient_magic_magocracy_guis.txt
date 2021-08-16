@@ -1,4 +1,26 @@
-﻿#Inspired by Res Publica
+﻿is_magocracy_council_window_open = {
+	scope = character
+	is_valid = {
+		has_variable = window_magocracy_council_view
+	}
+}
+
+toggle_magocracy_council_window = {
+	scope = character
+	effect = {
+		if = {
+			limit = {
+				has_variable = window_magocracy_council_view
+			}
+			effect_close_magic_window = yes
+		}
+		else = {
+			effect_open_magic_window = yes
+		}
+	}
+}
+
+#Inspired by Res Publica
 has_magocracy_government = {
 	scope = character
 	is_shown = {

@@ -936,9 +936,9 @@ widget = {
 					{
 						texture = "gfx/interface/skinned/hud_maintab/maintab_council.dds"
 
-						onclick = "[ToggleGameViewData('republic_council_window', GetPlayer.GetID)]"
+						onclick = "[GetScriptedGui('toggle_magocracy_council_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('actor',GetPlayer.MakeScope).AddScope('recipient',GetPlayer.MakeScope).End)]"
 						shortcut = "republic_council_window"
-						down = "[IsGameViewOpen('republic_council_window')]"
+						down = "[GetScriptedGui('is_magocracy_council_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 					}
 
 					state = {
