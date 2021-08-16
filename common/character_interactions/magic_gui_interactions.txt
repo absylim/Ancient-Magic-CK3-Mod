@@ -1,5 +1,5 @@
 ﻿cast_spell_interaction = {
-	category = AMS_magic_interactions
+	category = interaction_category_uncategorized
 
 	desc = cast_spell_interaction_desc
 
