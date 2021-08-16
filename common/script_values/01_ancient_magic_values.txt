@@ -203,7 +203,10 @@ num_average_auras = {
 		add = 1
 	}
 	if = {
-		limit = { has_character_modifier = slowness_modifier }
+		limit = {
+			exists = var:slowness_target
+			var:slowness_target = { has_character_modifier = slowness_modifier }
+		}
 		add = 1
 	}
 	if = {
