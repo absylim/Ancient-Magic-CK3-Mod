@@ -63,6 +63,8 @@
 	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:dominate_spell }
 	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:beguiling_aura_spell }
 	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:friendship_spell }
+	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:rivalry_spell }
 	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:enchanting_aura_spell }
+	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:sculpt_mind_spell }
 	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:master_of_puppets_spell }
 }

@@ -415,6 +415,545 @@ enchanting_aura_spell_has_list = {
 	}
 }
 
+sculpt_mind_spell = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		AND = {
+			scope:spell_target = {
+				NAND = {
+					trigger_is_adding_personality_trait = { FLAG = prev.var:list_option }
+					number_of_personality_traits = personality_trait_limit
+				}
+			}
+			NOT = { var:list_option = flag:none }
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		scope:spell_target = {
+			switch = {
+				trigger = prev.var:list_option
+				flag:lustful = {
+					if = { limit = { has_trait = lustful } remove_trait = lustful }
+					else = { add_trait = lustful }
+				}
+				flag:chaste = {
+					if = { limit = { has_trait = chaste } remove_trait = chaste }
+					else = { add_trait = chaste }
+				}
+				flag:gluttonous = {
+					if = { limit = { has_trait = gluttonous } remove_trait = gluttonous }
+					else = { add_trait = gluttonous }
+				}
+				flag:temperate = {
+					if = { limit = { has_trait = temperate } remove_trait = temperate }
+					else = { add_trait = temperate }
+				}
+				flag:greedy = {
+					if = { limit = { has_trait = greedy } remove_trait = greedy }
+					else = { add_trait = greedy }
+				}
+				flag:generous = {
+					if = { limit = { has_trait = generous } remove_trait = generous }
+					else = { add_trait = generous }
+				}
+				flag:lazy = {
+					if = { limit = { has_trait = lazy } remove_trait = lazy }
+					else = { add_trait = lazy }
+				}
+				flag:diligent = {
+					if = { limit = { has_trait = diligent } remove_trait = diligent }
+					else = { add_trait = diligent }
+				}
+				flag:wrathful = {
+					if = { limit = { has_trait = wrathful } remove_trait = wrathful }
+					else = { add_trait = wrathful }
+				}
+				flag:calm = {
+					if = { limit = { has_trait = calm } remove_trait = calm }
+					else = { add_trait = calm }
+				}
+				flag:impatient = {
+					if = { limit = { has_trait = impatient } remove_trait = impatient }
+					else = { add_trait = impatient }
+				}
+				flag:patient = {
+					if = { limit = { has_trait = patient } remove_trait = patient }
+					else = { add_trait = patient }
+				}
+				flag:arrogant = {
+					if = { limit = { has_trait = arrogant } remove_trait = arrogant }
+					else = { add_trait = arrogant }
+				}
+				flag:humble = {
+					if = { limit = { has_trait = humble } remove_trait = humble }
+					else = { add_trait = humble }
+				}
+				flag:deceitful = {
+					if = { limit = { has_trait = deceitful } remove_trait = deceitful }
+					else = { add_trait = deceitful }
+				}
+				flag:honest = {
+					if = { limit = { has_trait = honest } remove_trait = honest }
+					else = { add_trait = honest }
+				}
+				flag:craven = {
+					if = { limit = { has_trait = craven } remove_trait = craven }
+					else = { add_trait = craven }
+				}
+				flag:brave = {
+					if = { limit = { has_trait = brave } remove_trait = brave }
+					else = { add_trait = brave }
+				}
+				flag:shy = {
+					if = { limit = { has_trait = shy } remove_trait = shy }
+					else = { add_trait = shy }
+				}
+				flag:gregarious = {
+					if = { limit = { has_trait = gregarious } remove_trait = gregarious }
+					else = { add_trait = gregarious }
+				}
+				flag:ambitious = {
+					if = { limit = { has_trait = ambitious } remove_trait = ambitious }
+					else = { add_trait = ambitious }
+				}
+				flag:content = {
+					if = { limit = { has_trait = content } remove_trait = content }
+					else = { add_trait = content }
+				}
+				flag:arbitrary = {
+					if = { limit = { has_trait = arbitrary } remove_trait = arbitrary }
+					else = { add_trait = arbitrary }
+				}
+				flag:just = {
+					if = { limit = { has_trait = just } remove_trait = just }
+					else = { add_trait = just }
+				}
+				flag:cynical = {
+					if = { limit = { has_trait = cynical } remove_trait = cynical }
+					else = { add_trait = cynical }
+				}
+				flag:zealous = {
+					if = { limit = { has_trait = zealous } remove_trait = zealous }
+					else = { add_trait = zealous }
+				}
+				flag:paranoid = {
+					if = { limit = { has_trait = paranoid } remove_trait = paranoid }
+					else = { add_trait = paranoid }
+				}
+				flag:trusting = {
+					if = { limit = { has_trait = trusting } remove_trait = trusting }
+					else = { add_trait = trusting }
+				}
+				flag:callous = {
+					if = { limit = { has_trait = callous } remove_trait = callous }
+					else = { add_trait = callous }
+				}
+				flag:compassionate = {
+					if = { limit = { has_trait = compassionate } remove_trait = compassionate }
+					else = { add_trait = compassionate }
+				}
+				flag:vengeful = {
+					if = { limit = { has_trait = vengeful } remove_trait = vengeful }
+					else = { add_trait = vengeful }
+				}
+				flag:forgiving = {
+					if = { limit = { has_trait = forgiving } remove_trait = forgiving }
+					else = { add_trait = forgiving }
+				}
+				flag:fickle = {
+					if = { limit = { has_trait = fickle } remove_trait = fickle }
+					else = { add_trait = fickle }
+				}
+				flag:stubborn = {
+					if = { limit = { has_trait = stubborn } remove_trait = stubborn }
+					else = { add_trait = stubborn }
+				}
+				flag:sadistic = {
+					if = { limit = { has_trait = sadistic } remove_trait = sadistic }
+					else = { add_trait = sadistic }
+				}
+				flag:shrewd = {
+					if = { limit = { has_trait = shrewd } remove_trait = shrewd }
+					else = { add_trait = shrewd }
+				}
+				flag:dull = {
+					if = { limit = { has_trait = dull } remove_trait = dull }
+					else = { add_trait = dull }
+				}
+				flag:stuttering = {
+					if = { limit = { has_trait = stuttering } remove_trait = stuttering }
+					else = { add_trait = stuttering }
+				}
+				flag:depressed_genetic = {
+					if = { limit = { has_trait = depressed_genetic } remove_trait = depressed_genetic }
+					else = { add_trait = depressed_genetic }
+				}
+				flag:possessed_genetic = {
+					if = { limit = { has_trait = possessed_genetic } remove_trait = possessed_genetic }
+					else = { add_trait = possessed_genetic }
+				}
+				flag:lunatic_genetic = {
+					if = { limit = { has_trait = lunatic_genetic } remove_trait = lunatic_genetic }
+					else = { add_trait = lunatic_genetic }
+				}
+			}
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+sculpt_mind_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = master_of_puppets_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+sculpt_mind_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+sculpt_mind_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		scope:spell_target = {
+			switch = {
+				trigger = scope:list_option
+				flag:lustful = {
+					OR = {
+						has_trait = lustful
+						AND = {
+							NOT = { has_trait = chaste }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:chaste = {
+					OR = {
+						has_trait = chaste
+						AND = {
+							NOT = { has_trait = lustful }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:gluttonous = {
+					OR = {
+						has_trait = gluttonous
+						AND = {
+							NOT = { has_trait = temperate }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:temperate = {
+					OR = {
+						has_trait = temperate
+						AND = {
+							NOT = { has_trait = gluttonous }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:greedy = {
+					OR = {
+						has_trait = greedy
+						AND = {
+							NOT = { has_trait = generous }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:generous = {
+					OR = {
+						has_trait = generous
+						AND = {
+							NOT = { has_trait = greedy }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:lazy = {
+					OR = {
+						has_trait = lazy
+						AND = {
+							NOT = { has_trait = diligent }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:diligent = {
+					OR = {
+						has_trait = diligent
+						AND = {
+							NOT = { has_trait = lazy }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:wrathful = {
+					OR = {
+						has_trait = wrathful
+						AND = {
+							NOT = { has_trait = calm }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:calm = {
+					OR = {
+						has_trait = calm
+						AND = {
+							NOT = { has_trait = wrathful }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:impatient = {
+					OR = {
+						has_trait = impatient
+						AND = {
+							NOT = { has_trait = patient }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:patient = {
+					OR = {
+						has_trait = patient
+						AND = {
+							NOT = { has_trait = impatient }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:arrogant = {
+					OR = {
+						has_trait = arrogant
+						AND = {
+							NOT = { has_trait = humble }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:humble = {
+					OR = {
+						has_trait = humble
+						AND = {
+							NOT = { has_trait = arrogant }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:deceitful = {
+					OR = {
+						has_trait = deceitful
+						AND = {
+							NOT = { has_trait = honest }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:honest = {
+					OR = {
+						has_trait = honest
+						AND = {
+							NOT = { has_trait = deceitful }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:craven = {
+					OR = {
+						has_trait = craven
+						AND = {
+							NOT = { has_trait = brave }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:brave = {
+					OR = {
+						has_trait = brave
+						AND = {
+							NOT = { has_trait = craven }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:shy = {
+					OR = {
+						has_trait = shy
+						AND = {
+							NOT = { has_trait = gregarious }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:gregarious = {
+					OR = {
+						has_trait = gregarious
+						AND = {
+							NOT = { has_trait = shy }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:ambitious = {
+					OR = {
+						has_trait = ambitious
+						AND = {
+							NOT = { has_trait = content }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:content = {
+					OR = {
+						has_trait = content
+						AND = {
+							NOT = { has_trait = ambitious }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:arbitrary = {
+					OR = {
+						has_trait = arbitrary
+						AND = {
+							NOT = { has_trait = just }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:just = {
+					OR = {
+						has_trait = just
+						AND = {
+							NOT = { has_trait = arbitrary }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:cynical = {
+					OR = {
+						has_trait = cynical
+						AND = {
+							NOT = { has_trait = zealous }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:zealous = {
+					OR = {
+						has_trait = zealous
+						AND = {
+							NOT = { has_trait = cynical }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:paranoid = {
+					OR = {
+						has_trait = paranoid
+						AND = {
+							NOT = { has_trait = trusting }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:trusting = {
+					OR = {
+						has_trait = trusting
+						AND = {
+							NOT = { has_trait = paranoid }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:callous = {
+					OR = {
+						has_trait = callous
+						AND = {
+							NOT = { has_trait = compassionate }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:compassionate = {
+					OR = {
+						has_trait = compassionate
+						AND = {
+							NOT = { has_trait = callous }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:vengeful = {
+					OR = {
+						has_trait = vengeful
+						AND = {
+							NOT = { has_trait = forgiving }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:forgiving = {
+					OR = {
+						has_trait = forgiving
+						AND = {
+							NOT = { has_trait = vengeful }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:fickle = {
+					OR = {
+						has_trait = fickle
+						AND = {
+							NOT = { has_trait = stubborn }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:stubborn = {
+					OR = {
+						has_trait = stubborn
+						AND = {
+							NOT = { has_trait = fickle }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
+				flag:sadistic = {
+					OR = {
+						has_trait = sadistic number_of_personality_traits < personality_trait_limit
+					}
+				}
+				flag:shrewd = { NOT = { has_trait = dull } }
+				flag:dull = { NOT = { has_trait = shrewd } }
+				fallback = { always = yes }
+			}
+		}
+	}
+}
+
 master_of_puppets_spell = {
 	scope = character
 	is_shown = {

@@ -252,6 +252,146 @@ effect_get_all_sculpt_flesh_traits = {
 effect_get_all_sculpt_mind_traits = {
 	add_to_variable_list = {
 		name = sculpt_mind_spell_list
+		target = flag:lustful
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:chaste
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:gluttonous
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:temperate
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:greedy
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:generous
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:lazy
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:diligent
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:wrathful
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:calm
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:impatient
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:patient
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:arrogant
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:humble
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:deceitful
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:honest
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:craven
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:brave
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:shy
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:gregarious
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:ambitious
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:content
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:arbitrary
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:just
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:cynical
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:zealous
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:paranoid
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:trusting
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:callous
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:compassionate
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:vengeful
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:forgiving
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:fickle
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:stubborn
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:sadistic
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
 		target = flag:shrewd
 	}
 	add_to_variable_list = {

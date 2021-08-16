@@ -46,6 +46,12 @@ unlock_enchanting_aura_spell = {
 	}
 }
 
+unlock_sculpt_mind_spell = {
+	custom_description_no_bullet = {
+		text = unlock_sculpt_mind_spell
+	}
+}
+
 unlock_master_of_puppets_spell = {
 	custom_description_no_bullet = {
 		text = unlock_master_of_puppets_spell
