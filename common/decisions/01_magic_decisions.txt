@@ -1,30 +1,4 @@
-﻿open_spellbook_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
-
-	ai_check_interval = 0
-	
-	is_shown = {
-		has_trait = mage
-	}
-	
-	desc = open_spellbook_decision_desc
-	
-	effect = {
-		save_scope_as = am_spell_target
-		save_scope_as = am_spell_caster
-		trigger_event = ancient_magic_spellbook_events.001
-	}	
-
-	ai_potential = {
-		always = no
-	}
-
-	ai_will_do = {
-		base = 0
-	}
-}
-
-gain_potential_decision = {
+﻿gain_potential_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
 	
 	major = yes
