@@ -1,4 +1,4 @@
-effect_open_magocracy_council_window = {
+﻿effect_open_magocracy_council_window = {
 	scope:actor = {
 		set_variable = {
 			name = window_magocracy_council_view

@@ -20,6 +20,20 @@ toggle_magocracy_council_window = {
 	}
 }
 
+close_other_views = {
+    scope = character
+    effect = {
+        #close_all_views = yes
+        close_view = my_realm
+        close_view = military
+        close_view = council_window
+        close_view = court_window
+        close_view = intrigue_window
+        close_view = factions_window
+        close_view = decisions
+    }
+}
+
 #Inspired by Res Publica
 has_magocracy_government = {
 	scope = character
@@ -87,128 +101,6 @@ has_republic_council_government = {
 		custom_description = {
 			text = "effect_reform_into_council"
 			reform_into_council_republic = yes
-		}
-		house = {
-			var:titular_republic = {
-				every_in_list = {
-					variable = magocracy_families_list
-					house_head = {
-						trigger_event = merchant_republic_events.1009
-					}
-				}
-			}
-		}
-	}
-}
-
-has_republic_elected_ruler_government = {
-	scope = character
-	is_shown = {
-		OR = {
-			AND = {
-				holds_valid_magocracy = yes
-				republic_has_elected_ruler_form = yes
-			}
-			liege = {
-				AND = {
-					holds_valid_magocracy = yes
-					republic_has_elected_ruler_form = yes
-				}
-			}
-		}
-	}
-	is_valid = {
-		custom_description = {
-			text = "holds_the_republic_trigger"
-			is_landed = yes
-			holds_valid_magocracy = yes
-		}
-		custom_description = {
-			text = "does_not_have_current_form_trigger"
-			NOT = {
-				republic_has_elected_ruler_form = yes
-			}
-		}
-		custom_description = {
-			text = "controls_half_the_republic_trigger"
-			house = {
-				clean_family_votes >= 40
-			}
-		}
-		custom_description = {
-			text = "has_not_reformed_in_hundred_years_trigger"
-			primary_title = {
-				NOT = {
-					has_variable = reformed_recently
-				}
-			}
-		}
-	}
-	effect = {
-		custom_description = {
-			text = "effect_reform_into_elected_ruler"
-			reform_into_elected_ruler_republic = yes
-		}
-		house = {
-			var:titular_republic = {
-				every_in_list = {
-					variable = magocracy_families_list
-					house_head = {
-						trigger_event = merchant_republic_events.1009
-					}
-				}
-			}
-		}
-	}
-}
-
-has_republic_bicameral_government = {
-	scope = character
-	is_shown = {
-		OR = {
-			AND = {
-				holds_valid_magocracy = yes
-				republic_has_bicameral_form = yes
-			}
-			liege = {
-				AND = {
-					holds_valid_magocracy = yes
-					republic_has_bicameral_form = yes
-				}
-			}
-		}
-	}
-	is_valid = {
-		custom_description = {
-			text = "holds_the_republic_trigger"
-			is_landed = yes
-			holds_valid_magocracy = yes
-		}
-		custom_description = {
-			text = "does_not_have_current_form_trigger"
-			NOT = {
-				republic_has_bicameral_form = yes
-			}
-		}
-		custom_description = {
-			text = "controls_half_the_republic_trigger"
-			house = {
-				clean_family_votes >= 40
-			}
-		}
-		custom_description = {
-			text = "has_not_reformed_in_hundred_years_trigger"
-			primary_title = {
-				NOT = {
-					has_variable = reformed_recently
-				}
-			}
-		}
-	}
-	effect = {
-		custom_description = {
-			text = "effect_reform_into_bicameral"
-			reform_into_bicameral_republic = yes
 		}
 		house = {
 			var:titular_republic = {

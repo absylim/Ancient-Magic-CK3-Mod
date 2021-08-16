@@ -9,6 +9,12 @@ widget = {
 	layer = bottom
 
 	using = Animation_ShowHide_Standard
+	
+	state = {
+		name = am_magocracy
+		trigger_on_create = yes
+		on_start = "[ExecuteConsoleCommand('gui.createwidget gui/custom_gui/window_magocracy_council.gui republic_council_window')]"
+	}
 
 	flowcontainer = {
 		name = "observer_status"
