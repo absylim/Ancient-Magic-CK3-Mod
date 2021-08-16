@@ -10,10 +10,12 @@ convert_whole_realm_to_magocracy_decision = {
 		has_government = tribal_government
 		is_independent_ruler = yes
 		is_magus = yes
+		primary_title.tier >= tier_duchy
 	}
 
 	is_valid = {
 		has_realm_law = tribal_authority_3
+		primary_title.tier >= tier_duchy
 		custom_description = {
 			text = faith_is_reformed
 			subject = root
