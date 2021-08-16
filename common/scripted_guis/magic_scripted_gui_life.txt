@@ -46,12 +46,7 @@ heal_spell_has_list = {
 greater_heal_spell = {
 	scope = character
 	is_shown = {
-		scope:spell_target = {
-			OR = {
-				am_has_minor_illness = yes
-				am_has_greater_illness = yes
-			}
-		}
+		scope:spell_target = { am_has_greater_illness = yes }
 	}
 	is_valid = {
 		var:mana.compare_value >= scope:spell_cost.compare_value
@@ -98,13 +93,7 @@ greater_heal_spell_has_list = {
 avatar_of_life_spell = {
 	scope = character
 	is_shown = {
-		scope:spell_target = {
-			OR = {
-				am_has_minor_illness = yes
-				am_has_greater_illness = yes
-				am_has_critical_illness = yes
-			}
-		}
+		scope:spell_target = { am_has_critical_illness = yes }
 	}
 	is_valid = {
 		AND = {
