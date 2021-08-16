@@ -12,10 +12,10 @@ toggle_magocracy_council_window = {
 			limit = {
 				has_variable = window_magocracy_council_view
 			}
-			effect_close_magic_window = yes
+			effect_close_magocracy_council_window = yes
 		}
 		else = {
-			effect_open_magic_window = yes
+			effect_open_magocracy_council_window = yes
 		}
 	}
 }
