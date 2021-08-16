@@ -67,8 +67,8 @@ celerity_modifier = {
 }
 
 slowness_modifier = {
-	icon = martial_positive
-	prowess = 2
+	icon = martial_negative
+	prowess = -2
 	stacking = yes
 }
 

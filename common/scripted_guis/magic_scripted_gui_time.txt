@@ -214,21 +214,33 @@ mass_celerity_spell_has_list = {
 slowness_spell = {
 	scope = character
 	is_shown = {
-		this = scope:spell_target
+		AND = {
+			OR = {
+				NOT = { exists = var:slowness_target }
+				var:slowness_target = scope:spell_target
+			}
+			NOT = { this = scope:spell_target }
+		}
 	}
 	is_valid = {
 		var:mana.compare_value >= scope:spell_cost.compare_value
 	}
 	effect = {
 		if = {
-			limit = { NOT = { has_character_modifier = slowness_modifier } }
-			add_character_modifier = slowness_modifier
+			limit = { NOT = { scope:spell_target = { has_character_modifier = slowness_modifier } } }
+			set_variable = {
+				name = slowness_target
+				value = scope:spell_target
+			}
+			#should be var:slowness_target but the loc key doesn't have access to that until the script sets it
+			scope:spell_target = { add_character_modifier = slowness_modifier }
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
 		}
 		else = {
-			remove_all_character_modifier_instances = slowness_modifier
+			var:slowness_target = { remove_all_character_modifier_instances = slowness_modifier }
+			remove_variable = slowness_target
 			change_mana_gen_tooltip = { VALUE = mana_drain_average }
 		}
 	}
