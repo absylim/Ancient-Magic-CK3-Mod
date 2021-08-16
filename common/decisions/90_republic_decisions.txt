@@ -9,6 +9,7 @@ convert_whole_realm_to_magocracy_decision = {
 	is_shown = {
 		has_government = tribal_government
 		is_independent_ruler = yes
+		is_magus = yes
 	}
 
 	is_valid = {
@@ -17,6 +18,11 @@ convert_whole_realm_to_magocracy_decision = {
 			text = faith_is_reformed
 			subject = root
 			faith = { NOT = { has_doctrine_parameter = unreformed } }
+		}
+		custom_description = {
+			text = witchcraft_not_illegal
+			subject = root
+			faith = { NOT = { has_doctrine_parameter = witchcraft_illegal } }
 		}
 		prestige_level >= 2
 		capital_province.county = {
@@ -49,8 +55,8 @@ convert_whole_realm_to_magocracy_decision = {
 	}
 
 	cost = {
-		prestige = 200
-		gold = 500
+		prestige = 500
+		gold = 200
 	}
 
 	effect = {
@@ -86,27 +92,7 @@ convert_whole_realm_to_magocracy_decision = {
 				}
 			}
 		}
-		every_held_title = {
-			limit = { tier = tier_barony }
-			title_province = {
-				set_variable = {
-					name = tribal_to_republic_building_level
-					value = combined_building_level
-					days = 1
-				}
-				set_holding_type = city_holding
-				while = {
-					limit = {
-						var:tribal_to_republic_building_level > 1
-					}
-					generate_building = yes
-					change_variable = {
-						name = tribal_to_republic_building_level
-						subtract = 1
-					}
-				}
-			}
-		}
+		convert_whole_realm_to_magocracy_effect = yes
 	}
 
 	ai_potential = {
@@ -114,7 +100,21 @@ convert_whole_realm_to_magocracy_decision = {
 	}
 
 	ai_will_do = {
-		base = 60
+		base = 40
+		modifier = {
+			add = {
+				value = 10
+				scope:recipient = {
+					multiply = mage_level
+				}
+			}
+		}
+		modifier = {
+			multiply = 0.5
+			faith = {
+				has_doctrine_parameter = witchcraft_shunned
+			}
+		}
 	}
 }
 
@@ -208,12 +208,12 @@ attempt_coup_decision = {
 	}
 }
 
-convert_to_republic_decision = {
+convert_to_magocracy_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
 	major = yes
 
-	desc = convert_to_republic_decision_desc
-	selection_tooltip = convert_to_republic_decision_tooltip
+	desc = convert_to_magocracy_decision_desc
+	selection_tooltip = convert_to_magocracy_decision_tooltip
 
 	ai_check_interval = 0
 
@@ -221,13 +221,24 @@ convert_to_republic_decision = {
 		is_landed = yes
 		is_independent_ruler = yes
 		highest_held_title_tier > tier_county
+		is_magus = yes
 		OR = {
 			has_government = feudal_government
 			has_government = clan_government
 		}
 	}
+
+	cost = {
+		prestige = 200
+		gold = 500
+	}
 	
 	is_valid = {
+		custom_description = {
+			text = witchcraft_not_illegal
+			subject = root
+			faith = { NOT = { has_doctrine_parameter = witchcraft_illegal } }
+		}
 		trigger_if = {
 			OR = {
 				has_realm_law = crown_authority_2
@@ -241,7 +252,7 @@ convert_to_republic_decision = {
 
 	effect = {
 		change_government = magocracy_government
-		add_realm_law = city_succession_law
+		add_realm_law = magocracy_succession_law
 		house = {
 			custom_description = {
 				text = effect_change_family_influence_positive
@@ -268,22 +279,7 @@ convert_to_republic_decision = {
 			}
 		}
 		capital_barony.title_province = {
-			set_variable = {
-				name = feudal_to_republic_building_level
-				value = combined_building_level
-				days = 1
-			}
-			set_holding_type = city_holding
-			while = {
-				limit = {
-					var:feudal_to_republic_building_level > 1
-				}
-				generate_building = yes
-				change_variable = {
-					name = feudal_to_republic_building_level
-					subtract = 1
-				}
-			}
+			set_holding_type = city_of_magic_holding
 		}
 		trigger_event = republic_decision_events.1003
 	}
@@ -294,6 +290,20 @@ convert_to_republic_decision = {
 
 	ai_will_do = {
 		base = 0
+		modifier = {
+			add = {
+				value = 10
+				scope:recipient = {
+					multiply = mage_level
+				}
+			}
+		}
+		modifier = {
+			multiply = 0.5
+			faith = {
+				has_doctrine_parameter = witchcraft_shunned
+			}
+		}
 	}
 }
 

@@ -492,7 +492,7 @@ set_up_council_republic = {
 set_up_elected_ruler_republic = {
 	remove_all_current_laws = yes
 	add_realm_law = crown_authority_2
-	add_realm_law = city_succession_law
+	add_realm_law = magocracy_succession_law
 	primary_title = {
 		remove_variable = senate_government_republic
 		remove_variable = council_government_magocracy
@@ -504,7 +504,7 @@ set_up_elected_ruler_republic = {
 
 set_up_bicameral_republic = {
 	remove_all_current_laws = yes
-	add_realm_law = city_succession_law
+	add_realm_law = magocracy_succession_law
 	primary_title = {
 		clear_variable_list = lower_house_counties
 		set_variable = bicameral_government_republic
@@ -1766,8 +1766,8 @@ effect_create_house_army = {
 
 change_into_republic_on_start = {
 	trigger_event = republic_decision_events.1003
-	change_government = republic_government
-	add_realm_law = city_succession_law
+	change_government = magocracy_government
+	add_realm_law = magocracy_succession_law
 	add_family_to_magocracy_families = yes
 	every_vassal = {
 		limit = { is_house_head = yes }
@@ -3550,8 +3550,8 @@ finish_dictatorship_appointment_effect = {
 				}
 			}
 			scope:proposed_dictator = {
-				change_government = republic_government
-				add_realm_law = city_succession_law
+				change_government = magocracy_government
+				add_realm_law = magocracy_succession_law
 				add_realm_law = crown_authority_2
 				house = {
 					set_variable = {
