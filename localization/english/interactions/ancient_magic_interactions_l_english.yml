@@ -1,5 +1,8 @@
 ﻿l_english:
- #faith
+ # Categories
+ interaction_category_uncategorized: "Magic"
+
+ # Interactions
  cast_spell_interaction: "Cast a Spell"
  cast_spell_interaction_desc: "[actor.GetNameOrMe|U] cast a spell on [actor.Custom2('SpellTargetYourself',recipient)]"
  GLOBAL_SPELL_CASTER_EFFECT: "Casts a spell"
