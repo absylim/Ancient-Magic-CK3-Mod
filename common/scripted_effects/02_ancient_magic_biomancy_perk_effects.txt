@@ -1,0 +1,179 @@
+﻿unlock_rewrite_beauty_spell = {
+	custom_description_no_bullet = {
+		text = unlock_rewrite_beauty_spell
+	}
+}
+
+unlock_negative_trait_removal_rewrite_beauty = {
+	custom_description_no_bullet = {
+		text = unlock_negative_trait_removal_rewrite_beauty
+	}
+}
+
+unlock_positive_trait_removal_rewrite_beauty = {
+	custom_description_no_bullet = {
+		text = unlock_positive_trait_removal_rewrite_beauty
+	}
+}
+
+unlock_negative_trait_addition_rewrite_beauty = {
+	custom_description_no_bullet = {
+		text = unlock_negative_trait_addition_rewrite_beauty
+	}
+}
+
+unlock_positive_trait_addition_rewrite_beauty = {
+	custom_description_no_bullet = {
+		text = unlock_positive_trait_addition_rewrite_beauty
+	}
+}
+
+unlock_negative_trait_t1_upgrade_rewrite_beauty = {
+	custom_description_no_bullet = {
+		text = unlock_negative_trait_t1_upgrade_rewrite_beauty
+	}
+}
+
+unlock_positive_trait_t1_upgrade_rewrite_beauty = {
+	custom_description_no_bullet = {
+		text = unlock_positive_trait_t1_upgrade_rewrite_beauty
+	}
+}
+
+unlock_negative_trait_t2_upgrade_rewrite_beauty = {
+	custom_description_no_bullet = {
+		text = unlock_negative_trait_t2_upgrade_rewrite_beauty
+	}
+}
+
+unlock_positive_trait_t2_upgrade_rewrite_beauty = {
+	custom_description_no_bullet = {
+		text = unlock_positive_trait_t2_upgrade_rewrite_beauty
+	}
+}
+
+unlock_rewrite_physique_spell = {
+	custom_description_no_bullet = {
+		text = unlock_rewrite_physique_spell
+	}
+}
+
+unlock_negative_trait_removal_rewrite_physique = {
+	custom_description_no_bullet = {
+		text = unlock_negative_trait_removal_rewrite_physique
+	}
+}
+
+unlock_positive_trait_removal_rewrite_physique = {
+	custom_description_no_bullet = {
+		text = unlock_positive_trait_removal_rewrite_physique
+	}
+}
+
+unlock_negative_trait_addition_rewrite_physique = {
+	custom_description_no_bullet = {
+		text = unlock_negative_trait_addition_rewrite_physique
+	}
+}
+
+unlock_positive_trait_addition_rewrite_physique = {
+	custom_description_no_bullet = {
+		text = unlock_positive_trait_addition_rewrite_physique
+	}
+}
+
+unlock_negative_trait_t1_upgrade_rewrite_physique = {
+	custom_description_no_bullet = {
+		text = unlock_negative_trait_t1_upgrade_rewrite_physique
+	}
+}
+
+unlock_positive_trait_t1_upgrade_rewrite_physique = {
+	custom_description_no_bullet = {
+		text = unlock_positive_trait_t1_upgrade_rewrite_physique
+	}
+}
+
+unlock_negative_trait_t2_upgrade_rewrite_physique = {
+	custom_description_no_bullet = {
+		text = unlock_negative_trait_t2_upgrade_rewrite_physique
+	}
+}
+
+unlock_positive_trait_t2_upgrade_rewrite_physique = {
+	custom_description_no_bullet = {
+		text = unlock_positive_trait_t2_upgrade_rewrite_physique
+	}
+}
+
+unlock_rewrite_intellect_spell = {
+	custom_description_no_bullet = {
+		text = unlock_rewrite_intellect_spell
+	}
+}
+
+unlock_negative_trait_removal_rewrite_intellect = {
+	custom_description_no_bullet = {
+		text = unlock_negative_trait_removal_rewrite_intellect
+	}
+}
+
+unlock_positive_trait_removal_rewrite_intellect = {
+	custom_description_no_bullet = {
+		text = unlock_positive_trait_removal_rewrite_intellect
+	}
+}
+
+unlock_negative_trait_addition_rewrite_intellect = {
+	custom_description_no_bullet = {
+		text = unlock_negative_trait_addition_rewrite_intellect
+	}
+}
+
+unlock_positive_trait_addition_rewrite_intellect = {
+	custom_description_no_bullet = {
+		text = unlock_positive_trait_addition_rewrite_intellect
+	}
+}
+
+unlock_negative_trait_t1_upgrade_rewrite_intellect = {
+	custom_description_no_bullet = {
+		text = unlock_negative_trait_t1_upgrade_rewrite_intellect
+	}
+}
+
+unlock_positive_trait_t1_upgrade_rewrite_intellect = {
+	custom_description_no_bullet = {
+		text = unlock_positive_trait_t1_upgrade_rewrite_intellect
+	}
+}
+
+unlock_negative_trait_t2_upgrade_rewrite_intellect = {
+	custom_description_no_bullet = {
+		text = unlock_negative_trait_t2_upgrade_rewrite_intellect
+	}
+}
+
+unlock_positive_trait_t2_upgrade_rewrite_intellect = {
+	custom_description_no_bullet = {
+		text = unlock_positive_trait_t2_upgrade_rewrite_intellect
+	}
+}
+
+unlock_sculpter_of_flesh_spell = {
+	custom_description_no_bullet = {
+		text = unlock_sculpter_of_flesh_spell
+	}
+}
+
+unlock_fertility_control_spell = {
+	custom_description_no_bullet = {
+		text = unlock_fertility_control_spell
+	}
+}
+
+unlock_impregnate_spell = {
+	custom_description_no_bullet = {
+		text = unlock_impregnate_spell
+	}
+}

@@ -1,0 +1,47 @@
+﻿unlock_flame_aura_spell = {
+	custom_description_no_bullet = {
+		text = unlock_flame_aura_spell
+	}
+}
+
+unlock_flaming_weapons_spell = {
+	custom_description_no_bullet = {
+		text = unlock_flaming_weapons_spell
+	}
+}
+
+unlock_living_earthworks_spell = {
+	custom_description_no_bullet = {
+		text = unlock_living_earthworks_spell
+	}
+}
+
+unlock_golem_creation_spell = {
+	custom_description_no_bullet = {
+		text = unlock_golem_creation_spell
+	}
+}
+
+unlock_control_water_spell = {
+	custom_description_no_bullet = {
+		text = unlock_control_water_spell
+	}
+}
+
+unlock_drought_spell = {
+	custom_description_no_bullet = {
+		text = unlock_drought_spell
+	}
+}
+
+unlock_elemental_warrior_spell = {
+	custom_description_no_bullet = {
+		text = unlock_elemental_warrior_spell
+	}
+}
+
+unlock_lord_of_the_elements_spell = {
+	custom_description_no_bullet = {
+		text = unlock_lord_of_the_elements_spell
+	}
+}

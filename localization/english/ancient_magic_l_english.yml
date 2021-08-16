@@ -32,3 +32,6 @@
  MONTHLY_MANA_DRAIN_AURAS:0 "[GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_drain_auras')|+=0]"
  MONTHLY_MANA_DRAIN_LIFESTYLE:0 "[GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_drain_lifestyle')|+=0]"
  MONTHLY_MANA_DRAIN_DISEASE:0 "[GetPlayer.MakeScope.ScriptValue('mana_drain_disease')|+=0]"
+
+ #vanilla bugfix
+ TRAIT_DESC_POSIITIVE_FOR_THEM:0 "$TRAIT_DESC_POSITIVE_FOR_THEM$"

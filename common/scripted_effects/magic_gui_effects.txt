@@ -1,0 +1,288 @@
+﻿effect_open_magic_window = {
+	scope:actor = {
+		set_variable = {
+			name = repeat_spell
+			value = 1
+		}
+		set_variable = {
+			name = spell_target
+			value = scope:recipient
+		}
+		set_variable = {
+			name = list_option
+			value = flag:none
+		}
+		effect_get_all_possible_candidates = yes
+		effect_get_all_rewrite_beauty_traits = yes
+		effect_get_all_rewrite_physique_traits = yes
+		effect_get_all_rewrite_intellect_traits = yes
+		effect_get_all_sculpt_flesh_traits = yes
+		effect_get_all_sculpt_mind_traits = yes
+		effect_get_all_fertility_control_options = yes
+		set_variable = {
+			name = window_magic_view
+			value = 1
+		}
+	}
+}
+
+effect_close_magic_window = {
+	remove_variable = window_magic_view
+	remove_variable = repeat_spell
+	remove_variable = spell_target
+	remove_variable = list_option
+	clear_variable_list = spell_candidates
+	clear_variable_list = rewrite_beauty_spell_list
+	clear_variable_list = rewrite_physique_spell_list
+	clear_variable_list = rewrite_intellect_spell_list
+	clear_variable_list = sculpter_of_flesh_spell_list
+	clear_variable_list = sculpt_mind_spell_list
+	clear_variable_list = fertility_control_spell_list
+}
+
+effect_get_all_possible_candidates = {
+	add_to_variable_list = {
+		name = spell_candidates
+		target = scope:actor
+	}
+	every_independent_ruler = {
+		limit = { in_diplomatic_range = scope:actor character_is_realm_neighbor = scope:actor }
+		save_scope_as = add_ruler
+		scope:actor = {
+			add_to_variable_list = {
+				name = spell_candidates
+				target = scope:add_ruler
+			}
+		}
+	}
+	if = {
+		limit = { is_independent_ruler = no }
+		liege = {
+			every_vassal = {
+				limit = { NOT = { this = scope:actor } }
+				save_scope_as = add_vassal
+				scope:actor = {
+					add_to_variable_list = {
+						name = spell_candidates
+						target = scope:add_vassal
+					}
+				}
+			}
+		}
+	}
+	every_vassal = {
+		save_scope_as = add_vassal
+		scope:actor = {
+			add_to_variable_list = {
+				name = spell_candidates
+				target = scope:add_vassal
+			}
+		}
+	}
+	every_courtier = {
+		save_scope_as = add_courtier
+		scope:actor = {
+			add_to_variable_list = {
+				name = spell_candidates
+				target = scope:add_courtier
+			}
+		}
+	}
+}
+
+display_aura_times = {
+	custom_description_no_bullet = {
+		text = display_aura_times_loc
+		value = $VALUE$
+	}
+}
+
+effect_get_all_rewrite_beauty_traits = {
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_good_3
+	}
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_good_2
+	}
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_good_1
+	}
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_none
+	}
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_bad_1
+	}
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_bad_2
+	}
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_bad_3
+	}
+}
+
+effect_get_all_rewrite_physique_traits = {
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_good_3
+	}
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_good_2
+	}
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_good_1
+	}
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_none
+	}
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_bad_1
+	}
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_bad_2
+	}
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_bad_3
+	}
+}
+
+effect_get_all_rewrite_intellect_traits = {
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_good_3
+	}
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_good_2
+	}
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_good_1
+	}
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_none
+	}
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_bad_1
+	}
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_bad_2
+	}
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_bad_3
+	}
+}
+
+effect_get_all_sculpt_flesh_traits = {
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:fecund
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:infertile
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:strong
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:weak
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:spindly
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:giant
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:dwarf
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:albino
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:clubfooted
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:hunchbacked
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:lisping
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:scaly
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:wheezing
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:bleeder
+	}
+}
+
+effect_get_all_sculpt_mind_traits = {
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:shrewd
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:dull
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:stuttering
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:depressed_genetic
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:possessed_genetic
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:lunatic_genetic
+	}
+}
+
+effect_get_all_fertility_control_options = {
+	add_to_variable_list = {
+		name = fertility_control_spell_list
+		target = flag:inc_fertility
+	}
+	add_to_variable_list = {
+		name = fertility_control_spell_list
+		target = flag:dec_fertility
+	}
+}

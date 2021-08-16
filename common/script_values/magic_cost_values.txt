@@ -1,0 +1,112 @@
+﻿#error catching
+dummy_spell_cost = { value = 0 }
+
+#Time
+glimpse_the_future_spell_cost = { value = 100 }
+financial_times_spell_cost = { value = 100 }
+celerity_spell_cost = { value = 100 }
+mass_celerity_spell_cost = { value = 100 }
+slowness_spell_cost = { value = 100 }
+mass_slowness_spell_cost = { value = 100 }
+temporal_manipulation_spell_cost = { value = 100 }
+master_of_time_spell_cost = { value = 500 }
+
+#Life
+heal_spell_cost = { value = 50 }
+greater_heal_spell_cost = { value = 100 }
+avatar_of_life_spell_cost = { value = 200 }
+
+#Elemental
+flame_aura_spell_cost = { value = 100 }
+flaming_weapons_spell_cost = { value = 100 }
+living_earthworks_spell_cost = { value = 100 }
+golem_creation_spell_cost = { value = 100 }
+control_water_spell_cost = { value = 100 }
+drought_spell_cost = { value = 100 }
+elemental_warrior_spell_cost = { value = 100 }
+lord_of_the_elements_spell_cost = { value = 400 }
+
+#Necromancy
+inflict_illness_spell_cost = { value = 50 }
+plague_lord_spell_cost = { value = 300 }
+aura_of_death_spell_cost = { value = 100 }
+necromancy_spell_cost = { value = 200 }
+drain_life_spell_cost = { value = 50 }
+death_stare_spell_cost = { value = 600 }
+deacon_of_death_spell_cost = { value = 600 }
+
+#Biomancy
+rewrite_beauty_spell_cost = {
+	value = 0
+	var:spell_target = {
+		if = { limit = { has_trait = beauty_good_3 } add = 3 }
+		else_if = { limit = { has_trait = beauty_good_2 } add = 2 }
+		else_if = { limit = { has_trait = beauty_good_1 } add = 1 }
+		else_if = { limit = { has_trait = beauty_bad_1 } add = -1 }
+		else_if = { limit = { has_trait = beauty_bad_2 } add = -2 }
+		else_if = { limit = { has_trait = beauty_bad_3 } add = -3 }
+	}
+	if = { limit = { var:list_option = flag:beauty_good_3 } add = -3 }
+	else_if = { limit = { var:list_option = flag:beauty_good_2 } add = -2 }
+	else_if = { limit = { var:list_option = flag:beauty_good_1 } add = -1 }
+	else_if = { limit = { var:list_option = flag:beauty_none } add = 0 }
+	else_if = { limit = { var:list_option = flag:beauty_bad_1 } add = 1 }
+	else_if = { limit = { var:list_option = flag:beauty_bad_2 } add = 2 }
+	else_if = { limit = { var:list_option = flag:beauty_bad_3 } add = 3 }
+	else = { value = 0 }
+	multiply = 200
+}
+rewrite_physique_spell_cost = {
+	value = 0
+	var:spell_target = {
+		if = { limit = { has_trait = physique_good_3 } add = 3 }
+		else_if = { limit = { has_trait = physique_good_2 } add = 2 }
+		else_if = { limit = { has_trait = physique_good_1 } add = 1 }
+		else_if = { limit = { has_trait = physique_bad_1 } add = -1 }
+		else_if = { limit = { has_trait = physique_bad_2 } add = -2 }
+		else_if = { limit = { has_trait = physique_bad_3 } add = -3 }
+	}
+	if = { limit = { var:list_option = flag:physique_good_3 } add = -3 }
+	else_if = { limit = { var:list_option = flag:physique_good_2 } add = -2 }
+	else_if = { limit = { var:list_option = flag:physique_good_1 } add = -1 }
+	else_if = { limit = { var:list_option = flag:physique_none } add = 0 }
+	else_if = { limit = { var:list_option = flag:physique_bad_1 } add = 1 }
+	else_if = { limit = { var:list_option = flag:physique_bad_2 } add = 2 }
+	else_if = { limit = { var:list_option = flag:physique_bad_3 } add = 3 }
+	else = { value = 0 }
+	multiply = 200
+}
+rewrite_intellect_spell_cost = {
+	value = 0
+	var:spell_target = {
+		if = { limit = { has_trait = intellect_good_3 } add = 3 }
+		else_if = { limit = { has_trait = intellect_good_2 } add = 2 }
+		else_if = { limit = { has_trait = intellect_good_1 } add = 1 }
+		else_if = { limit = { has_trait = intellect_bad_1 } add = -1 }
+		else_if = { limit = { has_trait = intellect_bad_2 } add = -2 }
+		else_if = { limit = { has_trait = intellect_bad_3 } add = -3 }
+	}
+	if = { limit = { var:list_option = flag:intellect_good_3 } add = -3 }
+	else_if = { limit = { var:list_option = flag:intellect_good_2 } add = -2 }
+	else_if = { limit = { var:list_option = flag:intellect_good_1 } add = -1 }
+	else_if = { limit = { var:list_option = flag:intellect_none } add = 0 }
+	else_if = { limit = { var:list_option = flag:intellect_bad_1 } add = 1 }
+	else_if = { limit = { var:list_option = flag:intellect_bad_2 } add = 2 }
+	else_if = { limit = { var:list_option = flag:intellect_bad_3 } add = 3 }
+	else = { value = 0 }
+	multiply = 200
+}
+sculpter_of_flesh_spell_cost = { value = 200 }
+fertility_control_spell_cost = { value = 100 }
+impregnate_spell_cost = { value = 300 }
+
+#MindMagic
+entrance_spell_cost = { value = 100 }
+incite_lust_spell_cost = { value = 300 }
+incite_obedience_spell_cost = { value = 200 }
+dominate_spell_cost = { value = 400 }
+beguiling_aura_spell_cost = { value = 100 }
+friendship_spell_cost = { value = 400 }
+rivalry_spell_cost = { value = 400 }
+enchanting_aura_spell_cost = { value = 100 }
+master_of_puppets_spell_cost = { value = 600 }

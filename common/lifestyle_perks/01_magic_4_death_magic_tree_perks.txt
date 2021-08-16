@@ -3,13 +3,13 @@
 	tree = death_magic
 	position = { 2 0 }
 	icon = node_diplomacy
-	
+
 	auto_selection_weight = {
 		value = 11
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential	
+					has_trait = magic_potential
 					has_trait = education_arcane
 				}
 			}
@@ -58,22 +58,18 @@
 			multiply = 0
 		}
 	}
+
+	character_modifier = {
+		dread_baseline_add = 5
+	}
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		add_trait_force_tooltip = mage
 		add_trait_force_tooltip = mana
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
-	}
-	character_modifier = {
-		dread_baseline_add = 5
 	}
 }
 
@@ -82,26 +78,16 @@ inflict_illness_perk = {
 	tree = death_magic
 	position = { 0 1.25 }
 	icon = node_diplomacy
-	
-	
-	
+
+	parent = death_mage_perk
+
 	effect = {
-		custom_description_no_bullet = {
-			text = inflict_illness_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_inflict_illness_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
-	
-	parent = death_mage_perk
 }
 
 
@@ -110,26 +96,16 @@ plague_lord_perk = {
 	tree = death_magic
 	position = { 0 2.5 }
 	icon = node_diplomacy
-	
-	
-	
+
+	parent = inflict_illness_perk
+
 	effect = {
-		custom_description_no_bullet = {
-			text = plague_lord_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_plague_lord_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
-	
-	parent = inflict_illness_perk
 }
 
 
@@ -138,21 +114,14 @@ aura_of_death_perk = {
 	tree = death_magic
 	position = { 2 1.25 }
 	icon = node_diplomacy
-	
+
 	parent = death_mage_perk
-	
-	
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_aura_of_death_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -163,24 +132,14 @@ necromancy_perk = {
 	tree = death_magic
 	position = { 2 2.5 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = aura_of_death_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = necromancy_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_necromancy_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -191,26 +150,16 @@ drain_life_perk = {
 	tree = death_magic
 	position = { 4 1.25 }
 	icon = node_diplomacy
-	
-	
-	
+
+	parent = death_mage_perk
+
 	effect = {
-		custom_description_no_bullet = {
-			text = drain_life_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_drain_life_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
-	
-	parent = death_mage_perk
 }
 
 
@@ -219,24 +168,14 @@ death_stare_perk = {
 	tree = death_magic
 	position = { 4 2.5 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = drain_life_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = death_stare_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_death_stare_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -247,30 +186,20 @@ death_magic_8_perk = {
 	tree = death_magic
 	position = { 2 3.75 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = plague_lord_perk
 	parent = necromancy_perk
 	parent = death_stare_perk
-	
-	effect = {
-		custom_description_no_bullet = {
-			text = placeholder_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
-	}
+
 	character_modifier = {
 		dread_baseline_add = 25
+	}
+
+	effect = {
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
 
@@ -280,24 +209,14 @@ deacon_of_death_perk = {
 	tree = death_magic
 	position = { 2 5 }
 	icon = deacon_of_death
-	
-	
-	
+
 	parent = death_magic_8_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = deacon_of_death_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_deacon_of_death_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		add_trait_force_tooltip = deacon_of_death
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}

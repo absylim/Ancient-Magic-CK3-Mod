@@ -2,7 +2,7 @@
 	OR = {
         # Thank you to Nope (Vampires and Lycans mod) for doing the
         # work to find these flags. You saved me some time.
-		
+
         has_character_flag = has_refunded_perks
 		has_character_flag = declared_major_religious_war_flag
 		has_character_flag = has_created_a_faith
@@ -39,7 +39,7 @@ am_has_minor_illness = {
 }
 
 am_has_greater_illness = {
-	OR = { 
+	OR = {
 		has_trait = pneumonic
 		has_trait = great_pox
 		has_trait = leper
@@ -73,7 +73,7 @@ has_magical_potential = {
 		has_trait = magic_potential_3
 	}
 }
-		
+
 		#trigger_if = {
 		#	limit = {
 		#		NOT = { $MANA_COST$ = 0 }

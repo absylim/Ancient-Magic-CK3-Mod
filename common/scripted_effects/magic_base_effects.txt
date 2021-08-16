@@ -1,0 +1,68 @@
+﻿set_up_spells = {
+	# Spell Categories
+	clear_global_variable_list = spell_categories_list
+	add_to_global_variable_list = { name = spell_categories_list target = flag:time }
+	add_to_global_variable_list = { name = spell_categories_list target = flag:life }
+	add_to_global_variable_list = { name = spell_categories_list target = flag:elemental }
+	add_to_global_variable_list = { name = spell_categories_list target = flag:necromancy }
+	add_to_global_variable_list = { name = spell_categories_list target = flag:biomancy }
+	add_to_global_variable_list = { name = spell_categories_list target = flag:mind_magic }
+	
+	#Time
+	clear_global_variable_list = time_spells_list
+	add_to_global_variable_list = { name = time_spells_list target = flag:glimpse_the_future_spell }
+	add_to_global_variable_list = { name = time_spells_list target = flag:financial_times_spell }
+	add_to_global_variable_list = { name = time_spells_list target = flag:celerity_spell }
+	add_to_global_variable_list = { name = time_spells_list target = flag:mass_celerity_spell }
+	add_to_global_variable_list = { name = time_spells_list target = flag:slowness_spell }
+	add_to_global_variable_list = { name = time_spells_list target = flag:mass_slowness_spell }
+	add_to_global_variable_list = { name = time_spells_list target = flag:temporal_manipulation_spell }
+	add_to_global_variable_list = { name = time_spells_list target = flag:master_of_time_spell }
+
+	# Life
+	clear_global_variable_list = life_spells_list
+	add_to_global_variable_list = { name = life_spells_list target = flag:heal_spell }
+	add_to_global_variable_list = { name = life_spells_list target = flag:greater_heal_spell }
+	add_to_global_variable_list = { name = life_spells_list target = flag:avatar_of_life_spell }
+
+	# Elemental
+	clear_global_variable_list = elemental_spells_list
+	add_to_global_variable_list = { name = elemental_spells_list target = flag:flame_aura_spell }
+	add_to_global_variable_list = { name = elemental_spells_list target = flag:flaming_weapons_spell }
+	add_to_global_variable_list = { name = elemental_spells_list target = flag:living_earthworks_spell }
+	add_to_global_variable_list = { name = elemental_spells_list target = flag:golem_creation_spell }
+	add_to_global_variable_list = { name = elemental_spells_list target = flag:control_water_spell }
+	add_to_global_variable_list = { name = elemental_spells_list target = flag:drought_spell }
+	add_to_global_variable_list = { name = elemental_spells_list target = flag:elemental_warrior_spell }
+	add_to_global_variable_list = { name = elemental_spells_list target = flag:lord_of_the_elements_spell }
+
+	# Necromancy
+	clear_global_variable_list = necromancy_spells_list
+	add_to_global_variable_list = { name = necromancy_spells_list target = flag:inflict_illness_spell }
+	add_to_global_variable_list = { name = necromancy_spells_list target = flag:plague_lord_spell }
+	add_to_global_variable_list = { name = necromancy_spells_list target = flag:aura_of_death_spell }
+	add_to_global_variable_list = { name = necromancy_spells_list target = flag:necromancy_spell }
+	add_to_global_variable_list = { name = necromancy_spells_list target = flag:drain_life_spell }
+	add_to_global_variable_list = { name = necromancy_spells_list target = flag:death_stare_spell }
+	add_to_global_variable_list = { name = necromancy_spells_list target = flag:deacon_of_death_spell }
+
+	# Biomancy
+	clear_global_variable_list = biomancy_spells_list
+	add_to_global_variable_list = { name = biomancy_spells_list target = flag:rewrite_beauty_spell }
+	add_to_global_variable_list = { name = biomancy_spells_list target = flag:rewrite_physique_spell }
+	add_to_global_variable_list = { name = biomancy_spells_list target = flag:rewrite_intellect_spell }
+	add_to_global_variable_list = { name = biomancy_spells_list target = flag:sculpter_of_flesh_spell }
+	add_to_global_variable_list = { name = biomancy_spells_list target = flag:fertility_control_spell }
+	add_to_global_variable_list = { name = biomancy_spells_list target = flag:impregnate_spell }
+
+	# Mind Magic
+	clear_global_variable_list = mind_magic_spells_list
+	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:entrance_spell }
+	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:incite_lust_spell }
+	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:incite_obedience_spell }
+	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:dominate_spell }
+	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:beguiling_aura_spell }
+	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:friendship_spell }
+	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:enchanting_aura_spell }
+	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:master_of_puppets_spell }
+}

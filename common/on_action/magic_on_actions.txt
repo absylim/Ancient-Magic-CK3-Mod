@@ -1,0 +1,11 @@
+﻿on_game_start = {
+	on_actions = {
+		set_up_spells
+	}
+}
+
+set_up_spells = {
+	effect = {
+		set_up_spells = yes
+	}
+}
