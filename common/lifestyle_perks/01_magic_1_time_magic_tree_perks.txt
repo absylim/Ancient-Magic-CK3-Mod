@@ -179,7 +179,7 @@ financial_times_perk = {
 		}
 		if = {
 			limit = {
-				NOT = { is_immortal=yes }
+				NOT = { is_immortal = yes }
 			}
 			multiply = 2
 		}
