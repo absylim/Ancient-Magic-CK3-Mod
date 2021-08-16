@@ -123,7 +123,7 @@ rewrite_beauty_spell_has_list = {
 						has_perk = improve_trait_perk
 						has_perk = architect_of_bloodlines_perk
 						scope:spell_target = {
-							NOT = { has_trait = beauty_good }
+							has_trait = beauty_bad
 						}
 					}
 				}
@@ -146,7 +146,7 @@ rewrite_beauty_spell_has_list = {
 						has_perk = weaken_trait_perk
 						has_perk = architect_of_bloodlines_perk
 						scope:spell_target = {
-							NOT = { has_trait = beauty_bad }
+							has_trait = beauty_good
 						}
 					}
 					AND = {
@@ -326,7 +326,7 @@ rewrite_physique_spell_has_list = {
 					AND = {
 						has_perk = architect_of_bloodlines_perk
 						scope:spell_target = {
-							NAND = {
+							NOR = {
 								has_trait = physique_good
 								has_trait = physique_bad
 							}
@@ -336,7 +336,7 @@ rewrite_physique_spell_has_list = {
 						has_perk = improve_trait_perk
 						has_perk = architect_of_bloodlines_perk
 						scope:spell_target = {
-							NOT = { has_trait = physique_good }
+							has_trait = physique_bad
 						}
 					}
 				}
@@ -359,13 +359,13 @@ rewrite_physique_spell_has_list = {
 						has_perk = weaken_trait_perk
 						has_perk = architect_of_bloodlines_perk
 						scope:spell_target = {
-							NOT = { has_trait = physique_bad }
+							has_trait = physique_good
 						}
 					}
 					AND = {
 						has_perk = architect_of_bloodlines_perk
 						scope:spell_target = {
-							NAND = {
+							NOR = {
 								has_trait = physique_good
 								has_trait = physique_bad
 							}
@@ -539,7 +539,7 @@ rewrite_intellect_spell_has_list = {
 					AND = {
 						has_perk = architect_of_bloodlines_perk
 						scope:spell_target = {
-							NAND = {
+							NOR = {
 								has_trait = intellect_good
 								has_trait = intellect_bad
 							}
@@ -549,7 +549,7 @@ rewrite_intellect_spell_has_list = {
 						has_perk = improve_trait_perk
 						has_perk = architect_of_bloodlines_perk
 						scope:spell_target = {
-							NOT = { has_trait = intellect_good }
+							has_trait = intellect_bad
 						}
 					}
 				}
@@ -572,13 +572,13 @@ rewrite_intellect_spell_has_list = {
 						has_perk = weaken_trait_perk
 						has_perk = architect_of_bloodlines_perk
 						scope:spell_target = {
-							NOT = { has_trait = intellect_bad }
+							has_trait = intellect_good
 						}
 					}
 					AND = {
 						has_perk = architect_of_bloodlines_perk
 						scope:spell_target = {
-							NAND = {
+							NOR = {
 								has_trait = intellect_good
 								has_trait = intellect_bad
 							}
