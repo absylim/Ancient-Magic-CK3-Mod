@@ -1,4 +1,16 @@
-﻿change_mana_with_tooltip = {
+﻿make_mage_effect = {
+	add_trait_force_tooltip = mage
+	add_trait_force_tooltip = mana
+	if = {
+		limit = { NOT = { exists = var:mana } }
+		set_variable = {
+			name = mana
+			value = 0
+		}
+	}
+}
+
+change_mana_with_tooltip = {
 	custom_description = {
 		text = change_mana
 		value = $VALUE$
