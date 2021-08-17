@@ -1,8 +1,5 @@
 ﻿l_english:
- #faith
- witchcraft_illegal_name:0 "Witchraft is Criminal"
- 
- #custom localization
+  #custom localization
  has_ley_line_modifier:0 "[PROVINCE.GetName] has [ley_line|E]"
  has_focal_point_modifier:0 "[PROVINCE.GetName] has [focal_point|E]"
 

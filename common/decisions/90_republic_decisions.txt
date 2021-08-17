@@ -10,7 +10,6 @@ convert_whole_realm_to_magocracy_decision = {
 		has_government = tribal_government
 		is_independent_ruler = yes
 		is_magus = yes
-		primary_title.tier >= tier_duchy
 	}
 
 	is_valid = {
