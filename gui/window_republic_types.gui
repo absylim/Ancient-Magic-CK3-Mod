@@ -454,10 +454,6 @@
                             }
                         }
                     }
-                    button_standard = {
-                        text = "REFORM_GOVERNMENT"
-                        onclick = "[GetVariableSystem.Toggle('window_republic_form')]"
-                    }
                 }
             }
         }
