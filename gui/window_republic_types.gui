@@ -63,7 +63,7 @@
                         }
                         enabled = "[GetScriptedGui('has_republic_council_government').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                         onclick = "[GetScriptedGui('has_republic_council_government').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                        tooltip = "reform_into_council_republic"
+                        tooltip = "reform_into_council_magocracy"
                     }
                     text_single = {
                         text = "COUNCIL_VIEW"

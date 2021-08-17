@@ -228,7 +228,7 @@ republic_decision_events.1003 = { # Republic Setup
 	# Set up Council Republic
 	option = {
 		name = republic_decision_events.1003.b
-		set_up_council_republic = yes
+		set_up_council_magocracy = yes
 	}
 
 	# Set up Senate Republic

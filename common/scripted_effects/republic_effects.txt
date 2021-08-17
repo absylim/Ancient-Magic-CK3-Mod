@@ -1,4 +1,4 @@
-﻿republic_succession = {
+﻿magocracy_succession = {
 	every_in_list = {
 		variable = magocracy_families_list
 		house_head = {
@@ -192,7 +192,7 @@ main_magocracy_succession = {
 	}
 }
 
-death_republic_succession = {
+death_magocracy_succession = {
 	ordered_in_list = {
 		variable = magocracy_families_list
 		order_by = family_respect
@@ -472,7 +472,7 @@ set_up_council_magocracy = {
 			name = popular_appeasement
 			value = 50
 		}
-		republic_council_succesion = yes
+		magocracy_council_succesion = yes
 		post_appeasement_change = yes
 	}
 	add_realm_law = magocracy_succession_law
@@ -590,8 +590,8 @@ reform_into_senate_republic = {
 	}
 }
 
-reform_into_council_republic = {
-	set_up_council_republic = yes
+reform_into_council_magocracy = {
+	set_up_council_magocracy = yes
 	primary_title = {
 		set_variable = {
 			name = reformed_recently
@@ -1231,7 +1231,7 @@ initialize_global_election_terms = {
 	}
 }
 
-republic_council_succesion = {
+magocracy_council_succesion = {
 	if = {
 		limit = { holder = { magocracy_has_council_form = yes } }
 		remove_variable = republic_councillor_1

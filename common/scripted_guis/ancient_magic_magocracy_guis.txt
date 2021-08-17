@@ -100,7 +100,7 @@ has_republic_council_government = {
 	effect = {
 		custom_description = {
 			text = "effect_reform_into_council"
-			reform_into_council_republic = yes
+			reform_into_council_magocracy = yes
 		}
 		house = {
 			var:titular_republic = {

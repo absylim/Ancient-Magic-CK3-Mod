@@ -69,7 +69,7 @@ dictatorship_events.1002 = { # Dictatorship Ends
 			}
 			custom_description = {
 				text = effect_trigger_election_cycle
-				republic_succession = yes
+				magocracy_succession = yes
 			}
 		}
 	}

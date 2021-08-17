@@ -56,7 +56,7 @@ on_death_magocracy = {
 			limit = { holds_valid_magocracy = yes house.var:titular_republic = { NOT = { has_variable = forced_dictatorship } } }
 			primary_title = {
 				set_variable = current_death
-				death_republic_succession = yes
+				death_magocracy_succession = yes
 				remove_variable = current_death
 				remove_variable = current_dictatorship
 				scope:election_winner = {
@@ -82,7 +82,7 @@ on_death_magocracy = {
 			}
 			house = {
 				var:titular_republic = {
-					republic_council_succesion = yes
+					magocracy_council_succesion = yes
 				}
 			}
 		}
@@ -1088,7 +1088,7 @@ set_up_the_republics = {
 			limit = { current_date = 1066.9.15 }
 			title:k_pisa = {
 				holder = {
-					set_up_council_republic = yes
+					set_up_council_magocracy = yes
 				}
 			}
 			title:d_pisa = {
@@ -1113,7 +1113,7 @@ set_up_the_republics = {
 					name = popular_appeasement
 					value = 50
 				}
-				republic_council_succesion = yes
+				magocracy_council_succesion = yes
 				post_appeasement_change = yes
 			}
 			title:d_iceland = {
@@ -2627,8 +2627,8 @@ one_year_elections = {
 		every_living_character = {
 			limit = { holds_valid_magocracy = yes primary_title = { exists = var:one_year_term has_variable = one_year_term NOT = { has_variable = current_dictatorship } } }
 			primary_title = {
-				republic_succession = yes
-				republic_council_succesion = yes
+				magocracy_succession = yes
+				magocracy_council_succesion = yes
 			}
 		}
 	}
@@ -2643,8 +2643,8 @@ two_year_elections = {
 		every_living_character = {
 			limit = { holds_valid_magocracy = yes primary_title = { exists = var:two_year_term has_variable = two_year_term NOT = { has_variable = current_dictatorship } } }
 			primary_title = {
-				republic_succession = yes
-				republic_council_succesion = yes
+				magocracy_succession = yes
+				magocracy_council_succesion = yes
 			}
 		}
 	}
@@ -2659,8 +2659,8 @@ four_year_elections = {
 		every_living_character = {
 			limit = { holds_valid_magocracy = yes primary_title = { exists = var:four_year_term has_variable = four_year_term NOT = { has_variable = current_dictatorship } } }
 			primary_title = {
-				republic_succession = yes
-				republic_council_succesion = yes
+				magocracy_succession = yes
+				magocracy_council_succesion = yes
 				republic_senator_elections = yes
 			}
 		}
@@ -2701,8 +2701,8 @@ ten_year_elections = {
 		every_living_character = {
 			limit = { holds_valid_magocracy = yes primary_title = { exists = var:ten_year_term has_variable = ten_year_term NOT = { has_variable = current_dictatorship } } }
 			primary_title = {
-				republic_succession = yes
-				republic_council_succesion = yes
+				magocracy_succession = yes
+				magocracy_council_succesion = yes
 			}
 		}
 	}
@@ -2717,8 +2717,8 @@ twenty_year_elections = {
 		every_living_character = {
 			limit = { holds_valid_magocracy = yes primary_title = { exists = var:twenty_year_term has_variable = twenty_year_term NOT = { has_variable = current_dictatorship } } }
 			primary_title = {
-				republic_succession = yes
-				republic_council_succesion = yes
+				magocracy_succession = yes
+				magocracy_council_succesion = yes
 			}
 		}
 	}

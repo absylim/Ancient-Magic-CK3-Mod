@@ -66,7 +66,7 @@
 				house.var:titular_republic = {
 					custom_description = {
 						text = effect_trigger_election_cycle
-						republic_succession = yes
+						magocracy_succession = yes
 					}
 					custom_description = {
 						text = effect_end_dictatorship

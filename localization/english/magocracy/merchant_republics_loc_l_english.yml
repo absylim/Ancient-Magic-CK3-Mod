@@ -766,7 +766,7 @@
  reform_into_council:0 "Reform into an [council_government_magocracy|E] Republic"
  reform_into_senate:0 "Reform into an [senate_government_republic|E] Republic"
  reform_into_senate_republic:0 "[GetScriptedGui('has_republic_senate_government').IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]\n[GetScriptedGui('has_republic_senate_government').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
- reform_into_council_republic:0 "[GetScriptedGui('has_republic_council_government').IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]\n[GetScriptedGui('has_republic_council_government').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+ reform_into_council_magocracy:0 "[GetScriptedGui('has_republic_council_government').IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]\n[GetScriptedGui('has_republic_council_government').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
  reform_into_elected_ruler_republic:0 "[GetScriptedGui('has_republic_elected_ruler_government').IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]\n[GetScriptedGui('has_republic_elected_ruler_government').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
  reform_into_bicameral_republic:0 "[GetScriptedGui('has_republic_bicameral_government').IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]\n[GetScriptedGui('has_republic_bicameral_government').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
  reform_into_feudal_government:0 "[GetScriptedGui('reform_into_feudal_from_republic').IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]\n[GetScriptedGui('reform_into_feudal_from_republic').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
