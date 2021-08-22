@@ -12,7 +12,7 @@ on_death_magocracy = {
 			limit = {
 				exists = house
 				house = {
-					exists = var:titular_republic
+					exists = var:titular_magocracy
 					any_in_list = {
 						variable = election_candidates
 						scope:dying_person = this
@@ -46,14 +46,14 @@ on_death_magocracy = {
 			}
 		}
 		if = {
-			limit = { holds_valid_magocracy = yes house.var:titular_republic = { has_variable = forced_dictatorship has_variable = limited_dictatorship } }
-			house.var:titular_republic = {
+			limit = { holds_valid_magocracy = yes house.var:titular_magocracy = { has_variable = forced_dictatorship has_variable = limited_dictatorship } }
+			house.var:titular_magocracy = {
 				remove_variable = limited_dictatorship
 				remove_variable = forced_dictatorship
 			}
 		}
 		if = {
-			limit = { holds_valid_magocracy = yes house.var:titular_republic = { NOT = { has_variable = forced_dictatorship } } }
+			limit = { holds_valid_magocracy = yes house.var:titular_magocracy = { NOT = { has_variable = forced_dictatorship } } }
 			primary_title = {
 				set_variable = current_death
 				death_magocracy_succession = yes
@@ -61,7 +61,7 @@ on_death_magocracy = {
 				remove_variable = current_dictatorship
 				scope:election_winner = {
 					trigger_event = {
-						id = merchant_republic_events.1002
+						id = merchant_magocracy_events.1002
 						days = 1
 					}
 				}
@@ -71,17 +71,17 @@ on_death_magocracy = {
 			limit = {
 				exists = house
 				house = {
-					exists = var:titular_republic
-					var:titular_republic = {
+					exists = var:titular_magocracy
+					var:titular_magocracy = {
 						holder = {
 							magocracy_has_council_form = yes
 						}
 					}
-					exists = var:republic_councillor
+					exists = var:magocracy_councillor
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					magocracy_council_succesion = yes
 				}
 			}
@@ -109,22 +109,22 @@ on_death_magocracy = {
 
 yearly_global_pulse = {
 	on_actions = {
-		yearly_republic_check
+		yearly_magocracy_check
 	}
 }
 
-yearly_republic_check = {
+yearly_magocracy_check = {
 	effect = {
 		every_living_character = {
-			limit = { is_independent_ruler = yes holds_valid_magocracy = yes republic_has_bicameral_form = yes }
+			limit = { is_independent_ruler = yes holds_valid_magocracy = yes magocracy_has_bicameral_form = yes }
 			primary_title = {
 				clear_variable_list = lower_house_counties
 				generate_counties_for_lower_house = yes
 			}
 		}
 		every_patrician = {
-			limit = { is_courtier = yes NOT = { employer = house.var:titular_republic.holder } }
-			set_employer = house.var:titular_republic.holder
+			limit = { is_courtier = yes NOT = { employer = house.var:titular_magocracy.holder } }
+			set_employer = house.var:titular_magocracy.holder
 		}
 		if = {
 			limit = { NOT = { has_global_variable_list = council_laws_list has_global_variable_list = senate_laws_list has_global_variable_list = elected_ruler_laws_list } }
@@ -152,9 +152,9 @@ yearly_republic_check = {
 			random_held_title = {
 				limit = { NOT = { this = holder.primary_title } has_variable_list = magocracy_families_list }
 				if = {
-					limit = { this = { exists = var:senate_government_republic } }
-					holder.primary_title = { set_variable = senate_government_republic }
-					remove_variable = senate_government_republic
+					limit = { this = { exists = var:senate_government_magocracy } }
+					holder.primary_title = { set_variable = senate_government_magocracy }
+					remove_variable = senate_government_magocracy
 				}
 				if = {
 					limit = { this = { exists = var:council_government_magocracy } }
@@ -162,14 +162,14 @@ yearly_republic_check = {
 					remove_variable = council_government_magocracy
 				}
 				if = {
-					limit = { this = { exists = var:elected_ruler_republic } }
-					holder.primary_title = { set_variable = elected_ruler_republic }
-					remove_variable = elected_ruler_republic
+					limit = { this = { exists = var:elected_ruler_magocracy } }
+					holder.primary_title = { set_variable = elected_ruler_magocracy }
+					remove_variable = elected_ruler_magocracy
 				}
 				if = {
-					limit = { this = { exists = var:bicameral_government_republic } }
-					holder.primary_title = { set_variable = bicameral_government_republic }
-					remove_variable = bicameral_government_republic
+					limit = { this = { exists = var:bicameral_government_magocracy } }
+					holder.primary_title = { set_variable = bicameral_government_magocracy }
+					remove_variable = bicameral_government_magocracy
 				}
 				if = {
 					limit = { this = { exists = var:councillor_1 } }
@@ -486,7 +486,7 @@ yearly_republic_check = {
 							}
 						}
 						set_variable = {
-							name = titular_republic
+							name = titular_magocracy
 							value = scope:primary_title_in_question
 						}
 					}
@@ -498,13 +498,13 @@ yearly_republic_check = {
 			limit = {
 				holds_valid_magocracy = yes
 				NOT = {
-					republic_has_senate_form = yes
+					magocracy_has_senate_form = yes
 					magocracy_has_council_form = yes
-					republic_has_elected_ruler_form = yes
-					republic_has_bicameral_form = yes
+					magocracy_has_elected_ruler_form = yes
+					magocracy_has_bicameral_form = yes
 				}
 			}
-			set_up_elected_ruler_republic = yes
+			set_up_elected_ruler_magocracy = yes
 		}
 		every_living_character = {
 			limit = {
@@ -565,8 +565,8 @@ yearly_republic_check = {
 				}
 				NOT = {
 					house = {
-						exists = var:titular_republic
-						has_variable = titular_republic
+						exists = var:titular_magocracy
+						has_variable = titular_magocracy
 					}
 				}
 				NOT = {
@@ -585,14 +585,14 @@ yearly_republic_check = {
 							holds_valid_magocracy = yes
 							culture_group = liege_or_court_owner.culture_group
 						}
-						NOT = { republic_has_bicameral_form = yes }
+						NOT = { magocracy_has_bicameral_form = yes }
 					}
 					AND = {
 						OR = {
 							holds_valid_magocracy = yes
 							culture = liege_or_court_owner.culture
 						}
-						republic_has_bicameral_form = yes
+						magocracy_has_bicameral_form = yes
 						OR = {
 							AND = {
 								holds_valid_magocracy = yes
@@ -609,7 +609,7 @@ yearly_republic_check = {
 							holds_valid_magocracy = yes
 							culture_group = liege_or_court_owner.culture_group
 						}
-						republic_has_bicameral_form = yes
+						magocracy_has_bicameral_form = yes
 						OR = {
 							AND = {
 								holds_valid_magocracy = yes
@@ -622,7 +622,7 @@ yearly_republic_check = {
 						}
 					}
 					AND = {
-						republic_has_bicameral_form = yes
+						magocracy_has_bicameral_form = yes
 						OR = {
 							AND = {
 								holds_valid_magocracy = yes
@@ -637,14 +637,14 @@ yearly_republic_check = {
 				}
 				OR = {
 					AND = {
-						NOT = { republic_has_bicameral_form = yes }
+						NOT = { magocracy_has_bicameral_form = yes }
 					}
 					AND = {
 						OR = {
 							holds_valid_magocracy = yes
 							faith = liege_or_court_owner.faith
 						}
-						republic_has_bicameral_form = yes
+						magocracy_has_bicameral_form = yes
 						OR = {
 							AND = {
 								holds_valid_magocracy = yes
@@ -661,7 +661,7 @@ yearly_republic_check = {
 							holds_valid_magocracy = yes
 							religion = liege_or_court_owner.religion
 						}
-						republic_has_bicameral_form = yes
+						magocracy_has_bicameral_form = yes
 						OR = {
 							AND = {
 								holds_valid_magocracy = yes
@@ -674,7 +674,7 @@ yearly_republic_check = {
 						}
 					}
 					AND = {
-						republic_has_bicameral_form = yes
+						magocracy_has_bicameral_form = yes
 						OR = {
 							AND = {
 								holds_valid_magocracy = yes
@@ -690,7 +690,7 @@ yearly_republic_check = {
 			}
 			add_family_to_magocracy_families = yes
 			trigger_event = {
-				id = merchant_republic_events.1001
+				id = merchant_magocracy_events.1001
 				days = { 0 50 }
 			}
 		}
@@ -708,9 +708,9 @@ yearly_republic_check = {
 				variable = magocracy_families_list
 				limit = {
 					OR = {
-						AND = { house_head = { is_landed = no NOT = { location = house.var:titular_republic.holder.location } } }
-						AND = { house_head = { is_landed = yes holds_valid_magocracy = no NOT = { liege_or_court_owner = house.var:titular_republic.holder } } }
-						AND = { house_head = { holds_valid_magocracy = yes NOT = { primary_title = house.var:titular_republic } } }
+						AND = { house_head = { is_landed = no NOT = { location = house.var:titular_magocracy.holder.location } } }
+						AND = { house_head = { is_landed = yes holds_valid_magocracy = no NOT = { liege_or_court_owner = house.var:titular_magocracy.holder } } }
+						AND = { house_head = { holds_valid_magocracy = yes NOT = { primary_title = house.var:titular_magocracy } } }
 						any_house_member = {
 							is_alive = no
 						}
@@ -733,7 +733,7 @@ yearly_republic_check = {
 						exists = this
 					}
 					holder = {
-						republic_has_senate_form = yes
+						magocracy_has_senate_form = yes
 					}
 				}
 				trigger_election_cycle = yes
@@ -757,7 +757,7 @@ yearly_republic_check = {
 						exists = this
 					}
 					holder = {
-						republic_has_bicameral_form = yes
+						magocracy_has_bicameral_form = yes
 					}
 				}
 				bicameral_laws_voting = yes
@@ -777,9 +777,9 @@ yearly_republic_check = {
 				variable = magocracy_families_list
 				limit = {
 					OR = {
-						AND = { house_head = { is_landed = no NOT = { location = house.var:titular_republic.holder.location } } }
-						AND = { house_head = { is_landed = yes holds_valid_magocracy = no NOT = { liege_or_court_owner = house.var:titular_republic.holder } } }
-						AND = { house_head = { holds_valid_magocracy = yes NOT = { primary_title = house.var:titular_republic } } }
+						AND = { house_head = { is_landed = no NOT = { location = house.var:titular_magocracy.holder.location } } }
+						AND = { house_head = { is_landed = yes holds_valid_magocracy = no NOT = { liege_or_court_owner = house.var:titular_magocracy.holder } } }
+						AND = { house_head = { holds_valid_magocracy = yes NOT = { primary_title = house.var:titular_magocracy } } }
 						any_house_member = {
 							is_alive = no
 						}
@@ -802,7 +802,7 @@ yearly_republic_check = {
 						exists = this
 					}
 					holder = {
-						republic_has_senate_form = yes
+						magocracy_has_senate_form = yes
 					}
 				}
 				trigger_election_cycle = yes
@@ -826,7 +826,7 @@ yearly_republic_check = {
 						exists = this
 					}
 					holder = {
-						republic_has_bicameral_form = yes
+						magocracy_has_bicameral_form = yes
 					}
 				}
 				bicameral_laws_voting = yes
@@ -846,9 +846,9 @@ yearly_republic_check = {
 				variable = magocracy_families_list
 				limit = {
 					OR = {
-						AND = { house_head = { is_landed = no NOT = { location = house.var:titular_republic.holder.location } } }
-						AND = { house_head = { is_landed = yes holds_valid_magocracy = no NOT = { liege_or_court_owner = house.var:titular_republic.holder } } }
-						AND = { house_head = { holds_valid_magocracy = yes NOT = { primary_title = house.var:titular_republic } } }
+						AND = { house_head = { is_landed = no NOT = { location = house.var:titular_magocracy.holder.location } } }
+						AND = { house_head = { is_landed = yes holds_valid_magocracy = no NOT = { liege_or_court_owner = house.var:titular_magocracy.holder } } }
+						AND = { house_head = { holds_valid_magocracy = yes NOT = { primary_title = house.var:titular_magocracy } } }
 						any_house_member = {
 							is_alive = no
 						}
@@ -871,7 +871,7 @@ yearly_republic_check = {
 						exists = this
 					}
 					holder = {
-						republic_has_senate_form = yes
+						magocracy_has_senate_form = yes
 					}
 				}
 				trigger_election_cycle = yes
@@ -895,7 +895,7 @@ yearly_republic_check = {
 						exists = this
 					}
 					holder = {
-						republic_has_bicameral_form = yes
+						magocracy_has_bicameral_form = yes
 					}
 				}
 				bicameral_laws_voting = yes
@@ -954,8 +954,8 @@ yearly_republic_check = {
 		every_ruler = {
 			limit = {
 				holds_valid_magocracy = yes
-				exists = house.var:titular_republic
-				house.var:titular_republic = {
+				exists = house.var:titular_magocracy
+				house.var:titular_magocracy = {
 					has_variable = current_dictatorship
 					NOT = { has_variable = forced_dictatorship }
 				}
@@ -980,16 +980,16 @@ yearly_republic_check = {
 			limit = { holds_valid_magocracy = yes }
 			if = {
 				limit = {
-					house.var:titular_republic = {
+					house.var:titular_magocracy = {
 						has_variable = martial_law
 						NOT = { has_variable = current_dictatorship }
 					}
 				}
-				house.var:titular_republic = { remove_variable = martial_law }
+				house.var:titular_magocracy = { remove_variable = martial_law }
 			}
 			if = {
 				limit = {
-					house.var:titular_republic = {
+					house.var:titular_magocracy = {
 						has_variable = martial_law
 						has_variable = current_dictatorship
 						OR = {
@@ -1012,7 +1012,7 @@ yearly_republic_check = {
 			}
 			if = {
 				limit = {
-					house.var:titular_republic = {
+					house.var:titular_magocracy = {
 						has_variable = martial_law
 						has_variable = current_dictatorship
 						NAND = {
@@ -1021,7 +1021,7 @@ yearly_republic_check = {
 						}
 					}
 				}
-				house.var:titular_republic = {
+				house.var:titular_magocracy = {
 					remove_variable = martial_law
 				}
 			}
@@ -1060,13 +1060,13 @@ start_the_terms = {
 
 on_game_start = {
 	on_actions = {
-		prepare_republic_laws
+		prepare_magocracy_laws
 		question_player
-		set_up_the_republics
+		set_up_the_magocracys
 	}
 }
 
-set_up_the_republics = {
+set_up_the_magocracys = {
 	effect = {
 		every_independent_ruler = {
 			limit = { holds_valid_magocracy = yes }
@@ -1093,8 +1093,8 @@ set_up_the_republics = {
 			}
 			title:d_pisa = {
 				set_variable = council_government_magocracy
-				remove_variable = elected_ruler_republic
-				remove_variable = senate_government_republic
+				remove_variable = elected_ruler_magocracy
+				remove_variable = senate_government_magocracy
 				set_variable = council_approval_war_declaration
 				set_variable = leaders_discretion_council_appointment
 				set_variable = council_approval_imprisonment_rights
@@ -1118,7 +1118,7 @@ set_up_the_republics = {
 			}
 			title:d_iceland = {
 				holder = {
-					set_up_senate_republic = yes
+					set_up_senate_magocracy = yes
 				}
 			}
 		}
@@ -1127,7 +1127,7 @@ set_up_the_republics = {
 
 question_player = {
 	effect = {
-		if = { limit = { has_game_rule = play_elected_rulers } set_global_variable = play_republic_leaders }
+		if = { limit = { has_game_rule = play_elected_rulers } set_global_variable = play_magocracy_leaders }
 		if = { limit = { has_game_rule = play_patricians } set_global_variable = play_house_heads }
 	}
 	on_actions = {
@@ -1142,17 +1142,17 @@ question_player_if_needed = {
 			limit = {
 				NOT = {
 					exists = global_var:play_house_heads
-					exists = global_var:play_republic_leaders
+					exists = global_var:play_magocracy_leaders
 				}
 			}
 			random_player = {
-				trigger_event = republic_question_events.1001
+				trigger_event = magocracy_question_events.1001
 			}
 		}
 	}
 }
 
-prepare_republic_laws = {
+prepare_magocracy_laws = {
 	effect = {
 		all_council_laws = yes
 		all_senate_laws = yes
@@ -1172,12 +1172,12 @@ all_houses_maybe_propose_laws = {
 			limit = {
 				is_house_head = yes
 				house = {
-					exists = var:titular_republic
-					var:titular_republic = { save_temporary_scope_as = titular_republic }
+					exists = var:titular_magocracy
+					var:titular_magocracy = { save_temporary_scope_as = titular_magocracy }
 				}
-				scope:titular_republic = {
+				scope:titular_magocracy = {
 					holder = {
-						republic_has_senate_form = yes
+						magocracy_has_senate_form = yes
 					}
 				}
 				is_ai = yes
@@ -1779,10 +1779,10 @@ all_houses_maybe_propose_laws = {
 			limit = {
 				is_house_head = yes
 				house = {
-					exists = var:titular_republic
-					var:titular_republic = { save_temporary_scope_as = titular_republic }
+					exists = var:titular_magocracy
+					var:titular_magocracy = { save_temporary_scope_as = titular_magocracy }
 				}
-				scope:titular_republic = {
+				scope:titular_magocracy = {
 					holder = {
 						magocracy_has_council_form = yes
 					}
@@ -2387,12 +2387,12 @@ all_houses_maybe_propose_laws = {
 			limit = {
 				is_house_head = yes
 				house = {
-					exists = var:titular_republic
-					var:titular_republic = { save_temporary_scope_as = titular_republic }
+					exists = var:titular_magocracy
+					var:titular_magocracy = { save_temporary_scope_as = titular_magocracy }
 				}
-				scope:titular_republic = {
+				scope:titular_magocracy = {
 					holder = {
-						republic_has_elected_ruler_form = yes
+						magocracy_has_elected_ruler_form = yes
 					}
 				}
 				is_ai = yes
@@ -2661,17 +2661,17 @@ four_year_elections = {
 			primary_title = {
 				magocracy_succession = yes
 				magocracy_council_succesion = yes
-				republic_senator_elections = yes
+				magocracy_senator_elections = yes
 			}
 		}
 		every_living_character = {
 			limit = { holds_valid_magocracy = yes }
 			primary_title = {
-				republic_senator_elections = yes
+				magocracy_senator_elections = yes
 			}
 		}
 		every_living_character = {
-			limit = { is_house_head = yes house = { exists = var:titular_republic } }
+			limit = { is_house_head = yes house = { exists = var:titular_magocracy } }
 			house = {
 				if = {
 					limit = { var:family_prestige >= 50 }
@@ -2730,33 +2730,33 @@ twenty_year_elections = {
 
 on_rank_up = {
 	on_actions = {
-		transfer_your_old_republic_variables
+		transfer_your_old_magocracy_variables
 	}
 }
 
 on_rank_down = {
 	on_actions = {
-		transfer_your_old_republic_variables
+		transfer_your_old_magocracy_variables
 	}
 }
 
-transfer_your_old_republic_variables = {
+transfer_your_old_magocracy_variables = {
 	trigger = {
 		exists = scope:title
 		holds_valid_magocracy = yes
 	}
 	effect = {
 		if = {
-			limit = { scope:title = { exists = var:senate_government_republic } }
-			set_variable = senate_government_republic
+			limit = { scope:title = { exists = var:senate_government_magocracy } }
+			set_variable = senate_government_magocracy
 		}
 		if = {
 			limit = { scope:title = { exists = var:council_government_magocracy } }
 			set_variable = council_government_magocracy
 		}
 		if = {
-			limit = { scope:title = { exists = var:elected_ruler_republic } }
-			set_variable = elected_ruler_republic
+			limit = { scope:title = { exists = var:elected_ruler_magocracy } }
+			set_variable = elected_ruler_magocracy
 		}
 		if = {
 			limit = { scope:title = { exists = var:councillor_1 } }
@@ -2921,37 +2921,37 @@ transfer_your_old_republic_variables = {
 	}
 	on_actions = {
 		delay = { days = 1 }
-		transfer_your_old_republic_variables_to_title
+		transfer_your_old_magocracy_variables_to_title
 	}
 }
 
 on_title_destroyed = {
 	on_actions = {
-		transfer_your_old_republic_variables_different
+		transfer_your_old_magocracy_variables_different
 	}
 }
 
-transfer_your_old_republic_variables_different = {
+transfer_your_old_magocracy_variables_different = {
 	trigger = {
 		exists = scope:landed_title
 		holds_valid_magocracy = yes
 	}
 	effect = {
 		if = {
-			limit = { scope:landed_title = { exists = var:senate_government_republic } }
-			set_variable = senate_government_republic
+			limit = { scope:landed_title = { exists = var:senate_government_magocracy } }
+			set_variable = senate_government_magocracy
 		}
 		if = {
 			limit = { scope:landed_title = { exists = var:council_government_magocracy } }
 			set_variable = council_government_magocracy
 		}
 		if = {
-			limit = { scope:landed_title = { exists = var:elected_ruler_republic } }
-			set_variable = elected_ruler_republic
+			limit = { scope:landed_title = { exists = var:elected_ruler_magocracy } }
+			set_variable = elected_ruler_magocracy
 		}
 		if = {
-			limit = { scope:landed_title = { exists = var:bicameral_government_republic } }
-			set_variable = bicameral_government_republic
+			limit = { scope:landed_title = { exists = var:bicameral_government_magocracy } }
+			set_variable = bicameral_government_magocracy
 		}
 		if = {
 			limit = { scope:landed_title = { exists = var:councillor_1 } }
@@ -3211,20 +3211,20 @@ transfer_your_old_republic_variables_different = {
 	}
 	on_actions = {
 		delay = { days = 1 }
-		transfer_your_old_republic_variables_to_title
+		transfer_your_old_magocracy_variables_to_title
 	}
 }
 
-transfer_your_old_republic_variables_to_title = {
+transfer_your_old_magocracy_variables_to_title = {
 	trigger = {
 		exists = this
 		holds_valid_magocracy = yes
 	}
 	effect = {
 		if = {
-			limit = { this = { exists = var:senate_government_republic } }
-			primary_title = { set_variable = senate_government_republic }
-			remove_variable = senate_government_republic
+			limit = { this = { exists = var:senate_government_magocracy } }
+			primary_title = { set_variable = senate_government_magocracy }
+			remove_variable = senate_government_magocracy
 		}
 		if = {
 			limit = { this = { exists = var:council_government_magocracy } }
@@ -3232,14 +3232,14 @@ transfer_your_old_republic_variables_to_title = {
 			remove_variable = council_government_magocracy
 		}
 		if = {
-			limit = { this = { exists = var:elected_ruler_republic } }
-			primary_title = { set_variable = elected_ruler_republic }
-			remove_variable = elected_ruler_republic
+			limit = { this = { exists = var:elected_ruler_magocracy } }
+			primary_title = { set_variable = elected_ruler_magocracy }
+			remove_variable = elected_ruler_magocracy
 		}
 		if = {
-			limit = { this = { exists = var:bicameral_government_republic } }
-			primary_title = { set_variable = bicameral_government_republic }
-			remove_variable = bicameral_government_republic
+			limit = { this = { exists = var:bicameral_government_magocracy } }
+			primary_title = { set_variable = bicameral_government_magocracy }
+			remove_variable = bicameral_government_magocracy
 		}
 		if = {
 			limit = { this = { exists = var:councillor_1 } }
@@ -3572,7 +3572,7 @@ campaigns_running = {
 				save_scope_as = your_house
 				every_in_list = {
 					variable = propoganda_campaigns_list
-					limit = { save_temporary_scope_as = house_testing NOT = { scope:your_house.var:titular_republic = { is_target_in_variable_list = { name = magocracy_families_list target = scope:house_testing } } } }
+					limit = { save_temporary_scope_as = house_testing NOT = { scope:your_house.var:titular_magocracy = { is_target_in_variable_list = { name = magocracy_families_list target = scope:house_testing } } } }
 					save_scope_as = house_remove_propo_campaigns
 					scope:your_house = {
 						remove_list_variable = { name = propoganda_campaigns_list target = scope:house_remove_propo_campaigns }
@@ -3603,7 +3603,7 @@ campaigns_running = {
 				save_scope_as = your_house
 				every_in_list = {
 					variable = smear_campaigns_list
-					limit = { save_temporary_scope_as = house_testing NOT = { scope:your_house.var:titular_republic = { is_target_in_variable_list = { name = magocracy_families_list target = scope:house_testing } } } }
+					limit = { save_temporary_scope_as = house_testing NOT = { scope:your_house.var:titular_magocracy = { is_target_in_variable_list = { name = magocracy_families_list target = scope:house_testing } } } }
 					save_scope_as = house_remove_smear_campaigns
 					scope:your_house = {
 						remove_list_variable = { name = smear_campaigns_list target = scope:house_remove_smear_campaigns }

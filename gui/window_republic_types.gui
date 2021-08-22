@@ -1,11 +1,11 @@
 ﻿types Republics  {
-	type window_republic_form = window {
+	type window_magocracy_form = window {
         scale = 0.9
         allow_outside = yes
         movable = yes
         position = {-600 -50}
         size = { 700 1100 }
-        visible = "[GetVariableSystem.Exists('window_republic_form')]"
+        visible = "[GetVariableSystem.Exists('window_magocracy_form')]"
         alwaystransparent = no
         layoutpolicy_vertical   = expanding
         layoutpolicy_horizontal = expanding
@@ -27,7 +27,7 @@
     
                 blockoverride "button_close"
                 {
-                    onclick = "[GetVariableSystem.Clear( 'window_republic_form' )]"
+                    onclick = "[GetVariableSystem.Clear( 'window_magocracy_form' )]"
                 }
             }
             background = {
@@ -43,7 +43,7 @@
                 }
             }
             scrollbox = {
-                name = "republic_laws_scrollarea"
+                name = "magocracy_laws_scrollarea"
                 layoutpolicy_horizontal = expanding
                 layoutpolicy_vertical = expanding
                 #size = {100% 100%}
@@ -52,7 +52,7 @@
                 {
                     
                     button = {
-                        texture = "gfx/republic/council_background.dds"
+                        texture = "gfx/magocracy/council_background.dds"
                         size = { 550 240 }
                         modify_texture = {
                             name = "mask"
@@ -61,8 +61,8 @@
                             spriteborder = { 0 0 }
                             blend_mode = alphamultiply
                         }
-                        enabled = "[GetScriptedGui('has_republic_council_government').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                        onclick = "[GetScriptedGui('has_republic_council_government').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                        enabled = "[GetScriptedGui('has_magocracy_council_government').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                        onclick = "[GetScriptedGui('has_magocracy_council_government').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                         tooltip = "reform_into_council_magocracy"
                     }
                     text_single = {
@@ -80,7 +80,7 @@
                         size = { 0 50 }
                     }
                     button = {
-                        texture = "gfx/republic/elected_ruler_background.dds"
+                        texture = "gfx/magocracy/elected_ruler_background.dds"
                         size = { 550 240 }
                         modify_texture = {
                             name = "mask"
@@ -89,9 +89,9 @@
                             spriteborder = { 0 0 }
                             blend_mode = alphamultiply
                         }
-                        enabled = "[GetScriptedGui('has_republic_elected_ruler_government').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                        onclick = "[GetScriptedGui('has_republic_elected_ruler_government').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                        tooltip = "reform_into_elected_ruler_republic"
+                        enabled = "[GetScriptedGui('has_magocracy_elected_ruler_government').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                        onclick = "[GetScriptedGui('has_magocracy_elected_ruler_government').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                        tooltip = "reform_into_elected_ruler_magocracy"
                     }
                     text_single = {
                         text = "ELECTED_RULER_VIEW"
@@ -108,7 +108,7 @@
                         size = { 0 50 }
                     }
                     button = {
-                        texture = "gfx/republic/bicameral_background.dds"
+                        texture = "gfx/magocracy/bicameral_background.dds"
                         size = { 550 240 }
                         modify_texture = {
                             name = "mask"
@@ -117,9 +117,9 @@
                             spriteborder = { 0 0 }
                             blend_mode = alphamultiply
                         }
-                        enabled = "[GetScriptedGui('has_republic_bicameral_government').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                        onclick = "[GetScriptedGui('has_republic_bicameral_government').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                        tooltip = "reform_into_bicameral_republic"
+                        enabled = "[GetScriptedGui('has_magocracy_bicameral_government').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                        onclick = "[GetScriptedGui('has_magocracy_bicameral_government').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                        tooltip = "reform_into_bicameral_magocracy"
                     }
                     text_single = {
                         text = "CONSTITUTIONAL_VIEW"
@@ -145,7 +145,7 @@
                         size = { 0 30 }
                     }
                     button = {
-                        texture = "gfx/republic/feudal_background.dds"
+                        texture = "gfx/magocracy/feudal_background.dds"
                         size = { 550 240 }
                         modify_texture = {
                             name = "mask"
@@ -155,8 +155,8 @@
                             blend_mode = alphamultiply
                         }
                         tooltip = "reform_into_feudal_government"
-                        enabled = "[GetScriptedGui('reform_into_feudal_from_republic').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                        onclick = "[GetScriptedGui('reform_into_feudal_from_republic').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                        enabled = "[GetScriptedGui('reform_into_feudal_from_magocracy').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                        onclick = "[GetScriptedGui('reform_into_feudal_from_magocracy').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                     }
                     text_single = {
                         text = "FEUDAL_GOVERNMENT_NAME"
@@ -175,10 +175,10 @@
         }
     }
 
-    type republic_council_view = window {
+    type magocracy_council_view = window {
         allow_outside = yes
-        window_republic_form = {}
-        visible = "[GetVariableSystem.Exists('window_republic_council_form')]"
+        window_magocracy_form = {}
+        visible = "[GetVariableSystem.Exists('window_magocracy_council_form')]"
         size = { 950 850 }
         position = { -890 100 }
         layer = middle
@@ -199,8 +199,8 @@
                 }
                 blockoverride "button_close"
                 {
-                    onclick = "[GetVariableSystem.Clear( 'window_republic_form' )]"
-                    onclick = "[GetVariableSystem.Clear( 'window_republic_council_form' )]"
+                    onclick = "[GetVariableSystem.Clear( 'window_magocracy_form' )]"
+                    onclick = "[GetVariableSystem.Clear( 'window_magocracy_council_form' )]"
                 }
             }
     
@@ -236,7 +236,7 @@
                                 position = { 5% 5% }
                                 min = 0
                                 max = 100
-                                value = "[FixedPointToFloat(GetPlayer.GetHouse.MakeScope.Var('titular_republic').Title.MakeScope.Var('nobility_appeasement').GetValue)]"
+                                value = "[FixedPointToFloat(GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('nobility_appeasement').GetValue)]"
                                 size = { 100 20 }
                                 tooltip = "NOBLE_APPEASEMENT"
                                 progresstexture = "gfx/interface/progressbars/progress_purple.dds"
@@ -248,10 +248,10 @@
                                 position = { 5% 15% }
                                 min = 0
                                 max = 100
-                                value = "[FixedPointToFloat(GetPlayer.GetHouse.MakeScope.Var('titular_republic').Title.MakeScope.Var('clergy_appeasement').GetValue)]"
+                                value = "[FixedPointToFloat(GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('clergy_appeasement').GetValue)]"
                                 size = { 100 20 }
                                 tooltip = "CLERGY_APPEASEMENT"
-                                progresstexture = "gfx/republic/progressbars/progress_white.dds"
+                                progresstexture = "gfx/magocracy/progressbars/progress_white.dds"
                                 noprogresstexture = "gfx/interface/progressbars/progress_standard.dds"
                                 spriteType = Corneredtiled
                                 spriteborder = { 6 6 }
@@ -260,36 +260,36 @@
                                 position = { 5% 25% }
                                 min = 0
                                 max = 100
-                                value = "[FixedPointToFloat(GetPlayer.GetHouse.MakeScope.Var('titular_republic').Title.MakeScope.Var('popular_appeasement').GetValue)]"
+                                value = "[FixedPointToFloat(GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('popular_appeasement').GetValue)]"
                                 size = { 100 20 }
                                 tooltip = "POPULAR_APPEASEMENT"
-                                progresstexture = "gfx/republic/progressbars/progress_brown.dds"
+                                progresstexture = "gfx/magocracy/progressbars/progress_brown.dds"
                                 noprogresstexture = "gfx/interface/progressbars/progress_standard.dds"
                                 spriteType = Corneredtiled
                                 spriteborder = { 6 6 }
                             }
                             vbox = {
-                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_republic').Title.MakeScope.Var('councillor_4').House.GetHeadOfHouse]"
+                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_4').House.GetHeadOfHouse]"
                                 position = { 25% 100% }
                                 portrait_head = {}
                             }
                             vbox = {
-                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_republic').Title.MakeScope.Var('councillor_3').House.GetHeadOfHouse]"
+                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_3').House.GetHeadOfHouse]"
                                 position = { 100% 40% }
                                 portrait_head = {}
                             }
                             vbox = {
-                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_republic').Title.MakeScope.Var('councillor_2').House.GetHeadOfHouse]"
+                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_2').House.GetHeadOfHouse]"
                                 position = { 0% 40% }
                                 portrait_head = {}
                             }
                             vbox = {
-                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_republic').Title.MakeScope.Var('councillor_1').House.GetHeadOfHouse]"
+                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_1').House.GetHeadOfHouse]"
                                 position = { 50% 0% }
                                 portrait_head = {}
                             }
                             vbox = {
-                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_republic').Title.MakeScope.Var('councillor_5').House.GetHeadOfHouse]"
+                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_5').House.GetHeadOfHouse]"
                                 position = { 75% 100% }
                                 portrait_head = {}
                             }
@@ -404,7 +404,7 @@
                                     maxhorizontalslots = 100
                                     flipdirection = yes
                                     block "datamodel" {
-                                        datamodel = "[GetPlayer.GetHouse.MakeScope.Var('titular_republic').Title.MakeScope.GetList('proposed_laws_list')]"
+                                        datamodel = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.GetList('proposed_laws_list')]"
                                     }
                                     item = {
                                         widget = {
@@ -417,7 +417,7 @@
                                                     margin_right = 5
                                                     margin_top = 10
                                                     margin_bottom = 10
-                                                    texture = "gfx/republic/solid_black_label.dds"
+                                                    texture = "gfx/magocracy/solid_black_label.dds"
                                                     spriteType = Corneredtiled
                                                     spriteborder = { 20 20 }
                                                     modify_texture = {
@@ -459,13 +459,13 @@
         }
     }
 
-    type republic_term_limits_window = window {
+    type magocracy_term_limits_window = window {
         size = { 450 850 }
         position = { -500 100 }
         layer = middle
         allow_outside = yes
-        window_republic_form = {}
-        visible = "[GetVariableSystem.Exists('window_republic_elected_ruler_form')]"
+        window_magocracy_form = {}
+        visible = "[GetVariableSystem.Exists('window_magocracy_elected_ruler_form')]"
     
         using = Window_Background
         using = Window_Decoration
@@ -485,8 +485,8 @@
     
                 blockoverride "button_close"
                 {
-                    onclick = "[GetVariableSystem.Clear( 'window_republic_form' )]"
-                    onclick = "[GetVariableSystem.Clear( 'window_republic_elected_ruler_form' )]"
+                    onclick = "[GetVariableSystem.Clear( 'window_magocracy_form' )]"
+                    onclick = "[GetVariableSystem.Clear( 'window_magocracy_elected_ruler_form' )]"
                 }
             }
     
@@ -495,13 +495,13 @@
                 layoutpolicy_vertical = expanding
                 button_tertiary = {
                     text = "REFORM_GOVERNMENT"
-                    onclick = "[GetVariableSystem.Toggle('window_republic_form')]"
+                    onclick = "[GetVariableSystem.Toggle('window_magocracy_form')]"
                 }
                 spacer = {
                     size = { 0 5 }
                 }
                 scrollbox = {
-                    name = "republic_families_scrollarea"
+                    name = "magocracy_families_scrollarea"
                     layoutpolicy_horizontal = expanding
                     layoutpolicy_vertical = expanding
                     #size = {100% 100%}
@@ -589,7 +589,7 @@
                             maxhorizontalslots = 1
                             maxverticalslots = 100
                             block "datamodel" {
-                                datamodel = "[GetPlayer.GetHouse.MakeScope.Var('titular_republic').Title.MakeScope.GetList('proposed_laws_list')]"
+                                datamodel = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.GetList('proposed_laws_list')]"
                             }
                             item = {
                                 widget = {
@@ -715,11 +715,11 @@
         }
     }
 
-    type republic_families_window = window {
+    type magocracy_families_window = window {
         size = { 600 850 }
         position = { -600 50 }
         layer = middle
-        visible = "[GetVariableSystem.Exists('window_republic_families')]"
+        visible = "[GetVariableSystem.Exists('window_magocracy_families')]"
     
         using = Window_Background
         using = Window_Decoration
@@ -739,7 +739,7 @@
     
                 blockoverride "button_close"
                 {
-                    onclick = "[GetVariableSystem.Clear( 'window_republic_families' )]"
+                    onclick = "[GetVariableSystem.Clear( 'window_magocracy_families' )]"
                 }
             }
     
@@ -748,7 +748,7 @@
                 layoutpolicy_vertical = expanding
 
                 vbox = {
-                    datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_republic').Title.MakeScope.Var('most_likely_to_succeed').GetCharacter]"
+                    datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('most_likely_to_succeed').GetCharacter]"
                     text_single = {
                         text = "MOST_LIKELY_TO_SUCCEED"
                         fontsize = 18
@@ -757,7 +757,7 @@
                 }
 
                 scrollbox = {
-                    name = "republic_families_scrollarea"
+                    name = "magocracy_families_scrollarea"
                     layoutpolicy_horizontal = expanding
                     layoutpolicy_vertical = expanding
                     #size = {100% 100%}
@@ -772,7 +772,7 @@
                             maxhorizontalslots = 1
                             maxverticalslots = 100
                             block "datamodel" {
-                                datamodel = "[GetPlayer.GetHouse.MakeScope.Var('titular_republic').Title.MakeScope.GetList('republic_families_list')]"
+                                datamodel = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.GetList('magocracy_families_list')]"
                             }
                             item = {
                                 widget = {

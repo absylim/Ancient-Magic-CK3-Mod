@@ -5,12 +5,12 @@ council_approval_war_declaration_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_war_declaration
 			}
 		}
@@ -22,12 +22,12 @@ council_approval_war_declaration_modifier = {
 			NOT = {
 				house = {
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_war_declaration
 				}
 			}
@@ -37,7 +37,7 @@ council_approval_war_declaration_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_war_declaration
 			}
 		}
@@ -46,7 +46,7 @@ council_approval_war_declaration_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_war_declaration
 			}
 		}
@@ -58,9 +58,9 @@ council_approval_war_declaration_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_war_declaration
 				}
 			}
@@ -70,7 +70,7 @@ council_approval_war_declaration_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_war_declaration
 			}
 		}
@@ -79,7 +79,7 @@ council_approval_war_declaration_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_war_declaration
 			}
 		}
@@ -92,12 +92,12 @@ council_approval_war_declaration_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_war_declaration
 				}
 			}
@@ -107,7 +107,7 @@ council_approval_war_declaration_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_war_declaration
 			}
 		}
@@ -115,9 +115,9 @@ council_approval_war_declaration_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_war_declaration
 			}
 		}
@@ -126,11 +126,11 @@ council_approval_war_declaration_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_war_declaration
 			}
 		}
@@ -140,10 +140,10 @@ council_approval_war_declaration_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_war_declaration
 			}
 		}
@@ -154,10 +154,10 @@ council_approval_war_declaration_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_war_declaration
 				}
 			}
@@ -168,7 +168,7 @@ council_approval_war_declaration_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_war_declaration
 			}
 		}
@@ -178,12 +178,12 @@ council_approval_war_declaration_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_council_approval_war_declaration
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -194,12 +194,12 @@ council_approval_war_declaration_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_council_approval_war_declaration
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -211,7 +211,7 @@ council_approval_war_declaration_modifier = {
 leaders_discretion_war_declaration_propose_modifier = {
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_war_declaration
 			}
 		}
@@ -219,7 +219,7 @@ leaders_discretion_war_declaration_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -228,7 +228,7 @@ leaders_discretion_war_declaration_propose_modifier = {
 	modifier = {
 		AND = {
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_war_declaration
 				}
 			}
@@ -237,7 +237,7 @@ leaders_discretion_war_declaration_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -247,7 +247,7 @@ leaders_discretion_war_declaration_propose_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_war_declaration
 			}
 		}
@@ -256,7 +256,7 @@ leaders_discretion_war_declaration_propose_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_war_declaration
 			}
 		}
@@ -266,14 +266,14 @@ leaders_discretion_war_declaration_propose_modifier = {
 		AND = {
 			has_trait = ambitious
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_war_declaration
 				}
 			}
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -282,7 +282,7 @@ leaders_discretion_war_declaration_propose_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_war_declaration
 			}
 		}
@@ -291,7 +291,7 @@ leaders_discretion_war_declaration_propose_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_war_declaration
 			}
 		}
@@ -301,7 +301,7 @@ leaders_discretion_war_declaration_propose_modifier = {
 		AND = {
 			has_trait = shrewd
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_war_declaration
 				}
 			}
@@ -309,7 +309,7 @@ leaders_discretion_war_declaration_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -319,7 +319,7 @@ leaders_discretion_war_declaration_propose_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_war_declaration
 			}
 		}
@@ -328,22 +328,22 @@ leaders_discretion_war_declaration_propose_modifier = {
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_war_declaration
 			}
 		}
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		add = 30
 	}
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_war_declaration
 			}
 		}
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		add = 30
@@ -351,13 +351,13 @@ leaders_discretion_war_declaration_propose_modifier = {
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_war_declaration
 			}
 		}
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		add = -50
 	}
@@ -365,13 +365,13 @@ leaders_discretion_war_declaration_propose_modifier = {
 		AND = {
 			
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_war_declaration
 				}
 			}
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			this = { has_trait = vengeful }
 		}
@@ -380,7 +380,7 @@ leaders_discretion_war_declaration_propose_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_war_declaration
 			}
 		}
@@ -390,14 +390,14 @@ leaders_discretion_war_declaration_propose_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_war_declaration
 				}
 			}
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -407,7 +407,7 @@ leaders_discretion_war_declaration_propose_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_war_declaration
 				}
 			}
@@ -415,7 +415,7 @@ leaders_discretion_war_declaration_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -430,12 +430,12 @@ senate_vote_council_appointment_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_council_appointment
 			}
 		}
@@ -448,12 +448,12 @@ senate_vote_council_appointment_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_council_appointment
 				}
 			}
@@ -463,7 +463,7 @@ senate_vote_council_appointment_propose_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_council_appointment
 			}
 		}
@@ -472,7 +472,7 @@ senate_vote_council_appointment_propose_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_council_appointment
 			}
 		}
@@ -484,9 +484,9 @@ senate_vote_council_appointment_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_council_appointment
 				}
 			}
@@ -496,7 +496,7 @@ senate_vote_council_appointment_propose_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_council_appointment
 			}
 		}
@@ -505,7 +505,7 @@ senate_vote_council_appointment_propose_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_council_appointment
 			}
 		}
@@ -518,12 +518,12 @@ senate_vote_council_appointment_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_council_appointment
 				}
 			}
@@ -533,7 +533,7 @@ senate_vote_council_appointment_propose_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_council_appointment
 			}
 		}
@@ -541,9 +541,9 @@ senate_vote_council_appointment_propose_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_council_appointment
 			}
 		}
@@ -552,11 +552,11 @@ senate_vote_council_appointment_propose_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_council_appointment
 			}
 		}
@@ -566,10 +566,10 @@ senate_vote_council_appointment_propose_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_council_appointment
 			}
 		}
@@ -580,10 +580,10 @@ senate_vote_council_appointment_propose_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_council_appointment
 				}
 			}
@@ -594,7 +594,7 @@ senate_vote_council_appointment_propose_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_council_appointment
 			}
 		}
@@ -604,12 +604,12 @@ senate_vote_council_appointment_propose_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_senate_vote_council_appointment
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -620,12 +620,12 @@ senate_vote_council_appointment_propose_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_senate_vote_council_appointment
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -640,12 +640,12 @@ council_approval_council_appointment_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_council_appointment
 			}
 		}
@@ -658,12 +658,12 @@ council_approval_council_appointment_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_council_appointment
 				}
 			}
@@ -673,7 +673,7 @@ council_approval_council_appointment_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_council_appointment
 			}
 		}
@@ -682,7 +682,7 @@ council_approval_council_appointment_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_council_appointment
 			}
 		}
@@ -694,9 +694,9 @@ council_approval_council_appointment_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_council_appointment
 				}
 			}
@@ -706,7 +706,7 @@ council_approval_council_appointment_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_council_appointment
 			}
 		}
@@ -715,7 +715,7 @@ council_approval_council_appointment_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_council_appointment
 			}
 		}
@@ -728,12 +728,12 @@ council_approval_council_appointment_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_council_appointment
 				}
 			}
@@ -743,7 +743,7 @@ council_approval_council_appointment_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_council_appointment
 			}
 		}
@@ -751,9 +751,9 @@ council_approval_council_appointment_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_council_appointment
 			}
 		}
@@ -762,11 +762,11 @@ council_approval_council_appointment_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_council_appointment
 			}
 		}
@@ -776,10 +776,10 @@ council_approval_council_appointment_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_council_appointment
 			}
 		}
@@ -790,10 +790,10 @@ council_approval_council_appointment_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_council_appointment
 				}
 			}
@@ -804,7 +804,7 @@ council_approval_council_appointment_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_council_appointment
 			}
 		}
@@ -814,12 +814,12 @@ council_approval_council_appointment_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_council_approval_council_appointment
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -830,12 +830,12 @@ council_approval_council_appointment_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_council_approval_council_appointment
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -847,7 +847,7 @@ council_approval_council_appointment_modifier = {
 leaders_discretion_council_appointment_modifier = {
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_council_appointment
 			}
 		}
@@ -855,7 +855,7 @@ leaders_discretion_council_appointment_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -864,7 +864,7 @@ leaders_discretion_council_appointment_modifier = {
 	modifier = {
 		AND = {
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_council_appointment
 				}
 			}
@@ -873,7 +873,7 @@ leaders_discretion_council_appointment_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -883,7 +883,7 @@ leaders_discretion_council_appointment_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_council_appointment
 			}
 		}
@@ -892,7 +892,7 @@ leaders_discretion_council_appointment_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_council_appointment
 			}
 		}
@@ -902,14 +902,14 @@ leaders_discretion_council_appointment_modifier = {
 		AND = {
 			has_trait = ambitious
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_council_appointment
 				}
 			}
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -918,7 +918,7 @@ leaders_discretion_council_appointment_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_council_appointment
 			}
 		}
@@ -927,7 +927,7 @@ leaders_discretion_council_appointment_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_council_appointment
 			}
 		}
@@ -937,7 +937,7 @@ leaders_discretion_council_appointment_modifier = {
 		AND = {
 			has_trait = shrewd
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_council_appointment
 				}
 			}
@@ -945,7 +945,7 @@ leaders_discretion_council_appointment_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -955,7 +955,7 @@ leaders_discretion_council_appointment_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_council_appointment
 			}
 		}
@@ -964,22 +964,22 @@ leaders_discretion_council_appointment_modifier = {
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_council_appointment
 			}
 		}
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		add = 30
 	}
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_council_appointment
 			}
 		}
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		add = 30
@@ -987,13 +987,13 @@ leaders_discretion_council_appointment_modifier = {
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_council_appointment
 			}
 		}
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		add = -50
 	}
@@ -1001,13 +1001,13 @@ leaders_discretion_council_appointment_modifier = {
 		AND = {
 			
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_council_appointment
 				}
 			}
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			this = { has_trait = vengeful }
 		}
@@ -1016,7 +1016,7 @@ leaders_discretion_council_appointment_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_council_appointment
 			}
 		}
@@ -1026,14 +1026,14 @@ leaders_discretion_council_appointment_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_council_appointment
 				}
 			}
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1043,7 +1043,7 @@ leaders_discretion_council_appointment_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_council_appointment
 				}
 			}
@@ -1051,7 +1051,7 @@ leaders_discretion_council_appointment_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1065,7 +1065,7 @@ senate_vote_imprisonment_rights_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1079,7 +1079,7 @@ senate_vote_imprisonment_rights_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1103,7 +1103,7 @@ senate_vote_imprisonment_rights_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1125,7 +1125,7 @@ senate_vote_imprisonment_rights_propose_modifier = {
 			NOT = {
 				house = {
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1140,14 +1140,14 @@ senate_vote_imprisonment_rights_propose_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 
 		add = -30
 	}
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 
@@ -1157,7 +1157,7 @@ senate_vote_imprisonment_rights_propose_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 
 		add = 50
@@ -1167,7 +1167,7 @@ senate_vote_imprisonment_rights_propose_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 
 			this = { has_trait = vengeful }
@@ -1184,7 +1184,7 @@ senate_vote_imprisonment_rights_propose_modifier = {
 			has_trait = arrogant
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1195,12 +1195,12 @@ senate_vote_imprisonment_rights_propose_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1216,7 +1216,7 @@ leaders_discretion_imprisonment_rights_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1230,7 +1230,7 @@ leaders_discretion_imprisonment_rights_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1254,7 +1254,7 @@ leaders_discretion_imprisonment_rights_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1278,7 +1278,7 @@ leaders_discretion_imprisonment_rights_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1293,14 +1293,14 @@ leaders_discretion_imprisonment_rights_propose_modifier = {
 	modifier = {
 		
 
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		add = 30
 	}
 	modifier = {
 		
 
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		add = 30
@@ -1310,7 +1310,7 @@ leaders_discretion_imprisonment_rights_propose_modifier = {
 
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		add = -50
 	}
@@ -1320,7 +1320,7 @@ leaders_discretion_imprisonment_rights_propose_modifier = {
 
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			this = { has_trait = vengeful }
 		}
@@ -1338,7 +1338,7 @@ leaders_discretion_imprisonment_rights_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1352,7 +1352,7 @@ leaders_discretion_imprisonment_rights_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1366,7 +1366,7 @@ senate_vote_title_revocation_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1380,7 +1380,7 @@ senate_vote_title_revocation_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1404,7 +1404,7 @@ senate_vote_title_revocation_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1426,7 +1426,7 @@ senate_vote_title_revocation_propose_modifier = {
 			NOT = {
 				house = {
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1440,12 +1440,12 @@ senate_vote_title_revocation_propose_modifier = {
 		add = -10
 	}
 	modifier = {
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		add = -30
 	}
 	modifier = {
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 
@@ -1455,7 +1455,7 @@ senate_vote_title_revocation_propose_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 
 		add = 50
@@ -1464,7 +1464,7 @@ senate_vote_title_revocation_propose_modifier = {
 		AND = {
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 
 			this = { has_trait = vengeful }
@@ -1481,7 +1481,7 @@ senate_vote_title_revocation_propose_modifier = {
 			has_trait = arrogant
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1492,12 +1492,12 @@ senate_vote_title_revocation_propose_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1511,7 +1511,7 @@ leaders_discretion_title_revocation_propose_modifier = {
 		NOT = {
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1525,7 +1525,7 @@ leaders_discretion_title_revocation_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1549,7 +1549,7 @@ leaders_discretion_title_revocation_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1573,7 +1573,7 @@ leaders_discretion_title_revocation_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1588,14 +1588,14 @@ leaders_discretion_title_revocation_propose_modifier = {
 	modifier = {
 		
 
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		add = 30
 	}
 	modifier = {
 		
 
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		add = 30
@@ -1605,7 +1605,7 @@ leaders_discretion_title_revocation_propose_modifier = {
 
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		add = -50
 	}
@@ -1615,7 +1615,7 @@ leaders_discretion_title_revocation_propose_modifier = {
 
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			this = { has_trait = vengeful }
 		}
@@ -1633,7 +1633,7 @@ leaders_discretion_title_revocation_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1647,7 +1647,7 @@ leaders_discretion_title_revocation_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1660,7 +1660,7 @@ senate_vote_title_granting_propose_modifier = {
 		NOT = {
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1674,7 +1674,7 @@ senate_vote_title_granting_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1698,7 +1698,7 @@ senate_vote_title_granting_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1720,7 +1720,7 @@ senate_vote_title_granting_propose_modifier = {
 			NOT = {
 				house = {
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1734,13 +1734,13 @@ senate_vote_title_granting_propose_modifier = {
 		add = -10
 	}
 	modifier = {
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		add = -30
 	}
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 
@@ -1750,7 +1750,7 @@ senate_vote_title_granting_propose_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 
 		add = 50
@@ -1760,7 +1760,7 @@ senate_vote_title_granting_propose_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 
 			this = { has_trait = vengeful }
@@ -1777,7 +1777,7 @@ senate_vote_title_granting_propose_modifier = {
 			has_trait = arrogant
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1789,7 +1789,7 @@ senate_vote_title_granting_propose_modifier = {
 			NOT = {
 				house = {
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1804,7 +1804,7 @@ leaders_discretion_title_granting_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1818,7 +1818,7 @@ leaders_discretion_title_granting_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1842,7 +1842,7 @@ leaders_discretion_title_granting_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1866,7 +1866,7 @@ leaders_discretion_title_granting_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1881,14 +1881,14 @@ leaders_discretion_title_granting_propose_modifier = {
 	modifier = {
 		
 
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		add = 30
 	}
 	modifier = {
 		
 
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		add = 30
@@ -1898,7 +1898,7 @@ leaders_discretion_title_granting_propose_modifier = {
 
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		add = -50
 	}
@@ -1908,7 +1908,7 @@ leaders_discretion_title_granting_propose_modifier = {
 
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			this = { has_trait = vengeful }
 		}
@@ -1926,7 +1926,7 @@ leaders_discretion_title_granting_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1940,7 +1940,7 @@ leaders_discretion_title_granting_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1954,7 +1954,7 @@ life_title_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -1968,7 +1968,7 @@ life_title_term_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -1992,7 +1992,7 @@ life_title_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2015,7 +2015,7 @@ life_title_term_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2030,14 +2030,14 @@ life_title_term_propose_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 
 		add = 50
 	}
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 
@@ -2047,7 +2047,7 @@ life_title_term_propose_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 
 		add = -70
@@ -2057,7 +2057,7 @@ life_title_term_propose_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 
 			this = { has_trait = vengeful }
@@ -2068,12 +2068,12 @@ life_title_term_propose_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_life_title_term
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2084,12 +2084,12 @@ life_title_term_propose_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_life_title_term
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2102,9 +2102,9 @@ life_title_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_life_title_term
 					OR = {
 						has_variable = one_year_term
@@ -2125,7 +2125,7 @@ twenty_year_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2139,7 +2139,7 @@ twenty_year_term_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2162,7 +2162,7 @@ twenty_year_term_propose_modifier = {
 			has_trait = ambitious
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2174,9 +2174,9 @@ twenty_year_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_twenty_year_term
 					OR = {
 						has_variable = one_year_term
@@ -2206,7 +2206,7 @@ twenty_year_term_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2221,14 +2221,14 @@ twenty_year_term_propose_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 
 		add = 25
 	}
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 
@@ -2238,7 +2238,7 @@ twenty_year_term_propose_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 
 		add = -35
@@ -2248,7 +2248,7 @@ twenty_year_term_propose_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 
 			this = { has_trait = vengeful }
@@ -2260,7 +2260,7 @@ twenty_year_term_propose_modifier = {
 			has_trait = arrogant
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2272,7 +2272,7 @@ twenty_year_term_propose_modifier = {
 			NOT = {
 				house = {
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2286,7 +2286,7 @@ ten_year_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2300,7 +2300,7 @@ ten_year_term_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2324,7 +2324,7 @@ ten_year_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2336,9 +2336,9 @@ ten_year_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					OR = {
 						has_variable = one_year_term
@@ -2367,7 +2367,7 @@ ten_year_term_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2382,13 +2382,13 @@ ten_year_term_propose_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 
 		add = 6
 	}
 	modifier = {
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		add = 10
@@ -2397,7 +2397,7 @@ ten_year_term_propose_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 
 		add = -5
@@ -2407,7 +2407,7 @@ ten_year_term_propose_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 
 			this = { has_trait = vengeful }
@@ -2418,12 +2418,12 @@ ten_year_term_propose_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2434,12 +2434,12 @@ ten_year_term_propose_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2453,7 +2453,7 @@ four_year_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2467,7 +2467,7 @@ four_year_term_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2491,7 +2491,7 @@ four_year_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 
 			}
@@ -2504,9 +2504,9 @@ four_year_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					OR = {
 						has_variable = one_year_term
@@ -2534,7 +2534,7 @@ four_year_term_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2549,18 +2549,18 @@ four_year_term_propose_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 
 		add = -6
 	}
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				OR = {
 					
 				}
@@ -2572,7 +2572,7 @@ four_year_term_propose_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 
 		add = 5
@@ -2582,7 +2582,7 @@ four_year_term_propose_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 
 			this = { has_trait = vengeful }
@@ -2593,12 +2593,12 @@ four_year_term_propose_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2609,12 +2609,12 @@ four_year_term_propose_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2628,7 +2628,7 @@ two_year_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2642,7 +2642,7 @@ two_year_term_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2666,7 +2666,7 @@ two_year_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2678,9 +2678,9 @@ two_year_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = one_year_term
 				}
@@ -2705,7 +2705,7 @@ two_year_term_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2720,14 +2720,14 @@ two_year_term_propose_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 
 		add = -25
 	}
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 
@@ -2737,7 +2737,7 @@ two_year_term_propose_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 
 		add = 35
@@ -2747,7 +2747,7 @@ two_year_term_propose_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 
 			this = { has_trait = vengeful }
@@ -2759,7 +2759,7 @@ two_year_term_propose_modifier = {
 			has_trait = arrogant
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2771,7 +2771,7 @@ two_year_term_propose_modifier = {
 			NOT = {
 				house = {
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2785,7 +2785,7 @@ one_year_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2799,7 +2799,7 @@ one_year_term_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2823,7 +2823,7 @@ one_year_term_propose_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 
 			}
@@ -2847,7 +2847,7 @@ one_year_term_propose_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2862,14 +2862,14 @@ one_year_term_propose_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 
 		add = -50
 	}
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 
@@ -2879,7 +2879,7 @@ one_year_term_propose_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 
 		add = 70
@@ -2889,7 +2889,7 @@ one_year_term_propose_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 
 			this = { has_trait = vengeful }
@@ -2901,7 +2901,7 @@ one_year_term_propose_modifier = {
 			has_trait = arrogant
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2913,7 +2913,7 @@ one_year_term_propose_modifier = {
 			NOT = {
 				house = {
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2925,14 +2925,14 @@ one_year_term_propose_modifier = {
 senate_vote_war_declaration_modifier = {
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
 		NOT = {
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2940,7 +2940,7 @@ senate_vote_war_declaration_modifier = {
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
@@ -2949,7 +2949,7 @@ senate_vote_war_declaration_modifier = {
 			NOT = {
 				house = {
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -2958,7 +2958,7 @@ senate_vote_war_declaration_modifier = {
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
@@ -2967,7 +2967,7 @@ senate_vote_war_declaration_modifier = {
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
@@ -2976,7 +2976,7 @@ senate_vote_war_declaration_modifier = {
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
@@ -2984,7 +2984,7 @@ senate_vote_war_declaration_modifier = {
 			has_trait = ambitious
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -2992,7 +2992,7 @@ senate_vote_war_declaration_modifier = {
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
@@ -3001,7 +3001,7 @@ senate_vote_war_declaration_modifier = {
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
@@ -3014,12 +3014,12 @@ senate_vote_war_declaration_modifier = {
 			NOT = {
 				house = {
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_war_declaration
 				}
 			}
@@ -3028,7 +3028,7 @@ senate_vote_war_declaration_modifier = {
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
@@ -3037,47 +3037,47 @@ senate_vote_war_declaration_modifier = {
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		add = -30
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		add = -30
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		add = 50
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
 		AND = {
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			this = { has_trait = vengeful }
 		}
@@ -3085,7 +3085,7 @@ senate_vote_war_declaration_modifier = {
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
@@ -3094,7 +3094,7 @@ senate_vote_war_declaration_modifier = {
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
@@ -3102,7 +3102,7 @@ senate_vote_war_declaration_modifier = {
 			has_trait = arrogant
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -3110,7 +3110,7 @@ senate_vote_war_declaration_modifier = {
 	}
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_war_declaration
 			}
 		}
@@ -3119,7 +3119,7 @@ senate_vote_war_declaration_modifier = {
 			NOT = {
 				house = {
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -3131,7 +3131,7 @@ senate_vote_war_declaration_modifier = {
 leaders_discretion_war_declaration_modifier = {
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_war_declaration
 			}
 		}
@@ -3139,7 +3139,7 @@ leaders_discretion_war_declaration_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -3148,7 +3148,7 @@ leaders_discretion_war_declaration_modifier = {
 	modifier = {
 		AND = {
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_war_declaration
 				}
 			}
@@ -3157,7 +3157,7 @@ leaders_discretion_war_declaration_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -3178,14 +3178,14 @@ leaders_discretion_war_declaration_modifier = {
 		AND = {
 			has_trait = ambitious
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_war_declaration
 				}
 			}
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -3205,7 +3205,7 @@ leaders_discretion_war_declaration_modifier = {
 		AND = {
 			has_trait = shrewd
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_war_declaration
 				}
 			}
@@ -3213,7 +3213,7 @@ leaders_discretion_war_declaration_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -3228,14 +3228,14 @@ leaders_discretion_war_declaration_modifier = {
 	modifier = {
 		
 
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		add = 30
 	}
 	modifier = {
 		
 
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		add = 30
@@ -3245,7 +3245,7 @@ leaders_discretion_war_declaration_modifier = {
 
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		add = -50
 	}
@@ -3253,13 +3253,13 @@ leaders_discretion_war_declaration_modifier = {
 		AND = {
 			
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_war_declaration
 				}
 			}
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			this = { has_trait = vengeful }
 		}
@@ -3274,14 +3274,14 @@ leaders_discretion_war_declaration_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_war_declaration
 				}
 			}
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -3291,7 +3291,7 @@ leaders_discretion_war_declaration_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_war_declaration
 				}
 			}
@@ -3299,7 +3299,7 @@ leaders_discretion_war_declaration_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -3313,7 +3313,7 @@ senate_vote_council_appointment_modifier = {
 		NOT = {
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -3327,7 +3327,7 @@ senate_vote_council_appointment_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -3350,7 +3350,7 @@ senate_vote_council_appointment_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -3373,7 +3373,7 @@ senate_vote_council_appointment_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -3387,14 +3387,14 @@ senate_vote_council_appointment_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 
 		add = -30
 	}
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 
@@ -3404,7 +3404,7 @@ senate_vote_council_appointment_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 
 		add = 50
@@ -3414,7 +3414,7 @@ senate_vote_council_appointment_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			this = { has_trait = vengeful }
 		}
@@ -3430,7 +3430,7 @@ senate_vote_council_appointment_modifier = {
 			has_trait = arrogant
 			house = {
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -3442,7 +3442,7 @@ senate_vote_council_appointment_modifier = {
 			NOT = {
 				house = {
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -3457,7 +3457,7 @@ leaders_discretion_council_appointment_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -3471,7 +3471,7 @@ leaders_discretion_council_appointment_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -3495,7 +3495,7 @@ leaders_discretion_council_appointment_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -3519,7 +3519,7 @@ leaders_discretion_council_appointment_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -3534,14 +3534,14 @@ leaders_discretion_council_appointment_modifier = {
 	modifier = {
 		
 
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		add = 30
 	}
 	modifier = {
 		
 
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		add = 30
@@ -3551,7 +3551,7 @@ leaders_discretion_council_appointment_modifier = {
 
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		add = -50
 	}
@@ -3561,7 +3561,7 @@ leaders_discretion_council_appointment_modifier = {
 
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			this = { has_trait = vengeful }
 		}
@@ -3579,7 +3579,7 @@ leaders_discretion_council_appointment_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -3593,7 +3593,7 @@ leaders_discretion_council_appointment_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -3607,12 +3607,12 @@ senate_vote_imprisonment_rights_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_imprisonment_rights
 			}
 		}
@@ -3625,12 +3625,12 @@ senate_vote_imprisonment_rights_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_imprisonment_rights
 				}
 			}
@@ -3640,7 +3640,7 @@ senate_vote_imprisonment_rights_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_imprisonment_rights
 			}
 		}
@@ -3649,7 +3649,7 @@ senate_vote_imprisonment_rights_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_imprisonment_rights
 			}
 		}
@@ -3661,9 +3661,9 @@ senate_vote_imprisonment_rights_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_imprisonment_rights
 				}
 			}
@@ -3673,7 +3673,7 @@ senate_vote_imprisonment_rights_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_imprisonment_rights
 			}
 		}
@@ -3682,7 +3682,7 @@ senate_vote_imprisonment_rights_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_imprisonment_rights
 			}
 		}
@@ -3695,12 +3695,12 @@ senate_vote_imprisonment_rights_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_imprisonment_rights
 				}
 			}
@@ -3710,7 +3710,7 @@ senate_vote_imprisonment_rights_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_imprisonment_rights
 			}
 		}
@@ -3718,9 +3718,9 @@ senate_vote_imprisonment_rights_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_imprisonment_rights
 			}
 		}
@@ -3729,11 +3729,11 @@ senate_vote_imprisonment_rights_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_imprisonment_rights
 			}
 		}
@@ -3743,10 +3743,10 @@ senate_vote_imprisonment_rights_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_imprisonment_rights
 			}
 		}
@@ -3757,10 +3757,10 @@ senate_vote_imprisonment_rights_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_imprisonment_rights
 				}
 			}
@@ -3771,7 +3771,7 @@ senate_vote_imprisonment_rights_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_imprisonment_rights
 			}
 		}
@@ -3781,12 +3781,12 @@ senate_vote_imprisonment_rights_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_senate_vote_imprisonment_rights
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -3797,12 +3797,12 @@ senate_vote_imprisonment_rights_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_senate_vote_imprisonment_rights
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -3816,12 +3816,12 @@ council_approval_imprisonment_rights_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_imprisonment_rights
 			}
 		}
@@ -3834,12 +3834,12 @@ council_approval_imprisonment_rights_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_imprisonment_rights
 				}
 			}
@@ -3849,7 +3849,7 @@ council_approval_imprisonment_rights_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_imprisonment_rights
 			}
 		}
@@ -3858,7 +3858,7 @@ council_approval_imprisonment_rights_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_imprisonment_rights
 			}
 		}
@@ -3870,9 +3870,9 @@ council_approval_imprisonment_rights_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_imprisonment_rights
 				}
 			}
@@ -3882,7 +3882,7 @@ council_approval_imprisonment_rights_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_imprisonment_rights
 			}
 		}
@@ -3891,7 +3891,7 @@ council_approval_imprisonment_rights_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_imprisonment_rights
 			}
 		}
@@ -3904,12 +3904,12 @@ council_approval_imprisonment_rights_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_imprisonment_rights
 				}
 			}
@@ -3919,7 +3919,7 @@ council_approval_imprisonment_rights_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_imprisonment_rights
 			}
 		}
@@ -3927,9 +3927,9 @@ council_approval_imprisonment_rights_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_imprisonment_rights
 			}
 		}
@@ -3938,11 +3938,11 @@ council_approval_imprisonment_rights_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_imprisonment_rights
 			}
 		}
@@ -3952,10 +3952,10 @@ council_approval_imprisonment_rights_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_imprisonment_rights
 			}
 		}
@@ -3966,10 +3966,10 @@ council_approval_imprisonment_rights_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_imprisonment_rights
 				}
 			}
@@ -3980,7 +3980,7 @@ council_approval_imprisonment_rights_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_imprisonment_rights
 			}
 		}
@@ -3990,12 +3990,12 @@ council_approval_imprisonment_rights_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_council_approval_imprisonment_rights
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -4006,12 +4006,12 @@ council_approval_imprisonment_rights_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_council_approval_imprisonment_rights
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -4022,7 +4022,7 @@ council_approval_imprisonment_rights_modifier = {
 leaders_discretion_imprisonment_rights_modifier = {
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_imprisonment_rights
 			}
 		}
@@ -4030,7 +4030,7 @@ leaders_discretion_imprisonment_rights_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -4039,7 +4039,7 @@ leaders_discretion_imprisonment_rights_modifier = {
 	modifier = {
 		AND = {
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_imprisonment_rights
 				}
 			}
@@ -4048,7 +4048,7 @@ leaders_discretion_imprisonment_rights_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -4058,7 +4058,7 @@ leaders_discretion_imprisonment_rights_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_imprisonment_rights
 			}
 		}
@@ -4067,7 +4067,7 @@ leaders_discretion_imprisonment_rights_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_imprisonment_rights
 			}
 		}
@@ -4077,14 +4077,14 @@ leaders_discretion_imprisonment_rights_modifier = {
 		AND = {
 			has_trait = ambitious
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_imprisonment_rights
 				}
 			}
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -4093,7 +4093,7 @@ leaders_discretion_imprisonment_rights_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_imprisonment_rights
 			}
 		}
@@ -4102,7 +4102,7 @@ leaders_discretion_imprisonment_rights_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_imprisonment_rights
 			}
 		}
@@ -4112,7 +4112,7 @@ leaders_discretion_imprisonment_rights_modifier = {
 		AND = {
 			has_trait = shrewd
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_imprisonment_rights
 				}
 			}
@@ -4120,7 +4120,7 @@ leaders_discretion_imprisonment_rights_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -4130,7 +4130,7 @@ leaders_discretion_imprisonment_rights_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_imprisonment_rights
 			}
 		}
@@ -4139,22 +4139,22 @@ leaders_discretion_imprisonment_rights_modifier = {
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_imprisonment_rights
 			}
 		}
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		add = 30
 	}
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_imprisonment_rights
 			}
 		}
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		add = 30
@@ -4162,13 +4162,13 @@ leaders_discretion_imprisonment_rights_modifier = {
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_imprisonment_rights
 			}
 		}
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		add = -50
 	}
@@ -4176,13 +4176,13 @@ leaders_discretion_imprisonment_rights_modifier = {
 		AND = {
 			
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_imprisonment_rights
 				}
 			}
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			this = { has_trait = vengeful }
 		}
@@ -4191,7 +4191,7 @@ leaders_discretion_imprisonment_rights_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_imprisonment_rights
 			}
 		}
@@ -4201,14 +4201,14 @@ leaders_discretion_imprisonment_rights_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_imprisonment_rights
 				}
 			}
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -4218,7 +4218,7 @@ leaders_discretion_imprisonment_rights_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_imprisonment_rights
 				}
 			}
@@ -4226,7 +4226,7 @@ leaders_discretion_imprisonment_rights_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -4240,12 +4240,12 @@ senate_vote_title_revocation_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_revocation
 			}
 		}
@@ -4258,12 +4258,12 @@ senate_vote_title_revocation_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_title_revocation
 				}
 			}
@@ -4273,7 +4273,7 @@ senate_vote_title_revocation_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_revocation
 			}
 		}
@@ -4282,7 +4282,7 @@ senate_vote_title_revocation_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_revocation
 			}
 		}
@@ -4294,9 +4294,9 @@ senate_vote_title_revocation_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_title_revocation
 				}
 			}
@@ -4306,7 +4306,7 @@ senate_vote_title_revocation_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_revocation
 			}
 		}
@@ -4315,7 +4315,7 @@ senate_vote_title_revocation_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_revocation
 			}
 		}
@@ -4328,12 +4328,12 @@ senate_vote_title_revocation_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_title_revocation
 				}
 			}
@@ -4343,7 +4343,7 @@ senate_vote_title_revocation_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_revocation
 			}
 		}
@@ -4351,9 +4351,9 @@ senate_vote_title_revocation_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_revocation
 			}
 		}
@@ -4362,11 +4362,11 @@ senate_vote_title_revocation_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_revocation
 			}
 		}
@@ -4376,10 +4376,10 @@ senate_vote_title_revocation_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_revocation
 			}
 		}
@@ -4390,10 +4390,10 @@ senate_vote_title_revocation_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_title_revocation
 				}
 			}
@@ -4404,7 +4404,7 @@ senate_vote_title_revocation_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_revocation
 			}
 		}
@@ -4414,12 +4414,12 @@ senate_vote_title_revocation_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_senate_vote_title_revocation
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -4430,12 +4430,12 @@ senate_vote_title_revocation_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_senate_vote_title_revocation
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -4449,12 +4449,12 @@ council_approval_title_revocation_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_revocation
 			}
 		}
@@ -4467,12 +4467,12 @@ council_approval_title_revocation_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_title_revocation
 				}
 			}
@@ -4482,7 +4482,7 @@ council_approval_title_revocation_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_revocation
 			}
 		}
@@ -4491,7 +4491,7 @@ council_approval_title_revocation_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_revocation
 			}
 		}
@@ -4503,9 +4503,9 @@ council_approval_title_revocation_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_title_revocation
 				}
 			}
@@ -4515,7 +4515,7 @@ council_approval_title_revocation_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_revocation
 			}
 		}
@@ -4524,7 +4524,7 @@ council_approval_title_revocation_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_revocation
 			}
 		}
@@ -4537,12 +4537,12 @@ council_approval_title_revocation_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_title_revocation
 				}
 			}
@@ -4552,7 +4552,7 @@ council_approval_title_revocation_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_revocation
 			}
 		}
@@ -4560,9 +4560,9 @@ council_approval_title_revocation_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_revocation
 			}
 		}
@@ -4571,11 +4571,11 @@ council_approval_title_revocation_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_revocation
 			}
 		}
@@ -4585,10 +4585,10 @@ council_approval_title_revocation_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_revocation
 			}
 		}
@@ -4599,10 +4599,10 @@ council_approval_title_revocation_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_title_revocation
 				}
 			}
@@ -4613,7 +4613,7 @@ council_approval_title_revocation_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_revocation
 			}
 		}
@@ -4623,12 +4623,12 @@ council_approval_title_revocation_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_council_approval_title_revocation
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -4639,12 +4639,12 @@ council_approval_title_revocation_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_council_approval_title_revocation
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -4655,7 +4655,7 @@ council_approval_title_revocation_modifier = {
 leaders_discretion_title_revocation_modifier = {
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_revocation
 			}
 		}
@@ -4663,7 +4663,7 @@ leaders_discretion_title_revocation_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -4672,7 +4672,7 @@ leaders_discretion_title_revocation_modifier = {
 	modifier = {
 		AND = {
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_title_revocation
 				}
 			}
@@ -4681,7 +4681,7 @@ leaders_discretion_title_revocation_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -4691,7 +4691,7 @@ leaders_discretion_title_revocation_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_revocation
 			}
 		}
@@ -4700,7 +4700,7 @@ leaders_discretion_title_revocation_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_revocation
 			}
 		}
@@ -4710,14 +4710,14 @@ leaders_discretion_title_revocation_modifier = {
 		AND = {
 			has_trait = ambitious
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_title_revocation
 				}
 			}
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -4726,7 +4726,7 @@ leaders_discretion_title_revocation_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_revocation
 			}
 		}
@@ -4735,7 +4735,7 @@ leaders_discretion_title_revocation_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_revocation
 			}
 		}
@@ -4745,7 +4745,7 @@ leaders_discretion_title_revocation_modifier = {
 		AND = {
 			has_trait = shrewd
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_title_revocation
 				}
 			}
@@ -4753,7 +4753,7 @@ leaders_discretion_title_revocation_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -4763,7 +4763,7 @@ leaders_discretion_title_revocation_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_revocation
 			}
 		}
@@ -4772,22 +4772,22 @@ leaders_discretion_title_revocation_modifier = {
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_revocation
 			}
 		}
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		add = 30
 	}
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_revocation
 			}
 		}
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		add = 30
@@ -4795,13 +4795,13 @@ leaders_discretion_title_revocation_modifier = {
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_revocation
 			}
 		}
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		add = -50
 	}
@@ -4809,13 +4809,13 @@ leaders_discretion_title_revocation_modifier = {
 		AND = {
 			
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_title_revocation
 				}
 			}
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			this = { has_trait = vengeful }
 		}
@@ -4824,7 +4824,7 @@ leaders_discretion_title_revocation_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_revocation
 			}
 		}
@@ -4834,14 +4834,14 @@ leaders_discretion_title_revocation_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_title_revocation
 				}
 			}
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -4851,7 +4851,7 @@ leaders_discretion_title_revocation_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_title_revocation
 				}
 			}
@@ -4859,7 +4859,7 @@ leaders_discretion_title_revocation_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -4873,12 +4873,12 @@ senate_vote_title_granting_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_granting
 			}
 		}
@@ -4891,12 +4891,12 @@ senate_vote_title_granting_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_title_granting
 				}
 			}
@@ -4906,7 +4906,7 @@ senate_vote_title_granting_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_granting
 			}
 		}
@@ -4915,7 +4915,7 @@ senate_vote_title_granting_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_granting
 			}
 		}
@@ -4927,9 +4927,9 @@ senate_vote_title_granting_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_title_granting
 				}
 			}
@@ -4939,7 +4939,7 @@ senate_vote_title_granting_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_granting
 			}
 		}
@@ -4948,7 +4948,7 @@ senate_vote_title_granting_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_granting
 			}
 		}
@@ -4961,12 +4961,12 @@ senate_vote_title_granting_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_title_granting
 				}
 			}
@@ -4976,7 +4976,7 @@ senate_vote_title_granting_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_granting
 			}
 		}
@@ -4984,9 +4984,9 @@ senate_vote_title_granting_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_granting
 			}
 		}
@@ -4995,11 +4995,11 @@ senate_vote_title_granting_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_granting
 			}
 		}
@@ -5009,10 +5009,10 @@ senate_vote_title_granting_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_granting
 			}
 		}
@@ -5023,10 +5023,10 @@ senate_vote_title_granting_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_senate_vote_title_granting
 				}
 			}
@@ -5037,7 +5037,7 @@ senate_vote_title_granting_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_senate_vote_title_granting
 			}
 		}
@@ -5047,12 +5047,12 @@ senate_vote_title_granting_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_senate_vote_title_granting
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -5063,12 +5063,12 @@ senate_vote_title_granting_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_senate_vote_title_granting
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -5082,12 +5082,12 @@ council_approval_title_granting_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_granting
 			}
 		}
@@ -5100,12 +5100,12 @@ council_approval_title_granting_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_title_granting
 				}
 			}
@@ -5115,7 +5115,7 @@ council_approval_title_granting_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_granting
 			}
 		}
@@ -5124,7 +5124,7 @@ council_approval_title_granting_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_granting
 			}
 		}
@@ -5136,9 +5136,9 @@ council_approval_title_granting_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_title_granting
 				}
 			}
@@ -5148,7 +5148,7 @@ council_approval_title_granting_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_granting
 			}
 		}
@@ -5157,7 +5157,7 @@ council_approval_title_granting_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_granting
 			}
 		}
@@ -5170,12 +5170,12 @@ council_approval_title_granting_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_title_granting
 				}
 			}
@@ -5185,7 +5185,7 @@ council_approval_title_granting_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_granting
 			}
 		}
@@ -5193,9 +5193,9 @@ council_approval_title_granting_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_granting
 			}
 		}
@@ -5204,11 +5204,11 @@ council_approval_title_granting_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_granting
 			}
 		}
@@ -5218,10 +5218,10 @@ council_approval_title_granting_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_granting
 			}
 		}
@@ -5232,10 +5232,10 @@ council_approval_title_granting_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_council_approval_title_granting
 				}
 			}
@@ -5246,7 +5246,7 @@ council_approval_title_granting_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_council_approval_title_granting
 			}
 		}
@@ -5256,12 +5256,12 @@ council_approval_title_granting_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_council_approval_title_granting
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -5272,12 +5272,12 @@ council_approval_title_granting_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_council_approval_title_granting
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -5288,7 +5288,7 @@ council_approval_title_granting_modifier = {
 leaders_discretion_title_granting_modifier = {
 	modifier = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_granting
 			}
 		}
@@ -5296,7 +5296,7 @@ leaders_discretion_title_granting_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -5305,7 +5305,7 @@ leaders_discretion_title_granting_modifier = {
 	modifier = {
 		AND = {
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_title_granting
 				}
 			}
@@ -5314,7 +5314,7 @@ leaders_discretion_title_granting_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -5324,7 +5324,7 @@ leaders_discretion_title_granting_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_granting
 			}
 		}
@@ -5333,7 +5333,7 @@ leaders_discretion_title_granting_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_granting
 			}
 		}
@@ -5343,14 +5343,14 @@ leaders_discretion_title_granting_modifier = {
 		AND = {
 			has_trait = ambitious
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_title_granting
 				}
 			}
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -5359,7 +5359,7 @@ leaders_discretion_title_granting_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_granting
 			}
 		}
@@ -5368,7 +5368,7 @@ leaders_discretion_title_granting_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_granting
 			}
 		}
@@ -5378,7 +5378,7 @@ leaders_discretion_title_granting_modifier = {
 		AND = {
 			has_trait = shrewd
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_title_granting
 				}
 			}
@@ -5386,7 +5386,7 @@ leaders_discretion_title_granting_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -5396,7 +5396,7 @@ leaders_discretion_title_granting_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_granting
 			}
 		}
@@ -5405,22 +5405,22 @@ leaders_discretion_title_granting_modifier = {
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_granting
 			}
 		}
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		add = 30
 	}
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_granting
 			}
 		}
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		add = 30
@@ -5428,13 +5428,13 @@ leaders_discretion_title_granting_modifier = {
 	modifier = {
 		
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_granting
 			}
 		}
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		add = -50
 	}
@@ -5442,13 +5442,13 @@ leaders_discretion_title_granting_modifier = {
 		AND = {
 			
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_title_granting
 				}
 			}
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			this = { has_trait = vengeful }
 		}
@@ -5457,7 +5457,7 @@ leaders_discretion_title_granting_modifier = {
 	modifier = {
 		has_trait = shy
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_leaders_discretion_title_granting
 			}
 		}
@@ -5467,14 +5467,14 @@ leaders_discretion_title_granting_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_title_granting
 				}
 			}
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -5484,7 +5484,7 @@ leaders_discretion_title_granting_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_leaders_discretion_title_granting
 				}
 			}
@@ -5492,7 +5492,7 @@ leaders_discretion_title_granting_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -5506,12 +5506,12 @@ life_title_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_life_title_term
 			}
 		}
@@ -5524,12 +5524,12 @@ life_title_term_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_life_title_term
 				}
 			}
@@ -5539,7 +5539,7 @@ life_title_term_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_life_title_term
 			}
 		}
@@ -5548,7 +5548,7 @@ life_title_term_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_life_title_term
 			}
 		}
@@ -5560,9 +5560,9 @@ life_title_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_life_title_term
 				}
 			}
@@ -5572,7 +5572,7 @@ life_title_term_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_life_title_term
 			}
 		}
@@ -5581,7 +5581,7 @@ life_title_term_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_life_title_term
 			}
 		}
@@ -5594,12 +5594,12 @@ life_title_term_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_life_title_term
 				}
 			}
@@ -5609,7 +5609,7 @@ life_title_term_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_life_title_term
 			}
 		}
@@ -5617,9 +5617,9 @@ life_title_term_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_life_title_term
 			}
 		}
@@ -5628,11 +5628,11 @@ life_title_term_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_life_title_term
 			}
 		}
@@ -5642,10 +5642,10 @@ life_title_term_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_life_title_term
 			}
 		}
@@ -5656,10 +5656,10 @@ life_title_term_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_life_title_term
 				}
 			}
@@ -5671,12 +5671,12 @@ life_title_term_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_life_title_term
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -5687,12 +5687,12 @@ life_title_term_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_life_title_term
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -5705,9 +5705,9 @@ life_title_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_life_title_term
 					OR = {
 						has_variable = one_year_term
@@ -5728,12 +5728,12 @@ twenty_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_twenty_year_term
 			}
 		}
@@ -5746,12 +5746,12 @@ twenty_year_term_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_twenty_year_term
 				}
 			}
@@ -5761,7 +5761,7 @@ twenty_year_term_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_twenty_year_term
 			}
 		}
@@ -5770,7 +5770,7 @@ twenty_year_term_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_twenty_year_term
 			}
 		}
@@ -5782,9 +5782,9 @@ twenty_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_twenty_year_term
 				}
 			}
@@ -5797,9 +5797,9 @@ twenty_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_twenty_year_term
 					OR = {
 						has_variable = one_year_term
@@ -5815,7 +5815,7 @@ twenty_year_term_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_twenty_year_term
 			}
 		}
@@ -5824,7 +5824,7 @@ twenty_year_term_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_twenty_year_term
 			}
 		}
@@ -5837,12 +5837,12 @@ twenty_year_term_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_twenty_year_term
 				}
 			}
@@ -5852,7 +5852,7 @@ twenty_year_term_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_twenty_year_term
 			}
 		}
@@ -5860,9 +5860,9 @@ twenty_year_term_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_twenty_year_term
 			}
 		}
@@ -5871,11 +5871,11 @@ twenty_year_term_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_twenty_year_term
 			}
 		}
@@ -5885,10 +5885,10 @@ twenty_year_term_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_twenty_year_term
 			}
 		}
@@ -5899,10 +5899,10 @@ twenty_year_term_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_twenty_year_term
 				}
 			}
@@ -5914,12 +5914,12 @@ twenty_year_term_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_twenty_year_term
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -5930,12 +5930,12 @@ twenty_year_term_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_twenty_year_term
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -5949,12 +5949,12 @@ ten_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_ten_year_term
 			}
 		}
@@ -5967,12 +5967,12 @@ ten_year_term_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_ten_year_term
 				}
 			}
@@ -5982,7 +5982,7 @@ ten_year_term_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_ten_year_term
 			}
 		}
@@ -5991,7 +5991,7 @@ ten_year_term_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_ten_year_term
 			}
 		}
@@ -6003,9 +6003,9 @@ ten_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_ten_year_term
 				}
 			}
@@ -6018,9 +6018,9 @@ ten_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_ten_year_term
 					OR = {
 						has_variable = one_year_term
@@ -6035,7 +6035,7 @@ ten_year_term_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_ten_year_term
 			}
 		}
@@ -6044,7 +6044,7 @@ ten_year_term_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_ten_year_term
 			}
 		}
@@ -6057,12 +6057,12 @@ ten_year_term_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_ten_year_term
 				}
 			}
@@ -6072,7 +6072,7 @@ ten_year_term_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_ten_year_term
 			}
 		}
@@ -6080,9 +6080,9 @@ ten_year_term_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_ten_year_term
 			}
 		}
@@ -6091,11 +6091,11 @@ ten_year_term_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				OR = {
 					has_variable = law_voting_ten_year_term
 				}
@@ -6107,10 +6107,10 @@ ten_year_term_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_ten_year_term
 			}
 		}
@@ -6121,10 +6121,10 @@ ten_year_term_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_ten_year_term
 				}
 			}
@@ -6136,12 +6136,12 @@ ten_year_term_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_ten_year_term
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -6152,12 +6152,12 @@ ten_year_term_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_ten_year_term
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -6171,12 +6171,12 @@ four_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_four_year_term
 			}
 		}
@@ -6189,12 +6189,12 @@ four_year_term_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_four_year_term
 				}
 			}
@@ -6204,7 +6204,7 @@ four_year_term_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_four_year_term
 			}
 		}
@@ -6213,7 +6213,7 @@ four_year_term_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_four_year_term
 			}
 		}
@@ -6225,9 +6225,9 @@ four_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_four_year_term
 				}
 			}
@@ -6240,9 +6240,9 @@ four_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_four_year_term
 					OR = {
 						has_variable = one_year_term
@@ -6256,7 +6256,7 @@ four_year_term_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_four_year_term
 			}
 		}
@@ -6265,7 +6265,7 @@ four_year_term_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_four_year_term
 			}
 		}
@@ -6278,12 +6278,12 @@ four_year_term_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_four_year_term
 				}
 			}
@@ -6293,7 +6293,7 @@ four_year_term_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_four_year_term
 			}
 		}
@@ -6301,9 +6301,9 @@ four_year_term_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_four_year_term
 			}
 		}
@@ -6312,11 +6312,11 @@ four_year_term_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				OR = {
 					has_variable = law_voting_four_year_term
 				}
@@ -6328,10 +6328,10 @@ four_year_term_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_four_year_term
 			}
 		}
@@ -6342,10 +6342,10 @@ four_year_term_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_four_year_term
 				}
 			}
@@ -6357,12 +6357,12 @@ four_year_term_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_four_year_term
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -6373,12 +6373,12 @@ four_year_term_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_four_year_term
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -6392,12 +6392,12 @@ two_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_two_year_term
 			}
 		}
@@ -6410,12 +6410,12 @@ two_year_term_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_two_year_term
 				}
 			}
@@ -6425,7 +6425,7 @@ two_year_term_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_two_year_term
 			}
 		}
@@ -6434,7 +6434,7 @@ two_year_term_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_two_year_term
 			}
 		}
@@ -6446,9 +6446,9 @@ two_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_two_year_term
 				}
 			}
@@ -6461,9 +6461,9 @@ two_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_two_year_term
 					has_variable = one_year_term
 				}
@@ -6474,7 +6474,7 @@ two_year_term_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_two_year_term
 			}
 		}
@@ -6483,7 +6483,7 @@ two_year_term_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_two_year_term
 			}
 		}
@@ -6496,12 +6496,12 @@ two_year_term_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_two_year_term
 				}
 			}
@@ -6511,7 +6511,7 @@ two_year_term_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_two_year_term
 			}
 		}
@@ -6519,9 +6519,9 @@ two_year_term_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_two_year_term
 			}
 		}
@@ -6530,11 +6530,11 @@ two_year_term_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_two_year_term
 			}
 		}
@@ -6544,10 +6544,10 @@ two_year_term_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_two_year_term
 			}
 		}
@@ -6558,10 +6558,10 @@ two_year_term_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_two_year_term
 				}
 			}
@@ -6573,12 +6573,12 @@ two_year_term_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_two_year_term
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -6589,12 +6589,12 @@ two_year_term_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_two_year_term
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -6608,12 +6608,12 @@ one_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_one_year_term
 			}
 		}
@@ -6626,12 +6626,12 @@ one_year_term_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_one_year_term
 				}
 			}
@@ -6641,7 +6641,7 @@ one_year_term_modifier = {
 	modifier = {
 		house.clean_family_votes > 33
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_one_year_term
 			}
 		}
@@ -6650,7 +6650,7 @@ one_year_term_modifier = {
 	modifier = {
 		house.clean_family_votes > 66
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_one_year_term
 			}
 		}
@@ -6662,9 +6662,9 @@ one_year_term_modifier = {
 			house = {
 
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_one_year_term
 				}
 			}
@@ -6674,7 +6674,7 @@ one_year_term_modifier = {
 	modifier = {
 		has_trait = content
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_one_year_term
 			}
 		}
@@ -6683,7 +6683,7 @@ one_year_term_modifier = {
 	modifier = {
 		has_trait = patient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_one_year_term
 			}
 		}
@@ -6696,12 +6696,12 @@ one_year_term_modifier = {
 				house = {
 
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_one_year_term
 				}
 			}
@@ -6711,7 +6711,7 @@ one_year_term_modifier = {
 	modifier = {
 		has_trait = impatient
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_one_year_term
 			}
 		}
@@ -6719,9 +6719,9 @@ one_year_term_modifier = {
 	}
 	modifier = {
 		
-		this = { has_title = scope:titular_republic }
+		this = { has_title = scope:titular_magocracy }
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_one_year_term
 			}
 		}
@@ -6730,11 +6730,11 @@ one_year_term_modifier = {
 	modifier = {
 		
 		this = {
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 			has_trait = ambitious
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_one_year_term
 			}
 		}
@@ -6744,10 +6744,10 @@ one_year_term_modifier = {
 		
 		any_relation = {
 			type = rival
-			has_title = scope:titular_republic
+			has_title = scope:titular_magocracy
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				has_variable = law_voting_one_year_term
 			}
 		}
@@ -6758,10 +6758,10 @@ one_year_term_modifier = {
 			
 			any_relation = {
 				type = rival
-				has_title = scope:titular_republic
+				has_title = scope:titular_magocracy
 			}
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					has_variable = law_voting_one_year_term
 				}
 			}
@@ -6773,12 +6773,12 @@ one_year_term_modifier = {
 		AND = {
 			has_trait = arrogant
 			house = {
-				var:titular_republic = {
+				var:titular_magocracy = {
 					
 					has_variable = law_voting_one_year_term
 				}
 				any_house_member = {
-					has_title = scope:titular_republic
+					has_title = scope:titular_magocracy
 				}
 			}
 		}
@@ -6789,12 +6789,12 @@ one_year_term_modifier = {
 			has_trait = arrogant
 			NOT = {
 				house = {
-					var:titular_republic = {
+					var:titular_magocracy = {
 						
 						has_variable = law_voting_one_year_term
 					}
 					any_house_member = {
-						has_title = scope:titular_republic
+						has_title = scope:titular_magocracy
 					}
 				}
 			}
@@ -6806,63 +6806,63 @@ one_year_term_modifier = {
 war_proposal_modifier = {
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
-			scope:titular_republic.holder.max_military_strength > scope:war_enemy.max_military_strength
+			scope:titular_magocracy = { exists = var:war_proposal }
+			scope:titular_magocracy.holder.max_military_strength > scope:war_enemy.max_military_strength
 		}
 		add = 20
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
-			scope:titular_republic.holder.max_military_strength > scope:war_enemy.double_military_strength
+			scope:titular_magocracy = { exists = var:war_proposal }
+			scope:titular_magocracy.holder.max_military_strength > scope:war_enemy.double_military_strength
 		}
 		add = 50
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
-			scope:titular_republic.holder.max_military_strength < scope:war_enemy.max_military_strength
+			scope:titular_magocracy = { exists = var:war_proposal }
+			scope:titular_magocracy.holder.max_military_strength < scope:war_enemy.max_military_strength
 		}
 		add = -30
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
-			scope:titular_republic.holder.double_military_strength < scope:war_enemy.max_military_strength
+			scope:titular_magocracy = { exists = var:war_proposal }
+			scope:titular_magocracy.holder.double_military_strength < scope:war_enemy.max_military_strength
 		}
 		add = -70
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 			has_trait = ambitious
 		}
 		add = 40
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 			has_trait = greedy
 		}
 		add = 20
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 			has_trait = brave
 		}
 		add = 20
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 			has_trait = content
 		}
 		add = -50
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 			any_relation = {
 				type = rival
 				this = scope:war_enemy
@@ -6872,7 +6872,7 @@ war_proposal_modifier = {
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 			any_relation = {
 				type = rival
 				this = scope:war_enemy
@@ -6883,7 +6883,7 @@ war_proposal_modifier = {
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 			any_relation = {
 				type = friend
 				this = scope:war_enemy
@@ -6893,7 +6893,7 @@ war_proposal_modifier = {
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 			any_relation = {
 				type = friend
 				this = scope:war_enemy
@@ -6904,7 +6904,7 @@ war_proposal_modifier = {
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 			any_relation = {
 				type = lover
 				this = scope:war_enemy
@@ -6914,7 +6914,7 @@ war_proposal_modifier = {
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 			any_relation = {
 				type = lover
 				this = scope:war_enemy
@@ -6925,7 +6925,7 @@ war_proposal_modifier = {
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 			has_trait = zealous
 			NOT = {
 				faith = scope:war_proposal.faith
@@ -6936,28 +6936,28 @@ war_proposal_modifier = {
 	modifier = {
 		AND = {
 			has_trait = compassionate
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 		}
 		add = -20
 	}
 	modifier = {
 		AND = {
 			has_trait = forgiving
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 		}
 		add = -20
 	}
 	modifier = {
 		AND = {
 			has_trait = lazy
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 		}
 		add = -20
 	}
 	modifier = {
 		AND = {
 			has_trait = craven
-			scope:titular_republic = { exists = var:war_proposal }
+			scope:titular_magocracy = { exists = var:war_proposal }
 		}
 		add = -20
 	}
@@ -6966,36 +6966,36 @@ war_proposal_modifier = {
 title_grants_proposal_modifier = {
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:grants_proposal }
+			scope:titular_magocracy = { exists = var:grants_proposal }
 			has_trait = generous
 		}
 		add = 10
 	}
 	opinion_modifier = {
-		trigger = { scope:titular_republic = { exists = var:grants_proposal } }
+		trigger = { scope:titular_magocracy = { exists = var:grants_proposal } }
 		who = this
 		opinion_target = scope:grant_target
 		multiplier = 1
 	}
 	modifier = {
-		scope:titular_republic = { exists = var:grants_proposal }
+		scope:titular_magocracy = { exists = var:grants_proposal }
 		add = scope:grant_target.diplomacy
 	}
 	modifier = {
-		scope:titular_republic = { exists = var:grants_proposal }
+		scope:titular_magocracy = { exists = var:grants_proposal }
 		add = scope:grant_target.martial
 	}
 	modifier = {
-		scope:titular_republic = { exists = var:grants_proposal }
+		scope:titular_magocracy = { exists = var:grants_proposal }
 		add = scope:grant_target.stewardship
 	}
 	modifier = {
-		scope:titular_republic = { exists = var:grants_proposal }
+		scope:titular_magocracy = { exists = var:grants_proposal }
 		add = scope:grant_target.learning
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:grants_proposal }
+			scope:titular_magocracy = { exists = var:grants_proposal }
 			house = {
 				any_house_member = {
 					this = scope:grant_target
@@ -7006,7 +7006,7 @@ title_grants_proposal_modifier = {
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:grants_proposal }
+			scope:titular_magocracy = { exists = var:grants_proposal }
 			scope:grant_target = this
 		}
 		add = 150
@@ -7016,27 +7016,27 @@ title_grants_proposal_modifier = {
 title_revocation_proposal_modifier = {
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:revocation_proposal }
+			scope:titular_magocracy = { exists = var:revocation_proposal }
 			has_trait = wrathful
 		}
 		add = 10
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:revocation_proposal }
+			scope:titular_magocracy = { exists = var:revocation_proposal }
 			has_trait = arrogant
 		}
 		add = -20
 	}
 	opinion_modifier = {
-		trigger = { scope:titular_republic = { exists = var:revocation_proposal } }
+		trigger = { scope:titular_magocracy = { exists = var:revocation_proposal } }
 		who = this
 		opinion_target = scope:revoke_target
 		multiplier = -1
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:revocation_proposal }
+			scope:titular_magocracy = { exists = var:revocation_proposal }
 			house = {
 				any_house_member = {
 					this = scope:revoke_target
@@ -7047,7 +7047,7 @@ title_revocation_proposal_modifier = {
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:revocation_proposal }
+			scope:titular_magocracy = { exists = var:revocation_proposal }
 			scope:revoke_target = this
 		}
 		add = -150
@@ -7057,41 +7057,41 @@ title_revocation_proposal_modifier = {
 imprisonment_proposal_modifier = {
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:imprisonment_proposal }
+			scope:titular_magocracy = { exists = var:imprisonment_proposal }
 			has_trait = just
 		}
 		add = 40
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:imprisonment_proposal }
+			scope:titular_magocracy = { exists = var:imprisonment_proposal }
 			has_trait = arbitrary
 		}
 		add = -40
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:imprisonment_proposal }
+			scope:titular_magocracy = { exists = var:imprisonment_proposal }
 			has_trait = fickle
 		}
 		add = -20
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:imprisonment_proposal }
+			scope:titular_magocracy = { exists = var:imprisonment_proposal }
 			has_trait = arrogant
 		}
 		add = 20
 	}
 	modifier = {
 		AND = {
-			scope:titular_republic = { exists = var:imprisonment_proposal }
+			scope:titular_magocracy = { exists = var:imprisonment_proposal }
 			has_trait = honest
 		}
 		add = 20
 	}
 	opinion_modifier = {
-		trigger = { scope:titular_republic = { exists = var:imprisonment_proposal } }
+		trigger = { scope:titular_magocracy = { exists = var:imprisonment_proposal } }
 		who = this
 		opinion_target = scope:prison_target
 		multiplier = -1
@@ -7100,41 +7100,41 @@ imprisonment_proposal_modifier = {
 
 council_appointment_proposal_modifier = {
 	opinion_modifier = {
-		trigger = { scope:titular_republic = { exists = var:council_proposal } }
+		trigger = { scope:titular_magocracy = { exists = var:council_proposal } }
 		who = this
 		opinion_target = scope:proposed_councilor
 		multiplier = 1
 	}
 	modifier = {
-		scope:titular_republic = { exists = var:council_proposal }
+		scope:titular_magocracy = { exists = var:council_proposal }
 		add = {
 			add = scope:proposed_councilor.martial
 			multiply = 2
 		}
 	}
 	modifier = {
-		scope:titular_republic = { exists = var:council_proposal }
+		scope:titular_magocracy = { exists = var:council_proposal }
 		add = {
 			add = scope:proposed_councilor.learning
 			multiply = 2
 		}
 	}
 	modifier = {
-		scope:titular_republic = { exists = var:council_proposal }
+		scope:titular_magocracy = { exists = var:council_proposal }
 		add = {
 			add = scope:proposed_councilor.stewardship
 			multiply = 2
 		}
 	}
 	modifier = {
-		scope:titular_republic = { exists = var:council_proposal }
+		scope:titular_magocracy = { exists = var:council_proposal }
 		add = {
 			add = scope:proposed_councilor.diplomacy
 			multiply = 2
 		}
 	}
 	modifier = {
-		scope:titular_republic = { exists = var:council_proposal }
+		scope:titular_magocracy = { exists = var:council_proposal }
 		add = {
 			add = scope:proposed_councilor.intrigue
 			multiply = 2
@@ -7328,27 +7328,27 @@ dictatorship_vote_modifier = {
 		add = 1000
 	}
 	modifier = {
-		house.var:titular_republic.holder = { any_character_war = { is_attacker = house.var:titular_republic.holder attacker_war_score < 0 } }
+		house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 0 } }
 		add = 15
 	}
 	modifier = {
-		house.var:titular_republic.holder = { any_character_war = { is_defender = house.var:titular_republic.holder defender_war_score < 0 } }
+		house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 0 } }
 		add = 20
 	}
 	modifier = {
-		house.var:titular_republic.holder = { any_character_war = { is_attacker = house.var:titular_republic.holder attacker_war_score < 40 } }
+		house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 40 } }
 		add = 10
 	}
 	modifier = {
-		house.var:titular_republic.holder = { any_character_war = { is_defender = house.var:titular_republic.holder defender_war_score < 40 } }
+		house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 40 } }
 		add = 10
 	}
 	modifier = {
-		house.var:titular_republic.holder = { any_character_war = { is_attacker = house.var:titular_republic.holder attacker_war_score < 70 } }
+		house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 70 } }
 		add = 20
 	}
 	modifier = {
-		house.var:titular_republic.holder = { any_character_war = { is_defender = house.var:titular_republic.holder defender_war_score < 70 } }
+		house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 70 } }
 		add = 30
 	}
 }
@@ -7364,27 +7364,27 @@ negative_dictatorship_vote_modifier = {
 		add = 1000
 	}
 	modifier = {
-		house.var:titular_republic.holder = { any_character_war = { is_attacker = house.var:titular_republic.holder attacker_war_score < 0 } }
+		house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 0 } }
 		add = 15
 	}
 	modifier = {
-		house.var:titular_republic.holder = { any_character_war = { is_defender = house.var:titular_republic.holder defender_war_score < 0 } }
+		house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 0 } }
 		add = 20
 	}
 	modifier = {
-		house.var:titular_republic.holder = { any_character_war = { is_attacker = house.var:titular_republic.holder attacker_war_score < 40 } }
+		house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 40 } }
 		add = 10
 	}
 	modifier = {
-		house.var:titular_republic.holder = { any_character_war = { is_defender = house.var:titular_republic.holder defender_war_score < 40 } }
+		house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 40 } }
 		add = 10
 	}
 	modifier = {
-		house.var:titular_republic.holder = { any_character_war = { is_attacker = house.var:titular_republic.holder attacker_war_score < 70 } }
+		house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 70 } }
 		add = 20
 	}
 	modifier = {
-		house.var:titular_republic.holder = { any_character_war = { is_defender = house.var:titular_republic.holder defender_war_score < 70 } }
+		house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 70 } }
 		add = 30
 	}
 	modifier = {

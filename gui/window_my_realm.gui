@@ -9,11 +9,11 @@ window = {
 	parentanchor = top|right
 	allow_outside = yes
 	movable = no
-	republic_senate_view = {}
-	republic_bicameral_view = {}
-	republic_council_view = {}
-	republic_term_limits_window = {}
-	republic_families_window = {}
+	magocracy_senate_view = {}
+	magocracy_bicameral_view = {}
+	magocracy_council_view = {}
+	magocracy_term_limits_window = {}
+	magocracy_families_window = {}
 	window_appoint_governor = {}
 	layer = windows_layer
 
@@ -75,12 +75,12 @@ window = {
 					blockoverride "button_close"
 					{
 						onclick = "[MyRealmWindow.Close]"
-						onclick = "[GetVariableSystem.Clear( 'window_republic_family' )]"
-						onclick = "[GetVariableSystem.Clear( 'window_republic_council_form' )]"
-						onclick = "[GetVariableSystem.Clear( 'window_republic_families' )]"
-						onclick = "[GetVariableSystem.Clear( 'window_republic_senate_form' )]"
-						onclick = "[GetVariableSystem.Clear( 'window_republic_elected_ruler_form' )]"
-						onclick = "[GetVariableSystem.Clear( 'window_republic_bicameral_form' )]"
+						onclick = "[GetVariableSystem.Clear( 'window_magocracy_family' )]"
+						onclick = "[GetVariableSystem.Clear( 'window_magocracy_council_form' )]"
+						onclick = "[GetVariableSystem.Clear( 'window_magocracy_families' )]"
+						onclick = "[GetVariableSystem.Clear( 'window_magocracy_senate_form' )]"
+						onclick = "[GetVariableSystem.Clear( 'window_magocracy_elected_ruler_form' )]"
+						onclick = "[GetVariableSystem.Clear( 'window_magocracy_bicameral_form' )]"
 					}
 
 					vbox = {
@@ -1110,13 +1110,13 @@ window = {
 								text = "VIEW_REPUBLIC_HOUSES"
 								size = { 150 32 }
 								tooltip = "VIEW_REPUBLIC_HOUSES_TT"
-								onclick = "[GetVariableSystem.Toggle('window_republic_families')]"
+								onclick = "[GetVariableSystem.Toggle('window_magocracy_families')]"
 								onclick = "[GetScriptedGui('most_likely_to_succeed').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							}
 						}
 
 						spacer = {
-							visible = "[GetScriptedGui('has_republic_elected_ruler_government').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							visible = "[GetScriptedGui('has_magocracy_elected_ruler_government').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							size = { 0 4 }
 						}
 
@@ -1125,7 +1125,7 @@ window = {
 						}
 
 						hbox = {
-							visible = "[GetScriptedGui('has_republic_council_government').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							visible = "[GetScriptedGui('has_magocracy_council_government').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							layoutpolicy_horizontal = growing
 							vbox = {
 								layoutpolicy_horizontal = growing
@@ -1145,7 +1145,7 @@ window = {
 								text = "OPEN_COUNCIL_VIEw"
 								size = { 150 32 }
 								tooltip = "VIEW_COUNCIL"
-								onclick = "[GetVariableSystem.Toggle('window_republic_council_form')]"
+								onclick = "[GetVariableSystem.Toggle('window_magocracy_council_form')]"
 							}
 						}
 

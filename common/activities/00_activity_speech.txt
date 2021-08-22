@@ -40,7 +40,7 @@ activity_speech = {
 				days = { 66 100 }
 			}
 			trigger_event = {
-				id = republic_speech_event.1010
+				id = magocracy_speech_event.1010
 				days = 120
 			}
 		}

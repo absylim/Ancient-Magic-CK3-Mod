@@ -72,8 +72,8 @@
 				}
 				AND = {
 					exists = house
-					exists = house.var:titular_republic
-					house.var:titular_republic = { has_variable = current_dictatorship }
+					exists = house.var:titular_magocracy
+					house.var:titular_magocracy = { has_variable = current_dictatorship }
 				}
 			}
 		}

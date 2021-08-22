@@ -18,15 +18,15 @@
 # 
 ############################################################################################################################
 
-namespace = VIETrepublic
+namespace = VIETmagocracy
 
 
 
 # Buying new clothes for a ball?
-VIETrepublic.0001 = {
+VIETmagocracy.0001 = {
 	type = character_event
-	title = VIETrepublic.0001.t
-	desc = VIETrepublic.0001.desc
+	title = VIETmagocracy.0001.t
+	desc = VIETmagocracy.0001.desc
 	theme = family
 	
 	right_portrait = {
@@ -36,8 +36,8 @@ VIETrepublic.0001 = {
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -70,7 +70,7 @@ VIETrepublic.0001 = {
 	}
 	
 	option = { # Buy opulent styles
-		name = VIETrepublic.0001.a
+		name = VIETmagocracy.0001.a
 		trigger = {
 			OR = {
 				gold >= 40
@@ -88,7 +88,7 @@ VIETrepublic.0001 = {
 		}		
 	}	
 	option = { # Simple clothes
-		name = VIETrepublic.0001.b
+		name = VIETmagocracy.0001.b
 		trigger = {
 			OR = {
 				gold >= 40
@@ -106,7 +106,7 @@ VIETrepublic.0001 = {
 		}		
 	}	
 	option = { # Exotic clothes
-		name = VIETrepublic.0001.c
+		name = VIETmagocracy.0001.c
 		trigger = {
 			OR = {
 				gold >= 40
@@ -124,7 +124,7 @@ VIETrepublic.0001 = {
 		}		
 	}	
 	option = { # Non
-		name = VIETrepublic.0001.d	
+		name = VIETmagocracy.0001.d	
 		if = {
 			limit = {
 				faith = {
@@ -146,16 +146,16 @@ VIETrepublic.0001 = {
 }
 
 # Buy a new nautical chart?
-VIETrepublic.0002 = {
+VIETmagocracy.0002 = {
 	type = character_event
-	title = VIETrepublic.0002.t
-	desc = VIETrepublic.0002.desc
+	title = VIETmagocracy.0002.t
+	desc = VIETmagocracy.0002.desc
 	theme = learning
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -193,7 +193,7 @@ VIETrepublic.0002 = {
 	}
 	
 	option = { # Yes!
-		name = VIETrepublic.0002.a
+		name = VIETmagocracy.0002.a
 		trigger = {
 			OR = {
 				gold >= 30
@@ -207,7 +207,7 @@ VIETrepublic.0002 = {
 		}	
 	}	
 	option = { # Yes!
-		name = VIETrepublic.0002.b
+		name = VIETmagocracy.0002.b
 		trigger = {
 			OR = {
 				gold >= 20
@@ -223,22 +223,22 @@ VIETrepublic.0002 = {
 		}	
 	}	
 	option = { # No!
-		name = VIETrepublic.0002.c	
+		name = VIETmagocracy.0002.c	
 	}
 }
 
 # Part of one of your warehouses burns down
-VIETrepublic.0003 = {
+VIETmagocracy.0003 = {
 	type = character_event
-	title = VIETrepublic.0003.t
-	desc = VIETrepublic.0003.desc
+	title = VIETmagocracy.0003.t
+	desc = VIETmagocracy.0003.desc
 	theme = stewardship_wealth_focus
 	override_background = { event_background = burning_building }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -280,7 +280,7 @@ VIETrepublic.0003 = {
 	}
 	
 	option = { # Oh no :(
-		name = VIETrepublic.0003.a
+		name = VIETmagocracy.0003.a
 		random_list = {
 			10 = { remove_short_term_gold = 15 }
 			10 = { remove_short_term_gold = 30 }
@@ -299,16 +299,16 @@ VIETrepublic.0003 = {
 
 
 # Last surviving patrician of an old family passes away
-VIETrepublic.0004 = {
+VIETmagocracy.0004 = {
 	type = character_event
-	title = VIETrepublic.0004.t
-	desc = VIETrepublic.0004.desc
+	title = VIETmagocracy.0004.t
+	desc = VIETmagocracy.0004.desc
 	theme = death
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -346,15 +346,15 @@ VIETrepublic.0004 = {
 	}
 	
 	option = { # Sad
-		name = VIETrepublic.0004.a
+		name = VIETmagocracy.0004.a
 		add_piety = 20
 	}	
 	option = { # Forever!
-		name = VIETrepublic.0004.b
+		name = VIETmagocracy.0004.b
 		add_prestige = 20
 	}	
 	option = { # Focus on the present
-		name = VIETrepublic.0004.c
+		name = VIETmagocracy.0004.c
 		stress_impact = {
 			base = miniscule_stress_impact_loss
 		}
@@ -363,17 +363,17 @@ VIETrepublic.0004 = {
 
 
 # Members of caravan have fallen ill
-VIETrepublic.0005 = {
+VIETmagocracy.0005 = {
 	type = character_event
-	title = VIETrepublic.0005.t
-	desc = VIETrepublic.0005.desc
+	title = VIETmagocracy.0005.t
+	desc = VIETmagocracy.0005.desc
 	theme = unfriendly
 	override_background = { event_background = council_chamber }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -411,7 +411,7 @@ VIETrepublic.0005 = {
 	}
 	
 	option = { # Sad
-		name = VIETrepublic.0005.a
+		name = VIETmagocracy.0005.a
 		add_character_modifier = {
 			modifier = VIET_RP_caravan_disrupted_illness
 			years = 3
@@ -420,17 +420,17 @@ VIETrepublic.0005 = {
 }
 
 # Staff member you were friends with steals goods to sell on the black market
-VIETrepublic.0006 = {
+VIETmagocracy.0006 = {
 	type = character_event
-	title = VIETrepublic.0006.t
-	desc = VIETrepublic.0006.desc
+	title = VIETmagocracy.0006.t
+	desc = VIETmagocracy.0006.desc
 	theme = intrigue
 	override_background = { event_background = throne_room }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -472,7 +472,7 @@ VIETrepublic.0006 = {
 	}
 	
 	option = { # Take him to court
-		name = VIETrepublic.0006.a
+		name = VIETmagocracy.0006.a
 		add_gold = 15
 		stress_impact = {
 			trusting = minor_stress_impact_gain
@@ -480,7 +480,7 @@ VIETrepublic.0006 = {
 		}		
 	}	
 	option = { # Forgive him if he apologizes
-		name = VIETrepublic.0006.b	
+		name = VIETmagocracy.0006.b	
 		if = {
 			limit = {
 				faith = {
@@ -503,7 +503,7 @@ VIETrepublic.0006 = {
 		}		
 	}
 	option = { # Fire him
-		name = VIETrepublic.0006.c	
+		name = VIETmagocracy.0006.c	
 		add_prestige = 25
 		stress_impact = {
 			forgiving = minor_stress_impact_gain
@@ -511,7 +511,7 @@ VIETrepublic.0006 = {
 		}		
 	}
 	option = { # Black market, hmm...?
-		name = VIETrepublic.0006.d
+		name = VIETmagocracy.0006.d
 		add_piety = -25
 		add_character_modifier = {
 			modifier = VIET_RP_black_market_connections
@@ -525,10 +525,10 @@ VIETrepublic.0006 = {
 
 
 # Courtier complains about nouveau riche 
-VIETrepublic.0007 = {
+VIETmagocracy.0007 = {
 	type = character_event
-	title = VIETrepublic.0007.t
-	desc = VIETrepublic.0007.desc
+	title = VIETmagocracy.0007.t
+	desc = VIETmagocracy.0007.desc
 	theme = stewardship_wealth_focus
 	
 	left_portrait = root
@@ -553,8 +553,8 @@ VIETrepublic.0007 = {
 			NOT = { is_close_family_of = root }
 		}
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -611,13 +611,13 @@ VIETrepublic.0007 = {
 	}
 	
 	option = { # At least he helps you make money, right?
-		name = VIETrepublic.0007.a
+		name = VIETmagocracy.0007.a
 		stress_impact = {
 			arrogant = minor_stress_impact_gain
 		}
 	}	
 	option = { # I, too, am a snob
-		name = VIETrepublic.0007.b
+		name = VIETmagocracy.0007.b
 		trigger = {
 			NOT = { has_trait = humble }
 		}
@@ -628,7 +628,7 @@ VIETrepublic.0007 = {
 		}
 	}	
 	option = { # Let us not be snobs
-		name = VIETrepublic.0007.c
+		name = VIETmagocracy.0007.c
 		trigger = {
 			NOT = { has_trait = arrogant }
 		}
@@ -642,17 +642,17 @@ VIETrepublic.0007 = {
 
 
 # Discover a captain of one of your ships engaged in banditry
-VIETrepublic.0008 = {
+VIETmagocracy.0008 = {
 	type = character_event
-	title = VIETrepublic.0008.t
-	desc = VIETrepublic.0008.desc
+	title = VIETmagocracy.0008.t
+	desc = VIETmagocracy.0008.desc
 	theme = intrigue_skulduggery_focus
 	override_background = { event_background = throne_room }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -691,7 +691,7 @@ VIETrepublic.0008 = {
 	}
 	
 	option = { # Money is money!
-		name = VIETrepublic.0008.a
+		name = VIETmagocracy.0008.a
 		if = {
 			limit = {
 				faith = {
@@ -714,7 +714,7 @@ VIETrepublic.0008 = {
 		}
 	}	
 	option = { # Give it back!
-		name = VIETrepublic.0008.b
+		name = VIETmagocracy.0008.b
 		if = {
 			limit = {
 				faith = {
@@ -743,16 +743,16 @@ VIETrepublic.0008 = {
 
 
 # Dozing off at a meeting about the Republic's trade regulations
-VIETrepublic.0009 = {
+VIETmagocracy.0009 = {
 	type = character_event
-	title = VIETrepublic.0009.t
-	desc = VIETrepublic.0009.desc
+	title = VIETmagocracy.0009.t
+	desc = VIETmagocracy.0009.desc
 	theme = stewardship_domain_focus
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -790,7 +790,7 @@ VIETrepublic.0009 = {
 	}
 	
 	option = { # zzzzz
-		name = VIETrepublic.0009.a
+		name = VIETmagocracy.0009.a
 		if = {
 			limit = {
 				OR = {
@@ -811,7 +811,7 @@ VIETrepublic.0009 = {
 		}
 	}	
 	option = { # pay attention
-		name = VIETrepublic.0009.b
+		name = VIETmagocracy.0009.b
 		add_prestige = 30
 		add_stewardship_lifestyle_xp = medium_lifestyle_xp
 		stress_impact = {
@@ -823,16 +823,16 @@ VIETrepublic.0009 = {
 
 
 # A trader gives you some tips and tricks about bribing foreign officials
-VIETrepublic.0010 = {
+VIETmagocracy.0010 = {
 	type = character_event
-	title = VIETrepublic.0010.t
-	desc = VIETrepublic.0010.desc
+	title = VIETmagocracy.0010.t
+	desc = VIETmagocracy.0010.desc
 	theme = party
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -870,7 +870,7 @@ VIETrepublic.0010 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0010.a
+		name = VIETmagocracy.0010.a
 		add_diplomacy_lifestyle_xp = medium_lifestyle_xp
 		add_stewardship_lifestyle_xp = medium_lifestyle_xp
 		add_intrigue_lifestyle_xp = medium_lifestyle_xp
@@ -879,17 +879,17 @@ VIETrepublic.0010 = {
 
 
 # Traveling merchant mentions some trade rumors 
-VIETrepublic.0011 = {
+VIETmagocracy.0011 = {
 	type = character_event
-	title = VIETrepublic.0011.t
-	desc = VIETrepublic.0011.desc
+	title = VIETmagocracy.0011.t
+	desc = VIETmagocracy.0011.desc
 	theme = party
 	override_icon = { reference = "gfx/interface/icons/event_types/type_stewardship.dds" }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -927,19 +927,19 @@ VIETrepublic.0011 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0011.a
+		name = VIETmagocracy.0011.a
 		stress_impact = {
 			greedy = medium_stress_impact_gain
 			trusting = minor_stress_impact_gain
 		}
 	}	
 	option = { # Ok
-		name = VIETrepublic.0011.b
+		name = VIETmagocracy.0011.b
 		stress_impact = {
 			paranoid = minor_stress_impact_gain
 			cynical = minor_stress_impact_gain
 		}
-		custom_tooltip = VIETrepublic.0011.result
+		custom_tooltip = VIETmagocracy.0011.result
 		hidden_effect = {
 			random_list = {
 				50 = {
@@ -966,7 +966,7 @@ VIETrepublic.0011 = {
 					send_interface_toast = {
 						type = event_toast_effect_good
 						left_icon = ROOT
-						title = VIETrepublic.0011.toast.good
+						title = VIETmagocracy.0011.toast.good
 						add_stewardship_lifestyle_xp = medium_lifestyle_xp
 						add_character_modifier = {
 							modifier = VIET_RP_trade_rumors_good
@@ -998,7 +998,7 @@ VIETrepublic.0011 = {
 					send_interface_toast = {
 						type = event_toast_effect_bad
 						left_icon = ROOT
-						title = VIETrepublic.0011.toast.bad
+						title = VIETmagocracy.0011.toast.bad
 						add_stewardship_lifestyle_xp = medium_lifestyle_xp
 						add_character_modifier = {
 							modifier = VIET_RP_trade_rumors_bad
@@ -1013,17 +1013,17 @@ VIETrepublic.0011 = {
 
 
 # Ship and goods were seized by pirates, and crew was enslaved
-VIETrepublic.0012 = {
+VIETmagocracy.0012 = {
 	type = character_event
-	title = VIETrepublic.0012.t
-	desc = VIETrepublic.0012.desc
+	title = VIETmagocracy.0012.t
+	desc = VIETmagocracy.0012.desc
 	theme = corruption
 	override_background = { event_background = docks }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -1084,13 +1084,13 @@ VIETrepublic.0012 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0012.a
+		name = VIETmagocracy.0012.a
 		stress_impact = {
 			compassionate = medium_stress_impact_gain
 		}
 	}	
 	option = { # Ok
-		name = VIETrepublic.0012.b
+		name = VIETmagocracy.0012.b
 		if = {
 			limit = {
 				has_character_flag = VIET_RP_tiny_ransom
@@ -1134,7 +1134,7 @@ VIETrepublic.0012 = {
 		}
 	}	
 	option = { # Ok
-		name = VIETrepublic.0012.c
+		name = VIETmagocracy.0012.c
 		trigger = {
 			diplomacy >= decent_skill_rating
 		}
@@ -1218,16 +1218,16 @@ VIETrepublic.0012 = {
 
 
 # Ship sinks
-VIETrepublic.0013 = {
+VIETmagocracy.0013 = {
 	type = character_event
-	title = VIETrepublic.0013.t
-	desc = VIETrepublic.0013.desc
+	title = VIETmagocracy.0013.t
+	desc = VIETmagocracy.0013.desc
 	theme = corruption
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -1281,22 +1281,22 @@ VIETrepublic.0013 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0013.a
+		name = VIETmagocracy.0013.a
 	}
 }
 
 
 # Spice trade investment pays off
-VIETrepublic.0014 = {
+VIETmagocracy.0014 = {
 	type = character_event
-	title = VIETrepublic.0014.t
-	desc = VIETrepublic.0014.desc
+	title = VIETmagocracy.0014.t
+	desc = VIETmagocracy.0014.desc
 	theme = stewardship
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -1334,7 +1334,7 @@ VIETrepublic.0014 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0014.a
+		name = VIETmagocracy.0014.a
 		add_character_modifier = {
 			modifier = VIET_RP_spice_trade_investments
 			years = 8
@@ -1344,17 +1344,17 @@ VIETrepublic.0014 = {
 
 
 # Lost caravan shows up in town late
-VIETrepublic.0015 = {
+VIETmagocracy.0015 = {
 	type = character_event
-	title = VIETrepublic.0015.t
-	desc = VIETrepublic.0015.desc
+	title = VIETmagocracy.0015.t
+	desc = VIETmagocracy.0015.desc
 	theme = stewardship
 	override_background = { event_background = market }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -1392,24 +1392,24 @@ VIETrepublic.0015 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0015.a
+		name = VIETmagocracy.0015.a
 		remove_short_term_gold = 30
 	}
 }
 
 
 # Character's trade ship finds some salvage from a pirate wreck
-VIETrepublic.0016 = {
+VIETmagocracy.0016 = {
 	type = character_event
-	title = VIETrepublic.0016.t
-	desc = VIETrepublic.0016.desc
+	title = VIETmagocracy.0016.t
+	desc = VIETmagocracy.0016.desc
 	theme = stewardship
 	override_background = { event_background = docks }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -1447,24 +1447,24 @@ VIETrepublic.0016 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0016.a
+		name = VIETmagocracy.0016.a
 		add_gold = 50
 	}
 }
 
 
 # Character's trade ship gets lost and finds a strange island
-VIETrepublic.0017 = {
+VIETmagocracy.0017 = {
 	type = character_event
-	title = VIETrepublic.0017.t
-	desc = VIETrepublic.0017.desc
+	title = VIETmagocracy.0017.t
+	desc = VIETmagocracy.0017.desc
 	theme = learning
 	override_background = { event_background = docks }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -1502,7 +1502,7 @@ VIETrepublic.0017 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0017.a
+		name = VIETmagocracy.0017.a
 		add_gold = 30
 		add_stewardship_lifestyle_xp = medium_lifestyle_xp
 		add_learning_lifestyle_xp = medium_lifestyle_xp
@@ -1515,17 +1515,17 @@ VIETrepublic.0017 = {
 
 
 # Elderly patrician tells about a place he once visited
-VIETrepublic.0018 = {
+VIETmagocracy.0018 = {
 	type = character_event
-	title = VIETrepublic.0018.t
-	desc = VIETrepublic.0018.desc
+	title = VIETmagocracy.0018.t
+	desc = VIETmagocracy.0018.desc
 	theme = learning
 	override_background = { event_background = council_chamber }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -1563,7 +1563,7 @@ VIETrepublic.0018 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0018.a
+		name = VIETmagocracy.0018.a
 		add_diplomacy_lifestyle_xp = medium_lifestyle_xp
 		add_stewardship_lifestyle_xp = medium_lifestyle_xp
 		add_learning_lifestyle_xp = medium_lifestyle_xp		
@@ -1572,16 +1572,16 @@ VIETrepublic.0018 = {
 
 
 # Character gets the opportunity to sponsor the building of a fountain down the road
-VIETrepublic.0019 = {
+VIETmagocracy.0019 = {
 	type = character_event
-	title = VIETrepublic.0019.t
-	desc = VIETrepublic.0019.desc
+	title = VIETmagocracy.0019.t
+	desc = VIETmagocracy.0019.desc
 	theme = realm
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -1616,7 +1616,7 @@ VIETrepublic.0019 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0019.a
+		name = VIETmagocracy.0019.a
 		trigger = {
 			OR = {
 				gold >= 50
@@ -1632,7 +1632,7 @@ VIETrepublic.0019 = {
 		}
 	}	
 	option = { # No
-		name = VIETrepublic.0019.b
+		name = VIETmagocracy.0019.b
 		stress_impact = {
 			arrogant = minor_stress_impact_gain
 			ambitious = minor_stress_impact_gain
@@ -1642,10 +1642,10 @@ VIETrepublic.0019 = {
 
 
 # Courtier offers to teach character a new dance they never seen before
-VIETrepublic.0020 = {
+VIETmagocracy.0020 = {
 	type = character_event
-	title = VIETrepublic.0020.t
-	desc = VIETrepublic.0020.desc
+	title = VIETmagocracy.0020.t
+	desc = VIETmagocracy.0020.desc
 	theme = party
 	
 	left_portrait = {
@@ -1673,8 +1673,8 @@ VIETrepublic.0020 = {
 			NOT = { is_close_family_of = root }
 		}
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -1726,7 +1726,7 @@ VIETrepublic.0020 = {
 	}
 	
 	option = { # I'll just sit and watch
-		name = VIETrepublic.0020.a
+		name = VIETmagocracy.0020.a
 		if = {
 			limit = {
 				NOR = {
@@ -1747,7 +1747,7 @@ VIETrepublic.0020 = {
 		}
 	}	
 	option = { # Ok!
-		name = VIETrepublic.0020.b
+		name = VIETmagocracy.0020.b
 		add_prestige = 25
 		scope:RP_breakdancer = {
 			add_opinion = {
@@ -1768,16 +1768,16 @@ VIETrepublic.0020 = {
 
 
 # Character eats baklava at a party
-VIETrepublic.0021 = {
+VIETmagocracy.0021 = {
 	type = character_event
-	title = VIETrepublic.0021.t
-	desc = VIETrepublic.0021.desc
+	title = VIETmagocracy.0021.t
+	desc = VIETmagocracy.0021.desc
 	theme = party
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -1815,7 +1815,7 @@ VIETrepublic.0021 = {
 	}
 	
 	option = { # Obligatory VIET baklava reference
-		name = VIETrepublic.0021.a
+		name = VIETmagocracy.0021.a
 		stress_impact = {
 			base = miniscule_stress_impact_loss
 		}
@@ -1828,17 +1828,17 @@ VIETrepublic.0021 = {
 
 
 # Ship runs aground near the city, try to save as much as possible
-VIETrepublic.0022 = {
+VIETmagocracy.0022 = {
 	type = character_event
-	title = VIETrepublic.0022.t
-	desc = VIETrepublic.0022.desc
+	title = VIETmagocracy.0022.t
+	desc = VIETmagocracy.0022.desc
 	theme = unfriendly
 	override_background = { event_background = docks }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -1884,13 +1884,13 @@ VIETrepublic.0022 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0022.a
+		name = VIETmagocracy.0022.a
 		trigger = {
 			stewardship < decent_skill_rating			
 		}
 	}		
 	option = { # Ok
-		name = VIETrepublic.0022.b
+		name = VIETmagocracy.0022.b
 		trigger = {
 			stewardship >= decent_skill_rating			
 		}
@@ -1906,17 +1906,17 @@ VIETrepublic.0022 = {
 
 
 # Character reconsiders deal which might go against religious convictions
-VIETrepublic.0023 = {
+VIETmagocracy.0023 = {
 	type = character_event
-	title = VIETrepublic.0023.t
-	desc = VIETrepublic.0023.desc
+	title = VIETmagocracy.0023.t
+	desc = VIETmagocracy.0023.desc
 	theme = unfriendly
 	override_background = { event_background = council_chamber }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -1958,7 +1958,7 @@ VIETrepublic.0023 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0023.a
+		name = VIETmagocracy.0023.a
 		add_gold = 100
 		add_piety = -50
 		stress_impact = {
@@ -1966,7 +1966,7 @@ VIETrepublic.0023 = {
 		}
 	}		
 	option = { # Ok
-		name = VIETrepublic.0023.b
+		name = VIETmagocracy.0023.b
 		add_piety = 50
 		stress_impact = {
 			greedy = medium_stress_impact_gain
@@ -1976,17 +1976,17 @@ VIETrepublic.0023 = {
 
 
 # Character misjudges price of incoming goods
-VIETrepublic.0024 = {
+VIETmagocracy.0024 = {
 	type = character_event
-	title = VIETrepublic.0024.t
-	desc = VIETrepublic.0024.desc
+	title = VIETmagocracy.0024.t
+	desc = VIETmagocracy.0024.desc
 	theme = stewardship_wealth_focus
 	override_background = { event_background = docks }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -2028,7 +2028,7 @@ VIETrepublic.0024 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0024.a
+		name = VIETmagocracy.0024.a
 		trigger = {
 			diplomacy < decent_skill_rating			
 		}
@@ -2038,7 +2038,7 @@ VIETrepublic.0024 = {
 		}
 	}		
 	option = { # Ok
-		name = VIETrepublic.0024.b
+		name = VIETmagocracy.0024.b
 		trigger = {
 			diplomacy >= decent_skill_rating			
 		}
@@ -2052,17 +2052,17 @@ VIETrepublic.0024 = {
 
 
 # Character misjudges price of incoming goods - in a good way
-VIETrepublic.0025 = {
+VIETmagocracy.0025 = {
 	type = character_event
-	title = VIETrepublic.0025.t
-	desc = VIETrepublic.0025.desc
+	title = VIETmagocracy.0025.t
+	desc = VIETmagocracy.0025.desc
 	theme = stewardship_wealth_focus
 	override_background = { event_background = docks }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -2100,7 +2100,7 @@ VIETrepublic.0025 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0025.a
+		name = VIETmagocracy.0025.a
 		add_gold = 60
 		add_character_modifier = {
 			modifier = VIET_RP_generous_to_customers
@@ -2111,7 +2111,7 @@ VIETrepublic.0025 = {
 		}
 	}		
 	option = { # Ok
-		name = VIETrepublic.0025.b
+		name = VIETmagocracy.0025.b
 		add_gold = 100
 		stress_impact = {
 			generous = minor_stress_impact_gain
@@ -2123,10 +2123,10 @@ VIETrepublic.0025 = {
 
 
 # Courtier makes a poor financial decision
-VIETrepublic.0026 = {
+VIETmagocracy.0026 = {
 	type = character_event
-	title = VIETrepublic.0026.t
-	desc = VIETrepublic.0026.desc
+	title = VIETmagocracy.0026.t
+	desc = VIETmagocracy.0026.desc
 	theme = stewardship_wealth_focus
 	
 	left_portrait = root
@@ -2151,8 +2151,8 @@ VIETrepublic.0026 = {
 			NOT = { is_close_family_of = root }
 		}
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -2209,7 +2209,7 @@ VIETrepublic.0026 = {
 	}
 	
 	option = { # You're dumb
-		name = VIETrepublic.0026.a
+		name = VIETmagocracy.0026.a
 		add_prestige = 25
 		scope:RP_loser = {
 			add_opinion = {
@@ -2223,7 +2223,7 @@ VIETrepublic.0026 = {
 		}
 	}	
 	option = { # It's ok
-		name = VIETrepublic.0026.b
+		name = VIETmagocracy.0026.b
 		scope:RP_loser = {
 			add_stewardship_skill = 1
 			add_opinion = {
@@ -2240,10 +2240,10 @@ VIETrepublic.0026 = {
 
 
 # Courtier makes a good financial decision
-VIETrepublic.0027 = {
+VIETmagocracy.0027 = {
 	type = character_event
-	title = VIETrepublic.0027.t
-	desc = VIETrepublic.0027.desc
+	title = VIETmagocracy.0027.t
+	desc = VIETmagocracy.0027.desc
 	theme = stewardship_wealth_focus
 	
 	left_portrait = root
@@ -2265,8 +2265,8 @@ VIETrepublic.0027 = {
 			NOT = { is_close_family_of = root }
 		}
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -2321,23 +2321,23 @@ VIETrepublic.0027 = {
 	}
 	
 	option = { # You're dumb
-		name = VIETrepublic.0027.a
+		name = VIETmagocracy.0027.a
 	}
 }
 
 
 # Employees of family business threaten to go on strike
-VIETrepublic.0028 = {
+VIETmagocracy.0028 = {
 	type = character_event
-	title = VIETrepublic.0028.t
-	desc = VIETrepublic.0028.desc
+	title = VIETmagocracy.0028.t
+	desc = VIETmagocracy.0028.desc
 	theme = stewardship_wealth_focus
 	override_background = { event_background = docks }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -2375,7 +2375,7 @@ VIETrepublic.0028 = {
 	}
 	
 	option = { # Refuse their demands
-		name = VIETrepublic.0028.a
+		name = VIETmagocracy.0028.a
 		add_prestige = -50
 		add_character_modifier = {
 			modifier = VIET_RP_refused_to_raise_employee_wages
@@ -2388,7 +2388,7 @@ VIETrepublic.0028 = {
 		}		
 	}	
 	option = { # Agree to their demands
-		name = VIETrepublic.0028.b
+		name = VIETmagocracy.0028.b
 		add_character_modifier = {
 			modifier = VIET_RP_raised_employee_wages
 			years = 8
@@ -2402,7 +2402,7 @@ VIETrepublic.0028 = {
 		}	
 	}	
 	option = { # Exceed their demands
-		name = VIETrepublic.0028.c
+		name = VIETmagocracy.0028.c
 		add_piety = 50
 		add_character_modifier = {
 			modifier = VIET_RP_raised_employee_wages_amazing
@@ -2417,7 +2417,7 @@ VIETrepublic.0028 = {
 		}	
 	}
 	option = { # Negotiate a Compromise
-		name = VIETrepublic.0028.d
+		name = VIETmagocracy.0028.d
 		trigger = {
 			diplomacy >= decent_skill_rating
 		}
@@ -2438,17 +2438,17 @@ VIETrepublic.0028 = {
 
 
 # Spending time at the port observing stuff or doing stuff, I dunno
-VIETrepublic.0029 = {
+VIETmagocracy.0029 = {
 	type = character_event
-	title = VIETrepublic.0029.t
-	desc = VIETrepublic.0029.desc
+	title = VIETmagocracy.0029.t
+	desc = VIETmagocracy.0029.desc
 	theme = stewardship_wealth_focus
 	override_background = { event_background = docks }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -2483,7 +2483,7 @@ VIETrepublic.0029 = {
 	}
 	
 	option = { # Ok
-		name = VIETrepublic.0029.a
+		name = VIETmagocracy.0029.a
 		add_character_modifier = {
 			modifier = VIET_RP_spends_time_port
 			years = 3
@@ -2493,17 +2493,17 @@ VIETrepublic.0029 = {
 
 
 # Visitor notices a beautiful statue you bought from afar
-VIETrepublic.0030 = {
+VIETmagocracy.0030 = {
 	type = character_event
-	title = VIETrepublic.0030.t
-	desc = VIETrepublic.0030.desc
+	title = VIETmagocracy.0030.t
+	desc = VIETmagocracy.0030.desc
 	theme = friendly
 	override_background = { event_background = garden }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -2538,16 +2538,16 @@ VIETrepublic.0030 = {
 	}
 	
 	option = { # Keep in garden
-		name = VIETrepublic.0030.a
+		name = VIETmagocracy.0030.a
 		add_piety = 50
 	}	
 	option = { # Put in front of house
-		name = VIETrepublic.0030.b
+		name = VIETmagocracy.0030.b
 		add_prestige = 25
 		dynasty = { add_dynasty_prestige = 25 }
 	}	
 	option = { # Sell to the guy
-		name = VIETrepublic.0030.c
+		name = VIETmagocracy.0030.c
 		add_gold = 40
 		add_prestige = -25
 	}
@@ -2555,17 +2555,17 @@ VIETrepublic.0030 = {
 
 
 # Patrician talks about trade regulations
-VIETrepublic.0031 = {
+VIETmagocracy.0031 = {
 	type = character_event
-	title = VIETrepublic.0031.t
-	desc = VIETrepublic.0031.desc
+	title = VIETmagocracy.0031.t
+	desc = VIETmagocracy.0031.desc
 	theme = realm
 	override_background = { event_background = council_chamber }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -2600,7 +2600,7 @@ VIETrepublic.0031 = {
 	}
 	
 	option = { # Thanks
-		name = VIETrepublic.0031.a
+		name = VIETmagocracy.0031.a
 		add_stewardship_lifestyle_xp = medium_lifestyle_xp
 		add_character_modifier = {
 			modifier = VIET_RP_talked_about_trade_regulations
@@ -2611,17 +2611,17 @@ VIETrepublic.0031 = {
 
 
 # Refuse to do a business deal with an unimpressive businessperson
-VIETrepublic.0032 = {
+VIETmagocracy.0032 = {
 	type = character_event
-	title = VIETrepublic.0032.t
-	desc = VIETrepublic.0032.desc
+	title = VIETmagocracy.0032.t
+	desc = VIETmagocracy.0032.desc
 	theme = stewardship
 	override_background = { event_background = council_chamber }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -2659,7 +2659,7 @@ VIETrepublic.0032 = {
 	}
 	
 	option = { # No
-		name = VIETrepublic.0032.a
+		name = VIETmagocracy.0032.a
 		add_prestige = 20
 		stress_impact = {
 			base = minor_stress_impact_gain
@@ -2672,17 +2672,17 @@ VIETrepublic.0032 = {
 
 
 # Thieves attempt to break into your house but are caught
-VIETrepublic.0033 = {
+VIETmagocracy.0033 = {
 	type = character_event
-	title = VIETrepublic.0033.t
-	desc = VIETrepublic.0033.desc
+	title = VIETmagocracy.0033.t
+	desc = VIETmagocracy.0033.desc
 	theme = corruption
 	override_background = { event_background = garden }
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -2724,7 +2724,7 @@ VIETrepublic.0033 = {
 	}
 	
 	option = { # Nothing
-		name = VIETrepublic.0033.a
+		name = VIETmagocracy.0033.a
 		stress_impact = {
 			arrogant = miniscule_stress_impact_gain
 			ambitious = miniscule_stress_impact_gain
@@ -2733,7 +2733,7 @@ VIETrepublic.0033 = {
 		}
 	}	
 	option = { # more defenses
-		name = VIETrepublic.0033.b
+		name = VIETmagocracy.0033.b
 		trigger = {
 			OR = {
 				gold >= 50
@@ -2750,16 +2750,16 @@ VIETrepublic.0033 = {
 
 
 # A young businessman asks you for business advice
-VIETrepublic.0034 = {
+VIETmagocracy.0034 = {
 	type = character_event
-	title = VIETrepublic.0034.t
-	desc = VIETrepublic.0034.desc
+	title = VIETmagocracy.0034.t
+	desc = VIETmagocracy.0034.desc
 	theme = party
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -2794,7 +2794,7 @@ VIETrepublic.0034 = {
 	}
 	
 	option = { # Goodbye
-		name = VIETrepublic.0034.a
+		name = VIETmagocracy.0034.a
 		add_dread = 10
 		stress_impact = {
 			gregarious = miniscule_stress_impact_gain
@@ -2803,7 +2803,7 @@ VIETrepublic.0034 = {
 		}
 	}	
 	option = { # Hard work!
-		name = VIETrepublic.0034.b
+		name = VIETmagocracy.0034.b
 		add_piety = 20
 		stress_impact = {
 			lazy = miniscule_stress_impact_gain
@@ -2812,7 +2812,7 @@ VIETrepublic.0034 = {
 		}
 	}	
 	option = { # who you know
-		name = VIETrepublic.0034.c
+		name = VIETmagocracy.0034.c
 		add_prestige = 20
 		stress_impact = {
 			callous = miniscule_stress_impact_gain
@@ -2824,16 +2824,16 @@ VIETrepublic.0034 = {
 
 
 # Realize you made a math error on some previous documents
-VIETrepublic.0035 = {
+VIETmagocracy.0035 = {
 	type = character_event
-	title = VIETrepublic.0035.t
-	desc = VIETrepublic.0035.desc
+	title = VIETmagocracy.0035.t
+	desc = VIETmagocracy.0035.desc
 	theme = learning
 
 	trigger = {
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -2871,7 +2871,7 @@ VIETrepublic.0035 = {
 	}
 	
 	option = { # ok
-		name = VIETrepublic.0035.a
+		name = VIETmagocracy.0035.a
 		remove_short_term_gold = 20
 		add_character_modifier = {
 			modifier = VIET_RP_checks_math_often
@@ -2886,10 +2886,10 @@ VIETrepublic.0035 = {
 
 
 # Helping a courtier do a financial calculation on an abacus
-VIETrepublic.0036 = {
+VIETmagocracy.0036 = {
 	type = character_event
-	title = VIETrepublic.0036.t
-	desc = VIETrepublic.0036.desc
+	title = VIETmagocracy.0036.t
+	desc = VIETmagocracy.0036.desc
 	theme = learning
 	
 	left_portrait = root
@@ -2904,8 +2904,8 @@ VIETrepublic.0036 = {
 			NOT = { is_close_family_of = root }
 		}
 		house = {
-			exists = var:titular_republic
-			has_variable = titular_republic
+			exists = var:titular_magocracy
+			has_variable = titular_magocracy
 		}
 	}
 	
@@ -2956,7 +2956,7 @@ VIETrepublic.0036 = {
 	}
 	
 	option = { # ok
-		name = VIETrepublic.0036.a
+		name = VIETmagocracy.0036.a
 		scope:RP_calculator = {
 			add_opinion = {
 				target = root

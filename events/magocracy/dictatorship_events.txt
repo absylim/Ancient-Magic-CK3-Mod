@@ -45,18 +45,18 @@ dictatorship_events.1002 = { # Dictatorship Ends
 	}
 	theme = diplomacy
 	immediate = {
-		house.var:titular_republic = {
-			save_scope_as = titular_republic
+		house.var:titular_magocracy = {
+			save_scope_as = titular_magocracy
 		}
 	}
 
 	option = { # Surrender power
 		name = dictatorship_events.1002.a
 		custom_tooltip = dictatorship_events.1002.surrender
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			every_councillor = {
 				save_scope_as = council_new
-				house.var:titular_republic = {
+				house.var:titular_magocracy = {
 					add_to_variable_list = {
 						name = valid_council_targets_list
 						target = scope:council_new
@@ -87,7 +87,7 @@ dictatorship_events.1002 = { # Dictatorship Ends
 		spawn_army = {
 			uses_supply = no
 			inheritable = yes
-			name = republic_event_troops
+			name = magocracy_event_troops
 			levies = {
 				value = 400
 			}
@@ -130,7 +130,7 @@ dictatorship_events.1002 = { # Dictatorship Ends
 						scope:couper = { has_hook = scope:quick_test }
 					}
 					exists = house
-					house = { exists = var:titular_republic }
+					house = { exists = var:titular_magocracy }
 				}
 				scope:war = { add_attacker = PREV }
 			}

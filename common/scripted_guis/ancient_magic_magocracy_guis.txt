@@ -54,7 +54,7 @@ personally_has_magocracy_government = {
 	}
 }
 
-has_republic_council_government = {
+has_magocracy_council_government = {
 	scope = character
 	is_shown = {
 		OR = {
@@ -72,7 +72,7 @@ has_republic_council_government = {
 	}
 	is_valid = {
 		custom_description = {
-			text = "holds_the_republic_trigger"
+			text = "holds_the_magocracy_trigger"
 			is_landed = yes
 			holds_valid_magocracy = yes
 		}
@@ -83,7 +83,7 @@ has_republic_council_government = {
 			}
 		}
 		custom_description = {
-			text = "controls_half_the_republic_trigger"
+			text = "controls_half_the_magocracy_trigger"
 			house = {
 				clean_family_votes >= 40
 			}
@@ -103,11 +103,11 @@ has_republic_council_government = {
 			reform_into_council_magocracy = yes
 		}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				every_in_list = {
 					variable = magocracy_families_list
 					house_head = {
-						trigger_event = merchant_republic_events.1009
+						trigger_event = merchant_magocracy_events.1009
 					}
 				}
 			}
@@ -115,16 +115,16 @@ has_republic_council_government = {
 	}
 }
 
-reform_into_feudal_from_republic = {
+reform_into_feudal_from_magocracy = {
 	is_valid = {
 		custom_description = {
-			text = "holds_the_republic_trigger"
+			text = "holds_the_magocracy_trigger"
 			is_landed = yes
 			holds_valid_magocracy = yes
 		}
 		has_realm_law = crown_authority_3
 		custom_description = {
-			text = "controls_half_the_republic_trigger"
+			text = "controls_half_the_magocracy_trigger"
 			house = {
 				clean_family_votes >= 40
 			}
@@ -134,11 +134,11 @@ reform_into_feudal_from_republic = {
 	effect = {
 		reform_into_feudal_effect = {}
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				every_in_list = {
 					variable = magocracy_families_list
 					house_head = {
-						trigger_event = merchant_republic_events.1009
+						trigger_event = merchant_magocracy_events.1009
 					}
 				}
 			}
@@ -645,7 +645,7 @@ government_has_leaders_discretion_title_granting = {
 trigger_elected_rule_election = {
 	effect = {
 		house = {
-			var:titular_republic = {
+			var:titular_magocracy = {
 				trigger_elected_ruler_quick_election = yes
 			}
 		}
@@ -779,7 +779,7 @@ set_up_new_fleet_customize = {
 
 most_likely_to_succeed = {
 	effect = {
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			ordered_in_list = {
 				variable = magocracy_families_list
 				order_by = family_respect
@@ -1384,10 +1384,10 @@ start_smear_campaign = {
 
 same_culture_citizenship_propose = {
 	is_valid = {
-		NOT = { house.var:titular_republic = { is_target_in_variable_list = { name = proposed_laws_list target = flag:same_culture_citizenship } } }
+		NOT = { house.var:titular_magocracy = { is_target_in_variable_list = { name = proposed_laws_list target = flag:same_culture_citizenship } } }
 	}
 	effect = {
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			add_to_variable_list = {
 				name = proposed_laws_list
 				target = flag:same_culture_citizenship
@@ -1398,10 +1398,10 @@ same_culture_citizenship_propose = {
 
 same_culture_group_citizenship_propose = {
 	is_valid = {
-		NOT = { house.var:titular_republic = { is_target_in_variable_list = { name = proposed_laws_list target = flag:same_culture_group_citizenship } } }
+		NOT = { house.var:titular_magocracy = { is_target_in_variable_list = { name = proposed_laws_list target = flag:same_culture_group_citizenship } } }
 	}
 	effect = {
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			add_to_variable_list = {
 				name = proposed_laws_list
 				target = flag:same_culture_group_citizenship
@@ -1412,10 +1412,10 @@ same_culture_group_citizenship_propose = {
 
 all_cultures_citizenship_propose = {
 	is_valid = {
-		NOT = { house.var:titular_republic = { is_target_in_variable_list = { name = proposed_laws_list target = flag:all_cultures_citizenship } } }
+		NOT = { house.var:titular_magocracy = { is_target_in_variable_list = { name = proposed_laws_list target = flag:all_cultures_citizenship } } }
 	}
 	effect = {
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			add_to_variable_list = {
 				name = proposed_laws_list
 				target = flag:all_cultures_citizenship
@@ -1427,10 +1427,10 @@ all_cultures_citizenship_propose = {
 
 same_faith_citizenship_propose = {
 	is_valid = {
-		NOT = { house.var:titular_republic = { is_target_in_variable_list = { name = proposed_laws_list target = flag:same_faith_citizenship } } }
+		NOT = { house.var:titular_magocracy = { is_target_in_variable_list = { name = proposed_laws_list target = flag:same_faith_citizenship } } }
 	}
 	effect = {
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			add_to_variable_list = {
 				name = proposed_laws_list
 				target = flag:same_faith_citizenship
@@ -1441,10 +1441,10 @@ same_faith_citizenship_propose = {
 
 same_religion_group_citizenship_propose = {
 	is_valid = {
-		NOT = { house.var:titular_republic = { is_target_in_variable_list = { name = proposed_laws_list target = flag:same_religion_group_citizenship } } }
+		NOT = { house.var:titular_magocracy = { is_target_in_variable_list = { name = proposed_laws_list target = flag:same_religion_group_citizenship } } }
 	}
 	effect = {
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			add_to_variable_list = {
 				name = proposed_laws_list
 				target = flag:same_religion_group_citizenship
@@ -1455,10 +1455,10 @@ same_religion_group_citizenship_propose = {
 
 all_religions_citizenship_propose = {
 	is_valid = {
-		NOT = { house.var:titular_republic = { is_target_in_variable_list = { name = proposed_laws_list target = flag:all_religions_citizenship } } }
+		NOT = { house.var:titular_magocracy = { is_target_in_variable_list = { name = proposed_laws_list target = flag:all_religions_citizenship } } }
 	}
 	effect = {
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			add_to_variable_list = {
 				name = proposed_laws_list
 				target = flag:all_religions_citizenship
@@ -1469,10 +1469,10 @@ all_religions_citizenship_propose = {
 
 de_facto_citizenship_propose = {
 	is_valid = {
-		NOT = { house.var:titular_republic = { is_target_in_variable_list = { name = proposed_laws_list target = flag:de_facto_citizenship } } }
+		NOT = { house.var:titular_magocracy = { is_target_in_variable_list = { name = proposed_laws_list target = flag:de_facto_citizenship } } }
 	}
 	effect = {
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			add_to_variable_list = {
 				name = proposed_laws_list
 				target = flag:de_facto_citizenship
@@ -1483,10 +1483,10 @@ de_facto_citizenship_propose = {
 
 de_jure_citizenship_propose = {
 	is_valid = {
-		NOT = { house.var:titular_republic = { is_target_in_variable_list = { name = proposed_laws_list target = flag:de_jure_citizenship } } }
+		NOT = { house.var:titular_magocracy = { is_target_in_variable_list = { name = proposed_laws_list target = flag:de_jure_citizenship } } }
 	}
 	effect = {
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			add_to_variable_list = {
 				name = proposed_laws_list
 				target = flag:de_jure_citizenship

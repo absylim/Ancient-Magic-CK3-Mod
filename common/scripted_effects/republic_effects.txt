@@ -2,12 +2,12 @@
 	every_in_list = {
 		variable = magocracy_families_list
 		house_head = {
-			trigger_event = republic_vote_events.1013
+			trigger_event = magocracy_vote_events.1013
 		}
 	}
 	holder = {
 		trigger_event = {
-			id = republic_vote_events.1014
+			id = magocracy_vote_events.1014
 			days = 2
 		}
 	}
@@ -100,7 +100,7 @@ main_magocracy_succession = {
 				limit = {
 					scope:old_holder = {
 						exists = var:play_on
-						exists = global_var:play_republic_leaders
+						exists = global_var:play_magocracy_leaders
 					}
 				}
 				set_player_character = scope:election_winner
@@ -145,7 +145,7 @@ main_magocracy_succession = {
 		limit = { NOT = { exists = var:current_death } }
 		scope:election_winner = {
 			trigger_event = {
-				id = merchant_republic_events.1006
+				id = merchant_magocracy_events.1006
 				days = 1
 			}
 		}
@@ -155,7 +155,7 @@ main_magocracy_succession = {
 		limit = { NOT = { any_house_member = { this = scope:election_winner } } any_house_member = { this = scope:old_holder } }
 		house_head = {
 			trigger_event = {
-				id = merchant_republic_events.1003
+				id = merchant_magocracy_events.1003
 				days = 1
 			}
 		}
@@ -165,7 +165,7 @@ main_magocracy_succession = {
 		limit = { any_house_member = { this = scope:election_winner } NOT = { house_head = scope:election_winner } NOT = { any_house_member = { this = scope:old_holder } } }
 		house_head = {
 			trigger_event = {
-				id = merchant_republic_events.1004
+				id = merchant_magocracy_events.1004
 				days = 1
 			}
 		}
@@ -175,7 +175,7 @@ main_magocracy_succession = {
 		limit = { NOT = { any_house_member = { this = scope:election_winner } any_house_member = { this = scope:old_holder } } }
 		house_head = {
 			trigger_event = {
-				id = merchant_republic_events.1005
+				id = merchant_magocracy_events.1005
 				days = 1
 			}
 		}
@@ -185,7 +185,7 @@ main_magocracy_succession = {
 		limit = { any_house_member = { this = scope:election_winner } NOT = { house_head = scope:election_winner } any_house_member = { this = scope:old_holder } }
 		house_head = {
 			trigger_event = {
-				id = merchant_republic_events.1007
+				id = merchant_magocracy_events.1007
 				days = 1
 			}
 		}
@@ -241,7 +241,7 @@ death_magocracy_succession = {
 				limit = {
 					scope:old_holder = {
 						exists = var:play_on
-						exists = global_var:play_republic_leaders
+						exists = global_var:play_magocracy_leaders
 					}
 				}
 				set_player_character = scope:election_winner
@@ -322,7 +322,7 @@ death_magocracy_succession = {
 		limit = { NOT = { exists = var:current_death } }
 		scope:election_winner = {
 			trigger_event = {
-				id = merchant_republic_events.1006
+				id = merchant_magocracy_events.1006
 				days = 1
 			}
 		}
@@ -332,7 +332,7 @@ death_magocracy_succession = {
 		limit = { NOT = { any_house_member = { this = scope:election_winner } } any_house_member = { this = scope:old_holder } }
 		house_head = {
 			trigger_event = {
-				id = merchant_republic_events.1003
+				id = merchant_magocracy_events.1003
 				days = 1
 			}
 		}
@@ -342,7 +342,7 @@ death_magocracy_succession = {
 		limit = { any_house_member = { this = scope:election_winner } NOT = { any_house_member = { this = scope:old_holder } } }
 		house_head = {
 			trigger_event = {
-				id = merchant_republic_events.1004
+				id = merchant_magocracy_events.1004
 				days = 1
 			}
 		}
@@ -352,7 +352,7 @@ death_magocracy_succession = {
 		limit = { NOT = { any_house_member = { this = scope:election_winner } any_house_member = { this = scope:old_holder } } }
 		house_head = {
 			trigger_event = {
-				id = merchant_republic_events.1005
+				id = merchant_magocracy_events.1005
 				days = 1
 			}
 		}
@@ -362,7 +362,7 @@ death_magocracy_succession = {
 		limit = { any_house_member = { this = scope:election_winner } any_house_member = { this = scope:old_holder } }
 		house_head = {
 			trigger_event = {
-				id = merchant_republic_events.1007
+				id = merchant_magocracy_events.1007
 				days = 1
 			}
 		}
@@ -391,7 +391,7 @@ add_family_to_magocracy_families = {
 				name = magocracy_families_list
 				target = scope:house_to_add
 			}
-			save_scope_as = title_republic
+			save_scope_as = title_magocracy
 		}
 	}
 	else_if = {
@@ -401,7 +401,7 @@ add_family_to_magocracy_families = {
 				name = magocracy_families_list
 				target = scope:house_to_add
 			}
-			save_scope_as = title_republic
+			save_scope_as = title_magocracy
 		}
 	}
 	else = {
@@ -410,16 +410,16 @@ add_family_to_magocracy_families = {
 				name = magocracy_families_list
 				target = scope:house_to_add
 			}
-			save_scope_as = title_republic
+			save_scope_as = title_magocracy
 		}
 	}
 	house = {
 		set_variable = {
-			name = titular_republic
-			value = scope:title_republic
+			name = titular_magocracy
+			value = scope:title_magocracy
 		}
 		if = {
-			limit = { exists = var:titular_republic.var:senate_government_republic }
+			limit = { exists = var:titular_magocracy.var:senate_government_magocracy }
 			set_variable = {
 				name = house_senators
 				value = 0
@@ -451,9 +451,9 @@ set_up_council_magocracy = {
 	add_realm_law = crown_authority_2
 	primary_title = {
 		set_variable = council_government_magocracy
-		remove_variable = elected_ruler_republic
-		remove_variable = senate_government_republic
-		remove_variable = bicameral_government_republic
+		remove_variable = elected_ruler_magocracy
+		remove_variable = senate_government_magocracy
+		remove_variable = bicameral_government_magocracy
 		set_variable = council_approval_war_declaration
 		set_variable = leaders_discretion_council_appointment
 		set_variable = council_approval_imprisonment_rights
@@ -489,27 +489,27 @@ set_up_council_magocracy = {
 	}
 }
 
-set_up_elected_ruler_republic = {
+set_up_elected_ruler_magocracy = {
 	remove_all_current_laws = yes
 	add_realm_law = crown_authority_2
 	add_realm_law = magocracy_succession_law
 	primary_title = {
-		remove_variable = senate_government_republic
+		remove_variable = senate_government_magocracy
 		remove_variable = council_government_magocracy
-		remove_variable = bicameral_government_republic
-		set_variable = elected_ruler_republic
+		remove_variable = bicameral_government_magocracy
+		set_variable = elected_ruler_magocracy
 		set_variable = life_title_term
 	}
 }
 
-set_up_bicameral_republic = {
+set_up_bicameral_magocracy = {
 	remove_all_current_laws = yes
 	add_realm_law = magocracy_succession_law
 	primary_title = {
 		clear_variable_list = lower_house_counties
-		set_variable = bicameral_government_republic
-		remove_variable = elected_ruler_republic
-		remove_variable = senate_government_republic
+		set_variable = bicameral_government_magocracy
+		remove_variable = elected_ruler_magocracy
+		remove_variable = senate_government_magocracy
 		remove_variable = council_government_magocracy
 		set_variable = leaders_discretion_war_declaration
 		set_variable = both_houses_vote_citizenship
@@ -570,8 +570,8 @@ set_up_bicameral_republic = {
 	add_realm_law = crown_authority_2
 }
 
-reform_into_elected_ruler_republic = {
-	set_up_elected_ruler_republic = yes
+reform_into_elected_ruler_magocracy = {
+	set_up_elected_ruler_magocracy = yes
 	primary_title = {
 		set_variable = {
 			name = reformed_recently
@@ -580,8 +580,8 @@ reform_into_elected_ruler_republic = {
 	}
 }
 
-reform_into_senate_republic = {
-	set_up_senate_republic = yes
+reform_into_senate_magocracy = {
+	set_up_senate_magocracy = yes
 	primary_title = {
 		set_variable = {
 			name = reformed_recently
@@ -600,8 +600,8 @@ reform_into_council_magocracy = {
 	}
 }
 
-reform_into_bicameral_republic = {
-	set_up_bicameral_republic = yes
+reform_into_bicameral_magocracy = {
+	set_up_bicameral_magocracy = yes
 	primary_title = {
 		set_variable = {
 			name = reformed_recently
@@ -796,12 +796,12 @@ trigger_election_cycle = {
 		house_head = {
 			if = {
 				limit = { is_ai = yes }
-				trigger_event = republic_vote_events.1001
+				trigger_event = magocracy_vote_events.1001
 			}
 			if = {
 				limit = { is_ai = no }
 				trigger_event = {
-					id = republic_vote_events.1001
+					id = magocracy_vote_events.1001
 					days = 1
 				}
 			}
@@ -809,7 +809,7 @@ trigger_election_cycle = {
 	}
 	holder = {
 		trigger_event = {
-			id = republic_vote_events.1002
+			id = magocracy_vote_events.1002
 			days = 2
 		}
 	}
@@ -910,12 +910,12 @@ trigger_council_election_cycle = {
 		house_head = {
 			if = {
 				limit = { is_ai = yes }
-				trigger_event = republic_vote_events.1005
+				trigger_event = magocracy_vote_events.1005
 			}
 			if = {
 				limit = { is_ai = no }
 				trigger_event = {
-					id = republic_vote_events.1005
+					id = magocracy_vote_events.1005
 					days = 1
 				}
 			}
@@ -925,12 +925,12 @@ trigger_council_election_cycle = {
 		house_head = {
 			if = {
 				limit = { is_ai = yes }
-				trigger_event = republic_vote_events.1005
+				trigger_event = magocracy_vote_events.1005
 			}
 			if = {
 				limit = { is_ai = no }
 				trigger_event = {
-					id = republic_vote_events.1005
+					id = magocracy_vote_events.1005
 					days = 1
 				}
 			}
@@ -940,12 +940,12 @@ trigger_council_election_cycle = {
 		house_head = {
 			if = {
 				limit = { is_ai = yes }
-				trigger_event = republic_vote_events.1005
+				trigger_event = magocracy_vote_events.1005
 			}
 			if = {
 				limit = { is_ai = no }
 				trigger_event = {
-					id = republic_vote_events.1005
+					id = magocracy_vote_events.1005
 					days = 1
 				}
 			}
@@ -955,12 +955,12 @@ trigger_council_election_cycle = {
 		house_head = {
 			if = {
 				limit = { is_ai = yes }
-				trigger_event = republic_vote_events.1005
+				trigger_event = magocracy_vote_events.1005
 			}
 			if = {
 				limit = { is_ai = no }
 				trigger_event = {
-					id = republic_vote_events.1005
+					id = magocracy_vote_events.1005
 					days = 1
 				}
 			}
@@ -970,12 +970,12 @@ trigger_council_election_cycle = {
 		house_head = {
 			if = {
 				limit = { is_ai = yes }
-				trigger_event = republic_vote_events.1005
+				trigger_event = magocracy_vote_events.1005
 			}
 			if = {
 				limit = { is_ai = no }
 				trigger_event = {
-					id = republic_vote_events.1005
+					id = magocracy_vote_events.1005
 					days = 1
 				}
 			}
@@ -983,7 +983,7 @@ trigger_council_election_cycle = {
 	}
 	holder = {
 		trigger_event = {
-			id = republic_vote_events.1006
+			id = magocracy_vote_events.1006
 			days = 2
 		}
 	}
@@ -1234,20 +1234,20 @@ initialize_global_election_terms = {
 magocracy_council_succesion = {
 	if = {
 		limit = { holder = { magocracy_has_council_form = yes } }
-		remove_variable = republic_councillor_1
-		remove_variable = republic_councillor_2
-		remove_variable = republic_councillor_3
-		remove_variable = republic_councillor_4
-		remove_variable = republic_councillor_5
+		remove_variable = magocracy_councillor_1
+		remove_variable = magocracy_councillor_2
+		remove_variable = magocracy_councillor_3
+		remove_variable = magocracy_councillor_4
+		remove_variable = magocracy_councillor_5
 		ordered_in_list = {
 			variable = magocracy_families_list
 			order_by = family_respect
 			position = 0
-			set_variable = republic_councillor
+			set_variable = magocracy_councillor
 			save_scope_as = number_1_house
 			house_head = {
 				trigger_event = {
-					id = merchant_republic_events.1008
+					id = merchant_magocracy_events.1008
 					days = 1
 				}
 			}
@@ -1256,11 +1256,11 @@ magocracy_council_succesion = {
 			variable = magocracy_families_list
 			order_by = family_respect
 			position = 1
-			set_variable = republic_councillor
+			set_variable = magocracy_councillor
 			save_scope_as = number_2_house
 			house_head = {
 				trigger_event = {
-					id = merchant_republic_events.1008
+					id = merchant_magocracy_events.1008
 					days = 1
 				}
 			}
@@ -1269,11 +1269,11 @@ magocracy_council_succesion = {
 			variable = magocracy_families_list
 			order_by = family_respect
 			position = 2
-			set_variable = republic_councillor
+			set_variable = magocracy_councillor
 			save_scope_as = number_3_house
 			house_head = {
 				trigger_event = {
-					id = merchant_republic_events.1008
+					id = merchant_magocracy_events.1008
 					days = 1
 				}
 			}
@@ -1282,11 +1282,11 @@ magocracy_council_succesion = {
 			variable = magocracy_families_list
 			order_by = family_respect
 			position = 3
-			set_variable = republic_councillor
+			set_variable = magocracy_councillor
 			save_scope_as = number_4_house
 			house_head = {
 				trigger_event = {
-					id = merchant_republic_events.1008
+					id = merchant_magocracy_events.1008
 					days = 1
 				}
 			}
@@ -1295,11 +1295,11 @@ magocracy_council_succesion = {
 			variable = magocracy_families_list
 			order_by = family_respect
 			position = 4
-			set_variable = republic_councillor
+			set_variable = magocracy_councillor
 			save_scope_as = number_5_house
 			house_head = {
 				trigger_event = {
-					id = merchant_republic_events.1008
+					id = merchant_magocracy_events.1008
 					days = 1
 				}
 			}
@@ -1362,12 +1362,12 @@ trigger_elected_ruler_quick_election = {
 		house_head = {
 			if = {
 				limit = { is_ai = yes }
-				trigger_event = republic_vote_events.1009
+				trigger_event = magocracy_vote_events.1009
 			}
 			if = {
 				limit = { is_ai = no }
 				trigger_event = {
-					id = republic_vote_events.1009
+					id = magocracy_vote_events.1009
 					days = 1
 				}
 			}
@@ -1375,75 +1375,75 @@ trigger_elected_ruler_quick_election = {
 	}
 	holder = {
 		trigger_event = {
-			id = republic_vote_events.1010
+			id = magocracy_vote_events.1010
 			days = 2
 		}
 	}
 }
 
 create_characters_for_magocracy = {
-	save_scope_as = republic_in_need
+	save_scope_as = magocracy_in_need
 	if = {
 		limit = { magocracy_families_size_need = 4 }
 		create_character = {
-			location = scope:republic_in_need.holder.capital_province
-			culture = scope:republic_in_need.holder.culture
-			faith = scope:republic_in_need.holder.faith
+			location = scope:magocracy_in_need.holder.capital_province
+			culture = scope:magocracy_in_need.holder.culture
+			faith = scope:magocracy_in_need.holder.faith
 			gender_female_chance = 5
 			age = { 30 60 }
 			template = magocracy_councilor_template
 			save_scope_as = new_character
 		}
 		scope:new_character = {
-			set_employer = scope:republic_in_need.holder
+			set_employer = scope:magocracy_in_need.holder
 			add_family_to_magocracy_families = yes
 		}
 	}
 	if = {
 		limit = { magocracy_families_size_need = 3 }
 		create_character = {
-			location = scope:republic_in_need.holder.capital_province
-			culture = scope:republic_in_need.holder.culture
-			faith = scope:republic_in_need.holder.faith
+			location = scope:magocracy_in_need.holder.capital_province
+			culture = scope:magocracy_in_need.holder.culture
+			faith = scope:magocracy_in_need.holder.faith
 			gender_female_chance = 5
 			age = { 30 60 }
 			template = magocracy_councilor_template
 			save_scope_as = new_character
 		}
 		scope:new_character = {
-			set_employer = scope:republic_in_need.holder
+			set_employer = scope:magocracy_in_need.holder
 			add_family_to_magocracy_families = yes
 		}
 	}
 	if = {
 		limit = { magocracy_families_size_need = 2 }
 		create_character = {
-			location = scope:republic_in_need.holder.capital_province
-			culture = scope:republic_in_need.holder.culture
-			faith = scope:republic_in_need.holder.faith
+			location = scope:magocracy_in_need.holder.capital_province
+			culture = scope:magocracy_in_need.holder.culture
+			faith = scope:magocracy_in_need.holder.faith
 			gender_female_chance = 5
 			age = { 30 60 }
 			template = magocracy_councilor_template
 			save_scope_as = new_character
 		}
 		scope:new_character = {
-			set_employer = scope:republic_in_need.holder
+			set_employer = scope:magocracy_in_need.holder
 			add_family_to_magocracy_families = yes
 		}
 	}
 	if = {
 		limit = { magocracy_families_size_need = 1 }
 		create_character = {
-			location = scope:republic_in_need.holder.capital_province
-			culture = scope:republic_in_need.holder.culture
-			faith = scope:republic_in_need.holder.faith
+			location = scope:magocracy_in_need.holder.capital_province
+			culture = scope:magocracy_in_need.holder.culture
+			faith = scope:magocracy_in_need.holder.faith
 			gender_female_chance = 5
 			age = { 30 60 }
 			template = magocracy_councilor_template
 			save_scope_as = new_character
 		}
 		scope:new_character = {
-			set_employer = scope:republic_in_need.holder
+			set_employer = scope:magocracy_in_need.holder
 			add_family_to_magocracy_families = yes
 		}
 	}
@@ -1568,16 +1568,16 @@ specific_post_appeasement = {
 	}
 }
 
-remove_family_from_republic = {
+remove_family_from_magocracy = {
 	house = {
 		save_scope_as = house_to_remove
-		var:titular_republic = {
+		var:titular_magocracy = {
 			remove_list_variable = {
 				name = magocracy_families_list
 				target = scope:house_to_remove
 			}
 		}
-		remove_variable = titular_republic
+		remove_variable = titular_magocracy
 		remove_variable = house_senators
 		clear_variable_list = election_candidates
 		remove_variable = family_prestige
@@ -1589,9 +1589,9 @@ remove_family_from_republic = {
 
 remove_all_current_laws = {
 	primary_title = {
-		remove_variable = senate_government_republic
+		remove_variable = senate_government_magocracy
 		remove_variable = council_government_magocracy
-		remove_variable = elected_ruler_republic
+		remove_variable = elected_ruler_magocracy
 		remove_variable = nobility_appeasement
 		remove_variable = clergy_appeasement
 		remove_variable = popular_appeasement
@@ -1675,7 +1675,7 @@ launch_coup_effect = { # Not used but shown
 	spawn_army = {
 		uses_supply = no
 		inheritable = no
-		name = republic_event_troops
+		name = magocracy_event_troops
 		levies = {
 			value = 1000
 		}
@@ -1720,7 +1720,7 @@ reform_into_feudal_effect = { # Not used but shown
 	spawn_army = {
 		uses_supply = no
 		inheritable = no
-		name = republic_event_troops
+		name = magocracy_event_troops
 		levies = {
 			value = 1000
 		}
@@ -1740,7 +1740,7 @@ effect_create_personal_army = {
 	spawn_army = {
 		uses_supply = no
 		inheritable = yes
-		name = republic_event_troops
+		name = magocracy_event_troops
 		levies = {
 			value = 1000
 		}
@@ -1752,7 +1752,7 @@ effect_create_house_army = {
 	spawn_army = {
 		uses_supply = no
 		inheritable = yes
-		name = republic_event_troops
+		name = magocracy_event_troops
 		levies = {
 			value = 700
 		}
@@ -1764,8 +1764,8 @@ effect_create_house_army = {
 	}
 }
 
-change_into_republic_on_start = {
-	trigger_event = republic_decision_events.1003
+change_into_magocracy_on_start = {
+	trigger_event = magocracy_decision_events.1003
 	change_government = magocracy_government
 	add_realm_law = magocracy_succession_law
 	add_family_to_magocracy_families = yes
@@ -1776,43 +1776,43 @@ change_into_republic_on_start = {
 }
 
 generate_counties_for_lower_house = {
-	save_scope_as = titular_republic
+	save_scope_as = titular_magocracy
 	every_in_de_facto_hierarchy = {
 		limit = {
 			tier = tier_county
 			OR = {
 				AND = {
-					scope:titular_republic = { has_variable = same_culture_citizenship }
-					culture = scope:titular_republic.title_capital_county.culture
+					scope:titular_magocracy = { has_variable = same_culture_citizenship }
+					culture = scope:titular_magocracy.title_capital_county.culture
 				}
 				AND = {
-					scope:titular_republic = { has_variable = same_culture_group_citizenship }
-					culture.culture_group = scope:titular_republic.title_capital_county.culture.culture_group
+					scope:titular_magocracy = { has_variable = same_culture_group_citizenship }
+					culture.culture_group = scope:titular_magocracy.title_capital_county.culture.culture_group
 				}
-				scope:titular_republic = { has_variable = all_cultures_citizenship }
+				scope:titular_magocracy = { has_variable = all_cultures_citizenship }
 			}
 			OR = {
 				AND = {
-					scope:titular_republic = { has_variable = same_faith_citizenship }
-					faith = scope:titular_republic.title_capital_county.faith
+					scope:titular_magocracy = { has_variable = same_faith_citizenship }
+					faith = scope:titular_magocracy.title_capital_county.faith
 				}
 				AND = {
-					scope:titular_republic = { has_variable = same_religion_group_citizenship }
-					faith.religion = scope:titular_republic.title_capital_county.faith.religion
+					scope:titular_magocracy = { has_variable = same_religion_group_citizenship }
+					faith.religion = scope:titular_magocracy.title_capital_county.faith.religion
 				}
-				scope:titular_republic = { has_variable = all_religions_citizenship }
+				scope:titular_magocracy = { has_variable = all_religions_citizenship }
 			}
 			OR = {
 				AND = {
-					scope:titular_republic = { has_variable = de_jure_citizenship }
+					scope:titular_magocracy = { has_variable = de_jure_citizenship }
 					save_temporary_scope_as = test_dejure
-					scope:titular_republic = { is_de_jure_liege_or_above_target = scope:test_dejure }
+					scope:titular_magocracy = { is_de_jure_liege_or_above_target = scope:test_dejure }
 				}
-				scope:titular_republic = { has_variable = de_facto_citizenship }
+				scope:titular_magocracy = { has_variable = de_facto_citizenship }
 			}
 		}
 		save_scope_as = title_for_lower_house
-		scope:titular_republic = {
+		scope:titular_magocracy = {
 			add_to_variable_list = {
 				name = lower_house_counties
 				target = scope:title_for_lower_house
@@ -2001,7 +2001,7 @@ bicameral_laws_voting = {
 }
 
 vote_on_law_bicameral = {
-	save_scope_as = titular_republic
+	save_scope_as = titular_magocracy
 	every_in_list = {
 		variable = magocracy_families_list
 		limit = { house_head = { is_ai = yes } }
@@ -2038,11 +2038,11 @@ vote_on_law_bicameral = {
 }
 
 alternate_vote_on_law_bicameral = {
-	save_scope_as = titular_republic
+	save_scope_as = titular_magocracy
 	if = {
 		limit = { scope:law_proposed = flag:proposed_war }
 		if = {
-			limit = { scope:titular_republic = { has_variable = both_houses_vote_war_declaration } }
+			limit = { scope:titular_magocracy = { has_variable = both_houses_vote_war_declaration } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2089,7 +2089,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = higher_house_vote_war_declaration } }
+			limit = { scope:titular_magocracy = { has_variable = higher_house_vote_war_declaration } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2121,7 +2121,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = lower_house_vote_war_declaration } }
+			limit = { scope:titular_magocracy = { has_variable = lower_house_vote_war_declaration } }
 			every_in_list = {
 				variable = lower_house_counties
 				random_list = {
@@ -2148,7 +2148,7 @@ alternate_vote_on_law_bicameral = {
 	if = {
 		limit = { OR = { scope:law_proposed = flag:proposed_grants } }
 		if = {
-			limit = { scope:titular_republic = { has_variable = both_houses_vote_title_powers } }
+			limit = { scope:titular_magocracy = { has_variable = both_houses_vote_title_powers } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2195,7 +2195,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = higher_house_vote_title_powers } }
+			limit = { scope:titular_magocracy = { has_variable = higher_house_vote_title_powers } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2227,7 +2227,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = lower_house_vote_title_powers } }
+			limit = { scope:titular_magocracy = { has_variable = lower_house_vote_title_powers } }
 			every_in_list = {
 				variable = lower_house_counties
 				random_list = {
@@ -2254,7 +2254,7 @@ alternate_vote_on_law_bicameral = {
 	if = {
 		limit = { OR = { scope:law_proposed = flag:proposed_revocation } }
 		if = {
-			limit = { scope:titular_republic = { has_variable = both_houses_vote_title_powers } }
+			limit = { scope:titular_magocracy = { has_variable = both_houses_vote_title_powers } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2301,7 +2301,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = higher_house_vote_title_powers } }
+			limit = { scope:titular_magocracy = { has_variable = higher_house_vote_title_powers } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2333,7 +2333,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = lower_house_vote_title_powers } }
+			limit = { scope:titular_magocracy = { has_variable = lower_house_vote_title_powers } }
 			every_in_list = {
 				variable = lower_house_counties
 				random_list = {
@@ -2361,7 +2361,7 @@ alternate_vote_on_law_bicameral = {
 	if = {
 		limit = { OR = { scope:law_proposed = flag:same_culture_citizenship } }
 		if = {
-			limit = { scope:titular_republic = { has_variable = both_houses_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = both_houses_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2408,7 +2408,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = higher_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = higher_house_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2440,7 +2440,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = lower_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = lower_house_vote_citizenship } }
 			every_in_list = {
 				variable = lower_house_counties
 				random_list = {
@@ -2467,7 +2467,7 @@ alternate_vote_on_law_bicameral = {
 	if = {
 		limit = { OR = { scope:law_proposed = flag:same_culture_group_citizenship } }
 		if = {
-			limit = { scope:titular_republic = { has_variable = both_houses_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = both_houses_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2514,7 +2514,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = higher_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = higher_house_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2546,7 +2546,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = lower_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = lower_house_vote_citizenship } }
 			every_in_list = {
 				variable = lower_house_counties
 				random_list = {
@@ -2573,7 +2573,7 @@ alternate_vote_on_law_bicameral = {
 	if = {
 		limit = { OR = { scope:law_proposed = flag:all_cultures_citizenship } }
 		if = {
-			limit = { scope:titular_republic = { has_variable = both_houses_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = both_houses_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2620,7 +2620,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = higher_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = higher_house_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2652,7 +2652,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = lower_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = lower_house_vote_citizenship } }
 			every_in_list = {
 				variable = lower_house_counties
 				random_list = {
@@ -2680,7 +2680,7 @@ alternate_vote_on_law_bicameral = {
 	if = {
 		limit = { OR = { scope:law_proposed = flag:same_faith_citizenship } }
 		if = {
-			limit = { scope:titular_republic = { has_variable = both_houses_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = both_houses_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2727,7 +2727,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = higher_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = higher_house_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2759,7 +2759,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = lower_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = lower_house_vote_citizenship } }
 			every_in_list = {
 				variable = lower_house_counties
 				random_list = {
@@ -2786,7 +2786,7 @@ alternate_vote_on_law_bicameral = {
 	if = {
 		limit = { OR = { scope:law_proposed = flag:same_religion_group_citizenship } }
 		if = {
-			limit = { scope:titular_republic = { has_variable = both_houses_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = both_houses_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2833,7 +2833,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = higher_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = higher_house_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2865,7 +2865,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = lower_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = lower_house_vote_citizenship } }
 			every_in_list = {
 				variable = lower_house_counties
 				random_list = {
@@ -2892,7 +2892,7 @@ alternate_vote_on_law_bicameral = {
 	if = {
 		limit = { OR = { scope:law_proposed = flag:all_religions_citizenship } }
 		if = {
-			limit = { scope:titular_republic = { has_variable = both_houses_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = both_houses_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2939,7 +2939,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = higher_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = higher_house_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -2971,7 +2971,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = lower_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = lower_house_vote_citizenship } }
 			every_in_list = {
 				variable = lower_house_counties
 				random_list = {
@@ -2999,7 +2999,7 @@ alternate_vote_on_law_bicameral = {
 	if = {
 		limit = { OR = { scope:law_proposed = flag:de_facto_citizenship } }
 		if = {
-			limit = { scope:titular_republic = { has_variable = both_houses_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = both_houses_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -3046,7 +3046,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = higher_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = higher_house_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -3078,7 +3078,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = lower_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = lower_house_vote_citizenship } }
 			every_in_list = {
 				variable = lower_house_counties
 				random_list = {
@@ -3105,7 +3105,7 @@ alternate_vote_on_law_bicameral = {
 	if = {
 		limit = { OR = { scope:law_proposed = flag:de_jure_citizenship } }
 		if = {
-			limit = { scope:titular_republic = { has_variable = both_houses_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = both_houses_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -3152,7 +3152,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = higher_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = higher_house_vote_citizenship } }
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { house_head = { is_ai = yes } }
@@ -3184,7 +3184,7 @@ alternate_vote_on_law_bicameral = {
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { has_variable = lower_house_vote_citizenship } }
+			limit = { scope:titular_magocracy = { has_variable = lower_house_vote_citizenship } }
 			every_in_list = {
 				variable = lower_house_counties
 				random_list = {
@@ -3210,9 +3210,9 @@ alternate_vote_on_law_bicameral = {
 	}
 }
 
-republic_senator_elections = {
+magocracy_senator_elections = {
 	if = {
-		limit = { exists = var:senate_government_republic }
+		limit = { exists = var:senate_government_magocracy }
 		every_in_list = {
 			variable = magocracy_families_list
 			if = {
@@ -3388,7 +3388,7 @@ lose_senator_count = {
 
 dictatorship_proposal_quick_vote = {
 	save_scope_as = proposed_dictator
-	house.var:titular_republic = {
+	house.var:titular_magocracy = {
 		every_in_list = {
 			variable = magocracy_families_list
 			house_head = {
@@ -3407,25 +3407,25 @@ dictatorship_proposal_quick_vote = {
 				}
 				if = {
 					limit = { is_ai = no }
-					trigger_event = republic_vote_events.1015
+					trigger_event = magocracy_vote_events.1015
 				}
 			}
 		}
 	}
 	trigger_event = {
-		id = republic_vote_events.1016
+		id = magocracy_vote_events.1016
 		days = 1
 	}
 }
 
 finish_dictatorship_appointment_effect = {
 	if = { limit = { NOT = { exists = scope:proposed_dictator } } save_scope_as = proposed_dictator }
-	if = { limit = { NOT = { exists = scope:titular_republic } } house.var:titular_republic = { save_scope_as = titular_republic } }
+	if = { limit = { NOT = { exists = scope:titular_magocracy } } house.var:titular_magocracy = { save_scope_as = titular_magocracy } }
 	if = {
 		limit = {
-			house.var:titular_republic.all_votes_yea >= house.var:titular_republic.all_votes_nay
+			house.var:titular_magocracy.all_votes_yea >= house.var:titular_magocracy.all_votes_nay
 		}
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			every_in_list = {
 				variable = magocracy_families_list
 				house_head = {
@@ -3440,7 +3440,7 @@ finish_dictatorship_appointment_effect = {
 			}
 		}
 		if = {
-			limit = { NOT = { scope:proposed_dictator = { has_title = house.var:titular_republic } } }
+			limit = { NOT = { scope:proposed_dictator = { has_title = house.var:titular_magocracy } } }
 			holder = {
 				capital_county = {
 					save_scope_as = old_capital
@@ -3524,7 +3524,7 @@ finish_dictatorship_appointment_effect = {
 					limit = {
 						scope:old_holder = {
 							exists = var:play_on
-							exists = global_var:play_republic_leaders
+							exists = global_var:play_magocracy_leaders
 						}
 					}
 					set_player_character = scope:proposed_dictator
@@ -3565,7 +3565,7 @@ finish_dictatorship_appointment_effect = {
 				}
 			}
 		}
-		scope:titular_republic = {
+		scope:titular_magocracy = {
 			set_variable = current_dictatorship
 		}
 	}

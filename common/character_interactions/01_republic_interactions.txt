@@ -1,8 +1,8 @@
-﻿appoint_republic_electee_interaction = {
+﻿appoint_magocracy_electee_interaction = {
 	category = interaction_category_friendly
 	common_interaction = yes
 	interface_priority = 60
-	desc = appoint_republic_electee_interaction_desc
+	desc = appoint_magocracy_electee_interaction_desc
 	
 	auto_accept = yes
 	ai_will_do = {
@@ -380,7 +380,7 @@ request_imprisonment_interaction = {
 			}
 			is_independent_ruler = yes
 			OR = {
-				republic_has_senate_form = yes
+				magocracy_has_senate_form = yes
 				magocracy_has_council_form = yes
 			}
 			primary_title = {
@@ -466,7 +466,7 @@ request_council_appointment_interaction = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
 			OR = {
-				republic_has_senate_form = yes
+				magocracy_has_senate_form = yes
 				magocracy_has_council_form = yes
 			}
 			is_independent_ruler = yes
@@ -527,7 +527,7 @@ hook_house_to_vote_with_you = {
 	category = interaction_category_friendly
 	common_interaction = yes
 	interface_priority = 60
-	desc = appoint_republic_electee_interaction_desc
+	desc = appoint_magocracy_electee_interaction_desc
 	should_use_extra_icon = {
 		scope:actor = { has_usable_hook = scope:recipient }
 	}
@@ -543,9 +543,9 @@ hook_house_to_vote_with_you = {
 			exists = house
 			has_usable_hook = scope:recipient
 			house = {
-				exists = var:titular_republic
-				var:titular_republic = {
-					save_temporary_scope_as = test_republic_1
+				exists = var:titular_magocracy
+				var:titular_magocracy = {
+					save_temporary_scope_as = test_magocracy_1
 				}
 			}
 			is_house_head = yes
@@ -553,14 +553,14 @@ hook_house_to_vote_with_you = {
 		scope:recipient = {
 			exists = house
 			house = {
-				exists = var:titular_republic
-				var:titular_republic = {
-					save_temporary_scope_as = test_republic_2
+				exists = var:titular_magocracy
+				var:titular_magocracy = {
+					save_temporary_scope_as = test_magocracy_2
 				}
 			}
 			is_house_head = yes
 		}
-		scope:test_republic_1 = scope:test_republic_2
+		scope:test_magocracy_1 = scope:test_magocracy_2
 	}
 	
 	can_send = {

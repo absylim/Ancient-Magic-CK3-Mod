@@ -13,15 +13,15 @@
 GetRepublicOrFeudal = {
 	type = character
 	text = {
-		trigger = { liege = { holds_valid_magocracy = yes } house = { exists = var:titular_republic } has_government = feudal_government }
+		trigger = { liege = { holds_valid_magocracy = yes } house = { exists = var:titular_magocracy } has_government = feudal_government }
 		localization_key = REPUBLIC_AND_FEUDAL
 	}
 	text = {
-		trigger = { OR = { liege = { holds_valid_magocracy = yes } holds_valid_magocracy = yes } house = { exists = var:titular_republic } NOT = { has_government = feudal_government } }
+		trigger = { OR = { liege = { holds_valid_magocracy = yes } holds_valid_magocracy = yes } house = { exists = var:titular_magocracy } NOT = { has_government = feudal_government } }
 		localization_key = REPUBLIC_ONLY
 	}
 	text = {
-		trigger = { NOT = { liege = { holds_valid_magocracy = yes } house = { exists = var:titular_republic } } has_government = feudal_government }
+		trigger = { NOT = { liege = { holds_valid_magocracy = yes } house = { exists = var:titular_magocracy } } has_government = feudal_government }
 		localization_key = FEUDAL_ONLY
 	}
 	text = {
@@ -32,7 +32,7 @@ GetRepublicOrFeudal = {
 GetDogeConsulCouncilHead = {
 	type = character
 	text = {
-		trigger = { republic_has_senate_form = yes }
+		trigger = { magocracy_has_senate_form = yes }
 		localization_key = CONSUL
 	}
 	text = {
@@ -40,11 +40,11 @@ GetDogeConsulCouncilHead = {
 		localization_key = COUNCIL_HEAD
 	}
 	text = {
-		trigger = { republic_has_elected_ruler_form = yes }
+		trigger = { magocracy_has_elected_ruler_form = yes }
 		localization_key = DOGE
 	}
 	text = {
-		trigger = { republic_has_bicameral_form = yes }
+		trigger = { magocracy_has_bicameral_form = yes }
 		localization_key = PRIME_MINISTER
 	}
 }
@@ -52,7 +52,7 @@ GetDogeConsulCouncilHead = {
 GetRepublicGoverningBodyType = {
 	type = character
 	text = {
-		trigger = { republic_has_senate_form = yes }
+		trigger = { magocracy_has_senate_form = yes }
 		localization_key = SENATE_TYPE
 	}
 	text = {
@@ -60,11 +60,11 @@ GetRepublicGoverningBodyType = {
 		localization_key = COUNCIL_TYPE
 	}
 	text = {
-		trigger = { republic_has_elected_ruler_form = yes }
+		trigger = { magocracy_has_elected_ruler_form = yes }
 		localization_key = ELECTED_RULER_TYPE
 	}
 	text = {
-		trigger = { republic_has_bicameral_form = yes }
+		trigger = { magocracy_has_bicameral_form = yes }
 		localization_key = BICAMERAL_TYPE
 	}
 }
@@ -83,23 +83,23 @@ GetRepublicHouseHigh = {
 GetWarAttitude = {
 	type = character
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = very_warlike } }
+		trigger = { house.var:titular_magocracy = { has_variable = very_warlike } }
 		localization_key = VERY_WARLIKE_ATTITUDE
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = warlike } }
+		trigger = { house.var:titular_magocracy = { has_variable = warlike } }
 		localization_key = WARLIKE_ATTITUDE
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = neutral } }
+		trigger = { house.var:titular_magocracy = { has_variable = neutral } }
 		localization_key = NEUTRAL_ATTITUDE
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = peaceful } }
+		trigger = { house.var:titular_magocracy = { has_variable = peaceful } }
 		localization_key = PEACEFUL_ATTITUDE
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = very_peaceful } }
+		trigger = { house.var:titular_magocracy = { has_variable = very_peaceful } }
 		localization_key = VERY_PEACEFUL_ATTITUDE
 	}
 }
@@ -107,15 +107,15 @@ GetWarAttitude = {
 GetReligionAttitude = {
 	type = character
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = religiocentric } }
+		trigger = { house.var:titular_magocracy = { has_variable = religiocentric } }
 		localization_key = RELIGIOCENTRIC_ATTITUDE
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = tolerant } }
+		trigger = { house.var:titular_magocracy = { has_variable = tolerant } }
 		localization_key = TOLERANT_ATTITUDE
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = r_ambivalence } }
+		trigger = { house.var:titular_magocracy = { has_variable = r_ambivalence } }
 		localization_key = RELIGIOUS_AMBIVELENCE_ATTITUDE
 	}
 }
@@ -123,15 +123,15 @@ GetReligionAttitude = {
 GetCultureAttitude = {
 	type = character
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = xenophobic } }
+		trigger = { house.var:titular_magocracy = { has_variable = xenophobic } }
 		localization_key = XENOPHOBIC_ATTITUDE
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = xenophilic } }
+		trigger = { house.var:titular_magocracy = { has_variable = xenophilic } }
 		localization_key = XENOPHILIC_ATTITUDE
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = c_ambivalence } }
+		trigger = { house.var:titular_magocracy = { has_variable = c_ambivalence } }
 		localization_key = CULTURAL_AMBIVELENCE_ATTITUDE
 	}
 }
@@ -139,23 +139,23 @@ GetCultureAttitude = {
 GetWarAttitudeTT = {
 	type = character
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = very_warlike } }
+		trigger = { house.var:titular_magocracy = { has_variable = very_warlike } }
 		localization_key = VERY_WARLIKE_ATTITUDE_TT
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = warlike } }
+		trigger = { house.var:titular_magocracy = { has_variable = warlike } }
 		localization_key = WARLIKE_ATTITUDE_TT
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = neutral } }
+		trigger = { house.var:titular_magocracy = { has_variable = neutral } }
 		localization_key = NEUTRAL_ATTITUDE_TT
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = peaceful } }
+		trigger = { house.var:titular_magocracy = { has_variable = peaceful } }
 		localization_key = PEACEFUL_ATTITUDE_TT
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = very_peaceful } }
+		trigger = { house.var:titular_magocracy = { has_variable = very_peaceful } }
 		localization_key = VERY_PEACEFUL_ATTITUDE_TT
 	}
 }
@@ -163,15 +163,15 @@ GetWarAttitudeTT = {
 GetReligionAttitudeTT = {
 	type = character
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = religiocentric } }
+		trigger = { house.var:titular_magocracy = { has_variable = religiocentric } }
 		localization_key = RELIGIOCENTRIC_ATTITUDE_TT
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = tolerant } }
+		trigger = { house.var:titular_magocracy = { has_variable = tolerant } }
 		localization_key = TOLERANT_ATTITUDE_TT
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = r_ambivalence } }
+		trigger = { house.var:titular_magocracy = { has_variable = r_ambivalence } }
 		localization_key = RELIGIOUS_AMBIVELENCE_ATTITUDE_TT
 	}
 }
@@ -179,15 +179,15 @@ GetReligionAttitudeTT = {
 GetCultureAttitudeTT = {
 	type = character
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = xenophobic } }
+		trigger = { house.var:titular_magocracy = { has_variable = xenophobic } }
 		localization_key = XENOPHOBIC_ATTITUDE_TT
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = xenophilic } }
+		trigger = { house.var:titular_magocracy = { has_variable = xenophilic } }
 		localization_key = XENOPHILIC_ATTITUDE_TT
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = c_ambivalence } }
+		trigger = { house.var:titular_magocracy = { has_variable = c_ambivalence } }
 		localization_key = CULTURAL_AMBIVELENCE_ATTITUDE_TT
 	}
 }
@@ -195,11 +195,11 @@ GetCultureAttitudeTT = {
 GetWelcomingAttitude = {
 	type = character
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = insular } }
+		trigger = { house.var:titular_magocracy = { has_variable = insular } }
 		localization_key = INSULAR_ATTITUDE
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = receptive } }
+		trigger = { house.var:titular_magocracy = { has_variable = receptive } }
 		localization_key = RECEPTIVE_ATTITUDE
 	}
 }
@@ -207,11 +207,11 @@ GetWelcomingAttitude = {
 GetWelcomingAttitudeTT = {
 	type = character
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = insular } }
+		trigger = { house.var:titular_magocracy = { has_variable = insular } }
 		localization_key = INSULAR_ATTITUDE_TT
 	}
 	text = {
-		trigger = { house.var:titular_republic = { has_variable = receptive } }
+		trigger = { house.var:titular_magocracy = { has_variable = receptive } }
 		localization_key = RECEPTIVE_ATTITUDE_TT
 	}
 }
@@ -219,11 +219,11 @@ GetWelcomingAttitudeTT = {
 GetPassOrFail = {
 	type = character
 	text = {
-		trigger = { house.var:titular_republic = { titles_voting_aye >= titles_voting_nay } }
+		trigger = { house.var:titular_magocracy = { titles_voting_aye >= titles_voting_nay } }
 		localization_key = LOWER_HOUSE_PASSES
 	}
 	text = {
-		trigger = { house.var:titular_republic = { titles_voting_aye < titles_voting_nay } }
+		trigger = { house.var:titular_magocracy = { titles_voting_aye < titles_voting_nay } }
 		localization_key = LOWER_HOUSE_FAILS
 	}
 }

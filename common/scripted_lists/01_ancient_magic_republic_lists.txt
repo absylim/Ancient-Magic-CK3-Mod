@@ -35,7 +35,7 @@ patrician = {
 		exists = house 
 		is_house_head = yes 
 		is_magus = yes
-		house = { exists = var:titular_republic } 
+		house = { exists = var:titular_magocracy } 
 	} 
 }
 

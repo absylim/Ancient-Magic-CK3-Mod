@@ -3,15 +3,15 @@
 	ai_only_against_liege = yes
 	target_titles = none
 	allowed_for_character = {
-		exists = scope:attacker.house.var:titular_republic
-		exists = scope:defemder.house.var:titular_republic
+		exists = scope:attacker.house.var:titular_magocracy
+		exists = scope:defemder.house.var:titular_magocracy
 
-		scope:attacker.house.var:titular_republic = { has_variable = forced_dictatorship NOT = { has_variable = limited_dictatorship } }
+		scope:attacker.house.var:titular_magocracy = { has_variable = forced_dictatorship NOT = { has_variable = limited_dictatorship } }
 	}
 
 	allowed_against_character = {
 		scope:attacker.liege = scope:defender
-		scope:attacker.house.var:titular_republic = scope:defender.house.var:titular_republic
+		scope:attacker.house.var:titular_magocracy = scope:defender.house.var:titular_magocracy
 	}
 
 	cost = {
@@ -62,8 +62,8 @@
 			hidden_effect = { fp1_remove_humsac_offended_counties_effect = yes }
 			# Then our liege is deposed (but the imprisonment loss remains true for their heir).
 			if = {
-				limit = { exists = house.var:titular_republic }
-				house.var:titular_republic = {
+				limit = { exists = house.var:titular_magocracy }
+				house.var:titular_magocracy = {
 					custom_description = {
 						text = effect_trigger_election_cycle
 						magocracy_succession = yes
@@ -104,8 +104,8 @@
  				arrogant = medium_stress_impact_gain
  			}
 			if = {
-				limit = { exists = house.var:titular_republic }
-				house.var:titular_republic = {
+				limit = { exists = house.var:titular_magocracy }
+				house.var:titular_magocracy = {
 					custom_description = {
 						text = effect_limit_dictatorship
 						set_variable = limited_dictatorship

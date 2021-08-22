@@ -1,177 +1,177 @@
 ﻿# Written by Caden335
 
-namespace = republic_vote_events
+namespace = magocracy_vote_events
 
-republic_vote_events.1001 = { # Senate Vote - War Declaration
+magocracy_vote_events.1001 = { # Senate Vote - War Declaration
 	type = character_event
-	title = republic_vote_events.1001.t
+	title = magocracy_vote_events.1001.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_senate_vote_war_declaration
 					}
 				}
-				desc = republic_vote_events.1001.desc.sv_war
+				desc = magocracy_vote_events.1001.desc.sv_war
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_leaders_discretion_war_declaration
 					}
 				}
-				desc = republic_vote_events.1001.desc.ld_war
+				desc = magocracy_vote_events.1001.desc.ld_war
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_senate_vote_council_appointment
 					}
 				}
-				desc = republic_vote_events.1001.desc.sv_council
+				desc = magocracy_vote_events.1001.desc.sv_council
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_leaders_discretion_council_appointment
 					}
 				}
-				desc = republic_vote_events.1001.desc.ld_council
+				desc = magocracy_vote_events.1001.desc.ld_council
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_senate_vote_imprisonment_rights
 					}
 				}
-				desc = republic_vote_events.1001.desc.sv_prison
+				desc = magocracy_vote_events.1001.desc.sv_prison
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_leaders_discretion_imprisonment_rights
 					}
 				}
-				desc = republic_vote_events.1001.desc.ld_prison
+				desc = magocracy_vote_events.1001.desc.ld_prison
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_senate_vote_title_revocation
 					}
 				}
-				desc = republic_vote_events.1001.desc.sv_revoke
+				desc = magocracy_vote_events.1001.desc.sv_revoke
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_leaders_discretion_title_revocation
 					}
 				}
-				desc = republic_vote_events.1001.desc.ld_revoke
+				desc = magocracy_vote_events.1001.desc.ld_revoke
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_senate_vote_title_granting
 					}
 				}
-				desc = republic_vote_events.1001.desc.sv_grant
+				desc = magocracy_vote_events.1001.desc.sv_grant
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_leaders_discretion_title_granting
 					}
 				}
-				desc = republic_vote_events.1001.desc.ld_grant
+				desc = magocracy_vote_events.1001.desc.ld_grant
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_life_title_term
 					}
 				}
-				desc = republic_vote_events.1001.desc.life_term
+				desc = magocracy_vote_events.1001.desc.life_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_twenty_year_term
 					}
 				}
-				desc = republic_vote_events.1001.desc.twenty_term
+				desc = magocracy_vote_events.1001.desc.twenty_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_ten_year_term
 					}
 				}
-				desc = republic_vote_events.1001.desc.ten_term
+				desc = magocracy_vote_events.1001.desc.ten_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_four_year_term
 					}
 				}
-				desc = republic_vote_events.1001.desc.four_term
+				desc = magocracy_vote_events.1001.desc.four_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_two_year_term
 					}
 				}
-				desc = republic_vote_events.1001.desc.two_term
+				desc = magocracy_vote_events.1001.desc.two_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_one_year_term
 					}
 				}
-				desc = republic_vote_events.1001.desc.one_term
+				desc = magocracy_vote_events.1001.desc.one_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:war_proposal
 					}
 				}
-				desc = republic_vote_events.1001.desc.war_prop
+				desc = magocracy_vote_events.1001.desc.war_prop
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:council_proposal
 					}
 				}
-				desc = republic_vote_events.1001.desc.council_prop
+				desc = magocracy_vote_events.1001.desc.council_prop
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:imprisonment_proposal
 					}
 				}
-				desc = republic_vote_events.1001.desc.prison_prop
+				desc = magocracy_vote_events.1001.desc.prison_prop
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:revocation_proposal
 					}
 				}
-				desc = republic_vote_events.1001.desc.revoke_prop
+				desc = magocracy_vote_events.1001.desc.revoke_prop
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:grant_target
 				}
-				desc = republic_vote_events.1001.desc.grant_prop
+				desc = magocracy_vote_events.1001.desc.grant_prop
 			}
 		}
 	}
@@ -187,45 +187,45 @@ republic_vote_events.1001 = { # Senate Vote - War Declaration
 	theme = diplomacy
 	immediate = {
 		house = {
-			var:titular_republic = {
-				save_scope_as = titular_republic
+			var:titular_magocracy = {
+				save_scope_as = titular_magocracy
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { exists = var:war_proposal } }
-			scope:titular_republic = {
+			limit = { scope:titular_magocracy = { exists = var:war_proposal } }
+			scope:titular_magocracy = {
 				var:proposed_war_target = {
 					save_scope_as = war_enemy
 				}
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { exists = var:grants_proposal } }
-			scope:titular_republic = {
+			limit = { scope:titular_magocracy = { exists = var:grants_proposal } }
+			scope:titular_magocracy = {
 				var:proposed_grant_target = {
 					save_scope_as = grant_target
 				}
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { exists = var:revocation_proposal } }
-			scope:titular_republic = {
+			limit = { scope:titular_magocracy = { exists = var:revocation_proposal } }
+			scope:titular_magocracy = {
 				var:proposed_revoke_target = {
 					save_scope_as = revoke_target
 				}
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { exists = var:council_proposal } }
-			scope:titular_republic = {
+			limit = { scope:titular_magocracy = { exists = var:council_proposal } }
+			scope:titular_magocracy = {
 				var:proposed_councilor = {
 					save_scope_as = proposed_councilor
 				}
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { exists = var:imprisonment_proposal } }
-			scope:titular_republic = {
+			limit = { scope:titular_magocracy = { exists = var:imprisonment_proposal } }
+			scope:titular_magocracy = {
 				var:proposed_prison_target = {
 					save_scope_as = prison_target
 				}
@@ -234,7 +234,7 @@ republic_vote_events.1001 = { # Senate Vote - War Declaration
 	}
 
 	option = { # Yea
-		name = republic_vote_events.1001.a
+		name = magocracy_vote_events.1001.a
 		custom_tooltip = ALL_VOTES_AYE
 		ai_chance = {
 			base = 100
@@ -261,7 +261,7 @@ republic_vote_events.1001 = { # Senate Vote - War Declaration
 			imprisonment_proposal_modifier = yes
 			council_appointment_proposal_modifier = yes
 		}
-		scope:titular_republic = {
+		scope:titular_magocracy = {
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
@@ -293,12 +293,12 @@ republic_vote_events.1001 = { # Senate Vote - War Declaration
 	}
 
 	option = { # Nay
-		name = republic_vote_events.1001.b
+		name = magocracy_vote_events.1001.b
 		custom_tooltip = ALL_VOTES_NAY
 		ai_chance = {
 			base = 130
 		}
-		scope:titular_republic = {
+		scope:titular_magocracy = {
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
@@ -330,7 +330,7 @@ republic_vote_events.1001 = { # Senate Vote - War Declaration
 	}
 }
 
-republic_vote_events.1002 = { # Vote Over
+magocracy_vote_events.1002 = { # Vote Over
 	type = character_event
 	hidden = yes
 
@@ -341,7 +341,7 @@ republic_vote_events.1002 = { # Vote Over
 				every_in_list = {
 					variable = magocracy_families_list
 					house_head = {
-						trigger_event = republic_vote_events.1003
+						trigger_event = magocracy_vote_events.1003
 						set_variable = a
 					}
 				}
@@ -365,7 +365,7 @@ republic_vote_events.1002 = { # Vote Over
 					holder = {
 						every_councillor = {
 							save_scope_as = council_new
-							house.var:titular_republic = {
+							house.var:titular_magocracy = {
 								add_to_variable_list = {
 									name = valid_council_targets_list
 									target = scope:council_new
@@ -532,7 +532,7 @@ republic_vote_events.1002 = { # Vote Over
 				every_in_list = {
 					variable = magocracy_families_list
 					house_head = {
-						trigger_event = republic_vote_events.1003
+						trigger_event = magocracy_vote_events.1003
 						set_variable = b
 					}
 				}
@@ -559,252 +559,252 @@ republic_vote_events.1002 = { # Vote Over
 				}
 			}
 			trigger_event = {
-				id = republic_vote_events.1004
+				id = magocracy_vote_events.1004
 				days = 2
 			}
 		}
 	}
 }
 
-republic_vote_events.1003 = { # Senate Vote Results
+magocracy_vote_events.1003 = { # Senate Vote Results
 	type = character_event
-	title = republic_vote_events.1003.t
+	title = magocracy_vote_events.1003.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_senate_vote_war_declaration
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.sv_war
+				desc = magocracy_vote_events.1003.desc.sv_war
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_leaders_discretion_war_declaration
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.ld_war
+				desc = magocracy_vote_events.1003.desc.ld_war
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_senate_vote_council_appointment
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.sv_council
+				desc = magocracy_vote_events.1003.desc.sv_council
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_leaders_discretion_council_appointment
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.ld_council
+				desc = magocracy_vote_events.1003.desc.ld_council
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_senate_vote_imprisonment_rights
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.sv_prison
+				desc = magocracy_vote_events.1003.desc.sv_prison
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_leaders_discretion_imprisonment_rights
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.ld_prison
+				desc = magocracy_vote_events.1003.desc.ld_prison
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_senate_vote_title_revocation
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.sv_revoke
+				desc = magocracy_vote_events.1003.desc.sv_revoke
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_leaders_discretion_title_revocation
 						}
 					}
 				}
-				desc = republic_vote_events.1003.desc.ld_revoke
+				desc = magocracy_vote_events.1003.desc.ld_revoke
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_senate_vote_title_granting
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.sv_grant
+				desc = magocracy_vote_events.1003.desc.sv_grant
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_leaders_discretion_title_granting
 						}
 					}
 				}
-				desc = republic_vote_events.1003.desc.ld_grant
+				desc = magocracy_vote_events.1003.desc.ld_grant
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_life_title_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.life_term
+				desc = magocracy_vote_events.1003.desc.life_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_twenty_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.twenty_term
+				desc = magocracy_vote_events.1003.desc.twenty_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_ten_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.ten_term
+				desc = magocracy_vote_events.1003.desc.ten_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_four_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.four_term
+				desc = magocracy_vote_events.1003.desc.four_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_two_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.two_term
+				desc = magocracy_vote_events.1003.desc.two_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_one_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.one_term
+				desc = magocracy_vote_events.1003.desc.one_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:war_proposal
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.war_prop
+				desc = magocracy_vote_events.1003.desc.war_prop
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:council_proposal
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.council_prop
+				desc = magocracy_vote_events.1003.desc.council_prop
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:imprisonment_proposal
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.prison_prop
+				desc = magocracy_vote_events.1003.desc.prison_prop
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:revocation_proposal
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.revoke_prop
+				desc = magocracy_vote_events.1003.desc.revoke_prop
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:grants_proposal
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1003.desc.grant_prop
+				desc = magocracy_vote_events.1003.desc.grant_prop
 			}
 			triggered_desc = {
 				trigger = {
 					exists = var:b
 				}
-				desc = republic_vote_events.1003.desc.b
+				desc = magocracy_vote_events.1003.desc.b
 			}
 		}
 	}
@@ -819,7 +819,7 @@ republic_vote_events.1003 = { # Senate Vote Results
 	}
 
 	option = { # Vote Passes Good
-		name = republic_vote_events.1003.a
+		name = magocracy_vote_events.1003.a
 		trigger = { has_variable = a house = { has_variable = house_votes_yea } }
 		house = { remove_variable = house_votes_yea remove_variable = house_votes_nay }
 		remove_variable = a
@@ -828,7 +828,7 @@ republic_vote_events.1003 = { # Senate Vote Results
 	}
 
 	option = { # Vote Passes Bad
-		name = republic_vote_events.1003.b
+		name = magocracy_vote_events.1003.b
 		trigger = { has_variable = a house = { has_variable = house_votes_nay } }
 		house = { remove_variable = house_votes_yea remove_variable = house_votes_nay }
 		remove_variable = a
@@ -837,7 +837,7 @@ republic_vote_events.1003 = { # Senate Vote Results
 	}
 
 	option = { # Vote Fails Good
-		name = republic_vote_events.1003.c
+		name = magocracy_vote_events.1003.c
 		trigger = { has_variable = b house = { has_variable = house_votes_nay } }
 		house = { remove_variable = house_votes_yea remove_variable = house_votes_nay }
 		remove_variable = b
@@ -846,7 +846,7 @@ republic_vote_events.1003 = { # Senate Vote Results
 	}
 
 	option = { # Vote Fails Bad
-		name = republic_vote_events.1003.d
+		name = magocracy_vote_events.1003.d
 		trigger = { has_variable = b house = { has_variable = house_votes_yea } }
 		house = { remove_variable = house_votes_yea remove_variable = house_votes_nay }
 		remove_variable = b
@@ -855,7 +855,7 @@ republic_vote_events.1003 = { # Senate Vote Results
 	}
 }
 
-republic_vote_events.1004 = { # Vote Over
+magocracy_vote_events.1004 = { # Vote Over
 	type = character_event
 	hidden = yes
 
@@ -888,176 +888,176 @@ republic_vote_events.1004 = { # Vote Over
 }
 
 
-republic_vote_events.1005 = { # Senate Vote - War Declaration
+magocracy_vote_events.1005 = { # Senate Vote - War Declaration
 	type = character_event
-	title = republic_vote_events.1005.t
+	title = magocracy_vote_events.1005.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_council_approval_war_declaration
 					}
 				}
-				desc = republic_vote_events.1005.desc.sv_war
+				desc = magocracy_vote_events.1005.desc.sv_war
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_leaders_discretion_war_declaration
 					}
 				}
-				desc = republic_vote_events.1005.desc.ld_war
+				desc = magocracy_vote_events.1005.desc.ld_war
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_council_approval_council_appointment
 					}
 				}
-				desc = republic_vote_events.1005.desc.sv_council
+				desc = magocracy_vote_events.1005.desc.sv_council
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_leaders_discretion_council_appointment
 					}
 				}
-				desc = republic_vote_events.1005.desc.ld_council
+				desc = magocracy_vote_events.1005.desc.ld_council
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_council_approval_imprisonment_rights
 					}
 				}
-				desc = republic_vote_events.1005.desc.sv_prison
+				desc = magocracy_vote_events.1005.desc.sv_prison
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_leaders_discretion_imprisonment_rights
 					}
 				}
-				desc = republic_vote_events.1005.desc.ld_prison
+				desc = magocracy_vote_events.1005.desc.ld_prison
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_council_approval_title_revocation
 					}
 				}
-				desc = republic_vote_events.1005.desc.sv_revoke
+				desc = magocracy_vote_events.1005.desc.sv_revoke
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_leaders_discretion_title_revocation
 					}
 				}
-				desc = republic_vote_events.1005.desc.ld_revoke
+				desc = magocracy_vote_events.1005.desc.ld_revoke
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_council_approval_title_granting
 					}
 				}
-				desc = republic_vote_events.1005.desc.sv_grant
+				desc = magocracy_vote_events.1005.desc.sv_grant
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_leaders_discretion_title_granting
 					}
 				}
-				desc = republic_vote_events.1005.desc.ld_grant
+				desc = magocracy_vote_events.1005.desc.ld_grant
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_life_title_term
 					}
 				}
-				desc = republic_vote_events.1005.desc.life_term
+				desc = magocracy_vote_events.1005.desc.life_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_twenty_year_term
 					}
 				}
-				desc = republic_vote_events.1005.desc.twenty_term
+				desc = magocracy_vote_events.1005.desc.twenty_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_ten_year_term
 					}
 				}
-				desc = republic_vote_events.1005.desc.ten_term
+				desc = magocracy_vote_events.1005.desc.ten_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_four_year_term
 					}
 				}
-				desc = republic_vote_events.1005.desc.four_term
+				desc = magocracy_vote_events.1005.desc.four_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_two_year_term
 					}
 				}
-				desc = republic_vote_events.1005.desc.two_term
+				desc = magocracy_vote_events.1005.desc.two_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_one_year_term
 					}
 				}
-				desc = republic_vote_events.1005.desc.one_term
+				desc = magocracy_vote_events.1005.desc.one_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:war_proposal
 					}
 				}
-				desc = republic_vote_events.1005.desc.war_prop
+				desc = magocracy_vote_events.1005.desc.war_prop
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:council_proposal
 					}
 				}
-				desc = republic_vote_events.1005.desc.council_prop
+				desc = magocracy_vote_events.1005.desc.council_prop
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:imprisonment_proposal
 					}
 				}
-				desc = republic_vote_events.1005.desc.prison_prop
+				desc = magocracy_vote_events.1005.desc.prison_prop
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:revocation_proposal
 					}
 				}
-				desc = republic_vote_events.1005.desc.revoke_prop
+				desc = magocracy_vote_events.1005.desc.revoke_prop
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:grant_target
 				}
-				desc = republic_vote_events.1005.desc.grant_prop
+				desc = magocracy_vote_events.1005.desc.grant_prop
 			}
 		}
 	}
@@ -1073,45 +1073,45 @@ republic_vote_events.1005 = { # Senate Vote - War Declaration
 	theme = diplomacy
 	immediate = {
 		house = {
-			var:titular_republic = {
-				save_scope_as = titular_republic
+			var:titular_magocracy = {
+				save_scope_as = titular_magocracy
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { exists = var:war_proposal } }
-			scope:titular_republic = {
+			limit = { scope:titular_magocracy = { exists = var:war_proposal } }
+			scope:titular_magocracy = {
 				var:proposed_war_target = {
 					save_scope_as = war_enemy
 				}
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { exists = var:grants_proposal } }
-			scope:titular_republic = {
+			limit = { scope:titular_magocracy = { exists = var:grants_proposal } }
+			scope:titular_magocracy = {
 				var:proposed_grant_target = {
 					save_scope_as = grant_target
 				}
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { exists = var:revocation_proposal } }
-			scope:titular_republic = {
+			limit = { scope:titular_magocracy = { exists = var:revocation_proposal } }
+			scope:titular_magocracy = {
 				var:proposed_revoke_target = {
 					save_scope_as = revoke_target
 				}
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { exists = var:council_proposal } }
-			scope:titular_republic = {
+			limit = { scope:titular_magocracy = { exists = var:council_proposal } }
+			scope:titular_magocracy = {
 				var:proposed_councilor = {
 					save_scope_as = proposed_councilor
 				}
 			}
 		}
 		if = {
-			limit = { scope:titular_republic = { exists = var:imprisonment_proposal } }
-			scope:titular_republic = {
+			limit = { scope:titular_magocracy = { exists = var:imprisonment_proposal } }
+			scope:titular_magocracy = {
 				var:proposed_prison_target = {
 					save_scope_as = prison_target
 				}
@@ -1120,7 +1120,7 @@ republic_vote_events.1005 = { # Senate Vote - War Declaration
 	}
 
 	option = { # Yea
-		name = republic_vote_events.1005.a
+		name = magocracy_vote_events.1005.a
 		custom_tooltip = COUNCIL_VOTES_AYE
 		ai_chance = {
 			base = 100
@@ -1146,7 +1146,7 @@ republic_vote_events.1005 = { # Senate Vote - War Declaration
 			imprisonment_proposal_modifier = yes
 			council_appointment_proposal_modifier = yes
 		}
-		scope:titular_republic = {
+		scope:titular_magocracy = {
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
@@ -1178,12 +1178,12 @@ republic_vote_events.1005 = { # Senate Vote - War Declaration
 	}
 
 	option = { # Nay
-		name = republic_vote_events.1005.b
+		name = magocracy_vote_events.1005.b
 		custom_tooltip = COUNCIL_VOTES_NAY
 		ai_chance = {
 			base = 125
 		}
-		scope:titular_republic = {
+		scope:titular_magocracy = {
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
@@ -1215,7 +1215,7 @@ republic_vote_events.1005 = { # Senate Vote - War Declaration
 	}
 }
 
-republic_vote_events.1006 = { # Vote Over
+magocracy_vote_events.1006 = { # Vote Over
 	type = character_event
 	hidden = yes
 
@@ -1226,7 +1226,7 @@ republic_vote_events.1006 = { # Vote Over
 				every_in_list = {
 					variable = magocracy_families_list
 					house_head = {
-						trigger_event = republic_vote_events.1007
+						trigger_event = magocracy_vote_events.1007
 						set_variable = a
 					}
 				}
@@ -1419,7 +1419,7 @@ republic_vote_events.1006 = { # Vote Over
 				every_in_list = {
 					variable = magocracy_families_list
 					house_head = {
-						trigger_event = republic_vote_events.1007
+						trigger_event = magocracy_vote_events.1007
 						set_variable = b
 					}
 				}
@@ -1446,252 +1446,252 @@ republic_vote_events.1006 = { # Vote Over
 				}
 			}
 			trigger_event = {
-				id = republic_vote_events.1008
+				id = magocracy_vote_events.1008
 				days = 2
 			}
 		}
 	}
 }
 
-republic_vote_events.1007 = { # Senate Vote Results
+magocracy_vote_events.1007 = { # Senate Vote Results
 	type = character_event
-	title = republic_vote_events.1007.t
+	title = magocracy_vote_events.1007.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_council_approval_war_declaration
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.sv_war
+				desc = magocracy_vote_events.1007.desc.sv_war
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_leaders_discretion_war_declaration
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.ld_war
+				desc = magocracy_vote_events.1007.desc.ld_war
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_council_approval_council_appointment
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.sv_council
+				desc = magocracy_vote_events.1007.desc.sv_council
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_leaders_discretion_council_appointment
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.ld_council
+				desc = magocracy_vote_events.1007.desc.ld_council
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_council_approval_imprisonment_rights
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.sv_prison
+				desc = magocracy_vote_events.1007.desc.sv_prison
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_leaders_discretion_imprisonment_rights
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.ld_prison
+				desc = magocracy_vote_events.1007.desc.ld_prison
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_council_approval_title_revocation
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.sv_revoke
+				desc = magocracy_vote_events.1007.desc.sv_revoke
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_leaders_discretion_title_revocation
 						}
 					}
 				}
-				desc = republic_vote_events.1007.desc.ld_revoke
+				desc = magocracy_vote_events.1007.desc.ld_revoke
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_council_approval_title_granting
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.sv_grant
+				desc = magocracy_vote_events.1007.desc.sv_grant
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_leaders_discretion_title_granting
 						}
 					}
 				}
-				desc = republic_vote_events.1007.desc.ld_grant
+				desc = magocracy_vote_events.1007.desc.ld_grant
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_life_title_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.life_term
+				desc = magocracy_vote_events.1007.desc.life_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_twenty_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.twenty_term
+				desc = magocracy_vote_events.1007.desc.twenty_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_ten_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.ten_term
+				desc = magocracy_vote_events.1007.desc.ten_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_four_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.four_term
+				desc = magocracy_vote_events.1007.desc.four_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_two_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.two_term
+				desc = magocracy_vote_events.1007.desc.two_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_one_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.one_term
+				desc = magocracy_vote_events.1007.desc.one_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:war_proposal
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.war_prop
+				desc = magocracy_vote_events.1007.desc.war_prop
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:council_proposal
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.council_prop
+				desc = magocracy_vote_events.1007.desc.council_prop
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:imprisonment_proposal
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.prison_prop
+				desc = magocracy_vote_events.1007.desc.prison_prop
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:revocation_proposal
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.revoke_prop
+				desc = magocracy_vote_events.1007.desc.revoke_prop
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:grants_proposal
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1007.desc.grant_prop
+				desc = magocracy_vote_events.1007.desc.grant_prop
 			}
 			triggered_desc = {
 				trigger = {
 					exists = var:b
 				}
-				desc = republic_vote_events.1007.desc.b
+				desc = magocracy_vote_events.1007.desc.b
 			}
 		}
 	}
@@ -1706,7 +1706,7 @@ republic_vote_events.1007 = { # Senate Vote Results
 	}
 
 	option = { # Vote Passes Good
-		name = republic_vote_events.1007.a
+		name = magocracy_vote_events.1007.a
 		trigger = { has_variable = a house = { has_variable = house_votes_yea } }
 		house = { remove_variable = house_votes_yea remove_variable = house_votes_nay }
 		remove_variable = a
@@ -1715,7 +1715,7 @@ republic_vote_events.1007 = { # Senate Vote Results
 	}
 
 	option = { # Vote Passes Bad
-		name = republic_vote_events.1007.b
+		name = magocracy_vote_events.1007.b
 		trigger = { has_variable = a house = { has_variable = house_votes_nay } }
 		house = { remove_variable = house_votes_yea remove_variable = house_votes_nay }
 		remove_variable = a
@@ -1724,7 +1724,7 @@ republic_vote_events.1007 = { # Senate Vote Results
 	}
 
 	option = { # Vote Fails Good
-		name = republic_vote_events.1007.c
+		name = magocracy_vote_events.1007.c
 		trigger = { has_variable = b house = { has_variable = house_votes_nay } }
 		house = { remove_variable = house_votes_yea remove_variable = house_votes_nay }
 		remove_variable = b
@@ -1733,7 +1733,7 @@ republic_vote_events.1007 = { # Senate Vote Results
 	}
 
 	option = { # Vote Fails Bad
-		name = republic_vote_events.1007.d
+		name = magocracy_vote_events.1007.d
 		trigger = { has_variable = b house = { has_variable = house_votes_yea } }
 		house = { remove_variable = house_votes_yea remove_variable = house_votes_nay }
 		remove_variable = b
@@ -1742,7 +1742,7 @@ republic_vote_events.1007 = { # Senate Vote Results
 	}
 }
 
-republic_vote_events.1008 = { # Vote Over
+magocracy_vote_events.1008 = { # Vote Over
 	type = character_event
 	hidden = yes
 
@@ -1776,58 +1776,58 @@ republic_vote_events.1008 = { # Vote Over
 
 
 
-republic_vote_events.1009 = { # Senate Vote - War Declaration
+magocracy_vote_events.1009 = { # Senate Vote - War Declaration
 	type = character_event
-	title = republic_vote_events.1009.t
+	title = magocracy_vote_events.1009.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_life_title_term
 					}
 				}
-				desc = republic_vote_events.1009.desc.life_term
+				desc = magocracy_vote_events.1009.desc.life_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_twenty_year_term
 					}
 				}
-				desc = republic_vote_events.1009.desc.twenty_term
+				desc = magocracy_vote_events.1009.desc.twenty_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_ten_year_term
 					}
 				}
-				desc = republic_vote_events.1009.desc.ten_term
+				desc = magocracy_vote_events.1009.desc.ten_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_four_year_term
 					}
 				}
-				desc = republic_vote_events.1009.desc.four_term
+				desc = magocracy_vote_events.1009.desc.four_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_two_year_term
 					}
 				}
-				desc = republic_vote_events.1009.desc.two_term
+				desc = magocracy_vote_events.1009.desc.two_term
 			}
 			triggered_desc = {
 				trigger = {
-					scope:titular_republic = {
+					scope:titular_magocracy = {
 						exists = var:law_voting_one_year_term
 					}
 				}
-				desc = republic_vote_events.1009.desc.one_term
+				desc = magocracy_vote_events.1009.desc.one_term
 			}
 		}
 	}
@@ -1843,14 +1843,14 @@ republic_vote_events.1009 = { # Senate Vote - War Declaration
 	theme = diplomacy
 	immediate = {
 		house = {
-			var:titular_republic = {
-				save_scope_as = titular_republic
+			var:titular_magocracy = {
+				save_scope_as = titular_magocracy
 			}
 		}
 	}
 
 	option = { # Yea
-		name = republic_vote_events.1009.a
+		name = magocracy_vote_events.1009.a
 		custom_tooltip = HOUSES_VOTES_AYE
 		ai_chance = {
 			base = 100
@@ -1861,7 +1861,7 @@ republic_vote_events.1009 = { # Senate Vote - War Declaration
 			two_year_term_modifier = yes
 			one_year_term_modifier = yes
 		}
-		scope:titular_republic = {
+		scope:titular_magocracy = {
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
@@ -1893,12 +1893,12 @@ republic_vote_events.1009 = { # Senate Vote - War Declaration
 	}
 
 	option = { # Nay
-		name = republic_vote_events.1009.b
+		name = magocracy_vote_events.1009.b
 		custom_tooltip = HOUSES_VOTES_NAY
 		ai_chance = {
 			base = 125
 		}
-		scope:titular_republic = {
+		scope:titular_magocracy = {
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
@@ -1930,7 +1930,7 @@ republic_vote_events.1009 = { # Senate Vote - War Declaration
 	}
 }
 
-republic_vote_events.1010 = { # Vote Over
+magocracy_vote_events.1010 = { # Vote Over
 	type = character_event
 	hidden = yes
 
@@ -1941,7 +1941,7 @@ republic_vote_events.1010 = { # Vote Over
 				every_in_list = {
 					variable = magocracy_families_list
 					house_head = {
-						trigger_event = republic_vote_events.1011
+						trigger_event = magocracy_vote_events.1011
 						set_variable = a
 					}
 				}
@@ -2011,7 +2011,7 @@ republic_vote_events.1010 = { # Vote Over
 				every_in_list = {
 					variable = magocracy_families_list
 					house_head = {
-						trigger_event = republic_vote_events.1011
+						trigger_event = magocracy_vote_events.1011
 						set_variable = b
 					}
 				}
@@ -2029,88 +2029,88 @@ republic_vote_events.1010 = { # Vote Over
 			}
 		}
 		trigger_event = {
-			id = republic_vote_events.1012
+			id = magocracy_vote_events.1012
 			days = 2
 		}
 	}
 }
 
-republic_vote_events.1011 = { # Senate Vote Results
+magocracy_vote_events.1011 = { # Senate Vote Results
 	type = character_event
-	title = republic_vote_events.1011.t
+	title = magocracy_vote_events.1011.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_life_title_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1011.desc.life_term
+				desc = magocracy_vote_events.1011.desc.life_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_twenty_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1011.desc.twenty_term
+				desc = magocracy_vote_events.1011.desc.twenty_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_ten_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1011.desc.ten_term
+				desc = magocracy_vote_events.1011.desc.ten_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_four_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1011.desc.four_term
+				desc = magocracy_vote_events.1011.desc.four_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_two_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1011.desc.two_term
+				desc = magocracy_vote_events.1011.desc.two_term
 			}
 			triggered_desc = {
 				trigger = {
 					house = {
-						var:titular_republic = {
+						var:titular_magocracy = {
 							exists = var:law_voting_one_year_term
 						}
 					}
 					exists = var:a
 				}
-				desc = republic_vote_events.1011.desc.one_term
+				desc = magocracy_vote_events.1011.desc.one_term
 			}
 			triggered_desc = {
 				trigger = {
 					exists = var:b
 				}
-				desc = republic_vote_events.1011.desc.b
+				desc = magocracy_vote_events.1011.desc.b
 			}
 		}
 	}
@@ -2125,7 +2125,7 @@ republic_vote_events.1011 = { # Senate Vote Results
 	}
 
 	option = { # Vote Passes Good
-		name = republic_vote_events.1011.a
+		name = magocracy_vote_events.1011.a
 		trigger = { has_variable = a house = { has_variable = house_votes_yea } }
 		house = { remove_variable = house_votes_yea remove_variable = house_votes_nay }
 		remove_variable = a
@@ -2134,7 +2134,7 @@ republic_vote_events.1011 = { # Senate Vote Results
 	}
 
 	option = { # Vote Passes Bad
-		name = republic_vote_events.1011.b
+		name = magocracy_vote_events.1011.b
 		trigger = { has_variable = a house = { has_variable = house_votes_nay } }
 		house = { remove_variable = house_votes_yea remove_variable = house_votes_nay }
 		remove_variable = a
@@ -2143,7 +2143,7 @@ republic_vote_events.1011 = { # Senate Vote Results
 	}
 
 	option = { # Vote Fails Good
-		name = republic_vote_events.1011.c
+		name = magocracy_vote_events.1011.c
 		trigger = { has_variable = b house = { has_variable = house_votes_nay } }
 		house = { remove_variable = house_votes_yea remove_variable = house_votes_nay }
 		remove_variable = b
@@ -2152,7 +2152,7 @@ republic_vote_events.1011 = { # Senate Vote Results
 	}
 
 	option = { # Vote Fails Bad
-		name = republic_vote_events.1011.d
+		name = magocracy_vote_events.1011.d
 		trigger = { has_variable = b house = { has_variable = house_votes_yea } }
 		house = { remove_variable = house_votes_yea remove_variable = house_votes_nay }
 		remove_variable = b
@@ -2161,7 +2161,7 @@ republic_vote_events.1011 = { # Senate Vote Results
 	}
 }
 
-republic_vote_events.1012 = { # Vote Over
+magocracy_vote_events.1012 = { # Vote Over
 	type = character_event
 	hidden = yes
 
@@ -2177,10 +2177,10 @@ republic_vote_events.1012 = { # Vote Over
 	}
 }
 
-republic_vote_events.1013 = { # Senate Vote - War Declaration
+magocracy_vote_events.1013 = { # Senate Vote - War Declaration
 	type = character_event
-	title = republic_vote_events.1013.t
-	desc = republic_vote_events.1013.desc
+	title = magocracy_vote_events.1013.t
+	desc = magocracy_vote_events.1013.desc
 	trigger = {
 		NOT = {
 			exists = var:you_voted
@@ -2197,11 +2197,11 @@ republic_vote_events.1013 = { # Senate Vote - War Declaration
 	theme = diplomacy
 	immediate = {
 		house = {
-			var:titular_republic = {
-				save_scope_as = titular_republic
+			var:titular_magocracy = {
+				save_scope_as = titular_magocracy
 			}
 		}
-		scope:titular_republic = {
+		scope:titular_magocracy = {
 			ordered_in_list = {
 				variable = magocracy_families_list
 				order_by = family_respect
@@ -2296,7 +2296,7 @@ republic_vote_events.1013 = { # Senate Vote - War Declaration
 	}
 
 	option = { # Electee 1
-		name = republic_vote_events.1013.a
+		name = magocracy_vote_events.1013.a
 		custom_tooltip = VOTES_ELECTEE_ONE
 		ai_chance = {
 			base = 0
@@ -2351,7 +2351,7 @@ republic_vote_events.1013 = { # Senate Vote - War Declaration
 	}
 
 	option = { # Electee 2
-		name = republic_vote_events.1013.b
+		name = magocracy_vote_events.1013.b
 		custom_tooltip = VOTES_ELECTEE_TWO
 		ai_chance = {
 			base = 0
@@ -2406,7 +2406,7 @@ republic_vote_events.1013 = { # Senate Vote - War Declaration
 	}
 
 	option = { # Electee 3
-		name = republic_vote_events.1013.c
+		name = magocracy_vote_events.1013.c
 		custom_tooltip = VOTES_ELECTEE_THREE
 		ai_chance = {
 			base = 0
@@ -2461,7 +2461,7 @@ republic_vote_events.1013 = { # Senate Vote - War Declaration
 	}
 
 	option = { # Electee 4
-		name = republic_vote_events.1013.d
+		name = magocracy_vote_events.1013.d
 		custom_tooltip = VOTES_ELECTEE_FOUR
 		ai_chance = {
 			base = 0
@@ -2516,7 +2516,7 @@ republic_vote_events.1013 = { # Senate Vote - War Declaration
 	}
 
 	option = { # Electee 5
-		name = republic_vote_events.1013.e
+		name = magocracy_vote_events.1013.e
 		custom_tooltip = VOTES_ELECTEE_FIVE
 		ai_chance = {
 			base = 0
@@ -2571,7 +2571,7 @@ republic_vote_events.1013 = { # Senate Vote - War Declaration
 	}
 }
 
-republic_vote_events.1014 = { # Vote Over
+magocracy_vote_events.1014 = { # Vote Over
 	type = character_event
 	hidden = yes
 
@@ -2672,10 +2672,10 @@ republic_vote_events.1014 = { # Vote Over
 	}
 }
 
-republic_vote_events.1015 = { # Dictatorship
+magocracy_vote_events.1015 = { # Dictatorship
 	type = character_event
-	title = republic_vote_events.1015.t
-	desc = republic_vote_events.1015.desc
+	title = magocracy_vote_events.1015.t
+	desc = magocracy_vote_events.1015.desc
 	trigger = {
 		NOT = {
 			exists = var:you_voted
@@ -2688,17 +2688,17 @@ republic_vote_events.1015 = { # Dictatorship
 	theme = diplomacy
 	immediate = {
 		house = {
-			var:titular_republic = {
-				save_scope_as = titular_republic
+			var:titular_magocracy = {
+				save_scope_as = titular_magocracy
 			}
 		}
 		set_variable = you_voted
 	}
 
 	option = { # Yea
-		name = republic_vote_events.1015.a
+		name = magocracy_vote_events.1015.a
 		custom_tooltip = ALL_VOTES_AYE
-		scope:titular_republic = {
+		scope:titular_magocracy = {
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { has_variable = house_votes_yea }
@@ -2730,9 +2730,9 @@ republic_vote_events.1015 = { # Dictatorship
 	}
 
 	option = { # Nay
-		name = republic_vote_events.1015.b
+		name = magocracy_vote_events.1015.b
 		custom_tooltip = ALL_VOTES_NAY
-		scope:titular_republic = {
+		scope:titular_magocracy = {
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { has_variable = house_votes_nay }
@@ -2764,12 +2764,12 @@ republic_vote_events.1015 = { # Dictatorship
 	}
 }
 
-republic_vote_events.1016 = { # Dictatorship
+magocracy_vote_events.1016 = { # Dictatorship
 	type = character_event
 	hidden = yes
 	immediate = {
 		finish_dictatorship_appointment_effect = yes
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			every_in_list = {
 				variable = magocracy_families_list
 				remove_variable = house_votes_nay

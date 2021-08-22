@@ -7,12 +7,12 @@
 # occupied_baronies is a list of all baronies that the siege caused the occupier to control (I.E., can include baronies with no fort level)
 on_siege_completion = {
 	on_actions = {
-		siege_completion_republics
-		siege_completion_republics_loser
+		siege_completion_magocracys
+		siege_completion_magocracys_loser
 	}
 }
 
-siege_completion_republics = {
+siege_completion_magocracys = {
 	effect = {
 		if = {
 			limit = {
@@ -42,7 +42,7 @@ siege_completion_republics = {
 	}
 }
 
-siege_completion_republics_loser = {
+siege_completion_magocracys_loser = {
 	effect = {
 		if = {
 			limit = {
@@ -81,12 +81,12 @@ siege_completion_republics_loser = {
 # scope:victory is whether this side won the battle
 on_battle_owner_battle_end = {
 	on_actions = {
-		battle_win_republics
-		battle_lost_republics
+		battle_win_magocracys
+		battle_lost_magocracys
 	}
 }
 
-battle_win_republics = {
+battle_win_magocracys = {
 	trigger = {
 		scope:victory = yes
 		holds_valid_magocracy = yes
@@ -111,7 +111,7 @@ battle_win_republics = {
 	}
 }
 
-battle_lost_republics = {
+battle_lost_magocracys = {
 	trigger = {
 		scope:victory = no
 		holds_valid_magocracy = yes

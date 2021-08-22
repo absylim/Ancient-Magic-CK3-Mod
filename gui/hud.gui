@@ -14,7 +14,7 @@ widget = {
 	#state = {
 	#	name = am_magocracy
 	#	trigger_on_create = yes
-	#	on_start = "[ExecuteConsoleCommand('gui.createwidget gui/custom_gui/window_magocracy_council.gui republic_council_window')]"
+	#	on_start = "[ExecuteConsoleCommand('gui.createwidget gui/custom_gui/window_magocracy_council.gui magocracy_council_window')]"
 	#}
 
 	flowcontainer = {
@@ -934,7 +934,7 @@ widget = {
 				######################################
 
 				#button_hud_main_tab = {
-				#	name = "tab_republic"
+				#	name = "tab_magocracy"
 				#	tooltip = "REPUBLIC_BUTTON"
 				#	datacontext = "[GetScriptedGui( 'has_magocracy_government' )]"
 				#	visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
@@ -944,7 +944,7 @@ widget = {
 				#		texture = "gfx/interface/skinned/hud_maintab/maintab_council.dds"
 				#
 				#		onclick = "[GetScriptedGui('toggle_magocracy_council_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('actor',GetPlayer.MakeScope).AddScope('recipient',GetPlayer.MakeScope).End)]"
-				#		shortcut = "republic_council_window"
+				#		shortcut = "magocracy_council_window"
 				#		down = "[GetScriptedGui('is_magocracy_council_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 				#	}
 				#

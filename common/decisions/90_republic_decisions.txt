@@ -61,7 +61,7 @@ convert_whole_realm_to_magocracy_decision = {
 	}
 
 	effect = {
-		trigger_event = republic_decision_events.1003
+		trigger_event = magocracy_decision_events.1003
 		change_government = magocracy_government
 		add_realm_law = magocracy_succession_law
 		house = {
@@ -69,7 +69,7 @@ convert_whole_realm_to_magocracy_decision = {
 				text = effect_change_family_influence_positive
 				value = 1000
 				set_variable = {
-					name = convert_to_republic_prestige
+					name = convert_to_magocracy_prestige
 					value = 1000
 					years = 100
 				}
@@ -157,7 +157,7 @@ appease_estates_decision = {
 	}
 
 	effect = {
-		trigger_event = republic_decision_events.1001
+		trigger_event = magocracy_decision_events.1001
 	}
 	
 	ai_potential = {
@@ -181,7 +181,7 @@ attempt_coup_decision = {
 	is_shown = {
 		holds_valid_magocracy = yes
 		NOT = {
-			house.var:titular_republic = {
+			house.var:titular_magocracy = {
 				has_variable = current_dictatorship
 			}
 		}
@@ -196,7 +196,7 @@ attempt_coup_decision = {
 	}
 
 	effect = {
-		trigger_event = republic_decision_events.1002
+		trigger_event = magocracy_decision_events.1002
 		show_as_tooltip = { launch_coup_effect = yes }
 	}
 	
@@ -259,7 +259,7 @@ convert_to_magocracy_decision = {
 				text = effect_change_family_influence_positive
 				value = 2000
 				set_variable = {
-					name = convert_to_republic_prestige
+					name = convert_to_magocracy_prestige
 					value = 2000
 					years = 100
 				}
@@ -282,7 +282,7 @@ convert_to_magocracy_decision = {
 		capital_barony.title_province = {
 			set_holding_type = city_of_magic_holding
 		}
-		trigger_event = republic_decision_events.1003
+		trigger_event = magocracy_decision_events.1003
 	}
 	
 	ai_potential = {
@@ -411,8 +411,8 @@ call_emergency_vote_decision = {
 				holds_valid_magocracy = yes
 				OR = {
 					magocracy_has_council_form = yes
-					republic_has_senate_form = yes
-					republic_has_bicameral_form = yes
+					magocracy_has_senate_form = yes
+					magocracy_has_bicameral_form = yes
 				}
 			}
 			AND = {
@@ -421,13 +421,13 @@ call_emergency_vote_decision = {
 					holds_valid_magocracy = yes
 					OR = {
 						magocracy_has_council_form = yes
-						republic_has_senate_form = yes
-						republic_has_bicameral_form = yes
+						magocracy_has_senate_form = yes
+						magocracy_has_bicameral_form = yes
 					}
 				}
 			}
 		}
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			has_variable_list = proposed_laws_list
 			variable_list_size = { name = proposed_laws_list value > 0 }
 		}
@@ -456,9 +456,9 @@ call_emergency_vote_decision = {
 		}
 		custom_description = {
 			text = effect_trigger_election_cycle
-			house.var:titular_republic = {
+			house.var:titular_magocracy = {
 				if = {
-					limit = { exists = var:senate_government_republic }
+					limit = { exists = var:senate_government_magocracy }
 					trigger_election_cycle = yes
 				}
 				if = {
@@ -466,12 +466,12 @@ call_emergency_vote_decision = {
 					trigger_council_election_cycle = yes
 				}
 				if = {
-					limit = { exists = var:bicameral_government_republic }
+					limit = { exists = var:bicameral_government_magocracy }
 					bicameral_laws_voting = yes
 				}
 			}
 		}
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			every_in_list = {
 				variable = magocracy_families_list
 				limit = { NOT = { root.house = this } }
@@ -497,7 +497,7 @@ raise_personal_army_decision = {
 	is_shown = {
 		exists = house
 		is_house_head = yes
-		exists = house.var:titular_republic
+		exists = house.var:titular_magocracy
 	}
 
 	cooldown = {
@@ -538,10 +538,10 @@ attempt_to_become_dictator_decision = {
 		exists = house
 		is_house_head = yes
 		holds_valid_magocracy = yes
-		republic_has_senate_form = yes
+		magocracy_has_senate_form = yes
 		is_at_war = yes
 		NAND = {
-			house.var:titular_republic = { has_variable = current_dictatorship }
+			house.var:titular_magocracy = { has_variable = current_dictatorship }
 		}
 	}
 
@@ -562,10 +562,10 @@ attempt_to_become_dictator_decision = {
 		exists = house
 		is_house_head = yes
 		holds_valid_magocracy = yes
-		republic_has_senate_form = yes
+		magocracy_has_senate_form = yes
 		is_at_war = yes
 		NAND = {
-			house.var:titular_republic = { has_variable = current_dictatorship }
+			house.var:titular_magocracy = { has_variable = current_dictatorship }
 		}
 	}
 
@@ -618,8 +618,8 @@ dictator_levy_extra_tax_decision = {
 		exists = house
 		is_house_head = yes
 		holds_valid_magocracy = yes
-		republic_has_senate_form = yes
-		house.var:titular_republic = { has_variable = current_dictatorship }
+		magocracy_has_senate_form = yes
+		house.var:titular_magocracy = { has_variable = current_dictatorship }
 	}
 
 	cost = {
@@ -634,7 +634,7 @@ dictator_levy_extra_tax_decision = {
 	effect = {
 		add_gold = improved_taxes_gain
 		if = {
-			limit = { house.var:titular_republic = { has_variable = forced_dictatorship } }
+			limit = { house.var:titular_magocracy = { has_variable = forced_dictatorship } }
 			custom_description = {
 				text = effect_every_county_lose_county_control
 				value = 15
@@ -647,7 +647,7 @@ dictator_levy_extra_tax_decision = {
 			}
 		}
 		if = {
-			limit = { NOT = { house.var:titular_republic = { has_variable = forced_dictatorship } } }
+			limit = { NOT = { house.var:titular_magocracy = { has_variable = forced_dictatorship } } }
 			custom_description = {
 				text = effect_every_county_lose_county_control
 				value = 5
@@ -665,8 +665,8 @@ dictator_levy_extra_tax_decision = {
 		exists = house
 		is_house_head = yes
 		holds_valid_magocracy = yes
-		republic_has_senate_form = yes
-		house.var:titular_republic = { has_variable = current_dictatorship }
+		magocracy_has_senate_form = yes
+		house.var:titular_magocracy = { has_variable = current_dictatorship }
 	}
 
 	ai_will_do = {
@@ -706,12 +706,12 @@ dictator_conscript_levies_decision = {
 		exists = house
 		is_house_head = yes
 		holds_valid_magocracy = yes
-		republic_has_senate_form = yes
+		magocracy_has_senate_form = yes
 		OR = {
 			is_at_war = yes
-			house.var:titular_republic = { has_variable = forced_dictatorship }
+			house.var:titular_magocracy = { has_variable = forced_dictatorship }
 		}
-		house.var:titular_republic = { has_variable = current_dictatorship }
+		house.var:titular_magocracy = { has_variable = current_dictatorship }
 	}
 
 	cost = {
@@ -734,7 +734,7 @@ dictator_conscript_levies_decision = {
 			location = capital_province
 		}
 		if = {
-			limit = { house.var:titular_republic = { has_variable = forced_dictatorship } }
+			limit = { house.var:titular_magocracy = { has_variable = forced_dictatorship } }
 			custom_description = {
 				text = effect_every_county_lose_county_control
 				value = 25
@@ -747,7 +747,7 @@ dictator_conscript_levies_decision = {
 			}
 		}
 		if = {
-			limit = { NOT = { house.var:titular_republic = { has_variable = forced_dictatorship } } }
+			limit = { NOT = { house.var:titular_magocracy = { has_variable = forced_dictatorship } } }
 			custom_description = {
 				text = effect_every_county_lose_county_control
 				value = 10
@@ -765,38 +765,38 @@ dictator_conscript_levies_decision = {
 		exists = house
 		is_house_head = yes
 		holds_valid_magocracy = yes
-		republic_has_senate_form = yes
-		house.var:titular_republic = { has_variable = current_dictatorship }
+		magocracy_has_senate_form = yes
+		house.var:titular_magocracy = { has_variable = current_dictatorship }
 		OR = {
 			is_at_war = yes
-			house.var:titular_republic = { has_variable = forced_dictatorship }
+			house.var:titular_magocracy = { has_variable = forced_dictatorship }
 		}
 	}
 
 	ai_will_do = {
 		base = 0
 		modifier = {
-			house.var:titular_republic.holder = { any_character_war = { is_attacker = house.var:titular_republic.holder attacker_war_score < 0 } }
+			house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 0 } }
 			add = 30
 		}
 		modifier = {
-			house.var:titular_republic.holder = { any_character_war = { is_defender = house.var:titular_republic.holder defender_war_score < 0 } }
+			house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 0 } }
 			add = 40
 		}
 		modifier = {
-			house.var:titular_republic.holder = { any_character_war = { is_attacker = house.var:titular_republic.holder attacker_war_score < 40 } }
+			house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 40 } }
 			add = 20
 		}
 		modifier = {
-			house.var:titular_republic.holder = { any_character_war = { is_defender = house.var:titular_republic.holder defender_war_score < 40 } }
+			house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 40 } }
 			add = 20
 		}
 		modifier = {
-			house.var:titular_republic.holder = { any_character_war = { is_attacker = house.var:titular_republic.holder attacker_war_score < 70 } }
+			house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 70 } }
 			add = 40
 		}
 		modifier = {
-			house.var:titular_republic.holder = { any_character_war = { is_defender = house.var:titular_republic.holder defender_war_score < 70 } }
+			house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 70 } }
 			add = 60
 		}
 		modifier = {
@@ -823,8 +823,8 @@ dictator_resign_position_decision = {
 		exists = house
 		is_house_head = yes
 		holds_valid_magocracy = yes
-		republic_has_senate_form = yes
-		house.var:titular_republic = { has_variable = current_dictatorship has_variable = forced_dictatorship }
+		magocracy_has_senate_form = yes
+		house.var:titular_magocracy = { has_variable = current_dictatorship has_variable = forced_dictatorship }
 	}
 
 	is_valid_showing_failures_only = {
@@ -833,7 +833,7 @@ dictator_resign_position_decision = {
 
 	effect = {
 		custom_tooltip = dictator_resign_position_decision_effect_tooltip
-		house.var:titular_republic = {
+		house.var:titular_magocracy = {
 			remove_variable = forced_dictatorship
 			custom_description = {
 				text = effect_end_dictatorship
@@ -871,12 +871,12 @@ dictator_enforce_martial_law_decision = {
 		exists = house
 		is_house_head = yes
 		holds_valid_magocracy = yes
-		republic_has_senate_form = yes
+		magocracy_has_senate_form = yes
 		OR = {
 			is_at_war = yes
-			house.var:titular_republic = { has_variable = forced_dictatorship }
+			house.var:titular_magocracy = { has_variable = forced_dictatorship }
 		}
-		house.var:titular_republic = { has_variable = current_dictatorship NOT = { has_variable = martial_law } }
+		house.var:titular_magocracy = { has_variable = current_dictatorship NOT = { has_variable = martial_law } }
 	}
 
 	cost = {
@@ -905,38 +905,38 @@ dictator_enforce_martial_law_decision = {
 		exists = house
 		is_house_head = yes
 		holds_valid_magocracy = yes
-		republic_has_senate_form = yes
-		house.var:titular_republic = { has_variable = current_dictatorship NOT = { has_variable = martial_law } }
+		magocracy_has_senate_form = yes
+		house.var:titular_magocracy = { has_variable = current_dictatorship NOT = { has_variable = martial_law } }
 		OR = {
 			is_at_war = yes
-			house.var:titular_republic = { has_variable = forced_dictatorship }
+			house.var:titular_magocracy = { has_variable = forced_dictatorship }
 		}
 	}
 
 	ai_will_do = {
 		base = 0
 		modifier = {
-			house.var:titular_republic.holder = { any_character_war = { is_attacker = house.var:titular_republic.holder attacker_war_score < 0 } }
+			house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 0 } }
 			add = 30
 		}
 		modifier = {
-			house.var:titular_republic.holder = { any_character_war = { is_defender = house.var:titular_republic.holder defender_war_score < 0 } }
+			house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 0 } }
 			add = 40
 		}
 		modifier = {
-			house.var:titular_republic.holder = { any_character_war = { is_attacker = house.var:titular_republic.holder attacker_war_score < 40 } }
+			house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 40 } }
 			add = 20
 		}
 		modifier = {
-			house.var:titular_republic.holder = { any_character_war = { is_defender = house.var:titular_republic.holder defender_war_score < 40 } }
+			house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 40 } }
 			add = 20
 		}
 		modifier = {
-			house.var:titular_republic.holder = { any_character_war = { is_attacker = house.var:titular_republic.holder attacker_war_score < 70 } }
+			house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 70 } }
 			add = 40
 		}
 		modifier = {
-			house.var:titular_republic.holder = { any_character_war = { is_defender = house.var:titular_republic.holder defender_war_score < 70 } }
+			house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 70 } }
 			add = 60
 		}
 		modifier = {
@@ -962,12 +962,12 @@ dictator_end_martial_law_decision = {
 		exists = house
 		is_house_head = yes
 		holds_valid_magocracy = yes
-		republic_has_senate_form = yes
+		magocracy_has_senate_form = yes
 		OR = {
 			is_at_war = yes
-			house.var:titular_republic = { has_variable = forced_dictatorship }
+			house.var:titular_magocracy = { has_variable = forced_dictatorship }
 		}
-		house.var:titular_republic = { has_variable = current_dictatorship has_variable = martial_law }
+		house.var:titular_magocracy = { has_variable = current_dictatorship has_variable = martial_law }
 	}
 
 	is_valid_showing_failures_only = {

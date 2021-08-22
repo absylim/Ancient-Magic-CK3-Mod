@@ -5,7 +5,7 @@ family_respect = {
 	multiply = house_head.age
 	if = { limit = { exists = var:family_prestige } add = var:family_prestige }
 	if = { limit = { exists = var:temporary_change_prestige } add = var:temporary_change_prestige }
-	if = { limit = { exists = var:convert_to_republic_prestige } add = var:convert_to_republic_prestige }
+	if = { limit = { exists = var:convert_to_magocracy_prestige } add = var:convert_to_magocracy_prestige }
 	add = house_head.prestige
 	add = house_head.prestige
 	add = house_head.dynasty.dynasty_prestige_level
@@ -33,7 +33,7 @@ family_respect = {
 	}
 	
 	every_house_member = {
-		limit = { is_landed = yes NOT = { has_title = house.var:titular_republic } }
+		limit = { is_landed = yes NOT = { has_title = house.var:titular_magocracy } }
 		if = {
 			limit = { highest_held_title_tier = tier_barony }
 			add = 25
@@ -79,7 +79,7 @@ title_all_family_respect_divided_by_total_votes = {
 
 family_votes = {
 	value = family_respect
-	divide = var:titular_republic.title_all_family_respect_divided_by_total_votes
+	divide = var:titular_magocracy.title_all_family_respect_divided_by_total_votes
 }
 
 modulo_votes_family = {
@@ -294,7 +294,7 @@ councillors_yea_dragging_over = {
 	value = 0
 	every_in_list = {
 		variable = blackmailing_house_heads
-		limit = { NOT = { has_variable = house_votes_yea } exists = var:republic_councillor }
+		limit = { NOT = { has_variable = house_votes_yea } exists = var:magocracy_councillor }
 		add = 1
 	}
 }
@@ -303,7 +303,7 @@ councillors_nay_dragging_over = {
 	value = 0
 	every_in_list = {
 		variable = blackmailing_house_heads
-		limit = { NOT = { has_variable = house_votes_nay } exists = var:republic_councillor }
+		limit = { NOT = { has_variable = house_votes_nay } exists = var:magocracy_councillor }
 		add = 1
 	}
 }
@@ -485,9 +485,9 @@ negative_pay_for_favor = {
 	multiply = -1
 }
 
-republics_size_from_person = {
+magocracys_size_from_person = {
 	value = 0
-	house.var:titular_republic = {
+	house.var:titular_magocracy = {
 		every_in_list = {
 			variable = magocracy_families_list
 			add = 1
@@ -495,7 +495,7 @@ republics_size_from_person = {
 	}
 }
 
-republics_size_from_republic = {
+magocracys_size_from_magocracy = {
 	value = 0
 	every_in_list = {
 		variable = magocracy_families_list
@@ -562,9 +562,9 @@ bribery_cost = {
 	if = { limit = { scope:random_senator = { has_trait = fickle } } add = 25 }
 	if = { limit = { scope:random_senator = { has_trait = generous } } subtract = 50 }
 	if = { limit = { scope:random_senator = { has_trait = temperate } } subtract = 25 }
-	if = { limit = { house.var:titular_republic.var:senators_count = 200 } divide = 1.6 }
-	if = { limit = { house.var:titular_republic.var:senators_count = 500 } divide = 4 }
-	if = { limit = { house.var:titular_republic.var:senators_count = 50 } multiply = 1.6 }
+	if = { limit = { house.var:titular_magocracy.var:senators_count = 200 } divide = 1.6 }
+	if = { limit = { house.var:titular_magocracy.var:senators_count = 500 } divide = 4 }
+	if = { limit = { house.var:titular_magocracy.var:senators_count = 50 } multiply = 1.6 }
 }
 
 half_bribery_cost = {

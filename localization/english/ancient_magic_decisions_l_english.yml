@@ -130,6 +130,12 @@
  reset_mana_system_decision_confirm:0 "Reset!"
 
  #magocracy
+ call_emergency_vote_decision:0 "Call Session"
+ call_emergency_vote_decision_tooltip:0 "Call a session to vote on proposals before the next session begins."
+ call_emergency_vote_decision_desc:0 "As one of the patricians of the [GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.GetName], you can call a session before the next one begins, allowing you to vote on proposals early. This will annoy other patricians though."
+ call_emergency_vote_decision_confirm:0 "Send the news"
+ 
  convert_whole_realm_to_magocracy_decision:0 "Found Magocracy"
  convert_whole_realm_to_magocracy_decision_desc:0 "Government that is based around mage council."
  convert_whole_realm_to_magocracy_decision_confirm:0 "For Greater Truth!"
+ convert_whole_realm_to_magocracy_decision_tooltip:0 "Change [government|E] type by adopting Magocracyan government"

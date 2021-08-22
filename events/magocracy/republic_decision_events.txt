@@ -1,11 +1,11 @@
 ﻿# Written by Caden335
 
-namespace = republic_decision_events
+namespace = magocracy_decision_events
 
-republic_decision_events.1001 = {
+magocracy_decision_events.1001 = {
 	type = character_event
-	title = republic_decision_events.1001.t
-	desc = republic_decision_events.1001.desc
+	title = magocracy_decision_events.1001.t
+	desc = magocracy_decision_events.1001.desc
 	left_portrait = {
 		character = root
 		animation = bold
@@ -14,7 +14,7 @@ republic_decision_events.1001 = {
 
 	# Support the Nobility
 	option = {
-		name = republic_decision_events.1001.a
+		name = magocracy_decision_events.1001.a
 		if = {
 			limit = { is_independent_ruler = no }
 			liege_or_court_owner = {
@@ -42,7 +42,7 @@ republic_decision_events.1001 = {
 
 	# Support the Clergy
 	option = {
-		name = republic_decision_events.1001.b
+		name = magocracy_decision_events.1001.b
 		if = {
 			limit = { is_independent_ruler = no }
 			liege_or_court_owner = {
@@ -70,7 +70,7 @@ republic_decision_events.1001 = {
 
 	# Support the Clergy
 	option = {
-		name = republic_decision_events.1001.c
+		name = magocracy_decision_events.1001.c
 		if = {
 			limit = { is_independent_ruler = no }
 			liege_or_court_owner = {
@@ -97,10 +97,10 @@ republic_decision_events.1001 = {
 	}
 }
 
-republic_decision_events.1002 = { # Launch coup
+magocracy_decision_events.1002 = { # Launch coup
 	type = character_event
-	title = republic_decision_events.1002.t
-	desc = republic_decision_events.1002.desc
+	title = magocracy_decision_events.1002.t
+	desc = magocracy_decision_events.1002.desc
 	left_portrait = {
 		character = this
 		animation = bold
@@ -109,15 +109,15 @@ republic_decision_events.1002 = { # Launch coup
 
 	immediate = {
 		house = {
-			var:titular_republic = {
-				save_scope_as = titular_republic
+			var:titular_magocracy = {
+				save_scope_as = titular_magocracy
 			}
 		}
 	}
 
 	# Excellent
 	option = {
-		name = republic_decision_events.1002.a
+		name = magocracy_decision_events.1002.a
 		stress_impact = {
 			brave = medium_stress_impact_loss
 			arrogant = minor_stress_impact_loss
@@ -131,7 +131,7 @@ republic_decision_events.1002 = { # Launch coup
 		spawn_army = {
 			uses_supply = no
 			inheritable = no
-			name = republic_event_troops
+			name = magocracy_event_troops
 			levies = {
 				value = 1000
 			}
@@ -174,7 +174,7 @@ republic_decision_events.1002 = { # Launch coup
 			primary_title = {
 				every_in_list = {
 					variable = magocracy_families_list
-					remove_variable = titular_republic
+					remove_variable = titular_magocracy
 					clear_variable_list = election_candidates
 					remove_variable = family_respect
 					house_head = {
@@ -198,7 +198,7 @@ republic_decision_events.1002 = { # Launch coup
 
 	# Never Mind
 	option = {
-		name = republic_decision_events.1002.a
+		name = magocracy_decision_events.1002.a
 		stress_impact = {
 			brave = medium_stress_impact_gain
 			arrogant = minor_stress_impact_gain
@@ -209,10 +209,10 @@ republic_decision_events.1002 = { # Launch coup
 	}
 }
 
-republic_decision_events.1003 = { # Republic Setup
+magocracy_decision_events.1003 = { # Republic Setup
 	type = character_event
-	title = republic_decision_events.1003.t
-	desc = republic_decision_events.1003.desc
+	title = magocracy_decision_events.1003.t
+	desc = magocracy_decision_events.1003.desc
 	left_portrait = {
 		character = root
 		animation = bold
@@ -221,28 +221,28 @@ republic_decision_events.1003 = { # Republic Setup
 
 	# Set up Elected Ruler Republic
 	#option = {
-	#	name = republic_decision_events.1003.a
-	#	set_up_elected_ruler_republic = yes
+	#	name = magocracy_decision_events.1003.a
+	#	set_up_elected_ruler_magocracy = yes
 	#}
 
 	# Set up Council Republic
 	option = {
-		name = republic_decision_events.1003.b
+		name = magocracy_decision_events.1003.b
 		set_up_council_magocracy = yes
 	}
 
 	# Set up Senate Republic
 	#option = {
-	#	name = republic_decision_events.1003.c
-	#	set_up_senate_republic = yes
-	#	trigger_event = republic_decision_events.1005
+	#	name = magocracy_decision_events.1003.c
+	#	set_up_senate_magocracy = yes
+	#	trigger_event = magocracy_decision_events.1005
 	#}
 }
 
-republic_decision_events.1004 = { #Buy off senator
+magocracy_decision_events.1004 = { #Buy off senator
 	type = character_event
-	title = republic_decision_events.1004.t
-	desc = republic_decision_events.1004.desc
+	title = magocracy_decision_events.1004.t
+	desc = magocracy_decision_events.1004.desc
 	left_portrait = {
 		character = root
 		animation = spymaster
@@ -264,7 +264,7 @@ republic_decision_events.1004 = { #Buy off senator
 
 	# Bribery
 	option = {
-		name = republic_decision_events.1004.a
+		name = magocracy_decision_events.1004.a
 		duel = {
 			skill = intrigue
 			target = scope:random_senator
@@ -274,10 +274,10 @@ republic_decision_events.1004 = { #Buy off senator
 					multiplier = 0.5
 					min = -5
 				}
-				desc = republic_decision_events.1004.successful_bribery
+				desc = magocracy_decision_events.1004.successful_bribery
 				send_interface_toast = {
 					left_icon = root
-					title = republic_decision_events.1004.successful_bribery
+					title = magocracy_decision_events.1004.successful_bribery
 					gain_senator_count = { GAINS = 1 }
 					scope:house_robbing = { lose_senator_count = { LOSSES = 1 } }
 					remove_short_term_gold = bribery_cost
@@ -289,7 +289,7 @@ republic_decision_events.1004 = { #Buy off senator
 					multiplier = -0.5
 					min = -4
 				}
-				desc = republic_decision_events.1004.failed_bribery
+				desc = magocracy_decision_events.1004.failed_bribery
 				remove_short_term_gold = half_bribery_cost
 			}
 		}
@@ -297,7 +297,7 @@ republic_decision_events.1004 = { #Buy off senator
 
 	# Our house can grant you opportunities
 	option = {
-		name = republic_decision_events.1004.b
+		name = magocracy_decision_events.1004.b
 		duel = {
 			skill = diplomacy
 			target = scope:random_senator
@@ -307,10 +307,10 @@ republic_decision_events.1004 = { #Buy off senator
 					multiplier = 0.5
 					min = -3
 				}
-				desc = republic_decision_events.1004.successful_convincing
+				desc = magocracy_decision_events.1004.successful_convincing
 				send_interface_toast = {
 					left_icon = root
-					title = republic_decision_events.1004.successful_convincing
+					title = magocracy_decision_events.1004.successful_convincing
 					gain_senator_count = { GAINS = 1 }
 					scope:house_robbing = { lose_senator_count = { LOSSES = 1 } }
 					add_prestige = -200
@@ -322,7 +322,7 @@ republic_decision_events.1004 = { #Buy off senator
 					multiplier = -0.5
 					min = -4
 				}
-				desc = republic_decision_events.1004.failed_convincing
+				desc = magocracy_decision_events.1004.failed_convincing
 				add_prestige = -50
 			}
 		}
@@ -337,10 +337,10 @@ republic_decision_events.1004 = { #Buy off senator
 	}
 }
 
-republic_decision_events.1005 = { # Senators Count
+magocracy_decision_events.1005 = { # Senators Count
 	type = character_event
-	title = republic_decision_events.1005.t
-	desc = republic_decision_events.1005.desc
+	title = magocracy_decision_events.1005.t
+	desc = magocracy_decision_events.1005.desc
 	left_portrait = {
 		character = root
 		animation = bold
@@ -349,8 +349,8 @@ republic_decision_events.1005 = { # Senators Count
 
 	# Daring 50
 	option = {
-		name = republic_decision_events.1005.a
-		house.var:titular_republic = {
+		name = magocracy_decision_events.1005.a
+		house.var:titular_magocracy = {
 			set_variable = {
 				name = senators_count
 				value = 50
@@ -361,8 +361,8 @@ republic_decision_events.1005 = { # Senators Count
 
 	# Daring 80
 	option = {
-		name = republic_decision_events.1005.ab
-		house.var:titular_republic = {
+		name = magocracy_decision_events.1005.ab
+		house.var:titular_magocracy = {
 			set_variable = {
 				name = senators_count
 				value = 80
@@ -373,8 +373,8 @@ republic_decision_events.1005 = { # Senators Count
 
 	# Overboard 200
 	option = {
-		name = republic_decision_events.1005.b
-		house.var:titular_republic = {
+		name = magocracy_decision_events.1005.b
+		house.var:titular_magocracy = {
 			set_variable = {
 				name = senators_count
 				value = 200
@@ -385,8 +385,8 @@ republic_decision_events.1005 = { # Senators Count
 
 	# What is wrong with you 500
 	option = {
-		name = republic_decision_events.1005.c
-		house.var:titular_republic = {
+		name = magocracy_decision_events.1005.c
+		house.var:titular_magocracy = {
 			set_variable = {
 				name = senators_count
 				value = 500
@@ -397,8 +397,8 @@ republic_decision_events.1005 = { # Senators Count
 
 	# Normal 100
 	option = {
-		name = republic_decision_events.1005.d
-		house.var:titular_republic = {
+		name = magocracy_decision_events.1005.d
+		house.var:titular_magocracy = {
 			set_variable = {
 				name = senators_count
 				value = 100
