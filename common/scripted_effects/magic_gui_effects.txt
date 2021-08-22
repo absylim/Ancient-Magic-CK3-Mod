@@ -227,9 +227,23 @@ effect_get_all_sculpt_flesh_traits = {
 		name = sculpter_of_flesh_spell_list
 		target = flag:clubfooted
 	}
+	if = {
+		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:surefooted } }
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:surefooted
+		}
+	}
 	add_to_variable_list = {
 		name = sculpter_of_flesh_spell_list
 		target = flag:hunchbacked
+	}
+	if = {
+		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:regal_bearing } }
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:regal_bearing
+		}
 	}
 	add_to_variable_list = {
 		name = sculpter_of_flesh_spell_list
@@ -239,13 +253,58 @@ effect_get_all_sculpt_flesh_traits = {
 		name = sculpter_of_flesh_spell_list
 		target = flag:scaly
 	}
+	if = {
+		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:glowing } }
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:glowing
+		}
+	}
 	add_to_variable_list = {
 		name = sculpter_of_flesh_spell_list
 		target = flag:wheezing
 	}
+	if = {
+		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:hardy_lung } }
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:hardy_lung
+		}
+	}
 	add_to_variable_list = {
 		name = sculpter_of_flesh_spell_list
 		target = flag:bleeder
+	}
+	if = {
+		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:pt_balanced_humors } }
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:pt_balanced_humors
+		}
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:nearsighted
+		}
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:hawkeyed
+		}
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:deaf
+		}
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:keen-eared
+		}
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:permanent_scowl
+		}
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:friendly_face
+		}
 	}
 }
 
@@ -368,6 +427,10 @@ effect_get_all_sculpt_mind_traits = {
 	}
 	add_to_variable_list = {
 		name = sculpt_mind_spell_list
+		target = flag:sadistic
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
 		target = flag:compassionate
 	}
 	add_to_variable_list = {
@@ -388,10 +451,6 @@ effect_get_all_sculpt_mind_traits = {
 	}
 	add_to_variable_list = {
 		name = sculpt_mind_spell_list
-		target = flag:sadistic
-	}
-	add_to_variable_list = {
-		name = sculpt_mind_spell_list
 		target = flag:shrewd
 	}
 	add_to_variable_list = {
@@ -401,6 +460,13 @@ effect_get_all_sculpt_mind_traits = {
 	add_to_variable_list = {
 		name = sculpt_mind_spell_list
 		target = flag:stuttering
+	}
+	if = {
+		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:silver_tongued } }
+		add_to_variable_list = {
+			name = sculpt_mind_spell_list
+			target = flag:silver_tongued
+		}
 	}
 	add_to_variable_list = {
 		name = sculpt_mind_spell_list
@@ -413,6 +479,25 @@ effect_get_all_sculpt_mind_traits = {
 	add_to_variable_list = {
 		name = sculpt_mind_spell_list
 		target = flag:lunatic_genetic
+	}
+	if = {
+		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:dyslexic } }
+		add_to_variable_list = {
+			name = sculpt_mind_spell_list
+			target = flag:dyslexic
+		}
+		add_to_variable_list = {
+			name = sculpt_mind_spell_list
+			target = flag:hyperlexic
+		}
+		add_to_variable_list = {
+			name = sculpt_mind_spell_list
+			target = flag:dyscalculic
+		}
+		add_to_variable_list = {
+			name = sculpt_mind_spell_list
+			target = flag:hypercalculic
+		}
 	}
 }
 

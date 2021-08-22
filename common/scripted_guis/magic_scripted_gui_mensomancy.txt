@@ -588,6 +588,10 @@ sculpt_mind_spell = {
 					if = { limit = { has_trait = stuttering } remove_trait = stuttering }
 					else = { add_trait = stuttering }
 				}
+				flag:silver_tongued = {
+					if = { limit = { has_trait = silver_tongued } remove_trait = silver_tongued }
+					else = { add_trait = silver_tongued }
+				}
 				flag:depressed_genetic = {
 					if = { limit = { has_trait = depressed_genetic } remove_trait = depressed_genetic }
 					else = { add_trait = depressed_genetic }
@@ -599,6 +603,22 @@ sculpt_mind_spell = {
 				flag:lunatic_genetic = {
 					if = { limit = { has_trait = lunatic_genetic } remove_trait = lunatic_genetic }
 					else = { add_trait = lunatic_genetic }
+				}
+				flag:dyslexic = {
+					if = { limit = { has_trait = dyslexic } remove_trait = dyslexic }
+					else = { add_trait = dyslexic }
+				}
+				flag:hyperlexic = {
+					if = { limit = { has_trait = hyperlexic } remove_trait = hyperlexic }
+					else = { add_trait = hyperlexic }
+				}
+				flag:dyscalculic = {
+					if = { limit = { has_trait = dyscalculic } remove_trait = dyscalculic }
+					else = { add_trait = dyscalculic }
+				}
+				flag:hypercalculic = {
+					if = { limit = { has_trait = hypercalculic } remove_trait = hypercalculic }
+					else = { add_trait = hypercalculic }
 				}
 			}
 		}
@@ -896,11 +916,21 @@ sculpt_mind_spell_has_list = {
 						}
 					}
 				}
+				flag:sadistic = {
+					OR = {
+						has_trait = sadistic
+						AND = {
+							NOT = { has_trait = compassionate }
+							number_of_personality_traits < personality_trait_limit
+						}
+					}
+				}
 				flag:compassionate = {
 					OR = {
 						has_trait = compassionate
 						AND = {
 							NOT = { has_trait = callous }
+							NOT = { has_trait = sadistic }
 							number_of_personality_traits < personality_trait_limit
 						}
 					}
@@ -941,13 +971,19 @@ sculpt_mind_spell_has_list = {
 						}
 					}
 				}
-				flag:sadistic = {
-					OR = {
-						has_trait = sadistic number_of_personality_traits < personality_trait_limit
-					}
-				}
 				flag:shrewd = { NOT = { has_trait = dull } }
 				flag:dull = { NOT = { has_trait = shrewd } }
+				flag:stuttering = {
+					OR = {
+						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:silver_tongued } }
+						NOT = { has_trait = silver_tongued }
+					}
+				}
+				flag:silver_tongued = { NOT = { has_trait = stuttering } }
+				flag:dyslexic = { NOT = { has_trait = hyperlexic } }
+				flag:hyperlexic = { NOT = { has_trait = dyslexic } }
+				flag:dyscalculic = { NOT = { has_trait = hypercalculic } }
+				flag:hypercalculic = { NOT = { has_trait = dyscalculic } }
 				fallback = { always = yes }
 			}
 		}

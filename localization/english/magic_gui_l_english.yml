@@ -72,6 +72,7 @@
  friendship_spell_gui_name: "Friendship"
  rivalry_spell_gui_name: "Rivalry"
  enchanting_aura_spell_gui_name: "Enchanting Aura"
+ sculpt_mind_spell_gui_name: "Sculpt Mind"
  master_of_puppets_spell_gui_name: "Master of Puppets"
 
  ## Spell Descs
@@ -79,19 +80,19 @@
  dummy_spell_desc: ""
 
  #Time
- glimpse_the_future_spell_desc: "You extend your awareness, focusing your perception onto a time in the distant future, trying to make sense of the myriad images which play before your eyes as you build your spell construct. At the moment when you feel as though you could reach out and touch that distant time and place, you gather your [mana|El], ready to cast the spell. Will you?"
- financial_times_spell_desc: "You extend your awareness, focusing your mind on the fundamental randomness of reality, letting scenario after scenario play out before you. As you weave the intricate patterns of your spell construct, you feel as though you are on the verge of some new kind of understanding. You feel as though someone could roll a die a thousand times and you could say what face it would land on for each. All that's left to do is infuse the spell with [mana|El]. Will you?"
- celerity_spell_desc: "You begin to weave intricate geometric patterns around yourself, threading them in and out of your local temporal reference frame, and draw them tighter, pulling yourself out of step with others' perception of time, and into one where you are moving at a break-neck pace. Your spell construct hums in time with you, whirling about you as you prepare to invest it with [mana|El]. Will you?"
- mass_celerity_spell_desc: "You stretch your hands out to either side and begin to draw the perfect geomatric patterns of the chronomancy [school_of_magic|E] into a rotating swirl about yourself. Your intent clear, and the spell construct drawn, the only thing left to do is to invest your aura with mana. Will you?"
- slowness_spell_desc: "You begin to weave intricate geometric patterns around yourself, threading them in and out of your local temporal reference frame, and pushing them outwards, raising the fabric of time into a hill around yourself, and forcing all who approach you to move far more slowly. Your spell construct lets out a glacial, rhythmic hum, swirling listlessly about you as you prepare to invest it with [mana|El]. Will you?"
- mass_slowness_spell_desc: "You begin building the [slowness|El] spell-construct which has become second nature to you, then with an irrefutable will, you press the wall of time out from yourself, raising hills in the local time geometry where your subjects are, and leaving everyone else to struggle up those hills. Then, your hands quavering from the mental strain of the spell, you prepare to invest it with [mana|El]. Will you?"
- temporal_manipulation_spell_desc: "Taking all that you have learned about the manipulation of time up until now, weaving it into a massive spell construct which extends out around you, blanketing everything and everyone in your domain, you reach out with your magical senses and trail your spell through the land itself, taking it tightly with your will and heaving it up into a hill. The temporal geometry of your domain begins to shift, shakily rising up higher, and to your senses it seems as though all of your people are moving in a blur compared to those just outside of your spell construct. Will you invest your spell with [mana|El] to stabilize it?"
- master_of_time_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ glimpse_the_future_spell_desc: "This spell allows the user brief insights into the future of their culture, allowing them to view new innovations and technologies. Gives a bonus to [cultural_fascination|E] research speed."
+ financial_times_spell_desc: "A more directed application of future sight, this spell allows the user to see specific events, such as resource abundances or shortages, well in advance, allowing them to gain a market advantage. Gives a bonus to monthly [income|E]."
+ celerity_spell_desc: "A relatively simple application of [chronomancy|E], this spell allows the user to increase the flow of time around themselves, giving them extraordinarily fast reaction times. Best used in short bursts, so as not to age oneself too quickly. Gives a bonus to [prowess|E]."
+ mass_celerity_spell_desc: "Contrary to the name, this spell is actually a more powerful version of slowness. Instead of slowing a single target, the mage slows all but a select group. While those affected still move at a normal speed, they appear to be moving at great speed. Gives a bonus to army movement speed."
+ slowness_spell_desc: "The equal but opposite form of celerity, this spell allows the user to decrease the flow of time around a target, making them seem to move at a snail's pace. Gives the target a penalty to [prowess|E]. Must be revoked from a target before being cast on a different target."
+ mass_slowness_spell_desc: "More powerful than slowness, not as powerful as mass celerity, this spell gives the user enough fine control to slow only enemy soldiers, even in the middle of pitched battle. Gives a bonus to [advantage|E] and friendly [dead_soldiers|E] reduction."
+ temporal_manipulation_spell_desc: "The true successor to celerity, this spell allows the user to increase the flow of time around a specific area, allowing tasks to be performed at a much faster rate. Gives a bonus to [building|E] construction speed."
+ master_of_time_spell_desc: "Having mastered the nuances of time's flow, this spell allows the user to completely halt the passage of time for another person, while still allowing them to interact with the world as normal. Makes the target [GetTrait('immortal').GetName(GetPlayer)]."
 
  # Life
- heal_spell_desc: "Already weaving your will into a few simple spell constructs designed to alleviate suffering and heal injury and disease, you take a moment to observe [GetPlayer.Custom2('SpellTargetYourself', GetPlayer.MakeScope.Var('spell_target').Char)], and see that [GetPlayer.Custom2('SpellTargetSheHeIsYouAre', GetPlayer.MakeScope.Var('spell_target').Char)] clearly suffering from some minor maladies, that any healer worth the name could fix. Will you?"
- greater_heal_spell_desc: "Already weaving your will into a few simple spell constructs designed to alleviate suffering and heal injury and disease, you take a moment to observe [GetPlayer.Custom2('SpellTargetYourself', GetPlayer.MakeScope.Var('spell_target').Char)], and see that [GetPlayer.Custom2('SpellTargetSheHeIsYouAre', GetPlayer.MakeScope.Var('spell_target').Char)] clearly suffering from some complex injury or disease, but you should be able to fix it. Will you?"
- avatar_of_life_spell_desc: "Already weaving your will into a few simple spell constructs designed to alleviate suffering and heal injury and disease, you take a moment to observe [GetPlayer.Custom2('SpellTargetYourself', GetPlayer.MakeScope.Var('spell_target').Char)], and see that [GetPlayer.Custom2('SpellTargetSheHeIsYouAre', GetPlayer.MakeScope.Var('spell_target').Char)] definitely suffering grievously, though your long training and immense knowledge allow you to cure them. Will you?"
+ heal_spell_desc: ""
+ greater_heal_spell_desc: ""
+ avatar_of_life_spell_desc: ""
 
  # Elemental
  flame_aura_spell_desc: "You bend your thoughts and intent into a state of rage, and an undeniable need for destruction, pressing that white hot spark out, until the world around you seems on the verge of burning under the assault of your will, and then you stoke the flames higher, feeding into them every sleight, every set-back, every moment when you've lost your temper, until your spell is on the verge of manifesting. Will you feed it [mana|El]?"
@@ -129,6 +130,7 @@
  friendship_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
  rivalry_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
  enchanting_aura_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ sculpt_mind_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
  master_of_puppets_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
 
  #Rewrite Beauty list
@@ -174,9 +176,72 @@
  wheezing_list_gui_name: "$trait_wheezing$"
  bleeder_list_gui_name: "$trait_bleeder$"
 
+ # Sculpter of Flesh Compatibility list
+ surefooted_list_gui_name: "$trait_surefooted$"
+ regal_bearing_list_gui_name: "$trait_regal_bearing$"
+ glowing_list_gui_name: "$trait_glowing$"
+ hardy_lung_list_gui_name: "$trait_hardy_lung$"
+ pt_balanced_humors_list_gui_name: "$trait_pt_balanced_humors$"
+ nearsighted_list_gui_name: "$trait_nearsighted$"
+ hawkeyed_list_gui_name: "$trait_hawkeyed$"
+ deaf_list_gui_name: "$trait_deaf$"
+ keen-eared_list_gui_name: "$trait_keen-eared$"
+ permanent_scowl_list_gui_name: "$trait_permanent_scowl$"
+ friendly_face_list_gui_name: "$trait_friendly_face$"
+
+ # Sculpt Mind list
+ lustful_list_gui_name: "$trait_lustful$"
+ chaste_list_gui_name: "$trait_chaste$"
+ gluttonous_list_gui_name: "$trait_gluttonous$"
+ temperate_list_gui_name: "$trait_temperate$"
+ greedy_list_gui_name: "$trait_greedy$"
+ generous_list_gui_name: "$trait_generous$"
+ lazy_list_gui_name: "$trait_lazy$"
+ diligent_list_gui_name: "$trait_diligent$"
+ wrathful_list_gui_name: "$trait_wrathful$"
+ calm_list_gui_name: "$trait_calm$"
+ impatient_list_gui_name: "$trait_impatient$"
+ patient_list_gui_name: "$trait_patient$"
+ arrogant_list_gui_name: "$trait_arrogant$"
+ humble_list_gui_name: "$trait_humble$"
+ deceitful_list_gui_name: "$trait_deceitful$"
+ honest_list_gui_name: "$trait_honest$"
+ craven_list_gui_name: "$trait_craven$"
+ brave_list_gui_name: "$trait_brave$"
+ shy_list_gui_name: "$trait_shy$"
+ gregarious_list_gui_name: "$trait_gregarious$"
+ ambitious_list_gui_name: "$trait_ambitious$"
+ content_list_gui_name: "$trait_content$"
+ arbitrary_list_gui_name: "$trait_arbitrary$"
+ just_list_gui_name: "$trait_just$"
+ cynical_list_gui_name: "$trait_cynical$"
+ zealous_list_gui_name: "$trait_zealous$"
+ paranoid_list_gui_name: "$trait_paranoid$"
+ trusting_list_gui_name: "$trait_trusting$"
+ callous_list_gui_name: "$trait_callous$"
+ compassionate_list_gui_name: "$trait_compassionate$"
+ vengeful_list_gui_name: "$trait_vengeful$"
+ forgiving_list_gui_name: "$trait_forgiving$"
+ fickle_list_gui_name: "$trait_fickle$"
+ stubborn_list_gui_name: "$trait_stubborn$"
+ sadistic_list_gui_name: "$trait_sadistic$"
+ shrewd_list_gui_name: "$trait_shrewd$"
+ dull_list_gui_name: "$trait_dull$"
+ stuttering_list_gui_name: "$trait_stuttering$"
+ depressed_genetic_list_gui_name: "$trait_depressed_genetic$"
+ possessed_genetic_list_gui_name: "$trait_possessed_genetic$"
+ lunatic_genetic_list_gui_name: "$trait_lunatic_genetic$"
+
+ # Sculpt Mind Compatibility list
+ silver_tongued_list_gui_name: "$trait_silver_tongued$"
+ dyslexic_list_gui_name: "$trait_dyslexic$"
+ hyperlexic_list_gui_name: "$trait_hyperlexic$"
+ dyscalculic_list_gui_name: "$trait_dyscalculic$"
+ hypercalculic_list_gui_name: "$trait_hypercalculic$"
+
  # Fertility Control list
  inc_fertility_list_gui_name: "Fertility"
  dec_fertility_list_gui_name: "Infertility"
-
+ 
  # Custom loc
  MAGIC_GUI_AURA_TIMES: "$VALUE|0$ times"

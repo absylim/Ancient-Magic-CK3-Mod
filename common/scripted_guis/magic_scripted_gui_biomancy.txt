@@ -651,130 +651,104 @@ sculpter_of_flesh_spell = {
 			switch = {
 				trigger = prev.var:list_option
 				flag:fecund = {
-					if = {
-						limit = { has_trait = fecund }
-						remove_trait = fecund
-					}
-					else = {
-						add_trait = fecund
-					}
+					if = { limit = { has_trait = fecund } remove_trait = fecund }
+					else = { add_trait = fecund }
 				}
 				flag:infertile = {
-					if = {
-						limit = { has_trait = infertile }
-						remove_trait = infertile
-					}
-					else = {
-						add_trait = infertile
-					}
+					if = { limit = { has_trait = infertile } remove_trait = infertile }
+					else = { add_trait = infertile }
 				}
 				flag:strong = {
-					if = {
-						limit = { has_trait = strong }
-						remove_trait = strong
-					}
-					else = {
-						add_trait = strong
-					}
+					if = { limit = { has_trait = strong } remove_trait = strong }
+					else = { add_trait = strong }
 				}
 				flag:weak = {
-					if = {
-						limit = { has_trait = weak }
-						remove_trait = weak
-					}
-					else = {
-						add_trait = weak
-					}
+					if = { limit = { has_trait = weak } remove_trait = weak }
+					else = { add_trait = weak }
 				}
 				flag:spindly = {
-					if = {
-						limit = { has_trait = spindly }
-						remove_trait = spindly
-					}
-					else = {
-						add_trait = spindly
-					}
+					if = { limit = { has_trait = spindly } remove_trait = spindly }
+					else = { add_trait = spindly }
 				}
 				flag:giant = {
-					if = {
-						limit = { has_trait = giant }
-						remove_trait = giant
-					}
-					else = {
-						add_trait = giant
-					}
+					if = { limit = { has_trait = giant } remove_trait = giant }
+					else = { add_trait = giant }
 				}
 				flag:dwarf = {
-					if = {
-						limit = { has_trait = dwarf }
-						remove_trait = dwarf
-					}
-					else = {
-						add_trait = dwarf
-					}
+					if = { limit = { has_trait = dwarf } remove_trait = dwarf }
+					else = { add_trait = dwarf }
 				}
 				flag:albino = {
-					if = {
-						limit = { has_trait = albino }
-						remove_trait = albino
-					}
-					else = {
-						add_trait = albino
-					}
+					if = { limit = { has_trait = albino } remove_trait = albino }
+					else = { add_trait = albino }
 				}
 				flag:clubfooted = {
-					if = {
-						limit = { has_trait = clubfooted }
-						remove_trait = clubfooted
-					}
-					else = {
-						add_trait = clubfooted
-					}
+					if = { limit = { has_trait = clubfooted } remove_trait = clubfooted }
+					else = { add_trait = clubfooted }
+				}
+				flag:surefooted = {
+					if = { limit = { has_trait = surefooted } remove_trait = surefooted }
+					else = { add_trait = surefooted }
 				}
 				flag:hunchbacked = {
-					if = {
-						limit = { has_trait = hunchbacked }
-						remove_trait = hunchbacked
-					}
-					else = {
-						add_trait = hunchbacked
-					}
+					if = { limit = { has_trait = hunchbacked } remove_trait = hunchbacked }
+					else = { add_trait = hunchbacked }
+				}
+				flag:regal_bearing = {
+					if = { limit = { has_trait = regal_bearing } remove_trait = regal_bearing }
+					else = { add_trait = regal_bearing }
 				}
 				flag:lisping = {
-					if = {
-						limit = { has_trait = lisping }
-						remove_trait = lisping
-					}
-					else = {
-						add_trait = lisping
-					}
+					if = { limit = { has_trait = lisping } remove_trait = lisping }
+					else = { add_trait = lisping }
 				}
 				flag:scaly = {
-					if = {
-						limit = { has_trait = scaly }
-						remove_trait = scaly
-					}
-					else = {
-						add_trait = scaly
-					}
+					if = { limit = { has_trait = scaly } remove_trait = scaly }
+					else = { add_trait = scaly }
+				}
+				flag:glowing = {
+					if = { limit = { has_trait = glowing } remove_trait = glowing }
+					else = { add_trait = glowing }
 				}
 				flag:wheezing = {
-					if = {
-						limit = { has_trait = wheezing }
-						remove_trait = wheezing
-					}
-					else = {
-						add_trait = wheezing
-					}
+					if = { limit = { has_trait = wheezing } remove_trait = wheezing }
+					else = { add_trait = wheezing }
+				}
+				flag:hardy_lung = {
+					if = { limit = { has_trait = hardy_lung } remove_trait = hardy_lung }
+					else = { add_trait = hardy_lung }
 				}
 				flag:bleeder = {
-					if = {
-						limit = { has_trait = bleeder }
-						remove_trait = bleeder
-					}
-					else = {
-						add_trait = bleeder
-					}
+					if = { limit = { has_trait = bleeder } remove_trait = bleeder }
+					else = { add_trait = bleeder }
+				}
+				flag:pt_balanced_humors = {
+					if = { limit = { has_trait = pt_balanced_humors } remove_trait = pt_balanced_humors }
+					else = { add_trait = pt_balanced_humors }
+				}
+				flag:nearsighted = {
+					if = { limit = { has_trait = nearsighted } remove_trait = nearsighted }
+					else = { add_trait = nearsighted }
+				}
+				flag:hawkeyed = {
+					if = { limit = { has_trait = hawkeyed } remove_trait = hawkeyed }
+					else = { add_trait = hawkeyed }
+				}
+				flag:deaf = {
+					if = { limit = { has_trait = deaf } remove_trait = deaf }
+					else = { add_trait = deaf }
+				}
+				flag:keen-eared = {
+					if = { limit = { has_trait = keen-eared } remove_trait = keen-eared }
+					else = { add_trait = keen-eared }
+				}
+				flag:permanent_scowl = {
+					if = { limit = { has_trait = permanent_scowl } remove_trait = permanent_scowl }
+					else = { add_trait = permanent_scowl }
+				}
+				flag:friendly_face = {
+					if = { limit = { has_trait = friendly_face } remove_trait = friendly_face }
+					else = { add_trait = friendly_face }
 				}
 			}
 		}
@@ -808,16 +782,59 @@ sculpter_of_flesh_spell_has_list = {
 		always = yes
 	}
 	is_valid = {
-		switch = {
-			trigger = scope:list_option
-			flag:fecund = { NOT = { scope:spell_target = { has_trait = infertile } } }
-			flag:infertile = { NOT = { scope:spell_target = { has_trait = fecund } } }
-			flag:strong = { NOT = { scope:spell_target = { has_trait = weak has_trait = spindly } } }
-			flag:weak = { NOT = { scope:spell_target = { has_trait = strong } } }
-			flag:spindly = { NOT = { scope:spell_target = { has_trait = strong } } }
-			flag:giant = { NOT = { scope:spell_target = { has_trait = dwarf } } }
-			flag:dwarf = { NOT = { scope:spell_target = { has_trait = giant } } }
-			fallback = { always = yes }
+		scope:spell_target = {
+			switch = {
+				trigger = scope:list_option
+				flag:fecund = { NOT = { has_trait = infertile } }
+				flag:infertile = { NOT = { has_trait = fecund } }
+				flag:strong = { NOT = { has_trait = weak has_trait = spindly } }
+				flag:weak = { NOT = { has_trait = strong } }
+				flag:spindly = { NOT = { has_trait = strong } }
+				flag:giant = { NOT = { has_trait = dwarf } }
+				flag:dwarf = { NOT = { has_trait = giant } }
+				flag:clubfooted = {
+					OR = {
+						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:surefooted } }
+						NOT = { has_trait = surefooted }
+					}
+				}
+				flag:surefooted = { NOT = { has_trait = clubfooted } }
+				flag:hunchbacked = {
+					OR = {
+						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:regal_bearing } }
+						NOT = { has_trait = regal_bearing }
+					}
+				}
+				flag:regal_bearing = { NOT = { has_trait = hunchbacked } }
+				flag:scaly = {
+					OR = {
+						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:glowing } }
+						NOT = { has_trait = glowing }
+					}
+				}
+				flag:glowing = { NOT = { has_trait = scaly } }
+				flag:wheezing = {
+					OR = {
+						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:hardy_lung } }
+						NOT = { has_trait = hardy_lung }
+					}
+				}
+				flag:hardy_lung = { NOT = { has_trait = wheezing } }
+				flag:bleeder = {
+					OR = {
+						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:pt_balanced_humors } }
+						NOT = { has_trait = pt_balanced_humors }
+					}
+				}
+				flag:pt_balanced_humors = { NOT = { has_trait = bleeder } }
+				flag:nearsighted = { NOT = { has_trait = hawkeyed } }
+				flag:hawkeyed = { NOT = { has_trait = nearsighted } }
+				flag:deaf = { NOT = { has_trait = keen-eared } }
+				flag:keen-eared = { NOT = { has_trait = deaf } }
+				flag:permanent_scowl = { NOT = { has_trait = friendly_face } }
+				flag:friendly_face = { NOT = { has_trait = permanent_scowl } }
+				fallback = { always = yes }
+			}
 		}
 	}
 }
