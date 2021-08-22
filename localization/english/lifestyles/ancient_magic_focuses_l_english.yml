@@ -3,7 +3,7 @@
  arcane_lifestyle_name:0 "Magic"
  arcane_lifestyle_desc:0 "Arcane Mysteries"
  
-#Focuses
+ # Focuses
  magic_arcana_focus:0 "Arcana"
  magic_arcana_focus_desc:0 "You focus on your studies of the arcane to learn new magics faster at the cost of generating mana."
  magic_arcana_focus_effect:0 "Arcana Focus"
@@ -16,3 +16,4 @@
  magic_mana_focus_desc:0 "You forego aquiring new gifts to focus entirely on generating mana."
  magic_mana_focus_effect:0 "Mana Focus"
  magic_mana_focus_effect_desc:0 "Focusing on $magic_mana_focus$ grants:\n[mana|E] generation per month: #P +[EmptyScope.ScriptValue('mana_gen_lifestyle')|0]#!"
+ monthly_ancient_magic_lifestyle_xp_gain_mult:0 "Monthly Magic [lifestyle|E] Experience"

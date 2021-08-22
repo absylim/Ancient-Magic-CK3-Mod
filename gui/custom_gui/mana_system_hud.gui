@@ -27,17 +27,16 @@ types mana_hud_guis {
 
 						hbox = {
 							layoutpolicy_horizontal = expanding
+
 							text_single = {
 								layoutpolicy_horizontal = expanding
 								text = mana_hud_tooltip_total
 								default_format = "#T"
 							}
-							expand = {}
+
 							text_single = {
-								align = right
 								name = "maximum_mana"
 								text = MAXIMUM_MANA_TOTAL
-								fonttintcolor = "[TooltipInfo.GetTintColor]"
 							}
 
 							background = {
@@ -67,6 +66,7 @@ types mana_hud_guis {
 								layoutpolicy_horizontal = expanding
 								datacontext = "[GetScriptedGui( 'hud_mana_gen_perks' )]"
 								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
 								text_single = {
 									name = "gained_value_perks1"
 									layoutpolicy_horizontal = expanding
@@ -78,10 +78,8 @@ types mana_hud_guis {
 								}
 
 								text_single = {
-									align = right
 									name = "gained_value_perks2"
 									text = MONTHLY_MANA_GAIN_PERKS
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
 								}
 							}
 
@@ -89,6 +87,7 @@ types mana_hud_guis {
 								layoutpolicy_horizontal = expanding
 								datacontext = "[GetScriptedGui( 'hud_mana_gen_potency' )]"
 								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
 								text_single = {
 									name = "gained_value_potency1"
 									layoutpolicy_horizontal = expanding
@@ -100,10 +99,8 @@ types mana_hud_guis {
 								}
 
 								text_single = {
-									align = right
 									name = "gained_value_potency2"
 									text = MONTHLY_MANA_GAIN_POTENCY
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
 								}
 							}
 
@@ -111,6 +108,7 @@ types mana_hud_guis {
 								layoutpolicy_horizontal = expanding
 								datacontext = "[GetScriptedGui( 'hud_mana_gen_circles' )]"
 								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
 								text_single = {
 									name = "gained_value_circles1"
 									layoutpolicy_horizontal = expanding
@@ -122,10 +120,8 @@ types mana_hud_guis {
 								}
 
 								text_single = {
-									align = right
 									name = "gained_value_circles2"
 									text = MONTHLY_MANA_GAIN_CIRCLES
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
 								}
 							}
 
@@ -133,6 +129,7 @@ types mana_hud_guis {
 								layoutpolicy_horizontal = expanding
 								datacontext = "[GetScriptedGui( 'hud_mana_gen_lifestyle' )]"
 								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
 								text_single = {
 									name = "gained_value_lifestyle1"
 									layoutpolicy_horizontal = expanding
@@ -144,10 +141,8 @@ types mana_hud_guis {
 								}
 
 								text_single = {
-									align = right
 									name = "gained_value_lifestyle2"
 									text = MONTHLY_MANA_GAIN_LIFESTYLE
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
 								}
 							}
 
@@ -155,6 +150,7 @@ types mana_hud_guis {
 								layoutpolicy_horizontal = expanding
 								datacontext = "[GetScriptedGui( 'hud_mana_gen_legacy' )]"
 								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
 								text_single = {
 									name = "gained_value_legacy1"
 									layoutpolicy_horizontal = expanding
@@ -166,10 +162,8 @@ types mana_hud_guis {
 								}
 
 								text_single = {
-									align = right
 									name = "gained_value_legacy2"
 									text = MONTHLY_MANA_GAIN_LEGACY
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
 								}
 							}
 
@@ -196,10 +190,8 @@ types mana_hud_guis {
 								}
 
 								text_single = {
-									align = right
 									name = "gained_value_total2"
 									text = MANA_GENERATION_TOOLTIP
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
 								}
 							}
 						}
@@ -224,6 +216,7 @@ types mana_hud_guis {
 								layoutpolicy_horizontal = expanding
 								datacontext = "[GetScriptedGui( 'hud_mana_drain_auras' )]"
 								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
 								text_single = {
 									name = "drain_value_auras1"
 									layoutpolicy_horizontal = expanding
@@ -235,10 +228,8 @@ types mana_hud_guis {
 								}
 
 								text_single = {
-									align = right
 									name = "drain_value_auras2"
 									text = MONTHLY_MANA_DRAIN_AURAS
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
 								}
 							}
 
@@ -246,6 +237,7 @@ types mana_hud_guis {
 								layoutpolicy_horizontal = expanding
 								datacontext = "[GetScriptedGui( 'hud_mana_drain_lifestyle' )]"
 								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
 								text_single = {
 									name = "drain_value_lifestyle1"
 									layoutpolicy_horizontal = expanding
@@ -257,10 +249,8 @@ types mana_hud_guis {
 								}
 
 								text_single = {
-									align = right
 									name = "drain_value_lifestyle2"
 									text = MONTHLY_MANA_DRAIN_LIFESTYLE
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
 								}
 							}
 
@@ -268,6 +258,7 @@ types mana_hud_guis {
 								layoutpolicy_horizontal = expanding
 								datacontext = "[GetScriptedGui( 'hud_mana_drain_disease1' )]"
 								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
 								text_single = {
 									name = "drain_value_disease1a"
 									layoutpolicy_horizontal = expanding
@@ -279,10 +270,8 @@ types mana_hud_guis {
 								}
 
 								text_single = {
-									align = right
 									name = "drain_value_disease1b"
 									text = MONTHLY_MANA_DRAIN_DISEASE
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
 								}
 							}
 
@@ -290,6 +279,7 @@ types mana_hud_guis {
 								layoutpolicy_horizontal = expanding
 								datacontext = "[GetScriptedGui( 'hud_mana_drain_disease2' )]"
 								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
 								text_single = {
 									name = "drain_value_disease2a"
 									layoutpolicy_horizontal = expanding
@@ -301,10 +291,8 @@ types mana_hud_guis {
 								}
 
 								text_single = {
-									align = right
 									name = "drain_value_disease2b"
 									text = MONTHLY_MANA_DRAIN_DISEASE
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
 								}
 							}
 
@@ -317,7 +305,7 @@ types mana_hud_guis {
 								}
 							}
 
-							hbox = { #Total Gen
+							hbox = { #Total Drain
 								layoutpolicy_horizontal = expanding
 
 								text_single = {
@@ -331,11 +319,33 @@ types mana_hud_guis {
 								}
 
 								text_single = {
-									align = right
 									name = "drain_value_total2"
 									text = MANA_DRAIN_TOOLTIP
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
 								}
+							}
+						}
+
+						hbox = { #Net Gen
+							layoutpolicy_horizontal = expanding
+							datacontext = "[GetScriptedGui( 'hud_positive_net_mana_gen' )]"
+							margin_top = 10
+							margin_bottom = 2
+
+							text_single = {
+								layoutpolicy_horizontal = expanding
+								text = mana_hud_tooltip_change
+								default_format = "#T"
+							}
+
+							text_single = {
+								name = "monthly_gen1"
+								text = MANA_GENERATION
+							}
+
+							background = {
+								using = Background_Area
+								margin = { 10 0 }
+								margin_bottom = 5
 							}
 						}
 					}
@@ -348,7 +358,7 @@ types mana_hud_guis {
 			datacontext = "[GetTrait('mage')]"
 
 			hbox = {
-				spacing = 6
+				spacing = 0
 				margin_top = -11
 				visible = "[And( Not(IsObserver), GetPlayer.HasTrait(Trait.Self) )]"
 
@@ -358,38 +368,45 @@ types mana_hud_guis {
 					texture = "gfx/interface/icons/icon_active_aura.dds"
 				}
 
-				flowcontainer = {
-					margin_bottom = 7
-					spacing = -6
-					direction = vertical
+				vbox = {
+					margin_bottom = 1
+					spacing = 1
 					ignoreinvisible = yes
 
 					text_single = {
 						name = "mana_value"
-						layoutpolicy_horizontal = expanding
 						text = "[GetPlayer.MakeScope.Var('mana').GetValue|0]"
 						max_width = 50
 						default_format = "#high"
 						using = Font_Size_Medium
 					}
 
-					text_single = {
-						name = "investiture_balance"
-						visible = "[GreaterThanOrEqualTo_CFixedPoint(GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen'), '(CFixedPoint)0')]"
-						layoutpolicy_horizontal = expanding
-						text = "MANA_GENERATION"
-						max_width = 50
-						default_format = "#low"
+					progressbar_standard = {
+						name = "mana_bar"
+						size = { 40 8 }
+
+						min = 0
+						max = "[FixedPointToFloat(GetPlayer.MakeScope.ScriptValue('ancient_magic_max_mana'))]"
+						value = "[FixedPointToFloat(GetPlayer.MakeScope.Var('mana').GetValue)]"
 					}
 
-					text_single = {
-						name = "investiture_balance_negative"
-						visible = "[LessThanOrEqualTo_CFixedPoint(GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen'), '(CFixedPoint)0')]"
-						layoutpolicy_horizontal = expanding
-						text = "MANA_GENERATION"
-						max_width = 50
-						default_format = "#N"
-					}
+					#text_single = {
+					#	name = "mana_balance"
+					#	visible = "[GreaterThanOrEqualTo_CFixedPoint(GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen'), '(CFixedPoint)0')]"
+					#	layoutpolicy_horizontal = expanding
+					#	text = "MANA_GENERATION"
+					#	max_width = 50
+					#	default_format = "#low"
+					#}
+
+					#text_single = {
+					#	name = "mana_balance_negative"
+					#	visible = "[LessThanOrEqualTo_CFixedPoint(GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen'), '(CFixedPoint)0')]"
+					#	layoutpolicy_horizontal = expanding
+					#	text = "MANA_GENERATION"
+					#	max_width = 50
+					#	default_format = "#N"
+					#}
 				}
 			}
 
@@ -399,7 +416,7 @@ types mana_hud_guis {
 				visible = "[Or( IsObserver, Not(GetPlayer.HasTrait(Trait.Self)) )]"
 
 				icon = {
-					name = "stormlight_icon"
+					name = "inactive_icon"
 					size = { 30 30 }
 					texture = "gfx/interface/icons/icon_inactive_aura.dds"
 				}
@@ -411,7 +428,7 @@ types mana_hud_guis {
 					ignoreinvisible = yes
 
 					text_single = {
-						name = "investiture_value"
+						name = "mana_value"
 						layoutpolicy_horizontal = expanding
 						text = "0"
 						max_width = 50
@@ -420,9 +437,9 @@ types mana_hud_guis {
 					}
 
 					text_single = {
-						name = "investiture_balance"
+						name = "mana_balance"
 						layoutpolicy_horizontal = expanding
-						text = "0.0"
+						text = "0"
 						max_width = 50
 						default_format = "#low"
 					}

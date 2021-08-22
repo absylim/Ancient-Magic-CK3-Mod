@@ -1,0 +1,471 @@
+﻿#Mind Magic
+entrance_spell = {
+	scope = character
+	is_shown = {
+		NOT = { this = scope:spell_target }
+	}
+	is_valid = {
+		AND = {
+			scope:spell_target = {
+				NOT = {
+					has_opinion_modifier = {
+						target = prev
+						modifier = entrance_spell_opinion
+					}
+				}
+			}
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		scope:spell_target = {
+			add_opinion = {
+				target = prev
+				modifier = entrance_spell_opinion
+			}
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+entrance_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = entrance_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+entrance_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+entrance_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+incite_lust_spell = {
+	scope = character
+	is_shown = {
+		NOT = { this = scope:spell_target }
+	}
+	is_valid = {
+		AND = {
+			NOT = { scope:spell_target = { has_relation_lover = prev } }
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		scope:spell_target = { set_relation_lover = prev }
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+incite_lust_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = incite_lust_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+incite_lust_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+incite_lust_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+incite_obedience_spell = {
+	scope = character
+	is_shown = {
+		NOT = { this = scope:spell_target }
+	}
+	is_valid = {
+		AND = {
+			NOT = {
+				has_hook_of_type = {
+					target = scope:spell_target
+					type = ancient_magic_hook_obedient
+				}
+			}
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		add_hook = {
+			target = scope:spell_target
+			type = ancient_magic_hook_obedient
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+incite_obedience_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = incite_obedience_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+incite_obedience_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+incite_obedience_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+dominate_spell = {
+	scope = character
+	is_shown = {
+		NOT = { this = scope:spell_target }
+	}
+	is_valid = {
+		AND = {
+			NOT = {
+				has_hook_of_type = {
+					target = scope:spell_target
+					type = ancient_magic_hook_dominated
+				}
+			}
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		add_hook = {
+			target = scope:spell_target
+			type = ancient_magic_hook_dominated
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+dominate_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = dominate_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+dominate_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+dominate_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+beguiling_aura_spell = { # aura of majesty
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = beguiling_aura_modifier } }
+			add_character_modifier = beguiling_aura_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+		else = {
+			remove_all_character_modifier_instances = beguiling_aura_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+	}
+}
+
+beguiling_aura_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = beguiling_aura_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+beguiling_aura_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+beguiling_aura_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+friendship_spell = {
+	scope = character
+	is_shown = {
+		NOT = { this = scope:spell_target }
+	}
+	is_valid = {
+		AND = {
+			NOT = { scope:spell_target = { has_relation_friend = prev } }
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		scope:spell_target = { set_relation_friend = prev }
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+friendship_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = friendship_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+friendship_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+friendship_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+rivalry_spell = {
+	scope = character
+	is_shown = {
+		NOT = { this = scope:spell_target }
+	}
+	is_valid = {
+		AND = {
+			NOT = { scope:spell_target = { has_relation_rival = prev } }
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		scope:spell_target = { set_relation_rival = prev }
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+rivalry_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = friendship_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+rivalry_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+rivalry_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+enchanting_aura_spell = { # aura of truth
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = enchanting_aura_modifier } }
+			add_character_modifier = enchanting_aura_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
+		}
+		else = {
+			remove_all_character_modifier_instances = enchanting_aura_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_large }
+		}
+	}
+}
+
+enchanting_aura_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = enchanting_aura_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+enchanting_aura_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+enchanting_aura_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+master_of_puppets_spell = {
+	scope = character
+	is_shown = {
+		NOT = { this = scope:spell_target }
+	}
+	is_valid = {
+		AND = {
+			NOT = {
+				has_hook_of_type = {
+					target = scope:spell_target
+					type = ancient_magic_hook_dominated
+				}
+			}
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		add_hook = {
+			target = scope:spell_target
+			type = ancient_magic_hook_puppet
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+master_of_puppets_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = master_of_puppets_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+master_of_puppets_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+master_of_puppets_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}

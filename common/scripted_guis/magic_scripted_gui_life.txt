@@ -1,0 +1,146 @@
+﻿#Life
+heal_spell = {
+	scope = character
+	is_shown = {
+		scope:spell_target = { am_has_minor_illness = yes }
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		scope:spell_target = { am_remove_minor_illness = yes }
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+heal_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = heal_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+heal_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+heal_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+greater_heal_spell = {
+	scope = character
+	is_shown = {
+		scope:spell_target = { am_has_greater_illness = yes }
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		scope:spell_target = {
+			am_remove_minor_illness = yes
+			am_remove_greater_illness = yes
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+greater_heal_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = greater_heal_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+greater_heal_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+greater_heal_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+avatar_of_life_spell = {
+	scope = character
+	is_shown = {
+		scope:spell_target = { am_has_critical_illness = yes }
+	}
+	is_valid = {
+		AND = {
+			NOT = { scope:spell_target = { has_character_modifier = full_restoration_modifier } }
+			var:mana.compare_value >= scope:spell_cost.compare_value
+		}
+	}
+	effect = {
+		scope:spell_target = {
+			am_remove_minor_illness = yes
+			am_remove_greater_illness = yes
+			am_remove_critical_illness = yes
+			add_character_modifier = {
+				modifier = full_restoration_modifier
+				years = 5
+			}
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+	}
+}
+
+avatar_of_life_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = avatar_of_life_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+avatar_of_life_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+avatar_of_life_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}

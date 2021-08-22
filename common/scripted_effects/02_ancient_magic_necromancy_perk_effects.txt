@@ -1,0 +1,49 @@
+﻿unlock_inflict_illness_spell = {
+	custom_description_no_bullet = {
+		text = unlock_inflict_illness_spell
+	}
+}
+
+unlock_plague_lord_spell = {
+	custom_description_no_bullet = {
+		text = unlock_plague_lord_spell
+	}
+}
+
+unlock_aura_of_death_spell = {
+	custom_description_no_bullet = {
+		text = unlock_aura_of_death_spell
+	}
+}
+
+unlock_necromancy_spell = {
+	custom_description_no_bullet = {
+		text = unlock_necromancy_spell
+	}
+}
+
+unlock_drain_life_spell = {
+	custom_description_no_bullet = {
+		text = unlock_drain_life_spell
+	}
+}
+
+unlock_death_stare_spell = {
+	custom_description_no_bullet = {
+		text = unlock_death_stare_spell
+	}
+}
+
+unlock_deacon_of_death_spell = {
+	custom_description_no_bullet = {
+		text = unlock_deacon_of_death_spell
+	}
+}
+
+convert_undead = {
+	custom_description = {
+		text = convert_undead
+		add_trait = undead
+		add_character_flag = immune_to_disease
+	}
+}

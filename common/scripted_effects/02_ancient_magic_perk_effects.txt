@@ -1,0 +1,24 @@
+﻿gain_mana_gen_perk = {
+	custom_description_no_bullet = {
+		text = gain_mana_gen_perk
+	}
+}
+
+gain_max_mana_perk = {
+	custom_description_no_bullet = {
+		text = gain_max_mana_perk
+	}
+}
+
+gain_mage_xp_perk = {
+	custom_description_no_bullet = {
+		text = gain_mage_xp_perk
+	}
+}
+
+immune_to_disease_effect = {
+	custom_description_no_bullet = {
+		text = immune_to_disease_effect
+	}
+	add_character_flag = immune_to_disease
+}

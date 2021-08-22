@@ -1,0 +1,48 @@
+﻿cast_spell_interaction = {
+	category = interaction_category_uncategorized
+
+	desc = cast_spell_interaction_desc
+
+	is_shown = {
+		always = yes
+	}
+
+	is_valid = {
+		scope:actor = {
+			has_trait = mage
+		}
+	}
+
+	is_highlighted = {
+		scope:actor = {
+			AND = {
+				exists = var:mana
+				exists = var:max_mana
+				var:mana.compare_value = var:max_mana.compare_value
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+
+	auto_accept = yes
+
+	on_accept = {
+		scope:actor = {
+			custom_description = {
+				text = spell_caster_effect
+				scope:recipient = {
+					save_scope_as = spell_target
+				}
+				effect_open_magic_window = yes
+			}
+		}
+		scope:recipient = {
+			custom_description = {
+				text = spell_target_effect
+			}
+		}
+	}
+}

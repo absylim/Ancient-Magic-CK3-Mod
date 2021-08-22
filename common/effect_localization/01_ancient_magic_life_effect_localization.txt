@@ -1,0 +1,17 @@
+﻿unlock_heal_spell = {
+	global = GLOBAL_UNLOCK_HEAL_PERK_EFFECT
+	first = FIRST_UNLOCK_HEAL_PERK_EFFECT
+	third = THIRD_UNLOCK_HEAL_PERK_EFFECT
+}
+
+unlock_greater_heal_spell = {
+	global = GLOBAL_UNLOCK_GREATER_HEAL_SPELL
+	first = FIRST_UNLOCK_GREATER_HEAL_SPELL
+	third = THIRD_UNLOCK_GREATER_HEAL_SPELL
+}
+
+unlock_avatar_of_life_spell = {
+	global = GLOBAL_UNLOCK_AVATAR_OF_LIFE_SPELL
+	first = FIRST_UNLOCK_AVATAR_OF_LIFE_SPELL
+	third = THIRD_UNLOCK_AVATAR_OF_LIFE_SPELL
+}

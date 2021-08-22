@@ -3,13 +3,13 @@
 	tree = time_magic
 	position = { 2 0 }
 	icon = node_diplomacy
-	
+
 	auto_selection_weight = {
 		value = 11
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential	
+					has_trait = magic_potential
 					has_trait = education_arcane
 				}
 			}
@@ -52,23 +52,18 @@
 			multiply = 0
 		}
 	}
-	
-	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		add_trait_force_tooltip = mage
-		add_trait_force_tooltip = mana
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
-	}
+
 	character_modifier = {
 		monthly_income_mult = 0.1
+	}
+
+	effect = {
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		add_trait_force_tooltip = mage
+		add_trait_force_tooltip = mana
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
@@ -77,13 +72,15 @@ glimpse_the_future_perk = {
 	tree = time_magic
 	position = { 0 1.25 }
 	icon = node_diplomacy
-	
+
+	parent = time_mage_perk
+
 	auto_selection_weight = {
 		value = 11
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential	
+					has_trait = magic_potential
 					has_trait = education_arcane
 				}
 			}
@@ -126,21 +123,14 @@ glimpse_the_future_perk = {
 			multiply = 0
 		}
 	}
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		unlock_glimpse_the_future_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
-	
-	parent = time_mage_perk
 }
 
 financial_times_perk = {
@@ -149,13 +139,15 @@ financial_times_perk = {
 	position = { 0 2.5 }
 	parent = glimpse_the_future_perk
 	icon = node_diplomacy
-	
+
+	parent = glimpse_the_future_perk
+
 	auto_selection_weight = {
 		value = 11
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential	
+					has_trait = magic_potential
 					has_trait = education_arcane
 				}
 			}
@@ -198,19 +190,12 @@ financial_times_perk = {
 			multiply = 0
 		}
 	}
-	
-	
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		unlock_financial_times_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
@@ -220,15 +205,15 @@ celerity_perk = {
 	tree = time_magic
 	position = { 2 1.25 }
 	icon = node_diplomacy
-	
+
 	parent = time_mage_perk
-	
+
 	auto_selection_weight = {
 		value = 11
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential	
+					has_trait = magic_potential
 					has_trait = education_arcane
 				}
 			}
@@ -271,18 +256,13 @@ celerity_perk = {
 			multiply = 0
 		}
 	}
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		unlock_celerity_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
@@ -292,13 +272,15 @@ mass_celerity_perk = {
 	tree = time_magic
 	position = { 2 2.5 }
 	icon = node_diplomacy
-	
+
+	parent = celerity_perk
+
 	auto_selection_weight = {
 		value = 11
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential	
+					has_trait = magic_potential
 					has_trait = education_arcane
 				}
 			}
@@ -341,20 +323,13 @@ mass_celerity_perk = {
 			multiply = 0
 		}
 	}
-	
-	parent = celerity_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		unlock_mass_celerity_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
@@ -364,13 +339,15 @@ slowness_perk = {
 	tree = time_magic
 	position = { 4 1.25 }
 	icon = node_diplomacy
-	
+
+	parent = time_mage_perk
+
 	auto_selection_weight = {
 		value = 11
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential	
+					has_trait = magic_potential
 					has_trait = education_arcane
 				}
 			}
@@ -413,20 +390,13 @@ slowness_perk = {
 			multiply = 0
 		}
 	}
-	
-	parent = time_mage_perk
 
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		unlock_slowness_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
@@ -436,13 +406,15 @@ mass_slowness_perk = {
 	tree = time_magic
 	position = { 4 2.5 }
 	icon = node_diplomacy
-	
+
+	parent = slowness_perk
+
 	auto_selection_weight = {
 		value = 11
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential	
+					has_trait = magic_potential
 					has_trait = education_arcane
 				}
 			}
@@ -485,20 +457,13 @@ mass_slowness_perk = {
 			multiply = 0
 		}
 	}
-	
-	parent = slowness_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		unlock_mass_slowness_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
@@ -508,13 +473,17 @@ temporal_manipulation_perk = {
 	tree = time_magic
 	position = { 2 3.75 }
 	icon = node_diplomacy
-	
+
+	parent = financial_times_perk
+	parent = mass_celerity_perk
+	parent = mass_slowness_perk
+
 	auto_selection_weight = {
 		value = 11
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential	
+					has_trait = magic_potential
 					has_trait = education_arcane
 				}
 			}
@@ -557,22 +526,13 @@ temporal_manipulation_perk = {
 			multiply = 0
 		}
 	}
-	
-	parent = financial_times_perk
-	parent = mass_celerity_perk
-	parent = mass_slowness_perk
 
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		unlock_temporal_manipulation_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
@@ -582,13 +542,15 @@ master_of_time_perk = {
 	tree = time_magic
 	position = { 2 5 }
 	icon = master_of_time
-	
+
+	parent = temporal_manipulation_perk
+
 	auto_selection_weight = {
 		value = 11
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential	
+					has_trait = magic_potential
 					has_trait = education_arcane
 				}
 			}
@@ -631,21 +593,13 @@ master_of_time_perk = {
 			multiply = 0
 		}
 	}
-	
-	
-	parent = temporal_manipulation_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_master_of_time_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		add_trait_force_tooltip = master_of_time
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }

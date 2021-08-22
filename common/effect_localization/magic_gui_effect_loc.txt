@@ -1,0 +1,20 @@
+﻿display_aura_times_loc = {
+    global = MAGIC_GUI_AURA_TIMES
+    global_neg = MAGIC_GUI_AURA_TIMES
+    first = MAGIC_GUI_AURA_TIMES
+    first_neg = MAGIC_GUI_AURA_TIMES
+    third = MAGIC_GUI_AURA_TIMES
+    third_neg = MAGIC_GUI_AURA_TIMES
+}
+
+spell_caster_effect = {
+    global = GLOBAL_SPELL_CASTER_EFFECT
+    first = FIRST_SPELL_CASTER_EFFECT
+    third = THIRD_SPELL_CASTER_EFFECT
+}
+
+spell_target_effect = {
+    global = GLOBAL_SPELL_TARGET_EFFECT
+    first = FIRST_SPELL_TARGET_EFFECT
+    third = THIRD_SPELL_TARGET_EFFECT
+}

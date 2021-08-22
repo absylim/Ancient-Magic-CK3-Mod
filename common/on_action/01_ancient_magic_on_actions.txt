@@ -1,37 +1,12 @@
-﻿on_reset_mana_system = {
-	trigger = {
-		has_trait = mana
-	}
-
-	effect = {
-		set_variable = {
-			name = max_mana
-			value = 0
-		}
-		set_variable = {
-			name = mana_gen
-			value = 0
-		}
-		trigger_event = { on_action = reset_mana_system }
-		if = {
-			limit = {
-				exists = var:mana
-				var:mana > var:max_mana
-			}
-			set_variable = {
-				name = mana
-				value = var:max_mana
-			}
-		}
-		trigger_event = ancient_magic_aura_update_events.001
-	}
-}
-
-reset_mana_system = {
+﻿reset_mana_system = {
 	on_actions = { ancient_magic_reset_mana_system }
 }
 
 ancient_magic_reset_mana_system = {
+	events = {
+		ancient_magic_aura_update_events.001
+	}
+
 	effect = {
 		change_variable = {
 			name = mana_gen
@@ -44,84 +19,13 @@ ancient_magic_reset_mana_system = {
 	}
 }
 
-grant_to_mage_action = {
+death_stare_action = {
 	effect = {
-		holder = {
-			save_scope_as = old_holder
-			faith = {
-				save_scope_as = holder_faith
+		scope:spell_target = {
+			death = {
+				killer = scope:spell_caster
+				death_reason = death_stare
 			}
-			culture = {
-				save_scope_as = holder_culture
-			}
-		}
-		culture = {
-			save_scope_as = land_culture
-		}
-		faith = {
-			save_scope_as = land_faith
-		}
-
-		create_character = {
-			save_scope_as = new_holder
-			random_traits = yes
-			age = { 18 65 }
-			gender_female_chance = 50
-			random_traits_list = {
-				magic_potential_1 = { weight = { base = 50 } }
-				magic_potential_2 = { weight = { base = 35 } }
-				magic_potential_3 = { weight = { base = 15 } }
-			}
-			random_traits_list = {
-				education_arcane_1 = { weight = { base = 35 } }
-				education_arcane_2 = { weight = { base = 35 } }
-				education_arcane_3 = { weight = { base = 20 } }
-				education_arcane_4 = { weight = { base = 10 } }
-			}
-			random_traits_list = {
-				count = { 1 2 }
-				diplomat = {}
-				family_first = {}
-				august = {}
-				reveler_1 = {}
-				poet = {}
-				architect = {}
-				administrator = {}
-				avaricious = {}
-				scholar = {}
-				theologian = {}
-				whole_of_body = {}
-				physician_1 = {}
-				physician_2 = {}
-				physician_3 = {}
-				mystic_1 = {}
-				mystic_2 = {}
-				lifestyle_herbalist = {}
-			}
-			employer = scope:old_holder
-			random_faith = {
-				scope:land_faith = { trigger = { always = yes } }
-				scope:holder_faith = { trigger = { always = yes } }
-			}
-			random_culture = {
-				scope:land_culture = { trigger = { always = yes } }
-				scope:holder_culture = { trigger = { always = yes } }
-			}
-		}
-
-		create_title_and_vassal_change = {
-			type = granted
-			save_scope_as = title_change
-			add_claim_on_loss = no
-		}
-		change_title_holder = {
-			holder = scope:new_holder
-			change = scope:title_change
-		}
-		resolve_title_and_vassal_change = scope:title_change
-
-		scope:new_holder = {
-			change_government = feudal_government
 		}
 	}
 }

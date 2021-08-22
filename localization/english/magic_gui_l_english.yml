@@ -1,0 +1,182 @@
+﻿l_english:
+ ## GUI
+ MAGIC_BUTTON: "Open Magic"
+ MAGIC_VIEW: "Magic"
+ MAGE_LEVEL: "Mage Level: [GetPlayer.MakeScope.ScriptValue('mage_level')|0]"
+ MAGE_XP_TNL: "Mage XP: [GetPlayer.MakeScope.ScriptValue('mage_xp')|0] / [GetPlayer.MakeScope.ScriptValue('mage_xp_to_next_level')|0]"
+ CURRENT_MANA: "#high #bold Current Mana:#!#!"
+ CURRENT_MANA_NUM: "[GetPlayer.MakeScope.Var('mana').GetValue|0]/[GetPlayer.MakeScope.ScriptValue('ancient_magic_max_mana')|0]"
+ NO_DESCRIPTION: "Select a spell for there to be a description"
+ SELECT_SPELL_TARGET: "Select Target"
+ CAST_SPELL: "Cast Spell"
+ SELECT_THIS: "Select"
+ REPEAT_X_TIMES: "#high #bold Repeat Spell#!#!\n[GetPlayer.MakeScope.Var('repeat_spell').GetValue|0] Times"
+ SPELL_PARAMETERS: "Spell Properties"
+
+ ## Spell Categories
+ time_category: "Chronomancy"
+ life_category: "Chiromancy"
+ elemental_category: "Elomancy"
+ necromancy_category: "Necromancy"
+ biomancy_category: "Biomancy"
+ mind_magic_category: "Mensomancy"
+
+ ### Spells
+ ## Spell Names
+ # error catching
+ dummy_spell_gui_name: ""
+
+ # Time
+ glimpse_the_future_spell_gui_name: "Glimpse the Future"
+ financial_times_spell_gui_name: "Financial Times"
+ celerity_spell_gui_name: "Celerity"
+ mass_celerity_spell_gui_name: "Mass Celerity"
+ slowness_spell_gui_name: "Slowness"
+ mass_slowness_spell_gui_name: "Mass Slowness"
+ temporal_manipulation_spell_gui_name: "Temporal Manipulation"
+ master_of_time_spell_gui_name: " Master of Time"
+ # Life
+ heal_spell_gui_name: "Heal"
+ greater_heal_spell_gui_name: "Greater Heal"
+ avatar_of_life_spell_gui_name: "Avatar of Life"
+ # Elemental
+ flame_aura_spell_gui_name: "Flame Aura"
+ flaming_weapons_spell_gui_name: "Flaming Weapons"
+ living_earthworks_spell_gui_name: "Living Earthworks"
+ golem_creation_spell_gui_name: "Create Stone Golem"
+ control_water_spell_gui_name: "Control Water"
+ drought_spell_gui_name: "Drought"
+ elemental_warrior_spell_gui_name: "Elemental Warrior"
+ lord_of_the_elements_spell_gui_name: "Create Lava Golem"
+ # Necromancy
+ inflict_illness_spell_gui_name: "Inflict Illness"
+ plague_lord_spell_gui_name: "Plague Lord"
+ aura_of_death_spell_gui_name: "Aura of Death"
+ necromancy_spell_gui_name: "Necromancy"
+ drain_life_spell_gui_name: "Drain Life"
+ death_stare_spell_gui_name: "Death Stare"
+ deacon_of_death_spell_gui_name: "Deacon of Death"
+ # Biomancy
+ rewrite_beauty_spell_gui_name: "Rewrite Beauty"
+ rewrite_physique_spell_gui_name: "Rewrite Physique"
+ rewrite_intellect_spell_gui_name: "Rewrite Intellect"
+ sculpter_of_flesh_spell_gui_name: "Sculpter of Flesh"
+ fertility_control_spell_gui_name: "Fertility Control"
+ impregnate_spell_gui_name: "Impregnate"
+ # Mind Magic
+ entrance_spell_gui_name: "Entrance"
+ incite_lust_spell_gui_name: "Incite Lust"
+ incite_obedience_spell_gui_name: "Incite Obedience"
+ dominate_spell_gui_name: "Dominate"
+ beguiling_aura_spell_gui_name: "Beguiling Aura"
+ friendship_spell_gui_name: "Friendship"
+ rivalry_spell_gui_name: "Rivalry"
+ enchanting_aura_spell_gui_name: "Enchanting Aura"
+ master_of_puppets_spell_gui_name: "Master of Puppets"
+
+ ## Spell Descs
+ #error catching
+ dummy_spell_desc: ""
+
+ #Time
+ glimpse_the_future_spell_desc: "You extend your awareness, focusing your perception onto a time in the distant future, trying to make sense of the myriad images which play before your eyes as you build your spell construct. At the moment when you feel as though you could reach out and touch that distant time and place, you gather your [mana|El], ready to cast the spell. Will you?"
+ financial_times_spell_desc: "You extend your awareness, focusing your mind on the fundamental randomness of reality, letting scenario after scenario play out before you. As you weave the intricate patterns of your spell construct, you feel as though you are on the verge of some new kind of understanding. You feel as though someone could roll a die a thousand times and you could say what face it would land on for each. All that's left to do is infuse the spell with [mana|El]. Will you?"
+ celerity_spell_desc: "You begin to weave intricate geometric patterns around yourself, threading them in and out of your local temporal reference frame, and draw them tighter, pulling yourself out of step with others' perception of time, and into one where you are moving at a break-neck pace. Your spell construct hums in time with you, whirling about you as you prepare to invest it with [mana|El]. Will you?"
+ mass_celerity_spell_desc: "You stretch your hands out to either side and begin to draw the perfect geomatric patterns of the chronomancy [school_of_magic|E] into a rotating swirl about yourself. Your intent clear, and the spell construct drawn, the only thing left to do is to invest your aura with mana. Will you?"
+ slowness_spell_desc: "You begin to weave intricate geometric patterns around yourself, threading them in and out of your local temporal reference frame, and pushing them outwards, raising the fabric of time into a hill around yourself, and forcing all who approach you to move far more slowly. Your spell construct lets out a glacial, rhythmic hum, swirling listlessly about you as you prepare to invest it with [mana|El]. Will you?"
+ mass_slowness_spell_desc: "You begin building the [slowness|El] spell-construct which has become second nature to you, then with an irrefutable will, you press the wall of time out from yourself, raising hills in the local time geometry where your subjects are, and leaving everyone else to struggle up those hills. Then, your hands quavering from the mental strain of the spell, you prepare to invest it with [mana|El]. Will you?"
+ temporal_manipulation_spell_desc: "Taking all that you have learned about the manipulation of time up until now, weaving it into a massive spell construct which extends out around you, blanketing everything and everyone in your domain, you reach out with your magical senses and trail your spell through the land itself, taking it tightly with your will and heaving it up into a hill. The temporal geometry of your domain begins to shift, shakily rising up higher, and to your senses it seems as though all of your people are moving in a blur compared to those just outside of your spell construct. Will you invest your spell with [mana|El] to stabilize it?"
+ master_of_time_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+
+ # Life
+ heal_spell_desc: "Already weaving your will into a few simple spell constructs designed to alleviate suffering and heal injury and disease, you take a moment to observe [GetPlayer.Custom2('SpellTargetYourself', GetPlayer.MakeScope.Var('spell_target').Char)], and see that [GetPlayer.Custom2('SpellTargetSheHeIsYouAre', GetPlayer.MakeScope.Var('spell_target').Char)] clearly suffering from some minor maladies, that any healer worth the name could fix. Will you?"
+ greater_heal_spell_desc: "Already weaving your will into a few simple spell constructs designed to alleviate suffering and heal injury and disease, you take a moment to observe [GetPlayer.Custom2('SpellTargetYourself', GetPlayer.MakeScope.Var('spell_target').Char)], and see that [GetPlayer.Custom2('SpellTargetSheHeIsYouAre', GetPlayer.MakeScope.Var('spell_target').Char)] clearly suffering from some complex injury or disease, but you should be able to fix it. Will you?"
+ avatar_of_life_spell_desc: "Already weaving your will into a few simple spell constructs designed to alleviate suffering and heal injury and disease, you take a moment to observe [GetPlayer.Custom2('SpellTargetYourself', GetPlayer.MakeScope.Var('spell_target').Char)], and see that [GetPlayer.Custom2('SpellTargetSheHeIsYouAre', GetPlayer.MakeScope.Var('spell_target').Char)] definitely suffering grievously, though your long training and immense knowledge allow you to cure them. Will you?"
+
+ # Elemental
+ flame_aura_spell_desc: "You bend your thoughts and intent into a state of rage, and an undeniable need for destruction, pressing that white hot spark out, until the world around you seems on the verge of burning under the assault of your will, and then you stoke the flames higher, feeding into them every sleight, every set-back, every moment when you've lost your temper, until your spell is on the verge of manifesting. Will you feed it [mana|El]?"
+ flaming_weapons_spell_desc: "You bend your thoughts and intent into a state of rage, just as you would while casting a [flame_aura|E] spell, and then you go a step further. You extend your will out wider, touching the soldiers among you with that rage, letting it taste their malice, fear, and rage, feeding it back into them until their weapons begin to let out thin ribbons of smoke. Will you feed the fire [mana|El]?"
+ living_earthworks_spell_desc: "You settle your thoughts into a slow and inexorable flow, seeking to align them to the motions of the earth beneath your feet. An age seems to pass within the span of a heart-beat, and then you feel as though you are #S all#!. The feet of people all around you are as the feet of insects crawling on your body, and you feel as though you could swat those insects if you just had a little energy. Will you invest [mana|El] into the spell?"
+ golem_creation_spell_desc: "The earth around you trembles as your will grows ever closer to manifesting. In your right hand, you hold your spellbook, which is filled with the complex mnemonics for the spell, and your left hand moves in a blur, holding a carefully crafted stone figurine, darting through the symbolic motions which will inform your creation's behavior. With a cacophany of shifting earth, you prepare to invest [mana|El] into your burgeoning spell construct. Will you?"
+ control_water_spell_desc: "You allow your thoughts to flow, not giving them conscious form, but to just trickle, following the path of least resistance. In this state, you feel akin to the water all around you, the water in the sky, the water in the earth and the sea, and even the water within you and everyone around you. Then, unexpectedly, you #S are the water#!, drifting just as your thoughts drift, and you feel as though you could be given purpose, if you just invested some [mana|El]. Will you?"
+ drought_spell_desc: "You allow your thoughts to flow, just as you would while casting the [control_water|E] spell and, again, you feel the water all around you. You feel as creatures scrabble for you, you understand their need, and you whimsically wonder what would happen if you simply #S were not there#!. You feel that whimsy propagating out around you, beginning to take root in the clouds and the earth, and you know that it would take only a bit of [mana|El] to make that whimsy become intent. Will you invest it?"
+ elemental_warrior_spell_desc: "Through years of training in the art of being an [elomancer|El], you split your mind into several states simultaneously, letting one burn with rage and fire, another slow to the resonance of the earth, and the last to flow aimlessly with the water and, as you achieve this feat, you become #S everything#!. You understand the elements in a way that few ever do. The earth, in all of its states and forms, is #S you#!. All that you need to do is invest your intent with [mana|E], and it will awaken to serve you. Will you?"
+ lord_of_the_elements_spell_desc: "You hold a rod with incredibly ornate carvings cut into it, its entire length scorched in the heat of a volcano. Bringing it to bear, and drawing on untold hours of study in elomancy, you layer the complex mnemonics for the creation of lava golems into your burgeoning spell construct, and with a cacophany of shifting earth, you prepare to invest [mana|El] into it. Will you?"
+
+ # Necromancy
+ inflict_illness_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ plague_lord_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ aura_of_death_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ necromancy_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ drain_life_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ death_stare_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ deacon_of_death_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+
+ # Biomancy
+ rewrite_beauty_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ rewrite_physique_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ rewrite_intellect_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ sculpter_of_flesh_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ fertility_control_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ impregnate_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+
+ # Mind Magic
+ entrance_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ incite_lust_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ incite_obedience_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ dominate_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ beguiling_aura_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ friendship_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ rivalry_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ enchanting_aura_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+ master_of_puppets_spell_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."
+
+ #Rewrite Beauty list
+ beauty_none_list_gui_name: "None"
+ beauty_bad_1_list_gui_name: "$trait_beauty_bad_1$"
+ beauty_bad_2_list_gui_name: "$trait_beauty_bad_2$"
+ beauty_bad_3_list_gui_name: "$trait_beauty_bad_3$"
+ beauty_good_1_list_gui_name: "$trait_beauty_good_1$"
+ beauty_good_2_list_gui_name: "$trait_beauty_good_2$"
+ beauty_good_3_list_gui_name: "$trait_beauty_good_3$"
+
+ #Rewrite Physique list
+ physique_none_list_gui_name: "None"
+ physique_bad_1_list_gui_name: "$trait_physique_bad_1$"
+ physique_bad_2_list_gui_name: "$trait_physique_bad_2$"
+ physique_bad_3_list_gui_name: "$trait_physique_bad_3$"
+ physique_good_1_list_gui_name: "$trait_physique_good_1$"
+ physique_good_2_list_gui_name: "$trait_physique_good_2$"
+ physique_good_3_list_gui_name: "$trait_physique_good_3$"
+
+ #Rewrite Intellect list
+ intellect_none_list_gui_name: "None"
+ intellect_bad_1_list_gui_name: "$trait_intellect_bad_1$"
+ intellect_bad_2_list_gui_name: "$trait_intellect_bad_2$"
+ intellect_bad_3_list_gui_name: "$trait_intellect_bad_3$"
+ intellect_good_1_list_gui_name: "$trait_intellect_good_1$"
+ intellect_good_2_list_gui_name: "$trait_intellect_good_2$"
+ intellect_good_3_list_gui_name: "$trait_intellect_good_3$"
+
+ # Sculpter of Flesh list
+ fecund_list_gui_name: "$trait_fecund$"
+ infertile_list_gui_name: "$trait_infertile$"
+ strong_list_gui_name: "$trait_strong$"
+ weak_list_gui_name: "$trait_weak$"
+ spindly_list_gui_name: "$trait_spindly$"
+ giant_list_gui_name: "$trait_giant$"
+ dwarf_list_gui_name: "$trait_dwarf$"
+ albino_list_gui_name: "$trait_albino$"
+ clubfooted_list_gui_name: "$trait_clubfooted$"
+ hunchbacked_list_gui_name: "$trait_hunchbacked$"
+ lisping_list_gui_name: "$trait_lisping$"
+ scaly_list_gui_name: "$trait_scaly$"
+ wheezing_list_gui_name: "$trait_wheezing$"
+ bleeder_list_gui_name: "$trait_bleeder$"
+
+ # Fertility Control list
+ inc_fertility_list_gui_name: "Fertility"
+ dec_fertility_list_gui_name: "Infertility"
+
+ # Custom loc
+ MAGIC_GUI_AURA_TIMES: "$VALUE|0$ times"

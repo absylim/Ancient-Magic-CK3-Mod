@@ -1,0 +1,17 @@
+﻿unlock_heal_spell = {
+	custom_description_no_bullet = {
+		text = unlock_heal_spell
+	}
+}
+
+unlock_greater_heal_spell = {
+	custom_description_no_bullet = {
+		text = unlock_greater_heal_spell
+	}
+}
+
+unlock_avatar_of_life_spell = {
+	custom_description_no_bullet = {
+		text = unlock_avatar_of_life_spell
+	}
+}

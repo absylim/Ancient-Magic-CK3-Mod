@@ -3,13 +3,13 @@
 	tree = life_magic
 	position = { 2 0 }
 	icon = node_diplomacy
-	
+
 	auto_selection_weight = {
 		value = 11
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential	
+					has_trait = magic_potential
 					has_trait = education_arcane
 				}
 			}
@@ -40,22 +40,18 @@
 			multiply = 0
 		}
 	}
-	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		add_trait_force_tooltip = mage
-		add_trait_force_tooltip = mana
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
-	}
+
 	character_modifier = {
 		health = 0.1
+	}
+
+	effect = {
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		add_trait_force_tooltip = mage
+		add_trait_force_tooltip = mana
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
@@ -64,28 +60,20 @@ inward_reflection_perk = {
 	tree = life_magic
 	position = { 0 1.25 }
 	icon = node_diplomacy
-	
-	
-	
+
+	parent = life_mage_perk
+
 	character_modifier = {
 		health = 0.5
 		life_expectancy = 20
 	}
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
-	
-	parent = life_mage_perk
 }
 
 
@@ -94,24 +82,16 @@ inward_perfection_perk = {
 	tree = life_magic
 	position = { 0 2.5 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = inward_reflection_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
-	
+
 	character_modifier = {
 		health = 0.5
 		life_expectancy = 20
@@ -124,25 +104,15 @@ heal_perk = {
 	tree = life_magic
 	position = { 2 1.25 }
 	icon = node_diplomacy
-	
+
 	parent = life_mage_perk
-	
-	
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = heal_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		unlock_heal_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
@@ -152,25 +122,15 @@ greater_heal_perk = {
 	tree = life_magic
 	position = { 2 2.5 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = heal_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = greater_heal_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		unlock_greater_heal_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
@@ -180,26 +140,18 @@ battlefield_life_mage_perk = {
 	tree = life_magic
 	position = { 4 1.25 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = life_mage_perk
-	
+
 	character_modifier = {
 		hard_casualty_modifier = -0.3
 	}
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
@@ -209,26 +161,18 @@ greater_battlefield_life_mage_perk = {
 	tree = life_magic
 	position = { 4 2.5 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = battlefield_life_mage_perk
-	
+
 	character_modifier = {
 		hard_casualty_modifier = -0.3
 	}
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
@@ -238,32 +182,21 @@ purity_of_body_perk = {
 	tree = life_magic
 	position = { 2 3.75 }
 	icon = node_diplomacy
-	
-	
-	
+
 	parent = inward_perfection_perk
 	parent = greater_heal_perk
 	parent = greater_battlefield_life_mage_perk
-	
+
 	character_modifier = {
 		life_expectancy = 10
 	}
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = purity_of_body_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
-		add_character_flag = immune_to_disease
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
+		immune_to_disease_effect = yes
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
@@ -273,26 +206,16 @@ avatar_of_life_perk = {
 	tree = life_magic
 	position = { 2 5 }
 	icon = avatar_of_life
-	
-	
-	
+
 	parent = purity_of_body_perk
-	
+
 	effect = {
-		custom_description_no_bullet = {
-			text = avatar_of_life_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mana_gen_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = max_mana_magic_perk_effect
-		}
-		custom_description_no_bullet = {
-			text = mage_xp_magic_perk_effect
-		}
+		unlock_avatar_of_life_spell = yes
+		gain_mana_gen_perk = yes
+		gain_max_mana_perk = yes
+		gain_mage_xp_perk = yes
 		add_trait_force_tooltip = avatar_of_life
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
