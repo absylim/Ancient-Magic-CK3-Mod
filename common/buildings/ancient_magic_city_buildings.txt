@@ -1292,7 +1292,10 @@ guild_halls_01 = {
 		modifier = {
 			add = 500
 			scope:holder = {
-				has_government = republic_government
+				OR = {
+					has_government = magocracy_government
+					has_government = republic_government
+				}
 			}
 		}
 	}
@@ -1330,7 +1333,10 @@ guild_halls_02 = {
 		modifier = {
 			add = 9
 			scope:holder = {
-				has_government = republic_government
+				OR = {
+					has_government = magocracy_government
+					has_government = republic_government
+				}
 			}
 		}
 	}
@@ -1368,7 +1374,10 @@ guild_halls_03 = {
 		modifier = {
 			add = 8
 			scope:holder = {
-				has_government = republic_government
+				OR = {
+					has_government = magocracy_government
+					has_government = republic_government
+				}
 			}
 		}
 	}
@@ -1406,7 +1415,10 @@ guild_halls_04 = {
 		modifier = {
 			add = 7
 			scope:holder = {
-				has_government = republic_government
+				OR = {
+					has_government = magocracy_government
+					has_government = republic_government
+				}
 			}
 		}
 	}
@@ -1444,7 +1456,10 @@ guild_halls_05 = {
 		modifier = {
 			add = 6
 			scope:holder = {
-				has_government = republic_government
+				OR = {
+					has_government = magocracy_government
+					has_government = republic_government
+				}
 			}
 		}
 	}
@@ -1482,7 +1497,10 @@ guild_halls_06 = {
 		modifier = {
 			add = 5
 			scope:holder = {
-				has_government = republic_government
+				OR = {
+					has_government = magocracy_government
+					has_government = republic_government
+				}
 			}
 		}
 	}
@@ -1520,7 +1538,10 @@ guild_halls_07 = {
 		modifier = {
 			add = 4
 			scope:holder = {
-				has_government = republic_government
+				OR = {
+					has_government = magocracy_government
+					has_government = republic_government
+				}
 			}
 		}
 	}
@@ -1557,7 +1578,10 @@ guild_halls_08 = {
 		modifier = {
 			add = 3
 			scope:holder = {
-				has_government = republic_government
+				OR = {
+					has_government = magocracy_government
+					has_government = republic_government
+				}
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 ﻿time_mage_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = time_magic
 	position = { 2 0 }
 	icon = node_diplomacy
@@ -68,7 +68,7 @@
 }
 
 glimpse_the_future_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = time_magic
 	position = { 0 1.25 }
 	icon = node_diplomacy
@@ -133,11 +133,11 @@ glimpse_the_future_perk = {
 	}
 }
 
-
 financial_times_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = time_magic
 	position = { 0 2.5 }
+	parent = glimpse_the_future_perk
 	icon = node_diplomacy
 
 	parent = glimpse_the_future_perk
@@ -190,7 +190,6 @@ financial_times_perk = {
 			multiply = 0
 		}
 	}
-
 	effect = {
 		unlock_financial_times_spell = yes
 		gain_mana_gen_perk = yes
@@ -202,7 +201,7 @@ financial_times_perk = {
 
 
 celerity_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = time_magic
 	position = { 2 1.25 }
 	icon = node_diplomacy
@@ -269,7 +268,7 @@ celerity_perk = {
 
 
 mass_celerity_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = time_magic
 	position = { 2 2.5 }
 	icon = node_diplomacy
@@ -336,7 +335,7 @@ mass_celerity_perk = {
 
 
 slowness_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = time_magic
 	position = { 4 1.25 }
 	icon = node_diplomacy
@@ -403,7 +402,7 @@ slowness_perk = {
 
 
 mass_slowness_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = time_magic
 	position = { 4 2.5 }
 	icon = node_diplomacy
@@ -470,7 +469,7 @@ mass_slowness_perk = {
 
 
 temporal_manipulation_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = time_magic
 	position = { 2 3.75 }
 	icon = node_diplomacy
@@ -539,7 +538,7 @@ temporal_manipulation_perk = {
 
 
 master_of_time_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = time_magic
 	position = { 2 5 }
 	icon = master_of_time

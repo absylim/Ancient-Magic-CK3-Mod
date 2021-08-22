@@ -1,15 +1,37 @@
 ﻿magocracy_government = {
-	primary_holding = city_of_magic_holding
-	valid_holdings = { castle_holding }
-	required_county_holdings = { city_holding castle_holding church_holding }
+	create_cadet_branches = yes
+	rulers_should_have_dynasty = yes
+	dynasty_named_realms = no
+	council = yes
+	
+	affected_by_development = yes
 
-	ai = {
-		arrange_marriage = no
-		use_goals = no
-		use_scripted_guis = no
-		perform_religious_reformation = no
+	fallback = 2
+
+	primary_holding = city_of_magic_holding
+	required_county_holdings = { castle_holding city_holding }
+	
+	can_get_government = {
+		has_trait = mage
+	}
+	
+	character_modifier = {
+		monthly_arcane_lifestyle_xp_gain_mult = 0.1
 	}
 
-	vassal_contract = { magocracy_government_obligations }
-	color = hsv{ 0.00 1.00 0.98 }
+	vassal_contract = {
+		feudal_government_taxes
+		feudal_government_levies
+		special_contract
+		religious_rights
+		fortification_rights
+		coinage_rights
+		succession_rights
+		war_declaration_rights
+		council_rights
+		republic_government_obligations
+		title_revocation_rights
+	}
+	
+	color = { 0 128 255 }
 }

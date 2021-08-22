@@ -9,6 +9,13 @@ widget = {
 	layer = bottom
 	magic_window_view = {}
 	using = Animation_ShowHide_Standard
+	
+	##Used for magocracy council window
+	#state = {
+	#	name = am_magocracy
+	#	trigger_on_create = yes
+	#	on_start = "[ExecuteConsoleCommand('gui.createwidget gui/custom_gui/window_magocracy_council.gui magocracy_council_window')]"
+	#}
 
 	flowcontainer = {
 		name = "observer_status"
@@ -930,6 +937,35 @@ widget = {
 						on_start = "[PdxGuiInterruptThenTriggerAllAnimations('hud_tab_glow_council_enter','hud_tab_glow_council_leave')]"
 					}
 				}
+				######################################
+				########### Republic button ##########
+				######################################
+
+				#button_hud_main_tab = {
+				#	name = "tab_magocracy"
+				#	tooltip = "REPUBLIC_BUTTON"
+				#	datacontext = "[GetScriptedGui( 'has_magocracy_government' )]"
+				#	visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+				#
+				#	blockoverride "maintab_button"
+				#	{
+				#		texture = "gfx/interface/skinned/hud_maintab/maintab_council.dds"
+				#
+				#		onclick = "[GetScriptedGui('toggle_magocracy_council_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('actor',GetPlayer.MakeScope).AddScope('recipient',GetPlayer.MakeScope).End)]"
+				#		shortcut = "magocracy_council_window"
+				#		down = "[GetScriptedGui('is_magocracy_council_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				#	}
+				#
+				#	state = {
+				#		name = _mouse_hierarchy_enter
+				#		on_start = "[PdxGuiInterruptThenTriggerAllAnimations('hud_tab_glow_council_leave','hud_tab_glow_council_enter')]"
+				#	}
+				#
+				#	state = {
+				#		name = _mouse_hierarchy_leave
+				#		on_start = "[PdxGuiInterruptThenTriggerAllAnimations('hud_tab_glow_council_enter','hud_tab_glow_council_leave')]"
+				#	}
+				#}
 			}
 
 			widget = {

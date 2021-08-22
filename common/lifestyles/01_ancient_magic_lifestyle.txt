@@ -1,4 +1,4 @@
-﻿ancient_magic_lifestyle = {
+﻿arcane_lifestyle = {
 	
 	is_valid = {
 		OR = {

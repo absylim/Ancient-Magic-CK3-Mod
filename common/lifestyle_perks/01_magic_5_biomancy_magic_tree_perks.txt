@@ -1,5 +1,5 @@
 ﻿biomancy_mage_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = biomancy_magic
 	position = { 2 0 }
 	icon = node_diplomacy
@@ -62,7 +62,7 @@
 }
 
 improve_trait_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = biomancy_magic
 	position = { 0 1.25 }
 	icon = node_diplomacy
@@ -87,7 +87,7 @@ improve_trait_perk = {
 }
 
 perfect_trait_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = biomancy_magic
 	position = { 0 2.5 }
 	icon = node_diplomacy
@@ -106,7 +106,7 @@ perfect_trait_perk = {
 }
 
 fertility_control_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = biomancy_magic
 	position = { 2 1.25 }
 	icon = node_diplomacy
@@ -123,7 +123,7 @@ fertility_control_perk = {
 }
 
 impregnate_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = biomancy_magic
 	position = { 2 2.5 }
 	icon = node_diplomacy
@@ -140,7 +140,7 @@ impregnate_perk = {
 }
 
 weaken_trait_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = biomancy_magic
 	position = { 4 1.25 }
 	icon = node_diplomacy
@@ -165,7 +165,7 @@ weaken_trait_perk = {
 }
 
 criple_trait_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = biomancy_magic
 	position = { 4 2.5 }
 	icon = node_diplomacy
@@ -184,7 +184,7 @@ criple_trait_perk = {
 }
 
 sculpter_of_flesh_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = biomancy_magic
 	position = { 2 3.75 }
 	icon = node_diplomacy
@@ -204,7 +204,7 @@ sculpter_of_flesh_perk = {
 
 
 architect_of_bloodlines_perk = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	tree = biomancy_magic
 	position = { 2 5 }
 	icon = architect_of_bloodlines

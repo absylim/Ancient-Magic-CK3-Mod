@@ -1,7 +1,7 @@
 ﻿l_english:
- # lifestyle
- ancient_magic_lifestyle_name:0 "Magic"
- ancient_magic_lifestyle_desc:0 "Arcane Mysteries"
+#lifestyle
+ arcane_lifestyle_name:0 "Magic"
+ arcane_lifestyle_desc:0 "Arcane Mysteries"
  
  # Focuses
  magic_arcana_focus:0 "Arcana"

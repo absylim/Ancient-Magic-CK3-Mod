@@ -76,6 +76,7 @@
  friendship_perk_name:0 "Friendship"
  enchanting_aura_perk_name:0 "Enchanting Aura"
  master_of_puppets_perk_name:0 "Master of Puppets"
-
- # effects
+ 
+#effects
+ monthly_arcane_lifestyle_xp_gain_mult:0 "Monthly Magic [lifestyle|E] Experience"
  full_restoration_modifier_effect:0 "Fully Restored"

@@ -1,0 +1,410 @@
+﻿
+################################################################
+################## MAGOCRACY COUNCIL WINDOW ####################
+################################################################
+
+window = {
+	name = "magocracy_council_window"
+	widgetid = "magocracy_council_window_id"
+	parentanchor = top|right
+	layer = windows_layer
+	movable = no
+	visible = "[GetScriptedGui('is_magocracy_council_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	
+	using = Window_Size_MainTab
+
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+		using = Sound_WindowShow_Standard
+		using = Window_Position_MainTab
+
+		on_start = "[GetVariableSystem.Set( 'magocracy_council_tabs', 'my_magocracy_council' )]"
+		on_start = "[GetScriptedGui('close_other_views').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	}
+
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+		using = Sound_WindowHide_Standard
+		using = Window_Position_MainTab_Hide
+	}
+						
+	margin_widget = {
+		size = { 100% 100% }
+		margin = { 0 26 }
+		margin_right = 20
+
+		widget = {
+			size = { 100% 100% }
+
+			vbox = {
+				using = Window_Margins
+
+				header_pattern = {
+					layoutpolicy_horizontal = expanding
+
+					blockoverride "header_text"
+					{
+						text = "REPUBLICCOUNCILWINDOW_TITLE"
+					}
+
+					blockoverride "button_close"
+					{
+						onclick = "[GetScriptedGui('toggle_magocracy_council_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					}
+				}
+
+				widget = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+
+					vbox_magocracy_council_layout = {
+						name = "my_magocracy_council"
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+
+						using = Animation_Tab_Switch
+					}
+				}
+			}
+		}
+	}
+}
+
+
+######################################################
+################ TYPES AND TEMPLATES #################
+######################################################
+
+types RepublicCouncilWindow {
+	type council_respect_info = vbox
+	{
+		name = "task"
+
+		background = {
+			using = Background_Area_Dark
+			alpha = 0.7
+		}
+
+		
+	}
+
+	type widget_magocracy_councillor_item = widget {
+		size = { 150 180 }
+
+		### Required Datacontexts
+		# The councillor
+		widget = {
+			size = { 100% 100% }
+
+			state = {
+				name = _show
+				using = Animation_FadeIn_Quick
+			}
+
+			state = {
+				name = _hide
+				using = Animation_FadeOut_Quick
+			}
+
+			portrait_torso = {
+				name = "councillor_portrait"
+			}
+		}
+		vbox = {
+			widget = {
+				visible = "[Not(GuiCouncilPosition.ArePotentialTasksVisible)]"
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+
+				state = {
+					name = _show
+					using = Animation_FadeIn_Quick
+				}
+
+				text_multi = {
+					margin_left = 10
+					margin_bottom = 10
+					margin_right = 5
+					autoresize = yes
+					max_width = 180
+					visible = "[Character.IsLocalPlayer]"
+					align = bottom|left
+					parentanchor = bottom|left
+					text = "ON_COUNCIL_EFFECTS"
+					background = {
+						using = Background_Area_Dark
+					}
+					fontsize = 14
+				}
+
+				portrait_opinion = {
+					visible = "[And(Character.IsValid, Not(Character.IsLocalPlayer) )]"
+					parentanchor = bottom|hcenter
+					position = { 0 -2 }
+
+					blockoverride "opinion_text"
+					{
+						text = "[Character.GetOpinionOf( Character.GetLiege )|=]"
+						fonttintcolor = "[Character.GetOpinionOfTint( Character.GetLiege )]"
+					}
+
+					blockoverride "ott_heading_text"
+					{
+						text = "[Character.GetOpinionHeadingText( Character.GetLiege )]"
+					}
+
+					blockoverride "ott_opinion_value_text"
+					{
+						text = "[Character.GetOpinionOf( Character.GetLiege )|=]"
+						fonttintcolor = "[Character.GetOpinionOfTint( Character.GetLiege )]"
+					}
+				}
+
+				background = {
+					texture = "gfx/interface/component_masks/mask_fade_corner.dds"
+					color = { 0.12 0.12 0.12 1 }
+					alpha = 0.5
+					margin_top = -130
+					margin_left = -150
+				}
+
+				flowcontainer = {
+					parentanchor = bottom|right
+					ignoreinvisible = yes
+					margin_bottom = 3
+
+					icon = {
+						name = "church_approval_icon"
+						visible = "[Character.IsTheocraticLesseeOf( GetPlayer )]"
+
+						texture = "gfx/interface/icons/icon_bishop_approval.dds"
+						framesize = { 120 120 }
+						size = { 50 50 }
+						frame = "[Select_int32( And( Character.TheocraticLesseeHasApprovalStatus, Character.TheocraticLesseeApprovesOfLiege ), '(int32)1', '(int32)2' )]"
+						tooltip = "[Character.GetTheocraticLesseeApprovalTooltip]"
+					}
+
+					flowcontainer = {
+						parentanchor = bottom
+						margin_bottom = 4
+
+						portrait_status_icons = {
+							background = {
+								using = Background_Area_Dark
+								margin = { 1 2 }
+							}
+						}
+					}
+
+					coa_realm_small_crown = {
+						visible = "[Character.HasLandedTitles]"
+						parentanchor = bottom
+						name = "councillor_realm"
+					}
+				}
+
+				block "regular_task"
+				{
+					flowcontainer = {
+						name = "council_position_tasks"
+						visible = "[Not(CouncilWindow.IsLiegeCouncilShown)]"
+						datamodel = "[GuiCouncilPosition.GetPotentialCouncilTasks]"
+						parentanchor = bottom|left
+						position = { 0  }
+						margin = { 10 5 }
+						spacing = 4
+						direction = vertical
+						alwaystransparent = no
+						ignoreinvisible = yes
+
+						background = {
+							texture = "gfx/interface/hud/tab_bg.dds"
+							mirror = horizontal
+							margin = { 0 10 }
+							margin_right = 15
+							using = Color_Black
+						}
+
+						item = {
+							container = {
+								visible = "[GuiPotentialCouncilTask.IsVisible]"
+								widget = {
+									size = { 42 42 }
+
+									icon = {
+										visible = "[GuiPotentialCouncilTask.IsActive]"
+										texture = "gfx/particles/halo.dds"
+										parentanchor = center
+										size = { 60 60 }
+										color = { 1 0.85 0.6 1 }
+									}
+
+									button_round = {
+										visible = "[Or(And(GuiPotentialCouncilTask.CanSelect, Not(CouncilWindow.IsLiegeCouncilShown)), GuiPotentialCouncilTask.IsActive)]"
+										parentanchor = center
+										size = { 45 45 }
+										gfxtype = togglepushbuttongfx
+										effectname = "NoHighlight"
+
+										onclick = "[GuiPotentialCouncilTask.SelectTaskType]"
+										enabled = "[Not(CouncilWindow.IsLiegeCouncilShown)]"
+										down = "[GuiPotentialCouncilTask.IsActive]"
+
+										using = tooltip_ws
+
+										tooltipwidget = {
+											potential_council_task_icon_tooltip_widget = {
+												using = DefaultTooltipBackground
+												using = GeneralTooltipSetup
+												alwaystransparent = no
+											}
+										}
+
+										upframe = 1
+										downframe = 1
+										uphoverframe = 2
+										disableframe = 6
+
+										button_normal = {
+											name = "potential_task"
+											parentanchor = center
+											widgetanchor = center
+											datacontext = "[GuiPotentialCouncilTask.GetCouncilTaskType]"
+											effectname = "NoHighlight"
+											gfxtype = togglepushbuttongfx
+											shaderfile = "gfx/FX/pdxgui_pushbutton.shader"
+											texture = "[CouncilTaskType.GetIcon]"
+											alwaystransparent = yes
+											size = { 39 39 }
+										}
+									}
+								}
+
+								widget = {
+									size = { 40 40 }
+
+									icon = {
+										datacontext = "[GuiPotentialCouncilTask.GetCouncilTaskType]"
+										visible = "[And(Not(GuiPotentialCouncilTask.CanSelect), Not(CouncilWindow.IsLiegeCouncilShown))]"
+										parentanchor = center
+										size = { 35 35 }
+										alwaystransparent = yes
+
+										texture = "[CouncilTaskType.GetIcon]"
+										alpha = 0.4
+
+										tooltipwidget = {
+											invalid_potential_council_task_icon_tooltip_widget = {
+												using = DefaultTooltipBackground
+												using = GeneralTooltipSetup
+												alwaystransparent = no
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				margin = { 7 0 }
+
+				background = {
+					using = Background_Area_Dark
+				}
+
+				council_respect_info = {
+					layoutpolicy_horizontal = expanding
+				}
+			}
+		}
+	}
+}
+
+types RepublicCouncilTaskTypes {
+	
+	type vbox_magocracy_council_layout = vbox {
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			maximumsize = { -1 932 }
+			spacing = 5
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				margin = { 10 0 }
+				spacing = 5
+				
+				
+				widget_magocracy_councillor_item = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					datacontext = "[GetPlayer]"
+
+					background =  {
+						texture = "gfx/interface/skinned/illustrations/council/bg_council_chancellor.dds"
+						fittype = centercrop
+						alpha = 0.6
+						using = Mask_Rough_Edges
+					}
+
+					background = {
+						texture = "gfx/interface/component_masks/mask_vignette.dds"
+						color = { 0.15 0.15 0.15 1 }
+						alpha = 0.3
+					}
+				}
+
+				
+				widget_magocracy_councillor_item = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_2').House.GetHeadOfHouse]"
+
+					background =  {
+						texture = "gfx/interface/skinned/illustrations/council/bg_council_chancellor.dds"
+						fittype = centercrop
+						alpha = 0.6
+						using = Mask_Rough_Edges
+					}
+
+					background = {
+						texture = "gfx/interface/component_masks/mask_vignette.dds"
+						color = { 0.15 0.15 0.15 1 }
+						alpha = 0.3
+					}
+				}
+
+				widget_magocracy_councillor_item = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_3').House.GetHeadOfHouse]"
+
+					background =  {
+						texture = "gfx/interface/skinned/illustrations/council/bg_council_chancellor.dds"
+						fittype = centercrop
+						alpha = 0.6
+						using = Mask_Rough_Edges
+					}
+
+					background = {
+						texture = "gfx/interface/component_masks/mask_vignette.dds"
+						color = { 0.15 0.15 0.15 1 }
+						alpha = 0.3
+					}
+				}
+			}
+
+		}
+
+		expand = {
+			layoutpolicy_vertical = growing
+		}
+	}
+}

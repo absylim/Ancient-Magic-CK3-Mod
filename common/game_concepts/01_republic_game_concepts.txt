@@ -1,0 +1,31 @@
+﻿#inspired by Res Public
+magocracy_family = {
+	alias = { magocracy_families }
+}
+leading_family = {}
+magocracy_respect = {}
+patrician = {}
+senator_magocracy = {
+	alias = { senators_magocracy }
+}
+councillor_magocracy = {
+	alias = { councillors_magocracy }
+}
+council_government_magocracy = {}
+ruler_government_magocracy = {}
+magocracy_clergy_estate = {
+	alias = { magocracy_clergy_estate_no_class }
+}
+magocracy_noble_estate = {
+	alias = { magocracy_noble_estate_no_class }
+}
+magocracy_popular_estate = {
+	alias = { magocracy_popular_estate_no_class }
+}
+magocracy_estates = {}
+citizenship = {}
+upper_house = {}
+lower_house = {}
+dictatorship = {
+	alias = { dictator }
+}

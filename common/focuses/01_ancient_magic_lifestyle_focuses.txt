@@ -1,5 +1,5 @@
 ﻿magic_arcana_focus = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	
 	desc = {
 		desc = magic_arcana_focus_desc
@@ -7,7 +7,7 @@
 	}
 	
 	modifier = {
-		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.2
+		monthly_arcane_lifestyle_xp_gain_mult = 0.2
 	}
 	
 	on_change_to = {
@@ -50,7 +50,7 @@
 }
 
 magic_meditation_focus = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	
 	desc = {
 		desc = magic_meditation_focus_desc
@@ -91,7 +91,7 @@ magic_meditation_focus = {
 }
 
 magic_mana_focus = {
-	lifestyle = ancient_magic_lifestyle
+	lifestyle = arcane_lifestyle
 	
 	desc = {
 		desc = magic_mana_focus_desc
@@ -99,7 +99,7 @@ magic_mana_focus = {
 	}
 	
 	modifier = {
-		monthly_ancient_magic_lifestyle_xp_gain_mult = -10000
+		monthly_arcane_lifestyle_xp_gain_mult = -10000
 	}
 	
 	on_change_to = {

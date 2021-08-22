@@ -18,7 +18,7 @@ ancient_magic_academy_01 = {
 	cost_gold = expensive_building_tier_2_cost
 
 	character_modifier = {
-		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.1
+		monthly_arcane_lifestyle_xp_gain_mult = 0.1
 	}
 	county_modifier = {
 		development_growth_factor = 0.05
@@ -63,7 +63,7 @@ ancient_magic_academy_02 = {
 	cost_gold = expensive_building_tier_4_cost
 
 	character_modifier = {
-		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.2
+		monthly_arcane_lifestyle_xp_gain_mult = 0.2
 	}
 	county_modifier = {
 		development_growth_factor = 0.1
@@ -112,7 +112,7 @@ ancient_magic_academy_03 = {
 	cost_gold = expensive_building_tier_6_cost
 
 	character_modifier = {
-		monthly_ancient_magic_lifestyle_xp_gain_mult = 0.4
+		monthly_arcane_lifestyle_xp_gain_mult = 0.4
 	}
 	county_modifier = {
 		development_growth_factor = 0.15

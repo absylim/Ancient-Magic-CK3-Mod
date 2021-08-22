@@ -1,0 +1,996 @@
+﻿#Inspired by mod Res Public
+convert_whole_realm_to_magocracy_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+	desc = convert_whole_realm_to_magocracy_decision_desc
+
+	ai_check_interval = 36
+
+	is_shown = {
+		has_government = tribal_government
+		is_independent_ruler = yes
+		is_magus = yes
+	}
+
+	is_valid = {
+		has_realm_law = tribal_authority_3
+		primary_title.tier >= tier_duchy
+		custom_description = {
+			text = faith_is_reformed
+			subject = root
+			faith = { NOT = { has_doctrine_parameter = unreformed } }
+		}
+		custom_description = {
+			text = witchcraft_not_illegal
+			subject = root
+			faith = { NOT = { has_doctrine_parameter = witchcraft_illegal } }
+		}
+		prestige_level >= 2
+		capital_province.county = {
+			development_level >= convert_to_feudalism_development_requirement
+		}
+
+		custom_description = { #You need to have 70% of all (non-regional/unique) tribal innovations!
+			text = has_all_tribal_innovations
+			subject = root.culture
+			culture = {
+				calc_true_if = {
+					amount >= 9
+					has_innovation = innovation_motte
+					has_innovation = innovation_catapult
+					has_innovation = innovation_barracks
+					has_innovation = innovation_mustering_grounds
+					has_innovation = innovation_bannus
+					has_innovation = innovation_quilted_armor
+					has_innovation = innovation_gavelkind
+					has_innovation = innovation_crop_rotation
+					has_innovation = innovation_city_planning
+					has_innovation = innovation_casus_belli
+					has_innovation = innovation_plenary_assemblies
+					has_innovation = innovation_ledger
+					has_innovation = innovation_development_01
+					has_innovation = innovation_currency_01
+				}
+			}
+		}
+	}
+
+	cost = {
+		prestige = 500
+		gold = 200
+	}
+
+	effect = {
+		trigger_event = magocracy_decision_events.1003
+		change_government = magocracy_government
+		add_realm_law = magocracy_succession_law
+		house = {
+			custom_description = {
+				text = effect_change_family_influence_positive
+				value = 1000
+				set_variable = {
+					name = convert_to_magocracy_prestige
+					value = 1000
+					years = 100
+				}
+			}
+		}
+		add_family_to_magocracy_families = yes
+		every_vassal = {
+			limit = { 
+				exists = house 
+				is_house_head = yes 
+				is_magus = yes
+			}
+			add_family_to_magocracy_families = yes
+		}
+		custom_description = {
+			text = effect_every_county_gain_county_control
+			primary_title = {
+				every_in_de_facto_hierarchy = {
+					limit = { tier = tier_county }
+					change_county_control = 20
+				}
+			}
+		}
+		convert_whole_realm_to_magocracy_effect = yes
+	}
+
+	ai_potential = {
+		NOT = { has_title = title:e_mongol_empire } #Stop the Mongols from slowing their conquest.
+	}
+
+	ai_will_do = {
+		base = 40
+		modifier = {
+			add = {
+				value = 10
+				scope:recipient = {
+					multiply = mage_level
+				}
+			}
+		}
+		modifier = {
+			multiply = 0.5
+			faith = {
+				has_doctrine_parameter = witchcraft_shunned
+			}
+		}
+	}
+}
+
+appease_estates_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+
+	desc = appease_estates_decision_desc
+	selection_tooltip = appease_estates_decision_tooltip
+
+	ai_check_interval = 0
+
+	is_shown = {
+		exists = house
+		is_house_head = yes
+		OR = {
+			AND = {
+				is_independent_ruler = yes
+				holds_valid_magocracy = yes
+				magocracy_has_council_form = yes
+			}
+			AND = {
+				is_independent_ruler = no
+				liege_or_court_owner = {
+					holds_valid_magocracy = yes
+					magocracy_has_council_form = yes
+				}
+			}
+		}
+	}
+
+	cost = {
+		gold = 50
+	}
+
+	cooldown = { days = 365 }
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		trigger_event = magocracy_decision_events.1001
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+attempt_coup_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	major = yes
+
+	desc = attempt_coup_decision_desc
+	selection_tooltip = attempt_coup_decision_tooltip
+
+	ai_check_interval = 0
+
+	is_shown = {
+		holds_valid_magocracy = yes
+		NOT = {
+			house.var:titular_magocracy = {
+				has_variable = current_dictatorship
+			}
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 3
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		trigger_event = magocracy_decision_events.1002
+		show_as_tooltip = { launch_coup_effect = yes }
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+convert_to_magocracy_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	major = yes
+
+	desc = convert_to_magocracy_decision_desc
+	selection_tooltip = convert_to_magocracy_decision_tooltip
+
+	ai_check_interval = 0
+
+	is_shown = {
+		is_landed = yes
+		is_independent_ruler = yes
+		highest_held_title_tier > tier_county
+		is_magus = yes
+		OR = {
+			has_government = feudal_government
+			has_government = clan_government
+		}
+	}
+
+	cost = {
+		prestige = 200
+		gold = 500
+	}
+	
+	is_valid = {
+		custom_description = {
+			text = witchcraft_not_illegal
+			subject = root
+			faith = { NOT = { has_doctrine_parameter = witchcraft_illegal } }
+		}
+		trigger_if = {
+			OR = {
+				has_realm_law = crown_authority_2
+				has_realm_law = crown_authority_3
+			}
+		}
+		trigger_if = {
+			prestige_level >= 3
+		}
+	}
+
+	effect = {
+		change_government = magocracy_government
+		add_realm_law = magocracy_succession_law
+		house = {
+			custom_description = {
+				text = effect_change_family_influence_positive
+				value = 2000
+				set_variable = {
+					name = convert_to_magocracy_prestige
+					value = 2000
+					years = 100
+				}
+			}
+		}
+		add_family_to_magocracy_families = yes
+		every_vassal = {
+			limit = { exists = house is_house_head = yes }
+			add_family_to_magocracy_families = yes
+		}
+		custom_description = {
+			text = effect_every_county_gain_county_control
+			primary_title = {
+				every_in_de_facto_hierarchy = {
+					limit = { tier = tier_county }
+					change_county_control = 20
+				}
+			}
+		}
+		capital_barony.title_province = {
+			set_holding_type = city_of_magic_holding
+		}
+		trigger_event = magocracy_decision_events.1003
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = {
+				value = 10
+				scope:recipient = {
+					multiply = mage_level
+				}
+			}
+		}
+		modifier = {
+			multiply = 0.5
+			faith = {
+				has_doctrine_parameter = witchcraft_shunned
+			}
+		}
+	}
+}
+
+give_speech_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	ai_check_interval = 60
+
+	cost = { prestige = standard_activity_cost }
+
+	cooldown = { days = standard_feast_cooldown_time }
+
+	desc = give_speech_decision_desc
+	selection_tooltip = give_speech_decision_tooltip
+
+	is_shown = {
+		is_landed = yes
+		highest_held_title_tier > tier_barony
+		holds_valid_magocracy = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		capital_province = {
+			spawn_activity = {
+				type = activity_speech
+				owner = root
+			}
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_trait = shy
+					has_trait = gregarious
+					has_trait = diplomat
+					has_trait = humble
+					has_trait = arrogant
+					has_trait = reclusive
+				}
+			}
+			stress_impact = {
+				base = feast_stress_loss_value
+				shy = activity_stress_gain_impact
+				gregarious = activity_stress_loss_impact
+				diplomat = activity_stress_loss_impact
+				humble = activity_stress_gain_impact
+				arrogant = activity_stress_loss_impact
+				reclusive = activity_stress_gain_impact
+			}
+		}
+		else = {
+			stress_impact = {
+				base = feast_stress_loss_value
+			}
+		}
+	}
+	
+	ai_potential = {
+		short_term_gold > standard_activity_cost
+		NOT = {
+			has_trait = reclusive
+		}
+	}
+
+	ai_will_do = {
+		base = 35
+
+		ai_value_modifier = {
+			ai_sociability = 1
+		}
+
+		modifier = {
+			add = 30
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -30
+			has_trait = shy
+		}
+		modifier = {
+			add = 47.5
+			has_trait = ambitious
+		}
+	}
+}
+
+call_emergency_vote_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+
+	desc = call_emergency_vote_decision_desc
+	selection_tooltip = call_emergency_vote_decision_tooltip
+
+	ai_check_interval = 0
+
+	is_shown = {
+		exists = house
+		is_house_head = yes
+		OR = {
+			AND = {
+				is_independent_ruler = yes
+				holds_valid_magocracy = yes
+				OR = {
+					magocracy_has_council_form = yes
+					magocracy_has_senate_form = yes
+					magocracy_has_bicameral_form = yes
+				}
+			}
+			AND = {
+				is_independent_ruler = no
+				liege_or_court_owner = {
+					holds_valid_magocracy = yes
+					OR = {
+						magocracy_has_council_form = yes
+						magocracy_has_senate_form = yes
+						magocracy_has_bicameral_form = yes
+					}
+				}
+			}
+		}
+		house.var:titular_magocracy = {
+			has_variable_list = proposed_laws_list
+			variable_list_size = { name = proposed_laws_list value > 0 }
+		}
+	}
+
+	cost = {
+		gold = 25
+	}
+
+	cooldown = { years = 3 }
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		house = {
+			custom_description = {
+				text = effect_change_family_influence_negative
+				value = 200
+				change_variable = {
+					name = family_prestige
+					add = -200
+				}
+			}
+		}
+		custom_description = {
+			text = effect_trigger_election_cycle
+			house.var:titular_magocracy = {
+				if = {
+					limit = { exists = var:senate_government_magocracy }
+					trigger_election_cycle = yes
+				}
+				if = {
+					limit = { exists = var:council_government_magocracy }
+					trigger_council_election_cycle = yes
+				}
+				if = {
+					limit = { exists = var:bicameral_government_magocracy }
+					bicameral_laws_voting = yes
+				}
+			}
+		}
+		house.var:titular_magocracy = {
+			every_in_list = {
+				variable = magocracy_families_list
+				limit = { NOT = { root.house = this } }
+				house_head = {
+					add_opinion = {
+						target = root
+						modifier = called_emergency_meeting
+					}
+				}
+			}
+		}
+	}
+}
+
+raise_personal_army_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+
+	desc = raise_personal_army_decision_desc
+	selection_tooltip = raise_personal_army_decision_tooltip
+
+	ai_check_interval = 0
+
+	is_shown = {
+		exists = house
+		is_house_head = yes
+		exists = house.var:titular_magocracy
+	}
+
+	cooldown = {
+		years = 50
+	}
+	cost = {
+		prestige = 500
+		gold = 100
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		effect_create_house_army = yes
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+attempt_to_become_dictator_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	major = yes
+
+	desc = attempt_to_become_dictator_decision_desc
+	selection_tooltip = attempt_to_become_dictator_decision_tooltip
+
+	ai_check_interval = 60
+
+	is_shown = {
+		exists = house
+		is_house_head = yes
+		holds_valid_magocracy = yes
+		magocracy_has_senate_form = yes
+		is_at_war = yes
+		NAND = {
+			house.var:titular_magocracy = { has_variable = current_dictatorship }
+		}
+	}
+
+	cost = {
+		prestige = 500
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		custom_tooltip = attempt_to_become_dictator_decision_effect_tooltip
+		dictatorship_proposal_quick_vote = yes
+	}
+	
+	ai_potential = {
+		exists = house
+		is_house_head = yes
+		holds_valid_magocracy = yes
+		magocracy_has_senate_form = yes
+		is_at_war = yes
+		NAND = {
+			house.var:titular_magocracy = { has_variable = current_dictatorship }
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			has_trait = ambitious
+			add = 50
+		}
+		modifier = {
+			has_trait = arrogant
+			add = 20
+		}
+		modifier = {
+			has_trait = content
+			add = -50
+		}
+		modifier = {
+			has_trait = greedy
+			add = 20
+		}
+		modifier = {
+			has_trait = callous
+			add = 10
+		}
+		modifier = {
+			has_trait = education_intrigue
+			add = 20
+		}
+		modifier = {
+			has_trait = education_martial
+			add = 20
+		}
+	}
+}
+
+dictator_levy_extra_tax_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+
+	desc = dictator_levy_extra_tax_decision_desc
+	selection_tooltip = dictator_levy_extra_tax_decision_tooltip
+
+	cooldown = {
+		years = 5
+	}
+
+	ai_check_interval = 30
+
+	is_shown = {
+		exists = house
+		is_house_head = yes
+		holds_valid_magocracy = yes
+		magocracy_has_senate_form = yes
+		house.var:titular_magocracy = { has_variable = current_dictatorship }
+	}
+
+	cost = {
+		prestige = 200
+		piety = 100
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		add_gold = improved_taxes_gain
+		if = {
+			limit = { house.var:titular_magocracy = { has_variable = forced_dictatorship } }
+			custom_description = {
+				text = effect_every_county_lose_county_control
+				value = 15
+				primary_title = {
+					every_in_de_facto_hierarchy = {
+						limit = { tier = tier_county }
+						change_county_control = -15
+					}
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { house.var:titular_magocracy = { has_variable = forced_dictatorship } } }
+			custom_description = {
+				text = effect_every_county_lose_county_control
+				value = 5
+				primary_title = {
+					every_in_de_facto_hierarchy = {
+						limit = { tier = tier_county }
+						change_county_control = -5
+					}
+				}
+			}
+		}
+	}
+	
+	ai_potential = {
+		exists = house
+		is_house_head = yes
+		holds_valid_magocracy = yes
+		magocracy_has_senate_form = yes
+		house.var:titular_magocracy = { has_variable = current_dictatorship }
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			gold < 0
+			add = 20
+		}
+		modifier = {
+			gold < 75
+			add = 60
+		}
+		modifier = {
+			gold < 150
+			add = 120
+		}
+		modifier = {
+			has_trait = greedy
+			multiply = 5
+		}
+	}
+}
+
+dictator_conscript_levies_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
+
+	desc = dictator_conscript_levies_decision_desc
+	selection_tooltip = dictator_conscript_levies_decision_tooltip
+
+	ai_check_interval = 30
+
+	cooldown = {
+		years = 10
+	}
+
+	is_shown = {
+		exists = house
+		is_house_head = yes
+		holds_valid_magocracy = yes
+		magocracy_has_senate_form = yes
+		OR = {
+			is_at_war = yes
+			house.var:titular_magocracy = { has_variable = forced_dictatorship }
+		}
+		house.var:titular_magocracy = { has_variable = current_dictatorship }
+	}
+
+	cost = {
+		gold = 150
+		prestige = 100
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		spawn_army = {
+			uses_supply = no
+			inheritable = yes
+			name = conscripted_levies_army
+			levies = {
+				value = conscripted_levies_gain
+			}
+			location = capital_province
+		}
+		if = {
+			limit = { house.var:titular_magocracy = { has_variable = forced_dictatorship } }
+			custom_description = {
+				text = effect_every_county_lose_county_control
+				value = 25
+				primary_title = {
+					every_in_de_facto_hierarchy = {
+						limit = { tier = tier_county }
+						change_county_control = -25
+					}
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { house.var:titular_magocracy = { has_variable = forced_dictatorship } } }
+			custom_description = {
+				text = effect_every_county_lose_county_control
+				value = 10
+				primary_title = {
+					every_in_de_facto_hierarchy = {
+						limit = { tier = tier_county }
+						change_county_control = -10
+					}
+				}
+			}
+		}
+	}
+	
+	ai_potential = {
+		exists = house
+		is_house_head = yes
+		holds_valid_magocracy = yes
+		magocracy_has_senate_form = yes
+		house.var:titular_magocracy = { has_variable = current_dictatorship }
+		OR = {
+			is_at_war = yes
+			house.var:titular_magocracy = { has_variable = forced_dictatorship }
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 0 } }
+			add = 30
+		}
+		modifier = {
+			house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 0 } }
+			add = 40
+		}
+		modifier = {
+			house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 40 } }
+			add = 20
+		}
+		modifier = {
+			house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 40 } }
+			add = 20
+		}
+		modifier = {
+			house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 70 } }
+			add = 40
+		}
+		modifier = {
+			house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 70 } }
+			add = 60
+		}
+		modifier = {
+			has_trait = education_martial
+			add = 20
+		}
+		modifier = {
+			has_trait = ambitious
+			multiply = 2
+		}
+	}
+}
+
+dictator_resign_position_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	major = yes
+
+	desc = dictator_resign_position_decision_desc
+	selection_tooltip = dictator_resign_position_decision_tooltip
+
+	ai_check_interval = 0
+
+	is_shown = {
+		exists = house
+		is_house_head = yes
+		holds_valid_magocracy = yes
+		magocracy_has_senate_form = yes
+		house.var:titular_magocracy = { has_variable = current_dictatorship has_variable = forced_dictatorship }
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		custom_tooltip = dictator_resign_position_decision_effect_tooltip
+		house.var:titular_magocracy = {
+			remove_variable = forced_dictatorship
+			custom_description = {
+				text = effect_end_dictatorship
+				remove_variable = current_dictatorship
+			}
+			custom_description = {
+				text = effect_trigger_election_cycle
+				magocracy_succession = yes
+			}
+		}
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+dictator_enforce_martial_law_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
+
+	desc = dictator_enforce_martial_law_decision_desc
+	selection_tooltip = dictator_enforce_martial_law_decision_tooltip
+
+	ai_check_interval = 30
+
+	cooldown = {
+		years = 3
+	}
+
+	is_shown = {
+		exists = house
+		is_house_head = yes
+		holds_valid_magocracy = yes
+		magocracy_has_senate_form = yes
+		OR = {
+			is_at_war = yes
+			house.var:titular_magocracy = { has_variable = forced_dictatorship }
+		}
+		house.var:titular_magocracy = { has_variable = current_dictatorship NOT = { has_variable = martial_law } }
+	}
+
+	cost = {
+		gold = 20
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		primary_title = {
+			every_in_de_facto_hierarchy = {
+				limit = {
+					tier = tier_county
+					save_temporary_scope_as = temporary_title
+					holder = { completely_controls = scope:temporary_title }
+				}
+				add_county_modifier = martial_law_modifier
+			}
+			set_variable = martial_law
+		}
+	}
+	
+	ai_potential = {
+		exists = house
+		is_house_head = yes
+		holds_valid_magocracy = yes
+		magocracy_has_senate_form = yes
+		house.var:titular_magocracy = { has_variable = current_dictatorship NOT = { has_variable = martial_law } }
+		OR = {
+			is_at_war = yes
+			house.var:titular_magocracy = { has_variable = forced_dictatorship }
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 0 } }
+			add = 30
+		}
+		modifier = {
+			house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 0 } }
+			add = 40
+		}
+		modifier = {
+			house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 40 } }
+			add = 20
+		}
+		modifier = {
+			house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 40 } }
+			add = 20
+		}
+		modifier = {
+			house.var:titular_magocracy.holder = { any_character_war = { is_attacker = house.var:titular_magocracy.holder attacker_war_score < 70 } }
+			add = 40
+		}
+		modifier = {
+			house.var:titular_magocracy.holder = { any_character_war = { is_defender = house.var:titular_magocracy.holder defender_war_score < 70 } }
+			add = 60
+		}
+		modifier = {
+			has_trait = education_martial
+			add = 20
+		}
+		modifier = {
+			has_trait = ambitious
+			multiply = 2
+		}
+	}
+}
+
+dictator_end_martial_law_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+
+	desc = dictator_end_martial_law_decision_desc
+	selection_tooltip = dictator_end_martial_law_decision_tooltip
+
+	ai_check_interval = 30
+
+	is_shown = {
+		exists = house
+		is_house_head = yes
+		holds_valid_magocracy = yes
+		magocracy_has_senate_form = yes
+		OR = {
+			is_at_war = yes
+			house.var:titular_magocracy = { has_variable = forced_dictatorship }
+		}
+		house.var:titular_magocracy = { has_variable = current_dictatorship has_variable = martial_law }
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+	}
+
+	effect = {
+		primary_title = {
+			every_in_de_facto_hierarchy = {
+				limit = {
+					tier = tier_county
+				}
+				remove_county_modifier = martial_law_modifier
+			}
+			remove_variable = martial_law
+		}
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
