@@ -1,0 +1,26 @@
+﻿types TraitInitializer  {
+	type trait_initializer = window {
+		visible = "[Not(GetVariableSystem.Exists('traits_initialized'))]"
+
+		state = {
+			name = _show
+			on_start = "[GetVariableSystem.Set('traits_initialized')]"
+		}
+
+		hbox = {
+			state = {
+				trigger_on_create = yes
+				on_start = "[GetScriptedGui('clear_trait_list').Execute]"
+			}
+			datamodel = "[GetTraits]"
+			item = {
+				widget = {
+					state = {
+						trigger_on_create = yes
+						on_start = "[GetScriptedGui('add_to_trait_list').Execute(GuiScope.AddScope('trait',MakeScopeFlag(Trait.GetKey)).End)]"
+					}
+				}
+			}
+		}
+	}
+}

@@ -8,6 +8,7 @@ widget = {
 	visible = "[IsDefaultGUIMode]"
 	layer = bottom
 	magic_window_view = {}
+	trait_initializer = {}
 	using = Animation_ShowHide_Standard
 	
 	##Used for magocracy council window
