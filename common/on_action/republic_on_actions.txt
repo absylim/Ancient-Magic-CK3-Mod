@@ -115,13 +115,6 @@ yearly_global_pulse = {
 
 yearly_magocracy_check = {
 	effect = {
-		every_living_character = {
-			limit = { is_independent_ruler = yes holds_valid_magocracy = yes magocracy_has_bicameral_form = yes }
-			primary_title = {
-				clear_variable_list = lower_house_counties
-				generate_counties_for_lower_house = yes
-			}
-		}
 		every_patrician = {
 			limit = { is_courtier = yes NOT = { employer = house.var:titular_magocracy.holder } }
 			set_employer = house.var:titular_magocracy.holder
@@ -152,11 +145,6 @@ yearly_magocracy_check = {
 			random_held_title = {
 				limit = { NOT = { this = holder.primary_title } has_variable_list = magocracy_families_list }
 				if = {
-					limit = { this = { exists = var:senate_government_magocracy } }
-					holder.primary_title = { set_variable = senate_government_magocracy }
-					remove_variable = senate_government_magocracy
-				}
-				if = {
 					limit = { this = { exists = var:council_government_magocracy } }
 					holder.primary_title = { set_variable = council_government_magocracy }
 					remove_variable = council_government_magocracy
@@ -165,11 +153,6 @@ yearly_magocracy_check = {
 					limit = { this = { exists = var:elected_ruler_magocracy } }
 					holder.primary_title = { set_variable = elected_ruler_magocracy }
 					remove_variable = elected_ruler_magocracy
-				}
-				if = {
-					limit = { this = { exists = var:bicameral_government_magocracy } }
-					holder.primary_title = { set_variable = bicameral_government_magocracy }
-					remove_variable = bicameral_government_magocracy
 				}
 				if = {
 					limit = { this = { exists = var:councillor_1 } }
@@ -568,9 +551,6 @@ yearly_magocracy_check = {
 						exists = var:titular_magocracy
 						has_variable = titular_magocracy
 					}
-				}
-				NOT = {
-					has_government = governor_government
 				}
 				OR = {
 					holds_valid_magocracy = yes

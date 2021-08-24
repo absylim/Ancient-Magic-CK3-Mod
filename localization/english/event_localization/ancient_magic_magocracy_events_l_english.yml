@@ -1,4 +1,44 @@
 ﻿l_english:
+ #Merchant Magocracy Events
+ merchant_magocracy_events.1001.t:0 "Becoming a [magocracy_family|E]"
+ merchant_magocracy_events.1001.desc:0 "At long last, your house has become one of the great families of [magocracy_title.GetName]. Now you are able to play the Great Game, and your family will rise to preeminence."
+ merchant_magocracy_events.1001.a:1 "At long last"
+ 
+ merchant_magocracy_events.1002.t:0 "Election Cycle - Elected as Archmage"
+ merchant_magocracy_events.1002.desc:0 "You have been elected as the ruler of [titular_magocracy.GetName] after the untimely death of [old_holder.GetTitledFirstName]. May you lead the magocracy to a Golden Age!"
+ merchant_magocracy_events.1002.a:1 "Amazing"
+ 
+ merchant_magocracy_events.1003.t:0 "Election Season - Lost Power"
+ merchant_magocracy_events.1003.desc:0 "The votes are in and the ballots have been tallied. Despite our agents' assurances that matters were well in hand, the streets resound with cheers not for our distinguished name, but rather that of [election_winner.GetTitledFirstName]. The perfidious and ungrateful masses have decided, in their infinite wisdom, that the ship of state would be better captained by other hands. Already recreant rats flee the sinking ship, while banners that yesterday proudly flew our favor today bear a very different crest. Very well, then; let the sycophants scurry to curry favor with their new masters; the turn of the pendulum will come again soon enough, and then they will all be reminded in whose hands true power lies. "
+ merchant_magocracy_events.1003.a:1 "The goodwill of the people is a fragile thing, and easily shattered."
+ 
+ merchant_magocracy_events.1004.t:0 "Election Season - Gained Power"
+ merchant_magocracy_events.1004.desc:0 "The votes are in and the ballots have been tallied. The victor's name reassuring in its familiarity, and the jubilation of their supporters as they flood the streets in triumph, banners flying proudly, is gratifying to behold. Henceforth, the reins of power in our great magocracy shall be held by our very own house's [election_winner.GetTitledFirstName]. This bodes well for the fortunes of our family; let us drink deeply of the well of power while our rivals, denied its tutelary blessings, wither and fade away."
+ merchant_magocracy_events.1004.a:1 "Family is never more important than when the important are family."
+ 
+ merchant_magocracy_events.1005.t:0 "Election Season"
+ merchant_magocracy_events.1005.desc:0 "The votes are in and the ballots have been tallied. It seems that the vessel of our family's fortunes will continue its placid course, relatively untroubled by the turbulent tides of power, and that this will not be the election that exalts our house to its rightful position at this magocracy's head. Still, if we have gained nothing with these results, neither have we lost, and with new leadership come new opportunities. Perhaps our new leader, [election_winner.GetTitledFirstName], will prove favorable to our interests."
+ merchant_magocracy_events.1005.a:1 "The world turns, and we must spin with it. "
+ merchant_magocracy_events.1006.t:0 "Election Season - Elected as Ruler"
+ merchant_magocracy_events.1006.desc:0 "The votes are in and the ballots have been tallied. The stentorian rhetoric of political theatre has mercifully given way to an anticipatory susurrus as the outcome of the election is revealed. The results are, of course, as any right-thinking citizen of our illustrious magocracy should have expected.\n\n The people have spoken, and they have decided wisely: they have determined that the custodianship of state shall be entrusted to none other than, well, me.\n\nI believe this calls for a well-rehearsed victory speech, infused with dignity and gravitas, capped with thunderous applause. The necessary arrangements have been made."
+ merchant_magocracy_events.1006.a:1 "Friends, [GetPlayer.GetCulture.GetCollectiveNoun], countrymen!"
+ 
+ merchant_magocracy_events.1007.t:0 "Election Season - Maintained Power"
+ merchant_magocracy_events.1007.desc:0 "The votes are in and the ballots have been tallied. Everything proceeded according to our design. When nothing is left to chance, when the right words are whispered in the right ears, and the right sums of gold make their way into the right pockets, then the outcome can never be in doubt. The people, when left to their own devices, can be capricious and impulsive and are easily swayed by malign influences; thus, like children, they have been guided, as if by the invisible hand of a benevolent parent, to the decision that is in their best interests: the continued and prosperous rule of the house of [GetPlayer.GetHouse.GetName]."
+ merchant_magocracy_events.1007.a:1 "The way to retain power is to ensure the absolute unthinkability of oneself not being there."
+ merchant_magocracy_events.1008.t:0 "Election Season - Councillor"
+ merchant_magocracy_events.1008.desc:0 "You have been elected one of the councillors of [titular_magocracy.GetName] this election cycle. May you guide the Magocracy oneards into its glory days and the bright future ahead."
+ merchant_magocracy_events.1008.a:1 "Greatness awaits"
+
+ merchant_magocracy_events.1009.t:0 "Magocracy Reform"
+ merchant_magocracy_events.1009.senate_desc:0 "Magocracy has been reformed into a [senate_government_magocracy|E], for the benefit of all: the citizens, the patricians, and the houses themselves. May [titular_magocracy.GetName] remain a sovereign nation forever!"
+ merchant_magocracy_events.1009.council_desc:0 "The Magocracy has been reformed into a [council_government_magocracy|E], for the benefit of all: the citizens, the patricians, and the new councilmembers most of all. May [GetPlayer.GetHouse.GetName] reign supreme."
+ merchant_magocracy_events.1009.elected_ruler_desc:0 "The Magocracy has been reformed into a [ruler_government_magocracy|E]. Only the top house will rule, so let us get and stay there. Whatever it takes."
+ merchant_magocracy_events.1009.bicameral_desc:0 "The Magocracy has been reformed into a [bicameral_government_magocracy|E]. The houses hold power in the Magocracy, but so do the people. This is a new twist."
+ merchant_magocracy_events.1009.feudal_desc:0 "The Magocracy has been reformed into a [feudal|E] power. Down with the old ways and up with the new, I suppose. Very well then, let us capitalize on this new development."
+ merchant_magocracy_events.1009.a:1 "This can be turned to our advantage"
+
+#VIET
  VIETmagocracy.0000.t:0 "xxxxx"
  VIETmagocracy.0000.desc:0 "xxxxx"
  VIETmagocracy.0000.a:0 "xxxxx"

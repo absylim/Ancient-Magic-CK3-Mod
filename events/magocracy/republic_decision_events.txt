@@ -209,7 +209,7 @@ magocracy_decision_events.1002 = { # Launch coup
 	}
 }
 
-magocracy_decision_events.1003 = { # Republic Setup
+magocracy_decision_events.1003 = { # Magocracy Setup
 	type = character_event
 	title = magocracy_decision_events.1003.t
 	desc = magocracy_decision_events.1003.desc
@@ -219,19 +219,19 @@ magocracy_decision_events.1003 = { # Republic Setup
 	}
 	theme = diplomacy
 
-	# Set up Elected Ruler Republic
+	# Set up Elected Ruler Magocracy
 	#option = {
 	#	name = magocracy_decision_events.1003.a
 	#	set_up_elected_ruler_magocracy = yes
 	#}
 
-	# Set up Council Republic
+	# Set up Council Magocracy
 	option = {
 		name = magocracy_decision_events.1003.b
 		set_up_council_magocracy = yes
 	}
 
-	# Set up Senate Republic
+	# Set up Senate Magocracy
 	#option = {
 	#	name = magocracy_decision_events.1003.c
 	#	set_up_senate_magocracy = yes

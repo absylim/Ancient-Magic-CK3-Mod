@@ -1,4 +1,4 @@
-﻿types Republics  {
+﻿types Magocracys  {
 	type window_magocracy_form = window {
         scale = 0.9
         allow_outside = yes

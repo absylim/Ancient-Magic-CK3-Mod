@@ -416,7 +416,7 @@ GetPopularAppeasement = {
 	}
 }
 
-IsRepublicCouncillor = {
+IsMagocracyCouncillor = {
 	type = character
 	text = {
 		trigger = {
@@ -434,7 +434,7 @@ IsRepublicCouncillor = {
 	}
 }
 
-GetRepublicTermLimits = {
+GetMagocracyTermLimits = {
 	type = character
 	text = {
 		trigger = {
@@ -565,7 +565,7 @@ GetRepublicTermLimits = {
 }
 
 
-GetRepublicYeaBlackmail = {
+GetMagocracyYeaBlackmail = {
 	type = character
 	text = {
 		trigger = {
@@ -599,7 +599,7 @@ GetRepublicYeaBlackmail = {
 	}
 }
 
-GetRepublicNayBlackmail = {
+GetMagocracyNayBlackmail = {
 	type = character
 	text = {
 		trigger = {

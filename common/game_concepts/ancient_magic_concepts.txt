@@ -93,6 +93,7 @@ focal_point = {
 	texture = "gfx/interface/icons/modifiers/focal_point.dds"
 }
 
+##################################################
 # SPELL DESCRIPTIONS
 # Chronomancy
 control_aging = {

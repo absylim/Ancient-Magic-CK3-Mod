@@ -34,7 +34,7 @@ merchant_magocracy_events.1001 = { # Becoming a Family
 	}
 }
 
-merchant_magocracy_events.1002 = { # Becoming the Ruler of a Republic after a death
+merchant_magocracy_events.1002 = { # Becoming the Ruler of a Magocracy after a death
 	type = character_event
 	title = merchant_magocracy_events.1002.t
 	desc = merchant_magocracy_events.1002.desc
@@ -151,7 +151,7 @@ merchant_magocracy_events.1005 = { # House has neither gained nor lost
 	}
 }
 
-merchant_magocracy_events.1006 = { # Becoming the Ruler of a Republic after a term limit ends
+merchant_magocracy_events.1006 = { # Becoming the Ruler of a Magocracy after a term limit ends
 	type = character_event
 	title = merchant_magocracy_events.1006.t
 	desc = merchant_magocracy_events.1006.desc

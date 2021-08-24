@@ -742,7 +742,7 @@ VIETmagocracy.0008 = {
 
 
 
-# Dozing off at a meeting about the Republic's trade regulations
+# Dozing off at a meeting about the Magocracy's trade regulations
 VIETmagocracy.0009 = {
 	type = character_event
 	title = VIETmagocracy.0009.t

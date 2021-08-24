@@ -1,4 +1,4 @@
-﻿GetRepublicOwner = {
+﻿GetMagocracyOwner = {
 	type = character
 	text = {
 		trigger = { holds_valid_magocracy = yes }
@@ -10,7 +10,7 @@
 	}
 }
 
-GetRepublicOrFeudal = {
+GetMagocracyOrFeudal = {
 	type = character
 	text = {
 		trigger = { liege = { holds_valid_magocracy = yes } house = { exists = var:titular_magocracy } has_government = feudal_government }
@@ -49,7 +49,7 @@ GetDogeConsulCouncilHead = {
 	}
 }
 
-GetRepublicGoverningBodyType = {
+GetMagocracyGoverningBodyType = {
 	type = character
 	text = {
 		trigger = { magocracy_has_senate_form = yes }
@@ -69,7 +69,7 @@ GetRepublicGoverningBodyType = {
 	}
 }
 
-GetRepublicHouseHigh = {
+GetMagocracyHouseHigh = {
 	type = character
 	text = {
 		trigger = { culture = culture:english }

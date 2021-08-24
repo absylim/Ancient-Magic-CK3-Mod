@@ -139,6 +139,11 @@
  convert_whole_realm_to_magocracy_decision_desc:0 "Government that is based around mage council."
  convert_whole_realm_to_magocracy_decision_confirm:0 "For Greater Truth!"
  convert_whole_realm_to_magocracy_decision_tooltip:0 "Change [government|E] type by adopting Magocracyan government"
+
+ convert_to_magocracy_decision:0 "Convert to a Magocracy"
+ convert_to_magocracy_decision_tooltip:0 "You can turn your feudal power into a magocracy."
+ convert_to_magocracy_decision_desc:0 "You have enough power and respect that you can turn [GetPlayer.GetPrimaryTitle.GetName] into a [magocracy|E]. You may end up losing your title over time, but it will be worth it."
+ convert_to_magocracy_decision_confirm:0 "Take the step"
  
  give_speech_decision:0 "Give a Speech"
  give_speech_decision_tooltip:0 "You can give a speech to the citizens of the magocracy."

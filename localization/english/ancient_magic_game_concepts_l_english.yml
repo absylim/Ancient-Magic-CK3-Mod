@@ -1,27 +1,38 @@
 ﻿l_english:
  game_concept_minor_health_issues:0 "minor health issues"
  game_concept_minor_health_issues_desc:0 "Minor health issues are those illnesses and injuries which [chiromancer|El]#E s#! are able to easily heal. The following traits are considered to be minor health issues:\n\n[GetTrait('smallpox').GetName( GetNullCharacter ) |LV],  [GetTrait('sickly').GetName( GetNullCharacter ) |LV], [GetTrait('ill').GetName( GetNullCharacter ) |LV], [GetTrait('early_great_pox').GetName( GetNullCharacter ) |LV], [GetTrait('lovers_pox').GetName( GetNullCharacter ) |LV], [GetTrait('wounded_1').GetName( GetNullCharacter ) |LV], and [GetTrait('infirm').GetName( GetNullCharacter ) |LV]."
+ 
  game_concept_serious_health_issues:0 "serious health issues"
  game_concept_serious_health_issues_desc:0 "Serious health issues are those illnesses and injuries which [chiromancer|El]#E s#! are able to heal, but it requires more [mana|El] and skill for them to do so. The following traits are considered to be serious health issues:\n\n[GetTrait('pneumonic').GetName( GetNullCharacter ) |LV],  [GetTrait('great_pox').GetName( GetNullCharacter ) |LV], [GetTrait('leper').GetName( GetNullCharacter ) |LV], [GetTrait('wounded_2').GetName( GetNullCharacter ) |LV], [GetTrait('maimed').GetName( GetNullCharacter ) |LV], [GetTrait('gout_ridden').GetName( GetNullCharacter ) |LV], [GetTrait('consumption').GetName( GetNullCharacter ) |LV], [GetTrait('cancer').GetName( GetNullCharacter ) |LV], [GetTrait('typhus').GetName( GetNullCharacter ) |LV], and [GetTrait('bubonic_plague').GetName( GetNullCharacter ) |LV]."
+ 
  game_concept_worst_health_issues:0 "worst health issues"
  game_concept_worst_health_issues_desc:0 "The worst health issues are those illnesses and injuries which [chiromancer|El]#E s#! are able to heal, but the challenge of doing so requires a great deal of [mana|El] and a true mastery of the healing arts. The following traits are considered to be the worst health issues:\n\n[GetTrait('wounded_3').GetName( GetNullCharacter ) |LV],  [GetTrait('one_eyed').GetName( GetNullCharacter ) |LV], [GetTrait('one_legged').GetName( GetNullCharacter ) |LV], [GetTrait('disfigured').GetName( GetNullCharacter ) |LV], [GetTrait('scarred').GetName( GetNullCharacter ) |LV], [GetTrait('eunuch').GetName( GetNullCharacter ) |LV], [GetTrait('blind').GetName( GetNullCharacter ) |LV], and [GetTrait('incapable').GetName( GetNullCharacter ) |LV].\n\nDue to the complexity and power of the spells involved in healing these traits, removing them takes a toll on the target's body, preventing them from receiving such sophisticated healing again for five years after the spell has been cast on them."
+ 
  game_concept_mage_level:0 "Mage Level"
  game_concept_mage_level_desc:0 "The level of a spell caster is a somewhat arbitrary means of categorizing and describing the capabilities of a [GetTrait('mage').GetName( GetNullCharacter ) |LVl]. The more powerful the mage, the higher their level may be said to be. In general, the higher a spell caster's mage level, the more effective their spells will be.\n\nThe rate at which a spell caster's mage level increases is dependent on the [magic_potential|E] inherent in the blood of that individual. More potent spell casters will gain mage levels more quickly than those with less natural aptitude."
+ 
  game_concept_magic_potential:0 "Magic Potential"
  game_concept_magic_potential_desc:0 "For some, the ability to work magic comes to them nearly as naturally as breathing, while for others, casting even the simplest of workings is impossible. The magic potential of a character is a measure of the innate talent a character has for manipulating arcane forces. It is a congenital trait which is often passed down through a house for generations.\n\nHowever, on its own, magic potential has little effect. Even the most naturally gifted characters aren't able to perform more than the most minute of parlor tricks without training as a [GetTrait('mage').GetName( GetNullCharacter ) |LV].\n\n#IThe levels of magic potential are as follows:#!\n[GetTrait('magic_potential_1').GetName( GetNullCharacter ) |LV]\n[GetTrait('magic_potential_2').GetName( GetNullCharacter ) |LV]\n[GetTrait('magic_potential_3').GetName( GetNullCharacter ) |LV]"
+ 
  game_concept_mana:0 "Mana"
  game_concept_mana_desc:0 "Mana is a fundamental force in the universe. It is a raw expression of 'potential' which may be used by a skilled magical practitioner to bend the laws of reality to their will.\n\nWhenever a mage casts a spell, they are channeling this 'potential' into an outcome of their own choosing, expending their mana reserves in the process. The more powerful an effect a [GetTrait('mage').GetName( GetNullCharacter ) |LVl] wishes to bring about, the more mana that effect requires."
+ 
  game_concept_mana_cost:0 "Mana Cost"
  game_concept_mana_cost_desc:0 "The mana cost of a spell is the amount of [mana|El] which is required to cast or dispel a given spell. In general, weaker spells require less mana and [magic_skill|El] to cast, while stronger spells require more."
+ 
  game_concept_magic_talent:0 "Magic Talent"
  game_concept_magic_talent_desc:0 "The amount of talent that a mage has in any given [school_of_magic|El]. As a mage gains experience in each [magical_discipline|El], they will be able to cast more and more powerful spells within that area of magical study."
+ 
  game_concept_mana_drain:0 "Mana Draw"
  game_concept_mana_drain_desc:0 "Some spells require the [GetTrait('mage').GetName( GetNullCharacter ) |LV] which casts them to dedicate a portion of the magic they receive each month to sustaining them, and if the mage should not have enough mana to do so, they will end."
+ 
  game_concept_magic_skill:0 "Magic Skill"
  game_concept_magical_talent:0 "Magical Talent"
  game_concept_magical_skill:0 "Magical Skill"
+ 
  game_concept_skill_in_a_magic_school:0 "Skill In A Magic School"
  game_concept_talent_in_a_magic_school:0 "Talent In A Magic School"
+ 
  game_concept_chronomancy:0 "Chronomancy"
  game_concept_chronomancy_desc:0 "Chronomancy is the [school_of_magic|E] focusing on the manipulation of time. A skilled [GetTrait('mage').GetName( GetNullCharacter ) |LVl] with talent in this area of study is able to alter the flow of time for themselves and others in small ways at lower levels, or to perform great feats of magic such as stopping the natural aging process as they advance."
  game_concept_time_magic:0 "Time Magic"
@@ -77,18 +88,22 @@
  game_concept_undead_desc:0 "The undead are people and animals which have died and been reanimated by [necromancy|E]. Most undead, called 'lesser undead' to distinguish them from more sophisticated beings are mindless creatures which only follow whatever instructions their creator invests them with at the time of their creation.\n\nTrue masters of the necromantic arts are able to create more complex forms of undeath, however. These beings, called 'greater undead' retain much of their mind and volition, though are usually still slaves to the spell caster that created them. The exception to this rule is the líché, a powerful undead spell caster which, due to their magical ability, is able to retain their mind and volition, even after their transformation from a living being into an undead creature. Powerful necromancers often choose to pursue this path to immortality, or to impart it on their favored subjects and family."
  game_concept_lesser_undead:0 "lesser undead"
  game_concept_greater_undead:0 "greater undead"
+ 
  #Lifestyle
  game_concept_arcane_lifestyle:0 "Arcane Lifestyle"
  game_concept_arcane_lifestyle_desc:0 "The $game_concept_arcane_lifestyle$ is suitable for Characters who want to discover the truth of thw rolds, gain unimagible power, be long-lived, or gain additional bonuses throu their [mage_spell|E]."
+ 
  #Holding
  game_concept_city_of_magic:0 "City Of Magic"
  game_concept_city_of_magic_desc:0 "A city of magic is a domain where magic has become ubiquitous and harnessed in service to man. It is a place where day-to-day affairs, such as the growing of food, the administration of the domain, security, and architecture, are improved through the use of magic.\n\nCities of magic are, by their nature, wonders of the world, with spells being used for all manner of simple tasks such as lighting, utilities, pest control, criminal science, and communication. In a city of magic, the arcane touches nearly every aspect of mundane life, and all benefit from this contact."
+ 
  #Ley Lines
  game_concept_ley_line:0 "Ley Line"
  game_concept_ley_line_desc:0 "[mana|E] is ubiquitous, but some places, called ley lines, have greater concentrations of it than others. Among the magically educated, there is some debate about the nature and cause of ley lines, and no consensus has ever been reached about their origin.\n\nWhat is known is that ley lines do indeed appear to move along defined paths. They are all connected, sweeping across the planet in great flows of magical energy, occasionally intersecting at points called [focal_points|E], and allow a spell caster to draw more mana than they would otherwise be able to."
  game_concept_ley_lines:0 "Ley Lines"
  game_concept_focal_point:0 "Focal Point"
  game_concept_focal_point_desc:0 "Among scholars of the arcane, a focal point is a geographical area where two or more [ley_lines|E] intersect. They are the most magically active places on earth, with each convergent ley line radically increasing the ambient [mana|El] of the region.\n\nAny [GetTrait('mage').GetName( GetNullCharacter ) |LVl] who finds themselves in control of one of these wondrous places will find it easier to gather and use magical energies. At the greatest of focal points, the very fabric of reality is so weak that the supernatural becomes the norm, though thankfully, such places are exceedingly rare."
+ 
  #Spell Explanations:
  game_concept_mage_spell:0 "Spell"
  game_concept_mage_spell_desc:0 "When a [GetTrait('mage').GetName( GetNullCharacter ) |LV] says that they are casting a spell, what they mean is that they are drawing on years of training to put themselves into a certain state of mind. While not necessary, due to the complexity of even the most simple spells, most mages often uses specific spell mnemonics - words and gestures which help them to remember the state of mind a spell requires.\n\nOnce the mage has achieved the necessary state of mind, they "cast" this spell out into the world around them. The ability to "cast" is what distinguishes those with [GetTrait('magic_potential_1').GetName( GetNullCharacter ) |LV] from everyone else in the world. At the end of the day, anyone can achieve the frame of mind required to construct a spell, but only mages may "cast" their thoughts and will into the world around them, a process known as creating a spell construct."
@@ -96,6 +111,7 @@
  game_concept_mage_aura_desc:0 "All auras are [mage_spell|El]#E s#!, but not all spells are auras. An aura is a type of spell that a mage may usually only cast on themself. It represents an on-going shift in that practioner's frame of mind, as well as a constant expenditure of [mana|El], which the [GetTrait('mage').GetName( GetNullCharacter ) |LVl] uses to sustain the spell. In order to activate an aura, a mage must have enough mana to cast the spell, and they must be able to produce enough mana each month to sustain it."
  game_concept_mage_ritual:0 "Ritual"
  game_concept_mage_ritual_desc:0 "A ritual is a type of spell which is more complex than any one human mind can quickly, safely, or accurately conceive of, at least not without significant preparations, advanced tools, multiple casters, or any combination of these elements. Like aura spells, a ritual may typically only be cast on or near the [GetTrait('mage').GetName( GetNullCharacter ) |LVl] which casts them. Unlike auras, however, rituals do not require that a mage continually maintain them in order for the spell to be effective. They simply produce whatever effects they are designed to produce, then dissipate like any other spell.\n\nThough a ritual is sometimes used because the spell being cast requires more power than one mage may contain on their own, this is not the primary use of a ritual style spell. More often, they are used to cast spells which are, by their nature, prohibitively complex, such as those which are necessary for the creation of golems, the undead, or any other being with some semblence of a mind. It is simply not feasible to produce a construct of any complexity without using an equally complex spell construct to define the parameters of such creature's behavior."
+ 
  game_concept_control_aging:0 "Control Aging"
  game_concept_control_aging_desc:0 "The Control Aging spell is the ultimate expression of the [chronomancy|El] [magic_school|El]. This complex miracle of magic allows its caster to hault the aging process of anyone that it is cast on. But beware! While the spell is able to halt natural aging, it can do nothing for other causes of death, such as disease or physical injury."
  game_concept_haste:0 "Haste"
@@ -150,13 +166,17 @@
  #magocracy
  game_concept_magocracy_family: "Family"
  game_concept_magocracy_families: "Families"
- game_concept_magocracy_family_desc: "Families are the ruling groups in [magocracys|E]. Every family is a [house|E], and can designate a member of their house as the electee of their house for the magocracy. It is typically the [house_head|E]."
+ game_concept_magocracy_family_desc: "Families are the ruling groups in [magocracies|E]. Every family is a [house|E], and can designate a member of their house as the electee of their house for the magocracy. It is typically the [house_head|E]."
+ 
  game_concept_leading_family: "Leading Family"
  game_concept_leading_family_desc: "The leading [magocracy_family|E] of a [magocracy|E] is the one whose electee will become the next leader of the magocracy. They have the most [magocracy_respect|E] of any family."
+ 
  game_concept_magocracy_respect: "Respect"
  game_concept_magocracy_respect_desc: "Every [magocracy_family|E] in a magocracy has respect. The amount depends on the age and [prestige|E] of the [house_head|E], the [dynasty_prestige|E] of the family, and other outside factors."
+ 
  game_concept_patrician: "Patrician"
  game_concept_patrician_desc: "The Patrician leads a [magocracy_family|E]. They are the [house_head|E] their family, and typically their family's electee."
+ 
  game_concept_senate_government_magocracy: "Senate"
  game_concept_senate_government_magocracy_desc: "A Senate is a form of [magocracy|E]. Every [magocracy_family|E] holds a certain amount of senators who vote with them, based on [magocracy_respect|E]. A majority must be reached to pass any proposal. There is a session every year."
  game_concept_council_government_magocracy: "Council"
@@ -165,22 +185,28 @@
  game_concept_ruler_government_magocracy_desc: "Elected Rulers is a form of [magocracy|E]. Every time a term ends, a new electee is voted the head of the magocracy from the [magocracy_family|E] with the highest [magocracy_respect|E]."
  game_concept_bicameral_government_magocracy: "Parlimentary Legislature"
  game_concept_bicameral_government_magocracy_desc: "Parlimentary Legislature is a form of [magocracy|E]. There are two houses to contend with in it, the [upper_house|E] and the [lower_house|E]."
+ 
  game_concept_senator_magocracy: "Senator"
  game_concept_senators_magocracy: "Senators"
  game_concept_senator_magocracy_desc: "Senators vote on proposals in a [senate_government_magocracy|E]. Each [magocracy_family|E] has a certain amount under their sway, which relates to their [magocracy_respect|E]."
+ 
  game_concept_councillor_magocracy: "Councillor"
  game_concept_councillor_magocracy: "Councillor"
  game_concept_councillors_magocracy: "Councillors"
  game_concept_councillor_magocracy_desc: "The Council in a magocracy, which is distinct from a normal [council|E], is the ruling body of a [council_government_magocracy|E] [magocracy|E]. The councillors are the [patrician|E]s of their [magocracy_families|E]. Each one gets a vote in the matters of state. They have the same term limits as the elected rulers. The most powerful councillor holds the magocracy title."
+ 
  game_concept_magocracy_clergy_estate: "Clergy Class"
  game_concept_magocracy_clergy_estate_no_class: "Clergy"
  game_concept_magocracy_clergy_estate_desc: "The clergy class is made up of the theocrats. They affect your same faith opinion and monthly [piety|E] gain."
+ 
  game_concept_magocracy_noble_estate: "Noble Class"
  game_concept_magocracy_noble_estate_no_class: "Noble"
  game_concept_magocracy_noble_estate_desc: "The noble class is made up of the nobility. They affect your feudal vassal opinion and monthly income."
+ 
  game_concept_magocracy_popular_estate: "Common Class"
  game_concept_magocracy_popular_estate_no_class: "Popular"
  game_concept_magocracy_popular_estate_desc: "The common class is made up of the common folk, the lowborn vassals. They affect your popular opinion and [development|E]."
+ 
  game_concept_magocracy_estates: "Classes"
  game_concept_magocracy_estates_desc: "In a [council_government_magocracy|E] [magocracy|E], you must be sure to appease the classes. The [magocracy_noble_estate|E], [magocracy_clergy_estate|E], and [magocracy_popular_estate|E] all have varying effects on your vassal, same faith, and popular opinions as well as your income, piety gain, and development gain."
  game_concept_citizenship: "Citizenship"
@@ -189,6 +215,7 @@
  game_concept_lower_house_desc: "In a [bicameral_government_magocracy|E] [magocracy|E], the House of Commons is made up of all counties which have citizenship in the nation. Where ."
  game_concept_upper_house: "House of Senate"
  game_concept_upper_house_desc: "In a [bicameral_government_magocracy|E] [magocracy|E], the Senate is made up of the [magocracy_families|E], who each have two votes in their house."
+ 
  game_concept_dictatorship: "Dictatorship"
  game_concept_dictator: "Dictator"
  game_concept_dictatorship_desc: "In a [senate_government_magocracy|E] [magocracy|E], a dictator can be appointed by the Senate in times of [war|E]. They have absolute power in the magocracy, but have to give up those powers when the magocracy is at peace. Of course, there is a chance they will try to keep that power, leading to blood"

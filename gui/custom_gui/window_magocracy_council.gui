@@ -77,7 +77,7 @@ window = {
 ################ TYPES AND TEMPLATES #################
 ######################################################
 
-types RepublicCouncilWindow {
+types MagocracyCouncilWindow {
 	type council_respect_info = vbox
 	{
 		name = "task"
@@ -326,7 +326,7 @@ types RepublicCouncilWindow {
 	}
 }
 
-types RepublicCouncilTaskTypes {
+types MagocracyCouncilTaskTypes {
 	
 	type vbox_magocracy_council_layout = vbox {
 		vbox = {
