@@ -42,7 +42,7 @@ used_magic_on_me = { # If religion has witchcraft illegal
 
 cursed_me_spell = {
 	opinion = -20
-	years = 5´
+	years = 5
 	decaying = yes
 }
 
