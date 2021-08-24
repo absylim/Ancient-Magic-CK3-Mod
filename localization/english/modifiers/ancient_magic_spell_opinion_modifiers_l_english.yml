@@ -6,3 +6,12 @@
  necromancy_intolerant:0 "Known [GetTrait('undead').GetName( GetNullCharacter )]"
  necromancy_allowed:0 "Necromancy Accepted"
  
+#magic casted
+ cursed_my_bloodline:0 "Cursed my bloodline!"
+ blessed_my_bloodline:0 "Blessed my bloodline"
+ used_magic_on_me:0 "Used magic on me!"
+ cursed_me_spell:0 "Cursed me!"
+ cursed_me_spell_active:0 "Cursed me!"
+ blessed_me_spell:0 "Blessed me"
+ blessed_me_spell_active:0 "Blessed me"
+ 
