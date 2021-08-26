@@ -4,8 +4,15 @@ open_spellbook_ai_decision = {
 		is_magus = yes
 	}
 	
+	is_valid = {
+		is_magus = yes
+		is_ai = yes
+	}
+	
+	ai_check_frequency = 3	
+	
 	effect = {
-		trigger_event = 
+		trigger_event = ancient_magic_ai_spellbook_events.001
 	}
 	
 	ai_potential = {
@@ -17,22 +24,22 @@ open_spellbook_ai_decision = {
 		
 		modifier = {
 			add = 40
-			mana > 300
+			var:mana > 300
 		}
 		
 		modifier = {
 			add = 20
-			mana > 500
+			var:mana > 500
 		}
 		
 		modifier = {
 			add = 20
-			mana > 800
+			var:mana > 800
 		}
 		
 		modifier = {
 			add = 20
-			mana > 1200
+			var:mana > 1200
 		}
 	}
 }

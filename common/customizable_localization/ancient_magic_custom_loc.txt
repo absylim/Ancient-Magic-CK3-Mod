@@ -238,7 +238,7 @@ TimesManaDrainGreenRed = {
     text = {
         localization_key = MANA_DRAIN_15_GREEN
         trigger = {
-            has_character_modifier = finacial_times_modifier
+            has_character_modifier = financial_times_modifier
         }
     }
     text = {
