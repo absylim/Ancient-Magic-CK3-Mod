@@ -34,7 +34,7 @@
  slowness_spell_gui_name: "Slowness"
  mass_slowness_spell_gui_name: "Mass Slowness"
  temporal_manipulation_spell_gui_name: "Temporal Manipulation"
- master_of_time_spell_gui_name: " Master of Time"
+ master_of_time_spell_gui_name: "Master of Time"
  # Life
  heal_spell_gui_name: "Heal"
  greater_heal_spell_gui_name: "Greater Heal"
