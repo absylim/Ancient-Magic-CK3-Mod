@@ -96,87 +96,91 @@ focal_point = {
 ##################################################
 # SPELL DESCRIPTIONS
 # Chronomancy
-control_aging = {
-}
+glimpse_the_future_spell = {}
 
-haste = {
-}
+financial_times_spell = {}
 
-glimpse_the_future = {
-}
+celerity_spell = {}
 
-financial_times = {
-}
+mass_celerity_spell = {}
 
-celerity = {
-}
+slowness_spell = {}
 
-slowness = {
-}
+mass_slowness_spell = {}
 
-mass_slowness = {
-}
+temporal_manipulation_spell = {}
 
-temporal_manipulation = {
-}
+master_of_time_spell = {}
 
 # Chiromancy
-healing_spell = {
-}
+heal_spell = {}
+
+greater_heal_spell = {}
+
+avatar_of_life_spell = {}
 
 # Elomancy
-create_golems = {
-}
+flame_aura_spell = {}
 
-stone_golems = {
-    alias = { stone_golem }
-}
+flaming_weapons_spell = {}
 
-lava_golems = {
-    alias = { lava_golem }
-}
+living_earthworks_spell = {}
 
-flame_aura = {
-}
+golem_creation_spell = {}
 
-flaming_weapons = {
-}
+control_water_spell = {}
 
-living_earthworks = {
-}
+drought_spell = {}
 
-control_water = {
-}
+elemental_warrior_spell = {}
 
-drought_spell = {
-}
+lord_of_the_elements_spell = {}
 
-cloak_of_elements = {
-}
+# Necromancy
+inflict_illness_spell = {}
 
-create_undead = {
-}
+plague_lord_spell = {}
 
-pestilence = {
-}
+aura_of_death_spell = {}
 
-consume_life = {
-}
+necromancy_spell = {}
 
-aura_of_death = {
-}
+drain_life_spell = {}
 
-manipulate_blood = {
-}
+death_stare_spell = {}
 
-conception = {
-}
+deacon_of_death_spell = {}
 
-manipulate_mind = {
-}
+# Biomancy
+rewrite_beauty_spell = {}
 
-aura_of_majesty = {
-}
+rewrite_physique_spell = {}
 
-aura_of_truth = {
-}
+rewrite_intellect_spell = {}
+
+sculpter_of_flesh_spell = {}
+
+fertility_control_spell = {}
+
+impregnate_spell = {}
+
+# Mensomancy
+entrance_spell = {}
+
+incite_lust_spell = {}
+
+incite_obedience_spell = {}
+
+dominate_spell = {}
+
+beguiling_aura_spell = {}
+
+friendship_spell = {}
+
+rivalry_spell = {}
+
+enchanting_aura_spell = {}
+
+sculpt_mind_spell = {}
+
+master_of_puppets_spell = {}
