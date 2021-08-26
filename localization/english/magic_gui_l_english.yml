@@ -34,6 +34,7 @@
  slowness_spell_gui_name: "Slowness"
  mass_slowness_spell_gui_name: "Mass Slowness"
  temporal_manipulation_spell_gui_name: "Temporal Manipulation"
+ haste_spell_gui_name: "Haste"
  master_of_time_spell_gui_name: "Master of Time"
  # Life
  heal_spell_gui_name: "Heal"
@@ -83,10 +84,11 @@
  glimpse_the_future_spell_desc: "This spell allows the user brief insights into the future of their culture, allowing them to view new innovations and technologies. Gives a bonus to [cultural_fascination|E] research speed."
  financial_times_spell_desc: "A more directed application of future sight, this spell allows the user to see specific events, such as resource abundances or shortages, well in advance, allowing them to gain a market advantage. Gives a bonus to monthly [income|E]."
  celerity_spell_desc: "A relatively simple application of [chronomancy|E], this spell allows the user to increase the flow of time around themselves, giving them extraordinarily fast reaction times. Best used in short bursts, so as not to age oneself too quickly. Gives a bonus to [prowess|E]."
- mass_celerity_spell_desc: "Contrary to the name, this spell is actually a more powerful version of slowness. Instead of slowing a single target, the mage slows all but a select group. While those affected still move at a normal speed, they appear to be moving at great speed. Gives a bonus to army movement speed."
- slowness_spell_desc: "The equal but opposite form of celerity, this spell allows the user to decrease the flow of time around a target, making them seem to move at a snail's pace. Gives the target a penalty to [prowess|E]. Must be revoked from a target before being cast on a different target."
- mass_slowness_spell_desc: "More powerful than slowness, not as powerful as mass celerity, this spell gives the user enough fine control to slow only enemy soldiers, even in the middle of pitched battle. Gives a bonus to [advantage|E] and friendly [dead_soldiers|E] reduction."
- temporal_manipulation_spell_desc: "The true successor to celerity, this spell allows the user to increase the flow of time around a specific area, allowing tasks to be performed at a much faster rate. Gives a bonus to [building|E] construction speed."
+ mass_celerity_spell_desc: "More powerful than [celerity_spell|E], this spell gives the user the fine control necessary to greatly speed up a group of their own soldiers, even in the middle of heated combat. Gives a bonus to [advantage|E] and friendly [dead_soldiers|E] reduction."
+ slowness_spell_desc: "The equal but opposite form of [celerity_spell|E], this spell allows the user to decrease the flow of time around a target, making them seem to move at a snail's pace. Gives the target a penalty to [prowess|E]. Must be revoked from a target before being cast on a different target."
+ mass_slowness_spell_desc: "More powerful than [slowness_spell|E], not as powerful as [haste_spell|E], this spell gives the user enough fine control to slow enemy soldiers under a given commander, even in the middle of pitched battle. Gives a penalty to [advantage|E] and an enemy [dead_soldiers|E] increase."
+ temporal_manipulation_spell_desc: "The true successor to [celerity_spell|E], this spell allows the user to increase the flow of time around a specific area, allowing tasks to be performed at a much faster rate. Gives a bonus to [building|E] construction speed."
+ haste_spell_desc: "Contrary to the name, this spell is actually a more powerful version of [slowness_spell|E]. Instead of slowing a single target, the mage slows all but a select group. While those affected still move at a normal speed, they appear to be moving at great speed. Gives a bonus to army movement speed."
  master_of_time_spell_desc: "Having mastered the nuances of time's flow, this spell allows the user to completely halt the passage of time for another person, while still allowing them to interact with the world as normal. Makes the target [GetTrait('immortal').GetName(GetPlayer)]."
 
  # Life

@@ -9,6 +9,7 @@ mass_celerity_spell_cost = { value = 100 }
 slowness_spell_cost = { value = 100 }
 mass_slowness_spell_cost = { value = 100 }
 temporal_manipulation_spell_cost = { value = 100 }
+haste_spell_cost = { value = 100 }
 master_of_time_spell_cost = { value = 500 }
 
 #Life

@@ -528,6 +528,7 @@ temporal_manipulation_perk = {
 
 	effect = {
 		unlock_temporal_manipulation_spell = yes
+		unlock_haste_spell = yes
 		gain_mana_gen_perk = yes
 		gain_max_mana_perk = yes
 		gain_mage_xp_perk = yes

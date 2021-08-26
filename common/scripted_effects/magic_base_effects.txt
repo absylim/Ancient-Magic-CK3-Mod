@@ -17,6 +17,7 @@
 	add_to_global_variable_list = { name = time_spells_list target = flag:slowness_spell }
 	add_to_global_variable_list = { name = time_spells_list target = flag:mass_slowness_spell }
 	add_to_global_variable_list = { name = time_spells_list target = flag:temporal_manipulation_spell }
+	add_to_global_variable_list = { name = time_spells_list target = flag:haste_spell }
 	add_to_global_variable_list = { name = time_spells_list target = flag:master_of_time_spell }
 
 	# Life

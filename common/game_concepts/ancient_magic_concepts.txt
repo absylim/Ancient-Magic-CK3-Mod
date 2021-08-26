@@ -110,6 +110,8 @@ mass_slowness_spell = {}
 
 temporal_manipulation_spell = {}
 
+haste_spell = {}
+
 master_of_time_spell = {}
 
 # Chiromancy

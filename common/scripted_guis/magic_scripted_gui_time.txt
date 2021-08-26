@@ -168,14 +168,14 @@ mass_celerity_spell = {
 	}
 	effect = {
 		if = {
-			limit = { NOT = { has_character_modifier = magic_haste_modifier } }
-			add_character_modifier = magic_haste_modifier
+			limit = { NOT = { has_character_modifier = mass_celerity_modifier } }
+			add_character_modifier = mass_celerity_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
 		}
 		else = {
-			remove_all_character_modifier_instances = magic_haste_modifier
+			remove_all_character_modifier_instances = mass_celerity_modifier
 			change_mana_gen_tooltip = { VALUE = mana_drain_average }
 		}
 	}
@@ -279,21 +279,27 @@ slowness_spell_has_list = {
 mass_slowness_spell = {
 	scope = character
 	is_shown = {
-		this = scope:spell_target
+		NOT = { this = scope:spell_target }
 	}
 	is_valid = {
 		var:mana.compare_value >= scope:spell_cost.compare_value
 	}
 	effect = {
 		if = {
-			limit = { NOT = { has_character_modifier = mass_slowness_modifier } }
-			add_character_modifier = mass_slowness_modifier
+			limit = { NOT = { scope:spell_target = { has_character_modifier = mass_slowness_modifier } } }
+			set_variable = {
+				name = mass_slowness_target
+				value = scope:spell_target
+			}
+			#should be var:mass_slowness_target but the loc key doesn't have access to that until the script sets it
+			scope:spell_target = { add_character_modifier = mass_slowness_modifier }
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
 		}
 		else = {
-			remove_all_character_modifier_instances = mass_slowness_modifier
+			var:mass_slowness_target = { remove_all_character_modifier_instances = mass_slowness_modifier }
+			remove_variable = mass_slowness_target
 			change_mana_gen_tooltip = { VALUE = mana_drain_average }
 		}
 	}
@@ -373,6 +379,59 @@ temporal_manipulation_spell_has_properties = {
 }
 
 temporal_manipulation_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+haste_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_character_modifier = magic_haste_modifier } }
+			add_character_modifier = magic_haste_modifier
+			display_aura_times = { VALUE = mage_level }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+		else = {
+			remove_all_character_modifier_instances = magic_haste_modifier
+			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+		}
+	}
+}
+
+haste_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = temporal_manipulation_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+haste_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+haste_spell_has_list = {
 	scope = character
 	is_shown = {
 		always = no
