@@ -1,0 +1,38 @@
+open_spellbook_ai_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+	}
+	
+	effect = {
+		trigger_event = 
+	}
+	
+	ai_potential = {
+		is_magus = yes
+	}
+	
+	ai_will_do = {
+		base = 0
+		
+		modifier = {
+			add = 40
+			mana > 300
+		}
+		
+		modifier = {
+			add = 20
+			mana > 500
+		}
+		
+		modifier = {
+			add = 20
+			mana > 800
+		}
+		
+		modifier = {
+			add = 20
+			mana > 1200
+		}
+	}
+}

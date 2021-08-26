@@ -1,0 +1,2317 @@
+namespace = ancient_magic_ai_spellbook_events
+
+#magic type selection
+ancient_magic_ai_spellbook_events.001 = {
+	title = ancient_magic_ai_spellbook_events.001.t
+	desc = ancient_magic_ai_spellbook_events.001.desc
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events.001.a #Chronomancy
+		trigger_event = ancient_magic_ai_spellbook_events.002
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.001.b #Chiromancy
+		trigger_event = ancient_magic_ai_spellbook_events.003
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.001.c #Elomancy
+		trigger_event = ancient_magic_ai_spellbook_events.004
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.001.d #Necromancy
+		trigger_event = ancient_magic_ai_spellbook_events.005
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.001.e #Biomancy
+		trigger_event = ancient_magic_ai_spellbook_events.006
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.001.f #Mensomancy
+		trigger_event = ancient_magic_ai_spellbook_events.007
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events_close
+	}
+}
+
+#spell select screen
+
+ancient_magic_ai_spellbook_events.002 = {
+	title = ancient_magic_ai_spellbook_events.002.t
+	desc = ancient_magic_ai_spellbook_events.002.desc
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events.002.a
+		trigger_event = ancient_magic_ai_spellbook_events.201
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.002.b
+		trigger_event = ancient_magic_ai_spellbook_events.202
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.002.c
+		trigger_event = ancient_magic_ai_spellbook_events.203
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.002.d
+		trigger_event = ancient_magic_ai_spellbook_events.204
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.002.e
+		trigger_event = ancient_magic_ai_spellbook_events.205
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.002.f
+		trigger_event = ancient_magic_ai_spellbook_events.206
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.002.g
+		trigger_event = ancient_magic_ai_spellbook_events.207
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.002.h
+		trigger_event = ancient_magic_ai_spellbook_events.208
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.002.i
+		trigger_event = ancient_magic_ai_spellbook_events.209
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.001
+	}
+}
+
+ancient_magic_ai_spellbook_events.003 = {
+	title = ancient_magic_ai_spellbook_events.003.t
+	desc = ancient_magic_ai_spellbook_events.003.desc
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events.003.a
+		trigger_event = ancient_magic_ai_spellbook_events.301
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.003.b
+		trigger_event = ancient_magic_ai_spellbook_events.302
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.003.c
+		trigger_event = ancient_magic_ai_spellbook_events.303
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.001
+	}
+}
+
+ancient_magic_ai_spellbook_events.004 = {
+	title = ancient_magic_ai_spellbook_events.004.t
+	desc = ancient_magic_ai_spellbook_events.004.desc
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events.004.a
+		trigger_event = ancient_magic_ai_spellbook_events.401
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.004.b
+		trigger_event = ancient_magic_ai_spellbook_events.402
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.004.c
+		trigger_event = ancient_magic_ai_spellbook_events.403
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.004.d
+		trigger_event = ancient_magic_ai_spellbook_events.404
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.004.e
+		trigger_event = ancient_magic_ai_spellbook_events.405
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.004.f
+		trigger_event = ancient_magic_ai_spellbook_events.406
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.004.g
+		trigger_event = ancient_magic_ai_spellbook_events.407
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.004.h
+		trigger_event = ancient_magic_ai_spellbook_events.408
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.001
+	}
+}
+
+ancient_magic_ai_spellbook_events.005 = {
+	title = ancient_magic_ai_spellbook_events.005.t
+	desc = ancient_magic_ai_spellbook_events.005.desc
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events.005.a
+		trigger_event = ancient_magic_ai_spellbook_events.501
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.005.b
+		trigger_event = ancient_magic_ai_spellbook_events.502
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.005.c
+		trigger_event = ancient_magic_ai_spellbook_events.503
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.005.d
+		trigger_event = ancient_magic_ai_spellbook_events.504
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.005.e
+		trigger_event = ancient_magic_ai_spellbook_events.505
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.005.f
+		trigger_event = ancient_magic_ai_spellbook_events.506
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.005.g
+		trigger_event = ancient_magic_ai_spellbook_events.507
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.005.h
+		trigger_event = ancient_magic_ai_spellbook_events.508
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.001
+	}
+}
+
+ancient_magic_ai_spellbook_events.006 = {
+	title = ancient_magic_ai_spellbook_events.006.t
+	desc = ancient_magic_ai_spellbook_events.006.desc
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events.006.a
+		trigger_event = ancient_magic_ai_spellbook_events.601
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.006.b
+		trigger_event = ancient_magic_ai_spellbook_events.602
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.006.c
+		trigger_event = ancient_magic_ai_spellbook_events.603
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.006.d
+		trigger_event = ancient_magic_ai_spellbook_events.604
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.006.e
+		trigger_event = ancient_magic_ai_spellbook_events.605
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.006.f
+		trigger_event = ancient_magic_ai_spellbook_events.606
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.006.g
+		trigger_event = ancient_magic_ai_spellbook_events.607
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.006.h
+		trigger_event = ancient_magic_ai_spellbook_events.608
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.001
+	}
+}
+
+ancient_magic_ai_spellbook_events.007 = {
+	title = ancient_magic_ai_spellbook_events.007.t
+	desc = ancient_magic_ai_spellbook_events.007.desc
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events.007.a
+		trigger_event = ancient_magic_ai_spellbook_events.701
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.007.b
+		trigger_event = ancient_magic_ai_spellbook_events.702
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.007.c
+		trigger_event = ancient_magic_ai_spellbook_events.703
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.007.d
+		trigger_event = ancient_magic_ai_spellbook_events.704
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.007.e
+		trigger_event = ancient_magic_ai_spellbook_events.705
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.007.f
+		trigger_event = ancient_magic_ai_spellbook_events.706
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.007.g
+		trigger_event = ancient_magic_ai_spellbook_events.707
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events.007.h
+		trigger_event = ancient_magic_ai_spellbook_events.708
+	}
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.001
+	}
+}
+
+#time spells
+
+ancient_magic_ai_spellbook_events.201 = {
+	title = ancient_magic_ai_spellbook_events.201.t
+	desc = ancient_magic_ai_spellbook_events.201.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 500
+			NOT = { has_character_modifier = halt_aging_spell_modifier }
+			has_trait = master_of_time
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 500
+				has_character_modifier = halt_aging_spell_modifier
+				NOT = { has_trait = master_of_time }
+			}
+		}
+		change_mana = { VALUE = -500 }
+		add_character_modifier = {
+			modifier = halt_aging_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.002
+	}
+}
+
+ancient_magic_ai_spellbook_events.202 = {
+	title = ancient_magic_ai_spellbook_events.202.t
+	desc = ancient_magic_ai_spellbook_events.202.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 500
+			NOT = { has_character_modifier = restart_aging_spell_modifier }
+			has_trait = master_of_time
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 500
+				has_character_modifier = restart_aging_spell_modifier
+				NOT = { has_trait = master_of_time }
+			}
+		}
+		change_mana = { VALUE = -500 }
+		add_character_modifier = {
+			modifier = restart_aging_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.002
+	}
+}
+
+ancient_magic_ai_spellbook_events.203 = {
+	title = ancient_magic_ai_spellbook_events.203.t
+	desc = ancient_magic_ai_spellbook_events.203.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = mass_celerity_perk
+			NOT = {
+				has_character_modifier = magic_haste_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = magic_haste_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -15 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = magic_haste_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = mass_celerity_perk
+			has_character_modifier = magic_haste_modifier
+		}
+		show_as_unavailable = {
+			var:mana < 100
+			NOT = {
+				has_character_modifier = magic_haste_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 15 }
+
+		while = {
+			count = 100
+			remove_character_modifier = magic_haste_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.002
+
+	}
+}
+
+ancient_magic_ai_spellbook_events.204 = {
+	title = ancient_magic_ai_spellbook_events.204.t
+	desc = ancient_magic_ai_spellbook_events.204.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = glimpse_the_future_perk
+			NOT = {
+				has_character_modifier = glimpse_the_future_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = glimpse_the_future_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -15 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = glimpse_the_future_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = glimpse_the_future_perk
+			has_character_modifier = glimpse_the_future_modifier
+		}
+		show_as_unavailable = {
+			var:mana < 100
+			NOT = {
+				has_character_modifier = glimpse_the_future_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 15 }
+
+		while = {
+			count = 100
+			remove_character_modifier = glimpse_the_future_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.002
+	}
+}
+
+ancient_magic_ai_spellbook_events.205 = {
+	title = ancient_magic_ai_spellbook_events.205.t
+	desc = ancient_magic_ai_spellbook_events.205.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = finacial_times_perk
+			NOT = {
+				has_character_modifier = finacial_times_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = finacial_times_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -15 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = finacial_times_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = finacial_times_perk
+			has_character_modifier = finacial_times_modifier
+		}
+		show_as_unavailable = {
+			var:mana >= 100
+			NOT = {
+				has_character_modifier = finacial_times_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 15 }
+
+		while = {
+			count = 100
+			remove_character_modifier = finacial_times_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.002
+	}
+}
+
+ancient_magic_ai_spellbook_events.206 = {
+	title = ancient_magic_ai_spellbook_events.206.t
+	desc = ancient_magic_ai_spellbook_events.206.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = celerity_perk
+			NOT = {
+				has_character_modifier = celerity_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = celerity_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -15 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = celerity_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = celerity_perk
+			has_character_modifier = celerity_modifier
+		}
+		show_as_unavailable = {
+			var:mana >= 100
+			NOT = {
+				has_character_modifier = celerity_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 15 }
+
+		while = {
+			count = 100
+			remove_character_modifier = celerity_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.002
+	}
+}
+
+ancient_magic_ai_spellbook_events.207 = {
+	title = ancient_magic_ai_spellbook_events.207.t
+	desc = ancient_magic_ai_spellbook_events.207.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = slowness_perk
+			NOT = {
+				has_character_modifier = slowness_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = slowness_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -15 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = slowness_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = slowness_perk
+			has_character_modifier = slowness_modifier
+		}
+		show_as_unavailable = {
+			var:mana < 100
+			NOT = {
+				has_character_modifier = slowness_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 15 }
+
+		while = {
+			count = 100
+			remove_character_modifier = slowness_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.002
+	}
+}
+
+ancient_magic_ai_spellbook_events.208 = {
+	title = ancient_magic_ai_spellbook_events.208.t
+	desc = ancient_magic_ai_spellbook_events.208.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = mass_slowness_perk
+			NOT = {
+				has_character_modifier = mass_slowness_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = mass_slowness_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -15 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = mass_slowness_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = mass_slowness_perk
+			has_character_modifier = mass_slowness_modifier
+		}
+		show_as_unavailable = {
+			var:mana < 100
+			NOT = {
+				has_character_modifier = mass_slowness_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 15 }
+
+		while = {
+			count = 100
+			remove_character_modifier = mass_slowness_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.002
+	}
+}
+
+ancient_magic_ai_spellbook_events.209 = {
+	title = ancient_magic_ai_spellbook_events.209.t
+	desc = ancient_magic_ai_spellbook_events.209.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = temporal_manipulation_perk
+			NOT = {
+				has_character_modifier = temporal_manipulation_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = temporal_manipulation_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -30 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = temporal_manipulation_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = temporal_manipulation_perk
+			has_character_modifier = temporal_manipulation_modifier
+		}
+		show_as_unavailable = {
+			var:mana > 100
+			NOT = {
+				has_character_modifier = temporal_manipulation_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 30 }
+
+		while = {
+			count = 100
+			remove_character_modifier = temporal_manipulation_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.002
+	}
+}
+
+#life spells
+
+ancient_magic_ai_spellbook_events.301 = {
+	title = ancient_magic_ai_spellbook_events.301.t
+	desc = ancient_magic_ai_spellbook_events.301.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 50
+			has_perk = heal_perk
+			NOT = {
+				has_character_modifier = heal_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 50
+				has_character_modifier = heal_spell_modifier
+				NOT = {
+					has_perk = heal_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -50 }
+		add_character_modifier = {
+			modifier = heal_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.003
+	}
+}
+
+ancient_magic_ai_spellbook_events.302 = {
+	title = ancient_magic_ai_spellbook_events.302.t
+	desc = ancient_magic_ai_spellbook_events.302.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 100
+			has_perk = greater_heal_perk
+			NOT = {
+				has_character_modifier = heal_2_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				NOT = { has_perk = greater_heal_perk }
+				has_character_modifier = heal_2_spell_modifier
+			}
+		}
+		add_character_modifier = {
+			modifier = heal_2_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.003
+	}
+}
+
+ancient_magic_ai_spellbook_events.303 = {
+	title = ancient_magic_ai_spellbook_events.303.t
+	desc = ancient_magic_ai_spellbook_events.303.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 100
+			has_trait = avatar_of_life
+			NOT = {
+				has_character_modifier = heal_3_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				NOT = { has_perk = greater_heal_perk }
+				has_character_modifier = heal_3_spell_modifier
+			}
+		}
+		add_character_modifier = {
+			modifier = heal_3_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.003
+	}
+}
+
+#elemental spells
+
+ancient_magic_ai_spellbook_events.401 = {
+	title = ancient_magic_ai_spellbook_events.401.t
+	desc = ancient_magic_ai_spellbook_events.401.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 100
+			NOT = {
+				has_character_modifier = golem_cooldown_modifier
+			}
+			has_perk = golem_creation_perk
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				NOT = {
+					has_perk = golem_creation_perk
+				}
+				has_character_modifier = golem_cooldown_modifier
+			}
+		}
+		change_mana = { VALUE = -100 }
+		spawn_army = {
+			name = golem_army
+			uses_supply = no
+			inheritable = no
+			men_at_arms = {
+				type = golem
+				stacks = mage_level
+			}
+			levy = 0
+			location = capital_province
+		}
+		add_character_modifier = {
+			modifier = golem_cooldown_modifier
+			years = 5
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.004
+	}
+}
+
+ancient_magic_ai_spellbook_events.402 = {
+	title = ancient_magic_ai_spellbook_events.402.t
+	desc = ancient_magic_ai_spellbook_events.402.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 400
+			NOT = {
+				has_character_modifier = lava_golem_cooldown_modifier
+			}
+			has_trait = lord_of_the_elements
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 400
+				NOT = {
+					has_trait = lord_of_the_elements
+				}
+				has_character_modifier = lava_golem_cooldown_modifier
+			}
+		}
+		change_mana = { VALUE = -400 }
+		
+		spawn_army = {
+			name = lava_golem_army
+			uses_supply = no
+			inheritable = no
+			men_at_arms = {
+				type = lava_golem
+				stacks = mage_level
+			}
+			levy = 0
+			location = capital_province
+		}
+		add_character_modifier = {
+			modifier = lava_golem_cooldown_modifier
+			years = 5
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.004
+	}
+}
+
+ancient_magic_ai_spellbook_events.403 = {
+	title = ancient_magic_ai_spellbook_events.403.t
+	desc = ancient_magic_ai_spellbook_events.403.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = flame_aura_perk
+			NOT = {
+				has_character_modifier = flame_aura_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = flame_aura_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -15 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = flame_aura_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = flame_aura_perk
+			has_character_modifier = flame_aura_modifier
+		}
+		show_as_unavailable = {
+			var:mana < 100
+			NOT = {
+				has_character_modifier = flame_aura_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 15 }
+
+		while = {
+			count = 100
+			remove_character_modifier = flame_aura_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.004
+	}
+}
+
+ancient_magic_ai_spellbook_events.404 = {
+	title = ancient_magic_ai_spellbook_events.404.t
+	desc = ancient_magic_ai_spellbook_events.404.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = flaming_weapons_perk
+			NOT = {
+				has_character_modifier = flaming_weapons_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = flaming_weapons_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -15 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = flaming_weapons_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = flaming_weapons_perk
+			has_character_modifier = flaming_weapons_modifier
+		}
+		show_as_unavailable = {
+			var:mana < 100
+			NOT = {
+				has_character_modifier = flaming_weapons_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 15 }
+
+		while = {
+			count = 100
+			remove_character_modifier = flaming_weapons_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.004
+	}
+}
+
+ancient_magic_ai_spellbook_events.405 = {
+	title = ancient_magic_ai_spellbook_events.405.t
+	desc = ancient_magic_ai_spellbook_events.405.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = living_earthworks_perk
+			NOT = {
+				has_character_modifier = living_earthworks_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = living_earthworks_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -15 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = living_earthworks_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = living_earthworks_perk
+			has_character_modifier = living_earthworks_modifier
+		}
+		show_as_unavailable = {
+			var:mana < 100
+			NOT = {
+				has_character_modifier = living_earthworks_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 15 }
+
+		while = {
+			count = 100
+			remove_character_modifier = living_earthworks_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.004
+	}
+}
+
+ancient_magic_ai_spellbook_events.406 = {
+	title = ancient_magic_ai_spellbook_events.406.t
+	desc = ancient_magic_ai_spellbook_events.406.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = control_water_perk
+			NOT = {
+				has_character_modifier = control_water_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = control_water_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -15 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = control_water_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = control_water_perk
+			has_character_modifier = control_water_modifier
+		}
+		show_as_unavailable = {
+			var:mana < 100
+			NOT = {
+				has_character_modifier = control_water_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 15 }
+
+		while = {
+			count = 100
+			remove_character_modifier = control_water_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.004
+	}
+}
+
+ancient_magic_ai_spellbook_events.407 = {
+	title = ancient_magic_ai_spellbook_events.407.t
+	desc = ancient_magic_ai_spellbook_events.407.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = drought_perk
+			NOT = {
+				has_character_modifier = drought_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = drought_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -15 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = drought_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = drought_perk
+			has_character_modifier = drought_modifier
+		}
+		show_as_unavailable = {
+			var:mana < 100
+			NOT = {
+				has_character_modifier = drought_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 15 }
+
+		while = {
+			count = 100
+			remove_character_modifier = drought_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.004
+	}
+}
+
+ancient_magic_ai_spellbook_events.408 = {
+	title = ancient_magic_ai_spellbook_events.408.t
+	desc = ancient_magic_ai_spellbook_events.408.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = elemental_warrior_perk
+			NOT = {
+				has_character_modifier = elemental_warrior_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = elemental_warrior_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -30 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = elemental_warrior_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = elemental_warrior_perk
+			has_character_modifier = elemental_warrior_modifier
+		}
+		show_as_unavailable = {
+			var:mana < 100
+			NOT = {
+				has_character_modifier = elemental_warrior_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 30 }
+
+		while = {
+			count = 100
+			remove_character_modifier = elemental_warrior_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.004
+	}
+}
+
+#death spells
+ancient_magic_ai_spellbook_events.501 = {
+	title = ancient_magic_ai_spellbook_events.501.t
+	desc = ancient_magic_ai_spellbook_events.501.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 200
+			NOT = {
+				has_character_modifier = undead_horde_cooldown_modifier
+			}
+			has_perk = necromancy_perk
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 200
+				NOT = {
+					has_perk = necromancy_perk
+				}
+				has_character_modifier = undead_horde_cooldown_modifier
+			}
+		}
+		change_mana = { VALUE = -200 }
+		
+		spawn_army = {
+			name = undead_horde
+			uses_supply = no
+			inheritable = no
+			men_at_arms = {
+				type = undead
+				stacks = mage_level
+			}
+			levy = 0
+			location = capital_province
+		}
+		add_character_modifier = {
+			modifier = undead_horde_cooldown_modifier
+			years = 2
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.005
+	}
+}
+
+ancient_magic_ai_spellbook_events.502 = {
+	title = ancient_magic_ai_spellbook_events.502.t
+	desc = ancient_magic_ai_spellbook_events.502.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 600
+			NOT = { has_trait = undead }
+			has_trait = deacon_of_death
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 600
+				has_trait = undead
+				NOT = { has_trait = deacon_of_death }
+			}
+		}
+		change_mana = { VALUE = -600 }
+		add_trait = undead
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.005
+	}
+}
+
+ancient_magic_ai_spellbook_events.503 = {
+	title = ancient_magic_ai_spellbook_events.503.t
+	desc = ancient_magic_ai_spellbook_events.503.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 600
+			NOT = { has_character_modifier = gift_of_unlife_spell_modifier }
+			has_trait = deacon_of_death
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 600
+				has_character_modifier = gift_of_unlife_spell_modifier
+				NOT = { has_trait = deacon_of_death }
+			}
+		}
+		change_mana = { VALUE = -600 }
+		add_character_modifier = {
+			modifier = gift_of_unlife_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.005
+	}
+}
+
+ancient_magic_ai_spellbook_events.504 = {
+	title = ancient_magic_ai_spellbook_events.504.t
+	desc = ancient_magic_ai_spellbook_events.504.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 50
+			has_perk = inflict_illness_perk
+			NOT = {
+				has_character_modifier = inflict_illness_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 50
+				has_character_modifier = inflict_illness_spell_modifier
+				NOT = {
+					has_perk = inflict_illness_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -50 }
+		add_character_modifier = {
+			modifier = inflict_illness_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.005
+	}
+}
+ancient_magic_ai_spellbook_events.505 = {
+	title = ancient_magic_ai_spellbook_events.505.t
+	desc = ancient_magic_ai_spellbook_events.505.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 300
+			has_perk = plague_lord_perk
+			NOT = {
+				has_character_modifier = spread_plague_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 300
+				has_character_modifier = spread_plague_spell_modifier
+				NOT = {
+					has_perk = plague_lord_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -300 }
+		add_character_modifier = {
+			modifier = spread_plague_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.005
+	}
+}
+ancient_magic_ai_spellbook_events.506 = {
+	title = ancient_magic_ai_spellbook_events.506.t
+	desc = ancient_magic_ai_spellbook_events.506.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 200
+			has_perk = drain_life_perk
+			NOT = {
+				has_character_modifier = drain_life_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 200
+				has_character_modifier = drain_life_spell_modifier
+				NOT = {
+					has_perk = drain_life_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -200 }
+		add_character_modifier = {
+			modifier = drain_life_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.005
+	}
+}
+ancient_magic_ai_spellbook_events.507 = {
+	title = ancient_magic_ai_spellbook_events.507.t
+	desc = ancient_magic_ai_spellbook_events.507.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 600
+			has_perk = death_stare_perk
+			NOT = {
+				has_character_modifier = death_stare_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 600
+				has_character_modifier = death_stare_spell_modifier
+				NOT = {
+					has_perk = death_stare_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -600 }
+		add_character_modifier = {
+			modifier = death_stare_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.005
+	}
+}
+
+ancient_magic_ai_spellbook_events.508 = {
+	title = ancient_magic_ai_spellbook_events.508.t
+	desc = ancient_magic_ai_spellbook_events.508.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = aura_of_death_perk
+			NOT = {
+				has_character_modifier = aura_of_death_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = aura_of_death_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -30 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = aura_of_death_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = aura_of_death_perk
+			has_character_modifier = aura_of_death_modifier
+		}
+		show_as_unavailable = {
+			var:mana > 100
+			NOT = {
+				has_character_modifier = aura_of_death_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 30 }
+
+		while = {
+			count = 100
+			remove_character_modifier = aura_of_death_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.005
+	}
+}
+
+#Biomancy spells
+
+ancient_magic_ai_spellbook_events.601 = {
+	title = ancient_magic_ai_spellbook_events.601.t
+	desc = ancient_magic_ai_spellbook_events.601.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 100
+			has_perk = improve_trait_perk
+			NOT = {
+				has_character_modifier = improve_trait_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = improve_trait_spell_modifier
+				NOT = {
+					has_perk = improve_trait_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -100 }
+		add_character_modifier = {
+			modifier = improve_trait_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.006
+	}
+}
+ancient_magic_ai_spellbook_events.602 = {
+	title = ancient_magic_ai_spellbook_events.602.t
+	desc = ancient_magic_ai_spellbook_events.602.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 200
+			has_perk = perfect_trait_perk
+			NOT = {
+				has_character_modifier = perfect_trait_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 200
+				has_character_modifier = perfect_trait_spell_modifier
+				NOT = {
+					has_perk = perfect_trait_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -200 }
+		add_character_modifier = {
+			modifier = perfect_trait_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.006
+	}
+}
+ancient_magic_ai_spellbook_events.603 = {
+	title = ancient_magic_ai_spellbook_events.603.t
+	desc = ancient_magic_ai_spellbook_events.603.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 100
+			has_perk = weaken_trait_perk
+			NOT = {
+				has_character_modifier = weaken_trait_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = weaken_trait_spell_modifier
+				NOT = {
+					has_perk = weaken_trait_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -100 }
+		add_character_modifier = {
+			modifier = weaken_trait_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.006
+	}
+}
+ancient_magic_ai_spellbook_events.604 = {
+	title = ancient_magic_ai_spellbook_events.604.t
+	desc = ancient_magic_ai_spellbook_events.604.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 200
+			has_perk = criple_trait_perk
+			NOT = {
+				has_character_modifier = criple_trait_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 200
+				has_character_modifier = criple_trait_spell_modifier
+				NOT = {
+					has_perk = criple_trait_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -200 }
+		add_character_modifier = {
+			modifier = criple_trait_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.006
+	}
+}
+ancient_magic_ai_spellbook_events.605 = {
+	title = ancient_magic_ai_spellbook_events.605.t
+	desc = ancient_magic_ai_spellbook_events.605.desc
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events.605.a
+		trigger = {
+			var:mana >= 100
+			has_perk = fertility_control_perk
+			NOT = {
+				has_character_modifier = biomantic_fertility_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = biomantic_fertility_modifier
+				NOT = {
+					has_character_modifier = fertility_control_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -100 }
+		if = {
+			limit = {
+				has_character_modifier = biomantic_infertility_modifier
+			}
+			remove_character_modifier = biomantic_infertility_modifier
+			change_mana_gen = { VALUE = 10 }
+		}
+		add_character_modifier = biomantic_fertility_modifier
+		change_mana_gen = { VALUE = -10 }
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events.605.b
+		trigger = {
+			var:mana >= 100
+			has_perk = fertility_control_perk
+			NOT = {
+				has_character_modifier = criple_trait_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				NOT = {
+					has_character_modifier = biomantic_infertility_modifier
+					has_character_modifier = biomantic_fertility_modifier
+				}
+				NOT = {
+					has_perk = fertility_control_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -100 }
+		if = {
+			limit = {
+				has_character_modifier = biomantic_infertility_modifier
+			}
+			remove_character_modifier = biomantic_infertility_modifier
+			change_mana_gen = { VALUE = 10 }
+		}
+		if = {
+			limit = {
+				has_character_modifier = biomantic_fertility_modifier
+			}
+			remove_character_modifier = biomantic_fertility_modifier
+			change_mana_gen = { VALUE = 10 }
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events.605.c
+		trigger = {
+			var:mana >= 100
+			has_perk = fertility_control_perk
+			NOT = {
+				has_character_modifier = criple_trait_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = criple_trait_spell_modifier
+				NOT = {
+					has_perk = fertility_control_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -100 }
+		if = {
+			limit = {
+				has_trait = biomantic_fertility_modifier
+			}
+			remove_character_modifier = biomantic_fertility_modifier
+			change_mana_gen = { VALUE = 10 }
+		}
+		add_character_modifier = biomantic_infertility_modifier
+		change_mana_gen = { VALUE = -10 }
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.006
+	}
+}
+
+ancient_magic_ai_spellbook_events.606 = {
+	title = ancient_magic_ai_spellbook_events.606.t
+	desc = ancient_magic_ai_spellbook_events.606.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 300
+			has_perk = impregnate_perk
+			NOT = {
+				has_character_modifier = impregnate_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 300
+				has_character_modifier = impregnate_spell_modifier
+				NOT = {
+					has_perk = impregnate_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -300 }
+		add_character_modifier = {
+			modifier = impregnate_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.006
+	}
+}
+
+ancient_magic_ai_spellbook_events.607 = {
+	title = ancient_magic_ai_spellbook_events.607.t
+	desc = ancient_magic_ai_spellbook_events.607.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 300
+			has_perk = sculpter_of_flesh_perk
+			NOT = {
+				has_character_modifier = sculpter_of_flesh_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 300
+				has_character_modifier = sculpter_of_flesh_spell_modifier
+				NOT = {
+					has_perk = sculpter_of_flesh_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -300 }
+		add_character_modifier = {
+			modifier = sculpter_of_flesh_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.006
+	}
+}
+
+ancient_magic_ai_spellbook_events.608 = {
+	title = ancient_magic_ai_spellbook_events.608.t
+	desc = ancient_magic_ai_spellbook_events.608.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 400
+			has_perk = architect_of_bloodlines_perk
+			NOT = {
+				has_character_modifier = rewrite_blood_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 400
+				has_character_modifier = rewrite_blood_spell_modifier
+				NOT = {
+					has_perk = architect_of_bloodlines_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -400 }
+		add_character_modifier = {
+			modifier = rewrite_blood_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.006
+	}
+}
+
+#mensomancy
+
+ancient_magic_ai_spellbook_events.701 = {
+	title = ancient_magic_ai_spellbook_events.701.t
+	desc = ancient_magic_ai_spellbook_events.701.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 100
+			has_perk = entrance_perk
+			NOT = {
+				has_character_modifier = entrance_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = entrance_spell_modifier
+				NOT = {
+					has_perk = entrance_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -100 }
+		add_character_modifier = {
+			modifier = entrance_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.007
+	}
+}
+
+ancient_magic_ai_spellbook_events.702 = {
+	title = ancient_magic_ai_spellbook_events.702.t
+	desc = ancient_magic_ai_spellbook_events.702.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 300
+			has_perk = incite_lust_perk
+			NOT = {
+				has_character_modifier = incite_lust_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 300
+				has_character_modifier = incite_lust_spell_modifier
+				NOT = {
+					has_perk = incite_lust_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -300 }
+		add_character_modifier = {
+			modifier = incite_lust_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.007
+	}
+}
+
+ancient_magic_ai_spellbook_events.703 = {
+	title = ancient_magic_ai_spellbook_events.703.t
+	desc = ancient_magic_ai_spellbook_events.703.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 200
+			has_perk = incite_obedience_perk
+			NOT = {
+				has_character_modifier = incite_obedience_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 200
+				has_character_modifier = incite_obedience_spell_modifier
+				NOT = {
+					has_perk = incite_obedience_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -200 }
+		add_character_modifier = {
+			modifier = incite_obedience_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.007
+	}
+}
+
+ancient_magic_ai_spellbook_events.704 = {
+	title = ancient_magic_ai_spellbook_events.704.t
+	desc = ancient_magic_ai_spellbook_events.704.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 400
+			has_perk = dominate_perk
+			NOT = {
+				has_character_modifier = dominate_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 400
+				has_character_modifier = dominate_spell_modifier
+				NOT = {
+					has_perk = dominate_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -400 }
+		add_character_modifier = {
+			modifier = dominate_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.007
+	}
+}
+
+ancient_magic_ai_spellbook_events.705 = {
+	title = ancient_magic_ai_spellbook_events.705.t
+	desc = ancient_magic_ai_spellbook_events.705.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = beguiling_aura_perk
+			NOT = {
+				has_character_modifier = beguiling_aura_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = beguiling_aura_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -15 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = beguiling_aura_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = beguiling_aura_perk
+			has_character_modifier = beguiling_aura_modifier
+		}
+		show_as_unavailable = {
+			var:mana < 100
+			NOT = {
+				has_character_modifier = beguiling_aura_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 15 }
+
+		while = {
+			count = 100
+			remove_character_modifier = beguiling_aura_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.007
+	}
+}
+
+ancient_magic_ai_spellbook_events.706 = {
+	title = ancient_magic_ai_spellbook_events.706.t
+	desc = ancient_magic_ai_spellbook_events.706.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 400
+			has_perk = friendship_perk
+			NOT = {
+				has_character_modifier = friendship_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 400
+				has_character_modifier = friendship_spell_modifier
+				NOT = {
+					has_perk = friendship_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -400 }
+		add_character_modifier = {
+			modifier = friendship_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.007
+	}
+}
+
+ancient_magic_ai_spellbook_events.707 = {
+	title = ancient_magic_ai_spellbook_events.707.t
+	desc = ancient_magic_ai_spellbook_events.707.desc
+	
+	option = {
+		name = ancient_magic_spellbook_cast_spell
+		trigger = {
+			var:mana >= 600
+			has_perk = master_of_puppets_perk
+			NOT = {
+				has_character_modifier = master_of_puppets_spell_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 600
+				has_character_modifier = master_of_puppets_spell_modifier
+				NOT = {
+					has_perk = master_of_puppets_perk
+				}
+			}
+		}
+		change_mana = { VALUE = -600 }
+		add_character_modifier = {
+			modifier = master_of_puppets_spell_modifier
+			months = 6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.007
+	}
+}
+
+ancient_magic_ai_spellbook_events.708 = {
+	title = ancient_magic_ai_spellbook_events.708.t
+	desc = ancient_magic_ai_spellbook_events.708.desc
+	
+	option = {
+		name = ancient_magic_spellbook_activate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = enchanting_aura_perk
+			NOT = {
+				has_character_modifier = enchanting_aura_modifier
+			}
+		}
+		show_as_unavailable = {
+			OR = {
+				var:mana < 100
+				has_character_modifier = enchanting_aura_modifier
+			}
+		}
+
+		change_mana = { VALUE = -100 }
+
+		change_mana_gen = { VALUE = -30 }
+
+		while = {
+			count = mage_level
+			add_character_modifier = {
+				modifier = enchanting_aura_modifier
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = ancient_magic_spellbook_deactivate_aura
+		trigger = {
+			var:mana >= 100
+			has_perk = enchanting_aura_perk
+			has_character_modifier = enchanting_aura_modifier
+		}
+		show_as_unavailable = {
+			var:mana < 100
+			NOT = {
+				has_character_modifier = enchanting_aura_modifier
+			}
+		}
+
+		change_mana_gen = { VALUE = 30 }
+
+		while = {
+			count = 100
+			remove_character_modifier = enchanting_aura_modifier
+		}
+	}
+	
+	option = {
+		name = ancient_magic_ai_spellbook_events_back
+		trigger_event = ancient_magic_ai_spellbook_events.007
+	}
+}
