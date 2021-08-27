@@ -158,13 +158,17 @@ necromancy_spell = {
 		}
 	}
 	effect = {
+		save_temporary_scope_value_as = {
+			name = army_stacks
+			value = mage_level
+		}
 		spawn_army = {
 			name = undead_horde
 			uses_supply = no
 			inheritable = no
 			men_at_arms = {
 				type = undead
-				stacks = mage_level
+				stacks = scope:army_stacks
 			}
 			location = scope:spell_target.location
 		}
