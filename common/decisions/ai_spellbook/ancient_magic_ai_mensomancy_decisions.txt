@@ -2,7 +2,7 @@
 	is_shown = {
 		is_ai = yes
 		is_magus = yes
-		var:mana >= var:beguiling_aura_spell_cost
+		var:mana.compare_value >= var:beguiling_aura_spell_cost.compare_value
 		has_perk = beguiling_aura_perk
 	}
 	
@@ -74,7 +74,7 @@ enchanting_aura_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus = yes
-		var:mana >= var:enchanting_aura_spell_cost
+		var:mana.compare_value >= var:enchanting_aura_spell_cost.compare_value
 		has_perk = enchanting_aura_perk
 	}
 	

@@ -2,7 +2,7 @@
 	is_shown = {
 		is_ai = yes
 		is_magus = yes
-		var:mana >= var:mass_celerity_spell_cost
+		var:mana.compare_value >= var:mass_celerity_spell_cost.compare_value
 		has_perk = mass_celerity_perk
 	}
 	
@@ -74,7 +74,7 @@ glimpse_the_future_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus = yes
-		var:mana >= var:glimpse_the_future_spell_cost
+		var:mana.compare_value >= var:glimpse_the_future_spell_cost.compare_value
 		has_perk = glimpse_the_future_perk
 	}
 	
@@ -149,7 +149,7 @@ financial_times_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus = yes
-		var:mana >= var:financial_times_spell_cost
+		var:mana.compare_value >= var:financial_times_spell_cost.compare_value
 		has_perk = financial_times_perk
 	}
 	
@@ -226,7 +226,7 @@ celerity_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus = yes
-		var:mana >= var:celerity_spell_cost
+		var:mana.compare_value >= var:celerity_spell_cost.compare_value
 		has_perk = celerity_perk
 	}
 	
@@ -303,7 +303,7 @@ temporal_manipulation_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus = yes
-		var:mana >= var:temporal_manipulation_spell_cost
+		var:mana.compare_value >= var:temporal_manipulation_spell_cost.compare_value
 		has_perk = temporal_manipulation_perk
 	}
 	

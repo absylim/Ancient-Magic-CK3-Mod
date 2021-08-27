@@ -2,7 +2,7 @@
 	is_shown = {
 		is_ai = yes
 		is_magus = yes
-		var:mana >= var:necromancy_spell_cost
+		var:mana.compare_value >= var:necromancy_spell_cost.compare_value
 		NOT = {
 			has_character_modifier = undead_horde_cooldown_modifier
 		}
@@ -48,7 +48,7 @@ become_liche_ai_spell_decision = {
 		is_ai = yes
 		is_magus = yes
 		has_perk = deacon_of_death
-		var:mana >= var:deacon_of_death_spell_cost
+		var:mana.compare_value >= var:deacon_of_death_spell_cost.compare_value
 		NOT = { has_trait = undead }
 	}
 	
@@ -79,7 +79,7 @@ aura_of_death_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus = yes
-		var:mana >= var:aura_of_death_spell_cost
+		var:mana.compare_value >= var:aura_of_death_spell_cost.compare_value
 		has_perk = aura_of_death_perk
 	}
 	
