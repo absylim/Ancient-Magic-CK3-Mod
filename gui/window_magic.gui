@@ -200,6 +200,7 @@
 					button_tertiary_magic = {
 						text = "CAST_SPELL"
 						enabled = "[And(GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End),GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('spell_cost',MakeScopeValue(Abs_CFixedPoint(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost'))))).End))]"
+						tooltip = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('spell_cost',MakeScopeValue(Abs_CFixedPoint(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost'))))).End)]"
 						onclick = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('spell_cost',MakeScopeValue(Abs_CFixedPoint(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost'))))).End)]"
 						onclick = "[GetScriptedGui('toggle_magic_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
@@ -415,6 +416,7 @@
 							widget = {
 								size = { 100% 100% }
 								button_standard_clean = {
+									tooltip = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_has_list')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
 									enabled = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_has_list')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
 									down = "[GetScriptedGui('select_list_option').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
 									onclick = "[GetScriptedGui('select_list_option').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
