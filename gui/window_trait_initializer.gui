@@ -4,13 +4,13 @@
 
 		state = {
 			name = _show
-			on_start = "[GetVariableSystem.Set('traits_initialized')]"
+			on_start = "[GetVariableSystem.Set('traits_initialized','true')]"
 		}
 
 		hbox = {
 			state = {
 				trigger_on_create = yes
-				on_start = "[GetScriptedGui('clear_trait_list').Execute]"
+				on_start = "[GetScriptedGui('clear_trait_list').Execute(GuiScope.End)]"
 			}
 			datamodel = "[GetTraits]"
 			item = {
