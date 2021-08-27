@@ -1,0 +1,54 @@
+﻿improve_intellect_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		OR = {
+			AND = {
+				var:mana >= 100
+				has_perk = improve_trait_perk
+				OR = {
+					has_trait = intellect_bad_1
+					has_trait = intellect_bad_2
+					has_trait = intellect_good_1
+				}
+			}
+			AND = {
+				var:mana >= 200
+				has_perk = perfect_trait_perk
+				OR = {
+					has_trait = intellect_bad_3
+					has_trait = intellect_good_2
+				}
+			}
+			AND = {
+				var:mana >= 400
+				has_perk = architect_of_bloodlines_perk
+				NOT = {
+					has_trait = intellect_bad
+					has_trait = intellect_good
+				}
+			}
+		}
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		improve_trait_effect = { TRAIT = intellect }
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+		
+        ai_value_modifier = {
+            ai_rationality = 0.2
+        }
+		
+		modifier = {
+			add = 25
+			has_trait = ambitious
+		}
+	}
+}

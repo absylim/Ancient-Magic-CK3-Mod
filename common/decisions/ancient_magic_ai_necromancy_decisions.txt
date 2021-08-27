@@ -1,0 +1,145 @@
+﻿raise_undead_horde_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		var:mana >= var:necromancy_spell_cost
+		NOT = {
+			has_character_modifier = undead_horde_cooldown_modifier
+		}
+		has_perk = necromancy_perk
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		deduct_mana_with_tooltip = { VALUE = var:necromancy_spell_cost }
+		
+		spawn_army = {
+			name = undead_horde
+			uses_supply = no
+			inheritable = no
+			men_at_arms = {
+				type = undead
+				stacks = mage_level
+			}
+			levy = 0
+			location = capital_province
+		}
+		add_character_modifier = {
+			modifier = undead_horde_cooldown_modifier
+			years = 2
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 0
+		
+		modifier = {
+			add = 30
+			is_at_war = yes
+		}
+	}
+}
+
+become_liche_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		has_perk = deacon_of_death
+		var:mana >= var:deacon_of_death_spell_cost
+		NOT = { has_trait = undead }
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		deduct_mana_with_tooltip = { VALUE = var:deacon_of_death_spell_cost }
+		add_trait = undead
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 0
+		
+        ai_value_modifier = {
+            ai_rationality = 0.2
+        }
+		
+		modifier = {
+			add = 30
+			is_immortal = no
+		}
+	}
+}
+
+aura_of_death_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		var:mana >= var:aura_of_death_spell_cost
+		has_perk = aura_of_death_perk
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_character_modifier = aura_of_death_modifier
+				}
+			}
+
+			deduct_mana_with_tooltip = { VALUE = var:aura_of_death_spell_cost }
+
+			change_mana_gen = { VALUE = -30 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = aura_of_death_modifier
+					mode = add
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = aura_of_death_modifier
+				}
+			}
+
+			change_mana_gen = { VALUE = 30 }
+
+			while = {
+				count = 100
+				remove_character_modifier = aura_of_death_modifier
+			}
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+			
+		modifier = {
+			factor = 0
+			var:mana_gen < 15
+		}
+		
+		modifier = {
+			factor = 0
+			has_character_modifier = aura_of_death_modifier
+		}
+		
+		modifier = {
+			add = 50
+			has_character_modifier = aura_of_death_modifier
+			var:mana_gen <= 0
+		}
+	}
+}

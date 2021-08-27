@@ -1,0 +1,52 @@
+improve_trait_effect = {
+	if = {
+		limit = {
+			has_trait = $TRAIT$_bad_3
+		}
+		change_mana = { VALUE = -200 }
+		
+		remove_trait = $TRAIT$_bad_3
+		add_trait = $TRAIT$_bad_2
+	}
+	else_if = {
+		limit = {
+			has_trait = $TRAIT$_bad_2
+		}
+		change_mana = { VALUE = -100 }
+		remove_trait = $TRAIT$_bad_2
+		add_trait = $TRAIT$_bad_1
+	}
+	else_if = {
+		limit = {
+			has_trait = $TRAIT$_bad_1
+		}
+		change_mana = { VALUE = -100 }
+		remove_trait = $TRAIT$_bad_1
+	}
+	else_if = {
+		limit = {
+			has_trait = $TRAIT$_good_1
+		}
+		change_mana = { VALUE = -100 }
+		remove_trait = $TRAIT$_good_1
+		add_trait = $TRAIT$_good_2
+	}
+	else_if = {
+		limit = {
+			has_trait = $TRAIT$_good_2
+		}
+		change_mana = { VALUE = -200 }
+		remove_trait = $TRAIT$_good_2
+		add_trait = $TRAIT$_good_3
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_trait = $TRAIT$_good
+				has_trait = $TRAIT$_bad
+			}
+		}
+		change_mana = { VALUE = -400 }
+		add_trait = $TRAIT$_good_1
+	}
+}
