@@ -89,17 +89,17 @@ effect_get_all_possible_candidates = {
 		}
 	}
 	if = {
-		limit = { has_variable = slowness_target }
+		limit = { scope:actor = { has_variable = slowness_target } }
 		add_to_variable_list = {
 			name = spell_candidates
-			target = var:slowness_target
+			target = scope:actor.var:slowness_target
 		}
 	}
 	if = {
-		limit = { has_variable = mass_slowness_target }
+		limit = { scope:actor = { has_variable = mass_slowness_target } }
 		add_to_variable_list = {
 			name = spell_candidates
-			target = var:mass_slowness_target
+			target = scope:actor.var:mass_slowness_target
 		}
 	}
 }
