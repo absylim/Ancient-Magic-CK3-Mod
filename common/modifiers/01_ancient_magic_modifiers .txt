@@ -80,7 +80,7 @@ slowness_modifier = {
 }
 
 mass_slowness_modifier = {
-	icon = martial_positive
+	icon = martial_negative
 	advantage = -1
 	hard_casualty_modifier = 0.1
 	stacking = yes
