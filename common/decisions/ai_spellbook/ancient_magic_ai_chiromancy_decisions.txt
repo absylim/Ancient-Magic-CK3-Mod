@@ -1,0 +1,117 @@
+﻿heal_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		var:mana >= 75
+		has_perk = heal_perk
+		OR = {
+			has_trait = sickly
+			has_trait = ill
+			has_trait = early_great_pox
+			has_trait = lovers_pox
+			has_trait = wounded_1
+			has_trait = infirm
+			has_trait = smallpox
+		}
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		trigger_event = ancient_magic_ai_spellbook_events.301
+	}
+	
+	ai_potential = {
+		is_magus = yes
+	}
+	
+	ai_will_do = {
+		base = 50
+		
+        ai_value_modifier = {
+            ai_rationality = 0.5
+        }
+	}
+}
+
+greater_heal_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		var:mana >= 150
+		has_perk = greater_heal_perk
+		OR = {
+			has_trait = great_pox
+			has_trait = pneumonic
+			has_trait = leper
+			has_trait = maimed
+			has_trait = wounded_2
+			has_trait = gout_ridden
+			has_trait = consumption
+			has_trait = cancer
+			has_trait = typhus
+			has_trait = bubonic_plague
+		}
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		trigger_event = ancient_magic_ai_spellbook_events.302
+	}
+	
+	ai_potential = {
+		is_magus = yes
+	}
+	
+	ai_will_do = {
+		base = 75
+		
+        ai_value_modifier = {
+            ai_rationality = 0.5
+        }
+	}
+}
+
+full_restoration_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		has_trait = avatar_of_life
+		var:mana >= 250
+		
+		OR = {
+			has_trait = wounded_3
+			has_trait = incapable
+			has_trait = one_eyed
+			has_trait = one_legged
+			has_trait = disfigured
+			has_trait = scarred
+			has_trait = eunuch
+			has_trait = blind
+		}
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		trigger_event = ancient_magic_ai_spellbook_events.303
+	}
+	
+	ai_potential = {
+		is_magus = yes
+	}
+	
+	ai_will_do = {
+		base = 90
+		
+        ai_value_modifier = {
+            ai_rationality = 0.2
+        }
+			
+		modifier = {
+			add = 100
+			has_trait = wounded_3
+		}
+	}
+}

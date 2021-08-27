@@ -1,0 +1,442 @@
+﻿stone_golem_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		has_perk = golem_creation_perk
+		var:mana.compare_value >= var:golem_creation_spell_cost.compare_value
+		NOT = { has_character_modifier = golem_cooldown_modifier }
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		deduct_mana_with_tooltip = { VALUE = var:golem_creation_spell_cost }
+		spawn_army = {
+			name = golem_army
+			uses_supply = no
+			inheritable = no
+			men_at_arms = {
+				type = golem
+				stacks = mage_level
+			}
+			levy = 0
+			location = capital_province
+		}
+		add_character_modifier = {
+			modifier = golem_cooldown_modifier
+			years = 5
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 0
+		
+		modifier = {
+			add = 30
+			is_at_war = yes
+		}
+	}
+}
+
+lava_golem_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		has_trait = lord_of_the_elements
+		var:mana.compare_value >= var:lord_of_the_elements_spell_cost.compare_value
+		NOT = { has_character_modifier = lava_golem_cooldown_modifier }
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		deduct_mana_with_tooltip = { VALUE = var:lord_of_the_elements_spell_cost }
+		
+		spawn_army = {
+			name = lava_golem_army
+			uses_supply = no
+			inheritable = no
+			men_at_arms = {
+				type = lava_golem
+				stacks = mage_level
+			}
+			levy = 0
+			location = capital_province
+		}
+		add_character_modifier = {
+			modifier = lava_golem_cooldown_modifier
+			years = 5
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 0
+		
+		modifier = {
+			add = 30
+			is_at_war = yes
+		}
+		
+        ai_value_modifier = {
+            ai_irationality = 0.1
+        }
+		
+		modifier = {
+			add = 30
+			has_character_modifier = golem_cooldown_modifier
+		}
+	}
+}
+
+flame_aura_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		has_perk = flame_aura_perk
+		var:mana.compare_value >= var:flame_aura_spell_cost.compare_value
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		if = {
+			limit = {
+				var:mana.compare_value >= var:flame_aura_spell_cost.compare_value
+				NOT = {
+					has_character_modifier = flame_aura_modifier
+				}
+			}
+
+			deduct_mana_with_tooltip = { VALUE = var:flame_aura_spell_cost }
+
+			change_mana_gen = { VALUE = -15 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = flame_aura_modifier
+					mode = add
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = flame_aura_modifier
+				}
+			}
+
+			change_mana_gen = { VALUE = 15 }
+
+			while = {
+				count = 100
+				remove_character_modifier = flame_aura_modifier
+			}
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+			
+		modifier = {
+			factor = 0
+			var:mana_gen < 15
+		}
+		
+		modifier = {
+			factor = 0
+			has_character_modifier = flame_aura_modifier
+		}
+		
+		modifier = {
+			add = 50
+			has_character_modifier = flame_aura_modifier
+			var:mana_gen <= 0
+		}
+	}
+}
+
+flaming_weapons_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		has_perk = flaming_weapons_perk
+		var:mana.compare_value >= var:flaming_weapons_spell_cost.compare_value
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		if = {
+			limit = {
+				var:mana.compare_value >= var:flaming_weapons_spell_cost.compare_value
+				NOT = {
+					has_character_modifier = flaming_weapons_modifier
+				}
+			}
+
+			deduct_mana_with_tooltip = { VALUE = var:flaming_weapons_spell_cost }
+
+			change_mana_gen = { VALUE = -15 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = flaming_weapons_modifier
+					mode = add
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = flaming_weapons_modifier
+				}
+			}
+
+			change_mana_gen = { VALUE = 15 }
+
+			while = {
+				count = 100
+				remove_character_modifier = flaming_weapons_modifier
+			}
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+			
+		modifier = {
+			factor = 0
+			var:mana_gen < 15
+		}
+		
+		modifier = {
+			factor = 0
+			has_character_modifier = flaming_weapons_modifier
+		}
+		
+		modifier = {
+			add = 50
+			has_character_modifier = flaming_weapons_modifier
+			var:mana_gen <= 0
+		}
+	}
+}
+
+living_earthworks_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		has_perk = living_earthworks_perk
+		var:mana.compare_value >= var:living_earthworks_spell_cost.compare_value
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		if = {
+			limit = {
+				var:mana.compare_value >= var:living_earthworks_spell_cost.compare_value
+				NOT = {
+					has_character_modifier = living_earthworks_modifier
+				}
+			}
+
+			deduct_mana_with_tooltip = { VALUE = var:living_earthworks_spell_cost }
+
+			change_mana_gen = { VALUE = -15 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = living_earthworks_modifier
+					mode = add
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = living_earthworks_modifier
+				}
+			}
+
+			change_mana_gen = { VALUE = 15 }
+
+			while = {
+				count = 100
+				remove_character_modifier = living_earthworks_modifier
+			}
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+			
+		modifier = {
+			factor = 0
+			var:mana_gen < 15
+		}
+		
+		modifier = {
+			factor = 0
+			has_character_modifier = living_earthworks_modifier
+		}
+		
+		modifier = {
+			add = 50
+			has_character_modifier = living_earthworks_modifier
+			var:mana_gen <= 0
+		}
+	}
+}
+
+water_control_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		has_perk = control_water_perk
+		var:mana.compare_value >= var:control_water_spell_cost.compare_value
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		if = {
+			limit = {
+				var:mana.compare_value >= var:control_water_spell_cost.compare_value
+				NOT = {
+					has_character_modifier = control_water_modifier
+				}
+			}
+
+			deduct_mana_with_tooltip = { VALUE = var:control_water_spell_cost }
+
+			change_mana_gen = { VALUE = -15 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = control_water_modifier
+					mode = add
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = control_water_modifier
+				}
+			}
+
+			change_mana_gen = { VALUE = 15 }
+
+			while = {
+				count = 100
+				remove_character_modifier = control_water_modifier
+			}
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+			
+		modifier = {
+			factor = 0
+			var:mana_gen < 15
+		}
+		
+		modifier = {
+			factor = 0
+			has_character_modifier = control_water_modifier
+		}
+		
+		modifier = {
+			add = 50
+			has_character_modifier = control_water_modifier
+			var:mana_gen <= 0
+		}
+	}
+}
+
+cloak_of_elements_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		has_perk = elemental_warrior_perk
+		var:mana.compare_value >= var:elemental_warrior_spell_cost.compare_value
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_character_modifier = elemental_warrior_modifier
+				}
+			}
+
+			deduct_mana_with_tooltip = { VALUE = var:elemental_warrior_spell_cost }
+
+			change_mana_gen = { VALUE = -30 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = elemental_warrior_modifier
+					mode = add
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = elemental_warrior_modifier
+				}
+			}
+
+			change_mana_gen = { VALUE = 30 }
+
+			while = {
+				count = 100
+				remove_character_modifier = elemental_warrior_modifier
+			}
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+			
+		modifier = {
+			factor = 0
+			var:mana_gen < 30
+		}
+		
+		modifier = {
+			factor = 0
+			has_character_modifier = elemental_warrior_modifier
+		}
+		
+		modifier = {
+			add = 50
+			has_character_modifier = elemental_warrior_modifier
+			var:mana_gen <= 0
+		}
+	}
+}

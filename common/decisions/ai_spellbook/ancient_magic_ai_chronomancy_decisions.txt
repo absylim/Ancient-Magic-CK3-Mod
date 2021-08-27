@@ -1,0 +1,373 @@
+﻿haste_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		var:mana.compare_value >= var:mass_celerity_spell_cost.compare_value
+		has_perk = mass_celerity_perk
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_character_modifier = magic_haste_modifier
+				}
+			}
+
+			deduct_mana_with_tooltip = { VALUE = var:mass_celerity_spell_cost }
+
+			change_mana_gen = { VALUE = -15 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = magic_haste_modifier
+					mode = add
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = magic_haste_modifier
+				}
+			}
+			change_mana_gen = { VALUE = 15 }
+
+			while = {
+				count = 100
+				remove_character_modifier = magic_haste_modifier
+			}
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+		
+        ai_value_modifier = {
+            ai_rationality = 0.2
+        }
+			
+		modifier = {
+			factor = 0
+			var:mana_gen < 15
+		}
+		
+		modifier = {
+			factor = 0
+			has_character_modifier = magic_haste_modifier
+		}
+		
+		modifier = {
+			add = 50
+			has_character_modifier = magic_haste_modifier
+			var:mana_gen <= 0
+		}
+	}
+}
+
+glimpse_the_future_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		var:mana.compare_value >= var:glimpse_the_future_spell_cost.compare_value
+		has_perk = glimpse_the_future_perk
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_character_modifier = glimpse_the_future_modifier
+				}
+			}
+
+			deduct_mana_with_tooltip = { VALUE = var:glimpse_the_future_spell_cost }
+
+			change_mana_gen = { VALUE = -15 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = glimpse_the_future_modifier
+					mode = add
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = glimpse_the_future_modifier
+				}
+			}
+
+			change_mana_gen = { VALUE = 15 }
+
+			while = {
+				count = 100
+				remove_character_modifier = glimpse_the_future_modifier
+			}
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+		
+        ai_value_modifier = {
+            ai_rationality = 0.2
+        }
+			
+		modifier = {
+			factor = 0
+			var:mana_gen < 15
+		}
+		
+		modifier = {
+			factor = 0
+			has_character_modifier = glimpse_the_future_modifier
+		}
+		
+		modifier = {
+			add = 50
+			AND = {
+				has_character_modifier = glimpse_the_future_modifier
+				var:mana_gen <= 0
+			}
+		}
+	}
+}
+
+financial_times_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		var:mana.compare_value >= var:financial_times_spell_cost.compare_value
+		has_perk = financial_times_perk
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_character_modifier = financial_times_modifier
+				}
+			}
+
+			deduct_mana_with_tooltip = { VALUE = var:financial_times_spell_cost }
+
+			change_mana_gen = { VALUE = -15 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = financial_times_modifier
+					mode = add
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = financial_times_modifier
+				}
+			}
+
+			change_mana_gen = { VALUE = 15 }
+
+			while = {
+				count = 100
+				remove_character_modifier = financial_times_modifier
+			}
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+		
+        ai_value_modifier = {
+            ai_rationality = 0.2
+        }
+		
+        ai_value_modifier = {
+            ai_greed = 0.3
+        }
+			
+		modifier = {
+			factor = 0
+			var:mana_gen < 15
+		}
+		
+		modifier = {
+			factor = 0
+			has_character_modifier = financial_times_modifier
+		}
+		
+		modifier = {
+			add = 50
+			has_character_modifier = financial_times_modifier
+			var:mana_gen <= 0
+		}
+	}
+}
+
+celerity_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		var:mana.compare_value >= var:celerity_spell_cost.compare_value
+		has_perk = celerity_perk
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_character_modifier = celerity_modifier
+				}
+			}
+
+			deduct_mana_with_tooltip = { VALUE = var:celerity_spell_cost }
+
+			change_mana_gen = { VALUE = -15 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = celerity_modifier
+					mode = add
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = celerity_modifier
+				}
+			}
+
+			change_mana_gen = { VALUE = 15 }
+
+			while = {
+				count = 100
+				remove_character_modifier = celerity_modifier
+			}
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+		
+        ai_value_modifier = {
+            ai_rationality = 0.2
+        }
+		
+        ai_value_modifier = {
+            ai_boldness = 0.1
+        }
+			
+		modifier = {
+			factor = 0
+			var:mana_gen < 15
+		}
+		
+		modifier = {
+			factor = 0
+			has_character_modifier = celerity_modifier
+		}
+		
+		modifier = {
+			add = 50
+			has_character_modifier = celerity_modifier
+			var:mana_gen <= 0
+		}
+	}
+}
+
+temporal_manipulation_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		var:mana.compare_value >= var:temporal_manipulation_spell_cost.compare_value
+		has_perk = temporal_manipulation_perk
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_character_modifier = temporal_manipulation_modifier
+				}
+			}
+
+			deduct_mana_with_tooltip = { VALUE = var:temporal_manipulation_spell_cost }
+
+			change_mana_gen = { VALUE = -30 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = temporal_manipulation_modifier
+					mode = add
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = temporal_manipulation_modifier
+				}
+			}
+
+			change_mana_gen = { VALUE = 30 }
+
+			while = {
+				count = 100
+				remove_character_modifier = temporal_manipulation_modifier
+			}
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+		
+        ai_value_modifier = {
+            ai_rationality = 0.2
+        }
+			
+		modifier = {
+			factor = 0
+			var:mana_gen < 15
+		}
+		
+		modifier = {
+			factor = 0
+			has_character_modifier = temporal_manipulation_modifier
+		}
+		
+		modifier = {
+			add = 50
+			has_character_modifier = temporal_manipulation_modifier
+			var:mana_gen <= 0
+		}
+	}
+}
