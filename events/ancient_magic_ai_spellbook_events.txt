@@ -1,455 +1,6 @@
 namespace = ancient_magic_ai_spellbook_events
 
-#magic type selection
-ancient_magic_ai_spellbook_events.001 = {
-	title = ancient_magic_ai_spellbook_events.001.t
-	desc = ancient_magic_ai_spellbook_events.001.desc
-	
-	option = {
-		trigger = {
-			has_perk = time_mage_perk
-		}
-		name = ancient_magic_ai_spellbook_events.001.a #Chronomancy
-		trigger_event = ancient_magic_ai_spellbook_events.002
-		
-		ai_chance = {
-			base = 25
-			
-			modifier = {
-				add = 25
-				var:mana_gen > 15
-			}
-			
-			modifier = {
-				add = 25
-				var:mana_gen > 30
-			}
-		}
-	}
-	option = {
-		trigger = {
-			has_perk = life_mage_perk
-			OR = {
-				has_trait = smallpox
-				has_trait = sickly
-				has_trait = ill
-				has_trait = early_great_pox
-				has_trait = lovers_pox
-				has_trait = wounded_1
-				has_trait = infirm
-				has_trait = pneumonic
-				has_trait = great_pox
-				has_trait = leper
-				has_trait = wounded_2
-				has_trait = wounded_3
-				has_trait = maimed
-				has_trait = incapable
-				has_trait = gout_ridden
-				has_trait = consumption
-				has_trait = cancer
-				has_trait = typhus
-				has_trait = bubonic_plague
-				has_trait = one_eyed
-				has_trait = one_legged
-				has_trait = disfigured
-				has_trait = scarred
-				has_trait = eunuch
-				has_trait = blind
-			}
-		}
-		name = ancient_magic_ai_spellbook_events.001.b #Chiromancy
-		trigger_event = ancient_magic_ai_spellbook_events.003
-		
-		ai_chance = {
-			base = 25
-			
-			modifier = {
-				add = 50
-				AND = {
-					has_perk = heal_perk
-					OR = {
-						has_trait = sickly
-						has_trait = ill
-						has_trait = early_great_pox
-						has_trait = lovers_pox
-						has_trait = wounded_1
-						has_trait = infirm
-					}
-				}
-			}
-			
-			modifier = {
-				add = 75
-				AND = {
-					has_perk = greater_heal_perk
-					OR = {
-						has_trait = great_pox
-						has_trait = pneumonic
-						has_trait = leper
-						has_trait = maimed
-						has_trait = wounded_2
-						has_trait = gout_ridden
-						has_trait = consumption
-						has_trait = cancer
-						has_trait = typhus
-						has_trait = bubonic_plague
-					}
-				}
-			}
-			
-			modifier = {
-				add = 100
-				AND = {
-					has_trait = avatar_of_life
-					OR = {
-						has_trait = wounded_3
-						has_trait = incapable
-					}
-				}
-			}
-		}
-	}
-	option = {
-		trigger = {
-			has_perk = elemental_mage_perk
-		}
-		name = ancient_magic_ai_spellbook_events.001.c #Elomancy
-		trigger_event = ancient_magic_ai_spellbook_events.004
-		
-		ai_chance = {
-			base = 25
-		}
-	}
-	option = {
-		trigger = {
-			has_perk = death_mage_perk
-		}
-		name = ancient_magic_ai_spellbook_events.001.d #Necromancy
-		trigger_event = ancient_magic_ai_spellbook_events.005
-		
-		ai_chance = {
-			base = 25
-		}
-	}
-	option = {
-		trigger = {
-			has_perk = biomancy_mage_perk
-		}
-		name = ancient_magic_ai_spellbook_events.001.e #Biomancy
-		trigger_event = ancient_magic_ai_spellbook_events.006
-		
-		ai_chance = {
-			base = 25
-			
-			modifier = {
-				add = 25
-				var:mana > 300
-			}
-			
-			modifier = {
-				add = 25
-				var:mana_gen > 600
-			}
-		}
-	}
-	option = {
-		trigger = {
-			has_perk = domination_mage_perk
-		}
-		name = ancient_magic_ai_spellbook_events.001.f #Mensomancy
-		trigger_event = ancient_magic_ai_spellbook_events.007
-		
-		ai_chance = {
-			base = 25
-		}
-	}
-	option = {
-		name = ancient_magic_ai_spellbook_events_close
-	}
-}
-
 #spell select screen
-
-ancient_magic_ai_spellbook_events.002 = { #Chronomancy book
-	title = ancient_magic_ai_spellbook_events.002.t
-	desc = ancient_magic_ai_spellbook_events.002.desc
-	
-	#option = { #Halt Aging
-	#	trigger = {
-	#		has_trait = master_of_time
-	#	}
-	#	name = ancient_magic_ai_spellbook_events.002.a
-	#	trigger_event = ancient_magic_ai_spellbook_events.201
-	#}
-	#option = { #Restart Aging
-	#	trigger = {
-	#		has_trait = master_of_time
-	#	}
-	#	name = ancient_magic_ai_spellbook_events.002.b
-	#	trigger_event = ancient_magic_ai_spellbook_events.202
-	#}
-	option = { #Haste
-		trigger = {
-			var:mana >= 100
-			has_perk = mass_celerity_perk
-		}
-		name = ancient_magic_ai_spellbook_events.002.c
-		trigger_event = ancient_magic_ai_spellbook_events.203
-		ai_chance = {
-			base = 25
-			
-			modifier = {
-				factor = 0
-				var:mana_gen < 15
-			}
-			
-			modifier = {
-				factor = 0
-				has_character_modifier = magic_haste_modifier
-			}
-			
-			modifier = {
-				add = 50
-				has_character_modifier = magic_haste_modifier
-				var:mana_gen <= 0
-			}
-			
-		}
-	}
-	option = { #Glimpse the Future
-		trigger = {
-			var:mana >= 100
-			has_perk = glimpse_the_future_perk
-		}
-		name = ancient_magic_ai_spellbook_events.002.d
-		trigger_event = ancient_magic_ai_spellbook_events.204
-		
-		ai_chance = {
-			base = 25
-			
-			modifier = {
-				factor = 0
-				var:mana_gen < 15
-			}
-			
-			modifier = {
-				multiply = 0
-				has_character_modifier = glimpse_the_future_modifier
-			}
-			
-			modifier = {
-				add = 50
-				has_character_modifier = glimpse_the_future_modifier
-				var:mana_gen <= 0
-			}
-		}
-	}
-	option = { #Financial Times
-		trigger = {
-			var:mana >= 100
-			has_perk = financial_times_perk
-		}
-		name = ancient_magic_ai_spellbook_events.002.e
-		trigger_event = ancient_magic_ai_spellbook_events.205
-		
-		ai_chance = {
-			base = 25
-			
-			modifier = {
-				factor = 0
-				var:mana_gen < 15
-			}
-			
-			modifier = {
-				add = 25
-				has_trait = greedy
-			}
-			
-			modifier = {
-				multiply = 0
-				has_character_modifier = financial_times_modifier
-			}
-			
-			modifier = {
-				add = 50
-				has_character_modifier = financial_times_modifier
-				var:mana_gen <= 0
-			}
-		}
-	}
-	option = { #Celerity
-		trigger = {
-			var:mana >= 100
-			has_perk = celerity_perk
-		}
-		name = ancient_magic_ai_spellbook_events.002.f
-		trigger_event = ancient_magic_ai_spellbook_events.206
-		
-		ai_chance = {
-			base = 25
-			
-			modifier = {
-				factor = 0
-				var:mana_gen < 15
-			}
-			
-			modifier = {
-				multiply = 0
-				has_character_modifier = celerity_modifier
-			}
-			
-			modifier = {
-				add = 50
-				has_character_modifier = celerity_modifier
-				var:mana_gen <= 0
-			}
-		}
-	}
-	#option = { #Slowness
-	#	trigger = {
-	#		has_perk = slowness_perk
-	#	}
-	#	name = ancient_magic_ai_spellbook_events.002.g
-	#	trigger_event = ancient_magic_ai_spellbook_events.207
-	#}
-	#option = { #Mass Slowness
-	#	trigger = {
-	#		has_perk = mass_slowness_perk
-	#	}
-	#	name = ancient_magic_ai_spellbook_events.002.h
-	#	trigger_event = ancient_magic_ai_spellbook_events.208
-	#}
-	option = { #Temporal Manipulation
-		trigger = {
-			has_perk = temporal_manipulation_perk
-			var:mana >= 100
-		}
-		name = ancient_magic_ai_spellbook_events.002.i
-		trigger_event = ancient_magic_ai_spellbook_events.209
-		
-		ai_chance = {
-			base = 25
-			
-			modifier = {
-				factor = 0
-				var:mana_gen < 30
-			}
-			
-			modifier = {
-				multiply = 0
-				has_character_modifier = temporal_manipulation_modifier
-			}
-			
-			modifier = {
-				add = 50
-				has_character_modifier = temporal_manipulation_modifier
-				var:mana_gen <= 0
-			}
-		}
-	}
-	option = { # go back
-		name = ancient_magic_ai_spellbook_events_back
-		trigger_event = ancient_magic_ai_spellbook_events.001
-		
-		ai_chance = {
-			base = 0
-			
-			modifier = {
-				add = 50
-				var:mana_gen < 15
-			}
-		}
-	}
-}
-
-ancient_magic_ai_spellbook_events.003 = { #Chiromancy book
-	title = ancient_magic_ai_spellbook_events.003.t
-	desc = ancient_magic_ai_spellbook_events.003.desc
-	
-	option = { #Minor Restoration
-		trigger = {
-			has_perk = heal_perk
-			OR = {
-				has_trait = sickly
-				has_trait = ill
-				has_trait = early_great_pox
-				has_trait = lovers_pox
-				has_trait = wounded_1
-				has_trait = infirm
-				has_trait = smallpox
-			}
-		}
-		name = ancient_magic_ai_spellbook_events.003.a
-		trigger_event = ancient_magic_ai_spellbook_events.301
-		ai_chance = {
-			base = 50
-		}
-	}
-	option = { #Major Restoration
-		trigger = {
-			has_perk = greater_heal_perk
-			OR = {
-				has_trait = great_pox
-				has_trait = pneumonic
-				has_trait = leper
-				has_trait = maimed
-				has_trait = wounded_2
-				has_trait = gout_ridden
-				has_trait = consumption
-				has_trait = cancer
-				has_trait = typhus
-				has_trait = bubonic_plague
-			}
-		}
-		name = ancient_magic_ai_spellbook_events.003.b
-		trigger_event = ancient_magic_ai_spellbook_events.302
-		ai_chance = {
-			base = 100
-		}
-	}
-	option = { #Full Restoration
-		trigger = {
-			has_trait = avatar_of_life
-			var:mana >= 200
-			
-			OR = {
-				has_trait = wounded_3
-				has_trait = incapable
-				has_trait = one_eyed
-				has_trait = one_legged
-				has_trait = disfigured
-				has_trait = scarred
-				has_trait = eunuch
-				has_trait = blind
-			}
-		}
-		name = ancient_magic_ai_spellbook_events.003.c
-		trigger_event = ancient_magic_ai_spellbook_events.303
-		
-		ai_chance = {
-			base = 50
-			
-			modifier = {
-				add = 100
-				has_trait = wounded_3
-			}
-		}
-	}
-	
-	option = {
-		name = ancient_magic_ai_spellbook_events_back
-		trigger_event = ancient_magic_ai_spellbook_events.001
-		
-		ai_chance = {
-			base = 0
-			
-			modifier = {
-				add = 50
-				var:mana < 50
-			}
-		}
-	}
-}
 
 ancient_magic_ai_spellbook_events.004 = { #Elomancy book
 	title = ancient_magic_ai_spellbook_events.004.t
@@ -663,6 +214,10 @@ ancient_magic_ai_spellbook_events.005 = { #Necromancy book
 	
 	option = { #Raise Undead Horde
 		trigger = {
+			var:mana >= 200
+			NOT = {
+				has_character_modifier = undead_horde_cooldown_modifier
+			}
 			has_perk = necromancy_perk
 		}
 		name = ancient_magic_ai_spellbook_events.005.a
@@ -671,55 +226,110 @@ ancient_magic_ai_spellbook_events.005 = { #Necromancy book
 	option = { #Become Liche
 		trigger = {
 			has_perk = deacon_of_death
+			var:mana >= 600
+			NOT = { has_trait = undead }
 		}
 		name = ancient_magic_ai_spellbook_events.005.b
 		trigger_event = ancient_magic_ai_spellbook_events.502
-	}
-	option = { #Grand Gift of Unlife
-		trigger = {
-			has_perk = deacon_of_death
+		
+		ai_chance = {
+			base = 0
+			
+			modifier = { 
+				add = 15
+				has_trait = ambitious
+			}
+			
+			modifier = {
+				add = 30
+				is_immortal = no
+			}
+			
 		}
-		name = ancient_magic_ai_spellbook_events.005.c
-		trigger_event = ancient_magic_ai_spellbook_events.503
 	}
-	option = { #Inflict Illness
-		trigger = {
-			has_perk = inflict_illness_perk
-		}
-		name = ancient_magic_ai_spellbook_events.005.d
-		trigger_event = ancient_magic_ai_spellbook_events.504
-	}
-	option = { #Spread Plague
-		trigger = {
-			has_perk = plague_lord_perk
-		}
-		name = ancient_magic_ai_spellbook_events.005.e
-		trigger_event = ancient_magic_ai_spellbook_events.505
-	}
-	option = { #Drain Life
-		trigger = {
-			has_perk = drain_life_perk
-		}
-		name = ancient_magic_ai_spellbook_events.005.f
-		trigger_event = ancient_magic_ai_spellbook_events.506
-	}
-	option = { #Death Stare
-		trigger = {
-			has_perk = death_stare_perk
-		}
-		name = ancient_magic_ai_spellbook_events.005.g
-		trigger_event = ancient_magic_ai_spellbook_events.507
-	}
+	
+	#option = { #Grand Gift of Unlife
+	#	trigger = {
+	#		has_perk = deacon_of_death
+	#	}
+	#	name = ancient_magic_ai_spellbook_events.005.c
+	#	trigger_event = ancient_magic_ai_spellbook_events.503
+	#}
+	
+	#option = { #Inflict Illness
+	#	trigger = {
+	#		has_perk = inflict_illness_perk
+	#	}
+	#	name = ancient_magic_ai_spellbook_events.005.d
+	#	trigger_event = ancient_magic_ai_spellbook_events.504
+	#}
+	
+	#option = { #Spread Plague
+	#	trigger = {
+	#		has_perk = plague_lord_perk
+	#	}
+	#	name = ancient_magic_ai_spellbook_events.005.e
+	#	trigger_event = ancient_magic_ai_spellbook_events.505
+	#}
+	
+	#option = { #Drain Life
+	#	trigger = {
+	#		has_perk = drain_life_perk
+	#	}
+	#	name = ancient_magic_ai_spellbook_events.005.f
+	#	trigger_event = ancient_magic_ai_spellbook_events.506
+	#}
+	#option = { #Death Stare
+	#	trigger = {
+	#		has_perk = death_stare_perk
+	#	}
+	#	name = ancient_magic_ai_spellbook_events.005.g
+	#	trigger_event = ancient_magic_ai_spellbook_events.507
+	#}
 	option = { #Aura of Death
 		trigger = {
+			var:mana >= 100
 			has_perk = aura_of_death_perk
 		}
 		name = ancient_magic_ai_spellbook_events.005.h
 		trigger_event = ancient_magic_ai_spellbook_events.508
+		
+		ai_chance = {
+			base = 25
+			
+			modifier = {
+				factor = 0
+				var:mana_gen < 30
+			}
+			
+			modifier = { 
+				factor = 0
+				has_character_modifier = aura_of_death_modifier
+			}
+			
+			modifier = {
+				add = 50
+				has_character_modifier = aura_of_death_modifier
+				var:mana_gen <= 0
+			}
+			
+		}
 	}
 	option = {
 		name = ancient_magic_ai_spellbook_events_back
 		trigger_event = ancient_magic_ai_spellbook_events.001
+		
+		ai_chance = {
+			base = 0
+			
+			modifier = {
+				add = 50
+				AND = {
+					var:mana_gen < 30
+					var:mana < 200
+				}
+			}
+		}
 	}
 }
 
@@ -1347,9 +957,8 @@ ancient_magic_ai_spellbook_events.301 = { #Minor Restoration
 		remove_trait = infirm
 	}
 	
-	option = { #go back
+	option = { #exit
 		name = ancient_magic_ai_spellbook_events_back
-		trigger_event = ancient_magic_ai_spellbook_events.001
 	}
 }
 
@@ -1920,27 +1529,14 @@ ancient_magic_ai_spellbook_events.408 = { #Cloak of Elements
 
 #death spells
 ancient_magic_ai_spellbook_events.501 = { #Raise Undead Horde
-	title = ancient_magic_ai_spellbook_events.501.t
-	desc = ancient_magic_ai_spellbook_events.501.desc
-	
-	option = {
-		name = ancient_magic_spellbook_cast_spell
-		trigger = {
-			var:mana >= 200
-			NOT = {
-				has_character_modifier = undead_horde_cooldown_modifier
-			}
-			has_perk = necromancy_perk
+	trigger = {
+		var:mana >= 200
+		NOT = {
+			has_character_modifier = undead_horde_cooldown_modifier
 		}
-		show_as_unavailable = {
-			OR = {
-				var:mana < 200
-				NOT = {
-					has_perk = necromancy_perk
-				}
-				has_character_modifier = undead_horde_cooldown_modifier
-			}
-		}
+		has_perk = necromancy_perk
+	}
+	immediate = {
 		change_mana = { VALUE = -200 }
 		
 		spawn_army = {
@@ -1958,39 +1554,32 @@ ancient_magic_ai_spellbook_events.501 = { #Raise Undead Horde
 			modifier = undead_horde_cooldown_modifier
 			years = 2
 		}
-	}
-	
-	option = {
-		name = ancient_magic_ai_spellbook_events_back
-		trigger_event = ancient_magic_ai_spellbook_events.005
+		
+		if = {
+			limit = {
+				var:mana >= 150
+			}
+			trigger_event = ancient_magic_ai_spellbook_events.001
+		}
 	}
 }
 
 ancient_magic_ai_spellbook_events.502 = { #Become Liche
-	title = ancient_magic_ai_spellbook_events.502.t
-	desc = ancient_magic_ai_spellbook_events.502.desc
-	
-	option = {
-		name = ancient_magic_spellbook_cast_spell
-		trigger = {
-			var:mana >= 600
-			NOT = { has_trait = undead }
-			has_trait = deacon_of_death
-		}
-		show_as_unavailable = {
-			OR = {
-				var:mana < 600
-				has_trait = undead
-				NOT = { has_trait = deacon_of_death }
-			}
-		}
+	trigger = {
+		var:mana >= 600
+		NOT = { has_trait = undead }
+		has_trait = deacon_of_death
+	}
+	immediate = {
 		change_mana = { VALUE = -600 }
 		add_trait = undead
-	}
-	
-	option = {
-		name = ancient_magic_ai_spellbook_events_back
-		trigger_event = ancient_magic_ai_spellbook_events.005
+		
+		if = {
+			limit = {
+				var:mana >= 150
+			}
+			trigger_event = ancient_magic_ai_spellbook_events.001
+		}
 	}
 }
 
@@ -2163,63 +1752,47 @@ ancient_magic_ai_spellbook_events.507 = { #Death Stare
 }
 
 ancient_magic_ai_spellbook_events.508 = { #Aura of Death
-	title = ancient_magic_ai_spellbook_events.508.t
-	desc = ancient_magic_ai_spellbook_events.508.desc
-	
-	option = {
-		name = ancient_magic_spellbook_activate_aura
-		trigger = {
-			var:mana >= 100
-			has_perk = aura_of_death_perk
-			NOT = {
-				has_character_modifier = aura_of_death_modifier
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_character_modifier = aura_of_death_modifier
+				}
+			}
+
+			change_mana = { VALUE = -100 }
+
+			change_mana_gen = { VALUE = -30 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = aura_of_death_modifier
+					mode = add
+				}
 			}
 		}
-		show_as_unavailable = {
-			OR = {
-				var:mana < 100
-				has_character_modifier = aura_of_death_modifier
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = aura_of_death_modifier
+				}
+			}
+
+			change_mana_gen = { VALUE = 30 }
+
+			while = {
+				count = 100
+				remove_character_modifier = aura_of_death_modifier
 			}
 		}
-
-		change_mana = { VALUE = -100 }
-
-		change_mana_gen = { VALUE = -30 }
-
-		while = {
-			count = mage_level
-			add_character_modifier = {
-				modifier = aura_of_death_modifier
-				mode = add
+		
+		if = {
+			limit = {
+				var:mana >= 150
 			}
+			trigger_event = ancient_magic_ai_spellbook_events.001
 		}
-	}
-
-	option = {
-		name = ancient_magic_spellbook_deactivate_aura
-		trigger = {
-			var:mana >= 100
-			has_perk = aura_of_death_perk
-			has_character_modifier = aura_of_death_modifier
-		}
-		show_as_unavailable = {
-			var:mana > 100
-			NOT = {
-				has_character_modifier = aura_of_death_modifier
-			}
-		}
-
-		change_mana_gen = { VALUE = 30 }
-
-		while = {
-			count = 100
-			remove_character_modifier = aura_of_death_modifier
-		}
-	}
-	
-	option = {
-		name = ancient_magic_ai_spellbook_events_back
-		trigger_event = ancient_magic_ai_spellbook_events.005
 	}
 }
 
