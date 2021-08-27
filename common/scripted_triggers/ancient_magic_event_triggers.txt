@@ -26,7 +26,7 @@ is_unliving_immortal = {
 	# Add things like vampire here for spell recognition
 }
 
-am_has_minor_illness = {
+has_minor_illness_trigger = {
 	OR = {
 		has_trait = smallpox
 		has_trait = sickly
@@ -38,7 +38,7 @@ am_has_minor_illness = {
 	}
 }
 
-am_has_greater_illness = {
+has_greater_illness_trigger = {
 	OR = {
 		has_trait = pneumonic
 		has_trait = great_pox
@@ -53,7 +53,7 @@ am_has_greater_illness = {
 	}
 }
 
-am_has_critical_illness = {
+has_critical_illness_trigger = {
 	OR = {
 		has_trait = wounded_3
 		has_trait = one_eyed

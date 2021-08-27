@@ -2,13 +2,13 @@
 heal_spell = {
 	scope = character
 	is_shown = {
-		scope:spell_target = { am_has_minor_illness = yes }
+		scope:spell_target = { has_minor_illness_trigger = yes }
 	}
 	is_valid = {
 		var:mana.compare_value >= scope:spell_cost.compare_value
 	}
 	effect = {
-		scope:spell_target = { am_remove_minor_illness = yes }
+		scope:spell_target = { remove_single_minor_illness_effect = yes }
 		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 	}
 }
@@ -46,16 +46,18 @@ heal_spell_has_list = {
 greater_heal_spell = {
 	scope = character
 	is_shown = {
-		scope:spell_target = { am_has_greater_illness = yes }
+		scope:spell_target = {
+			OR = {
+				has_minor_illness_trigger = yes
+				has_greater_illness_trigger = yes
+			}
+		}
 	}
 	is_valid = {
 		var:mana.compare_value >= scope:spell_cost.compare_value
 	}
 	effect = {
-		scope:spell_target = {
-			am_remove_minor_illness = yes
-			am_remove_greater_illness = yes
-		}
+		scope:spell_target = { remove_single_greater_or_minor_illness_effect = yes }
 		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 	}
 }
@@ -93,7 +95,13 @@ greater_heal_spell_has_list = {
 avatar_of_life_spell = {
 	scope = character
 	is_shown = {
-		scope:spell_target = { am_has_critical_illness = yes }
+		scope:spell_target = {
+			OR = {
+				has_minor_illness_trigger = yes
+				has_greater_illness_trigger = yes
+				has_critical_illness_trigger = yes
+			}
+		}
 	}
 	is_valid = {
 		AND = {
@@ -103,9 +111,7 @@ avatar_of_life_spell = {
 	}
 	effect = {
 		scope:spell_target = {
-			am_remove_minor_illness = yes
-			am_remove_greater_illness = yes
-			am_remove_critical_illness = yes
+			remove_any_single_illness_effect = yes
 			add_character_modifier = {
 				modifier = full_restoration_modifier
 				years = 5
