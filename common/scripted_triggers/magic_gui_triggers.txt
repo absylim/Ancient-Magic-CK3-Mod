@@ -21,3 +21,45 @@
 		fallback = { always = no }
 	}
 }
+
+trigger_is_adding_personality_trait = {
+	switch = {
+		trigger = $FLAG$
+		flag:lustful = { NOT = { has_trait = lustful } }
+		flag:chaste = { NOT = { has_trait = chaste } }
+		flag:gluttonous = { NOT = { has_trait = gluttonous } }
+		flag:temperate = { NOT = { has_trait = temperate } }
+		flag:greedy = { NOT = { has_trait = greedy } }
+		flag:generous = { NOT = { has_trait = generous } }
+		flag:lazy = { NOT = { has_trait = lazy } }
+		flag:diligent = { NOT = { has_trait = diligent } }
+		flag:wrathful = { NOT = { has_trait = wrathful } }
+		flag:calm = { NOT = { has_trait = calm } }
+		flag:impatient = { NOT = { has_trait = impatient } }
+		flag:patient = { NOT = { has_trait = patient } }
+		flag:arrogant = { NOT = { has_trait = arrogant } }
+		flag:humble = { NOT = { has_trait = humble } }
+		flag:deceitful = { NOT = { has_trait = deceitful } }
+		flag:honest = { NOT = { has_trait = honest } }
+		flag:craven = { NOT = { has_trait = craven } }
+		flag:brave = { NOT = { has_trait = brave } }
+		flag:shy = { NOT = { has_trait = shy } }
+		flag:gregarious = { NOT = { has_trait = gregarious } }
+		flag:ambitious = { NOT = { has_trait = ambitious } }
+		flag:content = { NOT = { has_trait = content } }
+		flag:arbitrary = { NOT = { has_trait = arbitrary } }
+		flag:just = { NOT = { has_trait = just } }
+		flag:cynical = { NOT = { has_trait = cynical } }
+		flag:zealous = { NOT = { has_trait = zealous } }
+		flag:paranoid = { NOT = { has_trait = paranoid } }
+		flag:trusting = { NOT = { has_trait = trusting } }
+		flag:callous = { NOT = { has_trait = callous } }
+		flag:compassionate = { NOT = { has_trait = compassionate } }
+		flag:vengeful = { NOT = { has_trait = vengeful } }
+		flag:forgiving = { NOT = { has_trait = forgiving } }
+		flag:fickle = { NOT = { has_trait = fickle } }
+		flag:stubborn = { NOT = { has_trait = stubborn } }
+		flag:sadistic = { NOT = { has_trait = sadistic } }
+		fallback = { always = no }
+	}
+}

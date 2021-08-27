@@ -9,14 +9,6 @@ ancient_magic_aura_update_events.001 = {
 
 	immediate = {
 		if = {
-			limit = { has_character_modifier = magic_haste_modifier }
-			remove_all_character_modifier_instances = magic_haste_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = magic_haste_modifier }
-			}
-		}
-		if = {
 			limit = { has_character_modifier = glimpse_the_future_modifier }
 			remove_all_character_modifier_instances = glimpse_the_future_modifier
 			while = {
@@ -41,19 +33,37 @@ ancient_magic_aura_update_events.001 = {
 			}
 		}
 		if = {
-			limit = { has_character_modifier = slowness_modifier }
-			remove_all_character_modifier_instances = slowness_modifier
+			limit = { has_character_modifier = mass_celerity_modifier }
+			remove_all_character_modifier_instances = mass_celerity_modifier
 			while = {
 				count = mage_level
-				add_character_modifier = { modifier = slowness_modifier }
+				add_character_modifier = { modifier = mass_celerity_modifier }
 			}
 		}
 		if = {
-			limit = { has_character_modifier = mass_slowness_modifier }
-			remove_all_character_modifier_instances = mass_slowness_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = mass_slowness_modifier }
+			limit = {
+				exists = var:slowness_target
+				var:slowness_target = { has_character_modifier = slowness_modifier }
+			}
+			var:slowness_target = {
+				remove_all_character_modifier_instances = slowness_modifier
+				while = {
+					count = prev.mage_level
+					add_character_modifier = { modifier = slowness_modifier }
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = var:mass_slowness_target
+				var:mass_slowness_target = { has_character_modifier = mass_slowness_modifier }
+			}
+			var:mass_slowness_target = {
+				remove_all_character_modifier_instances = mass_slowness_modifier
+				while = {
+					count = prev.mage_level
+					add_character_modifier = { modifier = mass_slowness_modifier }
+				}
 			}
 		}
 		if = {
@@ -62,6 +72,14 @@ ancient_magic_aura_update_events.001 = {
 			while = {
 				count = mage_level
 				add_character_modifier = { modifier = temporal_manipulation_modifier }
+			}
+		}
+		if = {
+			limit = { has_character_modifier = magic_haste_modifier }
+			remove_all_character_modifier_instances = magic_haste_modifier
+			while = {
+				count = mage_level
+				add_character_modifier = { modifier = magic_haste_modifier }
 			}
 		}
 		if = {

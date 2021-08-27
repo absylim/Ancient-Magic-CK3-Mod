@@ -23,7 +23,7 @@
  THIRD_UNLOCK_DEACON_OF_DEATH_SPELL: "Allows #V [CHARACTER.GetTitledFirstName]#! to cast $deacon_of_death_spell_gui_name$"
 
  # Spell effects
- GLOBAL_DEATH_STARE_EFFECT: "[CHARACTER.Custom2('SpellTargetYou',CHARACTER.MakeScope.Var('spell_target').Char)] was killed by [CHARACTER.GetNameOrMe]"
+ GLOBAL_DEATH_STARE_EFFECT: "[CHARACTER.Custom2('SpellTargetYou',CHARACTER.MakeScope.Var('spell_target').Char)] is killed by [CHARACTER.GetNameOrMe]"
  FIRST_DEATH_STARE_EFFECT: "[CHARACTER.Custom2('SpellTargetYou',CHARACTER.MakeScope.Var('spell_target').Char)] is killed by [CHARACTER.GetNameOrMe]"
  THIRD_DEATH_STARE_EFFECT: "You are killed by #V [CHARACTER.GetTitledFirstName]#!"
  GLOBAL_CONVERT_UNDEAD: "Someone becomes undead"

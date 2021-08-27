@@ -55,8 +55,7 @@
 		gain_mana_gen_perk = yes
 		gain_max_mana_perk = yes
 		gain_mage_xp_perk = yes
-		add_trait_force_tooltip = mage
-		add_trait_force_tooltip = mana
+		make_mage_effect = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -200,6 +199,7 @@ master_of_puppets_perk = {
 
 	effect = {
 		unlock_master_of_puppets_spell = yes
+		unlock_sculpt_mind_spell = yes
 		gain_mana_gen_perk = yes
 		gain_max_mana_perk = yes
 		gain_mage_xp_perk = yes

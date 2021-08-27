@@ -9,6 +9,7 @@ mass_celerity_spell_cost = { value = 100 }
 slowness_spell_cost = { value = 100 }
 mass_slowness_spell_cost = { value = 100 }
 temporal_manipulation_spell_cost = { value = 100 }
+haste_spell_cost = { value = 100 }
 master_of_time_spell_cost = { value = 500 }
 
 #Life
@@ -109,4 +110,10 @@ beguiling_aura_spell_cost = { value = 100 }
 friendship_spell_cost = { value = 400 }
 rivalry_spell_cost = { value = 400 }
 enchanting_aura_spell_cost = { value = 100 }
+sculpt_mind_spell_cost = {
+	value = 400
+	if = { limit = { var:list_option = flag:depressed_genetic } add = 200 }
+	else_if = { limit = { var:list_option = flag:possessed_genetic } add = 200 }
+	else_if = { limit = { var:list_option = flag:lunatic_genetic } add = 200 }
+}
 master_of_puppets_spell_cost = { value = 600 }

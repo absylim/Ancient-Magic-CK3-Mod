@@ -61,8 +61,7 @@
 		gain_mana_gen_perk = yes
 		gain_max_mana_perk = yes
 		gain_mage_xp_perk = yes
-		add_trait_force_tooltip = mage
-		add_trait_force_tooltip = mana
+		make_mage_effect = yes
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -179,7 +178,7 @@ financial_times_perk = {
 		}
 		if = {
 			limit = {
-				NOT = { is_immortal=yes }
+				NOT = { is_immortal = yes }
 			}
 			multiply = 2
 		}
@@ -529,6 +528,7 @@ temporal_manipulation_perk = {
 
 	effect = {
 		unlock_temporal_manipulation_spell = yes
+		unlock_haste_spell = yes
 		gain_mana_gen_perk = yes
 		gain_max_mana_perk = yes
 		gain_mage_xp_perk = yes

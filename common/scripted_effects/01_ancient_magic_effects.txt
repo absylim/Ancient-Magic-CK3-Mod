@@ -1,4 +1,16 @@
-﻿change_mana_with_tooltip = {
+﻿make_mage_effect = {
+	add_trait_force_tooltip = mage
+	add_trait_force_tooltip = mana
+	if = {
+		limit = { NOT = { exists = var:mana } }
+		set_variable = {
+			name = mana
+			value = 0
+		}
+	}
+}
+
+change_mana_with_tooltip = {
 	custom_description = {
 		text = change_mana
 		value = $VALUE$
@@ -88,38 +100,71 @@ add_immortal_years_since_lifetime_reset = {
 	change_variable = { name = immortal_years_since_lifetime_reset add = 1 }
 }
 
-am_remove_minor_illness = {
-	remove_trait = smallpox
-	remove_trait = sickly
-	remove_trait = ill
-	remove_trait = early_great_pox
-	remove_trait = lovers_pox
-	remove_trait = wounded_1
-	remove_trait = infirm
+remove_single_minor_illness_effect = {
+	switch = {
+		trigger = has_trait
+		infirm = { remove_trait = infirm }
+		wounded_1 = { remove_trait = wounded_1 }
+		lovers_pox = { remove_trait = lovers_pox }
+		early_great_pox = { remove_trait = early_great_pox }
+		ill = { remove_trait = ill }
+		sickly = { remove_trait = sickly }
+		smallpox = { remove_trait = smallpox }
+	}
 }
 
-am_remove_greater_illness = {
-	remove_trait = pneumonic
-	remove_trait = great_pox
-	remove_trait = leper
-	remove_trait = wounded_2
-	remove_trait = maimed
-	remove_trait = gout_ridden
-	remove_trait = consumption
-	remove_trait = cancer
-	remove_trait = typhus
-	remove_trait = bubonic_plague
+remove_single_greater_or_minor_illness_effect = {
+	switch = {
+		trigger = has_trait
+		bubonic_plague = { remove_trait = bubonic_plague }
+		typhus = { remove_trait = typhus }
+		cancer = { remove_trait = cancer }
+		consumption = { remove_trait = consumption }
+		gout_ridden = { remove_trait = gout_ridden }
+		maimed = { remove_trait = maimed }
+		wounded_2 = { remove_trait = wounded_2 }
+		leper = { remove_trait = leper }
+		great_pox = { remove_trait = great_pox }
+		pneumonic = { remove_trait = pneumonic }
+		infirm = { remove_trait = infirm }
+		wounded_1 = { remove_trait = wounded_1 }
+		lovers_pox = { remove_trait = lovers_pox }
+		early_great_pox = { remove_trait = early_great_pox }
+		ill = { remove_trait = ill }
+		sickly = { remove_trait = sickly }
+		smallpox = { remove_trait = smallpox }
+	}
 }
 
-am_remove_critical_illness = {
-	remove_trait = wounded_3
-	remove_trait = one_eyed
-	remove_trait = one_legged
-	remove_trait = disfigured
-	remove_trait = scarred
-	remove_trait = eunuch
-	remove_trait = blind
-	remove_trait = incapable
+remove_any_single_illness_effect = {
+	switch = {
+		trigger = has_trait
+		incapable = { remove_trait = incapable }
+		blind = { remove_trait = blind }
+		eunuch = { remove_trait = eunuch }
+		scarred = { remove_trait = scarred }
+		disfigured = { remove_trait = disfigured }
+		one_legged = { remove_trait = one_legged }
+		one_eyed = { remove_trait = one_eyed }
+		wounded_3 = { remove_trait = wounded_3 }
+		bubonic_plague = { remove_trait = bubonic_plague }
+		typhus = { remove_trait = typhus }
+		cancer = { remove_trait = cancer }
+		consumption = { remove_trait = consumption }
+		gout_ridden = { remove_trait = gout_ridden }
+		maimed = { remove_trait = maimed }
+		wounded_2 = { remove_trait = wounded_2 }
+		leper = { remove_trait = leper }
+		great_pox = { remove_trait = great_pox }
+		pneumonic = { remove_trait = pneumonic }
+		infirm = { remove_trait = infirm }
+		wounded_1 = { remove_trait = wounded_1 }
+		lovers_pox = { remove_trait = lovers_pox }
+		early_great_pox = { remove_trait = early_great_pox }
+		ill = { remove_trait = ill }
+		sickly = { remove_trait = sickly }
+		smallpox = { remove_trait = smallpox }
+	}
 }
 
 ancient_magic_impregnate_effect = {

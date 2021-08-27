@@ -40,6 +40,12 @@ unlock_temporal_manipulation_spell = {
 	third = THIRD_UNLOCK_TEMPORAL_MANIPULATION_SPELL
 }
 
+unlock_haste_spell = {
+	global = GLOBAL_UNLOCK_HASTE_SPELL
+	first = FIRST_UNLOCK_HASTE_SPELL
+	third = THIRD_UNLOCK_HASTE_SPELL
+}
+
 unlock_master_of_time_spell = {
 	global = GLOBAL_UNLOCK_MASTER_OF_TIME_SPELL
 	first = FIRST_UNLOCK_MASTER_OF_TIME_SPELL

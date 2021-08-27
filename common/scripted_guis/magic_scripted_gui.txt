@@ -133,3 +133,19 @@ dummy_spell_has_list = {
 		always = no
 	}
 }
+
+clear_trait_list = {
+	is_shown = {}
+	is_valid = {}
+	effect = {
+		clear_global_variable_list = trait_list
+	}
+}
+
+add_to_trait_list = {
+	is_shown = {}
+	is_valid = {}
+	effect = {
+		add_to_global_variable_list = { name = trait_list target = scope:trait }
+	}
+}

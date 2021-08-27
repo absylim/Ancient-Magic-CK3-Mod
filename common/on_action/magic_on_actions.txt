@@ -9,3 +9,49 @@ set_up_spells = {
 		set_up_spells = yes
 	}
 }
+
+
+on_death = {
+	on_actions = {
+		reset_slowness_drain
+		reset_mass_slowness_drain
+	}
+}
+
+reset_slowness_drain = {
+	trigger = {
+		has_character_modifier = slowness_modifier
+	}
+
+	effect = {
+		every_living_character = {
+			limit = {
+				AND = {
+					has_variable = slowness_target
+					var:slowness_target = prev
+				}
+			}
+			remove_variable = slowness_target
+			trigger_event = { on_action = on_reset_mana_system }
+		}
+	}
+}
+
+reset_mass_slowness_drain = {
+	trigger = {
+		has_character_modifier = mass_slowness_modifier
+	}
+
+	effect = {
+		every_living_character = {
+			limit = {
+				AND = {
+					has_variable = mass_slowness_target
+					var:mass_slowness_target = prev
+				}
+			}
+			remove_variable = mass_slowness_target
+			trigger_event = { on_action = on_reset_mana_system }
+		}
+	}
+}

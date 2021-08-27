@@ -1,6 +1,6 @@
 ﻿magic_haste_modifier = {
 	icon = martial_positive
-	movement_speed = 0.3
+	movement_speed = 0.1
 	stacking = yes
 }
 
@@ -66,16 +66,23 @@ celerity_modifier = {
 	stacking = yes
 }
 
-slowness_modifier = {
+mass_celerity_modifier = {
 	icon = martial_positive
-	prowess = 2
+	advantage = 1
+	hard_casualty_modifier = -0.1
+	stacking = yes
+}
+
+slowness_modifier = {
+	icon = martial_negative
+	prowess = -2
 	stacking = yes
 }
 
 mass_slowness_modifier = {
-	icon = martial_positive
-	advantage = 1
-	hard_casualty_modifier = -0.1
+	icon = martial_negative
+	advantage = -1
+	hard_casualty_modifier = 0.1
 	stacking = yes
 }
 
