@@ -1,0 +1,4 @@
+is_pih_installed_trigger = {
+    global = PIH_INSTALLED
+    global_neg = PIH_NOT_INSTALLED
+}

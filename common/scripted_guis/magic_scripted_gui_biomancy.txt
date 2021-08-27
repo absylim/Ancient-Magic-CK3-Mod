@@ -794,35 +794,35 @@ sculpter_of_flesh_spell_has_list = {
 				flag:dwarf = { NOT = { has_trait = giant } }
 				flag:clubfooted = {
 					OR = {
-						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:surefooted } }
+						is_pih_installed_trigger = no
 						NOT = { has_trait = surefooted }
 					}
 				}
 				flag:surefooted = { NOT = { has_trait = clubfooted } }
 				flag:hunchbacked = {
 					OR = {
-						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:regal_bearing } }
+						is_pih_installed_trigger = no
 						NOT = { has_trait = regal_bearing }
 					}
 				}
 				flag:regal_bearing = { NOT = { has_trait = hunchbacked } }
 				flag:scaly = {
 					OR = {
-						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:glowing } }
+						is_pih_installed_trigger = no
 						NOT = { has_trait = glowing }
 					}
 				}
 				flag:glowing = { NOT = { has_trait = scaly } }
 				flag:wheezing = {
 					OR = {
-						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:hardy_lung } }
+						is_pih_installed_trigger = no
 						NOT = { has_trait = hardy_lung }
 					}
 				}
 				flag:hardy_lung = { NOT = { has_trait = wheezing } }
 				flag:bleeder = {
 					OR = {
-						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:pt_balanced_humors } }
+						is_pih_installed_trigger = no
 						NOT = { has_trait = pt_balanced_humors }
 					}
 				}
