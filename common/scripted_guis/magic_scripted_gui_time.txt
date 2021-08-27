@@ -216,7 +216,7 @@ slowness_spell = {
 	is_shown = {
 		AND = {
 			OR = {
-				NOT = { exists = var:slowness_target }
+				NOT = { has_variable = slowness_target }
 				var:slowness_target = scope:spell_target
 			}
 			NOT = { this = scope:spell_target }
@@ -279,7 +279,13 @@ slowness_spell_has_list = {
 mass_slowness_spell = {
 	scope = character
 	is_shown = {
-		NOT = { this = scope:spell_target }
+		AND = {
+			OR = {
+				NOT = { has_variable = mass_slowness_target }
+				var:mass_slowness_target = scope:spell_target
+			}
+			NOT = { this = scope:spell_target }
+		}
 	}
 	is_valid = {
 		var:mana.compare_value >= scope:spell_cost.compare_value
