@@ -92,9 +92,9 @@
  master_of_time_spell_desc: "Having mastered the nuances of time's flow, this spell allows the user to completely halt the passage of time for another person, while still allowing them to interact with the world as normal. Makes the target [GetTrait('immortal').GetName(GetPlayer)]."
 
  # Life
- heal_spell_desc: ""
- greater_heal_spell_desc: ""
- avatar_of_life_spell_desc: ""
+ heal_spell_desc: "The most basic application of [chiromancy|E], this spell increases the speed of the body's natural healing processes: sealing wounds, increasing blood production, and bolstering immune system strength. Effectively heals the target of any single common affliction."
+ greater_heal_spell_desc: "A more advanced application of [chiromancy|E], this spell uses mana directly to seal wounds, replace blood, destroy infections, etc., and so can be used to heal more dangerous illnesses. Effectively heals the target of any single common or dangerous affliction."
+ avatar_of_life_spell_desc: "The most advanced application of [chiromancy|E], this spell uses pure magical power to replace organs and blood, annihilate infectious invaders, and even target diseases the body doesn't recognize as diseases. Effectively heals the target of any single affliction."
 
  # Elemental
  flame_aura_spell_desc: "You bend your thoughts and intent into a state of rage, and an undeniable need for destruction, pressing that white hot spark out, until the world around you seems on the verge of burning under the assault of your will, and then you stoke the flames higher, feeding into them every sleight, every set-back, every moment when you've lost your temper, until your spell is on the verge of manifesting. Will you feed it [mana|El]?"
