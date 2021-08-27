@@ -1,0 +1,146 @@
+﻿beguiling_aura_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		var:mana >= var:beguiling_aura_spell_cost
+		has_perk = beguiling_aura_perk
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_character_modifier = beguiling_aura_modifier
+				}
+			}
+
+			deduct_mana_with_tooltip = { VALUE = var:beguiling_aura_spell_cost }
+
+			change_mana_gen = { VALUE = -15 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = beguiling_aura_modifier
+					mode = add
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = beguiling_aura_modifier
+				}
+			}
+			change_mana_gen = { VALUE = 15 }
+
+			while = {
+				count = 100
+				remove_character_modifier = beguiling_aura_modifier
+			}
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+		
+        ai_value_modifier = {
+            ai_rationality = 0.2
+        }
+			
+		modifier = {
+			factor = 0
+			var:mana_gen < 15
+		}
+		
+		modifier = {
+			factor = 0
+			has_character_modifier = beguiling_aura_modifier
+		}
+		
+		modifier = {
+			add = 50
+			has_character_modifier = beguiling_aura_modifier
+			var:mana_gen <= 0
+		}
+	}
+}
+
+enchanting_aura_ai_spell_decision = {
+	is_shown = {
+		is_ai = yes
+		is_magus = yes
+		var:mana >= var:enchanting_aura_spell_cost
+		has_perk = enchanting_aura_perk
+	}
+	
+	ai_check_frequency = 1	
+	
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_character_modifier = enchanting_aura_modifier
+				}
+			}
+
+			deduct_mana_with_tooltip = { VALUE = var:enchanting_aura_spell_cost }
+
+			change_mana_gen = { VALUE = -30 }
+
+			while = {
+				count = mage_level
+				add_character_modifier = {
+					modifier = enchanting_aura_modifier
+					mode = add
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_character_modifier = enchanting_aura_modifier
+				}
+			}
+
+			change_mana_gen = { VALUE = 15 }
+
+			while = {
+				count = 100
+				remove_character_modifier = enchanting_aura_modifier
+			}
+		}
+	}
+	
+	ai_potential = { always = yes }
+	
+	ai_will_do = {
+		base = 25
+		
+        ai_value_modifier = {
+            ai_rationality = 0.2
+        }
+			
+		modifier = {
+			factor = 0
+			var:mana_gen < 15
+		}
+		
+		modifier = {
+			factor = 0
+			has_character_modifier = enchanting_aura_modifier
+		}
+		
+		modifier = {
+			add = 50
+			AND = {
+				has_character_modifier = enchanting_aura_modifier
+				var:mana_gen <= 0
+			}
+		}
+	}
+}

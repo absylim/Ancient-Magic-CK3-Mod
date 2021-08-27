@@ -3,14 +3,14 @@
 		is_ai = yes
 		is_magus = yes
 		has_perk = golem_creation_perk
-		var:mana >= 100
+		var:mana >= var:golem_creation_spell_cost
 		NOT = { has_character_modifier = golem_cooldown_modifier }
 	}
 	
 	ai_check_frequency = 1	
 	
 	effect = {
-		change_mana = { VALUE = -100 }
+		deduct_mana_with_tooltip = { VALUE = var:golem_creation_spell_cost }
 		spawn_army = {
 			name = golem_army
 			uses_supply = no
@@ -45,14 +45,14 @@ lava_golem_ai_spell_decision = {
 		is_ai = yes
 		is_magus = yes
 		has_trait = lord_of_the_elements
-		var:mana >= 400
+		var:mana >= var:lord_of_the_elements_spell_cost
 		NOT = { has_character_modifier = lava_golem_cooldown_modifier }
 	}
 	
 	ai_check_frequency = 1	
 	
 	effect = {
-		change_mana = { VALUE = -400 }
+		deduct_mana_with_tooltip = { VALUE = var:lord_of_the_elements_spell_cost }
 		
 		spawn_army = {
 			name = lava_golem_army
@@ -97,7 +97,7 @@ flame_aura_ai_spell_decision = {
 		is_ai = yes
 		is_magus = yes
 		has_perk = flame_aura_perk
-		var:mana >= 100
+		var:mana >= var:flame_aura_spell_cost
 	}
 	
 	ai_check_frequency = 1	
@@ -105,13 +105,13 @@ flame_aura_ai_spell_decision = {
 	effect = {
 		if = {
 			limit = {
-				var:mana >= 100
+				var:mana >= var:flame_aura_spell_cost
 				NOT = {
 					has_character_modifier = flame_aura_modifier
 				}
 			}
 
-			change_mana = { VALUE = -100 }
+			deduct_mana_with_tooltip = { VALUE = var:flame_aura_spell_cost }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -167,7 +167,7 @@ flaming_weapons_ai_spell_decision = {
 		is_ai = yes
 		is_magus = yes
 		has_perk = flaming_weapons_perk
-		var:mana >= 100
+		var:mana >= var:flaming_weapons_spell_cost
 	}
 	
 	ai_check_frequency = 1	
@@ -175,13 +175,13 @@ flaming_weapons_ai_spell_decision = {
 	effect = {
 		if = {
 			limit = {
-				var:mana >= 100
+				var:mana >= var:flaming_weapons_spell_cost
 				NOT = {
 					has_character_modifier = flaming_weapons_modifier
 				}
 			}
 
-			change_mana = { VALUE = -100 }
+			deduct_mana_with_tooltip = { VALUE = var:flaming_weapons_spell_cost }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -237,7 +237,7 @@ living_earthworks_ai_spell_decision = {
 		is_ai = yes
 		is_magus = yes
 		has_perk = living_earthworks_perk
-		var:mana >= 100
+		var:mana >= var:living_earthworks_spell_cost
 	}
 	
 	ai_check_frequency = 1	
@@ -245,13 +245,13 @@ living_earthworks_ai_spell_decision = {
 	effect = {
 		if = {
 			limit = {
-				var:mana >= 100
+				var:mana >= var:living_earthworks_spell_cost
 				NOT = {
 					has_character_modifier = living_earthworks_modifier
 				}
 			}
 
-			change_mana = { VALUE = -100 }
+			deduct_mana_with_tooltip = { VALUE = var:living_earthworks_spell_cost }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -307,7 +307,7 @@ water_control_ai_spell_decision = {
 		is_ai = yes
 		is_magus = yes
 		has_perk = control_water_perk
-		var:mana >= 100
+		var:mana >= var:control_water_spell_cost
 	}
 	
 	ai_check_frequency = 1	
@@ -315,13 +315,13 @@ water_control_ai_spell_decision = {
 	effect = {
 		if = {
 			limit = {
-				var:mana >= 100
+				var:mana >= var:control_water_spell_cost
 				NOT = {
 					has_character_modifier = control_water_modifier
 				}
 			}
 
-			change_mana = { VALUE = -100 }
+			deduct_mana_with_tooltip = { VALUE = var:control_water_spell_cost }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -377,7 +377,7 @@ cloak_of_elements_ai_spell_decision = {
 		is_ai = yes
 		is_magus = yes
 		has_perk = elemental_warrior_perk
-		var:mana >= 100
+		var:mana >= var:elemental_warrior_spell_cost
 	}
 	
 	ai_check_frequency = 1	
@@ -390,7 +390,7 @@ cloak_of_elements_ai_spell_decision = {
 				}
 			}
 
-			change_mana = { VALUE = -100 }
+			deduct_mana_with_tooltip = { VALUE = var:elemental_warrior_spell_cost }
 
 			change_mana_gen = { VALUE = -30 }
 
