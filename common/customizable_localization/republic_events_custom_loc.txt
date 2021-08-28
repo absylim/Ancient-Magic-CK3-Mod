@@ -573,14 +573,16 @@ GetMagocracyYeaBlackmail = {
 		}
 		localization_key = no_blackmail_votes
 	}
-	text = {
-		trigger = {
-			has_variable_list = blackmailing_house_heads
-			house = { exists = var:titular_magocracy }
-			house = { var:titular_magocracy = { holder = { magocracy_has_senate_form = yes } } }
-		}
-		localization_key = blackmail_votes_senate_yea
-	}
+	
+	#text = {
+	#	trigger = {
+	#		has_variable_list = blackmailing_house_heads
+	#		house = { exists = var:titular_magocracy }
+	#		house = { var:titular_magocracy = { holder = { magocracy_has_senate_form = yes } } }
+	#	}
+	#	localization_key = blackmail_votes_senate_yea
+	#}
+	
 	text = {
 		trigger = {
 			has_variable_list = blackmailing_house_heads
@@ -589,14 +591,15 @@ GetMagocracyYeaBlackmail = {
 		}
 		localization_key = blackmail_votes_council_yea
 	}
-	text = {
-		trigger = {
-			has_variable_list = blackmailing_house_heads
-			house = { exists = var:titular_magocracy }
-			house = { var:titular_magocracy = { holder = { magocracy_has_elected_ruler_form = yes } } }
-		}
-		localization_key = blackmail_votes_elected_ruler_yea
-	}
+	
+	#text = {
+	#	trigger = {
+	#		has_variable_list = blackmailing_house_heads
+	#		house = { exists = var:titular_magocracy }
+	#		house = { var:titular_magocracy = { holder = { magocracy_has_elected_ruler_form = yes } } }
+	#	}
+	#	localization_key = blackmail_votes_elected_ruler_yea
+	#}
 }
 
 GetMagocracyNayBlackmail = {
@@ -607,14 +610,15 @@ GetMagocracyNayBlackmail = {
 		}
 		localization_key = no_blackmail_votes
 	}
-	text = {
-		trigger = {
-			has_variable_list = blackmailing_house_heads
-			house = { exists = var:titular_magocracy }
-			house = { var:titular_magocracy = { holder = { magocracy_has_senate_form = yes } } }
-		}
-		localization_key = blackmail_votes_senate_nay
-	}
+	#text = {
+	#	trigger = {
+	#		has_variable_list = blackmailing_house_heads
+	#		house = { exists = var:titular_magocracy }
+	#		house = { var:titular_magocracy = { holder = { magocracy_has_senate_form = yes } } }
+	#	}
+	#	localization_key = blackmail_votes_senate_nay
+	#}
+	
 	text = {
 		trigger = {
 			has_variable_list = blackmailing_house_heads
@@ -623,12 +627,13 @@ GetMagocracyNayBlackmail = {
 		}
 		localization_key = blackmail_votes_council_nay
 	}
-	text = {
-		trigger = {
-			has_variable_list = blackmailing_house_heads
-			house = { exists = var:titular_magocracy }
-			house = { var:titular_magocracy = { holder = { magocracy_has_elected_ruler_form = yes } } }
-		}
-		localization_key = blackmail_votes_elected_ruler_nay
-	}
+	
+	#text = {
+	#	trigger = {
+	#		has_variable_list = blackmailing_house_heads
+	#		house = { exists = var:titular_magocracy }
+	#		house = { var:titular_magocracy = { holder = { magocracy_has_elected_ruler_form = yes } } }
+	#	}
+	#	localization_key = blackmail_votes_elected_ruler_nay
+	#}
 }

@@ -9,12 +9,9 @@ window = {
 	parentanchor = top|right
 	allow_outside = yes
 	movable = no
-	magocracy_senate_view = {}
-	magocracy_bicameral_view = {}
 	magocracy_council_view = {}
 	magocracy_term_limits_window = {}
 	magocracy_families_window = {}
-	window_appoint_governor = {}
 	layer = windows_layer
 
 	using = Window_Size_MainTab

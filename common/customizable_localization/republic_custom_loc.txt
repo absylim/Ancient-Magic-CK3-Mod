@@ -31,42 +31,41 @@ GetMagocracyOrFeudal = {
 
 GetDogeConsulCouncilHead = {
 	type = character
-	text = {
-		trigger = { magocracy_has_senate_form = yes }
-		localization_key = CONSUL
-	}
+	#text = {
+	#	trigger = { magocracy_has_senate_form = yes }
+	#	localization_key = CONSUL
+	#}
+	
 	text = {
 		trigger = { magocracy_has_council_form = yes }
 		localization_key = COUNCIL_HEAD
 	}
-	text = {
-		trigger = { magocracy_has_elected_ruler_form = yes }
-		localization_key = DOGE
-	}
-	text = {
-		trigger = { magocracy_has_bicameral_form = yes }
-		localization_key = PRIME_MINISTER
-	}
+	
+	#text = {
+	#	trigger = { magocracy_has_elected_ruler_form = yes }
+	#	localization_key = DOGE
+	#}
+	
+	#text = {
+	#	trigger = { magocracy_has_bicameral_form = yes }
+	#	localization_key = PRIME_MINISTER
+	#}
 }
 
 GetMagocracyGoverningBodyType = {
 	type = character
-	text = {
-		trigger = { magocracy_has_senate_form = yes }
-		localization_key = SENATE_TYPE
-	}
+	#text = {
+	#	trigger = { magocracy_has_senate_form = yes }
+	#	localization_key = SENATE_TYPE
+	#}
 	text = {
 		trigger = { magocracy_has_council_form = yes }
 		localization_key = COUNCIL_TYPE
 	}
-	text = {
-		trigger = { magocracy_has_elected_ruler_form = yes }
-		localization_key = ELECTED_RULER_TYPE
-	}
-	text = {
-		trigger = { magocracy_has_bicameral_form = yes }
-		localization_key = BICAMERAL_TYPE
-	}
+	#text = {
+	#	trigger = { magocracy_has_elected_ruler_form = yes }
+	#	localization_key = ELECTED_RULER_TYPE
+	#}
 }
 
 GetMagocracyHouseHigh = {
