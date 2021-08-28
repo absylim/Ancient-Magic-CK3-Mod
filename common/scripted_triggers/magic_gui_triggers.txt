@@ -63,3 +63,140 @@ trigger_is_adding_personality_trait = {
 		fallback = { always = no }
 	}
 }
+
+rewrite_trait_list_good_3_trigger = {
+	OR = {
+		AND = {
+			has_perk = perfect_trait_perk
+			scope:spell_target = {
+				has_trait_rank = { trait = $TRAIT_TYPE$_good rank > 1 }
+				NOT = { has_trait_rank = { trait = $TRAIT_TYPE$_good rank = $RANK$ } }
+			}
+		}
+		AND = {
+			has_perk = perfect_trait_perk
+			has_perk = improve_trait_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_good rank = 1 } }
+		}
+		AND = {
+			has_perk = perfect_trait_perk
+			has_perk = improve_trait_perk
+			has_perk = architect_of_bloodlines_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_good rank < 1 } }
+		}
+	}
+}
+
+rewrite_trait_list_good_2_trigger = {
+	OR = {
+		AND = {
+			has_perk = weaken_trait_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_good rank > 2 } }
+		}
+		AND = {
+			has_perk = improve_trait_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_good rank = 1 } }
+		}
+		AND = {
+			has_perk = improve_trait_perk
+			has_perk = architect_of_bloodlines_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_good rank < 1 } }
+		}
+	}
+}
+
+rewrite_trait_list_good_1_trigger = {
+	OR = {
+		AND = {
+			has_perk = weaken_trait_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_good rank > 1 } }
+		}
+		AND = {
+			has_perk = architect_of_bloodlines_perk
+			scope:spell_target = {
+				has_trait_rank = { trait = $TRAIT_TYPE$_good rank < 1 }
+				has_trait_rank = { trait = $TRAIT_TYPE$_bad rank < 1 }
+			}
+		}
+		AND = {
+			has_perk = improve_trait_perk
+			has_perk = architect_of_bloodlines_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_bad rank > 0 } }
+		}
+	}
+}
+
+rewrite_trait_list_none_trigger = {
+	OR = {
+		AND = {
+			has_perk = weaken_trait_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_good rank > 0 } }
+		}
+		AND = {
+			has_perk = improve_trait_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_bad rank > 0 } }
+		}
+	}
+}
+
+rewrite_trait_list_bad_1_trigger = {
+	OR = {
+		AND = {
+			has_perk = weaken_trait_perk
+			has_perk = architect_of_bloodlines_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_good rank > 0 } }
+		}
+		AND = {
+			has_perk = architect_of_bloodlines_perk
+			scope:spell_target = {
+				has_trait_rank = { trait = $TRAIT_TYPE$_good rank < 1 }
+				has_trait_rank = { trait = $TRAIT_TYPE$_bad rank < 1 }
+			}
+		}
+		AND = {
+			has_perk = improve_trait_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_bad rank > 1 } }
+		}
+	}
+}
+
+rewrite_trait_list_bad_2_trigger = {
+	OR = {
+		AND = {
+			has_perk = weaken_trait_perk
+			has_perk = architect_of_bloodlines_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_bad rank < 1 } }
+		}
+		AND = {
+			has_perk = weaken_trait_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_bad rank = 1 } }
+		}
+		AND = {
+			has_perk = improve_trait_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_bad rank > 2 } }
+		}
+	}
+}
+
+rewrite_trait_list_bad_3_trigger = {
+	OR = {
+		AND = {
+			has_perk = architect_of_bloodlines_perk
+			has_perk = weaken_trait_perk
+			has_perk = criple_trait_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_bad rank < 1 } }
+		}
+		AND = {
+			has_perk = weaken_trait_perk
+			has_perk = criple_trait_perk
+			scope:spell_target = { has_trait_rank = { trait = $TRAIT_TYPE$_bad rank = 1 } }
+		}
+		AND = {
+			has_perk = criple_trait_perk
+			scope:spell_target = {
+				has_trait_rank = { trait = $TRAIT_TYPE$_bad rank > 1 }
+				NOT = { has_trait_rank = { trait = $TRAIT_TYPE$_bad rank = $RANK$ } }
+			}
+		}
+	}
+}
