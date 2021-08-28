@@ -173,17 +173,13 @@ golem_creation_spell = {
 		}
 	}
 	effect = {
-		save_temporary_scope_value_as = {
-			name = army_stacks
-			value = mage_level
-		}
 		spawn_army = {
 			name = golem_army
 			uses_supply = no
 			inheritable = no
 			men_at_arms = {
 				type = golem
-				stacks = scope:army_stacks
+				stacks = var:army_stacks
 			}
 			location = scope:spell_target.location
 		}
@@ -399,17 +395,13 @@ lord_of_the_elements_spell = {
 		}
 	}
 	effect = {
-		save_temporary_scope_value_as = {
-			name = army_stacks
-			value = mage_level
-		}
 		spawn_army = {
 			name = lava_golem_army
 			uses_supply = no
 			inheritable = no
 			men_at_arms = {
 				type = lava_golem
-				stacks = scope:army_stacks
+				stacks = var:army_stacks
 			}
 			location = scope:spell_target.location
 		}

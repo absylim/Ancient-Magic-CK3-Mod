@@ -12,6 +12,10 @@
 			name = list_option
 			value = flag:none
 		}
+		set_variable = {
+			name = army_stacks
+			value = mage_level
+		}
 		effect_get_all_possible_candidates = yes
 		effect_get_all_rewrite_beauty_traits = yes
 		effect_get_all_rewrite_physique_traits = yes
@@ -31,6 +35,7 @@ effect_close_magic_window = {
 	remove_variable = repeat_spell
 	remove_variable = spell_target
 	remove_variable = list_option
+	remove_variable = army_stacks
 	clear_variable_list = spell_candidates
 	clear_variable_list = rewrite_beauty_spell_list
 	clear_variable_list = rewrite_physique_spell_list
