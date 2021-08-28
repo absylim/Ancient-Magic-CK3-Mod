@@ -19,7 +19,7 @@
 				type = golem
 				stacks = var:army_stacks
 			}
-			location = scope:spell_target.location
+			location = capital_province
 		}
 		add_character_modifier = {
 			modifier = golem_cooldown_modifier
@@ -61,7 +61,7 @@ lava_golem_ai_spell_decision = {
 				type = lava_golem
 				stacks = var:army_stacks
 			}
-			location = scope:spell_target.location
+			location = capital_province
 		}
 		add_character_modifier = {
 			modifier = lava_golem_cooldown_modifier

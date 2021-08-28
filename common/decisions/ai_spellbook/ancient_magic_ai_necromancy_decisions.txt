@@ -22,7 +22,7 @@
 				type = undead
 				stacks = var:army_stacks
 			}
-			location = scope:spell_target.location
+			location = capital_province
 		}
 		add_character_modifier = {
 			modifier = undead_horde_cooldown_modifier
