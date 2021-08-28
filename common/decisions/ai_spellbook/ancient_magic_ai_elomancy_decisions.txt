@@ -17,10 +17,9 @@
 			inheritable = no
 			men_at_arms = {
 				type = golem
-				stacks = mage_level
+				stacks = var:army_stacks
 			}
-			levy = 0
-			location = capital_province
+			location = scope:spell_target.location
 		}
 		add_character_modifier = {
 			modifier = golem_cooldown_modifier
@@ -60,10 +59,9 @@ lava_golem_ai_spell_decision = {
 			inheritable = no
 			men_at_arms = {
 				type = lava_golem
-				stacks = mage_level
+				stacks = var:army_stacks
 			}
-			levy = 0
-			location = capital_province
+			location = scope:spell_target.location
 		}
 		add_character_modifier = {
 			modifier = lava_golem_cooldown_modifier

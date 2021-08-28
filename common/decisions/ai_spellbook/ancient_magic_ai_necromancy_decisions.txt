@@ -20,10 +20,9 @@
 			inheritable = no
 			men_at_arms = {
 				type = undead
-				stacks = mage_level
+				stacks = var:army_stacks
 			}
-			levy = 0
-			location = capital_province
+			location = scope:spell_target.location
 		}
 		add_character_modifier = {
 			modifier = undead_horde_cooldown_modifier
