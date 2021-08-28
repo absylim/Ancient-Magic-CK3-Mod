@@ -164,7 +164,7 @@ necromancy_spell = {
 			inheritable = no
 			men_at_arms = {
 				type = undead
-				stacks = mage_level
+				stacks = var:army_stacks
 			}
 			location = scope:spell_target.location
 		}

@@ -112,11 +112,9 @@ incite_obedience_spell = {
 	}
 	is_valid = {
 		AND = {
-			NOT = {
-				has_hook_of_type = {
-					target = scope:spell_target
-					type = ancient_magic_hook_obedient
-				}
+			can_add_hook = {
+				target = scope:spell_target
+				type = ancient_magic_hook_obedient
 			}
 			var:mana.compare_value >= scope:spell_cost.compare_value
 		}
@@ -167,16 +165,15 @@ dominate_spell = {
 	}
 	is_valid = {
 		AND = {
-			NOT = {
-				has_hook_of_type = {
-					target = scope:spell_target
-					type = ancient_magic_hook_dominated
-				}
-			}
+			NOT = { has_strong_hook = scope:spell_target }
 			var:mana.compare_value >= scope:spell_cost.compare_value
 		}
 	}
 	effect = {
+		if = {
+			limit = { has_hook = scope:spell_target }
+			hidden_effect = { use_hook = scope:spell_target }
+		}
 		add_hook = {
 			target = scope:spell_target
 			type = ancient_magic_hook_dominated
@@ -975,7 +972,7 @@ sculpt_mind_spell_has_list = {
 				flag:dull = { NOT = { has_trait = shrewd } }
 				flag:stuttering = {
 					OR = {
-						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:silver_tongued } }
+						is_pih_installed_trigger = no
 						NOT = { has_trait = silver_tongued }
 					}
 				}
@@ -997,11 +994,9 @@ master_of_puppets_spell = {
 	}
 	is_valid = {
 		AND = {
-			NOT = {
-				has_hook_of_type = {
-					target = scope:spell_target
-					type = ancient_magic_hook_dominated
-				}
+			can_add_hook = {
+				target = scope:spell_target
+				type = ancient_magic_hook_dominated
 			}
 			var:mana.compare_value >= scope:spell_cost.compare_value
 		}

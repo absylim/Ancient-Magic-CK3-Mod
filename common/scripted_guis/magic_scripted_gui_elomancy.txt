@@ -179,9 +179,9 @@ golem_creation_spell = {
 			inheritable = no
 			men_at_arms = {
 				type = golem
-				stacks = mage_level
+				stacks = var:army_stacks
 			}
-			location = scope:spell_target.location # Makes sense to me...
+			location = scope:spell_target.location
 		}
 		add_character_modifier = {
 			modifier = golem_cooldown_modifier
@@ -401,9 +401,9 @@ lord_of_the_elements_spell = {
 			inheritable = no
 			men_at_arms = {
 				type = lava_golem
-				stacks = mage_level
+				stacks = var:army_stacks
 			}
-			location = scope:spell_target.location # Makes sense to me...
+			location = scope:spell_target.location
 		}
 		add_character_modifier = {
 			modifier = lava_golem_cooldown_modifier

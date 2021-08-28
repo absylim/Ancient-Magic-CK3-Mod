@@ -12,21 +12,35 @@ rewrite_beauty_spell = {
 	}
 	effect = {
 		scope:spell_target = {
+			if = {
+				limit = { is_itpp_installed_trigger = yes }
+				remove_trait = beauty_good_5
+				remove_trait = beauty_good_4
+			}
 			remove_trait = beauty_good_3
 			remove_trait = beauty_good_2
 			remove_trait = beauty_good_1
 			remove_trait = beauty_bad_1
 			remove_trait = beauty_bad_2
 			remove_trait = beauty_bad_3
+			if = {
+				limit = { is_itpp_installed_trigger = yes }
+				remove_trait = beauty_bad_4
+				remove_trait = beauty_bad_5
+			}
 		}
 		switch = {
 			trigger = var:list_option
+			flag:beauty_good_5 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_5 } }
+			flag:beauty_good_4 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_4 } }
 			flag:beauty_good_3 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_3 } }
 			flag:beauty_good_2 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_2 } }
 			flag:beauty_good_1 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_1 } }
 			flag:beauty_bad_1 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_1 } }
 			flag:beauty_bad_2 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_2 } }
 			flag:beauty_bad_3 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_3 } }
+			flag:beauty_bad_4 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_4 } }
+			flag:beauty_bad_5 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_5 } }
 		}
 		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 	}
@@ -63,148 +77,17 @@ rewrite_beauty_spell_has_list = {
 	is_valid = {
 		switch = {
 			trigger = scope:list_option
-			flag:beauty_good_3 = {
-				OR = {
-					AND = {
-						has_perk = perfect_trait_perk
-						scope:spell_target = { has_trait = beauty_good_2 }
-					}
-					AND = {
-						has_perk = perfect_trait_perk
-						has_perk = improve_trait_perk
-						scope:spell_target = { has_trait = beauty_good_1 }
-					}
-					AND = {
-						has_perk = perfect_trait_perk
-						has_perk = improve_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = { NOT = { has_trait = beauty_good } }
-					}
-				}
-			}
-			flag:beauty_good_2 = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						scope:spell_target = { has_trait = beauty_good_3 }
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						scope:spell_target = { has_trait = beauty_good_1 }
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = { NOT = { has_trait = beauty_good } }
-					}
-				}
-			}
-			flag:beauty_good_1 = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						scope:spell_target = {
-							OR = {
-								has_trait = beauty_good_3
-								has_trait = beauty_good_2
-							}
-						}
-					}
-					AND = {
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = {
-							NOR = {
-								has_trait = beauty_good
-								has_trait = beauty_bad
-							}
-						}
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = {
-							has_trait = beauty_bad
-						}
-					}
-				}
-			}
-			flag:beauty_none = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						scope:spell_target = { has_trait = beauty_good }
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						scope:spell_target = { has_trait = beauty_bad }
-					}
-				}
-			}
-			flag:beauty_bad_1 = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = {
-							has_trait = beauty_good
-						}
-					}
-					AND = {
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = {
-							NOR = {
-								has_trait = beauty_good
-								has_trait = beauty_bad
-							}
-						}
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						scope:spell_target = {
-							OR = {
-								has_trait = beauty_bad_2
-								has_trait = beauty_bad_3
-							}
-						}
-					}
-				}
-			}
-			flag:beauty_bad_2 = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = { NOT = { has_trait = beauty_bad } }
-					}
-					AND = {
-						has_perk = weaken_trait_perk
-						scope:spell_target = { has_trait = beauty_bad_1 }
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						scope:spell_target = { has_trait = beauty_bad_3 }
-					}
-				}
-			}
-			flag:beauty_bad_3 = {
-				OR = {
-					AND = {
-						has_perk = architect_of_bloodlines_perk
-						has_perk = weaken_trait_perk
-						has_perk = criple_trait_perk
-						scope:spell_target = { NOT = { has_trait = beauty_bad } }
-					}
-					AND = {
-						has_perk = weaken_trait_perk
-						has_perk = criple_trait_perk
-						scope:spell_target = { has_trait = beauty_bad_1 }
-					}
-					AND = {
-						has_perk = criple_trait_perk
-						scope:spell_target = { has_trait = beauty_bad_2 }
-					}
-				}
-			}
+			flag:beauty_good_5 = { rewrite_trait_list_good_3_trigger = { TRAIT_TYPE = beauty RANK = 5 } }
+			flag:beauty_good_4 = { rewrite_trait_list_good_3_trigger = { TRAIT_TYPE = beauty RANK = 4 } }
+			flag:beauty_good_3 = { rewrite_trait_list_good_3_trigger = { TRAIT_TYPE = beauty RANK = 3 } }
+			flag:beauty_good_2 = { rewrite_trait_list_good_2_trigger = { TRAIT_TYPE = beauty } }
+			flag:beauty_good_1 = { rewrite_trait_list_good_1_trigger = { TRAIT_TYPE = beauty } }
+			flag:beauty_none = { rewrite_trait_list_none_trigger = { TRAIT_TYPE = beauty } }
+			flag:beauty_bad_1 = { rewrite_trait_list_bad_1_trigger = { TRAIT_TYPE = beauty } }
+			flag:beauty_bad_2 = { rewrite_trait_list_bad_2_trigger = { TRAIT_TYPE = beauty } }
+			flag:beauty_bad_3 = { rewrite_trait_list_bad_3_trigger = { TRAIT_TYPE = beauty RANK = 3 } }
+			flag:beauty_bad_4 = { rewrite_trait_list_bad_3_trigger = { TRAIT_TYPE = beauty RANK = 4 } }
+			flag:beauty_bad_5 = { rewrite_trait_list_bad_3_trigger = { TRAIT_TYPE = beauty RANK = 5 } }
 		}
 	}
 }
@@ -225,21 +108,35 @@ rewrite_physique_spell = {
 	}
 	effect = {
 		scope:spell_target = {
+			if = {
+				limit = { is_itpp_installed_trigger = yes }
+				remove_trait = physique_good_5
+				remove_trait = physique_good_4
+			}
 			remove_trait = physique_good_3
 			remove_trait = physique_good_2
 			remove_trait = physique_good_1
 			remove_trait = physique_bad_1
 			remove_trait = physique_bad_2
 			remove_trait = physique_bad_3
+			if = {
+				limit = { is_itpp_installed_trigger = yes }
+				remove_trait = physique_bad_4
+				remove_trait = physique_bad_5
+			}
 		}
 		switch = {
 			trigger = var:list_option
+			flag:physique_good_5 = { scope:spell_target = { add_trait_force_tooltip = physique_good_5 } }
+			flag:physique_good_4 = { scope:spell_target = { add_trait_force_tooltip = physique_good_4 } }
 			flag:physique_good_3 = { scope:spell_target = { add_trait_force_tooltip = physique_good_3 } }
 			flag:physique_good_2 = { scope:spell_target = { add_trait_force_tooltip = physique_good_2 } }
 			flag:physique_good_1 = { scope:spell_target = { add_trait_force_tooltip = physique_good_1 } }
 			flag:physique_bad_1 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_1 } }
 			flag:physique_bad_2 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_2 } }
 			flag:physique_bad_3 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_3 } }
+			flag:physique_bad_4 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_4 } }
+			flag:physique_bad_5 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_5 } }
 		}
 		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 	}
@@ -276,148 +173,17 @@ rewrite_physique_spell_has_list = {
 	is_valid = {
 		switch = {
 			trigger = scope:list_option
-			flag:physique_good_3 = {
-				OR = {
-					AND = {
-						has_perk = perfect_trait_perk
-						scope:spell_target = { has_trait = physique_good_2 }
-					}
-					AND = {
-						has_perk = perfect_trait_perk
-						has_perk = improve_trait_perk
-						scope:spell_target = { has_trait = physique_good_1 }
-					}
-					AND = {
-						has_perk = perfect_trait_perk
-						has_perk = improve_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = { NOT = { has_trait = physique_good } }
-					}
-				}
-			}
-			flag:physique_good_2 = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						scope:spell_target = { has_trait = physique_good_3 }
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						scope:spell_target = { has_trait = physique_good_1 }
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = { NOT = { has_trait = physique_good } }
-					}
-				}
-			}
-			flag:physique_good_1 = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						scope:spell_target = {
-							OR = {
-								has_trait = physique_good_3
-								has_trait = physique_good_2
-							}
-						}
-					}
-					AND = {
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = {
-							NOR = {
-								has_trait = physique_good
-								has_trait = physique_bad
-							}
-						}
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = {
-							has_trait = physique_bad
-						}
-					}
-				}
-			}
-			flag:physique_none = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						scope:spell_target = { has_trait = physique_good }
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						scope:spell_target = { has_trait = physique_bad }
-					}
-				}
-			}
-			flag:physique_bad_1 = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = {
-							has_trait = physique_good
-						}
-					}
-					AND = {
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = {
-							NOR = {
-								has_trait = physique_good
-								has_trait = physique_bad
-							}
-						}
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						scope:spell_target = {
-							OR = {
-								has_trait = physique_bad_2
-								has_trait = physique_bad_3
-							}
-						}
-					}
-				}
-			}
-			flag:physique_bad_2 = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = { NOT = { has_trait = physique_bad } }
-					}
-					AND = {
-						has_perk = weaken_trait_perk
-						scope:spell_target = { has_trait = physique_bad_1 }
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						scope:spell_target = { has_trait = physique_bad_3 }
-					}
-				}
-			}
-			flag:physique_bad_3 = {
-				OR = {
-					AND = {
-						has_perk = architect_of_bloodlines_perk
-						has_perk = weaken_trait_perk
-						has_perk = criple_trait_perk
-						scope:spell_target = { NOT = { has_trait = physique_bad } }
-					}
-					AND = {
-						has_perk = weaken_trait_perk
-						has_perk = criple_trait_perk
-						scope:spell_target = { has_trait = physique_bad_1 }
-					}
-					AND = {
-						has_perk = criple_trait_perk
-						scope:spell_target = { has_trait = physique_bad_2 }
-					}
-				}
-			}
+			flag:physique_good_5 = { rewrite_trait_list_good_3_trigger = { TRAIT_TYPE = physique RANK = 5 } }
+			flag:physique_good_4 = { rewrite_trait_list_good_3_trigger = { TRAIT_TYPE = physique RANK = 4 } }
+			flag:physique_good_3 = { rewrite_trait_list_good_3_trigger = { TRAIT_TYPE = physique RANK = 3 } }
+			flag:physique_good_2 = { rewrite_trait_list_good_2_trigger = { TRAIT_TYPE = physique } }
+			flag:physique_good_1 = { rewrite_trait_list_good_1_trigger = { TRAIT_TYPE = physique } }
+			flag:physique_none = { rewrite_trait_list_none_trigger = { TRAIT_TYPE = physique } }
+			flag:physique_bad_1 = { rewrite_trait_list_bad_1_trigger = { TRAIT_TYPE = physique } }
+			flag:physique_bad_2 = { rewrite_trait_list_bad_2_trigger = { TRAIT_TYPE = physique } }
+			flag:physique_bad_3 = { rewrite_trait_list_bad_3_trigger = { TRAIT_TYPE = physique RANK = 3 } }
+			flag:physique_bad_4 = { rewrite_trait_list_bad_3_trigger = { TRAIT_TYPE = physique RANK = 4 } }
+			flag:physique_bad_5 = { rewrite_trait_list_bad_3_trigger = { TRAIT_TYPE = physique RANK = 5 } }
 		}
 	}
 }
@@ -438,21 +204,35 @@ rewrite_intellect_spell = {
 	}
 	effect = {
 		scope:spell_target = {
+			if = {
+				limit = { is_itpp_installed_trigger = yes }
+				remove_trait = intellect_good_5
+				remove_trait = intellect_good_4
+			}
 			remove_trait = intellect_good_3
 			remove_trait = intellect_good_2
 			remove_trait = intellect_good_1
 			remove_trait = intellect_bad_1
 			remove_trait = intellect_bad_2
 			remove_trait = intellect_bad_3
+			if = {
+				limit = { is_itpp_installed_trigger = yes }
+				remove_trait = intellect_bad_4
+				remove_trait = intellect_bad_5
+			}
 		}
 		switch = {
 			trigger = var:list_option
+			flag:intellect_good_5 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_5 } }
+			flag:intellect_good_4 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_4 } }
 			flag:intellect_good_3 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_3 } }
 			flag:intellect_good_2 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_2 } }
 			flag:intellect_good_1 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_1 } }
 			flag:intellect_bad_1 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_1 } }
 			flag:intellect_bad_2 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_2 } }
 			flag:intellect_bad_3 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_3 } }
+			flag:intellect_bad_4 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_4 } }
+			flag:intellect_bad_5 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_5 } }
 		}
 		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 	}
@@ -489,148 +269,17 @@ rewrite_intellect_spell_has_list = {
 	is_valid = {
 		switch = {
 			trigger = scope:list_option
-			flag:intellect_good_3 = {
-				OR = {
-					AND = {
-						has_perk = perfect_trait_perk
-						scope:spell_target = { has_trait = intellect_good_2 }
-					}
-					AND = {
-						has_perk = perfect_trait_perk
-						has_perk = improve_trait_perk
-						scope:spell_target = { has_trait = intellect_good_1 }
-					}
-					AND = {
-						has_perk = perfect_trait_perk
-						has_perk = improve_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = { NOT = { has_trait = intellect_good } }
-					}
-				}
-			}
-			flag:intellect_good_2 = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						scope:spell_target = { has_trait = intellect_good_3 }
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						scope:spell_target = { has_trait = intellect_good_1 }
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = { NOT = { has_trait = intellect_good } }
-					}
-				}
-			}
-			flag:intellect_good_1 = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						scope:spell_target = {
-							OR = {
-								has_trait = intellect_good_3
-								has_trait = intellect_good_2
-							}
-						}
-					}
-					AND = {
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = {
-							NOR = {
-								has_trait = intellect_good
-								has_trait = intellect_bad
-							}
-						}
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = {
-							has_trait = intellect_bad
-						}
-					}
-				}
-			}
-			flag:intellect_none = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						scope:spell_target = { has_trait = intellect_good }
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						scope:spell_target = { has_trait = intellect_bad }
-					}
-				}
-			}
-			flag:intellect_bad_1 = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = {
-							has_trait = intellect_good
-						}
-					}
-					AND = {
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = {
-							NOR = {
-								has_trait = intellect_good
-								has_trait = intellect_bad
-							}
-						}
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						scope:spell_target = {
-							OR = {
-								has_trait = intellect_bad_2
-								has_trait = intellect_bad_3
-							}
-						}
-					}
-				}
-			}
-			flag:intellect_bad_2 = {
-				OR = {
-					AND = {
-						has_perk = weaken_trait_perk
-						has_perk = architect_of_bloodlines_perk
-						scope:spell_target = { NOT = { has_trait = intellect_bad } }
-					}
-					AND = {
-						has_perk = weaken_trait_perk
-						scope:spell_target = { has_trait = intellect_bad_1 }
-					}
-					AND = {
-						has_perk = improve_trait_perk
-						scope:spell_target = { has_trait = intellect_bad_3 }
-					}
-				}
-			}
-			flag:intellect_bad_3 = {
-				OR = {
-					AND = {
-						has_perk = architect_of_bloodlines_perk
-						has_perk = weaken_trait_perk
-						has_perk = criple_trait_perk
-						scope:spell_target = { NOT = { has_trait = intellect_bad } }
-					}
-					AND = {
-						has_perk = weaken_trait_perk
-						has_perk = criple_trait_perk
-						scope:spell_target = { has_trait = intellect_bad_1 }
-					}
-					AND = {
-						has_perk = criple_trait_perk
-						scope:spell_target = { has_trait = intellect_bad_2 }
-					}
-				}
-			}
+			flag:intellect_good_5 = { rewrite_trait_list_good_3_trigger = { TRAIT_TYPE = intellect RANK = 5 } }
+			flag:intellect_good_4 = { rewrite_trait_list_good_3_trigger = { TRAIT_TYPE = intellect RANK = 4 } }
+			flag:intellect_good_3 = { rewrite_trait_list_good_3_trigger = { TRAIT_TYPE = intellect RANK = 3 } }
+			flag:intellect_good_2 = { rewrite_trait_list_good_2_trigger = { TRAIT_TYPE = intellect } }
+			flag:intellect_good_1 = { rewrite_trait_list_good_1_trigger = { TRAIT_TYPE = intellect } }
+			flag:intellect_none = { rewrite_trait_list_none_trigger = { TRAIT_TYPE = intellect } }
+			flag:intellect_bad_1 = { rewrite_trait_list_bad_1_trigger = { TRAIT_TYPE = intellect } }
+			flag:intellect_bad_2 = { rewrite_trait_list_bad_2_trigger = { TRAIT_TYPE = intellect } }
+			flag:intellect_bad_3 = { rewrite_trait_list_bad_3_trigger = { TRAIT_TYPE = intellect RANK = 3 } }
+			flag:intellect_bad_4 = { rewrite_trait_list_bad_3_trigger = { TRAIT_TYPE = intellect RANK = 4 } }
+			flag:intellect_bad_5 = { rewrite_trait_list_bad_3_trigger = { TRAIT_TYPE = intellect RANK = 5 } }
 		}
 	}
 }
@@ -794,35 +443,35 @@ sculpter_of_flesh_spell_has_list = {
 				flag:dwarf = { NOT = { has_trait = giant } }
 				flag:clubfooted = {
 					OR = {
-						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:surefooted } }
+						is_pih_installed_trigger = no
 						NOT = { has_trait = surefooted }
 					}
 				}
 				flag:surefooted = { NOT = { has_trait = clubfooted } }
 				flag:hunchbacked = {
 					OR = {
-						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:regal_bearing } }
+						is_pih_installed_trigger = no
 						NOT = { has_trait = regal_bearing }
 					}
 				}
 				flag:regal_bearing = { NOT = { has_trait = hunchbacked } }
 				flag:scaly = {
 					OR = {
-						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:glowing } }
+						is_pih_installed_trigger = no
 						NOT = { has_trait = glowing }
 					}
 				}
 				flag:glowing = { NOT = { has_trait = scaly } }
 				flag:wheezing = {
 					OR = {
-						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:hardy_lung } }
+						is_pih_installed_trigger = no
 						NOT = { has_trait = hardy_lung }
 					}
 				}
 				flag:hardy_lung = { NOT = { has_trait = wheezing } }
 				flag:bleeder = {
 					OR = {
-						NOT = { is_target_in_global_variable_list = { name = trait_list target = flag:pt_balanced_humors } }
+						is_pih_installed_trigger = no
 						NOT = { has_trait = pt_balanced_humors }
 					}
 				}

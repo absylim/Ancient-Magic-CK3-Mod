@@ -144,6 +144,12 @@
  beauty_good_2_list_gui_name: "$trait_beauty_good_2$"
  beauty_good_3_list_gui_name: "$trait_beauty_good_3$"
 
+ #Rewrite Beauty Compatibility list
+ beauty_bad_4_list_gui_name: "$trait_beauty_bad_4$"
+ beauty_bad_5_list_gui_name: "$trait_beauty_bad_5$"
+ beauty_good_4_list_gui_name: "$trait_beauty_good_4$"
+ beauty_good_5_list_gui_name: "$trait_beauty_good_5$"
+
  #Rewrite Physique list
  physique_none_list_gui_name: "None"
  physique_bad_1_list_gui_name: "$trait_physique_bad_1$"
@@ -153,6 +159,12 @@
  physique_good_2_list_gui_name: "$trait_physique_good_2$"
  physique_good_3_list_gui_name: "$trait_physique_good_3$"
 
+ #Rewrite Physique Compatibility list
+ physique_bad_4_list_gui_name: "$trait_physique_bad_4$"
+ physique_bad_5_list_gui_name: "$trait_physique_bad_5$"
+ physique_good_4_list_gui_name: "$trait_physique_good_4$"
+ physique_good_5_list_gui_name: "$trait_physique_good_5$"
+
  #Rewrite Intellect list
  intellect_none_list_gui_name: "None"
  intellect_bad_1_list_gui_name: "$trait_intellect_bad_1$"
@@ -161,6 +173,12 @@
  intellect_good_1_list_gui_name: "$trait_intellect_good_1$"
  intellect_good_2_list_gui_name: "$trait_intellect_good_2$"
  intellect_good_3_list_gui_name: "$trait_intellect_good_3$"
+
+ #Rewrite Intellect Compatibility list
+ intellect_bad_4_list_gui_name: "$trait_intellect_bad_4$"
+ intellect_bad_5_list_gui_name: "$trait_intellect_bad_5$"
+ intellect_good_4_list_gui_name: "$trait_intellect_good_4$"
+ intellect_good_5_list_gui_name: "$trait_intellect_good_5$"
 
  # Sculpter of Flesh list
  fecund_list_gui_name: "$trait_fecund$"
