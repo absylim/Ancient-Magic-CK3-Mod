@@ -112,6 +112,17 @@ display_aura_times = {
 }
 
 effect_get_all_rewrite_beauty_traits = {
+	if = {
+		limit = { is_itpp_installed_trigger = yes }
+		add_to_variable_list = {
+			name = rewrite_beauty_spell_list
+			target = flag:beauty_good_5
+		}
+		add_to_variable_list = {
+			name = rewrite_beauty_spell_list
+			target = flag:beauty_good_4
+		}
+	}
 	add_to_variable_list = {
 		name = rewrite_beauty_spell_list
 		target = flag:beauty_good_3
@@ -140,9 +151,31 @@ effect_get_all_rewrite_beauty_traits = {
 		name = rewrite_beauty_spell_list
 		target = flag:beauty_bad_3
 	}
+	if = {
+		limit = { is_itpp_installed_trigger = yes }
+		add_to_variable_list = {
+			name = rewrite_beauty_spell_list
+			target = flag:beauty_bad_4
+		}
+		add_to_variable_list = {
+			name = rewrite_beauty_spell_list
+			target = flag:beauty_bad_5
+		}
+	}
 }
 
 effect_get_all_rewrite_physique_traits = {
+	if = {
+		limit = { is_itpp_installed_trigger = yes }
+		add_to_variable_list = {
+			name = rewrite_physique_spell_list
+			target = flag:physique_good_5
+		}
+		add_to_variable_list = {
+			name = rewrite_physique_spell_list
+			target = flag:physique_good_4
+		}
+	}
 	add_to_variable_list = {
 		name = rewrite_physique_spell_list
 		target = flag:physique_good_3
@@ -171,9 +204,31 @@ effect_get_all_rewrite_physique_traits = {
 		name = rewrite_physique_spell_list
 		target = flag:physique_bad_3
 	}
+	if = {
+		limit = { is_itpp_installed_trigger = yes }
+		add_to_variable_list = {
+			name = rewrite_physique_spell_list
+			target = flag:physique_bad_4
+		}
+		add_to_variable_list = {
+			name = rewrite_physique_spell_list
+			target = flag:physique_bad_5
+		}
+	}
 }
 
 effect_get_all_rewrite_intellect_traits = {
+	if = {
+		limit = { is_itpp_installed_trigger = yes }
+		add_to_variable_list = {
+			name = rewrite_intellect_spell_list
+			target = flag:intellect_good_5
+		}
+		add_to_variable_list = {
+			name = rewrite_intellect_spell_list
+			target = flag:intellect_good_4
+		}
+	}
 	add_to_variable_list = {
 		name = rewrite_intellect_spell_list
 		target = flag:intellect_good_3
@@ -201,6 +256,17 @@ effect_get_all_rewrite_intellect_traits = {
 	add_to_variable_list = {
 		name = rewrite_intellect_spell_list
 		target = flag:intellect_bad_3
+	}
+	if = {
+		limit = { is_itpp_installed_trigger = yes }
+		add_to_variable_list = {
+			name = rewrite_intellect_spell_list
+			target = flag:intellect_bad_4
+		}
+		add_to_variable_list = {
+			name = rewrite_intellect_spell_list
+			target = flag:intellect_bad_5
+		}
 	}
 }
 
@@ -242,7 +308,7 @@ effect_get_all_sculpt_flesh_traits = {
 		target = flag:clubfooted
 	}
 	if = {
-		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:surefooted } }
+		limit = { is_pih_installed_trigger = yes }
 		add_to_variable_list = {
 			name = sculpter_of_flesh_spell_list
 			target = flag:surefooted
@@ -253,7 +319,7 @@ effect_get_all_sculpt_flesh_traits = {
 		target = flag:hunchbacked
 	}
 	if = {
-		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:regal_bearing } }
+		limit = { is_pih_installed_trigger = yes }
 		add_to_variable_list = {
 			name = sculpter_of_flesh_spell_list
 			target = flag:regal_bearing
@@ -268,7 +334,7 @@ effect_get_all_sculpt_flesh_traits = {
 		target = flag:scaly
 	}
 	if = {
-		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:glowing } }
+		limit = { is_pih_installed_trigger = yes }
 		add_to_variable_list = {
 			name = sculpter_of_flesh_spell_list
 			target = flag:glowing
@@ -279,7 +345,7 @@ effect_get_all_sculpt_flesh_traits = {
 		target = flag:wheezing
 	}
 	if = {
-		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:hardy_lung } }
+		limit = { is_pih_installed_trigger = yes }
 		add_to_variable_list = {
 			name = sculpter_of_flesh_spell_list
 			target = flag:hardy_lung
@@ -290,7 +356,7 @@ effect_get_all_sculpt_flesh_traits = {
 		target = flag:bleeder
 	}
 	if = {
-		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:pt_balanced_humors } }
+		limit = { is_pih_installed_trigger = yes }
 		add_to_variable_list = {
 			name = sculpter_of_flesh_spell_list
 			target = flag:pt_balanced_humors
@@ -476,7 +542,7 @@ effect_get_all_sculpt_mind_traits = {
 		target = flag:stuttering
 	}
 	if = {
-		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:silver_tongued } }
+		limit = { is_pih_installed_trigger = yes }
 		add_to_variable_list = {
 			name = sculpt_mind_spell_list
 			target = flag:silver_tongued
@@ -495,7 +561,7 @@ effect_get_all_sculpt_mind_traits = {
 		target = flag:lunatic_genetic
 	}
 	if = {
-		limit = { is_target_in_global_variable_list = { name = trait_list target = flag:dyslexic } }
+		limit = { is_pih_installed_trigger = yes }
 		add_to_variable_list = {
 			name = sculpt_mind_spell_list
 			target = flag:dyslexic
