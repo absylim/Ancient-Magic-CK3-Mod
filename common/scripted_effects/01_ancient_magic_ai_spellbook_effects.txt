@@ -1,4 +1,4 @@
-improve_trait_effect = {
+﻿improve_trait_effect = {
 	if = {
 		limit = {
 			has_trait = $TRAIT$_bad_3

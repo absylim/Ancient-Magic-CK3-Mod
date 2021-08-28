@@ -1,4 +1,4 @@
-is_magus = {
+﻿is_magus = {
 	OR = {
 		has_trait = mage
 	}

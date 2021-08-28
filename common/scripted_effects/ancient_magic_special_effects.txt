@@ -1,4 +1,4 @@
-convert_whole_realm_to_magocracy_effect = {
+﻿convert_whole_realm_to_magocracy_effect = {
 	#TOOLTIP INFO
 	#PLAYER EFFECTS
 	

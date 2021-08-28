@@ -1,4 +1,4 @@
-is_pih_installed_trigger = {
+﻿is_pih_installed_trigger = {
     custom_tooltip = {
         text = is_pih_installed_trigger
         is_target_in_global_variable_list = { name = trait_list target = flag:silver_tongued }
