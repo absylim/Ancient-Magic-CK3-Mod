@@ -17,7 +17,7 @@
 			inheritable = no
 			men_at_arms = {
 				type = golem
-				stacks = var:army_stacks
+				stacks = mage_level
 			}
 			location = capital_province
 		}
@@ -59,7 +59,7 @@ lava_golem_ai_spell_decision = {
 			inheritable = no
 			men_at_arms = {
 				type = lava_golem
-				stacks = var:army_stacks
+				stacks = mage_level
 			}
 			location = capital_province
 		}

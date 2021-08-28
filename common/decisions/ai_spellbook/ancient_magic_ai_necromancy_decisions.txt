@@ -20,7 +20,7 @@
 			inheritable = no
 			men_at_arms = {
 				type = undead
-				stacks = var:army_stacks
+				stacks = mage_level
 			}
 			location = capital_province
 		}
