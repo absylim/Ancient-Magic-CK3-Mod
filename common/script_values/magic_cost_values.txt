@@ -10,7 +10,19 @@ slowness_spell_cost = { value = 100 }
 mass_slowness_spell_cost = { value = 100 }
 temporal_manipulation_spell_cost = { value = 100 }
 haste_spell_cost = { value = 100 }
-master_of_time_spell_cost = { value = 500 }
+master_of_time_spell_cost = {
+	value = 100
+	multiply = {
+		value = 1
+		if = {
+			limit = { has_variable_list = immortals_list }
+			every_in_list = {
+				variable = immortals_list
+				add = 1
+			}
+		}
+	}
+}
 
 #Life
 heal_spell_cost = { value = 50 }

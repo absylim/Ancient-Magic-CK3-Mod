@@ -450,24 +450,36 @@ haste_spell_has_list = {
 master_of_time_spell = {
 	scope = character
 	is_shown = {
-		AND = {
-			NOT = { this = scope:spell_target }
+		OR = {
+			AND = {
+				NOT = { has_trait = immortal }
+				OR = {
+					NOT = { has_variable_list = immortals_list }
+					variable_list_size = { name = immortals_list target < 3 }
+				}
+			}
+			AND = {
+				has_variable_list = immortals_list
+				is_target_in_variable_list = { name = immortals_list target = scope:spell_target }
+			}
 		}
 	}
 	is_valid = {
 		var:mana.compare_value >= scope:spell_cost.compare_value
 	}
 	effect = {
-		scope:spell_target = {
-			if = {
-				limit = { has_trait = immortal }
-				remove_trait = immortal
-			}
-			else = {
-				add_trait = immortal
-			}
+		if = {
+			limit = { is_target_in_variable_list = { name = immortals_list target = scope:spell_target } }
+			scope:spell_target = { remove_trait = immortal }
+			remove_list_variable = { name = immortals_list target = scope:spell_target }
+			change_mana_gen_tooltip = { VALUE = mana_drain_large }
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		else = {
+			scope:spell_target = { add_trait = immortal }
+			add_to_variable_list = { name = immortals_list target = scope:spell_target }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
+		}
 	}
 }
 
