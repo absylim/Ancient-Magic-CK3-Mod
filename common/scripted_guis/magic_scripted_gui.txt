@@ -40,16 +40,54 @@ select_list_option = {
 	scope = character
 	is_shown = {
 		AND = {
-			has_variable = list_option
-			exists = var:list_option
-			var:list_option = scope:list_option
+			has_variable_list = selected_list_options
+			is_target_in_variable_list = {
+				name = selected_list_options
+				target = scope:list_option
+			}
 		}
 	}
 	effect = {
-		set_variable = {
-			name = list_option
-			value = scope:list_option
+		if = {
+			limit = {
+				has_variable_list = selected_list_options
+				is_target_in_variable_list = {
+					name = selected_list_options
+					target = scope:list_option
+				}
+				is_target_in_global_variable_list = {
+					name = multiple_option_select_spells
+					target = scope:selected_spell
+				}
+			}
+			remove_list_variable = {
+				name = selected_list_options
+				target = scope:list_option
+			}
 		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						is_target_in_global_variable_list = {
+							name = multiple_option_select_spells
+							target = scope:selected_spell
+						}
+					}
+				}
+				clear_variable_list = selected_list_options
+			}
+			add_to_variable_list = {
+				name = selected_list_options
+				target = scope:list_option
+			}
+		}
+	}
+}
+
+clear_list_options = {
+	effect = {
+		clear_variable_list = selected_list_options
 	}
 }
 

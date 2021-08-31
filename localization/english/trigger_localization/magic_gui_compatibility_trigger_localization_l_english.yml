@@ -1,5 +1,5 @@
-l_english:
-  PIH_INSTALLED: "Petty Inheritable Traits is installed"
-  PIH_NOT_INSTALLED: "Petty Inheritable Traits is not installed"
-  ITPP_INSTALLED: "Inheritable Traits++ is installed"
-  ITPP_NOT_INSTALLED: "Inheritable Traits++ is not installed"
+﻿l_english:
+ PIH_INSTALLED: "Petty Inheritable Traits is installed"
+ NOT_PIH_INSTALLED: "Petty Inheritable Traits is not installed"
+ ITPP_INSTALLED: "Inheritable Traits++ is installed"
+ NOT_ITPP_INSTALLED: "Inheritable Traits++ is not installed"

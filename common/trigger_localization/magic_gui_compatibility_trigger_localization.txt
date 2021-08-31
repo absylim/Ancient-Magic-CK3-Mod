@@ -1,9 +1,11 @@
 is_pih_installed_trigger = {
     global = PIH_INSTALLED
-    global_neg = PIH_NOT_INSTALLED
+    first = PIH_INSTALLED
+    third = PIH_INSTALLED
 }
 
 is_itpp_installed_trigger = {
     global = ITPP_INSTALLED
-    global_neg = ITPP_NOT_INSTALLED
+    first = ITPP_INSTALLED
+    third = ITPP_INSTALLED
 }

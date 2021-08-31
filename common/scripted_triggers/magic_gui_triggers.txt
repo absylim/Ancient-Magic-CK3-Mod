@@ -1,4 +1,4 @@
-﻿trigger_magic_is_aura = {
+﻿is_magic_aura_trigger = {
 	switch = {
 		trigger = $SPELL$
 		flag:glimpse_the_future_spell = { always = yes }
@@ -22,7 +22,7 @@
 	}
 }
 
-trigger_is_adding_personality_trait = {
+is_adding_personality_trait_trigger = {
 	switch = {
 		trigger = $FLAG$
 		flag:lustful = { NOT = { has_trait = lustful } }
@@ -61,6 +61,35 @@ trigger_is_adding_personality_trait = {
 		flag:stubborn = { NOT = { has_trait = stubborn } }
 		flag:sadistic = { NOT = { has_trait = sadistic } }
 		fallback = { always = no }
+	}
+}
+
+has_enough_mana_trigger = {
+	custom_description = {
+		text = "has_enough_mana_trigger"
+		var:mana.compare_value >= scope:spell_cost.compare_value
+	}
+}
+
+will_have_trait_trigger = {
+	custom_description = {
+		text = "will_have_trait_trigger"
+		OR = {
+			has_trait = $TRAIT$
+			$LIST_HOLDER$ = {
+				is_target_in_variable_list = {
+					name = selected_list_options
+					target = flag:$TRAIT$
+				}
+			}
+		}
+	}
+}
+
+personality_traits_under_limit_trigger = {
+	custom_description = {
+		text = "personality_traits_under_limit_trigger"
+		num_target_personality_traits < personality_trait_limit
 	}
 }
 

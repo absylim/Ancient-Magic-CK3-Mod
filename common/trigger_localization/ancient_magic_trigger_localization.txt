@@ -1,3 +1,21 @@
 ﻿am_no_hof_unreformed_or_tribal_witchcraft_decision_requirement = {
 	global = AM_HAS_NO_POWERFUL_VASSAL_FOLLOWING_OWN_FAITH
 }
+
+has_enough_mana_trigger = {
+	global = GLOBAL_HAS_ENOUGH_MANA
+	first = FIRST_HAS_ENOUGH_MANA
+	third = THIRD_HAS_ENOUGH_MANA
+}
+
+will_have_trait_trigger = {
+	global = GLOBAL_MUST_NOT_HAVE_TRAIT
+	first = FIRST_MUST_NOT_HAVE_TRAIT
+	third = THIRD_MUST_NOT_HAVE_TRAIT
+}
+
+personality_traits_under_limit_trigger = {
+	global = GLOBAL_PERSONALITY_IS_UNDER
+	first = FIRST_PERSONALITY_IS_UNDER
+	third = THIRD_PERSONALITY_IS_UNDER
+}

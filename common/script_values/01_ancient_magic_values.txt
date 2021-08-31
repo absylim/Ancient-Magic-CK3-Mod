@@ -291,6 +291,20 @@ spell_caster_mage_level = {
 	value = scope:spell_caster.mage_level
 }
 
+# Note: This value is a work-around for 'sculpt mind' giving too many personality traits.
+# 	    Removing it will break that spell!
+############################################################################################
+num_target_personality_traits = {
+	value = scope:spell_target.number_of_personality_traits
+	every_in_list = {
+		variable = selected_list_options
+		if = {
+			limit = { scope:spell_target = { is_adding_personality_trait_trigger = { FLAG = prev } } }
+			add = 1
+		}
+	}
+}
+
 # Note: This value is a work-around for perks firing 'change_mage_perks'
 # 	    more times than they should. Removing it will break everything!
 ############################################################################################

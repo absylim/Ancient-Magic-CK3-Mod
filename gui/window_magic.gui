@@ -21,7 +21,6 @@
 
 		state = {
 			name = _hide
-			on_start = "[GetVariableSystem.Clear( 'spell_parameters_view' )]"
 			on_start = "[GetVariableSystem.Clear( 'select_spell_target' )]"
 			on_start = "[GetVariableSystem.Clear( 'current_spell_selected' )]"
 		}
@@ -132,8 +131,8 @@
 										size = { 100% 85% }
 										enabled = "[GetScriptedGui(Concatenate(Scope.GetFlagName,'_spellbook')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End)]"
 										down = "[GetVariableSystem.HasValue('current_spell_selected',Scope.GetFlagName)]"
+										onclick = "[GetScriptedGui('clear_list_options').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										onclick = "[GetVariableSystem.Set('current_spell_selected',Scope.GetFlagName)]"
-										onclick = "[GetVariableSystem.Set( 'spell_parameters_view' , 'open')]"
 										hbox = {
 											margin = { 10 0 }
 											spacer = { size = { 15 0 } }
@@ -348,11 +347,6 @@
 				{
 					text = "SPELL_PARAMETERS"
 				}
-
-				blockoverride "button_close"
-				{
-					onclick = "[GetVariableSystem.Clear( 'spell_parameters_view' )]"
-				}
 			}
 
 			spacer = { size = { 0 20 } }
@@ -419,7 +413,7 @@
 									tooltip = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_has_list')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
 									enabled = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_has_list')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
 									down = "[GetScriptedGui('select_list_option').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
-									onclick = "[GetScriptedGui('select_list_option').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
+									onclick = "[GetScriptedGui('select_list_option').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
 									flowcontainer = {
 										resizeparent = yes
 										margin = { 10 10 }

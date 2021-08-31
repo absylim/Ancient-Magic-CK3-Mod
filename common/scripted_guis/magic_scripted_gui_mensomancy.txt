@@ -14,7 +14,7 @@ entrance_spell = {
 					}
 				}
 			}
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
@@ -66,7 +66,7 @@ incite_lust_spell = {
 	is_valid = {
 		AND = {
 			NOT = { scope:spell_target = { has_relation_lover = prev } }
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
@@ -116,7 +116,7 @@ incite_obedience_spell = {
 				target = scope:spell_target
 				type = ancient_magic_hook_obedient
 			}
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
@@ -166,7 +166,7 @@ dominate_spell = {
 	is_valid = {
 		AND = {
 			NOT = { has_strong_hook = scope:spell_target }
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
@@ -218,7 +218,7 @@ beguiling_aura_spell = { # aura of majesty
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -273,7 +273,7 @@ friendship_spell = {
 	is_valid = {
 		AND = {
 			NOT = { scope:spell_target = { has_relation_friend = prev } }
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
@@ -320,7 +320,7 @@ rivalry_spell = {
 	is_valid = {
 		AND = {
 			NOT = { scope:spell_target = { has_relation_rival = prev } }
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
@@ -365,7 +365,7 @@ enchanting_aura_spell = { # aura of truth
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -419,203 +419,292 @@ sculpt_mind_spell = {
 	}
 	is_valid = {
 		AND = {
-			scope:spell_target = {
-				NAND = {
-					trigger_is_adding_personality_trait = { FLAG = prev.var:list_option }
-					number_of_personality_traits = personality_trait_limit
-				}
-			}
-			NOT = { var:list_option = flag:none }
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_variable_list = selected_list_options
+			variable_list_size = { name = selected_list_options value > 0 }
+			num_target_personality_traits <= personality_trait_limit
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
-		scope:spell_target = {
+		every_in_list = {
+			variable = selected_list_options
 			switch = {
-				trigger = prev.var:list_option
+				trigger = this
 				flag:lustful = {
-					if = { limit = { has_trait = lustful } remove_trait = lustful }
-					else = { add_trait = lustful }
+					scope:spell_target = {
+						if = { limit = { has_trait = lustful } remove_trait = lustful }
+						else = { add_trait = lustful }
+					}
 				}
 				flag:chaste = {
-					if = { limit = { has_trait = chaste } remove_trait = chaste }
-					else = { add_trait = chaste }
+					scope:spell_target = {
+						if = { limit = { has_trait = chaste } remove_trait = chaste }
+						else = { add_trait = chaste }
+					}
 				}
 				flag:gluttonous = {
-					if = { limit = { has_trait = gluttonous } remove_trait = gluttonous }
-					else = { add_trait = gluttonous }
+					scope:spell_target = {
+						if = { limit = { has_trait = gluttonous } remove_trait = gluttonous }
+						else = { add_trait = gluttonous }
+					}
 				}
 				flag:temperate = {
-					if = { limit = { has_trait = temperate } remove_trait = temperate }
-					else = { add_trait = temperate }
+					scope:spell_target = {
+						if = { limit = { has_trait = temperate } remove_trait = temperate }
+						else = { add_trait = temperate }
+					}
 				}
 				flag:greedy = {
-					if = { limit = { has_trait = greedy } remove_trait = greedy }
-					else = { add_trait = greedy }
+					scope:spell_target = {
+						if = { limit = { has_trait = greedy } remove_trait = greedy }
+						else = { add_trait = greedy }
+					}
 				}
 				flag:generous = {
-					if = { limit = { has_trait = generous } remove_trait = generous }
-					else = { add_trait = generous }
+					scope:spell_target = {
+						if = { limit = { has_trait = generous } remove_trait = generous }
+						else = { add_trait = generous }
+					}
 				}
 				flag:lazy = {
-					if = { limit = { has_trait = lazy } remove_trait = lazy }
-					else = { add_trait = lazy }
+					scope:spell_target = {
+						if = { limit = { has_trait = lazy } remove_trait = lazy }
+						else = { add_trait = lazy }
+					}
 				}
 				flag:diligent = {
-					if = { limit = { has_trait = diligent } remove_trait = diligent }
-					else = { add_trait = diligent }
+					scope:spell_target = {
+						if = { limit = { has_trait = diligent } remove_trait = diligent }
+						else = { add_trait = diligent }
+					}
 				}
 				flag:wrathful = {
-					if = { limit = { has_trait = wrathful } remove_trait = wrathful }
-					else = { add_trait = wrathful }
+					scope:spell_target = {
+						if = { limit = { has_trait = wrathful } remove_trait = wrathful }
+						else = { add_trait = wrathful }
+					}
 				}
 				flag:calm = {
-					if = { limit = { has_trait = calm } remove_trait = calm }
-					else = { add_trait = calm }
+					scope:spell_target = {
+						if = { limit = { has_trait = calm } remove_trait = calm }
+						else = { add_trait = calm }
+					}
 				}
 				flag:impatient = {
-					if = { limit = { has_trait = impatient } remove_trait = impatient }
-					else = { add_trait = impatient }
+					scope:spell_target = {
+						if = { limit = { has_trait = impatient } remove_trait = impatient }
+						else = { add_trait = impatient }
+					}
 				}
 				flag:patient = {
-					if = { limit = { has_trait = patient } remove_trait = patient }
-					else = { add_trait = patient }
+					scope:spell_target = {
+						if = { limit = { has_trait = patient } remove_trait = patient }
+						else = { add_trait = patient }
+					}
 				}
 				flag:arrogant = {
-					if = { limit = { has_trait = arrogant } remove_trait = arrogant }
-					else = { add_trait = arrogant }
+					scope:spell_target = {
+						if = { limit = { has_trait = arrogant } remove_trait = arrogant }
+						else = { add_trait = arrogant }
+					}
 				}
 				flag:humble = {
-					if = { limit = { has_trait = humble } remove_trait = humble }
-					else = { add_trait = humble }
+					scope:spell_target = {
+						if = { limit = { has_trait = humble } remove_trait = humble }
+						else = { add_trait = humble }
+					}
 				}
 				flag:deceitful = {
-					if = { limit = { has_trait = deceitful } remove_trait = deceitful }
-					else = { add_trait = deceitful }
+					scope:spell_target = {
+						if = { limit = { has_trait = deceitful } remove_trait = deceitful }
+						else = { add_trait = deceitful }
+					}
 				}
 				flag:honest = {
-					if = { limit = { has_trait = honest } remove_trait = honest }
-					else = { add_trait = honest }
+					scope:spell_target = {
+						if = { limit = { has_trait = honest } remove_trait = honest }
+						else = { add_trait = honest }
+					}
 				}
 				flag:craven = {
-					if = { limit = { has_trait = craven } remove_trait = craven }
-					else = { add_trait = craven }
+					scope:spell_target = {
+						if = { limit = { has_trait = craven } remove_trait = craven }
+						else = { add_trait = craven }
+					}
 				}
 				flag:brave = {
-					if = { limit = { has_trait = brave } remove_trait = brave }
-					else = { add_trait = brave }
+					scope:spell_target = {
+						if = { limit = { has_trait = brave } remove_trait = brave }
+						else = { add_trait = brave }
+					}
 				}
 				flag:shy = {
-					if = { limit = { has_trait = shy } remove_trait = shy }
-					else = { add_trait = shy }
+					scope:spell_target = {
+						if = { limit = { has_trait = shy } remove_trait = shy }
+						else = { add_trait = shy }
+					}
 				}
 				flag:gregarious = {
-					if = { limit = { has_trait = gregarious } remove_trait = gregarious }
-					else = { add_trait = gregarious }
+					scope:spell_target = {
+						if = { limit = { has_trait = gregarious } remove_trait = gregarious }
+						else = { add_trait = gregarious }
+					}
 				}
 				flag:ambitious = {
-					if = { limit = { has_trait = ambitious } remove_trait = ambitious }
-					else = { add_trait = ambitious }
+					scope:spell_target = {
+						if = { limit = { has_trait = ambitious } remove_trait = ambitious }
+						else = { add_trait = ambitious }
+					}
 				}
 				flag:content = {
-					if = { limit = { has_trait = content } remove_trait = content }
-					else = { add_trait = content }
+					scope:spell_target = {
+						if = { limit = { has_trait = content } remove_trait = content }
+						else = { add_trait = content }
+					}
 				}
 				flag:arbitrary = {
-					if = { limit = { has_trait = arbitrary } remove_trait = arbitrary }
-					else = { add_trait = arbitrary }
+					scope:spell_target = {
+						if = { limit = { has_trait = arbitrary } remove_trait = arbitrary }
+						else = { add_trait = arbitrary }
+					}
 				}
 				flag:just = {
-					if = { limit = { has_trait = just } remove_trait = just }
-					else = { add_trait = just }
+					scope:spell_target = {
+						if = { limit = { has_trait = just } remove_trait = just }
+						else = { add_trait = just }
+					}
 				}
 				flag:cynical = {
-					if = { limit = { has_trait = cynical } remove_trait = cynical }
-					else = { add_trait = cynical }
+					scope:spell_target = {
+						if = { limit = { has_trait = cynical } remove_trait = cynical }
+						else = { add_trait = cynical }
+					}
 				}
 				flag:zealous = {
-					if = { limit = { has_trait = zealous } remove_trait = zealous }
-					else = { add_trait = zealous }
+					scope:spell_target = {
+						if = { limit = { has_trait = zealous } remove_trait = zealous }
+						else = { add_trait = zealous }
+					}
 				}
 				flag:paranoid = {
-					if = { limit = { has_trait = paranoid } remove_trait = paranoid }
-					else = { add_trait = paranoid }
+					scope:spell_target = {
+						if = { limit = { has_trait = paranoid } remove_trait = paranoid }
+						else = { add_trait = paranoid }
+					}
 				}
 				flag:trusting = {
-					if = { limit = { has_trait = trusting } remove_trait = trusting }
-					else = { add_trait = trusting }
+					scope:spell_target = {
+						if = { limit = { has_trait = trusting } remove_trait = trusting }
+						else = { add_trait = trusting }
+					}
 				}
 				flag:callous = {
-					if = { limit = { has_trait = callous } remove_trait = callous }
-					else = { add_trait = callous }
+					scope:spell_target = {
+						if = { limit = { has_trait = callous } remove_trait = callous }
+						else = { add_trait = callous }
+					}
 				}
 				flag:compassionate = {
-					if = { limit = { has_trait = compassionate } remove_trait = compassionate }
-					else = { add_trait = compassionate }
+					scope:spell_target = {
+						if = { limit = { has_trait = compassionate } remove_trait = compassionate }
+						else = { add_trait = compassionate }
+					}
 				}
 				flag:vengeful = {
-					if = { limit = { has_trait = vengeful } remove_trait = vengeful }
-					else = { add_trait = vengeful }
+					scope:spell_target = {
+						if = { limit = { has_trait = vengeful } remove_trait = vengeful }
+						else = { add_trait = vengeful }
+					}
 				}
 				flag:forgiving = {
-					if = { limit = { has_trait = forgiving } remove_trait = forgiving }
-					else = { add_trait = forgiving }
+					scope:spell_target = {
+						if = { limit = { has_trait = forgiving } remove_trait = forgiving }
+						else = { add_trait = forgiving }
+					}
 				}
 				flag:fickle = {
-					if = { limit = { has_trait = fickle } remove_trait = fickle }
-					else = { add_trait = fickle }
+					scope:spell_target = {
+						if = { limit = { has_trait = fickle } remove_trait = fickle }
+						else = { add_trait = fickle }
+					}
 				}
 				flag:stubborn = {
-					if = { limit = { has_trait = stubborn } remove_trait = stubborn }
-					else = { add_trait = stubborn }
+					scope:spell_target = {
+						if = { limit = { has_trait = stubborn } remove_trait = stubborn }
+						else = { add_trait = stubborn }
+					}
 				}
 				flag:sadistic = {
-					if = { limit = { has_trait = sadistic } remove_trait = sadistic }
-					else = { add_trait = sadistic }
+					scope:spell_target = {
+						if = { limit = { has_trait = sadistic } remove_trait = sadistic }
+						else = { add_trait = sadistic }
+					}
 				}
 				flag:shrewd = {
-					if = { limit = { has_trait = shrewd } remove_trait = shrewd }
-					else = { add_trait = shrewd }
+					scope:spell_target = {
+						if = { limit = { has_trait = shrewd } remove_trait = shrewd }
+						else = { add_trait = shrewd }
+					}
 				}
 				flag:dull = {
-					if = { limit = { has_trait = dull } remove_trait = dull }
-					else = { add_trait = dull }
+					scope:spell_target = {
+						if = { limit = { has_trait = dull } remove_trait = dull }
+						else = { add_trait = dull }
+					}
 				}
 				flag:stuttering = {
-					if = { limit = { has_trait = stuttering } remove_trait = stuttering }
-					else = { add_trait = stuttering }
+					scope:spell_target = {
+						if = { limit = { has_trait = stuttering } remove_trait = stuttering }
+						else = { add_trait = stuttering }
+					}
 				}
 				flag:silver_tongued = {
-					if = { limit = { has_trait = silver_tongued } remove_trait = silver_tongued }
-					else = { add_trait = silver_tongued }
+					scope:spell_target = {
+						if = { limit = { has_trait = silver_tongued } remove_trait = silver_tongued }
+						else = { add_trait = silver_tongued }
+					}
 				}
 				flag:depressed_genetic = {
-					if = { limit = { has_trait = depressed_genetic } remove_trait = depressed_genetic }
-					else = { add_trait = depressed_genetic }
+					scope:spell_target = {
+						if = { limit = { has_trait = depressed_genetic } remove_trait = depressed_genetic }
+						else = { add_trait = depressed_genetic }
+					}
 				}
 				flag:possessed_genetic = {
-					if = { limit = { has_trait = possessed_genetic } remove_trait = possessed_genetic }
-					else = { add_trait = possessed_genetic }
+					scope:spell_target = {
+						if = { limit = { has_trait = possessed_genetic } remove_trait = possessed_genetic }
+						else = { add_trait = possessed_genetic }
+					}
 				}
 				flag:lunatic_genetic = {
-					if = { limit = { has_trait = lunatic_genetic } remove_trait = lunatic_genetic }
-					else = { add_trait = lunatic_genetic }
+					scope:spell_target = {
+						if = { limit = { has_trait = lunatic_genetic } remove_trait = lunatic_genetic }
+						else = { add_trait = lunatic_genetic }
+					}
 				}
 				flag:dyslexic = {
-					if = { limit = { has_trait = dyslexic } remove_trait = dyslexic }
-					else = { add_trait = dyslexic }
+					scope:spell_target = {
+						if = { limit = { has_trait = dyslexic } remove_trait = dyslexic }
+						else = { add_trait = dyslexic }
+					}
 				}
 				flag:hyperlexic = {
-					if = { limit = { has_trait = hyperlexic } remove_trait = hyperlexic }
-					else = { add_trait = hyperlexic }
+					scope:spell_target = {
+						if = { limit = { has_trait = hyperlexic } remove_trait = hyperlexic }
+						else = { add_trait = hyperlexic }
+					}
 				}
 				flag:dyscalculic = {
-					if = { limit = { has_trait = dyscalculic } remove_trait = dyscalculic }
-					else = { add_trait = dyscalculic }
+					scope:spell_target = {
+						if = { limit = { has_trait = dyscalculic } remove_trait = dyscalculic }
+						else = { add_trait = dyscalculic }
+					}
 				}
 				flag:hypercalculic = {
-					if = { limit = { has_trait = hypercalculic } remove_trait = hypercalculic }
-					else = { add_trait = hypercalculic }
+					scope:spell_target = {
+						if = { limit = { has_trait = hypercalculic } remove_trait = hypercalculic }
+						else = { add_trait = hypercalculic }
+					}
 				}
 			}
 		}
@@ -649,340 +738,338 @@ sculpt_mind_spell_has_list = {
 		always = yes
 	}
 	is_valid = {
-		scope:spell_target = {
-			switch = {
-				trigger = scope:list_option
-				flag:lustful = {
-					OR = {
-						has_trait = lustful
-						AND = {
-							NOT = { has_trait = chaste }
-							number_of_personality_traits < personality_trait_limit
-						}
+		switch = {
+			trigger = scope:list_option
+			flag:lustful = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = lustful LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = chaste LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
 					}
 				}
-				flag:chaste = {
-					OR = {
-						has_trait = chaste
-						AND = {
-							NOT = { has_trait = lustful }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:gluttonous = {
-					OR = {
-						has_trait = gluttonous
-						AND = {
-							NOT = { has_trait = temperate }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:temperate = {
-					OR = {
-						has_trait = temperate
-						AND = {
-							NOT = { has_trait = gluttonous }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:greedy = {
-					OR = {
-						has_trait = greedy
-						AND = {
-							NOT = { has_trait = generous }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:generous = {
-					OR = {
-						has_trait = generous
-						AND = {
-							NOT = { has_trait = greedy }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:lazy = {
-					OR = {
-						has_trait = lazy
-						AND = {
-							NOT = { has_trait = diligent }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:diligent = {
-					OR = {
-						has_trait = diligent
-						AND = {
-							NOT = { has_trait = lazy }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:wrathful = {
-					OR = {
-						has_trait = wrathful
-						AND = {
-							NOT = { has_trait = calm }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:calm = {
-					OR = {
-						has_trait = calm
-						AND = {
-							NOT = { has_trait = wrathful }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:impatient = {
-					OR = {
-						has_trait = impatient
-						AND = {
-							NOT = { has_trait = patient }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:patient = {
-					OR = {
-						has_trait = patient
-						AND = {
-							NOT = { has_trait = impatient }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:arrogant = {
-					OR = {
-						has_trait = arrogant
-						AND = {
-							NOT = { has_trait = humble }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:humble = {
-					OR = {
-						has_trait = humble
-						AND = {
-							NOT = { has_trait = arrogant }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:deceitful = {
-					OR = {
-						has_trait = deceitful
-						AND = {
-							NOT = { has_trait = honest }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:honest = {
-					OR = {
-						has_trait = honest
-						AND = {
-							NOT = { has_trait = deceitful }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:craven = {
-					OR = {
-						has_trait = craven
-						AND = {
-							NOT = { has_trait = brave }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:brave = {
-					OR = {
-						has_trait = brave
-						AND = {
-							NOT = { has_trait = craven }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:shy = {
-					OR = {
-						has_trait = shy
-						AND = {
-							NOT = { has_trait = gregarious }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:gregarious = {
-					OR = {
-						has_trait = gregarious
-						AND = {
-							NOT = { has_trait = shy }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:ambitious = {
-					OR = {
-						has_trait = ambitious
-						AND = {
-							NOT = { has_trait = content }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:content = {
-					OR = {
-						has_trait = content
-						AND = {
-							NOT = { has_trait = ambitious }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:arbitrary = {
-					OR = {
-						has_trait = arbitrary
-						AND = {
-							NOT = { has_trait = just }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:just = {
-					OR = {
-						has_trait = just
-						AND = {
-							NOT = { has_trait = arbitrary }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:cynical = {
-					OR = {
-						has_trait = cynical
-						AND = {
-							NOT = { has_trait = zealous }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:zealous = {
-					OR = {
-						has_trait = zealous
-						AND = {
-							NOT = { has_trait = cynical }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:paranoid = {
-					OR = {
-						has_trait = paranoid
-						AND = {
-							NOT = { has_trait = trusting }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:trusting = {
-					OR = {
-						has_trait = trusting
-						AND = {
-							NOT = { has_trait = paranoid }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:callous = {
-					OR = {
-						has_trait = callous
-						AND = {
-							NOT = { has_trait = compassionate }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:sadistic = {
-					OR = {
-						has_trait = sadistic
-						AND = {
-							NOT = { has_trait = compassionate }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:compassionate = {
-					OR = {
-						has_trait = compassionate
-						AND = {
-							NOT = { has_trait = callous }
-							NOT = { has_trait = sadistic }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:vengeful = {
-					OR = {
-						has_trait = vengeful
-						AND = {
-							NOT = { has_trait = forgiving }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:forgiving = {
-					OR = {
-						has_trait = forgiving
-						AND = {
-							NOT = { has_trait = vengeful }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:fickle = {
-					OR = {
-						has_trait = fickle
-						AND = {
-							NOT = { has_trait = stubborn }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:stubborn = {
-					OR = {
-						has_trait = stubborn
-						AND = {
-							NOT = { has_trait = fickle }
-							number_of_personality_traits < personality_trait_limit
-						}
-					}
-				}
-				flag:shrewd = { NOT = { has_trait = dull } }
-				flag:dull = { NOT = { has_trait = shrewd } }
-				flag:stuttering = {
-					OR = {
-						is_pih_installed_trigger = no
-						NOT = { has_trait = silver_tongued }
-					}
-				}
-				flag:silver_tongued = { NOT = { has_trait = stuttering } }
-				flag:dyslexic = { NOT = { has_trait = hyperlexic } }
-				flag:hyperlexic = { NOT = { has_trait = dyslexic } }
-				flag:dyscalculic = { NOT = { has_trait = hypercalculic } }
-				flag:hypercalculic = { NOT = { has_trait = dyscalculic } }
-				fallback = { always = yes }
 			}
+			flag:chaste = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = chaste LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = lustful LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:gluttonous = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = gluttonous LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = temperate LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:temperate = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = temperate LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = gluttonous LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:greedy = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = greedy LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = generous LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:generous = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = generous LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = greedy LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:lazy = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = lazy LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = diligent LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:diligent = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = diligent LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = lazy LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:wrathful = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = wrathful LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = calm LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:calm = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = calm LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = wrathful LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:impatient = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = impatient LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = patient LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:patient = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = patient LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = impatient LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:arrogant = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = arrogant LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = humble LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:humble = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = humble LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = arrogant LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:deceitful = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = deceitful LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = honest LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:honest = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = honest LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = deceitful LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:craven = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = craven LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = brave LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:brave = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = brave LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = craven LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:shy = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = shy LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = gregarious LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:gregarious = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = gregarious LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = shy LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:ambitious = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = ambitious LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = content LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:content = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = content LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = ambitious LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:arbitrary = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = arbitrary LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = just LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:just = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = just LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = arbitrary LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:cynical = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = cynical LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = zealous LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:zealous = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = zealous LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = cynical LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:paranoid = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = paranoid LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = trusting LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:trusting = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = trusting LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = paranoid LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:callous = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = callous LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = compassionate LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:sadistic = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = sadistic LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = compassionate LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:compassionate = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = compassionate LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = callous LIST_HOLDER = prev } } }
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = sadistic LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:vengeful = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = vengeful LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = forgiving LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:forgiving = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = forgiving LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = vengeful LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:fickle = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = fickle LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = stubborn LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:stubborn = {
+				OR = {
+					scope:spell_target = { will_have_trait_trigger = { TRAIT = stubborn LIST_HOLDER = prev } }
+					AND = {
+						NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = fickle LIST_HOLDER = prev } } }
+						personality_traits_under_limit_trigger = yes
+					}
+				}
+			}
+			flag:shrewd = { NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = dull LIST_HOLDER = prev } } } }
+			flag:dull = { NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = shrewd LIST_HOLDER = prev } } } }
+			flag:stuttering = {
+				OR = {
+					is_pih_installed_trigger = no
+					NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = silver_tongued LIST_HOLDER = prev } } }
+				}
+			}
+			flag:silver_tongued = { NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = stuttering LIST_HOLDER = prev } } } }
+			flag:dyslexic = { NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = hyperlexic LIST_HOLDER = prev } } } }
+			flag:hyperlexic = { NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = dyslexic LIST_HOLDER = prev } } } }
+			flag:dyscalculic = { NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = hypercalculic LIST_HOLDER = prev } } } }
+			flag:hypercalculic = { NOT = { scope:spell_target = { will_have_trait_trigger = { TRAIT = dyscalculic LIST_HOLDER = prev } } } }
+			fallback = { always = yes }
 		}
 	}
 }
@@ -998,7 +1085,7 @@ master_of_puppets_spell = {
 				target = scope:spell_target
 				type = ancient_magic_hook_dominated
 			}
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {

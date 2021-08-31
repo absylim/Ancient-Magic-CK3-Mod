@@ -5,7 +5,7 @@ flame_aura_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -58,7 +58,7 @@ flaming_weapons_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -111,7 +111,7 @@ living_earthworks_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -169,7 +169,7 @@ golem_creation_spell = {
 				has_character_modifier = golem_cooldown_modifier
 				has_character_modifier = lava_golem_cooldown_modifier
 			}
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
@@ -227,7 +227,7 @@ control_water_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -280,7 +280,7 @@ drought_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -333,7 +333,7 @@ elemental_warrior_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -391,7 +391,7 @@ lord_of_the_elements_spell = {
 				has_character_modifier = golem_cooldown_modifier
 				has_character_modifier = lava_golem_cooldown_modifier
 			}
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {

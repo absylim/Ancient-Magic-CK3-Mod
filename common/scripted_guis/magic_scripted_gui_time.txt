@@ -5,7 +5,7 @@ glimpse_the_future_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -58,7 +58,7 @@ financial_times_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -111,7 +111,7 @@ celerity_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -164,7 +164,7 @@ mass_celerity_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -223,7 +223,7 @@ slowness_spell = {
 		}
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -288,7 +288,7 @@ mass_slowness_spell = {
 		}
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -347,7 +347,7 @@ temporal_manipulation_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -400,7 +400,7 @@ haste_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -455,7 +455,7 @@ master_of_time_spell = {
 				NOT = { has_trait = immortal }
 				OR = {
 					NOT = { has_variable_list = immortals_list }
-					variable_list_size = { name = immortals_list target < 3 }
+					variable_list_size = { name = immortals_list value < 3 }
 				}
 			}
 			AND = {
@@ -465,7 +465,7 @@ master_of_time_spell = {
 		}
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {

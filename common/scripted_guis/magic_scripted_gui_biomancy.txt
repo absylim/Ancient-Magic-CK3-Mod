@@ -6,8 +6,9 @@ rewrite_beauty_spell = {
 	}
 	is_valid = {
 		AND = {
-			NOT = { var:list_option = flag:none }
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_variable_list = selected_list_options
+			variable_list_size = { name = selected_list_options value = 1 }
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
@@ -29,18 +30,21 @@ rewrite_beauty_spell = {
 				remove_trait = beauty_bad_5
 			}
 		}
-		switch = {
-			trigger = var:list_option
-			flag:beauty_good_5 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_5 } }
-			flag:beauty_good_4 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_4 } }
-			flag:beauty_good_3 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_3 } }
-			flag:beauty_good_2 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_2 } }
-			flag:beauty_good_1 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_1 } }
-			flag:beauty_bad_1 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_1 } }
-			flag:beauty_bad_2 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_2 } }
-			flag:beauty_bad_3 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_3 } }
-			flag:beauty_bad_4 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_4 } }
-			flag:beauty_bad_5 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_5 } }
+		every_in_list = {
+			variable = selected_list_options
+			switch = {
+				trigger = this
+				flag:beauty_good_5 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_5 } }
+				flag:beauty_good_4 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_4 } }
+				flag:beauty_good_3 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_3 } }
+				flag:beauty_good_2 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_2 } }
+				flag:beauty_good_1 = { scope:spell_target = { add_trait_force_tooltip = beauty_good_1 } }
+				flag:beauty_bad_1 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_1 } }
+				flag:beauty_bad_2 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_2 } }
+				flag:beauty_bad_3 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_3 } }
+				flag:beauty_bad_4 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_4 } }
+				flag:beauty_bad_5 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_5 } }
+			}
 		}
 		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 	}
@@ -102,8 +106,9 @@ rewrite_physique_spell = {
 	}
 	is_valid = {
 		AND = {
-			NOT = { var:list_option = flag:none }
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_variable_list = selected_list_options
+			variable_list_size = { name = selected_list_options value = 1 }
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
@@ -125,18 +130,21 @@ rewrite_physique_spell = {
 				remove_trait = physique_bad_5
 			}
 		}
-		switch = {
-			trigger = var:list_option
-			flag:physique_good_5 = { scope:spell_target = { add_trait_force_tooltip = physique_good_5 } }
-			flag:physique_good_4 = { scope:spell_target = { add_trait_force_tooltip = physique_good_4 } }
-			flag:physique_good_3 = { scope:spell_target = { add_trait_force_tooltip = physique_good_3 } }
-			flag:physique_good_2 = { scope:spell_target = { add_trait_force_tooltip = physique_good_2 } }
-			flag:physique_good_1 = { scope:spell_target = { add_trait_force_tooltip = physique_good_1 } }
-			flag:physique_bad_1 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_1 } }
-			flag:physique_bad_2 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_2 } }
-			flag:physique_bad_3 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_3 } }
-			flag:physique_bad_4 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_4 } }
-			flag:physique_bad_5 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_5 } }
+		every_in_list = {
+			variable = selected_list_options
+			switch = {
+				trigger = this
+				flag:physique_good_5 = { scope:spell_target = { add_trait_force_tooltip = physique_good_5 } }
+				flag:physique_good_4 = { scope:spell_target = { add_trait_force_tooltip = physique_good_4 } }
+				flag:physique_good_3 = { scope:spell_target = { add_trait_force_tooltip = physique_good_3 } }
+				flag:physique_good_2 = { scope:spell_target = { add_trait_force_tooltip = physique_good_2 } }
+				flag:physique_good_1 = { scope:spell_target = { add_trait_force_tooltip = physique_good_1 } }
+				flag:physique_bad_1 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_1 } }
+				flag:physique_bad_2 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_2 } }
+				flag:physique_bad_3 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_3 } }
+				flag:physique_bad_4 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_4 } }
+				flag:physique_bad_5 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_5 } }
+			}
 		}
 		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 	}
@@ -198,8 +206,9 @@ rewrite_intellect_spell = {
 	}
 	is_valid = {
 		AND = {
-			NOT = { var:list_option = flag:none }
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_variable_list = selected_list_options
+			variable_list_size = { name = selected_list_options value = 1 }
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
@@ -221,18 +230,21 @@ rewrite_intellect_spell = {
 				remove_trait = intellect_bad_5
 			}
 		}
-		switch = {
-			trigger = var:list_option
-			flag:intellect_good_5 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_5 } }
-			flag:intellect_good_4 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_4 } }
-			flag:intellect_good_3 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_3 } }
-			flag:intellect_good_2 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_2 } }
-			flag:intellect_good_1 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_1 } }
-			flag:intellect_bad_1 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_1 } }
-			flag:intellect_bad_2 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_2 } }
-			flag:intellect_bad_3 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_3 } }
-			flag:intellect_bad_4 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_4 } }
-			flag:intellect_bad_5 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_5 } }
+		every_in_list = {
+			variable = selected_list_options
+			switch = {
+				trigger = this
+				flag:intellect_good_5 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_5 } }
+				flag:intellect_good_4 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_4 } }
+				flag:intellect_good_3 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_3 } }
+				flag:intellect_good_2 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_2 } }
+				flag:intellect_good_1 = { scope:spell_target = { add_trait_force_tooltip = intellect_good_1 } }
+				flag:intellect_bad_1 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_1 } }
+				flag:intellect_bad_2 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_2 } }
+				flag:intellect_bad_3 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_3 } }
+				flag:intellect_bad_4 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_4 } }
+				flag:intellect_bad_5 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_5 } }
+			}
 		}
 		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 	}
@@ -291,113 +303,165 @@ sculpter_of_flesh_spell = {
 	}
 	is_valid = {
 		AND = {
-			NOT = { var:list_option = flag:none }
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_variable_list = selected_list_options
+			variable_list_size = { name = selected_list_options value > 0 }
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
-		scope:spell_target = {
+		every_in_list = {
+			variable = selected_list_options
 			switch = {
-				trigger = prev.var:list_option
+				trigger = this
 				flag:fecund = {
-					if = { limit = { has_trait = fecund } remove_trait = fecund }
-					else = { add_trait = fecund }
+					scope:spell_target = {
+						if = { limit = { has_trait = fecund } remove_trait = fecund }
+						else = { add_trait = fecund }
+					}
 				}
 				flag:infertile = {
-					if = { limit = { has_trait = infertile } remove_trait = infertile }
-					else = { add_trait = infertile }
+					scope:spell_target = {
+						if = { limit = { has_trait = infertile } remove_trait = infertile }
+						else = { add_trait = infertile }
+					}
 				}
 				flag:strong = {
-					if = { limit = { has_trait = strong } remove_trait = strong }
-					else = { add_trait = strong }
+					scope:spell_target = {
+						if = { limit = { has_trait = strong } remove_trait = strong }
+						else = { add_trait = strong }
+					}
 				}
 				flag:weak = {
-					if = { limit = { has_trait = weak } remove_trait = weak }
-					else = { add_trait = weak }
+					scope:spell_target = {
+						if = { limit = { has_trait = weak } remove_trait = weak }
+						else = { add_trait = weak }
+					}
 				}
 				flag:spindly = {
-					if = { limit = { has_trait = spindly } remove_trait = spindly }
-					else = { add_trait = spindly }
+					scope:spell_target = {
+						if = { limit = { has_trait = spindly } remove_trait = spindly }
+						else = { add_trait = spindly }
+					}
 				}
 				flag:giant = {
-					if = { limit = { has_trait = giant } remove_trait = giant }
-					else = { add_trait = giant }
+					scope:spell_target = {
+						if = { limit = { has_trait = giant } remove_trait = giant }
+						else = { add_trait = giant }
+					}
 				}
 				flag:dwarf = {
-					if = { limit = { has_trait = dwarf } remove_trait = dwarf }
-					else = { add_trait = dwarf }
+					scope:spell_target = {
+						if = { limit = { has_trait = dwarf } remove_trait = dwarf }
+						else = { add_trait = dwarf }
+					}
 				}
 				flag:albino = {
-					if = { limit = { has_trait = albino } remove_trait = albino }
-					else = { add_trait = albino }
+					scope:spell_target = {
+						if = { limit = { has_trait = albino } remove_trait = albino }
+						else = { add_trait = albino }
+					}
 				}
 				flag:clubfooted = {
-					if = { limit = { has_trait = clubfooted } remove_trait = clubfooted }
-					else = { add_trait = clubfooted }
+					scope:spell_target = {
+						if = { limit = { has_trait = clubfooted } remove_trait = clubfooted }
+						else = { add_trait = clubfooted }
+					}
 				}
 				flag:surefooted = {
-					if = { limit = { has_trait = surefooted } remove_trait = surefooted }
-					else = { add_trait = surefooted }
+					scope:spell_target = {
+						if = { limit = { has_trait = surefooted } remove_trait = surefooted }
+						else = { add_trait = surefooted }
+					}
 				}
 				flag:hunchbacked = {
-					if = { limit = { has_trait = hunchbacked } remove_trait = hunchbacked }
-					else = { add_trait = hunchbacked }
+					scope:spell_target = {
+						if = { limit = { has_trait = hunchbacked } remove_trait = hunchbacked }
+						else = { add_trait = hunchbacked }
+					}
 				}
 				flag:regal_bearing = {
-					if = { limit = { has_trait = regal_bearing } remove_trait = regal_bearing }
-					else = { add_trait = regal_bearing }
+					scope:spell_target = {
+						if = { limit = { has_trait = regal_bearing } remove_trait = regal_bearing }
+						else = { add_trait = regal_bearing }
+					}
 				}
 				flag:lisping = {
-					if = { limit = { has_trait = lisping } remove_trait = lisping }
-					else = { add_trait = lisping }
+					scope:spell_target = {
+						if = { limit = { has_trait = lisping } remove_trait = lisping }
+						else = { add_trait = lisping }
+					}
 				}
 				flag:scaly = {
-					if = { limit = { has_trait = scaly } remove_trait = scaly }
-					else = { add_trait = scaly }
+					scope:spell_target = {
+						if = { limit = { has_trait = scaly } remove_trait = scaly }
+						else = { add_trait = scaly }
+					}
 				}
 				flag:glowing = {
-					if = { limit = { has_trait = glowing } remove_trait = glowing }
-					else = { add_trait = glowing }
+					scope:spell_target = {
+						if = { limit = { has_trait = glowing } remove_trait = glowing }
+						else = { add_trait = glowing }
+					}
 				}
 				flag:wheezing = {
-					if = { limit = { has_trait = wheezing } remove_trait = wheezing }
-					else = { add_trait = wheezing }
+					scope:spell_target = {
+						if = { limit = { has_trait = wheezing } remove_trait = wheezing }
+						else = { add_trait = wheezing }
+					}
 				}
 				flag:hardy_lung = {
-					if = { limit = { has_trait = hardy_lung } remove_trait = hardy_lung }
-					else = { add_trait = hardy_lung }
+					scope:spell_target = {
+						if = { limit = { has_trait = hardy_lung } remove_trait = hardy_lung }
+						else = { add_trait = hardy_lung }
+					}
 				}
 				flag:bleeder = {
-					if = { limit = { has_trait = bleeder } remove_trait = bleeder }
-					else = { add_trait = bleeder }
+					scope:spell_target = {
+						if = { limit = { has_trait = bleeder } remove_trait = bleeder }
+						else = { add_trait = bleeder }
+					}
 				}
 				flag:pt_balanced_humors = {
-					if = { limit = { has_trait = pt_balanced_humors } remove_trait = pt_balanced_humors }
-					else = { add_trait = pt_balanced_humors }
+					scope:spell_target = {
+						if = { limit = { has_trait = pt_balanced_humors } remove_trait = pt_balanced_humors }
+						else = { add_trait = pt_balanced_humors }
+					}
 				}
 				flag:nearsighted = {
-					if = { limit = { has_trait = nearsighted } remove_trait = nearsighted }
-					else = { add_trait = nearsighted }
+					scope:spell_target = {
+						if = { limit = { has_trait = nearsighted } remove_trait = nearsighted }
+						else = { add_trait = nearsighted }
+					}
 				}
 				flag:hawkeyed = {
-					if = { limit = { has_trait = hawkeyed } remove_trait = hawkeyed }
-					else = { add_trait = hawkeyed }
+					scope:spell_target = {
+						if = { limit = { has_trait = hawkeyed } remove_trait = hawkeyed }
+						else = { add_trait = hawkeyed }
+					}
 				}
 				flag:deaf = {
-					if = { limit = { has_trait = deaf } remove_trait = deaf }
-					else = { add_trait = deaf }
+					scope:spell_target = {
+						if = { limit = { has_trait = deaf } remove_trait = deaf }
+						else = { add_trait = deaf }
+					}
 				}
 				flag:keen-eared = {
-					if = { limit = { has_trait = keen-eared } remove_trait = keen-eared }
-					else = { add_trait = keen-eared }
+					scope:spell_target = {
+						if = { limit = { has_trait = keen-eared } remove_trait = keen-eared }
+						else = { add_trait = keen-eared }
+					}
 				}
 				flag:permanent_scowl = {
-					if = { limit = { has_trait = permanent_scowl } remove_trait = permanent_scowl }
-					else = { add_trait = permanent_scowl }
+					scope:spell_target = {
+						if = { limit = { has_trait = permanent_scowl } remove_trait = permanent_scowl }
+						else = { add_trait = permanent_scowl }
+					}
 				}
 				flag:friendly_face = {
-					if = { limit = { has_trait = friendly_face } remove_trait = friendly_face }
-					else = { add_trait = friendly_face }
+					scope:spell_target = {
+						if = { limit = { has_trait = friendly_face } remove_trait = friendly_face }
+						else = { add_trait = friendly_face }
+					}
 				}
 			}
 		}
@@ -434,54 +498,59 @@ sculpter_of_flesh_spell_has_list = {
 		scope:spell_target = {
 			switch = {
 				trigger = scope:list_option
-				flag:fecund = { NOT = { has_trait = infertile } }
-				flag:infertile = { NOT = { has_trait = fecund } }
-				flag:strong = { NOT = { has_trait = weak has_trait = spindly } }
-				flag:weak = { NOT = { has_trait = strong } }
-				flag:spindly = { NOT = { has_trait = strong } }
-				flag:giant = { NOT = { has_trait = dwarf } }
-				flag:dwarf = { NOT = { has_trait = giant } }
+				flag:fecund = { NOT = { will_have_trait_trigger = { TRAIT = infertile LIST_HOLDER = prev } } }
+				flag:infertile = { NOT = { will_have_trait_trigger = { TRAIT = fecund LIST_HOLDER = prev } } }
+				flag:strong = {
+					NOT = {
+						will_have_trait_trigger = { TRAIT = weak LIST_HOLDER = prev }
+						will_have_trait_trigger = { TRAIT = spindly LIST_HOLDER = prev }
+					}
+				}
+				flag:weak = { NOT = { will_have_trait_trigger = { TRAIT = strong LIST_HOLDER = prev } } }
+				flag:spindly = { NOT = { will_have_trait_trigger = { TRAIT = strong LIST_HOLDER = prev } } }
+				flag:giant = { NOT = { will_have_trait_trigger = { TRAIT = dwarf LIST_HOLDER = prev } } }
+				flag:dwarf = { NOT = { will_have_trait_trigger = { TRAIT = giant LIST_HOLDER = prev } } }
 				flag:clubfooted = {
 					OR = {
 						is_pih_installed_trigger = no
-						NOT = { has_trait = surefooted }
+						NOT = { will_have_trait_trigger = { TRAIT = surefooted LIST_HOLDER = prev } }
 					}
 				}
-				flag:surefooted = { NOT = { has_trait = clubfooted } }
+				flag:surefooted = { NOT = { will_have_trait_trigger = { TRAIT = clubfooted LIST_HOLDER = prev } } }
 				flag:hunchbacked = {
 					OR = {
 						is_pih_installed_trigger = no
-						NOT = { has_trait = regal_bearing }
+						NOT = { will_have_trait_trigger = { TRAIT = regal_bearing LIST_HOLDER = prev } }
 					}
 				}
-				flag:regal_bearing = { NOT = { has_trait = hunchbacked } }
+				flag:regal_bearing = { NOT = { will_have_trait_trigger = { TRAIT = hunchbacked LIST_HOLDER = prev } } }
 				flag:scaly = {
 					OR = {
 						is_pih_installed_trigger = no
-						NOT = { has_trait = glowing }
+						NOT = { will_have_trait_trigger = { TRAIT = glowing LIST_HOLDER = prev } }
 					}
 				}
-				flag:glowing = { NOT = { has_trait = scaly } }
+				flag:glowing = { NOT = { will_have_trait_trigger = { TRAIT = scaly LIST_HOLDER = prev } } }
 				flag:wheezing = {
 					OR = {
 						is_pih_installed_trigger = no
-						NOT = { has_trait = hardy_lung }
+						NOT = { will_have_trait_trigger = { TRAIT = hardy_lung LIST_HOLDER = prev } }
 					}
 				}
-				flag:hardy_lung = { NOT = { has_trait = wheezing } }
+				flag:hardy_lung = { NOT = { will_have_trait_trigger = { TRAIT = wheezing LIST_HOLDER = prev } } }
 				flag:bleeder = {
 					OR = {
 						is_pih_installed_trigger = no
-						NOT = { has_trait = pt_balanced_humors }
+						NOT = { will_have_trait_trigger = { TRAIT = pt_balanced_humors LIST_HOLDER = prev } }
 					}
 				}
-				flag:pt_balanced_humors = { NOT = { has_trait = bleeder } }
-				flag:nearsighted = { NOT = { has_trait = hawkeyed } }
-				flag:hawkeyed = { NOT = { has_trait = nearsighted } }
-				flag:deaf = { NOT = { has_trait = keen-eared } }
-				flag:keen-eared = { NOT = { has_trait = deaf } }
-				flag:permanent_scowl = { NOT = { has_trait = friendly_face } }
-				flag:friendly_face = { NOT = { has_trait = permanent_scowl } }
+				flag:pt_balanced_humors = { NOT = { will_have_trait_trigger = { TRAIT = bleeder LIST_HOLDER = prev } } }
+				flag:nearsighted = { NOT = { will_have_trait_trigger = { TRAIT = hawkeyed LIST_HOLDER = prev } } }
+				flag:hawkeyed = { NOT = { will_have_trait_trigger = { TRAIT = nearsighted LIST_HOLDER = prev } } }
+				flag:deaf = { NOT = { will_have_trait_trigger = { TRAIT = keen-eared LIST_HOLDER = prev } } }
+				flag:keen-eared = { NOT = { will_have_trait_trigger = { TRAIT = deaf LIST_HOLDER = prev } } }
+				flag:permanent_scowl = { NOT = { will_have_trait_trigger = { TRAIT = friendly_face LIST_HOLDER = prev } } }
+				flag:friendly_face = { NOT = { will_have_trait_trigger = { TRAIT = permanent_scowl LIST_HOLDER = prev } } }
 				fallback = { always = yes }
 			}
 		}
@@ -491,36 +560,47 @@ sculpter_of_flesh_spell_has_list = {
 fertility_control_spell = {
 	scope = character
 	is_shown = {
-		has_perk = fertility_control_perk
+		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		AND = {
+			has_variable_list = selected_list_options
+			variable_list_size = { name = selected_list_options value = 1 }
+			has_enough_mana_trigger = yes
+		}
 	}
 	effect = {
-		switch = {
-			trigger = var:list_option
-			flag:inc_fertility = {
-				if = {
-					limit = { NOT = { has_character_modifier = biomantic_fertility_modifier } }
-					add_character_modifier = biomantic_fertility_modifier
-					deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
-					deduct_mana_gen_tooltip = { VALUE = mana_drain_small }
+		every_in_list = {
+			variable = selected_list_options
+			switch = {
+				trigger = this
+				flag:inc_fertility = {
+					if = {
+						limit = { NOT = { scope:spell_target = { has_character_modifier = biomantic_fertility_modifier } } }
+						scope:spell_target = { add_character_modifier = biomantic_fertility_modifier }
+						prev = {
+							deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+							deduct_mana_gen_tooltip = { VALUE = mana_drain_small }
+						}
+					}
+					else = {
+						scope:spell_target = { remove_all_character_modifier_instances = biomantic_fertility_modifier }
+						prev = { change_mana_gen_tooltip = { VALUE = mana_drain_small } }
+					}
 				}
-				else = {
-					remove_all_character_modifier_instances = biomantic_fertility_modifier
-					change_mana_gen_tooltip = { VALUE = mana_drain_small }
-				}
-			}
-			flag:dec_fertility = {
-				if = {
-					limit = { NOT = { has_character_modifier = biomantic_infertility_modifier } }
-					add_character_modifier = biomantic_infertility_modifier
-					deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
-					deduct_mana_gen_tooltip = { VALUE = mana_drain_small }
-				}
-				else = {
-					remove_all_character_modifier_instances = biomantic_infertility_modifier
-					change_mana_gen_tooltip = { VALUE = mana_drain_small }
+				flag:dec_fertility = {
+					if = {
+						limit = { NOT = { scope:spell_target = { has_character_modifier = biomantic_infertility_modifier } } }
+						scope:spell_target = { add_character_modifier = biomantic_infertility_modifier }
+						prev = {
+							deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+							deduct_mana_gen_tooltip = { VALUE = mana_drain_small }
+						}
+					}
+					else = {
+						scope:spell_target = { remove_all_character_modifier_instances = biomantic_infertility_modifier }
+						prev = { change_mana_gen_tooltip = { VALUE = mana_drain_small } }
+					}
 				}
 			}
 		}
@@ -573,7 +653,7 @@ impregnate_spell = {
 		}
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		switch = {

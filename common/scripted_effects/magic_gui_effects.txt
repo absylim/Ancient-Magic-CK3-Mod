@@ -34,7 +34,6 @@ effect_close_magic_window = {
 	remove_variable = window_magic_view
 	remove_variable = repeat_spell
 	remove_variable = spell_target
-	remove_variable = list_option
 	remove_variable = army_stacks
 	clear_variable_list = spell_candidates
 	clear_variable_list = rewrite_beauty_spell_list
@@ -43,6 +42,10 @@ effect_close_magic_window = {
 	clear_variable_list = sculpter_of_flesh_spell_list
 	clear_variable_list = sculpt_mind_spell_list
 	clear_variable_list = fertility_control_spell_list
+	if = {
+		limit = { has_variable_list = selected_list_options }
+		clear_variable_list = selected_list_options
+	}
 }
 
 effect_get_all_possible_candidates = {

@@ -6,7 +6,7 @@ inflict_illness_spell = {
 		scope:spell_target = { NOT = { has_trait = ill } }
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		scope:spell_target = {
@@ -53,7 +53,7 @@ plague_lord_spell = {
 		scope:spell_target = { NOT = { has_trait = bubonic_plague } }
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		scope:spell_target = {
@@ -99,7 +99,7 @@ aura_of_death_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = yes
 	}
 	effect = {
 		if = {
@@ -154,7 +154,7 @@ necromancy_spell = {
 	is_valid = {
 		AND = {
 			NOT = { has_character_modifier = undead_horde_cooldown_modifier }
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
@@ -222,7 +222,7 @@ drain_life_spell = {
 					has_trait = avatar_of_life
 				}
 			}
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
@@ -286,7 +286,7 @@ death_stare_spell = {
 					has_trait = avatar_of_life
 				}
 			}
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {
@@ -339,7 +339,7 @@ deacon_of_death_spell = {
 			scope:spell_target = {
 				NOT = { has_trait = undead }
 			}
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = yes
 		}
 	}
 	effect = {

@@ -1,0 +1,13 @@
+﻿l_english:
+ GLOBAL_HAS_ENOUGH_MANA: "There is enough mana to cast this spell"
+ NOT_GLOBAL_HAS_ENOUGH_MANA: "There is NOT enough mana to cast this spell"
+ FIRST_HAS_ENOUGH_MANA: "You have enough mana to cast this spell"
+ NOT_FIRST_HAS_ENOUGH_MANA: "You do NOT have enough mana to cast this spell"
+ THIRD_HAS_ENOUGH_MANA: "[CHARACTER.GetName] has enough mana to cast this spell"
+ NOT_THIRD_HAS_ENOUGH_MANA: "[CHARACTER.GetName] does NOT have enough mana to cast this spell"
+
+ THIRD_MUST_NOT_HAVE_TRAIT: "[CHARACTER.GetName] must NOT have a trait that blocks this selection"
+ NOT_THIRD_MUST_NOT_HAVE_TRAIT: "[CHARACTER.GetName] must have a trait that blocks this selection"
+
+ FIRST_PERSONALITY_IS_UNDER: "Your target must have more than 4 personality traits"
+ NOT_FIRST_PERSONALITY_IS_UNDER: "Your target must NOT have more than 4 personality traits"
