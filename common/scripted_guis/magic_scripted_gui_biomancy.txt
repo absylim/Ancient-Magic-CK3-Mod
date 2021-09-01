@@ -8,7 +8,7 @@ rewrite_beauty_spell = {
 		AND = {
 			has_variable_list = selected_list_options
 			variable_list_size = { name = selected_list_options value = 1 }
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = rewrite_beauty_spell }
 		}
 	}
 	effect = {
@@ -46,7 +46,7 @@ rewrite_beauty_spell = {
 				flag:beauty_bad_5 = { scope:spell_target = { add_trait_force_tooltip = beauty_bad_5 } }
 			}
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = rewrite_beauty_spell_cost }
 	}
 }
 
@@ -108,7 +108,7 @@ rewrite_physique_spell = {
 		AND = {
 			has_variable_list = selected_list_options
 			variable_list_size = { name = selected_list_options value = 1 }
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = rewrite_physique_spell }
 		}
 	}
 	effect = {
@@ -146,7 +146,7 @@ rewrite_physique_spell = {
 				flag:physique_bad_5 = { scope:spell_target = { add_trait_force_tooltip = physique_bad_5 } }
 			}
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = rewrite_physique_spell_cost }
 	}
 }
 
@@ -208,7 +208,7 @@ rewrite_intellect_spell = {
 		AND = {
 			has_variable_list = selected_list_options
 			variable_list_size = { name = selected_list_options value = 1 }
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = rewrite_intellect_spell }
 		}
 	}
 	effect = {
@@ -246,7 +246,7 @@ rewrite_intellect_spell = {
 				flag:intellect_bad_5 = { scope:spell_target = { add_trait_force_tooltip = intellect_bad_5 } }
 			}
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = rewrite_intellect_spell_cost }
 	}
 }
 
@@ -305,7 +305,7 @@ sculpter_of_flesh_spell = {
 		AND = {
 			has_variable_list = selected_list_options
 			variable_list_size = { name = selected_list_options value > 0 }
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = sculpter_of_flesh_spell }
 		}
 	}
 	effect = {
@@ -465,7 +465,7 @@ sculpter_of_flesh_spell = {
 				}
 			}
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = sculpter_of_flesh_spell_cost }
 	}
 }
 
@@ -495,64 +495,62 @@ sculpter_of_flesh_spell_has_list = {
 		always = yes
 	}
 	is_valid = {
-		scope:spell_target = {
-			switch = {
-				trigger = scope:list_option
-				flag:fecund = { NOT = { will_have_trait_trigger = { TRAIT = infertile LIST_HOLDER = prev } } }
-				flag:infertile = { NOT = { will_have_trait_trigger = { TRAIT = fecund LIST_HOLDER = prev } } }
-				flag:strong = {
-					NOT = {
-						will_have_trait_trigger = { TRAIT = weak LIST_HOLDER = prev }
-						will_have_trait_trigger = { TRAIT = spindly LIST_HOLDER = prev }
-					}
+		switch = {
+			trigger = scope:list_option
+			flag:fecund = { NOT = { will_target_have_trait_trigger = { TRAIT = infertile } } }
+			flag:infertile = { NOT = { will_target_have_trait_trigger = { TRAIT = fecund } } }
+			flag:strong = {
+				NOT = {
+					will_target_have_trait_trigger = { TRAIT = weak }
+					will_target_have_trait_trigger = { TRAIT = spindly }
 				}
-				flag:weak = { NOT = { will_have_trait_trigger = { TRAIT = strong LIST_HOLDER = prev } } }
-				flag:spindly = { NOT = { will_have_trait_trigger = { TRAIT = strong LIST_HOLDER = prev } } }
-				flag:giant = { NOT = { will_have_trait_trigger = { TRAIT = dwarf LIST_HOLDER = prev } } }
-				flag:dwarf = { NOT = { will_have_trait_trigger = { TRAIT = giant LIST_HOLDER = prev } } }
-				flag:clubfooted = {
-					OR = {
-						is_pih_installed_trigger = no
-						NOT = { will_have_trait_trigger = { TRAIT = surefooted LIST_HOLDER = prev } }
-					}
-				}
-				flag:surefooted = { NOT = { will_have_trait_trigger = { TRAIT = clubfooted LIST_HOLDER = prev } } }
-				flag:hunchbacked = {
-					OR = {
-						is_pih_installed_trigger = no
-						NOT = { will_have_trait_trigger = { TRAIT = regal_bearing LIST_HOLDER = prev } }
-					}
-				}
-				flag:regal_bearing = { NOT = { will_have_trait_trigger = { TRAIT = hunchbacked LIST_HOLDER = prev } } }
-				flag:scaly = {
-					OR = {
-						is_pih_installed_trigger = no
-						NOT = { will_have_trait_trigger = { TRAIT = glowing LIST_HOLDER = prev } }
-					}
-				}
-				flag:glowing = { NOT = { will_have_trait_trigger = { TRAIT = scaly LIST_HOLDER = prev } } }
-				flag:wheezing = {
-					OR = {
-						is_pih_installed_trigger = no
-						NOT = { will_have_trait_trigger = { TRAIT = hardy_lung LIST_HOLDER = prev } }
-					}
-				}
-				flag:hardy_lung = { NOT = { will_have_trait_trigger = { TRAIT = wheezing LIST_HOLDER = prev } } }
-				flag:bleeder = {
-					OR = {
-						is_pih_installed_trigger = no
-						NOT = { will_have_trait_trigger = { TRAIT = pt_balanced_humors LIST_HOLDER = prev } }
-					}
-				}
-				flag:pt_balanced_humors = { NOT = { will_have_trait_trigger = { TRAIT = bleeder LIST_HOLDER = prev } } }
-				flag:nearsighted = { NOT = { will_have_trait_trigger = { TRAIT = hawkeyed LIST_HOLDER = prev } } }
-				flag:hawkeyed = { NOT = { will_have_trait_trigger = { TRAIT = nearsighted LIST_HOLDER = prev } } }
-				flag:deaf = { NOT = { will_have_trait_trigger = { TRAIT = keen-eared LIST_HOLDER = prev } } }
-				flag:keen-eared = { NOT = { will_have_trait_trigger = { TRAIT = deaf LIST_HOLDER = prev } } }
-				flag:permanent_scowl = { NOT = { will_have_trait_trigger = { TRAIT = friendly_face LIST_HOLDER = prev } } }
-				flag:friendly_face = { NOT = { will_have_trait_trigger = { TRAIT = permanent_scowl LIST_HOLDER = prev } } }
-				fallback = { always = yes }
 			}
+			flag:weak = { NOT = { will_target_have_trait_trigger = { TRAIT = strong } } }
+			flag:spindly = { NOT = { will_target_have_trait_trigger = { TRAIT = strong } } }
+			flag:giant = { NOT = { will_target_have_trait_trigger = { TRAIT = dwarf } } }
+			flag:dwarf = { NOT = { will_target_have_trait_trigger = { TRAIT = giant } } }
+			flag:clubfooted = {
+				OR = {
+					is_pih_installed_trigger = no
+					NOT = { will_target_have_trait_trigger = { TRAIT = surefooted } }
+				}
+			}
+			flag:surefooted = { NOT = { will_target_have_trait_trigger = { TRAIT = clubfooted } } }
+			flag:hunchbacked = {
+				OR = {
+					is_pih_installed_trigger = no
+					NOT = { will_target_have_trait_trigger = { TRAIT = regal_bearing } }
+				}
+			}
+			flag:regal_bearing = { NOT = { will_target_have_trait_trigger = { TRAIT = hunchbacked } } }
+			flag:scaly = {
+				OR = {
+					is_pih_installed_trigger = no
+					NOT = { will_target_have_trait_trigger = { TRAIT = glowing } }
+				}
+			}
+			flag:glowing = { NOT = { will_target_have_trait_trigger = { TRAIT = scaly } } }
+			flag:wheezing = {
+				OR = {
+					is_pih_installed_trigger = no
+					NOT = { will_target_have_trait_trigger = { TRAIT = hardy_lung } }
+				}
+			}
+			flag:hardy_lung = { NOT = { will_target_have_trait_trigger = { TRAIT = wheezing } } }
+			flag:bleeder = {
+				OR = {
+					is_pih_installed_trigger = no
+					NOT = { will_target_have_trait_trigger = { TRAIT = pt_balanced_humors } }
+				}
+			}
+			flag:pt_balanced_humors = { NOT = { will_target_have_trait_trigger = { TRAIT = bleeder } } }
+			flag:nearsighted = { NOT = { will_target_have_trait_trigger = { TRAIT = hawkeyed } } }
+			flag:hawkeyed = { NOT = { will_target_have_trait_trigger = { TRAIT = nearsighted } } }
+			flag:deaf = { NOT = { will_target_have_trait_trigger = { TRAIT = keen-eared } } }
+			flag:keen-eared = { NOT = { will_target_have_trait_trigger = { TRAIT = deaf } } }
+			flag:permanent_scowl = { NOT = { will_target_have_trait_trigger = { TRAIT = friendly_face } } }
+			flag:friendly_face = { NOT = { will_target_have_trait_trigger = { TRAIT = permanent_scowl } } }
+			fallback = { always = yes }
 		}
 	}
 }
@@ -566,7 +564,7 @@ fertility_control_spell = {
 		AND = {
 			has_variable_list = selected_list_options
 			variable_list_size = { name = selected_list_options value = 1 }
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = fertility_control_spell }
 		}
 	}
 	effect = {
@@ -579,7 +577,7 @@ fertility_control_spell = {
 						limit = { NOT = { scope:spell_target = { has_character_modifier = biomantic_fertility_modifier } } }
 						scope:spell_target = { add_character_modifier = biomantic_fertility_modifier }
 						prev = {
-							deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+							deduct_mana_with_tooltip = { VALUE = fertility_control_spell_cost }
 							deduct_mana_gen_tooltip = { VALUE = mana_drain_small }
 						}
 					}
@@ -593,7 +591,7 @@ fertility_control_spell = {
 						limit = { NOT = { scope:spell_target = { has_character_modifier = biomantic_infertility_modifier } } }
 						scope:spell_target = { add_character_modifier = biomantic_infertility_modifier }
 						prev = {
-							deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+							deduct_mana_with_tooltip = { VALUE = fertility_control_spell_cost }
 							deduct_mana_gen_tooltip = { VALUE = mana_drain_small }
 						}
 					}
@@ -653,7 +651,7 @@ impregnate_spell = {
 		}
 	}
 	is_valid = {
-		has_enough_mana_trigger = yes
+		has_enough_mana_trigger = { SPELL = impregnate_spell }
 	}
 	effect = {
 		switch = {
@@ -661,7 +659,7 @@ impregnate_spell = {
 			yes = { ancient_magic_impregnate_effect = { MOTHER = this FATHER = scope:spell_target } }
 			no = { ancient_magic_impregnate_effect = { MOTHER = scope:spell_target FATHER = this } }
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = impregnate_spell_cost }
 	}
 }
 

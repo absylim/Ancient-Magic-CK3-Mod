@@ -143,19 +143,19 @@ rewrite_intellect_spell_cost = {
 	multiply = 200
 }
 sculpter_of_flesh_spell_cost = {
-	value = 0
-	every_in_list = {
-		variable = selected_list_options
+	value = 1
+	if = {
 		limit = {
-			prev = {
-				is_target_in_variable_list = {
-					name = sculpter_of_flesh_spell_list
-					target = prev
-				}
-			}
+			exists = selected_spell
+			scope:selected_spell = flag:sculpter_of_flesh_spell
 		}
-		add = 200
+		value = 0
+		every_in_list = {
+			variable = selected_list_options
+			add = 1
+		}
 	}
+	multiply = 200
 }
 fertility_control_spell_cost = { value = 100 }
 impregnate_spell_cost = { value = 300 }
@@ -170,16 +170,18 @@ friendship_spell_cost = { value = 400 }
 rivalry_spell_cost = { value = 400 }
 enchanting_aura_spell_cost = { value = 100 }
 sculpt_mind_spell_cost = {
-	value = 0
-	every_in_list = {
-		variable = selected_list_options
+	value = 1
+	if = {
 		limit = {
-			prev.is_target_in_variable_list = {
-				name = sculpt_mind_spell_list
-				target = this
-			}
+			exists = selected_spell
+			scope:selected_spell = flag:sculpt_mind_spell
 		}
-		add = 400
+		value = 0
+		every_in_list = {
+			variable = selected_list_options
+			add = 1
+		}
 	}
+	multiply = 400
 }
 master_of_puppets_spell_cost = { value = 600 }

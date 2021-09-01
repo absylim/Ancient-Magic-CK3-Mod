@@ -64,6 +64,17 @@ select_list_option = {
 				name = selected_list_options
 				target = scope:list_option
 			}
+			if = {
+				limit = {
+					is_target_in_global_variable_list = {
+						name = modify_trait_spells
+						target = scope:selected_spell
+					}
+					var:post_spell_actor = {
+						magic_modify_trait_effect = { OPERATION = remove FLAG = scope:list_option }
+					}
+				}
+			}
 		}
 		else = {
 			if = {
@@ -80,6 +91,17 @@ select_list_option = {
 			add_to_variable_list = {
 				name = selected_list_options
 				target = scope:list_option
+			}
+			if = {
+				limit = {
+					is_target_in_global_variable_list = {
+						name = modify_trait_spells
+						target = scope:selected_spell
+					}
+					var:post_spell_actor = {
+						magic_modify_trait_effect = { OPERATION = add FLAG = scope:list_option }
+					}
+				}
 			}
 		}
 	}

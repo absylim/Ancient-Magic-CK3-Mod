@@ -16,6 +16,8 @@
 			name = army_stacks
 			value = mage_level
 		}
+		set_post_spell_actor = yes
+		var:post_spell_actor = { copy_traits = scope:recipient }
 		effect_get_all_possible_candidates = yes
 		effect_get_all_rewrite_beauty_traits = yes
 		effect_get_all_rewrite_physique_traits = yes
@@ -35,6 +37,8 @@ effect_close_magic_window = {
 	remove_variable = repeat_spell
 	remove_variable = spell_target
 	remove_variable = army_stacks
+	var:post_spell_actor = { clear_all_traits = yes }
+	unset_post_spell_actor = yes
 	clear_variable_list = spell_candidates
 	clear_variable_list = rewrite_beauty_spell_list
 	clear_variable_list = rewrite_physique_spell_list
@@ -598,4 +602,624 @@ effect_get_all_fertility_control_options = {
 		name = fertility_control_spell_list
 		target = flag:dec_fertility
 	}
+}
+
+magic_modify_trait_effect = {
+	switch = {
+		trigger = $FLAG$
+		flag:education_intrigue_1 = { $OPERATION$_trait = education_intrigue_1 }
+		flag:education_intrigue_2 = { $OPERATION$_trait = education_intrigue_2 }
+		flag:education_intrigue_3 = { $OPERATION$_trait = education_intrigue_3 }
+		flag:education_intrigue_4 = { $OPERATION$_trait = education_intrigue_4 }
+		flag:education_diplomacy_1 = { $OPERATION$_trait = education_diplomacy_1 }
+		flag:education_diplomacy_2 = { $OPERATION$_trait = education_diplomacy_2 }
+		flag:education_diplomacy_3 = { $OPERATION$_trait = education_diplomacy_3 }
+		flag:education_diplomacy_4 = { $OPERATION$_trait = education_diplomacy_4 }
+		flag:education_stewardship_1 = { $OPERATION$_trait = education_stewardship_1 }
+		flag:education_stewardship_2 = { $OPERATION$_trait = education_stewardship_2 }
+		flag:education_stewardship_3 = { $OPERATION$_trait = education_stewardship_3 }
+		flag:education_stewardship_4 = { $OPERATION$_trait = education_stewardship_4 }
+		flag:education_martial_1 = { $OPERATION$_trait = education_martial_1 }
+		flag:education_martial_2 = { $OPERATION$_trait = education_martial_2 }
+		flag:education_martial_3 = { $OPERATION$_trait = education_martial_3 }
+		flag:education_martial_4 = { $OPERATION$_trait = education_martial_4 }
+		flag:education_learning_1 = { $OPERATION$_trait = education_learning_1 }
+		flag:education_learning_2 = { $OPERATION$_trait = education_learning_2 }
+		flag:education_learning_3 = { $OPERATION$_trait = education_learning_3 }
+		flag:education_learning_4 = { $OPERATION$_trait = education_learning_4 }
+		flag:diplomat = { $OPERATION$_trait = diplomat }
+		flag:family_first = { $OPERATION$_trait = family_first }
+		flag:august = { $OPERATION$_trait = august }
+		flag:reveler_1 = { $OPERATION$_trait = reveler_1 }
+		flag:reveler_2 = { $OPERATION$_trait = reveler_2 }
+		flag:reveler_3 = { $OPERATION$_trait = reveler_3 }
+		flag:blademaster_1 = { $OPERATION$_trait = blademaster_1 }
+		flag:blademaster_2 = { $OPERATION$_trait = blademaster_2 }
+		flag:blademaster_3 = { $OPERATION$_trait = blademaster_3 }
+		flag:hunter_1 = { $OPERATION$_trait = hunter_1 }
+		flag:hunter_2 = { $OPERATION$_trait = hunter_2 }
+		flag:hunter_3 = { $OPERATION$_trait = hunter_3 }
+		flag:strategist = { $OPERATION$_trait = strategist }
+		flag:overseer = { $OPERATION$_trait = overseer }
+		flag:gallant = { $OPERATION$_trait = gallant }
+		flag:architect = { $OPERATION$_trait = architect }
+		flag:administrator = { $OPERATION$_trait = administrator }
+		flag:avaricious = { $OPERATION$_trait = avaricious }
+		flag:schemer = { $OPERATION$_trait = schemer }
+		flag:seducer = { $OPERATION$_trait = seducer }
+		flag:torturer = { $OPERATION$_trait = torturer }
+		flag:whole_of_body = { $OPERATION$_trait = whole_of_body }
+		flag:scholar = { $OPERATION$_trait = scholar }
+		flag:theologian = { $OPERATION$_trait = theologian }
+		flag:mystic_1 = { $OPERATION$_trait = mystic_1 }
+		flag:mystic_2 = { $OPERATION$_trait = mystic_2 }
+		flag:mystic_3 = { $OPERATION$_trait = mystic_3 }
+		flag:physician_1 = { $OPERATION$_trait = physician_1 }
+		flag:physician_2 = { $OPERATION$_trait = physician_2 }
+		flag:physician_3 = { $OPERATION$_trait = physician_3 }
+		flag:lifestyle_herbalist = { $OPERATION$_trait = lifestyle_herbalist }
+		flag:lustful = { $OPERATION$_trait = lustful }
+		flag:chaste = { $OPERATION$_trait = chaste }
+		flag:gluttonous = { $OPERATION$_trait = gluttonous }
+		flag:temperate = { $OPERATION$_trait = temperate }
+		flag:greedy = { $OPERATION$_trait = greedy }
+		flag:generous = { $OPERATION$_trait = generous }
+		flag:lazy = { $OPERATION$_trait = lazy }
+		flag:diligent = { $OPERATION$_trait = diligent }
+		flag:wrathful = { $OPERATION$_trait = wrathful }
+		flag:calm = { $OPERATION$_trait = calm }
+		flag:patient = { $OPERATION$_trait = patient }
+		flag:impatient = { $OPERATION$_trait = impatient }
+		flag:arrogant = { $OPERATION$_trait = arrogant }
+		flag:humble = { $OPERATION$_trait = humble }
+		flag:deceitful = { $OPERATION$_trait = deceitful }
+		flag:honest = { $OPERATION$_trait = honest }
+		flag:craven = { $OPERATION$_trait = craven }
+		flag:brave = { $OPERATION$_trait = brave }
+		flag:shy = { $OPERATION$_trait = shy }
+		flag:gregarious = { $OPERATION$_trait = gregarious }
+		flag:ambitious = { $OPERATION$_trait = ambitious }
+		flag:content = { $OPERATION$_trait = content }
+		flag:arbitrary = { $OPERATION$_trait = arbitrary }
+		flag:just = { $OPERATION$_trait = just }
+		flag:cynical = { $OPERATION$_trait = cynical }
+		flag:zealous = { $OPERATION$_trait = zealous }
+		flag:paranoid = { $OPERATION$_trait = paranoid }
+		flag:trusting = { $OPERATION$_trait = trusting }
+		flag:compassionate = { $OPERATION$_trait = compassionate }
+		flag:callous = { $OPERATION$_trait = callous }
+		flag:sadistic = { $OPERATION$_trait = sadistic }
+		flag:stubborn = { $OPERATION$_trait = stubborn }
+		flag:fickle = { $OPERATION$_trait = fickle }
+		flag:vengeful = { $OPERATION$_trait = vengeful }
+		flag:forgiving = { $OPERATION$_trait = forgiving }
+		flag:rowdy = { $OPERATION$_trait = rowdy }
+		flag:charming = { $OPERATION$_trait = charming }
+		flag:curious = { $OPERATION$_trait = curious }
+		flag:pensive = { $OPERATION$_trait = pensive }
+		flag:bossy = { $OPERATION$_trait = bossy }
+		flag:drunkard = { $OPERATION$_trait = drunkard }
+		flag:hashishiyah = { $OPERATION$_trait = hashishiyah }
+		flag:rakish = { $OPERATION$_trait = rakish }
+		flag:reclusive = { $OPERATION$_trait = reclusive }
+		flag:irritable = { $OPERATION$_trait = irritable }
+		flag:flagellant = { $OPERATION$_trait = flagellant }
+		flag:profligate = { $OPERATION$_trait = profligate }
+		flag:improvident = { $OPERATION$_trait = improvident }
+		flag:contrite = { $OPERATION$_trait = contrite }
+		flag:comfort_eater = { $OPERATION$_trait = comfort_eater }
+		flag:inappetetic = { $OPERATION$_trait = inappetetic }
+		flag:journaller = { $OPERATION$_trait = journaller }
+		flag:confider = { $OPERATION$_trait = confider }
+		flag:athletic = { $OPERATION$_trait = athletic }
+		flag:pregnant = { $OPERATION$_trait = pregnant }
+		flag:depressed_1 = { $OPERATION$_trait = depressed_1 }
+		flag:depressed_genetic = { $OPERATION$_trait = depressed_genetic }
+		flag:lunatic_1 = { $OPERATION$_trait = lunatic_1 }
+		flag:lunatic_genetic = { $OPERATION$_trait = lunatic_genetic }
+		flag:possessed_1 = { $OPERATION$_trait = possessed_1 }
+		flag:possessed_genetic = { $OPERATION$_trait = possessed_genetic }
+		flag:ill = { $OPERATION$_trait = ill }
+		flag:pneumonic = { $OPERATION$_trait = pneumonic }
+		flag:great_pox = { $OPERATION$_trait = great_pox }
+		flag:early_great_pox = { $OPERATION$_trait = early_great_pox }
+		flag:lovers_pox = { $OPERATION$_trait = lovers_pox }
+		flag:leper = { $OPERATION$_trait = leper }
+		flag:wounded_1 = { $OPERATION$_trait = wounded_1 }
+		flag:wounded_2 = { $OPERATION$_trait = wounded_2 }
+		flag:wounded_3 = { $OPERATION$_trait = wounded_3 }
+		flag:maimed = { $OPERATION$_trait = maimed }
+		flag:one_eyed = { $OPERATION$_trait = one_eyed }
+		flag:one_legged = { $OPERATION$_trait = one_legged }
+		flag:disfigured = { $OPERATION$_trait = disfigured }
+		flag:infirm = { $OPERATION$_trait = infirm }
+		flag:incapable = { $OPERATION$_trait = incapable }
+		flag:gout_ridden = { $OPERATION$_trait = gout_ridden }
+		flag:consumption = { $OPERATION$_trait = consumption }
+		flag:cancer = { $OPERATION$_trait = cancer }
+		flag:typhus = { $OPERATION$_trait = typhus }
+		flag:bubonic_plague = { $OPERATION$_trait = bubonic_plague }
+		flag:smallpox = { $OPERATION$_trait = smallpox }
+		flag:sickly = { $OPERATION$_trait = sickly }
+		flag:scarred = { $OPERATION$_trait = scarred }
+		flag:eunuch = { $OPERATION$_trait = eunuch }
+		flag:blind = { $OPERATION$_trait = blind }
+		flag:beauty_bad_1 = { $OPERATION$_trait = beauty_bad_1 }
+		flag:beauty_bad_2 = { $OPERATION$_trait = beauty_bad_2 }
+		flag:beauty_bad_3 = { $OPERATION$_trait = beauty_bad_3 }
+		flag:beauty_good_1 = { $OPERATION$_trait = beauty_good_1 }
+		flag:beauty_good_2 = { $OPERATION$_trait = beauty_good_2 }
+		flag:beauty_good_3 = { $OPERATION$_trait = beauty_good_3 }
+		flag:intellect_bad_1 = { $OPERATION$_trait = intellect_bad_1 }
+		flag:intellect_bad_2 = { $OPERATION$_trait = intellect_bad_2 }
+		flag:intellect_bad_3 = { $OPERATION$_trait = intellect_bad_3 }
+		flag:intellect_good_1 = { $OPERATION$_trait = intellect_good_1 }
+		flag:intellect_good_2 = { $OPERATION$_trait = intellect_good_2 }
+		flag:intellect_good_3 = { $OPERATION$_trait = intellect_good_3 }
+		flag:physique_bad_1 = { $OPERATION$_trait = physique_bad_1 }
+		flag:physique_bad_2 = { $OPERATION$_trait = physique_bad_2 }
+		flag:physique_bad_3 = { $OPERATION$_trait = physique_bad_3 }
+		flag:physique_good_1 = { $OPERATION$_trait = physique_good_1 }
+		flag:physique_good_2 = { $OPERATION$_trait = physique_good_2 }
+		flag:physique_good_3 = { $OPERATION$_trait = physique_good_3 }
+		flag:pure_blooded = { $OPERATION$_trait = pure_blooded }
+		flag:fecund = { $OPERATION$_trait = fecund }
+		flag:strong = { $OPERATION$_trait = strong }
+		flag:shrewd = { $OPERATION$_trait = shrewd }
+		flag:clubfooted = { $OPERATION$_trait = clubfooted }
+		flag:hunchbacked = { $OPERATION$_trait = hunchbacked }
+		flag:lisping = { $OPERATION$_trait = lisping }
+		flag:stuttering = { $OPERATION$_trait = stuttering }
+		flag:dwarf = { $OPERATION$_trait = dwarf }
+		flag:giant = { $OPERATION$_trait = giant }
+		flag:inbred = { $OPERATION$_trait = inbred }
+		flag:weak = { $OPERATION$_trait = weak }
+		flag:dull = { $OPERATION$_trait = dull }
+		flag:impotent = { $OPERATION$_trait = impotent }
+		flag:spindly = { $OPERATION$_trait = spindly }
+		flag:scaly = { $OPERATION$_trait = scaly }
+		flag:albino = { $OPERATION$_trait = albino }
+		flag:wheezing = { $OPERATION$_trait = wheezing }
+		flag:bleeder = { $OPERATION$_trait = bleeder }
+		flag:infertile = { $OPERATION$_trait = infertile }
+		flag:celibate = { $OPERATION$_trait = celibate }
+		flag:pilgrim = { $OPERATION$_trait = pilgrim }
+		flag:excommunicated = { $OPERATION$_trait = excommunicated }
+		flag:devoted = { $OPERATION$_trait = devoted }
+		flag:sayyid = { $OPERATION$_trait = sayyid }
+		flag:saoshyant = { $OPERATION$_trait = saoshyant }
+		flag:saoshyant_descendant = { $OPERATION$_trait = saoshyant_descendant }
+		flag:savior = { $OPERATION$_trait = savior }
+		flag:divine_blood = { $OPERATION$_trait = divine_blood }
+		flag:blood_of_prophet = { $OPERATION$_trait = blood_of_prophet }
+		flag:faith_warrior = { $OPERATION$_trait = faith_warrior }
+		flag:saint = { $OPERATION$_trait = saint }
+		flag:order_member = { $OPERATION$_trait = order_member }
+		flag:berserker = { $OPERATION$_trait = berserker }
+		flag:shieldmaiden = { $OPERATION$_trait = shieldmaiden }
+		flag:varangian = { $OPERATION$_trait = varangian }
+		flag:poet = { $OPERATION$_trait = poet }
+		flag:bastard = { $OPERATION$_trait = bastard }
+		flag:legitimized_bastard = { $OPERATION$_trait = legitimized_bastard }
+		flag:disputed_heritage = { $OPERATION$_trait = disputed_heritage }
+		flag:child_of_concubine_female = { $OPERATION$_trait = child_of_concubine_female }
+		flag:child_of_concubine_male = { $OPERATION$_trait = child_of_concubine_male }
+		flag:wild_oat = { $OPERATION$_trait = wild_oat }
+		flag:bastard_founder = { $OPERATION$_trait = bastard_founder }
+		flag:twin = { $OPERATION$_trait = twin }
+		flag:kinslayer_1 = { $OPERATION$_trait = kinslayer_1 }
+		flag:kinslayer_2 = { $OPERATION$_trait = kinslayer_2 }
+		flag:kinslayer_3 = { $OPERATION$_trait = kinslayer_3 }
+		flag:deviant = { $OPERATION$_trait = deviant }
+		flag:cannibal = { $OPERATION$_trait = cannibal }
+		flag:sodomite = { $OPERATION$_trait = sodomite }
+		flag:incestuous = { $OPERATION$_trait = incestuous }
+		flag:adulterer = { $OPERATION$_trait = adulterer }
+		flag:fornicator = { $OPERATION$_trait = fornicator }
+		flag:murderer = { $OPERATION$_trait = murderer }
+		flag:born_in_the_purple = { $OPERATION$_trait = born_in_the_purple }
+		flag:augustus = { $OPERATION$_trait = augustus }
+		flag:viking = { $OPERATION$_trait = viking }
+		flag:reincarnation = { $OPERATION$_trait = reincarnation }
+		flag:adventurer = { $OPERATION$_trait = adventurer }
+		flag:heresiarch = { $OPERATION$_trait = heresiarch }
+		flag:peasant_leader = { $OPERATION$_trait = peasant_leader }
+		flag:witch = { $OPERATION$_trait = witch }
+		flag:disinherited = { $OPERATION$_trait = disinherited }
+		flag:denounced = { $OPERATION$_trait = denounced }
+		flag:logistician = { $OPERATION$_trait = logistician }
+		flag:military_engineer = { $OPERATION$_trait = military_engineer }
+		flag:aggressive_attacker = { $OPERATION$_trait = aggressive_attacker }
+		flag:unyielding_defender = { $OPERATION$_trait = unyielding_defender }
+		flag:forder = { $OPERATION$_trait = forder }
+		flag:flexible_leader = { $OPERATION$_trait = flexible_leader }
+		flag:desert_warrior = { $OPERATION$_trait = desert_warrior }
+		flag:jungle_stalker = { $OPERATION$_trait = jungle_stalker }
+		flag:reaver = { $OPERATION$_trait = reaver }
+		flag:reckless = { $OPERATION$_trait = reckless }
+		flag:holy_warrior = { $OPERATION$_trait = holy_warrior }
+		flag:open_terrain_expert = { $OPERATION$_trait = open_terrain_expert }
+		flag:rough_terrain_expert = { $OPERATION$_trait = rough_terrain_expert }
+		flag:forest_fighter = { $OPERATION$_trait = forest_fighter }
+		flag:cautious_leader = { $OPERATION$_trait = cautious_leader }
+		flag:organizer = { $OPERATION$_trait = organizer }
+		flag:winter_soldier = { $OPERATION$_trait = winter_soldier }
+		flag:crusader_king = { $OPERATION$_trait = crusader_king }
+		flag:chakravarti = { $OPERATION$_trait = chakravarti }
+		flag:greatest_of_khans = { $OPERATION$_trait = greatest_of_khans }
+		flag:paragon = { $OPERATION$_trait = paragon }
+		flag:consecrated_blood = { $OPERATION$_trait = consecrated_blood }
+		flag:education_martial_prowess_1 = { $OPERATION$_trait = education_martial_prowess_1 }
+		flag:education_martial_prowess_2 = { $OPERATION$_trait = education_martial_prowess_2 }
+		flag:education_martial_prowess_3 = { $OPERATION$_trait = education_martial_prowess_3 }
+		flag:education_martial_prowess_4 = { $OPERATION$_trait = education_martial_prowess_4 }
+		flag:beauty_good_4 = { $OPERATION$_trait = beauty_good_4 }
+		flag:beauty_good_5 = { $OPERATION$_trait = beauty_good_5 }
+		flag:beauty_bad_4 = { $OPERATION$_trait = beauty_bad_4 }
+		flag:beauty_bad_5 = { $OPERATION$_trait = beauty_bad_5 }
+		flag:physique_good_4 = { $OPERATION$_trait = physique_good_4 }
+		flag:physique_good_5 = { $OPERATION$_trait = physique_good_5 }
+		flag:physique_bad_4 = { $OPERATION$_trait = physique_bad_4 }
+		flag:physique_bad_5 = { $OPERATION$_trait = physique_bad_5 }
+		flag:intellect_good_4 = { $OPERATION$_trait = intellect_good_4 }
+		flag:intellect_good_5 = { $OPERATION$_trait = intellect_good_5 }
+		flag:intellect_bad_4 = { $OPERATION$_trait = intellect_bad_4 }
+		flag:intellect_bad_5 = { $OPERATION$_trait = intellect_bad_5 }
+		flag:surefooted = { $OPERATION$_trait = surefooted }
+		flag:regal_bearing = { $OPERATION$_trait = regal_bearing }
+		flag:glowing = { $OPERATION$_trait = glowing }
+		flag:hardy_lung = { $OPERATION$_trait = hardy_lung }
+		flag:pt_balanced_humors = { $OPERATION$_trait = pt_balanced_humors }
+		flag:paragon = { $OPERATION$_trait = paragon }
+		flag:nearsighted = { $OPERATION$_trait = nearsighted }
+		flag:hawkeyed = { $OPERATION$_trait = hawkeyed }
+		flag:deaf = { $OPERATION$_trait = deaf }
+		flag:keen-eared = { $OPERATION$_trait = keen-eared }
+		flag:permanent_scowl = { $OPERATION$_trait = permanent_scowl }
+		flag:friendly_face = { $OPERATION$_trait = friendly_face }
+		flag:paragon = { $OPERATION$_trait = paragon }
+		flag:silver_tongued = { $OPERATION$_trait = silver_tongued }
+		flag:dyslexic = { $OPERATION$_trait = dyslexic }
+		flag:hyperlexic = { $OPERATION$_trait = hyperlexic }
+		flag:dyscalculic = { $OPERATION$_trait = dyscalculic }
+		flag:hypercalculic = { $OPERATION$_trait = hypercalculic }
+	}
+}
+
+set_post_spell_actor = {
+	if = {
+		limit = {
+			OR = {
+				NOT = { has_global_variable_list = used_post_spell_actors }
+				NOT = {
+					is_target_in_global_variable_list = {
+						name = used_post_spell_actors
+						target = character:post_spell_actor_1
+					}
+				}
+			}
+		}
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_1 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_1 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_2 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_2 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_2 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_3 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_3 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_3 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_4 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_4 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_4 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_5 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_5 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_5 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_6 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_6 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_6 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_7 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_7 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_7 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_8 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_8 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_8 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_9 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_9 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_9 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_10 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_10 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_10 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_11 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_11 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_11 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_12 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_12 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_12 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_13 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_13 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_13 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_14 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_14 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_14 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_15 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_15 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_15 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_16 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_16 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_16 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_17 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_17 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_17 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_18 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_18 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_18 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_19 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_19 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_19 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_20 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_20 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_20 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_21 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_21 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_21 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_22 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_22 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_22 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_23 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_23 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_23 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_24 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_24 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_24 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_25 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_25 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_25 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_26 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_26 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_26 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_27 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_27 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_27 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_28 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_28 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_28 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_29 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_29 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_29 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_30 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_30 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_30 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_31 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_31 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_31 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_32 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_32 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_32 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_33 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_33 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_33 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_34 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_34 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_34 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_35 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_35 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_35 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_36 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_36 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_36 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_37 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_37 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_37 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_38 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_38 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_38 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_39 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_39 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_39 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_40 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_40 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_40 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_41 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_41 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_41 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_42 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_42 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_42 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_43 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_43 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_43 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_44 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_44 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_44 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_45 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_45 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_45 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_46 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_46 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_46 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_47 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_47 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_47 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_48 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_48 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_48 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_49 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_49 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_49 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_50 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_50 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_50 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_51 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_51 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_51 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_52 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_52 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_52 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_53 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_53 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_53 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_54 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_54 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_54 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_55 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_55 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_55 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_56 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_56 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_56 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_57 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_57 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_57 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_58 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_58 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_58 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_59 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_59 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_59 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_60 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_60 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_60 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_61 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_61 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_61 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_62 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_62 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_62 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_63 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_63 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_63 }
+	}
+	else_if = {
+		limit = { NOT = { is_target_in_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_64 } } }
+		set_variable = { name = post_spell_actor value = character:post_spell_actor_64 }
+		add_to_global_variable_list = { name = used_post_spell_actors target = character:post_spell_actor_64 }
+	}
+}
+
+unset_post_spell_actor = {
+	remove_global_list_variable = { name = used_post_spell_actors target = var:post_spell_actor }
+	remove_variable = post_spell_actor
 }

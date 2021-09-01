@@ -1,0 +1,1151 @@
+﻿post_spell_actor_1 = {
+	name = post_spell_actor_1
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_2 = {
+	name = post_spell_actor_2
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_3 = {
+	name = post_spell_actor_3
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_4 = {
+	name = post_spell_actor_4
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_5 = {
+	name = post_spell_actor_5
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_6 = {
+	name = post_spell_actor_6
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_7 = {
+	name = post_spell_actor_7
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_8 = {
+	name = post_spell_actor_8
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_9 = {
+	name = post_spell_actor_9
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_10 = {
+	name = post_spell_actor_10
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_11 = {
+	name = post_spell_actor_11
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_12 = {
+	name = post_spell_actor_12
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_13 = {
+	name = post_spell_actor_13
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_14 = {
+	name = post_spell_actor_14
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_15 = {
+	name = post_spell_actor_15
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_16 = {
+	name = post_spell_actor_16
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_17 = {
+	name = post_spell_actor_17
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_18 = {
+	name = post_spell_actor_18
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_19 = {
+	name = post_spell_actor_19
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_20 = {
+	name = post_spell_actor_20
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_21 = {
+	name = post_spell_actor_21
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_22 = {
+	name = post_spell_actor_22
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_23 = {
+	name = post_spell_actor_23
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_24 = {
+	name = post_spell_actor_24
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_25 = {
+	name = post_spell_actor_25
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_26 = {
+	name = post_spell_actor_26
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_27 = {
+	name = post_spell_actor_27
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_28 = {
+	name = post_spell_actor_28
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_29 = {
+	name = post_spell_actor_29
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_30 = {
+	name = post_spell_actor_30
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_31 = {
+	name = post_spell_actor_31
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_32 = {
+	name = post_spell_actor_32
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_33 = {
+	name = post_spell_actor_33
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_34 = {
+	name = post_spell_actor_34
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_35 = {
+	name = post_spell_actor_35
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_36 = {
+	name = post_spell_actor_36
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_37 = {
+	name = post_spell_actor_37
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_38 = {
+	name = post_spell_actor_38
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_39 = {
+	name = post_spell_actor_39
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_40 = {
+	name = post_spell_actor_40
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_41 = {
+	name = post_spell_actor_41
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_42 = {
+	name = post_spell_actor_42
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_43 = {
+	name = post_spell_actor_43
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_44 = {
+	name = post_spell_actor_44
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_45 = {
+	name = post_spell_actor_45
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_46 = {
+	name = post_spell_actor_46
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_47 = {
+	name = post_spell_actor_47
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_48 = {
+	name = post_spell_actor_48
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_49 = {
+	name = post_spell_actor_49
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_50 = {
+	name = post_spell_actor_50
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_51 = {
+	name = post_spell_actor_51
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_52 = {
+	name = post_spell_actor_52
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_53 = {
+	name = post_spell_actor_53
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_54 = {
+	name = post_spell_actor_54
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_55 = {
+	name = post_spell_actor_55
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_56 = {
+	name = post_spell_actor_56
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_57 = {
+	name = post_spell_actor_57
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_58 = {
+	name = post_spell_actor_58
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_59 = {
+	name = post_spell_actor_59
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_60 = {
+	name = post_spell_actor_60
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_61 = {
+	name = post_spell_actor_61
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_62 = {
+	name = post_spell_actor_62
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_63 = {
+	name = post_spell_actor_63
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}
+
+post_spell_actor_64 = {
+	name = post_spell_actor_64
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = anglo_saxon
+
+	2.1.1 = {
+		birth = yes
+	}
+
+	2.5.2 = {
+		death = "2.5.2"
+	}
+}

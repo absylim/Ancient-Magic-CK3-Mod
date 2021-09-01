@@ -6,13 +6,13 @@ inflict_illness_spell = {
 		scope:spell_target = { NOT = { has_trait = ill } }
 	}
 	is_valid = {
-		has_enough_mana_trigger = yes
+		has_enough_mana_trigger = { SPELL = inflict_illness_spell }
 	}
 	effect = {
 		scope:spell_target = {
 			add_trait = ill
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = inflict_illness_spell_cost }
 	}
 }
 
@@ -53,13 +53,13 @@ plague_lord_spell = {
 		scope:spell_target = { NOT = { has_trait = bubonic_plague } }
 	}
 	is_valid = {
-		has_enough_mana_trigger = yes
+		has_enough_mana_trigger = { SPELL = plague_lord_spell }
 	}
 	effect = {
 		scope:spell_target = {
 			add_trait = bubonic_plague
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = plague_lord_spell_cost }
 	}
 }
 
@@ -99,14 +99,14 @@ aura_of_death_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = yes
+		has_enough_mana_trigger = { SPELL = aura_of_death_spell }
 	}
 	effect = {
 		if = {
 			limit = { NOT = { has_character_modifier = aura_of_death_modifier } }
 			add_character_modifier = aura_of_death_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_with_tooltip = { VALUE = aura_of_death_spell_cost }
 			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
 		}
 		else = {
@@ -154,7 +154,7 @@ necromancy_spell = {
 	is_valid = {
 		AND = {
 			NOT = { has_character_modifier = undead_horde_cooldown_modifier }
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = necromancy_spell }
 		}
 	}
 	effect = {
@@ -172,7 +172,7 @@ necromancy_spell = {
 			modifier = undead_horde_cooldown_modifier
 			years = 2
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = necromancy_spell_cost }
 	}
 }
 
@@ -222,7 +222,7 @@ drain_life_spell = {
 					has_trait = avatar_of_life
 				}
 			}
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = drain_life_spell }
 		}
 	}
 	effect = {
@@ -237,7 +237,7 @@ drain_life_spell = {
 			modifier = stolen_lifeforce_modifier
 			years = mage_level
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = drain_life_spell_cost }
 	}
 }
 
@@ -286,7 +286,7 @@ death_stare_spell = {
 					has_trait = avatar_of_life
 				}
 			}
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = death_stare_spell }
 		}
 	}
 	effect = {
@@ -295,7 +295,7 @@ death_stare_spell = {
 			text = death_stare
 			trigger_event = { on_action = death_stare_action }
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = death_stare_spell_cost }
 	}
 }
 
@@ -339,12 +339,12 @@ deacon_of_death_spell = {
 			scope:spell_target = {
 				NOT = { has_trait = undead }
 			}
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = deacon_of_death_spell }
 		}
 	}
 	effect = {
 		scope:spell_target = { convert_undead = yes }
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = deacon_of_death_spell_cost }
 	}
 }
 

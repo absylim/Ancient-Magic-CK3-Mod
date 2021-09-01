@@ -14,7 +14,7 @@ entrance_spell = {
 					}
 				}
 			}
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = entrance_spell }
 		}
 	}
 	effect = {
@@ -24,7 +24,7 @@ entrance_spell = {
 				modifier = entrance_spell_opinion
 			}
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = entrance_spell_cost }
 	}
 }
 
@@ -66,12 +66,12 @@ incite_lust_spell = {
 	is_valid = {
 		AND = {
 			NOT = { scope:spell_target = { has_relation_lover = prev } }
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = incite_lust_spell }
 		}
 	}
 	effect = {
 		scope:spell_target = { set_relation_lover = prev }
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = incite_lust_spell_cost }
 	}
 }
 
@@ -116,7 +116,7 @@ incite_obedience_spell = {
 				target = scope:spell_target
 				type = ancient_magic_hook_obedient
 			}
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = incite_obedience_spell }
 		}
 	}
 	effect = {
@@ -124,7 +124,7 @@ incite_obedience_spell = {
 			target = scope:spell_target
 			type = ancient_magic_hook_obedient
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = incite_obedience_spell_cost }
 	}
 }
 
@@ -166,7 +166,7 @@ dominate_spell = {
 	is_valid = {
 		AND = {
 			NOT = { has_strong_hook = scope:spell_target }
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = dominate_spell }
 		}
 	}
 	effect = {
@@ -178,7 +178,7 @@ dominate_spell = {
 			target = scope:spell_target
 			type = ancient_magic_hook_dominated
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = dominate_spell_cost }
 	}
 }
 
@@ -218,14 +218,14 @@ beguiling_aura_spell = { # aura of majesty
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = yes
+		has_enough_mana_trigger = { SPELL = beguiling_aura_spell }
 	}
 	effect = {
 		if = {
 			limit = { NOT = { has_character_modifier = beguiling_aura_modifier } }
 			add_character_modifier = beguiling_aura_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_with_tooltip = { VALUE = beguiling_aura_spell_cost }
 			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
 		}
 		else = {
@@ -273,12 +273,12 @@ friendship_spell = {
 	is_valid = {
 		AND = {
 			NOT = { scope:spell_target = { has_relation_friend = prev } }
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = friendship_spell }
 		}
 	}
 	effect = {
 		scope:spell_target = { set_relation_friend = prev }
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = friendship_spell_cost }
 	}
 }
 
@@ -320,12 +320,12 @@ rivalry_spell = {
 	is_valid = {
 		AND = {
 			NOT = { scope:spell_target = { has_relation_rival = prev } }
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = rivalry_spell }
 		}
 	}
 	effect = {
 		scope:spell_target = { set_relation_rival = prev }
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = rivalry_spell_cost }
 	}
 }
 
@@ -365,14 +365,14 @@ enchanting_aura_spell = { # aura of truth
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = yes
+		has_enough_mana_trigger = { SPELL = enchanting_aura_spell }
 	}
 	effect = {
 		if = {
 			limit = { NOT = { has_character_modifier = enchanting_aura_modifier } }
 			add_character_modifier = enchanting_aura_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_with_tooltip = { VALUE = enchanting_aura_spell_cost }
 			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
 		}
 		else = {
@@ -422,7 +422,7 @@ sculpt_mind_spell = {
 			has_variable_list = selected_list_options
 			variable_list_size = { name = selected_list_options value > 0 }
 			num_target_personality_traits <= personality_trait_limit
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = sculpt_mind_spell }
 		}
 	}
 	effect = {
@@ -708,7 +708,7 @@ sculpt_mind_spell = {
 				}
 			}
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = sculpt_mind_spell_cost }
 	}
 }
 
@@ -1085,7 +1085,7 @@ master_of_puppets_spell = {
 				target = scope:spell_target
 				type = ancient_magic_hook_dominated
 			}
-			has_enough_mana_trigger = yes
+			has_enough_mana_trigger = { SPELL = master_of_puppets_spell }
 		}
 	}
 	effect = {
@@ -1093,7 +1093,7 @@ master_of_puppets_spell = {
 			target = scope:spell_target
 			type = ancient_magic_hook_puppet
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = master_of_puppets_spell_cost }
 	}
 }
 

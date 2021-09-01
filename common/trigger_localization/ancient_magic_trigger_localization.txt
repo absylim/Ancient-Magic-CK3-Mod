@@ -8,7 +8,7 @@ has_enough_mana_trigger = {
 	third = THIRD_HAS_ENOUGH_MANA
 }
 
-will_have_trait_trigger = {
+will_target_have_trait_trigger = {
 	global = GLOBAL_MUST_NOT_HAVE_TRAIT
 	first = FIRST_MUST_NOT_HAVE_TRAIT
 	third = THIRD_MUST_NOT_HAVE_TRAIT
