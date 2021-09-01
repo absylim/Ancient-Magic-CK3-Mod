@@ -10,7 +10,19 @@ slowness_spell_cost = { value = 100 }
 mass_slowness_spell_cost = { value = 100 }
 temporal_manipulation_spell_cost = { value = 100 }
 haste_spell_cost = { value = 100 }
-master_of_time_spell_cost = { value = 500 }
+master_of_time_spell_cost = {
+	value = 100
+	multiply = {
+		value = 1
+		if = {
+			limit = { has_variable_list = immortals_list }
+			every_in_list = {
+				variable = immortals_list
+				add = 1
+			}
+		}
+	}
+}
 
 #Life
 heal_spell_cost = { value = 50 }
@@ -38,90 +50,134 @@ deacon_of_death_spell_cost = { value = 600 }
 
 #Biomancy
 rewrite_beauty_spell_cost = {
-	value = 0
-	var:spell_target = {
-		if = { limit = { is_itpp_installed_trigger = yes has_trait = beauty_good_5 } add = 5 }
-		else_if = { limit = { is_itpp_installed_trigger = yes has_trait = beauty_good_4 } add = 4 }
-		else_if = { limit = { has_trait = beauty_good_3 } add = 3 }
-		else_if = { limit = { has_trait = beauty_good_2 } add = 2 }
-		else_if = { limit = { has_trait = beauty_good_1 } add = 1 }
-		else_if = { limit = { has_trait = beauty_bad_1 } add = -1 }
-		else_if = { limit = { has_trait = beauty_bad_2 } add = -2 }
-		else_if = { limit = { has_trait = beauty_bad_3 } add = -3 }
-		else_if = { limit = { is_itpp_installed_trigger = yes has_trait = beauty_bad_4 } add = -4 }
-		else_if = { limit = { is_itpp_installed_trigger = yes has_trait = beauty_bad_5 } add = -5 }
+	value = 1
+	if = {
+		limit = {
+			exists = scope:selected_spell
+			scope:selected_spell = flag:rewrite_beauty_spell
+		}
+		value = 0
+		every_in_list = {
+			variable = selected_list_options
+			prev.var:spell_target = {
+				if = { limit = { is_itpp_installed_trigger = yes has_trait = beauty_good_5 } add = 5 }
+				else_if = { limit = { is_itpp_installed_trigger = yes has_trait = beauty_good_4 } add = 4 }
+				else_if = { limit = { has_trait = beauty_good_3 } add = 3 }
+				else_if = { limit = { has_trait = beauty_good_2 } add = 2 }
+				else_if = { limit = { has_trait = beauty_good_1 } add = 1 }
+				else_if = { limit = { has_trait = beauty_bad_1 } add = -1 }
+				else_if = { limit = { has_trait = beauty_bad_2 } add = -2 }
+				else_if = { limit = { has_trait = beauty_bad_3 } add = -3 }
+				else_if = { limit = { is_itpp_installed_trigger = yes has_trait = beauty_bad_4 } add = -4 }
+				else_if = { limit = { is_itpp_installed_trigger = yes has_trait = beauty_bad_5 } add = -5 }
+			}
+			if = { limit = { this = flag:beauty_good_5 } add = -5 }
+			else_if = { limit = { this = flag:beauty_good_4 } add = -4 }
+			else_if = { limit = { this = flag:beauty_good_3 } add = -3 }
+			else_if = { limit = { this = flag:beauty_good_2 } add = -2 }
+			else_if = { limit = { this = flag:beauty_good_1 } add = -1 }
+			else_if = { limit = { this = flag:beauty_none } add = 0 }
+			else_if = { limit = { this = flag:beauty_bad_1 } add = 1 }
+			else_if = { limit = { this = flag:beauty_bad_2 } add = 2 }
+			else_if = { limit = { this = flag:beauty_bad_3 } add = 3 }
+			else_if = { limit = { this = flag:beauty_bad_4 } add = 4 }
+			else_if = { limit = { this = flag:beauty_bad_5 } add = 5 }
+			else = { value = 0 }
+		}
 	}
-	if = { limit = { var:list_option = flag:beauty_good_5 } add = -5 }
-	else_if = { limit = { var:list_option = flag:beauty_good_4 } add = -4 }
-	else_if = { limit = { var:list_option = flag:beauty_good_3 } add = -3 }
-	else_if = { limit = { var:list_option = flag:beauty_good_2 } add = -2 }
-	else_if = { limit = { var:list_option = flag:beauty_good_1 } add = -1 }
-	else_if = { limit = { var:list_option = flag:beauty_none } add = 0 }
-	else_if = { limit = { var:list_option = flag:beauty_bad_1 } add = 1 }
-	else_if = { limit = { var:list_option = flag:beauty_bad_2 } add = 2 }
-	else_if = { limit = { var:list_option = flag:beauty_bad_3 } add = 3 }
-	else_if = { limit = { var:list_option = flag:beauty_bad_4 } add = 4 }
-	else_if = { limit = { var:list_option = flag:beauty_bad_5 } add = 5 }
-	else = { value = 0 }
 	multiply = 200
 }
 rewrite_physique_spell_cost = {
-	value = 0
-	var:spell_target = {
-		if = { limit = { is_itpp_installed_trigger = yes has_trait = physique_good_5 } add = 5 }
-		else_if = { limit = { is_itpp_installed_trigger = yes has_trait = physique_good_4 } add = 4 }
-		else_if = { limit = { has_trait = physique_good_3 } add = 3 }
-		else_if = { limit = { has_trait = physique_good_2 } add = 2 }
-		else_if = { limit = { has_trait = physique_good_1 } add = 1 }
-		else_if = { limit = { has_trait = physique_bad_1 } add = -1 }
-		else_if = { limit = { has_trait = physique_bad_2 } add = -2 }
-		else_if = { limit = { has_trait = physique_bad_3 } add = -3 }
-		else_if = { limit = { is_itpp_installed_trigger = yes has_trait = physique_bad_4 } add = -4 }
-		else_if = { limit = { is_itpp_installed_trigger = yes has_trait = physique_bad_5 } add = -5 }
+	value = 1
+	if = {
+		limit = {
+			exists = scope:selected_spell
+			scope:selected_spell = flag:rewrite_physique_spell
+		}
+		value = 0
+		every_in_list = {
+			variable = selected_list_options
+			prev.var:spell_target = {
+				if = { limit = { is_itpp_installed_trigger = yes has_trait = physique_good_5 } add = 5 }
+				else_if = { limit = { is_itpp_installed_trigger = yes has_trait = physique_good_4 } add = 4 }
+				else_if = { limit = { has_trait = physique_good_3 } add = 3 }
+				else_if = { limit = { has_trait = physique_good_2 } add = 2 }
+				else_if = { limit = { has_trait = physique_good_1 } add = 1 }
+				else_if = { limit = { has_trait = physique_bad_1 } add = -1 }
+				else_if = { limit = { has_trait = physique_bad_2 } add = -2 }
+				else_if = { limit = { has_trait = physique_bad_3 } add = -3 }
+				else_if = { limit = { is_itpp_installed_trigger = yes has_trait = physique_bad_4 } add = -4 }
+				else_if = { limit = { is_itpp_installed_trigger = yes has_trait = physique_bad_5 } add = -5 }
+			}
+			if = { limit = { this = flag:physique_good_5 } add = -5 }
+			else_if = { limit = { this = flag:physique_good_4 } add = -4 }
+			else_if = { limit = { this = flag:physique_good_3 } add = -3 }
+			else_if = { limit = { this = flag:physique_good_2 } add = -2 }
+			else_if = { limit = { this = flag:physique_good_1 } add = -1 }
+			else_if = { limit = { this = flag:physique_none } add = 0 }
+			else_if = { limit = { this = flag:physique_bad_1 } add = 1 }
+			else_if = { limit = { this = flag:physique_bad_2 } add = 2 }
+			else_if = { limit = { this = flag:physique_bad_3 } add = 3 }
+			else_if = { limit = { this = flag:physique_bad_4 } add = 4 }
+			else_if = { limit = { this = flag:physique_bad_5 } add = 5 }
+			else = { value = 0 }
+		}
 	}
-	if = { limit = { var:list_option = flag:physique_good_5 } add = -5 }
-	else_if = { limit = { var:list_option = flag:physique_good_4 } add = -4 }
-	else_if = { limit = { var:list_option = flag:physique_good_3 } add = -3 }
-	else_if = { limit = { var:list_option = flag:physique_good_2 } add = -2 }
-	else_if = { limit = { var:list_option = flag:physique_good_1 } add = -1 }
-	else_if = { limit = { var:list_option = flag:physique_none } add = 0 }
-	else_if = { limit = { var:list_option = flag:physique_bad_1 } add = 1 }
-	else_if = { limit = { var:list_option = flag:physique_bad_2 } add = 2 }
-	else_if = { limit = { var:list_option = flag:physique_bad_3 } add = 3 }
-	else_if = { limit = { var:list_option = flag:physique_bad_4 } add = 4 }
-	else_if = { limit = { var:list_option = flag:physique_bad_5 } add = 5 }
-	else = { value = 0 }
 	multiply = 200
 }
 rewrite_intellect_spell_cost = {
-	value = 0
-	var:spell_target = {
-		if = { limit = { is_itpp_installed_trigger = yes has_trait = intellect_good_5 } add = 5 }
-		else_if = { limit = { is_itpp_installed_trigger = yes has_trait = intellect_good_4 } add = 4 }
-		else_if = { limit = { has_trait = intellect_good_3 } add = 3 }
-		else_if = { limit = { has_trait = intellect_good_2 } add = 2 }
-		else_if = { limit = { has_trait = intellect_good_1 } add = 1 }
-		else_if = { limit = { has_trait = intellect_bad_1 } add = -1 }
-		else_if = { limit = { has_trait = intellect_bad_2 } add = -2 }
-		else_if = { limit = { has_trait = intellect_bad_3 } add = -3 }
-		else_if = { limit = { is_itpp_installed_trigger = yes has_trait = intellect_bad_4 } add = -4 }
-		else_if = { limit = { is_itpp_installed_trigger = yes has_trait = intellect_bad_5 } add = -5 }
+	value = 1
+	if = {
+		limit = {
+			exists = scope:selected_spell
+			scope:selected_spell = flag:rewrite_intellect_spell
+		}
+		value = 0
+		every_in_list = {
+			variable = selected_list_options
+			prev.var:spell_target = {
+				if = { limit = { is_itpp_installed_trigger = yes has_trait = intellect_good_5 } add = 5 }
+				else_if = { limit = { is_itpp_installed_trigger = yes has_trait = intellect_good_4 } add = 4 }
+				else_if = { limit = { has_trait = intellect_good_3 } add = 3 }
+				else_if = { limit = { has_trait = intellect_good_2 } add = 2 }
+				else_if = { limit = { has_trait = intellect_good_1 } add = 1 }
+				else_if = { limit = { has_trait = intellect_bad_1 } add = -1 }
+				else_if = { limit = { has_trait = intellect_bad_2 } add = -2 }
+				else_if = { limit = { has_trait = intellect_bad_3 } add = -3 }
+				else_if = { limit = { is_itpp_installed_trigger = yes has_trait = intellect_bad_4 } add = -4 }
+				else_if = { limit = { is_itpp_installed_trigger = yes has_trait = intellect_bad_5 } add = -5 }
+			}
+			if = { limit = { this = flag:intellect_good_5 } add = -5 }
+			else_if = { limit = { this = flag:intellect_good_4 } add = -4 }
+			else_if = { limit = { this = flag:intellect_good_3 } add = -3 }
+			else_if = { limit = { this = flag:intellect_good_2 } add = -2 }
+			else_if = { limit = { this = flag:intellect_good_1 } add = -1 }
+			else_if = { limit = { this = flag:intellect_none } add = 0 }
+			else_if = { limit = { this = flag:intellect_bad_1 } add = 1 }
+			else_if = { limit = { this = flag:intellect_bad_2 } add = 2 }
+			else_if = { limit = { this = flag:intellect_bad_3 } add = 3 }
+			else_if = { limit = { this = flag:intellect_bad_4 } add = 4 }
+			else_if = { limit = { this = flag:intellect_bad_5 } add = 5 }
+			else = { value = 0 }
+		}
 	}
-	if = { limit = { var:list_option = flag:intellect_good_5 } add = -5 }
-	else_if = { limit = { var:list_option = flag:intellect_good_4 } add = -4 }
-	else_if = { limit = { var:list_option = flag:intellect_good_3 } add = -3 }
-	else_if = { limit = { var:list_option = flag:intellect_good_2 } add = -2 }
-	else_if = { limit = { var:list_option = flag:intellect_good_1 } add = -1 }
-	else_if = { limit = { var:list_option = flag:intellect_none } add = 0 }
-	else_if = { limit = { var:list_option = flag:intellect_bad_1 } add = 1 }
-	else_if = { limit = { var:list_option = flag:intellect_bad_2 } add = 2 }
-	else_if = { limit = { var:list_option = flag:intellect_bad_3 } add = 3 }
-	else_if = { limit = { var:list_option = flag:intellect_bad_4 } add = 4 }
-	else_if = { limit = { var:list_option = flag:intellect_bad_5 } add = 5 }
-	else = { value = 0 }
 	multiply = 200
 }
-sculpter_of_flesh_spell_cost = { value = 200 }
+sculpter_of_flesh_spell_cost = {
+	value = 1
+	if = {
+		limit = {
+			exists = scope:selected_spell
+			scope:selected_spell = flag:sculpter_of_flesh_spell
+		}
+		value = 0
+		every_in_list = {
+			variable = selected_list_options
+			add = 1
+		}
+	}
+	multiply = 200
+}
 fertility_control_spell_cost = { value = 100 }
 impregnate_spell_cost = { value = 300 }
 
@@ -135,9 +191,18 @@ friendship_spell_cost = { value = 400 }
 rivalry_spell_cost = { value = 400 }
 enchanting_aura_spell_cost = { value = 100 }
 sculpt_mind_spell_cost = {
-	value = 400
-	if = { limit = { var:list_option = flag:depressed_genetic } add = 200 }
-	else_if = { limit = { var:list_option = flag:possessed_genetic } add = 200 }
-	else_if = { limit = { var:list_option = flag:lunatic_genetic } add = 200 }
+	value = 1
+	if = {
+		limit = {
+			exists = scope:selected_spell
+			scope:selected_spell = flag:sculpt_mind_spell
+		}
+		value = 0
+		every_in_list = {
+			variable = selected_list_options
+			add = 1
+		}
+	}
+	multiply = 400
 }
 master_of_puppets_spell_cost = { value = 600 }

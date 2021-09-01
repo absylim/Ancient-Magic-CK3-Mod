@@ -15,6 +15,7 @@ on_death = {
 	on_actions = {
 		reset_slowness_drain
 		reset_mass_slowness_drain
+		reset_master_of_time_drain
 	}
 }
 
@@ -51,6 +52,24 @@ reset_mass_slowness_drain = {
 				}
 			}
 			remove_variable = mass_slowness_target
+			trigger_event = { on_action = on_reset_mana_system }
+		}
+	}
+}
+
+# immortals can still die from murder effects
+reset_master_of_time_drain = {
+	trigger = {
+		has_trait = immortal
+	}
+
+	effect = {
+		every_living_character = {
+			limit = {
+				has_variable_list = immortals_list
+				is_target_in_variable_list = { name = immortals_list target = prev }
+			}
+			remove_list_variable = { name = immortals_list target = prev }
 			trigger_event = { on_action = on_reset_mana_system }
 		}
 	}

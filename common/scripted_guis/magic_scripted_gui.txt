@@ -33,6 +33,10 @@ select_character_target = {
 			name = spell_target
 			value = scope:spell_target
 		}
+		var:post_spell_actor = {
+			clear_traits = yes
+			copy_traits = scope:spell_target
+		}
 	}
 }
 
@@ -40,15 +44,84 @@ select_list_option = {
 	scope = character
 	is_shown = {
 		AND = {
-			has_variable = list_option
-			exists = var:list_option
-			var:list_option = scope:list_option
+			has_variable_list = selected_list_options
+			is_target_in_variable_list = {
+				name = selected_list_options
+				target = scope:list_option
+			}
 		}
 	}
 	effect = {
-		set_variable = {
-			name = list_option
-			value = scope:list_option
+		if = {
+			limit = {
+				has_variable_list = selected_list_options
+				is_target_in_variable_list = {
+					name = selected_list_options
+					target = scope:list_option
+				}
+				is_target_in_global_variable_list = {
+					name = multiple_option_select_spells
+					target = scope:selected_spell
+				}
+			}
+			remove_list_variable = {
+				name = selected_list_options
+				target = scope:list_option
+			}
+			if = {
+				limit = {
+					is_target_in_global_variable_list = {
+						name = modify_trait_spells
+						target = scope:selected_spell
+					}
+				}
+				var:post_spell_actor = {
+					add_or_remove_trait_effect = { FLAG = scope:list_option }
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						is_target_in_global_variable_list = {
+							name = multiple_option_select_spells
+							target = scope:selected_spell
+						}
+					}
+				}
+				clear_variable_list = selected_list_options
+			}
+			add_to_variable_list = {
+				name = selected_list_options
+				target = scope:list_option
+			}
+			if = {
+				limit = {
+					is_target_in_global_variable_list = {
+						name = modify_trait_spells
+						target = scope:selected_spell
+					}
+				}
+				var:post_spell_actor = {
+					add_or_remove_trait_effect = { FLAG = scope:list_option }
+				}
+			}
+		}
+	}
+}
+
+clear_list_options = {
+	effect = {
+		clear_variable_list = selected_list_options
+
+		# Yes, I know this is messy, but I didn't feel
+		# the need to make an entirely new sgui to fire
+		# at the same time clear_list_options did.
+		# I am not proud.
+		var:post_spell_actor = {
+			clear_traits = yes
+			copy_traits = prev.var:spell_target
 		}
 	}
 }
@@ -71,10 +144,10 @@ increase_times_repeated = {
 		}
 		AND = {
 			OR = {
-				NOT = { trigger_magic_is_aura = { SPELL = scope:spell } }
+				NOT = { is_magic_aura_trigger = { SPELL = scope:spell } }
 				scope:potential_repeat_spell < mage_level
 			}
-			scope:total_cost.compare_value < var:mana
+			scope:total_cost.compare_value < var:mana.compare_value
 		}
 	}
 	effect = {

@@ -61,14 +61,14 @@ Add four entries for your spell
     - is_shown - whether a given spell target can have this spell cast on them
     - is_valid - whether or not the spell is castable
       - the 'cast spell' button includes an is_shown check, so you don't need to check for those conditions in is_valid
-    - effect - the effect the spell has when it is cast
+    - effect - the effect the spell has when it is cast. NOTE: The spell effect is responsible for calculating and deducting the spell cost, for tooltip purposes
     - scopes:
       - root - character, the caster
-      - scope:spell_cost - script_value/CFixedPoint, the cost of casting the spell once. The spell is responsible for deducting the mana from the character! Not available in is_shown
       - scope:spell_target - character, the spell's target
     - vars:
-      - root.var:list_option - flag, the option chosen by the player. default is flag:none. Not available in is_shown
       - root.var:repeat_count - script_value/CFixedPoint, number of times to cast the spell
+    - root's variable lists:
+      - selected_list_options - list of flags, the options chosen by the player. Still need to use every_in_list even if there's only one option chosen
   - <spell_name>_spellbook
     - is_shown - whether or not the spell will appear in the spell book as an option
     - is_valid - whether or not the spell will be selectable in the spell book (though it's generally better to invalidate casting than selection)
@@ -87,6 +87,8 @@ Add four entries for your spell
       - root - character, the caster
       - scope:spell_target - character, the spell's target
       - scope:list_option - flag, the option to be displayed. only available in is_valid
+    - root's variable lists:
+      - selected_list_options - list of flags, currently chosen options by the player. This is all options chosen *previously* - all options whose buttons are highlighted on the screen
 
 * 'localization/english/magic_gui_l_english.yml'
  - <spell_name>_gui_name - the name of the spell

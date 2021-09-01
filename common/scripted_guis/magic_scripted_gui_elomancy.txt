@@ -5,14 +5,14 @@ flame_aura_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = flame_aura_spell }
 	}
 	effect = {
 		if = {
 			limit = { NOT = { has_character_modifier = flame_aura_modifier } }
 			add_character_modifier = flame_aura_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_with_tooltip = { VALUE = flame_aura_spell_cost }
 			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
 		}
 		else = {
@@ -58,14 +58,14 @@ flaming_weapons_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = flaming_weapons_spell }
 	}
 	effect = {
 		if = {
 			limit = { NOT = { has_character_modifier = flaming_weapons_modifier } }
 			add_character_modifier = flaming_weapons_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_with_tooltip = { VALUE = flaming_weapons_spell_cost }
 			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
 		}
 		else = {
@@ -111,14 +111,14 @@ living_earthworks_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = living_earthworks_spell }
 	}
 	effect = {
 		if = {
 			limit = { NOT = { has_character_modifier = living_earthworks_modifier } }
 			add_character_modifier = living_earthworks_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_with_tooltip = { VALUE = living_earthworks_spell_cost }
 			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
 		}
 		else = {
@@ -169,7 +169,7 @@ golem_creation_spell = {
 				has_character_modifier = golem_cooldown_modifier
 				has_character_modifier = lava_golem_cooldown_modifier
 			}
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = { SPELL = golem_creation_spell }
 		}
 	}
 	effect = {
@@ -187,7 +187,7 @@ golem_creation_spell = {
 			modifier = golem_cooldown_modifier
 			years = 5
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = golem_creation_spell_cost }
 	}
 }
 
@@ -227,14 +227,14 @@ control_water_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = control_water_spell }
 	}
 	effect = {
 		if = {
 			limit = { NOT = { has_character_modifier = control_water_modifier } }
 			add_character_modifier = control_water_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_with_tooltip = { VALUE = control_water_spell_cost }
 			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
 		}
 		else = {
@@ -280,14 +280,14 @@ drought_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = drought_spell }
 	}
 	effect = {
 		if = {
 			limit = { NOT = { has_character_modifier = drought_modifier } }
 			add_character_modifier = drought_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_with_tooltip = { VALUE = drought_spell_cost }
 			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
 		}
 		else = {
@@ -333,14 +333,14 @@ elemental_warrior_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = elemental_warrior_spell }
 	}
 	effect = {
 		if = {
 			limit = { NOT = { has_character_modifier = elemental_warrior_modifier } }
 			add_character_modifier = elemental_warrior_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			deduct_mana_with_tooltip = { VALUE = elemental_warrior_spell_cost }
 			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
 		}
 		else = {
@@ -391,7 +391,7 @@ lord_of_the_elements_spell = {
 				has_character_modifier = golem_cooldown_modifier
 				has_character_modifier = lava_golem_cooldown_modifier
 			}
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = { SPELL = lord_of_the_elements_spell }
 		}
 	}
 	effect = {
@@ -409,7 +409,7 @@ lord_of_the_elements_spell = {
 			modifier = lava_golem_cooldown_modifier
 			years = 5
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = lord_of_the_elements_spell_cost }
 	}
 }
 

@@ -21,7 +21,6 @@
 
 		state = {
 			name = _hide
-			on_start = "[GetVariableSystem.Clear( 'spell_parameters_view' )]"
 			on_start = "[GetVariableSystem.Clear( 'select_spell_target' )]"
 			on_start = "[GetVariableSystem.Clear( 'current_spell_selected' )]"
 		}
@@ -132,8 +131,8 @@
 										size = { 100% 85% }
 										enabled = "[GetScriptedGui(Concatenate(Scope.GetFlagName,'_spellbook')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End)]"
 										down = "[GetVariableSystem.HasValue('current_spell_selected',Scope.GetFlagName)]"
+										onclick = "[GetScriptedGui('clear_list_options').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										onclick = "[GetVariableSystem.Set('current_spell_selected',Scope.GetFlagName)]"
-										onclick = "[GetVariableSystem.Set( 'spell_parameters_view' , 'open')]"
 										hbox = {
 											margin = { 10 0 }
 											spacer = { size = { 15 0 } }
@@ -184,7 +183,7 @@
 						text_multi = {
 							margin = { 20 20 }
 							visible = "[GetVariableSystem.Exists('current_spell_selected')]"
-							text = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('spell_cost',MakeScopeValue(Abs_CFixedPoint(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost'))))).End)]"
+							text = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
 							size = { 400 160 }
 							align = center
 							using = Background_Area_Dark
@@ -199,9 +198,9 @@
 					expand = {}
 					button_tertiary_magic = {
 						text = "CAST_SPELL"
-						enabled = "[And(GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End),GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('spell_cost',MakeScopeValue(Abs_CFixedPoint(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost'))))).End))]"
-						tooltip = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('spell_cost',MakeScopeValue(Abs_CFixedPoint(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost'))))).End)]"
-						onclick = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('spell_cost',MakeScopeValue(Abs_CFixedPoint(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost'))))).End)]"
+						enabled = "[And(GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End),GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End))]"
+						tooltip = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
+						onclick = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
 						onclick = "[GetScriptedGui('toggle_magic_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
 					}
@@ -348,11 +347,6 @@
 				{
 					text = "SPELL_PARAMETERS"
 				}
-
-				blockoverride "button_close"
-				{
-					onclick = "[GetVariableSystem.Clear( 'spell_parameters_view' )]"
-				}
 			}
 
 			spacer = { size = { 0 20 } }
@@ -392,8 +386,8 @@
 						}
 					}
 					size = { 50 50 }
-					onclick = "[GetScriptedGui('increase_times_repeated').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).AddScope('spell_cost',MakeScopeValue(Abs_CFixedPoint(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost'))))).End)]"
-					enabled = "[GetScriptedGui('increase_times_repeated').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).AddScope('spell_cost',MakeScopeValue(Abs_CFixedPoint(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost'))))).End)]"
+					onclick = "[GetScriptedGui('increase_times_repeated').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
+					enabled = "[GetScriptedGui('increase_times_repeated').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
 				}
 			}
 
@@ -419,7 +413,7 @@
 									tooltip = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_has_list')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
 									enabled = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_has_list')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
 									down = "[GetScriptedGui('select_list_option').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
-									onclick = "[GetScriptedGui('select_list_option').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
+									onclick = "[GetScriptedGui('select_list_option').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
 									flowcontainer = {
 										resizeparent = yes
 										margin = { 10 10 }

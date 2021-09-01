@@ -182,6 +182,14 @@ num_large_auras = {
 		limit = { has_character_modifier = enchanting_aura_modifier }
 		add = 1
 	}
+	if = {
+		limit = { has_variable_list = immortals_list }
+		every_in_list = {
+			variable = immortals_list
+			limit = { exists = this has_trait = immortal }
+			add = 1
+		}
+	}
 }
 
 num_average_auras = {
@@ -203,8 +211,13 @@ num_average_auras = {
 		add = 1
 	}
 	if = {
+		limit = { has_character_modifier = mass_celerity_modifier }
+		add = 1
+	}
+	if = {
 		limit = {
 			has_variable = slowness_target
+			exists = var:slowness_target
 			var:slowness_target = { has_character_modifier = slowness_modifier }
 		}
 		add = 1
@@ -212,6 +225,7 @@ num_average_auras = {
 	if = {
 		limit = {
 			has_variable = mass_slowness_target
+			exists = var:mass_slowness_target
 			var:mass_slowness_target = { has_character_modifier = mass_slowness_modifier }
 		}
 		add = 1

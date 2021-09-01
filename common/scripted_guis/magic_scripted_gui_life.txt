@@ -5,11 +5,11 @@ heal_spell = {
 		scope:spell_target = { has_minor_illness_trigger = yes }
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = heal_spell }
 	}
 	effect = {
 		scope:spell_target = { remove_single_minor_illness_effect = yes }
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = heal_spell_cost }
 	}
 }
 
@@ -54,11 +54,11 @@ greater_heal_spell = {
 		}
 	}
 	is_valid = {
-		var:mana.compare_value >= scope:spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = greater_heal_spell }
 	}
 	effect = {
 		scope:spell_target = { remove_single_greater_or_minor_illness_effect = yes }
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = greater_heal_spell_cost }
 	}
 }
 
@@ -106,7 +106,7 @@ avatar_of_life_spell = {
 	is_valid = {
 		AND = {
 			NOT = { scope:spell_target = { has_character_modifier = full_restoration_modifier } }
-			var:mana.compare_value >= scope:spell_cost.compare_value
+			has_enough_mana_trigger = { SPELL = avatar_of_life_spell }
 		}
 	}
 	effect = {
@@ -117,7 +117,7 @@ avatar_of_life_spell = {
 				years = 5
 			}
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		deduct_mana_with_tooltip = { VALUE = avatar_of_life_spell_cost }
 	}
 }
 

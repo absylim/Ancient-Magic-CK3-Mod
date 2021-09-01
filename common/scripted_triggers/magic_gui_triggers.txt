@@ -1,4 +1,4 @@
-﻿trigger_magic_is_aura = {
+﻿is_magic_aura_trigger = {
 	switch = {
 		trigger = $SPELL$
 		flag:glimpse_the_future_spell = { always = yes }
@@ -22,7 +22,7 @@
 	}
 }
 
-trigger_is_adding_personality_trait = {
+is_adding_personality_trait_trigger = {
 	switch = {
 		trigger = $FLAG$
 		flag:lustful = { NOT = { has_trait = lustful } }
@@ -61,6 +61,29 @@ trigger_is_adding_personality_trait = {
 		flag:stubborn = { NOT = { has_trait = stubborn } }
 		flag:sadistic = { NOT = { has_trait = sadistic } }
 		fallback = { always = no }
+	}
+}
+
+has_enough_mana_trigger = {
+	custom_description = {
+		text = "has_enough_mana_trigger"
+		var:mana.compare_value >= $SPELL$_cost
+	}
+}
+
+will_target_have_trait_trigger = {
+	scope:spell_target = {
+		custom_description = {
+			text = "will_target_have_trait_trigger"
+			prev.var:post_spell_actor = { has_trait = $TRAIT$ }
+		}
+	}
+}
+
+personality_traits_under_limit_trigger = {
+	custom_description = {
+		text = "personality_traits_under_limit_trigger"
+		num_target_personality_traits < personality_trait_limit
 	}
 }
 
@@ -198,5 +221,290 @@ rewrite_trait_list_bad_3_trigger = {
 				NOT = { has_trait_rank = { trait = $TRAIT_TYPE$_bad rank = $RANK$ } }
 			}
 		}
+	}
+}
+
+# NOTE: If the opposites block of a trait ever changes, that
+#       NEEDS to be reflected here! Yes, it's every trait,
+#       not just the ones changed by spells, but if I'll
+#       waste my time, I'll do it properly
+############################################################
+can_add_or_remove_trait_trigger = {
+	switch = {
+		trigger = $FLAG$
+		flag:education_intrigue_1 = { NOR = { has_trait = education_intrigue_2 has_trait = education_intrigue_3 has_trait = education_intrigue_4 } }
+		flag:education_intrigue_2 = { NOR = { has_trait = education_intrigue_1 has_trait = education_intrigue_3 has_trait = education_intrigue_4 } }
+		flag:education_intrigue_3 = { NOR = { has_trait = education_intrigue_1 has_trait = education_intrigue_2 has_trait = education_intrigue_4 } }
+		flag:education_intrigue_4 = { NOR = { has_trait = education_intrigue_1 has_trait = education_intrigue_2 has_trait = education_intrigue_3 } }
+		flag:education_diplomacy_1 = { NOR = { has_trait = education_diplomacy_2 has_trait = education_diplomacy_3 has_trait = education_diplomacy_4 } }
+		flag:education_diplomacy_2 = { NOR = { has_trait = education_diplomacy_1 has_trait = education_diplomacy_3 has_trait = education_diplomacy_4 } }
+		flag:education_diplomacy_3 = { NOR = { has_trait = education_diplomacy_1 has_trait = education_diplomacy_2 has_trait = education_diplomacy_4 } }
+		flag:education_diplomacy_4 = { NOR = { has_trait = education_diplomacy_1 has_trait = education_diplomacy_2 has_trait = education_diplomacy_3 } }
+		flag:education_stewardship_1 = { NOR = { has_trait = education_stewardship_2 has_trait = education_stewardship_3 has_trait = education_stewardship_4 } }
+		flag:education_stewardship_2 = { NOR = { has_trait = education_stewardship_1 has_trait = education_stewardship_3 has_trait = education_stewardship_4 } }
+		flag:education_stewardship_3 = { NOR = { has_trait = education_stewardship_1 has_trait = education_stewardship_2 has_trait = education_stewardship_4 } }
+		flag:education_stewardship_4 = { NOR = { has_trait = education_stewardship_1 has_trait = education_stewardship_2 has_trait = education_stewardship_3 } }
+		flag:education_martial_1 = { NOR = { has_trait = education_martial_2 has_trait = education_martial_3 has_trait = education_martial_4 } }
+		flag:education_martial_2 = { NOR = { has_trait = education_martial_1 has_trait = education_martial_3 has_trait = education_martial_4 } }
+		flag:education_martial_3 = { NOR = { has_trait = education_martial_1 has_trait = education_martial_2 has_trait = education_martial_4 } }
+		flag:education_martial_4 = { NOR = { has_trait = education_martial_1 has_trait = education_martial_2 has_trait = education_martial_3 } }
+		flag:education_learning_1 = { NOR = { has_trait = education_learning_2 has_trait = education_learning_3 has_trait = education_learning_4 } }
+		flag:education_learning_2 = { NOR = { has_trait = education_learning_1 has_trait = education_learning_3 has_trait = education_learning_4 } }
+		flag:education_learning_3 = { NOR = { has_trait = education_learning_1 has_trait = education_learning_2 has_trait = education_learning_4 } }
+		flag:education_learning_4 = { NOR = { has_trait = education_learning_1 has_trait = education_learning_2 has_trait = education_learning_3 } }
+		flag:diplomat = { always = yes }
+		flag:family_first = { always = yes }
+		flag:august = { always = yes }
+		flag:reveler_1 = { NOR = { has_trait = reveler_2 has_trait = reveler_3 } }
+		flag:reveler_2 = { NOR = { has_trait = reveler_1 has_trait = reveler_3 } }
+		flag:reveler_3 = { NOR = { has_trait = reveler_1 has_trait = reveler_2 } }
+		flag:blademaster_1 = { NOR = { has_trait = blademaster_2 has_trait = blademaster_3 } }
+		flag:blademaster_2 = { NOR = { has_trait = blademaster_1 has_trait = blademaster_3 } }
+		flag:blademaster_3 = { NOR = { has_trait = blademaster_1 has_trait = blademaster_2 } }
+		flag:hunter_1 = { NOR = { has_trait = hunter_2 has_trait = hunter_3 } }
+		flag:hunter_2 = { NOR = { has_trait = hunter_1 has_trait = hunter_3 } }
+		flag:hunter_3 = { NOR = { has_trait = hunter_1 has_trait = hunter_2 } }
+		flag:strategist = { always = yes }
+		flag:overseer = { always = yes }
+		flag:gallant = { always = yes }
+		flag:architect = { always = yes }
+		flag:administrator = { always = yes }
+		flag:avaricious = { always = yes }
+		flag:schemer = { always = yes }
+		flag:seducer = { always = yes }
+		flag:torturer = { always = yes }
+		flag:whole_of_body = { always = yes }
+		flag:scholar = { always = yes }
+		flag:theologian = { always = yes }
+		flag:mystic_1 = { NOR = { has_trait = mystic_2 has_trait = mystic_3 } }
+		flag:mystic_2 = { NOR = { has_trait = mystic_1 has_trait = mystic_3 } }
+		flag:mystic_3 = { NOR = { has_trait = mystic_1 has_trait = mystic_2 } }
+		flag:physician_1 = { NOR = { has_trait = physician_3 has_trait = physician_2 } }
+		flag:physician_2 = { NOR = { has_trait = physician_1 has_trait = physician_3 } }
+		flag:physician_3 = { NOR = { has_trait = physician_1 has_trait = physician_2 } }
+		flag:lifestyle_herbalist = { always = yes }
+		flag:lustful = { OR = { has_trait = lustful AND = { NOT = { has_trait = chaste } number_of_personality_traits < personality_trait_limit } } }
+		flag:chaste = { OR = { has_trait = chaste AND = { NOT = { has_trait = lustful } number_of_personality_traits < personality_trait_limit } } }
+		flag:gluttonous = { OR = { has_trait = gluttonous AND = { NOT = { has_trait = temperate } number_of_personality_traits < personality_trait_limit } } }
+		flag:temperate = { OR = { has_trait = temperate AND = { NOT = { has_trait = gluttonous } number_of_personality_traits < personality_trait_limit } } }
+		flag:greedy = { OR = { has_trait = greedy AND = { NOT = { has_trait = generous } number_of_personality_traits < personality_trait_limit } } }
+		flag:generous = { OR = { has_trait = generous AND = { NOT = { has_trait = greedy } number_of_personality_traits < personality_trait_limit } } }
+		flag:lazy = { OR = { has_trait = lazy AND = { NOT = { has_trait = diligent } number_of_personality_traits < personality_trait_limit } } }
+		flag:diligent = { OR = { has_trait = diligent AND = { NOT = { has_trait = lazy } number_of_personality_traits < personality_trait_limit } } }
+		flag:wrathful = { OR = { has_trait = wrathful AND = { NOT = { has_trait = calm } number_of_personality_traits < personality_trait_limit } } }
+		flag:calm = { OR = { has_trait = calm AND = { NOT = { has_trait = wrathful } number_of_personality_traits < personality_trait_limit } } }
+		flag:patient = { OR = { has_trait = patient AND = { NOT = { has_trait = impatient } number_of_personality_traits < personality_trait_limit } } }
+		flag:impatient = { OR = { has_trait = impatient AND = { NOT = { has_trait = patient } number_of_personality_traits < personality_trait_limit } } }
+		flag:arrogant = { OR = { has_trait = arrogant AND = { NOT = { has_trait = humble } number_of_personality_traits < personality_trait_limit } } }
+		flag:humble = { OR = { has_trait = humble AND = { NOT = { has_trait = arrogant } number_of_personality_traits < personality_trait_limit } } }
+		flag:deceitful = { OR = { has_trait = deceitful AND = { NOT = { has_trait = honest } number_of_personality_traits < personality_trait_limit } } }
+		flag:honest = { OR = { has_trait = honest AND = { NOT = { has_trait = deceitful } number_of_personality_traits < personality_trait_limit } } }
+		flag:craven = { OR = { has_trait = craven AND = { NOT = { has_trait = brave } number_of_personality_traits < personality_trait_limit } } }
+		flag:brave = { OR = { has_trait = brave AND = { NOT = { has_trait = craven } number_of_personality_traits < personality_trait_limit } } }
+		flag:shy = { OR = { has_trait = shy AND = { NOT = { has_trait = gregarious } number_of_personality_traits < personality_trait_limit } } }
+		flag:gregarious = { OR = { has_trait = gregarious AND = { NOT = { has_trait = shy } number_of_personality_traits < personality_trait_limit } } }
+		flag:ambitious = { OR = { has_trait = ambitious AND = { NOT = { has_trait = content } number_of_personality_traits < personality_trait_limit } } }
+		flag:content = { OR = { has_trait = content AND = { NOT = { has_trait = ambitious } number_of_personality_traits < personality_trait_limit } } }
+		flag:arbitrary = { OR = { has_trait = arbitrary AND = { NOT = { has_trait = just } number_of_personality_traits < personality_trait_limit } } }
+		flag:just = { OR = { has_trait = just AND = { NOT = { has_trait = arbitrary } number_of_personality_traits < personality_trait_limit } } }
+		flag:cynical = { OR = { has_trait = cynical AND = { NOT = { has_trait = zealous } number_of_personality_traits < personality_trait_limit } } }
+		flag:zealous = { OR = { has_trait = zealous AND = { NOT = { has_trait = cynical } number_of_personality_traits < personality_trait_limit } } }
+		flag:paranoid = { OR = { has_trait = paranoid AND = { NOT = { has_trait = trusting } number_of_personality_traits < personality_trait_limit } } }
+		flag:trusting = { OR = { has_trait = trusting AND = { NOT = { has_trait = paranoid } number_of_personality_traits < personality_trait_limit } } }
+		flag:compassionate = { OR = { has_trait = compassionate AND = { NOR = { has_trait = callous has_trait = sadistic } number_of_personality_traits < personality_trait_limit } } }
+		flag:callous = { OR = { has_trait = callous AND = { NOT = { has_trait = compassionate } number_of_personality_traits < personality_trait_limit } } }
+		flag:sadistic = { OR = { has_trait = sadistic AND = { NOT = { has_trait = compassionate } number_of_personality_traits < personality_trait_limit } } }
+		flag:stubborn = { OR = { has_trait = stubborn AND = { NOT = { has_trait = fickle } number_of_personality_traits < personality_trait_limit } } }
+		flag:fickle = { OR = { has_trait = fickle AND = { NOT = { has_trait = stubborn } number_of_personality_traits < personality_trait_limit } } }
+		flag:vengeful = { OR = { has_trait = vengeful AND = { NOT = { has_trait = forgiving } number_of_personality_traits < personality_trait_limit } } }
+		flag:forgiving = { OR = { has_trait = forgiving AND = { NOT = { has_trait = vengeful } number_of_personality_traits < personality_trait_limit } } }
+		flag:rowdy = { OR = { has_trait = rowdy AND = { NOR = { has_trait = charming has_trait = curious has_trait = pensive has_trait = bossy } number_of_personality_traits < personality_trait_limit } } }
+		flag:charming = { OR = { has_trait = charming AND = { NOR = { has_trait = rowdy has_trait = curious has_trait = pensive has_trait = bossy } number_of_personality_traits < personality_trait_limit } } }
+		flag:curious = { OR = { has_trait = curious AND = { NOR = { has_trait = rowdy has_trait = charming has_trait = pensive has_trait = bossy } number_of_personality_traits < personality_trait_limit } } }
+		flag:pensive = { OR = { has_trait = pensive AND = { NOR = { has_trait = rowdy has_trait = charming has_trait = curious has_trait = bossy } number_of_personality_traits < personality_trait_limit } } }
+		flag:bossy = { OR = { has_trait = bossy AND = { NOR = { has_trait = rowdy has_trait = charming has_trait = curious has_trait = pensive } number_of_personality_traits < personality_trait_limit } } }
+		flag:drunkard = { always = yes }
+		flag:hashishiyah = { always = yes }
+		flag:rakish = { always = yes }
+		flag:reclusive = { always = yes }
+		flag:irritable = { always = yes }
+		flag:flagellant = { always = yes }
+		flag:profligate = { always = yes }
+		flag:improvident = { always = yes }
+		flag:contrite = { always = yes }
+		flag:comfort_eater = { NOT = { has_trait = inappetetic } }
+		flag:inappetetic = { NOT = { has_trait = comfort_eater } }
+		flag:journaller = {  always = yes }
+		flag:confider = { always = yes }
+		flag:athletic = { always = yes }
+		flag:pregnant = { always = yes }
+		flag:depressed_1 = { NOT = { has_trait = depressed_genetic } }
+		flag:depressed_genetic = { NOT = { has_trait = depressed_1 } }
+		flag:lunatic_1 = { NOT = { has_trait = lunatic_genetic } }
+		flag:lunatic_genetic = { NOT = { has_trait = lunatic_1 } }
+		flag:possessed_1 = { NOT = { has_trait = possessed_genetic } }
+		flag:possessed_genetic = { NOT = { has_trait = possessed_1 } }
+		flag:ill = { always = yes }
+		flag:pneumonic = { always = yes }
+		flag:great_pox = { always = yes }
+		flag:early_great_pox = { always = yes }
+		flag:lovers_pox = { always = yes }
+		flag:leper = { always = yes }
+		flag:wounded_1 = { always = yes }
+		flag:wounded_2 = { always = yes }
+		flag:wounded_3 = { always = yes }
+		flag:maimed = { always = yes }
+		flag:one_eyed = { always = yes }
+		flag:one_legged = { always = yes }
+		flag:disfigured = { always = yes }
+		flag:infirm = { always = yes }
+		flag:incapable = { always = yes }
+		flag:gout_ridden = { always = yes }
+		flag:consumption = { always = yes }
+		flag:cancer = { always = yes }
+		flag:typhus = { always = yes }
+		flag:bubonic_plague = { always = yes }
+		flag:smallpox = { always = yes }
+		flag:sickly = { always = yes }
+		flag:scarred = { always = yes }
+		flag:eunuch = { always = yes }
+		flag:blind = { always = yes }
+		flag:beauty_bad_1 = { NOR = { has_trait = beauty_good has_trait = beauty_bad_2 has_trait = beauty_bad_3 } OR = { is_itpp_installed_trigger = no NOR = { has_trait = beauty_bad_4 has_trait = beauty_bad_5 } } }
+		flag:beauty_bad_2 = { NOR = { has_trait = beauty_good has_trait = beauty_bad_1 has_trait = beauty_bad_3 } OR = { is_itpp_installed_trigger = no NOR = { has_trait = beauty_bad_4 has_trait = beauty_bad_5 } } }
+		flag:beauty_bad_3 = { NOR = { has_trait = beauty_good has_trait = beauty_bad_1 has_trait = beauty_bad_2 } OR = { is_itpp_installed_trigger = no NOR = { has_trait = beauty_bad_4 has_trait = beauty_bad_5 } } }
+		flag:beauty_good_1 = { NOR = { has_trait = beauty_bad has_trait = beauty_good_2 has_trait = beauty_good_3 } OR = { is_itpp_installed_trigger = no NOR = { has_trait = beauty_good_4 has_trait = beauty_good_5 } } }
+		flag:beauty_good_2 = { NOR = { has_trait = beauty_bad has_trait = beauty_good_1 has_trait = beauty_good_3 } OR = { is_itpp_installed_trigger = no NOR = { has_trait = beauty_good_4 has_trait = beauty_good_5 } } }
+		flag:beauty_good_3 = { NOR = { has_trait = beauty_bad has_trait = beauty_good_1 has_trait = beauty_good_2 } OR = { is_itpp_installed_trigger = no NOR = { has_trait = beauty_good_4 has_trait = beauty_good_5 } } }
+		flag:intellect_bad_1 = { NOR = { has_trait = intellect_good has_trait = intellect_bad_2 has_trait = intellect_bad_3 has_trait = shrewd } OR = { is_itpp_installed_trigger = no NOR = { has_trait = intellect_bad_4 has_trait = intellect_bad_5 } } }
+		flag:intellect_bad_2 = { NOR = { has_trait = intellect_good has_trait = intellect_bad_1 has_trait = intellect_bad_3 has_trait = shrewd } OR = { is_itpp_installed_trigger = no NOR = { has_trait = intellect_bad_4 has_trait = intellect_bad_5 } } }
+		flag:intellect_bad_3 = { NOR = { has_trait = intellect_good has_trait = intellect_bad_1 has_trait = intellect_bad_2 has_trait = shrewd } OR = { is_itpp_installed_trigger = no NOR = { has_trait = intellect_bad_4 has_trait = intellect_bad_5 } } }
+		flag:intellect_good_1 = { NOR = { has_trait = intellect_bad has_trait = intellect_good_2 has_trait = intellect_good_3 has_trait = dull } OR = { is_itpp_installed_trigger = no NOR = { has_trait = intellect_good_4 has_trait = intellect_good_5 } } }
+		flag:intellect_good_2 = { NOR = { has_trait = intellect_bad has_trait = intellect_good_1 has_trait = intellect_good_3 has_trait = dull } OR = { is_itpp_installed_trigger = no NOR = { has_trait = intellect_good_4 has_trait = intellect_good_5 } } }
+		flag:intellect_good_3 = { NOR = { has_trait = intellect_bad has_trait = intellect_good_1 has_trait = intellect_good_2 has_trait = dull } OR = { is_itpp_installed_trigger = no NOR = { has_trait = intellect_good_4 has_trait = intellect_good_5 } } }
+		flag:physique_bad_1 = { NOR = { has_trait = physique_good has_trait = physique_bad_2 has_trait = physique_bad_3 has_trait = strong } OR = { is_itpp_installed_trigger = no NOR = { has_trait = physique_bad_4 has_trait = physique_bad_5 } } }
+		flag:physique_bad_2 = { NOR = { has_trait = physique_good has_trait = physique_bad_1 has_trait = physique_bad_3 has_trait = strong } OR = { is_itpp_installed_trigger = no NOR = { has_trait = physique_bad_4 has_trait = physique_bad_5 } } }
+		flag:physique_bad_3 = { NOR = { has_trait = physique_good has_trait = physique_bad_1 has_trait = physique_bad_2 has_trait = strong } OR = { is_itpp_installed_trigger = no NOR = { has_trait = physique_bad_4 has_trait = physique_bad_5 } } }
+		flag:physique_good_1 = { NOR = { has_trait = physique_bad has_trait = physique_good_2 has_trait = physique_good_3 has_trait = spindly has_trait = weak } OR = { is_itpp_installed_trigger = no NOR = { has_trait = physique_good_4 has_trait = physique_good_5 } } }
+		flag:physique_good_2 = { NOR = { has_trait = physique_bad has_trait = physique_good_1 has_trait = physique_good_3 has_trait = spindly has_trait = weak } OR = { is_itpp_installed_trigger = no NOR = { has_trait = physique_good_4 has_trait = physique_good_5 } } }
+		flag:physique_good_3 = { NOR = { has_trait = physique_bad has_trait = physique_good_1 has_trait = physique_good_2 has_trait = spindly has_trait = weak } OR = { is_itpp_installed_trigger = no NOR = { has_trait = physique_good_4 has_trait = physique_good_5 } } }
+		flag:pure_blooded = { always = yes }
+		flag:fecund = { NOT = { has_trait = infertile } }
+		flag:strong = { NOR = { has_trait = weak has_trait = physique_bad } }
+		flag:shrewd = { NOR = { has_trait = dull has_trait = intellect_bad } }
+		flag:clubfooted = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = surefooted } } }
+		flag:hunchbacked = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = regal_bearing } } }
+		flag:lisping = { always = yes }
+		flag:stuttering = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = silver_tongued } } }
+		flag:dwarf = { NOT = { has_trait = giant } }
+		flag:giant = { NOT = { has_trait = dwarf } }
+		flag:inbred = { always = yes }
+		flag:weak = { NOR = { has_trait = strong has_trait = physique_good } }
+		flag:dull = { NOR = { has_trait = shrewd has_trait = intellect_good } }
+		flag:impotent = { always = yes }
+		flag:spindly = { NOT = { has_trait = physique_good } }
+		flag:scaly = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = glowing } } }
+		flag:albino = { always = yes }
+		flag:wheezing = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = hardy_lung } } }
+		flag:bleeder = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = pt_balanced_humors } } }
+		flag:infertile = { NOT = { has_trait = fecund } }
+		flag:celibate = { always = yes }
+		flag:pilgrim = { always = yes }
+		flag:excommunicated = { always = yes }
+		flag:devoted = { always = yes }
+		flag:sayyid = { always = yes }
+		flag:saoshyant = { always = yes }
+		flag:saoshyant_descendant = { always = yes }
+		flag:savior = { always = yes }
+		flag:divine_blood = { always = yes }
+		flag:blood_of_prophet = { always = yes }
+		flag:faith_warrior = { always = yes }
+		flag:saint = { always = yes }
+		flag:order_member = { always = yes }
+		flag:berserker = { always = yes }
+		flag:shieldmaiden = { always = yes }
+		flag:varangian = { always = yes }
+		flag:poet = { always = yes }
+		flag:bastard = { always = yes }
+		flag:legitimized_bastard = { always = yes }
+		flag:disputed_heritage = { always = yes }
+		flag:child_of_concubine_female = { always = yes }
+		flag:child_of_concubine_male = { always = yes }
+		flag:wild_oat = { always = yes }
+		flag:bastard_founder = { always = yes }
+		flag:twin = { always = no }
+		flag:kinslayer_1 = { always = yes }
+		flag:kinslayer_2 = { always = yes }
+		flag:kinslayer_3 = { always = yes }
+		flag:deviant = { always = yes }
+		flag:cannibal = { always = yes }
+		flag:sodomite = { always = yes }
+		flag:incestuous = { always = yes }
+		flag:adulterer = { always = yes }
+		flag:fornicator = { always = yes }
+		flag:murderer = { always = yes }
+		flag:born_in_the_purple = { always = yes }
+		flag:augustus = { always = yes }
+		flag:viking = { always = yes }
+		flag:reincarnation = { always = yes }
+		flag:adventurer = { always = yes }
+		flag:heresiarch = { always = yes }
+		flag:peasant_leader = { always = yes }
+		flag:witch = { always = yes }
+		flag:disinherited = { always = yes }
+		flag:denounced = { always = yes }
+		flag:logistician = { always = yes }
+		flag:military_engineer = { always = yes }
+		flag:aggressive_attacker = { always = yes }
+		flag:unyielding_defender = { always = yes }
+		flag:forder = { always = yes }
+		flag:flexible_leader = { always = yes }
+		flag:desert_warrior = { always = yes }
+		flag:jungle_stalker = { always = yes }
+		flag:reaver = { always = yes }
+		flag:reckless = { always = yes }
+		flag:holy_warrior = { always = yes }
+		flag:open_terrain_expert = { always = yes }
+		flag:rough_terrain_expert = { always = yes }
+		flag:forest_fighter = { always = yes }
+		flag:cautious_leader = { always = yes }
+		flag:organizer = { always = yes }
+		flag:winter_soldier = { always = yes }
+		flag:crusader_king = { always = yes }
+		flag:chakravarti = { always = yes }
+		flag:greatest_of_khans = { always = yes }
+		flag:paragon = { always = yes }
+		flag:consecrated_blood = { always = yes }
+		flag:education_martial_prowess_1 = { NOR = { has_trait = education_martial_prowess_2 has_trait = education_martial_prowess_3 has_trait = education_martial_prowess_4 } }
+		flag:education_martial_prowess_2 = { NOR = { has_trait = education_martial_prowess_1 has_trait = education_martial_prowess_3 has_trait = education_martial_prowess_4 } }
+		flag:education_martial_prowess_3 = { NOR = { has_trait = education_martial_prowess_1 has_trait = education_martial_prowess_2 has_trait = education_martial_prowess_4 } }
+		flag:education_martial_prowess_4 = { NOR = { has_trait = education_martial_prowess_1 has_trait = education_martial_prowess_2 has_trait = education_martial_prowess_3 } }
+		flag:beauty_good_4 = { NOR = { has_trait = beauty_bad has_trait = beauty_good_1 has_trait = beauty_good_2 has_trait = beauty_good_3 has_trait = beauty_good_5 } }
+		flag:beauty_good_5 = { NOR = { has_trait = beauty_bad has_trait = beauty_good_1 has_trait = beauty_good_2 has_trait = beauty_good_3 has_trait = beauty_good_4 } }
+		flag:beauty_bad_4 = { NOR = { has_trait = beauty_good has_trait = beauty_bad_1 has_trait = beauty_bad_2 has_trait = beauty_bad_3 has_trait = beauty_bad_5 } }
+		flag:beauty_bad_5 = { NOR = { has_trait = beauty_good has_trait = beauty_bad_1 has_trait = beauty_bad_2 has_trait = beauty_bad_3 has_trait = beauty_bad_4 } }
+		flag:physique_good_4 = { NOR = { has_trait = physique_bad has_trait = physique_good_1 has_trait = physique_good_2 has_trait = physique_good_3 has_trait = physique_good_5 has_trait = spindly has_trait = weak } }
+		flag:physique_good_5 = { NOR = { has_trait = physique_bad has_trait = physique_good_1 has_trait = physique_good_2 has_trait = physique_good_3 has_trait = physique_good_4 has_trait = spindly has_trait = weak } }
+		flag:physique_bad_4 = { NOR = { has_trait = physique_good has_trait = physique_bad_1 has_trait = physique_bad_2 has_trait = physique_bad_3 has_trait = physique_bad_5 has_trait = strong } }
+		flag:physique_bad_5 = { NOR = { has_trait = physique_good has_trait = physique_bad_1 has_trait = physique_bad_2 has_trait = physique_bad_3 has_trait = physique_bad_4 has_trait = strong } }
+		flag:intellect_good_4 = { NOR = { has_trait = physique_bad has_trait = physique_good_1 has_trait = physique_good_2 has_trait = physique_good_3 has_trait = physique_good_5 has_trait = spindly has_trait = weak } }
+		flag:intellect_good_5 = { NOR = { has_trait = physique_bad has_trait = physique_good_1 has_trait = physique_good_2 has_trait = physique_good_3 has_trait = physique_good_4 has_trait = spindly has_trait = weak } }
+		flag:intellect_bad_4 = { NOR = { has_trait = intellect_good has_trait = intellect_bad_1 has_trait = intellect_bad_2 has_trait = intellect_bad_3 has_trait = intellect_bad_5 has_trait = shrewd } }
+		flag:intellect_bad_5 = { NOR = { has_trait = intellect_good has_trait = intellect_bad_1 has_trait = intellect_bad_2 has_trait = intellect_bad_3 has_trait = intellect_bad_4 has_trait = shrewd } }
+		flag:surefooted = { NOT = { has_trait = clubfooted } }
+		flag:regal_bearing = { NOT = { has_trait = hunchbacked } }
+		flag:glowing = { NOT = { has_trait = scaly } }
+		flag:hardy_lung = { NOT = { has_trait = wheezing } }
+		flag:pt_balanced_humors = { NOT = { has_trait = bleeder } }
+		flag:nearsighted = { NOT = { has_trait = hawkeyed } }
+		flag:hawkeyed = { NOT = { has_trait = nearsighted } }
+		flag:deaf = { NOT = { has_trait = keen-eared } }
+		flag:keen-eared = { NOT = { has_trait = deaf } }
+		flag:permanent_scowl = { NOT = { has_trait = friendly_face } }
+		flag:friendly_face = { NOT = { has_trait = permanent_scowl } }
+		flag:silver_tongued = { NOT = { has_trait = stuttering } }
+		flag:dyslexic = { NOT = { has_trait = hyperlexic } }
+		flag:hyperlexic = { NOT = { has_trait = dyslexic } }
+		flag:dyscalculic = { NOT = { has_trait = hypercalculic } }
+		flag:hypercalculic = { NOT = { has_trait = dyscalculic } }
 	}
 }
