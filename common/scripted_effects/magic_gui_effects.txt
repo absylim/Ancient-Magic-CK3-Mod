@@ -924,13 +924,13 @@ create_post_spell_actor = {
 		learning = 0
 		save_scope_as = new_post_spell_actor
 		after_creation = {
+			death = natural
 			make_unprunable = yes
 			clear_traits = yes
 			add_to_global_variable_list = {
 				name = post_spell_actors
 				target = this
 			}
-			death = natural
 		}
 	}
 }
