@@ -418,11 +418,8 @@ sculpt_mind_spell = {
 		always = yes
 	}
 	is_valid = {
-		AND = {
-			has_variable_list = selected_list_options
-			variable_list_size = { name = selected_list_options value > 0 }
-			has_enough_mana_trigger = { SPELL = sculpt_mind_spell }
-		}
+		has_made_selection_trigger = yes
+		has_enough_mana_trigger = { SPELL = sculpt_mind_spell }
 	}
 	effect = {
 		ordered_in_list = {

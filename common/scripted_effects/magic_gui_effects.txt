@@ -905,7 +905,10 @@ set_post_spell_actor = {
 		save_temporary_scope_as = post_spell_actor
 	}
 	set_variable = { name = post_spell_actor value = scope:post_spell_actor }
-	var:post_spell_actor = { copy_traits = scope:recipient }
+	if = {
+		limit = { exists = var:post_spell_actor }
+		var:post_spell_actor = { copy_traits = scope:recipient }
+	}
 }
 
 create_post_spell_actor = {

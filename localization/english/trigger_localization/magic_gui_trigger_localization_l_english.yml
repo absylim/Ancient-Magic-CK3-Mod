@@ -10,3 +10,4 @@
  NOT_THIRD_MUST_NOT_HAVE_TRAIT: "[CHARACTER.GetName] must have a trait that blocks this selection"
 
  NOT_NUMBER_OF_TRAITS_TRIGGER: "[CHARACTER.GetName] cannot have any more personality traits"
+ NOT_HAS_MADE_SELECTION: "You must select something from the list!"

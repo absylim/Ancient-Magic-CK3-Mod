@@ -5,11 +5,8 @@ rewrite_beauty_spell = {
 		always = yes
 	}
 	is_valid = {
-		AND = {
-			has_variable_list = selected_list_options
-			variable_list_size = { name = selected_list_options value = 1 }
-			has_enough_mana_trigger = { SPELL = rewrite_beauty_spell }
-		}
+		has_made_selection_trigger = yes
+		has_enough_mana_trigger = { SPELL = rewrite_beauty_spell }
 	}
 	effect = {
 		scope:spell_target = {
@@ -95,11 +92,8 @@ rewrite_physique_spell = {
 		}
 	}
 	is_valid = {
-		AND = {
-			has_variable_list = selected_list_options
-			variable_list_size = { name = selected_list_options value = 1 }
-			has_enough_mana_trigger = { SPELL = rewrite_physique_spell }
-		}
+		has_made_selection_trigger = yes
+		has_enough_mana_trigger = { SPELL = rewrite_physique_spell }
 	}
 	effect = {
 		scope:spell_target = {
@@ -185,11 +179,8 @@ rewrite_intellect_spell = {
 		}
 	}
 	is_valid = {
-		AND = {
-			has_variable_list = selected_list_options
-			variable_list_size = { name = selected_list_options value = 1 }
-			has_enough_mana_trigger = { SPELL = rewrite_intellect_spell }
-		}
+		has_made_selection_trigger = yes
+		has_enough_mana_trigger = { SPELL = rewrite_intellect_spell }
 	}
 	effect = {
 		scope:spell_target = {
@@ -272,11 +263,8 @@ sculpter_of_flesh_spell = {
 		always = yes
 	}
 	is_valid = {
-		AND = {
-			has_variable_list = selected_list_options
-			variable_list_size = { name = selected_list_options value > 0 }
-			has_enough_mana_trigger = { SPELL = sculpter_of_flesh_spell }
-		}
+		has_made_selection_trigger = yes
+		has_enough_mana_trigger = { SPELL = sculpter_of_flesh_spell }
 	}
 	effect = {
 		ordered_in_list = {
@@ -325,11 +313,8 @@ fertility_control_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		AND = {
-			has_variable_list = selected_list_options
-			variable_list_size = { name = selected_list_options value = 1 }
-			has_enough_mana_trigger = { SPELL = fertility_control_spell }
-		}
+		has_made_selection_trigger = yes
+		has_enough_mana_trigger = { SPELL = fertility_control_spell }
 	}
 	effect = {
 		every_in_list = {
