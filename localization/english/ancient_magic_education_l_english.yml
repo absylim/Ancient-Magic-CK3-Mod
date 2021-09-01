@@ -1,13 +1,13 @@
 ﻿l_english:
 #traits
  trait_education_arcane_1:0 "Apprentice wizard"
- trait_education_arcane_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is an apprentice practitioner of the arcane arts. Though a wizard by training, due to some defect, whether that defect be esoteric or mundane, [ROOT.GetCharacter.GetHerHis] attempts at spell casting are childish, often surpassed by even the most inexperienced of apprentices."
+ trait_education_arcane_1_character_desc:0 "[ROOT.Char.GetFirstNameNoTooltip] is an apprentice practitioner of the arcane arts. Though a wizard by training, due to some defect, whether that defect be esoteric or mundane, [ROOT.Char.GetHerHis] attempts at spell casting are childish, often surpassed by even the most inexperienced of apprentices."
  trait_education_arcane_2:0 "Mediocre wizard"
- trait_education_arcane_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a mediocre practitioner of the arcane arts. Though a wizard by training, due to some defect, whether that defect be esoteric or mundane, [ROOT.GetCharacter.GetSheHe] is a less capable spell caster than others."
+ trait_education_arcane_2_character_desc:0 "[ROOT.Char.GetFirstNameNoTooltip] is a mediocre practitioner of the arcane arts. Though a wizard by training, due to some defect, whether that defect be esoteric or mundane, [ROOT.Char.GetSheHe] is a less capable spell caster than others."
  trait_education_arcane_3:0 "Wizard"
- trait_education_arcane_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a well respected practitioner of the arcane arts, capable of creating spells with finesse and ease."
+ trait_education_arcane_3_character_desc:0 "[ROOT.Char.GetFirstNameNoTooltip] is a well respected practitioner of the arcane arts, capable of creating spells with finesse and ease."
  trait_education_arcane_4:0 "Elite wizard"
- trait_education_arcane_4_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is one of the foremost experts on magic in the world. [ROOT.GetSheHe|U] is a prodigy in both the theory and practical execution of spell casting."
+ trait_education_arcane_4_character_desc:0 "[ROOT.Char.GetFirstNameNoTooltip] is one of the foremost experts on magic in the world. [ROOT.Char.GetSheHe|U] is a prodigy in both the theory and practical execution of spell casting."
  #events
  #education
  education_arcane:0 "Arcane Education" 
