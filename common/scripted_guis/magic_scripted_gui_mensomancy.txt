@@ -421,7 +421,6 @@ sculpt_mind_spell = {
 		AND = {
 			has_variable_list = selected_list_options
 			variable_list_size = { name = selected_list_options value > 0 }
-			num_target_personality_traits <= personality_trait_limit
 			has_enough_mana_trigger = { SPELL = sculpt_mind_spell }
 		}
 	}
