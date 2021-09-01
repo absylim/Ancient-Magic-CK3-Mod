@@ -183,7 +183,7 @@
 						text_multi = {
 							margin = { 20 20 }
 							visible = "[GetVariableSystem.Exists('current_spell_selected')]"
-							text = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End)]"
+							text = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
 							size = { 400 160 }
 							align = center
 							using = Background_Area_Dark
@@ -198,9 +198,9 @@
 					expand = {}
 					button_tertiary_magic = {
 						text = "CAST_SPELL"
-						enabled = "[And(GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End),GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End))]"
-						tooltip = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End)]"
-						onclick = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End)]"
+						enabled = "[And(GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End),GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End))]"
+						tooltip = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
+						onclick = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
 						onclick = "[GetScriptedGui('toggle_magic_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
 					}
