@@ -137,7 +137,7 @@
 											margin = { 10 0 }
 											spacer = { size = { 15 0 } }
 											text_single = {
-												text = "[Localize(Concatenate(Scope.GetFlagName,'_gui_name'))]"
+												text = "[Localize(Concatenate(Scope.GetFlagName,'_name'))]"
 												minimumsize = { 160 -1 }
 											}
 											expand = {}
@@ -419,7 +419,7 @@
 										margin = { 10 10 }
 										spacer = { size = { 15 0 } }
 										text_single = {
-											text = "[Localize(Concatenate(Scope.GetFlagName,'_list_gui_name'))]"
+											text = "[Localize(Concatenate(Scope.GetFlagName,'_list_name'))]"
 											minimumsize = { 200% -1 }
 										}
 										expand = {}

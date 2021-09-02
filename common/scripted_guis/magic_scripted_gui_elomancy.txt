@@ -13,11 +13,11 @@ flame_aura_spell = {
 			add_character_modifier = flame_aura_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = flame_aura_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = flame_aura_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = flame_aura_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_opposite_mana_gen_tooltip = { VALUE = flame_aura_spell_gen_cost_individual }
 		}
 	}
 }
@@ -66,11 +66,11 @@ flaming_weapons_spell = {
 			add_character_modifier = flaming_weapons_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = flaming_weapons_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = flaming_weapons_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = flaming_weapons_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_opposite_mana_gen_tooltip = { VALUE = flaming_weapons_spell_gen_cost_individual }
 		}
 	}
 }
@@ -119,11 +119,11 @@ living_earthworks_spell = {
 			add_character_modifier = living_earthworks_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = living_earthworks_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = living_earthworks_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = living_earthworks_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_opposite_mana_gen_tooltip = { VALUE = living_earthworks_spell_gen_cost_individual }
 		}
 	}
 }
@@ -235,11 +235,11 @@ control_water_spell = {
 			add_character_modifier = control_water_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = control_water_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = control_water_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = control_water_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_opposite_mana_gen_tooltip = { VALUE = control_water_spell_gen_cost_individual }
 		}
 	}
 }
@@ -288,11 +288,11 @@ drought_spell = {
 			add_character_modifier = drought_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = drought_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = drought_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = drought_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_opposite_mana_gen_tooltip = { VALUE = drought_spell_gen_cost_individual }
 		}
 	}
 }
@@ -341,11 +341,11 @@ elemental_warrior_spell = {
 			add_character_modifier = elemental_warrior_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = elemental_warrior_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
+			change_mana_gen_tooltip = { VALUE = elemental_warrior_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = elemental_warrior_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_large }
+			change_opposite_mana_gen_tooltip = { VALUE = elemental_warrior_spell_gen_cost_individual }
 		}
 	}
 }

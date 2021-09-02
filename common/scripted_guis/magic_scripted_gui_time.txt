@@ -13,11 +13,11 @@ glimpse_the_future_spell = {
 			add_character_modifier = glimpse_the_future_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = glimpse_the_future_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = glimpse_the_future_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = glimpse_the_future_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_opposite_mana_gen_tooltip = { VALUE = glimpse_the_future_spell_gen_cost_individual }
 		}
 	}
 }
@@ -66,11 +66,11 @@ financial_times_spell = {
 			add_character_modifier = financial_times_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = financial_times_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = financial_times_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = financial_times_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_opposite_mana_gen_tooltip = { VALUE = financial_times_spell_gen_cost_individual }
 		}
 	}
 }
@@ -119,11 +119,11 @@ celerity_spell = {
 			add_character_modifier = celerity_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = celerity_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = celerity_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = celerity_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_opposite_mana_gen_tooltip = { VALUE = celerity_spell_gen_cost_individual }
 		}
 	}
 }
@@ -172,11 +172,11 @@ mass_celerity_spell = {
 			add_character_modifier = mass_celerity_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = mass_celerity_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = mass_celerity_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = mass_celerity_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_opposite_mana_gen_tooltip = { VALUE = mass_celerity_spell_gen_cost_individual }
 		}
 	}
 }
@@ -214,34 +214,38 @@ mass_celerity_spell_has_list = {
 slowness_spell = {
 	scope = character
 	is_shown = {
-		AND = {
-			OR = {
-				NOT = { has_variable = slowness_target }
-				var:slowness_target = scope:spell_target
+		OR = {
+			AND = {
+				NOT = { scope:spell_target = { has_character_modifier = slowness_modifier } }
+				OR = {
+					NOT = { has_variable_list = slowness_spell_targets }
+					variable_list_size = { name = slowness_spell_targets value < 3 }
+				}
 			}
-			NOT = { this = scope:spell_target }
+			AND = {
+				has_variable_list = slowness_spell_targets
+				is_target_in_variable_list = { name = slowness_spell_targets target = scope:spell_target }
+			}
 		}
+		NOT = { this = scope:spell_target }
 	}
 	is_valid = {
 		has_enough_mana_trigger = { SPELL = slowness_spell }
 	}
 	effect = {
 		if = {
-			limit = { NOT = { scope:spell_target = { has_character_modifier = slowness_modifier } } }
-			set_variable = {
-				name = slowness_target
-				value = scope:spell_target
-			}
-			#should be var:slowness_target but the loc key doesn't have access to that until the script sets it
+			limit = { is_target_in_variable_list = { name = slowness_spell_targets target = scope:spell_target } }
+			remove_list_variable = { name = slowness_spell_targets target = scope:spell_target }
+			scope:spell_target = { remove_all_character_modifier_instances = slowness_modifier }
+			change_opposite_mana_gen_tooltip = { VALUE = slowness_spell_gen_cost_individual }
+		}
+		else = {
+			save_temporary_scope_value_as = { name = spell_cost value = slowness_spell_cost }
+			add_to_variable_list = { name = master_of_time_spell_targets target = scope:spell_target }
 			scope:spell_target = { add_character_modifier = slowness_modifier }
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = slowness_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
-		}
-		else = {
-			var:slowness_target = { remove_all_character_modifier_instances = slowness_modifier }
-			remove_variable = slowness_target
-			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = slowness_spell_gen_cost_individual }
 		}
 	}
 }
@@ -279,34 +283,38 @@ slowness_spell_has_list = {
 mass_slowness_spell = {
 	scope = character
 	is_shown = {
-		AND = {
-			OR = {
-				NOT = { has_variable = mass_slowness_target }
-				var:mass_slowness_target = scope:spell_target
+		OR = {
+			AND = {
+				NOT = { scope:spell_target = { has_character_modifier = mass_slowness_modifier } }
+				OR = {
+					NOT = { has_variable_list = mass_slowness_spell_targets }
+					variable_list_size = { name = mass_slowness_spell_targets value < 3 }
+				}
 			}
-			NOT = { this = scope:spell_target }
+			AND = {
+				has_variable_list = mass_slowness_spell_targets
+				is_target_in_variable_list = { name = mass_slowness_spell_targets target = scope:spell_target }
+			}
 		}
+		NOT = { this = scope:spell_target }
 	}
 	is_valid = {
 		has_enough_mana_trigger = { SPELL = mass_slowness_spell }
 	}
 	effect = {
 		if = {
-			limit = { NOT = { scope:spell_target = { has_character_modifier = mass_slowness_modifier } } }
-			set_variable = {
-				name = mass_slowness_target
-				value = scope:spell_target
-			}
-			#should be var:mass_slowness_target but the loc key doesn't have access to that until the script sets it
+			limit = { is_target_in_variable_list = { name = mass_slowness_spell_targets target = scope:spell_target } }
+			remove_list_variable = { name = mass_slowness_spell_targets target = scope:spell_target }
+			scope:spell_target = { remove_all_character_modifier_instances = mass_slowness_modifier }
+			change_opposite_mana_gen_tooltip = { VALUE = mass_slowness_spell_gen_cost_individual }
+		}
+		else = {
+			save_temporary_scope_value_as = { name = spell_cost value = mass_slowness_spell_cost }
+			add_to_variable_list = { name = master_of_time_spell_targets target = scope:spell_target }
 			scope:spell_target = { add_character_modifier = mass_slowness_modifier }
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = mass_slowness_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
-		}
-		else = {
-			var:mass_slowness_target = { remove_all_character_modifier_instances = mass_slowness_modifier }
-			remove_variable = mass_slowness_target
-			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = mass_slowness_spell_gen_cost_individual }
 		}
 	}
 }
@@ -355,11 +363,11 @@ temporal_manipulation_spell = {
 			add_character_modifier = temporal_manipulation_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = temporal_manipulation_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
+			change_mana_gen_tooltip = { VALUE = temporal_manipulation_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = temporal_manipulation_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_large }
+			change_opposite_mana_gen_tooltip = { VALUE = temporal_manipulation_spell_gen_cost_individual }
 		}
 	}
 }
@@ -408,11 +416,11 @@ haste_spell = {
 			add_character_modifier = magic_haste_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = haste_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = haste_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = magic_haste_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_opposite_mana_gen_tooltip = { VALUE = haste_spell_gen_cost_individual }
 		}
 	}
 }
@@ -452,15 +460,15 @@ master_of_time_spell = {
 	is_shown = {
 		OR = {
 			AND = {
-				NOT = { has_trait = immortal }
+				NOT = { scope:spell_target = { has_trait = immortal } }
 				OR = {
-					NOT = { has_variable_list = immortals_list }
-					variable_list_size = { name = immortals_list value < 3 }
+					NOT = { has_variable_list = master_of_time_spell_targets }
+					variable_list_size = { name = master_of_time_spell_targets value < 3 }
 				}
 			}
 			AND = {
-				has_variable_list = immortals_list
-				is_target_in_variable_list = { name = immortals_list target = scope:spell_target }
+				has_variable_list = master_of_time_spell_targets
+				is_target_in_variable_list = { name = master_of_time_spell_targets target = scope:spell_target }
 			}
 		}
 	}
@@ -469,16 +477,17 @@ master_of_time_spell = {
 	}
 	effect = {
 		if = {
-			limit = { is_target_in_variable_list = { name = immortals_list target = scope:spell_target } }
+			limit = { is_target_in_variable_list = { name = master_of_time_spell_targets target = scope:spell_target } }
+			remove_list_variable = { name = master_of_time_spell_targets target = scope:spell_target }
 			scope:spell_target = { remove_trait = immortal }
-			remove_list_variable = { name = immortals_list target = scope:spell_target }
-			change_mana_gen_tooltip = { VALUE = mana_drain_large }
+			change_opposite_mana_gen_tooltip = { VALUE = master_of_time_spell_gen_cost_individual }
 		}
 		else = {
+			save_temporary_scope_value_as = { name = spell_cost value = master_of_time_spell_cost }
 			scope:spell_target = { add_trait = immortal }
-			add_to_variable_list = { name = immortals_list target = scope:spell_target }
-			deduct_mana_with_tooltip = { VALUE = master_of_time_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
+			add_to_variable_list = { name = master_of_time_spell_targets target = scope:spell_target }
+			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+			change_mana_gen_tooltip = { VALUE = master_of_time_spell_gen_cost_individual }
 		}
 	}
 }

@@ -5,13 +5,14 @@ rewrite_beauty_spell = {
 		always = yes
 	}
 	is_valid = {
-		AND = {
-			has_variable_list = selected_list_options
-			variable_list_size = { name = selected_list_options value = 1 }
-			has_enough_mana_trigger = { SPELL = rewrite_beauty_spell }
-		}
+		has_made_selection_trigger = yes
+		has_enough_mana_trigger = { SPELL = rewrite_beauty_spell }
 	}
 	effect = {
+		save_temporary_scope_value_as = {
+			name = spell_cost
+			value = rewrite_beauty_spell_cost
+		}
 		scope:spell_target = {
 			if = {
 				limit = { is_itpp_installed_trigger = yes }
@@ -29,14 +30,12 @@ rewrite_beauty_spell = {
 				remove_trait = beauty_bad_4
 				remove_trait = beauty_bad_5
 			}
-			every_in_list = {
-				variable = selected_list_options
-				scope:spell_target = {
-					add_or_remove_trait_effect = { FLAG = prev }
-				}
-			}
 		}
-		deduct_mana_with_tooltip = { VALUE = rewrite_beauty_spell_cost }
+		every_in_list = {
+			variable = selected_list_options
+			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 	}
 }
 
@@ -95,13 +94,14 @@ rewrite_physique_spell = {
 		}
 	}
 	is_valid = {
-		AND = {
-			has_variable_list = selected_list_options
-			variable_list_size = { name = selected_list_options value = 1 }
-			has_enough_mana_trigger = { SPELL = rewrite_physique_spell }
-		}
+		has_made_selection_trigger = yes
+		has_enough_mana_trigger = { SPELL = rewrite_physique_spell }
 	}
 	effect = {
+		save_temporary_scope_value_as = {
+			name = spell_cost
+			value = rewrite_physique_spell_cost
+		}
 		scope:spell_target = {
 			if = {
 				limit = { is_itpp_installed_trigger = yes }
@@ -119,14 +119,12 @@ rewrite_physique_spell = {
 				remove_trait = physique_bad_4
 				remove_trait = physique_bad_5
 			}
-			every_in_list = {
-				variable = selected_list_options
-				scope:spell_target = {
-					add_or_remove_trait_effect = { FLAG = prev }
-				}
-			}
 		}
-		deduct_mana_with_tooltip = { VALUE = rewrite_physique_spell_cost }
+		every_in_list = {
+			variable = selected_list_options
+			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 	}
 }
 
@@ -185,13 +183,14 @@ rewrite_intellect_spell = {
 		}
 	}
 	is_valid = {
-		AND = {
-			has_variable_list = selected_list_options
-			variable_list_size = { name = selected_list_options value = 1 }
-			has_enough_mana_trigger = { SPELL = rewrite_intellect_spell }
-		}
+		has_made_selection_trigger = yes
+		has_enough_mana_trigger = { SPELL = rewrite_intellect_spell }
 	}
 	effect = {
+		save_temporary_scope_value_as = {
+			name = spell_cost
+			value = rewrite_intellect_spell_cost
+		}
 		scope:spell_target = {
 			if = {
 				limit = { is_itpp_installed_trigger = yes }
@@ -209,14 +208,12 @@ rewrite_intellect_spell = {
 				remove_trait = intellect_bad_4
 				remove_trait = intellect_bad_5
 			}
-			every_in_list = {
-				variable = selected_list_options
-				scope:spell_target = {
-					add_or_remove_trait_effect = { FLAG = prev }
-				}
-			}
 		}
-		deduct_mana_with_tooltip = { VALUE = rewrite_intellect_spell_cost }
+		every_in_list = {
+			variable = selected_list_options
+			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
+		}
+		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
 	}
 }
 
@@ -272,11 +269,8 @@ sculpter_of_flesh_spell = {
 		always = yes
 	}
 	is_valid = {
-		AND = {
-			has_variable_list = selected_list_options
-			variable_list_size = { name = selected_list_options value > 0 }
-			has_enough_mana_trigger = { SPELL = sculpter_of_flesh_spell }
-		}
+		has_made_selection_trigger = yes
+		has_enough_mana_trigger = { SPELL = sculpter_of_flesh_spell }
 	}
 	effect = {
 		ordered_in_list = {
@@ -325,11 +319,8 @@ fertility_control_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		AND = {
-			has_variable_list = selected_list_options
-			variable_list_size = { name = selected_list_options value = 1 }
-			has_enough_mana_trigger = { SPELL = fertility_control_spell }
-		}
+		has_made_selection_trigger = yes
+		has_enough_mana_trigger = { SPELL = fertility_control_spell }
 	}
 	effect = {
 		every_in_list = {
@@ -342,12 +333,12 @@ fertility_control_spell = {
 						scope:spell_target = { add_character_modifier = biomantic_fertility_modifier }
 						prev = {
 							deduct_mana_with_tooltip = { VALUE = fertility_control_spell_cost }
-							deduct_mana_gen_tooltip = { VALUE = mana_drain_small }
+							change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual }
 						}
 					}
 					else = {
 						scope:spell_target = { remove_all_character_modifier_instances = biomantic_fertility_modifier }
-						prev = { change_mana_gen_tooltip = { VALUE = mana_drain_small } }
+						prev = { change_opposite_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual } }
 					}
 				}
 				flag:dec_fertility = {
@@ -356,12 +347,12 @@ fertility_control_spell = {
 						scope:spell_target = { add_character_modifier = biomantic_infertility_modifier }
 						prev = {
 							deduct_mana_with_tooltip = { VALUE = fertility_control_spell_cost }
-							deduct_mana_gen_tooltip = { VALUE = mana_drain_small }
+							change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual }
 						}
 					}
 					else = {
 						scope:spell_target = { remove_all_character_modifier_instances = biomantic_infertility_modifier }
-						prev = { change_mana_gen_tooltip = { VALUE = mana_drain_small } }
+						prev = { change_opposite_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual } }
 					}
 				}
 			}

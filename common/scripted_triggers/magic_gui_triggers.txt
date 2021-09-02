@@ -1,4 +1,15 @@
-﻿is_magic_aura_trigger = {
+﻿has_made_selection_trigger = {
+	custom_description = {
+		text = "has_made_selection_trigger"
+		has_variable_list = selected_list_options
+		trigger_if = {
+			limit = { has_variable_list = selected_list_options }
+			variable_list_size = { name = selected_list_options value > 0 }
+		}
+	}
+}
+
+is_magic_aura_trigger = {
 	switch = {
 		trigger = $SPELL$
 		flag:glimpse_the_future_spell = { always = yes }

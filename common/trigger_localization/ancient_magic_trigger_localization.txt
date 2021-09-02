@@ -2,6 +2,10 @@
 	global = AM_HAS_NO_POWERFUL_VASSAL_FOLLOWING_OWN_FAITH
 }
 
+has_made_selection_trigger = {
+	global = HAS_MADE_SELECTION
+}
+
 has_enough_mana_trigger = {
 	global = GLOBAL_HAS_ENOUGH_MANA
 	first = FIRST_HAS_ENOUGH_MANA

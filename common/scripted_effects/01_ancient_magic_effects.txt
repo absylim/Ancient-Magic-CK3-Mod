@@ -40,18 +40,12 @@ change_mana_gen_tooltip = {
 	trigger_event = { on_action = on_reset_mana_system }
 }
 
-deduct_mana_gen_tooltip = {
-	if = {
-		limit = { $VALUE$ < 0 }
-		change_mana_gen_tooltip = { VALUE = $VALUE$ }
+change_opposite_mana_gen_tooltip = {
+	save_temporary_scope_value_as = {
+		name = neg_value
+		value = { value = 0 subtract = $VALUE$ }
 	}
-	else = {
-		save_temporary_scope_value_as = {
-			name = value_neg
-			value = { value = 0 subtract = $VALUE$ }
-		}
-		change_mana_gen_tooltip = { VALUE = scope:value_neg }
-	}
+	change_mana_gen_tooltip = { VALUE = scope:neg_value }
 }
 
 change_ancestral_guardians_count = {

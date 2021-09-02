@@ -1,34 +1,31 @@
 ﻿l_english:
-  #custom localization
- has_ley_line_modifier:0 "[PROVINCE.GetName] has [ley_line|E]"
- has_focal_point_modifier:0 "[PROVINCE.GetName] has [focal_point|E]"
+ #faith
+ witchcraft_illegal_name: "Witchraft is Criminal"
+ 
+ #custom localization
+ has_ley_line_modifier: "[PROVINCE.GetName] has [ley_line|E]"
+ has_focal_point_modifier: "[PROVINCE.GetName] has [focal_point|E]"
 
- #hud
- mana_hud_tooltip_total:0 "Maximum [mana|E]:"
- mana_hud_tooltip_generation:0 "Monthly Generation"
- mana_hud_tooltip_drain:0 "Monthly Drain"
- mana_hud_tooltip_change:0 "Total Monthly Change:"
- MANA_GENERATION:0 "[GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen')|+=0]"
- MAXIMUM_MANA_TOTAL:0 "[GetPlayer.MakeScope.ScriptValue('ancient_magic_max_mana')|+0]"
- MANA_GENERATION_TOOLTIP:0 "#P [GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen_gen_only')|+=0]#!"
- MANA_DRAIN_TOOLTIP:0 "#N [GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen_drain_only')|+=0]#!"
- mana_breakdown_gain_perks:0 "[GetTrait('mage').GetName(GetPlayer)] [perks|E]"
- mana_breakdown_gain_potency:0 "[magic_potential|E]"
- mana_breakdown_gain_circles:0 "$building_type_ancient_magic_mana_circle_01$s"
- mana_breakdown_gain_lifestyle:0 "[GetFocus('magic_mana_focus').GetName]"
- mana_breakdown_gain_legacy:0 "[GetDynastyPerk('arcane_legacy_2').GetName]"
- mana_breakdown_drain_auras:0 "[mana_drain|E]"
- mana_breakdown_drain_lifestyle:0 "[GetFocus('magic_arcana_focus').GetName]"
- mana_breakdown_drain_disease1:0 "[GetTrait('mana_devouring_1').GetName(GetPlayer)]"
- mana_breakdown_drain_disease2:0 "[GetTrait('mana_devouring_2').GetName(GetPlayer)]"
- MONTHLY_MANA_GAIN_PERKS:0 "[GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen_perks')|+=0]"
- MONTHLY_MANA_GAIN_POTENCY:0 "[GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen_potency')|+=0]"
- MONTHLY_MANA_GAIN_CIRCLES:0 "[GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen_circles')|+=0]"
- MONTHLY_MANA_GAIN_LIFESTYLE:0 "[GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen_lifestyle')|+=0]"
- MONTHLY_MANA_GAIN_LEGACY:0 "[GetPlayer.MakeScope.ScriptValue('mana_gen_legacy_2')|+=0]"
- MONTHLY_MANA_DRAIN_AURAS:0 "[GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_drain_auras')|+=0]"
- MONTHLY_MANA_DRAIN_LIFESTYLE:0 "[GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_drain_lifestyle')|+=0]"
- MONTHLY_MANA_DRAIN_DISEASE:0 "[GetPlayer.MakeScope.ScriptValue('mana_drain_disease')|+=0]"
+ # HUD
+ MAXIMUM_MANA_NAME: "Maximum [mana|E]:"
+ MANA_INCOME_NAME: "Monthly Generation"
+ MANA_EXPENSES_NAME: "Monthly Drain"
+ MANA_GENERATION_NAME: "Total Monthly Change:"
+ mana_breakdown_gen_perks: "[GetTrait('mage').GetName(GetPlayer)] [perks|E]"
+ mana_breakdown_gen_potency: "[magic_potential|E]"
+ mana_breakdown_gen_circles: "$building_type_ancient_magic_mana_circle_01$s"
+ mana_breakdown_gen_lifestyle: "[GetFocus('magic_mana_focus').GetName]"
+ mana_breakdown_gen_legacy: "[GetDynastyPerk('arcane_legacy_2').GetName]"
+ mana_breakdown_drain_auras: "[mana_drain|E]"
+ mana_breakdown_drain_lifestyle: "[GetFocus('magic_arcana_focus').GetName]"
+ mana_breakdown_drain_disease: "[GetTrait('mana_devouring_1').GetName(GetPlayer)]"
 
- #vanilla bugfix
- TRAIT_DESC_POSIITIVE_FOR_THEM:0 "$TRAIT_DESC_POSITIVE_FOR_THEM$"
+ # HUD traits
+ magic_potential_1_name: "$trait_magic_potential_1$"
+ magic_potential_2_name: "$trait_magic_potential_2$"
+ magic_potential_3_name: "$trait_magic_potential_3$"
+ mane_devouring_1_name: "$trait_mana_devouring_1$"
+ mana_devouring_2_name: "$trait_mana_devouring_2$"
+
+ # vanilla bugfix
+ TRAIT_DESC_POSIITIVE_FOR_THEM: "$TRAIT_DESC_POSITIVE_FOR_THEM$"
