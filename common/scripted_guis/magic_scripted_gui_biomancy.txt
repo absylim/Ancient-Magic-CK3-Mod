@@ -338,7 +338,7 @@ fertility_control_spell = {
 					}
 					else = {
 						scope:spell_target = { remove_all_character_modifier_instances = biomantic_fertility_modifier }
-						prev = { change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual } }
+						prev = { change_opposite_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual } }
 					}
 				}
 				flag:dec_fertility = {
@@ -352,7 +352,7 @@ fertility_control_spell = {
 					}
 					else = {
 						scope:spell_target = { remove_all_character_modifier_instances = biomantic_infertility_modifier }
-						prev = { change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual } }
+						prev = { change_opposite_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual } }
 					}
 				}
 			}

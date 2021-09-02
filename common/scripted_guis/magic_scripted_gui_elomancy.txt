@@ -17,7 +17,7 @@ flame_aura_spell = {
 		}
 		else = {
 			remove_all_character_modifier_instances = flame_aura_modifier
-			change_mana_gen_tooltip = { VALUE = flame_aura_spell_gen_cost_individual }
+			change_opposite_mana_gen_tooltip = { VALUE = flame_aura_spell_gen_cost_individual }
 		}
 	}
 }
@@ -70,7 +70,7 @@ flaming_weapons_spell = {
 		}
 		else = {
 			remove_all_character_modifier_instances = flaming_weapons_modifier
-			change_mana_gen_tooltip = { VALUE = flaming_weapons_spell_gen_cost_individual }
+			change_opposite_mana_gen_tooltip = { VALUE = flaming_weapons_spell_gen_cost_individual }
 		}
 	}
 }
@@ -123,7 +123,7 @@ living_earthworks_spell = {
 		}
 		else = {
 			remove_all_character_modifier_instances = living_earthworks_modifier
-			change_mana_gen_tooltip = { VALUE = living_earthworks_spell_gen_cost_individual }
+			change_opposite_mana_gen_tooltip = { VALUE = living_earthworks_spell_gen_cost_individual }
 		}
 	}
 }
@@ -239,7 +239,7 @@ control_water_spell = {
 		}
 		else = {
 			remove_all_character_modifier_instances = control_water_modifier
-			change_mana_gen_tooltip = { VALUE = control_water_spell_gen_cost_individual }
+			change_opposite_mana_gen_tooltip = { VALUE = control_water_spell_gen_cost_individual }
 		}
 	}
 }
@@ -292,7 +292,7 @@ drought_spell = {
 		}
 		else = {
 			remove_all_character_modifier_instances = drought_modifier
-			change_mana_gen_tooltip = { VALUE = drought_spell_gen_cost_individual }
+			change_opposite_mana_gen_tooltip = { VALUE = drought_spell_gen_cost_individual }
 		}
 	}
 }
@@ -345,7 +345,7 @@ elemental_warrior_spell = {
 		}
 		else = {
 			remove_all_character_modifier_instances = elemental_warrior_modifier
-			change_mana_gen_tooltip = { VALUE = elemental_warrior_spell_gen_cost_individual }
+			change_opposite_mana_gen_tooltip = { VALUE = elemental_warrior_spell_gen_cost_individual }
 		}
 	}
 }

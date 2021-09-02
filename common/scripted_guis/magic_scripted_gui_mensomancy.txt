@@ -230,7 +230,7 @@ beguiling_aura_spell = { # aura of majesty
 		}
 		else = {
 			remove_all_character_modifier_instances = beguiling_aura_modifier
-			change_mana_gen_tooltip = { VALUE = beguiling_aura_spell_gen_cost_individual }
+			change_opposite_mana_gen_tooltip = { VALUE = beguiling_aura_spell_gen_cost_individual }
 		}
 	}
 }
@@ -377,7 +377,7 @@ enchanting_aura_spell = { # aura of truth
 		}
 		else = {
 			remove_all_character_modifier_instances = enchanting_aura_modifier
-			change_mana_gen_tooltip = { VALUE = enchanting_aura_spell_gen_cost_individual }
+			change_opposite_mana_gen_tooltip = { VALUE = enchanting_aura_spell_gen_cost_individual }
 		}
 	}
 }

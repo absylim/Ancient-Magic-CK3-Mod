@@ -27,12 +27,10 @@ reset_slowness_drain = {
 	effect = {
 		every_living_character = {
 			limit = {
-				AND = {
-					has_variable = slowness_target
-					var:slowness_target = prev
-				}
+				has_variable_list = slowness_spell_targets
+				is_target_in_variable_list = { name = slowness_spell_targets target = prev }
 			}
-			remove_variable = slowness_target
+			remove_list_variable = { name = slowness_spell_targets target = scope:spell_target }
 			trigger_event = { on_action = on_reset_mana_system }
 		}
 	}
@@ -46,12 +44,10 @@ reset_mass_slowness_drain = {
 	effect = {
 		every_living_character = {
 			limit = {
-				AND = {
-					has_variable = mass_slowness_target
-					var:mass_slowness_target = prev
-				}
+				has_variable_list = mass_slowness_spell_targets
+				is_target_in_variable_list = { name = mass_slowness_spell_targets target = prev }
 			}
-			remove_variable = mass_slowness_target
+			remove_list_variable = { name = mass_slowness_spell_targets target = scope:spell_target }
 			trigger_event = { on_action = on_reset_mana_system }
 		}
 	}
