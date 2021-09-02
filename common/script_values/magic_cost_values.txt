@@ -1,6 +1,7 @@
 ﻿#error catching
 dummy_spell_cost = { value = 0 }
 
+## Spell mana costs
 #Time
 glimpse_the_future_spell_cost = { value = 100 }
 financial_times_spell_cost = { value = 100 }
@@ -206,3 +207,194 @@ sculpt_mind_spell_cost = {
 	multiply = 400
 }
 master_of_puppets_spell_cost = { value = 600 }
+
+## Aura spell gen costs
+# Time
+glimpse_the_future_spell_gen_cost_individual = { value = 15 }
+glimpse_the_future_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = glimpse_the_future_modifier }
+		add = -1
+	}
+	multiply = glimpse_the_future_spell_gen_cost_individual
+}
+financial_times_spell_gen_cost_individual = { value = 15 }
+financial_times_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = financial_times_modifier }
+		add = -1
+	}
+	multiply = financial_times_spell_gen_cost_individual
+}
+celerity_spell_gen_cost_individual = { value = 15 }
+celerity_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = celerity_modifier }
+		add = -1
+	}
+	multiply = celerity_spell_gen_cost_individual
+}
+mass_celerity_spell_gen_cost_individual = { value = 15 }
+mass_celerity_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = mass_celerity_modifier }
+		add = -1
+	}
+	multiply = mass_celerity_spell_gen_cost_individual
+}
+slowness_spell_gen_cost_individual = { value = 15 }
+slowness_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = {
+			has_variable = slowness_target
+			exists = var:slowness_target
+			var:slowness_target = { has_character_modifier = slowness_modifier }
+		}
+		add = -1
+	}
+	multiply = slowness_spell_gen_cost_individual
+}
+mass_slowness_spell_gen_cost_individual = { value = 15 }
+mass_slowness_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = {
+			has_variable = slowness_target
+			exists = var:slowness_target
+			var:slowness_target = { has_character_modifier = mass_slowness_modifier }
+		}
+		add = -1
+	}
+	multiply = mass_slowness_spell_gen_cost_individual
+}
+temporal_manipulation_spell_gen_cost_individual = { value = 30 }
+temporal_manipulation_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = temporal_manipulation_modifier }
+		add = -1
+	}
+	multiply = temporal_manipulation_spell_gen_cost_individual
+}
+haste_spell_gen_cost_individual = { value = 15 }
+haste_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = magic_haste_modifier }
+		add = -1
+	}
+	multiply = haste_spell_gen_cost_individual
+}
+master_of_time_spell_gen_cost_individual = { value = 30 }
+master_of_time_spell_gen_cost = {
+	value = 0
+	every_in_list = {
+		variable = immortals_list
+		limit = { exists = this has_trait = immortal }
+		add = -1
+	}
+	multiply = master_of_time_spell_gen_cost_individual
+}
+
+# Elomancy
+flame_aura_spell_gen_cost_individual = { value = 15 }
+flame_aura_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = flame_aura_modifier }
+		add = -1
+	}
+	multiply = flame_aura_spell_gen_cost_individual
+}
+flaming_weapons_spell_gen_cost_individual = { value = 15 }
+flaming_weapons_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = flaming_weapons_modifier }
+		add = -1
+	}
+	multiply = flaming_weapons_spell_gen_cost_individual
+}
+living_earthworks_spell_gen_cost_individual = { value = 15 }
+living_earthworks_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = living_earthworks_modifier }
+		add = -1
+	}
+	multiply = living_earthworks_spell_gen_cost_individual
+}
+control_water_spell_gen_cost_individual = { value = 15 }
+control_water_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = control_water_modifier }
+		add = -1
+	}
+	multiply = control_water_spell_gen_cost_individual
+}
+drought_spell_gen_cost_individual = { value = 15 }
+drought_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = drought_modifier }
+		add = -1
+	}
+	multiply = drought_spell_gen_cost_individual
+}
+elemental_warrior_spell_gen_cost_individual = { value = 30 }
+elemental_warrior_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = elemental_warrior_modifier }
+		add = -1
+	}
+	multiply = elemental_warrior_spell_gen_cost_individual
+}
+
+# Necromancy
+aura_of_death_spell_gen_cost_individual = { value = 30 }
+aura_of_death_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = aura_of_death_modifier }
+		add = -1
+	}
+	multiply = aura_of_death_spell_gen_cost_individual
+}
+
+# Biomancy
+fertility_control_spell_gen_cost_individual = { value = 10 }
+fertility_control_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { OR = { has_modifier = biomantic_fertility_modifier has_modifier = biomantic_infertility_modifier } }
+		add = -1
+	}
+	multiply = fertility_control_spell_gen_cost_individual
+}
+
+# Mensomancy
+beguiling_aura_spell_gen_cost_individual = { value = 15 }
+beguiling_aura_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = beguiling_aura_modifier }
+		add = -1
+	}
+	multiply = beguiling_aura_spell_gen_cost_individual
+}
+enchanting_aura_spell_gen_cost_individual = { value = 30 }
+enchanting_aura_spell_gen_cost = {
+	value = 0
+	if = {
+		limit = { has_modifier = enchanting_aura_modifier }
+		add = -1
+	}
+	multiply = enchanting_aura_spell_gen_cost_individual
+}

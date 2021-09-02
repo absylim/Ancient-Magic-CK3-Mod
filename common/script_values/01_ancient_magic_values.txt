@@ -134,18 +134,25 @@ ancient_magic_mana_gen_drain_only = {
 
 ancient_magic_mana_drain_auras = {
 	value = 0
-	subtract = {
-		value = num_large_auras
-		multiply = mana_drain_large
-	}
-	subtract = {
-		value = num_average_auras
-		multiply = mana_drain_average
-	}
-	subtract = {
-		value = num_small_auras
-		multiply = mana_drain_small
-	}
+	add = glimpse_the_future_spell_gen_cost
+	add = financial_times_spell_gen_cost
+	add = celerity_spell_gen_cost
+	add = mass_celerity_spell_gen_cost
+	add = slowness_spell_gen_cost
+	add = mass_slowness_spell_gen_cost
+	add = temporal_manipulation_spell_gen_cost
+	add = haste_spell_gen_cost
+	add = master_of_time_spell_gen_cost
+	add = flame_aura_spell_gen_cost
+	add = flaming_weapons_spell_gen_cost
+	add = living_earthworks_spell_gen_cost
+	add = control_water_spell_gen_cost
+	add = drought_spell_gen_cost
+	add = elemental_warrior_spell_gen_cost
+	add = aura_of_death_spell_gen_cost
+	add = fertility_control_spell_gen_cost
+	add = beguiling_aura_spell_gen_cost
+	add = enchanting_aura_spell_gen_cost
 }
 
 ancient_magic_mana_drain_lifestyle = {
@@ -161,110 +168,6 @@ ancient_magic_mana_drain_disease = {
 	if = {
 		limit = { has_trait = mana_devouring }
 		add = mana_drain_disease
-	}
-}
-
-num_large_auras = {
-	value = 0
-	if = {
-		limit = { has_character_modifier = temporal_manipulation_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = elemental_warrior_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = aura_of_death_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = enchanting_aura_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_variable_list = immortals_list }
-		every_in_list = {
-			variable = immortals_list
-			limit = { exists = this has_trait = immortal }
-			add = 1
-		}
-	}
-}
-
-num_average_auras = {
-	value = 0
-	if = {
-		limit = { has_character_modifier = magic_haste_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = glimpse_the_future_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = financial_times_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = celerity_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = mass_celerity_modifier }
-		add = 1
-	}
-	if = {
-		limit = {
-			has_variable = slowness_target
-			exists = var:slowness_target
-			var:slowness_target = { has_character_modifier = slowness_modifier }
-		}
-		add = 1
-	}
-	if = {
-		limit = {
-			has_variable = mass_slowness_target
-			exists = var:mass_slowness_target
-			var:mass_slowness_target = { has_character_modifier = mass_slowness_modifier }
-		}
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = flame_aura_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = flaming_weapons_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = living_earthworks_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = control_water_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = drought_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = beguiling_aura_modifier }
-		add = 1
-	}
-}
-
-num_small_auras = {
-	value = 0
-	if = {
-		limit = { has_character_modifier = biomantic_fertility_modifier }
-		add = 1
-	}
-	if = {
-		limit = { has_character_modifier = biomantic_infertility_modifier }
-		add = 1
 	}
 }
 

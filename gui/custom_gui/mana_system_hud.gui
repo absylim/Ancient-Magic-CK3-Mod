@@ -5,6 +5,7 @@ types mana_hud_guis {
 		minimumsize = { 90 0 }
 		margin_left = 7
 		margin_right = 5
+
 		using = tooltip_ne
 
 		tooltipwidget = {
@@ -24,27 +25,6 @@ types mana_hud_guis {
 						layoutpolicy_horizontal = expanding
 						spacing = 5
 						alwaystransparent = no
-
-						hbox = {
-							layoutpolicy_horizontal = expanding
-
-							text_single = {
-								layoutpolicy_horizontal = expanding
-								text = mana_hud_tooltip_total
-								default_format = "#T"
-							}
-
-							text_single = {
-								name = "maximum_mana"
-								text = MAXIMUM_MANA_TOTAL
-							}
-
-							background = {
-								using = Background_Area
-								margin = { 10 0 }
-								margin_bottom = 5
-							}
-						}
 
 						vbox = {
 							layoutpolicy_horizontal = expanding
@@ -324,30 +304,6 @@ types mana_hud_guis {
 								}
 							}
 						}
-
-						hbox = { #Net Gen
-							layoutpolicy_horizontal = expanding
-							datacontext = "[GetScriptedGui( 'hud_positive_net_mana_gen' )]"
-							margin_top = 10
-							margin_bottom = 2
-
-							text_single = {
-								layoutpolicy_horizontal = expanding
-								text = mana_hud_tooltip_change
-								default_format = "#T"
-							}
-
-							text_single = {
-								name = "monthly_gen1"
-								text = MANA_GENERATION
-							}
-
-							background = {
-								using = Background_Area
-								margin = { 10 0 }
-								margin_bottom = 5
-							}
-						}
 					}
 				}
 			}
@@ -442,6 +398,285 @@ types mana_hud_guis {
 						text = "0"
 						max_width = 50
 						default_format = "#low"
+					}
+				}
+			}
+		}
+	}
+
+	## Gold Breakdown Tooltip
+	type widget_mana_gen_breakdown_tooltip = widget {
+		size = { 50 50 }
+		alwaystransparent = no
+
+		block "background" { #### needed to solve the hack for tooltip in Realm View
+			using = DefaultTooltipBackground
+		}
+
+		vbox = {
+			layoutpolicy_horizontal = expanding
+
+			set_parent_size_to_minimum = yes
+			minimumsize = { 280 0 }
+
+			margin = { 15 10 }
+			spacing = 20
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					text = MAXIMUM_MANA_NAME
+					default_format = "#T"
+				}
+
+				text_single = {
+					name = "maximum_mana"
+					text = MAXIMUM_MANA_TOTAL
+				}
+
+				background = {
+					using = Background_Area
+					margin = { 10 0 }
+					margin_bottom = 5
+				}
+			}
+
+			vbox_gen_breakdown = {
+				name = "mana_gen_income"
+				layoutpolicy_horizontal = expanding
+				block "income" {}
+				blockoverride "breakdown_name"
+				{
+					text = "MANA_INCOME_NAME"
+				}
+				blockoverride "datamodel"
+				{
+					datamodel = "[GetGlobalList('mana_gen_income')]"
+				}
+				blockoverride "not_datamodel_has_items"
+				{
+					visible = "[Not(DataModelHasItems( GetGlobalList('mana_gen_income') ))]"
+				}
+				blockoverride "datamodel_has_items"
+				{
+					visible = "[DataModelHasItems( GetGlobalList('mana_gen_income') )]"
+					datacontext = "[GetScriptedGui('mana_gen_income')]"
+				}
+				blockoverride "breakdown_total"
+				{
+					text = "MANA_INCOME_TOTAL"
+				}
+			}
+
+			vbox_gen_breakdown = {
+				name = "mana_gen_expenses"
+				layoutpolicy_horizontal = expanding
+				block "expenses" {}
+				blockoverride "breakdown_name"
+				{
+					text = "MANA_EXPENSES_NAME"
+				}
+				blockoverride "datamodel"
+				{
+					datamodel = "[GetGlobalList('mana_gen_expenses')]"
+				}
+				blockoverride "not_datamodel_has_items"
+				{
+					visible = "[Not(DataModelHasItems(GetGlobalList('mana_gen_expenses')))]"
+				}
+				blockoverride "datamodel_has_items"
+				{
+					visible = "[DataModelHasItems(GetGlobalList('mana_gen_expenses'))]"
+					datacontext = "[GetScriptedGui('mana_gen_expenses')]"
+				}
+				blockoverride "breakdown_total"
+				{
+					text = "MANA_EXPENSES_TOTAL"
+				}
+			}
+
+			hbox = { #Net Gen
+				layoutpolicy_horizontal = expanding
+				margin_top = 10
+				margin_bottom = 2
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					text = mana_hud_tooltip_change
+					default_format = "#T"
+				}
+
+				text_single = {
+					name = "monthly_gen1"
+					text = MANA_GENERATION
+				}
+
+				background = {
+					using = Background_Area
+					margin = { 10 0 }
+					margin_bottom = 5
+				}
+			}
+		}
+	}
+
+	type vbox_gen_breakdown = vbox {
+		spacing = 5
+		alwaystransparent = no
+
+		vbox = {
+			layoutpolicy_horizontal = expanding
+
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				block "breakdown_name" {}
+				default_format = "#T"
+
+				background = {
+					using = Background_Area
+					margin = { 10 0 }
+					margin_bottom = 5
+				}
+			}
+
+			vbox = {
+				name = "values_grid"
+				block "datamodel" {}
+				layoutpolicy_horizontal = expanding
+
+				item = {
+					hbox = {
+						name = "value_breakdown"
+						layoutpolicy_horizontal = expanding
+						spacing = 10
+
+						text_single = {
+							name = "name"
+							layoutpolicy_horizontal = expanding
+							text = "[Localize(Concatenate(Concatenate('mana_breakdown_',Scope.GetFlagName),'_name'))]"
+						}
+
+						text_single = {
+							name = "value_with_tooltip"
+							visible = "[And(GetScriptedGui(Concatenate('hud_mana_',Scope.GetFlagName)).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End), GetScriptGui(Concatenate('hud_mana_',Scope.GetFlagName)).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+							text = "[Localize(Concatenate(Concatenate('mana_breakdown_',Scope.GetFlagName),'_amount'))|L]"
+							align = right
+							default_format = "#high"
+
+							using = tooltip_se
+
+							tooltipwidget = {
+								widget_gen_breakdown_tooltip = {
+									blockoverride "datamodel" {
+										datamodel = "[GetGlobalList(Scope.GetFlagName)]"
+									}
+								}
+							}
+						}
+
+						text_single = {
+							name = "value_with_no_tooltip"
+							visible = "[And( Not(GetScriptedGui(Concatenate('hud_mana_',Scope.GetFlagName)).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)), GetScriptGui(Concatenate('hud_mana_',Scope.GetFlagName)).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End) )]"
+							text = "[Localize(Concatenate(Concatenate('mana_breakdown_',Scope.GetFlagName),'_amount'))]"
+							align = right
+						}
+					}
+				}
+			}
+
+			text_single = {
+				block "not_datamodel_has_items" {}
+				layoutpolicy_horizontal = expanding
+				block "no_values" {
+					text = "VALUE_BREAKDOWN_NO_VALUES"
+				}
+				default_format = "#weak"
+			}
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+
+				margin_top = 10
+
+				divider_light = {
+					layoutpolicy_horizontal = expanding
+				}
+
+				hbox = {
+					block "datamodel_has_items" {}
+					layoutpolicy_horizontal = expanding
+
+					text_single = {
+						visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						layoutpolicy_horizontal = expanding
+
+						text = "VALUE_BREAKDOWN_TOTAL"
+					}
+
+					text_single = {
+						block "breakdown_total" {}
+						default_format = "#high"
+					}
+				}
+			}
+		}
+	}
+
+	type widget_gen_breakdown_tooltip = widget {
+		name = "gen_values_grid"
+		size = { 50 50 }
+		alwaystransparent = no
+
+		background = {
+			using = Background_Area_Border_Solid
+		}
+
+		vbox = {
+			block "datamodel" {}
+			alwaystransparent = no
+			set_parent_size_to_minimum = yes
+			margin = { 17 10 }
+			spacing = 3
+
+			item = {
+				hbox = {
+					name = "value_breakdown"
+					layoutpolicy_horizontal = expanding
+
+					text_single = {
+						name = "name"
+						layoutpolicy_horizontal = expanding
+						text = "[Localize(Scope.GetFlagName)]"
+						min_width = 180
+						max_width = 250
+						fonttintcolor = "[TooltipInfo.GetTintColor]"
+						margin_right = 10
+					}
+
+					text_single= {
+						visible = "[And(ValueBreakdown.HasTooltip, ValueBreakdown.ShouldShowValue)]"
+						name = "value_with_tooltip"
+						text = "[ValueBreakdown.GetValue|L]"
+						align = right
+						fonttintcolor = "[TooltipInfo.GetTintColor]"
+
+						using = tooltip_below
+
+						tooltipwidget = {
+							recursive = yes
+
+							widget_value_breakdown_tooltip = {}
+						}
+					}
+
+					text_single = {
+						visible = "[And( Not(ValueBreakdown.HasTooltip), ValueBreakdown.ShouldShowValue )]"
+						name = "value_with_no_tooltip"
+						text = "[ValueBreakdown.GetValue]"
+						align = right
+						fonttintcolor = "[TooltipInfo.GetTintColor]"
 					}
 				}
 			}

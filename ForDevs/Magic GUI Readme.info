@@ -91,10 +91,10 @@ Add four entries for your spell
       - selected_list_options - list of flags, currently chosen options by the player. This is all options chosen *previously* - all options whose buttons are highlighted on the screen
 
 * 'localization/english/magic_gui_l_english.yml'
- - <spell_name>_gui_name - the name of the spell
+ - <spell_name>_name - the name of the spell
  - <spell_name>_desc - spell description
 For any list options the spell might have:
- - <option_name>_list_gui_name - name of the option
+ - <option_name>_list_name - name of the option
 
 ##### 3. File References #####
 ### 3a. Files
