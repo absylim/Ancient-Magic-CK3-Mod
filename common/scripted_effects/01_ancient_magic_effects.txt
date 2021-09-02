@@ -107,7 +107,7 @@ init_immortal_years_since_master_of_time_spell = {
 }
 
 add_immortal_years_since_master_of_time_spell = {
-	init_immortal_years_since_master_of_time_effect_reset = yes
+	init_immortal_years_since_master_of_time_spell = yes
 	change_variable = { name = immortal_years_since_master_of_time_spell add = 1 }
 }
 
