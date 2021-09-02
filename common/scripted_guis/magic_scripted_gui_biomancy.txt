@@ -26,12 +26,10 @@ rewrite_beauty_spell = {
 				remove_trait = beauty_bad_4
 				remove_trait = beauty_bad_5
 			}
-			every_in_list = {
-				variable = selected_list_options
-				scope:spell_target = {
-					add_or_remove_trait_effect = { FLAG = prev }
-				}
-			}
+		}
+		every_in_list = {
+			variable = selected_list_options
+			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
 		deduct_mana_with_tooltip = { VALUE = rewrite_beauty_spell_cost }
 	}
@@ -113,12 +111,10 @@ rewrite_physique_spell = {
 				remove_trait = physique_bad_4
 				remove_trait = physique_bad_5
 			}
-			every_in_list = {
-				variable = selected_list_options
-				scope:spell_target = {
-					add_or_remove_trait_effect = { FLAG = prev }
-				}
-			}
+		}
+		every_in_list = {
+			variable = selected_list_options
+			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
 		deduct_mana_with_tooltip = { VALUE = rewrite_physique_spell_cost }
 	}
@@ -200,12 +196,10 @@ rewrite_intellect_spell = {
 				remove_trait = intellect_bad_4
 				remove_trait = intellect_bad_5
 			}
-			every_in_list = {
-				variable = selected_list_options
-				scope:spell_target = {
-					add_or_remove_trait_effect = { FLAG = prev }
-				}
-			}
+		}
+		every_in_list = {
+			variable = selected_list_options
+			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
 		deduct_mana_with_tooltip = { VALUE = rewrite_intellect_spell_cost }
 	}
