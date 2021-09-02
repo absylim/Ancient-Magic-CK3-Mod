@@ -481,6 +481,7 @@ master_of_time_spell = {
 			remove_list_variable = { name = master_of_time_spell_targets target = scope:spell_target }
 			scope:spell_target = { remove_trait = immortal }
 			change_opposite_mana_gen_tooltip = { VALUE = master_of_time_spell_gen_cost_individual }
+			remove_immortal_years_since_master_of_time_spell = yes
 		}
 		else = {
 			save_temporary_scope_value_as = { name = spell_cost value = master_of_time_spell_cost }
