@@ -4,7 +4,7 @@
 	}
 
 	is_valid = {
-		num_mage_perks > 0
+		ancient_magic_mana_gen_perks > 0
 	}
 }
 
@@ -14,7 +14,7 @@ hud_mana_gen_potency = {
 	}
 
 	is_valid = {
-		has_trait = magic_potential
+		ancient_magic_mana_gen_potency > 0
 	}
 }
 
@@ -24,7 +24,7 @@ hud_mana_gen_circles = {
 	}
 
 	is_valid = {
-		magic_circles_owned_by_character > 0
+		ancient_magic_mana_gen_circles > 0
 	}
 }
 
@@ -34,7 +34,7 @@ hud_mana_gen_lifestyle = {
 	}
 
 	is_valid = {
-		has_focus = magic_mana_focus
+		ancient_magic_mana_gen_lifestyle > 0
 	}
 }
 
@@ -44,7 +44,7 @@ hud_mana_gen_legacy = {
 	}
 
 	is_valid = {
-		dynasty = { has_dynasty_perk = arcane_legacy_2 }
+		ancient_magic_mana_gen_legacy > 0
 	}
 }
 
@@ -54,11 +54,7 @@ hud_mana_drain_auras = {
 	}
 
 	is_valid = {
-		OR = {
-			num_small_auras > 0
-			num_average_auras > 0
-			num_large_auras > 0
-		}
+		ancient_magic_mana_drain_auras < 0
 	}
 }
 
@@ -68,7 +64,7 @@ hud_mana_drain_lifestyle = {
 	}
 
 	is_valid = {
-		has_focus = magic_arcana_focus
+		ancient_magic_mana_drain_lifestyle < 0
 	}
 }
 
@@ -78,7 +74,7 @@ hud_mana_drain_disease = {
 	}
 
 	is_valid = {
-		has_trait = mana_devouring
+		ancient_magic_mana_drain_disease < 0
 	}
 }
 
@@ -155,27 +151,35 @@ should_show_breakdown_for_flag = {
 			flag:magic_potential_1 = { has_trait = magic_potential_1 }
 			flag:magic_potential_2 = { has_trait = magic_potential_2 }
 			flag:magic_potential_3 = { has_trait = magic_potential_3 }
-			flag:glimpse_the_future_spell = { glimpse_the_future_gen_cost > 0 }
-			flag:financial_times_spell = { financial_times_gen_cost > 0 }
-			flag:celerity_spell = { celerity_gen_cost > 0 }
-			flag:mass_celerity_spell = { mass_celerity_gen_cost > 0 }
-			flag:slowness_spell = { slowness_gen_cost > 0 }
-			flag:mass_slowness_spell = { mass_slowness_gen_cost > 0 }
-			flag:temporal_manipulation_spell = { temporal_manipulation_gen_cost > 0 }
-			flag:haste_spell = { haste_gen_cost > 0 }
-			flag:master_of_time_spell = { master_of_time_gen_cost > 0 }
-			flag:flame_aura_spell = { flame_aura_gen_cost > 0 }
-			flag:flaming_weapons_spell = { flaming_weapons_gen_cost > 0 }
-			flag:living_earthworks_spell = { living_earthworks_gen_cost > 0 }
-			flag:control_water_spell = { control_water_gen_cost > 0 }
-			flag:drought_spell = { drought_gen_cost > 0 }
-			flag:elemental_warrior_spell = { elemental_warrior_gen_cost > 0 }
-			flag:aura_of_death_spell = { aura_of_death_gen_cost > 0 }
-			flag:fertility_control_spell = { fertility_control_gen_cost > 0 }
-			flag:beguiling_aura_spell = { beguiling_aura_gen_cost > 0 }
-			flag:enchanting_aura_spell = { enchanting_aura_gen_cost > 0 }
+			flag:glimpse_the_future_spell = { glimpse_the_future_spell_gen_cost < 0 }
+			flag:financial_times_spell = { financial_times_spell_gen_cost < 0 }
+			flag:celerity_spell = { celerity_spell_gen_cost < 0 }
+			flag:mass_celerity_spell = { mass_celerity_spell_gen_cost < 0 }
+			flag:slowness_spell = { slowness_spell_gen_cost < 0 }
+			flag:mass_slowness_spell = { mass_slowness_spell_gen_cost < 0 }
+			flag:temporal_manipulation_spell = { temporal_manipulation_spell_gen_cost < 0 }
+			flag:haste_spell = { haste_spell_gen_cost < 0 }
+			flag:master_of_time_spell = { master_of_time_spell_gen_cost < 0 }
+			flag:flame_aura_spell = { flame_aura_spell_gen_cost < 0 }
+			flag:flaming_weapons_spell = { flaming_weapons_spell_gen_cost < 0 }
+			flag:living_earthworks_spell = { living_earthworks_spell_gen_cost < 0 }
+			flag:control_water_spell = { control_water_spell_gen_cost < 0 }
+			flag:drought_spell = { drought_spell_gen_cost < 0 }
+			flag:elemental_warrior_spell = { elemental_warrior_spell_gen_cost < 0 }
+			flag:aura_of_death_spell = { aura_of_death_spell_gen_cost < 0 }
+			flag:fertility_control_spell = { fertility_control_spell_gen_cost < 0 }
+			flag:beguiling_aura_spell = { beguiling_aura_spell_gen_cost < 0 }
+			flag:enchanting_aura_spell = { enchanting_aura_spell_gen_cost < 0 }
 			flag:mana_devouring_1 = { has_trait = mana_devouring_1 }
 			flag:mana_devouring_2 = { has_trait = mana_devouring_2 }
+		}
+	}
+
+	is_valid = {
+		switch = {
+			trigger = scope:flag_name
+			flag:master_of_time_spell = { always = yes }
+			fallback = { always = no }
 		}
 	}
 }

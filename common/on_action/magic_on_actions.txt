@@ -66,10 +66,10 @@ reset_master_of_time_drain = {
 	effect = {
 		every_living_character = {
 			limit = {
-				has_variable_list = immortals_list
-				is_target_in_variable_list = { name = immortals_list target = prev }
+				has_variable_list = master_of_time_spell_targets
+				is_target_in_variable_list = { name = master_of_time_spell_targets target = prev }
 			}
-			remove_list_variable = { name = immortals_list target = prev }
+			remove_list_variable = { name = master_of_time_spell_targets target = prev }
 			trigger_event = { on_action = on_reset_mana_system }
 		}
 	}

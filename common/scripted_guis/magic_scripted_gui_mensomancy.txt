@@ -226,11 +226,11 @@ beguiling_aura_spell = { # aura of majesty
 			add_character_modifier = beguiling_aura_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = beguiling_aura_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = beguiling_aura_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = beguiling_aura_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_average }
+			change_mana_gen_tooltip = { VALUE = beguiling_aura_spell_gen_cost_individual }
 		}
 	}
 }
@@ -373,11 +373,11 @@ enchanting_aura_spell = { # aura of truth
 			add_character_modifier = enchanting_aura_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = enchanting_aura_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
+			change_mana_gen_tooltip = { VALUE = enchanting_aura_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = enchanting_aura_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_large }
+			change_mana_gen_tooltip = { VALUE = enchanting_aura_spell_gen_cost_individual }
 		}
 	}
 }

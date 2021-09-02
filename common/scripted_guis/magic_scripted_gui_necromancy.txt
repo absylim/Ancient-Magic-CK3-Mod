@@ -107,11 +107,11 @@ aura_of_death_spell = {
 			add_character_modifier = aura_of_death_modifier
 			display_aura_times = { VALUE = mage_level }
 			deduct_mana_with_tooltip = { VALUE = aura_of_death_spell_cost }
-			deduct_mana_gen_tooltip = { VALUE = mana_drain_large }
+			change_mana_gen_tooltip = { VALUE = aura_of_death_spell_gen_cost_individual }
 		}
 		else = {
 			remove_all_character_modifier_instances = aura_of_death_modifier
-			change_mana_gen_tooltip = { VALUE = mana_drain_large }
+			change_mana_gen_tooltip = { VALUE = aura_of_death_spell_gen_cost_individual }
 		}
 	}
 }

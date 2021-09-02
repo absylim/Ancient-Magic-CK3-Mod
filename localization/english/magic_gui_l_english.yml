@@ -3,7 +3,7 @@
  MAGIC_BUTTON: "Open Magic"
  MAGIC_VIEW: "Magic"
  MAGE_LEVEL: "Mage Level: [GetPlayer.MakeScope.ScriptValue('mage_level')|0]"
- MAGE_XP_TNL: "Mage XP: [GetPlayer.MakeScope.ScriptValue('mage_xp')|0] / [GetPlayer.MakeScope.ScriptValue('mage_xp_to_next_level')|0]"
+ MAGE_XP_TNL: "Mage XP: [GetPlayer.MakeScope.ScriptValue('ancient_magic_mage_xp')|0] / [GetPlayer.MakeScope.ScriptValue('mage_xp_to_next_level')|0]"
  CURRENT_MANA: "#high #bold Current Mana:#!#!"
  CURRENT_MANA_NUM: "[GetPlayer.MakeScope.Var('mana').GetValue|0]/[GetPlayer.MakeScope.ScriptValue('ancient_magic_max_mana')|0]"
  NO_DESCRIPTION: "Select a spell for there to be a description"

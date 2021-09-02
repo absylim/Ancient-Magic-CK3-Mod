@@ -333,12 +333,12 @@ fertility_control_spell = {
 						scope:spell_target = { add_character_modifier = biomantic_fertility_modifier }
 						prev = {
 							deduct_mana_with_tooltip = { VALUE = fertility_control_spell_cost }
-							deduct_mana_gen_tooltip = { VALUE = mana_drain_small }
+							change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual }
 						}
 					}
 					else = {
 						scope:spell_target = { remove_all_character_modifier_instances = biomantic_fertility_modifier }
-						prev = { change_mana_gen_tooltip = { VALUE = mana_drain_small } }
+						prev = { change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual } }
 					}
 				}
 				flag:dec_fertility = {
@@ -347,12 +347,12 @@ fertility_control_spell = {
 						scope:spell_target = { add_character_modifier = biomantic_infertility_modifier }
 						prev = {
 							deduct_mana_with_tooltip = { VALUE = fertility_control_spell_cost }
-							deduct_mana_gen_tooltip = { VALUE = mana_drain_small }
+							change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual }
 						}
 					}
 					else = {
 						scope:spell_target = { remove_all_character_modifier_instances = biomantic_infertility_modifier }
-						prev = { change_mana_gen_tooltip = { VALUE = mana_drain_small } }
+						prev = { change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual } }
 					}
 				}
 			}
