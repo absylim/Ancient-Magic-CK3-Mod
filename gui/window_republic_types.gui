@@ -107,43 +107,7 @@
                     spacer = {
                         size = { 0 50 }
                     }
-                    button = {
-                        texture = "gfx/magocracy/bicameral_background.dds"
-                        size = { 550 240 }
-                        modify_texture = {
-                            name = "mask"
-                            texture = "gfx/interface/component_masks/mask_rough_edges.dds"
-                            spriteType = Corneredstretched
-                            spriteborder = { 0 0 }
-                            blend_mode = alphamultiply
-                        }
-                        enabled = "[GetScriptedGui('has_magocracy_bicameral_government').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                        onclick = "[GetScriptedGui('has_magocracy_bicameral_government').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                        tooltip = "reform_into_bicameral_magocracy"
-                    }
-                    text_single = {
-                        text = "CONSTITUTIONAL_VIEW"
-                        fontsize = 24
-                        default_format = "#bold"
-                    }
-                    text_single = {
-                        text = "BICAMERAL_FORM_DESC"
-                        fontsize = 16
-                        align = center
-                        default_format = "#italic"
-                    }
-                    spacer = {
-                        size = { 0 30 }
-                    }
-                    divider_light = {
-                        layoutpolicy_horizontal = expanding
-                    }
-                    divider_light = {
-                        layoutpolicy_horizontal = expanding
-                    }
-                    spacer = {
-                        size = { 0 30 }
-                    }
+                   
                     button = {
                         texture = "gfx/magocracy/feudal_background.dds"
                         size = { 550 240 }

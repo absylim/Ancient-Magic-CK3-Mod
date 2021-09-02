@@ -502,74 +502,6 @@ set_up_elected_ruler_magocracy = {
 	}
 }
 
-set_up_bicameral_magocracy = {
-	remove_all_current_laws = yes
-	add_realm_law = magocracy_succession_law
-	primary_title = {
-		clear_variable_list = lower_house_counties
-		set_variable = bicameral_government_magocracy
-		remove_variable = elected_ruler_magocracy
-		remove_variable = senate_government_magocracy
-		remove_variable = council_government_magocracy
-		set_variable = leaders_discretion_war_declaration
-		set_variable = both_houses_vote_citizenship
-		set_variable = lower_house_vote_title_powers
-		set_variable = four_year_term
-		set_variable = same_culture_group_citizenship
-		set_variable = same_religion_group_citizenship
-		set_variable = de_facto_citizenship
-		generate_counties_for_lower_house = yes
-		random_list = {
-			30 = {
-				set_variable = xenophobic
-			}
-			30 = {
-				set_variable = xenophilic
-			}
-			40 = {
-				set_variable = c_ambivalence
-			}
-		}
-		random_list = {
-			30 = {
-				set_variable = religiocentric
-			}
-			30 = {
-				set_variable = tolerant
-			}
-			40 = {
-				set_variable = r_ambivalence
-			}
-		}
-		random_list = {
-			50 = {
-				set_variable = insular
-			}
-			50 = {
-				set_variable = receptive
-			}
-		}
-		random_list = {
-			15 = {
-				set_variable = very_warlike
-			}
-			20 = {
-				set_variable = warlike
-			}
-			30 = {
-				set_variable = neutral
-			}
-			20 = {
-				set_variable = peaceful
-			}
-			15 = {
-				set_variable = very_peaceful
-			}
-		}
-	}
-	add_realm_law = crown_authority_2
-}
-
 reform_into_elected_ruler_magocracy = {
 	set_up_elected_ruler_magocracy = yes
 	primary_title = {
@@ -592,16 +524,6 @@ reform_into_senate_magocracy = {
 
 reform_into_council_magocracy = {
 	set_up_council_magocracy = yes
-	primary_title = {
-		set_variable = {
-			name = reformed_recently
-			years = 100
-		}
-	}
-}
-
-reform_into_bicameral_magocracy = {
-	set_up_bicameral_magocracy = yes
 	primary_title = {
 		set_variable = {
 			name = reformed_recently
@@ -655,35 +577,6 @@ all_council_laws = {
 	add_to_global_variable_list = { name = council_laws_list target = flag:four_year_term }
 	add_to_global_variable_list = { name = council_laws_list target = flag:two_year_term }
 	add_to_global_variable_list = { name = council_laws_list target = flag:one_year_term }
-}
-
-all_bicameral_laws = {
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:both_houses_vote_war_declaration }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:lower_house_vote_war_declaration }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:higher_house_vote_war_declaration }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:leaders_discretion_war_declaration }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:both_houses_vote_citizenship }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:lower_house_vote_citizenship }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:higher_house_vote_citizenship }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:leaders_discretion_citizenship }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:both_houses_vote_title_powers }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:lower_house_vote_title_powers }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:higher_house_vote_title_powers }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:leaders_discretion_title_powers }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:life_title_term }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:twenty_year_term }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:ten_year_term }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:four_year_term }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:two_year_term }
-	add_to_global_variable_list = { name = bicameral_laws_list target = flag:one_year_term }
-	add_to_global_variable_list = { name = bicameral_culture_citizenship_list target = flag:same_culture_citizenship }
-	add_to_global_variable_list = { name = bicameral_culture_citizenship_list target = flag:same_culture_group_citizenship }
-	add_to_global_variable_list = { name = bicameral_culture_citizenship_list target = flag:all_cultures_citizenship }
-	add_to_global_variable_list = { name = bicameral_faith_citizenship_list target = flag:same_faith_citizenship }
-	add_to_global_variable_list = { name = bicameral_faith_citizenship_list target = flag:same_religion_group_citizenship }
-	add_to_global_variable_list = { name = bicameral_faith_citizenship_list target = flag:all_religions_citizenship }
-	add_to_global_variable_list = { name = bicameral_hierarchy_citizenship_list target = flag:de_jure_citizenship }
-	add_to_global_variable_list = { name = bicameral_hierarchy_citizenship_list target = flag:de_facto_citizenship }
 }
 
 add_law = { # LAW = law passed
@@ -1998,43 +1891,6 @@ bicameral_laws_voting = {
 		set_variable = grants_proposal
 		alternate_vote_on_law_bicameral = yes
 	}	
-}
-
-vote_on_law_bicameral = {
-	save_scope_as = titular_magocracy
-	every_in_list = {
-		variable = magocracy_families_list
-		limit = { house_head = { is_ai = yes } }
-		random_list = {
-			90 = {
-				modifier = {
-					always = yes
-					add = house_head.$LAW_VOTE$_upper_house
-				}
-				set_variable = house_votes_yea
-			}
-			100 = {
-				set_variable = house_votes_nay
-			}
-		}
-	}
-	every_in_list = {
-		variable = magocracy_families_list
-		limit = { house_head = { is_ai = no } }
-		house_head = {
-			trigger_event = bicameral_vote_events.1001
-		}
-	}
-	holder = {
-		trigger_event = {
-			id = bicameral_vote_events.1005
-			days = 2
-		}
-		trigger_event = {
-			id = bicameral_vote_events.1002
-			days = 3
-		}
-	}
 }
 
 alternate_vote_on_law_bicameral = {

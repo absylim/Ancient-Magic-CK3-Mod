@@ -77,7 +77,6 @@ window = {
 						onclick = "[GetVariableSystem.Clear( 'window_magocracy_families' )]"
 						onclick = "[GetVariableSystem.Clear( 'window_magocracy_senate_form' )]"
 						onclick = "[GetVariableSystem.Clear( 'window_magocracy_elected_ruler_form' )]"
-						onclick = "[GetVariableSystem.Clear( 'window_magocracy_bicameral_form' )]"
 					}
 
 					vbox = {
