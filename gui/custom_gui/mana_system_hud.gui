@@ -9,305 +9,9 @@ types mana_hud_guis {
 		using = tooltip_ne
 
 		tooltipwidget = {
-			widget = {
-				alwaystransparent = no
-				size = { 50 50 }
-				using = DefaultTooltipBackground
-
-				vbox = {
-					name = "mana_tooltip_container"
-					restrictparent_min = yes
-					filter_mouse = all
-					margin = { 15 10 }
-					minimumsize = { 280 0 }
-
-					vbox = {
-						layoutpolicy_horizontal = expanding
-						spacing = 5
-						alwaystransparent = no
-
-						vbox = {
-							layoutpolicy_horizontal = expanding
-							margin_top = 10
-
-							text_single = {
-								layoutpolicy_horizontal = expanding
-								text = mana_hud_tooltip_generation
-								default_format = "#T"
-
-								background = {
-									using = Background_Area
-									margin = { 10 0 }
-									margin_bottom = 5
-								}
-							}
-
-							hbox = { #Perks
-								layoutpolicy_horizontal = expanding
-								datacontext = "[GetScriptedGui( 'hud_mana_gen_perks' )]"
-								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-
-								text_single = {
-									name = "gained_value_perks1"
-									layoutpolicy_horizontal = expanding
-									text = mana_breakdown_gain_perks
-									min_width = 180
-									max_width = 250
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
-									margin_right = 10
-								}
-
-								text_single = {
-									name = "gained_value_perks2"
-									text = MONTHLY_MANA_GAIN_PERKS
-								}
-							}
-
-							hbox = { #Potency
-								layoutpolicy_horizontal = expanding
-								datacontext = "[GetScriptedGui( 'hud_mana_gen_potency' )]"
-								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-
-								text_single = {
-									name = "gained_value_potency1"
-									layoutpolicy_horizontal = expanding
-									text = mana_breakdown_gain_potency
-									min_width = 180
-									max_width = 250
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
-									margin_right = 10
-								}
-
-								text_single = {
-									name = "gained_value_potency2"
-									text = MONTHLY_MANA_GAIN_POTENCY
-								}
-							}
-
-							hbox = { #Circles
-								layoutpolicy_horizontal = expanding
-								datacontext = "[GetScriptedGui( 'hud_mana_gen_circles' )]"
-								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-
-								text_single = {
-									name = "gained_value_circles1"
-									layoutpolicy_horizontal = expanding
-									text = mana_breakdown_gain_circles
-									min_width = 180
-									max_width = 250
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
-									margin_right = 10
-								}
-
-								text_single = {
-									name = "gained_value_circles2"
-									text = MONTHLY_MANA_GAIN_CIRCLES
-								}
-							}
-
-							hbox = { #Lifestyle
-								layoutpolicy_horizontal = expanding
-								datacontext = "[GetScriptedGui( 'hud_mana_gen_lifestyle' )]"
-								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-
-								text_single = {
-									name = "gained_value_lifestyle1"
-									layoutpolicy_horizontal = expanding
-									text = mana_breakdown_gain_lifestyle
-									min_width = 180
-									max_width = 250
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
-									margin_right = 10
-								}
-
-								text_single = {
-									name = "gained_value_lifestyle2"
-									text = MONTHLY_MANA_GAIN_LIFESTYLE
-								}
-							}
-
-							hbox = { #Legacy
-								layoutpolicy_horizontal = expanding
-								datacontext = "[GetScriptedGui( 'hud_mana_gen_legacy' )]"
-								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-
-								text_single = {
-									name = "gained_value_legacy1"
-									layoutpolicy_horizontal = expanding
-									text = mana_breakdown_gain_legacy
-									min_width = 180
-									max_width = 250
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
-									margin_right = 10
-								}
-
-								text_single = {
-									name = "gained_value_legacy2"
-									text = MONTHLY_MANA_GAIN_LEGACY
-								}
-							}
-
-							vbox = {
-								layoutpolicy_horizontal = expanding
-								margin_top = 8
-
-								divider_light = {
-									layoutpolicy_horizontal = expanding
-								}
-							}
-
-							hbox = { #Total Gen
-								layoutpolicy_horizontal = expanding
-
-								text_single = {
-									name = "gained_value_total1"
-									layoutpolicy_horizontal = expanding
-									text = VALUE_BREAKDOWN_TOTAL
-									min_width = 180
-									max_width = 250
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
-									margin_right = 10
-								}
-
-								text_single = {
-									name = "gained_value_total2"
-									text = MANA_GENERATION_TOOLTIP
-								}
-							}
-						}
-
-						vbox = {
-							layoutpolicy_horizontal = expanding
-							margin_top = 15
-
-							text_single = {
-								layoutpolicy_horizontal = expanding
-								text = mana_hud_tooltip_drain
-								default_format = "#T"
-
-								background = {
-									using = Background_Area
-									margin = { 10 0 }
-									margin_bottom = 5
-								}
-							}
-
-							hbox = { #Auras
-								layoutpolicy_horizontal = expanding
-								datacontext = "[GetScriptedGui( 'hud_mana_drain_auras' )]"
-								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-
-								text_single = {
-									name = "drain_value_auras1"
-									layoutpolicy_horizontal = expanding
-									text = mana_breakdown_drain_auras
-									min_width = 180
-									max_width = 250
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
-									margin_right = 10
-								}
-
-								text_single = {
-									name = "drain_value_auras2"
-									text = MONTHLY_MANA_DRAIN_AURAS
-								}
-							}
-
-							hbox = { #Lifestyle
-								layoutpolicy_horizontal = expanding
-								datacontext = "[GetScriptedGui( 'hud_mana_drain_lifestyle' )]"
-								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-
-								text_single = {
-									name = "drain_value_lifestyle1"
-									layoutpolicy_horizontal = expanding
-									text = mana_breakdown_drain_lifestyle
-									min_width = 180
-									max_width = 250
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
-									margin_right = 10
-								}
-
-								text_single = {
-									name = "drain_value_lifestyle2"
-									text = MONTHLY_MANA_DRAIN_LIFESTYLE
-								}
-							}
-
-							hbox = { #Disease1
-								layoutpolicy_horizontal = expanding
-								datacontext = "[GetScriptedGui( 'hud_mana_drain_disease1' )]"
-								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-
-								text_single = {
-									name = "drain_value_disease1a"
-									layoutpolicy_horizontal = expanding
-									text = mana_breakdown_drain_disease1
-									min_width = 180
-									max_width = 250
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
-									margin_right = 10
-								}
-
-								text_single = {
-									name = "drain_value_disease1b"
-									text = MONTHLY_MANA_DRAIN_DISEASE
-								}
-							}
-
-							hbox = { #Disease2
-								layoutpolicy_horizontal = expanding
-								datacontext = "[GetScriptedGui( 'hud_mana_drain_disease2' )]"
-								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-
-								text_single = {
-									name = "drain_value_disease2a"
-									layoutpolicy_horizontal = expanding
-									text = mana_breakdown_drain_disease2
-									min_width = 180
-									max_width = 250
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
-									margin_right = 10
-								}
-
-								text_single = {
-									name = "drain_value_disease2b"
-									text = MONTHLY_MANA_DRAIN_DISEASE
-								}
-							}
-
-							vbox = {
-								layoutpolicy_horizontal = expanding
-								margin_top = 8
-
-								divider_light = {
-									layoutpolicy_horizontal = expanding
-								}
-							}
-
-							hbox = { #Total Drain
-								layoutpolicy_horizontal = expanding
-
-								text_single = {
-									name = "drain_value_total1"
-									layoutpolicy_horizontal = expanding
-									text = VALUE_BREAKDOWN_TOTAL
-									min_width = 180
-									max_width = 250
-									fonttintcolor = "[TooltipInfo.GetTintColor]"
-									margin_right = 10
-								}
-
-								text_single = {
-									name = "drain_value_total2"
-									text = MANA_DRAIN_TOOLTIP
-								}
-							}
-						}
-					}
-				}
-			}
+			widget_mana_gen_breakdown_tooltip = {}
 		}
+
 		hbox = {
 			name = "mana"
 			layoutpolicy_vertical = expanding
@@ -345,24 +49,6 @@ types mana_hud_guis {
 						max = "[FixedPointToFloat(GetPlayer.MakeScope.ScriptValue('ancient_magic_max_mana'))]"
 						value = "[FixedPointToFloat(GetPlayer.MakeScope.Var('mana').GetValue)]"
 					}
-
-					#text_single = {
-					#	name = "mana_balance"
-					#	visible = "[GreaterThanOrEqualTo_CFixedPoint(GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen'), '(CFixedPoint)0')]"
-					#	layoutpolicy_horizontal = expanding
-					#	text = "MANA_GENERATION"
-					#	max_width = 50
-					#	default_format = "#low"
-					#}
-
-					#text_single = {
-					#	name = "mana_balance_negative"
-					#	visible = "[LessThanOrEqualTo_CFixedPoint(GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen'), '(CFixedPoint)0')]"
-					#	layoutpolicy_horizontal = expanding
-					#	text = "MANA_GENERATION"
-					#	max_width = 50
-					#	default_format = "#N"
-					#}
 				}
 			}
 
@@ -404,7 +90,6 @@ types mana_hud_guis {
 		}
 	}
 
-	## Gold Breakdown Tooltip
 	type widget_mana_gen_breakdown_tooltip = widget {
 		size = { 50 50 }
 		alwaystransparent = no
@@ -427,13 +112,13 @@ types mana_hud_guis {
 
 				text_single = {
 					layoutpolicy_horizontal = expanding
-					text = MAXIMUM_MANA_NAME
+					text = "MAXIMUM_MANA_NAME"
 					default_format = "#T"
 				}
 
 				text_single = {
 					name = "maximum_mana"
-					text = MAXIMUM_MANA_TOTAL
+					text = "[GetPlayer.MakeScope.ScriptValue('ancient_magic_max_mana')|+0]"
 				}
 
 				background = {
@@ -466,7 +151,7 @@ types mana_hud_guis {
 				}
 				blockoverride "breakdown_total"
 				{
-					text = "MANA_INCOME_TOTAL"
+					text = "[GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen_gen_only')|+=0]"
 				}
 			}
 
@@ -493,7 +178,7 @@ types mana_hud_guis {
 				}
 				blockoverride "breakdown_total"
 				{
-					text = "MANA_EXPENSES_TOTAL"
+					text = "[GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen_drain_only')|+=0]"
 				}
 			}
 
@@ -504,13 +189,13 @@ types mana_hud_guis {
 
 				text_single = {
 					layoutpolicy_horizontal = expanding
-					text = mana_hud_tooltip_change
+					text = "MANA_GENERATION_NAME"
 					default_format = "#T"
 				}
 
 				text_single = {
 					name = "monthly_gen1"
-					text = MANA_GENERATION
+					text = "[GetPlayer.MakeScope.ScriptValue('ancient_magic_mana_gen')|+=0]"
 				}
 
 				background = {
@@ -549,19 +234,21 @@ types mana_hud_guis {
 				item = {
 					hbox = {
 						name = "value_breakdown"
+						datacontext = "[GetScriptedGui(Concatenate('hud_mana_',Scope.GetFlagName))]"
+						visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						layoutpolicy_horizontal = expanding
 						spacing = 10
 
 						text_single = {
 							name = "name"
 							layoutpolicy_horizontal = expanding
-							text = "[Localize(Concatenate(Concatenate('mana_breakdown_',Scope.GetFlagName),'_name'))]"
+							text = "[Localize(Concatenate('mana_breakdown_',Scope.GetFlagName))]"
 						}
 
 						text_single = {
 							name = "value_with_tooltip"
-							visible = "[And(GetScriptedGui(Concatenate('hud_mana_',Scope.GetFlagName)).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End), GetScriptGui(Concatenate('hud_mana_',Scope.GetFlagName)).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
-							text = "[Localize(Concatenate(Concatenate('mana_breakdown_',Scope.GetFlagName),'_amount'))|L]"
+							visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							text = "[GetPlayer.MakeScope.ScriptValue(Concatenate('ancient_magic_mana_',Scope.GetFlagName))|=0L]"
 							align = right
 							default_format = "#high"
 
@@ -578,9 +265,11 @@ types mana_hud_guis {
 
 						text_single = {
 							name = "value_with_no_tooltip"
-							visible = "[And( Not(GetScriptedGui(Concatenate('hud_mana_',Scope.GetFlagName)).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)), GetScriptGui(Concatenate('hud_mana_',Scope.GetFlagName)).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End) )]"
-							text = "[Localize(Concatenate(Concatenate('mana_breakdown_',Scope.GetFlagName),'_amount'))]"
+							datacontext = "[GetScriptedGui(Concatenate('hud_mana_',Scope.GetFlagName))]"
+							visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End))]"
+							text = "[GetPlayer.MakeScope.ScriptValue(Concatenate('ancient_magic_mana_',Scope.GetFlagName))|=0]"
 							align = right
+							default_format = "#high"
 						}
 					}
 				}
@@ -643,38 +332,99 @@ types mana_hud_guis {
 			item = {
 				hbox = {
 					name = "value_breakdown"
+					datacontext = "[GetScriptedGui('should_show_breakdown_for_flag')]"
+					visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('flag_name',MakeScopeFlag(Scope.GetFlagName)).End)]"
 					layoutpolicy_horizontal = expanding
 
 					text_single = {
 						name = "name"
 						layoutpolicy_horizontal = expanding
-						text = "[Localize(Scope.GetFlagName)]"
+						text = "[Localize(Concatenate(Scope.GetFlagName,'_name'))]"
 						min_width = 180
 						max_width = 250
 						fonttintcolor = "[TooltipInfo.GetTintColor]"
 						margin_right = 10
 					}
 
-					text_single= {
-						visible = "[And(ValueBreakdown.HasTooltip, ValueBreakdown.ShouldShowValue)]"
+					text_single = {
+						visible = "[ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('flag_name',MakeScopeFlag(Scope.GetFlagName)).End)]"
 						name = "value_with_tooltip"
-						text = "[ValueBreakdown.GetValue|L]"
+						text = "[GetPlayer.MakeScope.ScriptValue(Concatenate(Scope.GetFlagName,'_gen_cost'))|+=0L]"
 						align = right
 						fonttintcolor = "[TooltipInfo.GetTintColor]"
 
 						using = tooltip_below
 
 						tooltipwidget = {
-							recursive = yes
-
-							widget_value_breakdown_tooltip = {}
+							widget_gen_breakdown_tooltip_targets = {
+								blockoverride "setup_context" {
+									context = "[Scope]"
+								}
+								blockoverride "datamodel" {
+									datamodel = "[GetPlayer.MakeScope.GetList(Concatenate(Scope.GetFlagName,'_targets'))]"
+								}
+							}
 						}
 					}
 
 					text_single = {
-						visible = "[And( Not(ValueBreakdown.HasTooltip), ValueBreakdown.ShouldShowValue )]"
 						name = "value_with_no_tooltip"
-						text = "[ValueBreakdown.GetValue]"
+						visible = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('flag_name',MakeScopeFlag(Scope.GetFlagName)).End))]"
+						text = "[GetPlayer.MakeScope.ScriptValue(Concatenate(Scope.GetFlagName,'_gen_cost'))|+=0]"
+						align = right
+						fonttintcolor = "[TooltipInfo.GetTintColor]"
+					}
+				}
+			}
+		}
+	}
+
+	type widget_gen_breakdown_tooltip_targets = widget {
+		name = "gen_values_grid"
+		size = { 50 50 }
+		alwaystransparent = no
+
+		background = {
+			using = Background_Area_Border_Solid
+		}
+
+		state = {
+			name = _show
+			block "setup_context" {}
+			on_start = "[GetVariableSystem.Set('tooltip_spell_cost_name',Concatenate(Scope.GetFlagName,'_gen_cost_individual'))]"
+		}
+
+		state = {
+			name = _hide
+
+			on_start = "[GetVariableSystem.Clear('tooltip_spell_cost_name')]"
+		}
+
+		vbox = {
+			block "datamodel" {}
+			alwaystransparent = no
+			set_parent_size_to_minimum = yes
+			margin = { 17 10 }
+			spacing = 3
+
+			item = {
+				hbox = {
+					name = "value_breakdown"
+					layoutpolicy_horizontal = expanding
+
+					text_single = {
+						name = "name"
+						layoutpolicy_horizontal = expanding
+						text = "[Scope.Char.GetName]"
+						min_width = 180
+						max_width = 250
+						fonttintcolor = "[TooltipInfo.GetTintColor]"
+						margin_right = 10
+					}
+
+					text_single = {
+						name = "value_with_no_tooltip"
+						text = "[GetPlayer.MakeScope.ScriptValue(GetVariableSystem.Get('tooltip_spell_cost_name'))|+=0]"
 						align = right
 						fonttintcolor = "[TooltipInfo.GetTintColor]"
 					}
