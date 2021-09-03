@@ -52,9 +52,9 @@
 	}
 
 	effect = {
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = biomancy_mage_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = biomancy_mage_perk_max_mana }
+		gain_mage_xp_perk = { VALUE = biomancy_mage_perk_mage_xp }
 		make_mage_effect = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
@@ -78,9 +78,9 @@ improve_trait_perk = {
 		unlock_rewrite_intellect_spell = yes
 		unlock_negative_trait_removal_rewrite_intellect = yes
 		unlock_positive_trait_t1_upgrade_rewrite_intellect = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = improve_trait_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = improve_trait_perk_max_mana }
+		gain_mage_xp_perk = { VALUE = improve_trait_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -97,9 +97,9 @@ perfect_trait_perk = {
 		unlock_positive_trait_t2_upgrade_rewrite_beauty = yes
 		unlock_positive_trait_t2_upgrade_rewrite_physique = yes
 		unlock_positive_trait_t2_upgrade_rewrite_intellect = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = perfect_trait_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = perfect_trait_perk_max_mana }
+		gain_mage_xp_perk = { VALUE = perfect_trait_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -114,9 +114,9 @@ fertility_control_perk = {
 
 	effect = {
 		unlock_fertility_control_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = fertility_control_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = fertility_control_perk_max_mana }
+		gain_mage_xp_perk = { VALUE = fertility_control_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -131,9 +131,9 @@ impregnate_perk = {
 
 	effect = {
 		unlock_impregnate_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = impregnate_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = impregnate_perk_max_mana }
+		gain_mage_xp_perk = { VALUE = impregnate_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -156,9 +156,9 @@ weaken_trait_perk = {
 		unlock_rewrite_intellect_spell = yes
 		unlock_positive_trait_removal_rewrite_intellect = yes
 		unlock_negative_trait_t1_upgrade_rewrite_intellect = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = weaken_trait_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = weaken_trait_perk_max_mana }
+		gain_mage_xp_perk = { VALUE = weaken_trait_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -175,9 +175,9 @@ criple_trait_perk = {
 		unlock_negative_trait_t2_upgrade_rewrite_beauty = yes
 		unlock_negative_trait_t2_upgrade_rewrite_physique = yes
 		unlock_negative_trait_t2_upgrade_rewrite_intellect = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = criple_trait_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = criple_trait_perk_max_mana }
+		gain_mage_xp_perk = { VALUE = criple_trait_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -194,9 +194,9 @@ sculpter_of_flesh_perk = {
 
 	effect = {
 		unlock_sculpter_of_flesh_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = sculpter_of_flesh_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = sculpter_of_flesh_perk_max_mana }
+		gain_mage_xp_perk = { VALUE = sculpter_of_flesh_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -217,9 +217,9 @@ architect_of_bloodlines_perk = {
 		unlock_positive_trait_addition_rewrite_physique = yes
 		unlock_negative_trait_addition_rewrite_intellect = yes
 		unlock_positive_trait_addition_rewrite_intellect = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = architect_of_bloodlines_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = architect_of_bloodlines_perk_max_mana }
+		gain_mage_xp_perk = { VALUE = architect_of_bloodlines_perk_mage_xp }
 		add_trait_force_tooltip = architect_of_bloodlines
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}

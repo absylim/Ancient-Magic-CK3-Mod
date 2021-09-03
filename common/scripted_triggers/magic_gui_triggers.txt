@@ -78,7 +78,7 @@ is_adding_personality_trait_trigger = {
 has_enough_mana_trigger = {
 	custom_description = {
 		text = "has_enough_mana_trigger"
-		var:mana.compare_value >= $SPELL$_cost
+		var:mana.compare_value >= $SPELL$_cost.abs
 	}
 }
 
@@ -400,7 +400,7 @@ can_add_or_remove_trait_trigger = {
 		flag:physique_good_3 = { NOR = { has_trait = physique_bad has_trait = physique_good_1 has_trait = physique_good_2 has_trait = spindly has_trait = weak } OR = { is_itpp_installed_trigger = no NOR = { has_trait = physique_good_4 has_trait = physique_good_5 } } }
 		flag:pure_blooded = { always = yes }
 		flag:fecund = { NOT = { has_trait = infertile } }
-		flag:strong = { NOR = { has_trait = weak has_trait = physique_bad } }
+		flag:strong = { NOR = { has_trait = weak has_trait = spindly has_trait = physique_bad } }
 		flag:shrewd = { NOR = { has_trait = dull has_trait = intellect_bad } }
 		flag:clubfooted = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = surefooted } } }
 		flag:hunchbacked = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = regal_bearing } } }
@@ -412,7 +412,7 @@ can_add_or_remove_trait_trigger = {
 		flag:weak = { NOR = { has_trait = strong has_trait = physique_good } }
 		flag:dull = { NOR = { has_trait = shrewd has_trait = intellect_good } }
 		flag:impotent = { always = yes }
-		flag:spindly = { NOT = { has_trait = physique_good } }
+		flag:spindly = { NOT = { has_trait = strong has_trait = physique_good } }
 		flag:scaly = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = glowing } } }
 		flag:albino = { always = yes }
 		flag:wheezing = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = hardy_lung } } }

@@ -12,7 +12,7 @@ inflict_illness_spell = {
 		scope:spell_target = {
 			add_trait = ill
 		}
-		deduct_mana_with_tooltip = { VALUE = inflict_illness_spell_cost }
+		change_mana_with_tooltip = { VALUE = inflict_illness_spell_cost.neg }
 	}
 }
 
@@ -59,7 +59,7 @@ plague_lord_spell = {
 		scope:spell_target = {
 			add_trait = bubonic_plague
 		}
-		deduct_mana_with_tooltip = { VALUE = plague_lord_spell_cost }
+		change_mana_with_tooltip = { VALUE = plague_lord_spell_cost.neg }
 	}
 }
 
@@ -106,12 +106,12 @@ aura_of_death_spell = {
 			limit = { NOT = { has_character_modifier = aura_of_death_modifier } }
 			add_character_modifier = aura_of_death_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = aura_of_death_spell_cost }
-			change_mana_gen_tooltip = { VALUE = aura_of_death_spell_gen_cost_individual }
+			change_mana_with_tooltip = { VALUE = aura_of_death_spell_cost.neg }
+			change_mana_gen_tooltip = { VALUE = aura_of_death_spell_gen_cost_individual.neg }
 		}
 		else = {
 			remove_all_character_modifier_instances = aura_of_death_modifier
-			change_opposite_mana_gen_tooltip = { VALUE = aura_of_death_spell_gen_cost_individual }
+			change_mana_gen_tooltip = { VALUE = aura_of_death_spell_gen_cost_individual.abs }
 		}
 	}
 }
@@ -172,7 +172,7 @@ necromancy_spell = {
 			modifier = undead_horde_cooldown_modifier
 			years = 2
 		}
-		deduct_mana_with_tooltip = { VALUE = necromancy_spell_cost }
+		change_mana_with_tooltip = { VALUE = necromancy_spell_cost.neg }
 	}
 }
 
@@ -237,7 +237,7 @@ drain_life_spell = {
 			modifier = stolen_lifeforce_modifier
 			years = mage_level
 		}
-		deduct_mana_with_tooltip = { VALUE = drain_life_spell_cost }
+		change_mana_with_tooltip = { VALUE = drain_life_spell_cost.neg }
 	}
 }
 
@@ -295,7 +295,7 @@ death_stare_spell = {
 			text = death_stare
 			trigger_event = { on_action = death_stare_action }
 		}
-		deduct_mana_with_tooltip = { VALUE = death_stare_spell_cost }
+		change_mana_with_tooltip = { VALUE = death_stare_spell_cost.neg }
 	}
 }
 
@@ -344,7 +344,7 @@ deacon_of_death_spell = {
 	}
 	effect = {
 		scope:spell_target = { convert_undead = yes }
-		deduct_mana_with_tooltip = { VALUE = deacon_of_death_spell_cost }
+		change_mana_with_tooltip = { VALUE = deacon_of_death_spell_cost.neg }
 	}
 }
 
