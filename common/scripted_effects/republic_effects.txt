@@ -476,7 +476,7 @@ set_up_council_magocracy = {
 		post_appeasement_change = yes
 	}
 	add_realm_law = magocracy_succession_law
-	every_councillor = {
+	every_magocracy_councillor = {
 		save_scope_as = council_new
 		liege_or_court_owner = {
 			primary_title = {
@@ -799,7 +799,7 @@ trigger_council_election_cycle = {
 		limit = { scope:law_proposed = flag:proposed_grants }
 		set_variable = grants_proposal
 	}
-	var:councillor_1 = {
+	var:magocracy_councillor_1 = {
 		house_head = {
 			if = {
 				limit = { is_ai = yes }
@@ -814,7 +814,7 @@ trigger_council_election_cycle = {
 			}
 		}
 	}
-	var:councillor_2 = {
+	var:magocracy_councillor_2 = {
 		house_head = {
 			if = {
 				limit = { is_ai = yes }
@@ -829,7 +829,7 @@ trigger_council_election_cycle = {
 			}
 		}
 	}
-	var:councillor_3 = {		
+	var:magocracy_councillor_3 = {		
 		house_head = {
 			if = {
 				limit = { is_ai = yes }
@@ -844,7 +844,7 @@ trigger_council_election_cycle = {
 			}
 		}
 	}
-	var:councillor_4 = {
+	var:magocracy_councillor_4 = {
 		house_head = {
 			if = {
 				limit = { is_ai = yes }
@@ -859,7 +859,7 @@ trigger_council_election_cycle = {
 			}
 		}
 	}
-	var:councillor_5 = {
+	var:magocracy_councillor_5 = {
 		house_head = {
 			if = {
 				limit = { is_ai = yes }
@@ -1198,23 +1198,23 @@ magocracy_council_succesion = {
 			}
 		}
 		set_variable = {
-			name = councillor_1
+			name = magocracy_councillor_1
 			value = scope:number_1_house
 		}
 		set_variable = {
-			name = councillor_2
+			name = magocracy_councillor_2
 			value = scope:number_2_house
 		}
 		set_variable = {
-			name = councillor_3
+			name = magocracy_councillor_3
 			value = scope:number_3_house
 		}
 		set_variable = {
-			name = councillor_4
+			name = magocracy_councillor_4
 			value = scope:number_4_house
 		}
 		set_variable = {
-			name = councillor_5
+			name = magocracy_councillor_5
 			value = scope:number_5_house
 		}
 	}
@@ -1511,11 +1511,11 @@ remove_all_current_laws = {
 		remove_variable = one_year_term
 		remove_variable = senators_count
 		clear_variable_list = proposed_laws_list
-		remove_variable = councillor_1
-		remove_variable = councillor_2
-		remove_variable = councillor_3
-		remove_variable = councillor_4
-		remove_variable = councillor_5
+		remove_variable = magocracy_councillor_1
+		remove_variable = magocracy_councillor_2
+		remove_variable = magocracy_councillor_3
+		remove_variable = magocracy_councillor_4
+		remove_variable = magocracy_councillor_5
 		remove_variable = both_houses_vote_war_declaration
 		remove_variable = lower_house_vote_war_declaration
 		remove_variable = higher_house_vote_war_declaration

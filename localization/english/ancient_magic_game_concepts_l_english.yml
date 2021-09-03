@@ -196,10 +196,10 @@
  game_concept_senators_magocracy: "Senators"
  game_concept_senator_magocracy_desc: "Senators vote on proposals in a [senate_government_magocracy|E]. Each [magocracy_family|E] has a certain amount under their sway, which relates to their [magocracy_respect|E]."
 
- game_concept_councillor_magocracy: "Councillor"
- game_concept_councillor_magocracy: "Councillor"
- game_concept_councillors_magocracy: "Councillors"
- game_concept_councillor_magocracy_desc: "The Council in a magocracy, which is distinct from a normal [council|E], is the ruling body of a [council_government_magocracy|E] [magocracy|E]. The councillors are the [patrician|E]s of their [magocracy_families|E]. Each one gets a vote in the matters of state. They have the same term limits as the elected rulers. The most powerful councillor holds the magocracy title."
+ game_concept_magocracy_councillor_magocracy: "Councillor"
+ game_concept_magocracy_councillor_magocracy: "Councillor"
+ game_concept_magocracy_councillors_magocracy: "Councillors"
+ game_concept_magocracy_councillor_magocracy_desc: "The Council in a magocracy, which is distinct from a normal [council|E], is the ruling body of a [council_government_magocracy|E] [magocracy|E]. The magocracy_councillors are the [patrician|E]s of their [magocracy_families|E]. Each one gets a vote in the matters of state. They have the same term limits as the elected rulers. The most powerful magocracy_councillor holds the magocracy title."
 
  game_concept_magocracy_clergy_estate: "Clergy Class"
  game_concept_magocracy_clergy_estate_no_class: "Clergy"

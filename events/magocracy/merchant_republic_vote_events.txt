@@ -363,7 +363,7 @@ magocracy_vote_events.1002 = { # Vote Over
 					remove_variable = leaders_discretion_council_appointment
 					set_variable = senate_vote_council_appointment
 					holder = {
-						every_councillor = {
+						every_magocracy_councillor = {
 							save_scope_as = council_new
 							house.var:titular_magocracy = {
 								add_to_variable_list = {
@@ -1221,7 +1221,7 @@ magocracy_vote_events.1006 = { # Vote Over
 
 	immediate = {
 		if = {
-			limit = { primary_title.councillors_voting_aye > primary_title.councillors_voting_nay }
+			limit = { primary_title.magocracy_councillors_voting_aye > primary_title.magocracy_councillors_voting_nay }
 			primary_title = {
 				every_in_list = {
 					variable = magocracy_families_list
@@ -1248,7 +1248,7 @@ magocracy_vote_events.1006 = { # Vote Over
 					remove_variable = leaders_discretion_council_appointment
 					remove_variable = senate_vote_council_appointment
 					holder = {
-						every_councillor = {
+						every_magocracy_councillor = {
 							save_scope_as = council_new
 							liege_or_court_owner = {
 								primary_title = {
@@ -1414,7 +1414,7 @@ magocracy_vote_events.1006 = { # Vote Over
 			}
 		}
 		if = {
-			limit = { primary_title.councillors_voting_aye <= primary_title.councillors_voting_nay }
+			limit = { primary_title.magocracy_councillors_voting_aye <= primary_title.magocracy_councillors_voting_nay }
 			primary_title = {
 				every_in_list = {
 					variable = magocracy_families_list
@@ -2006,7 +2006,7 @@ magocracy_vote_events.1010 = { # Vote Over
 			}
 		}
 		if = {
-			limit = { primary_title.councillors_voting_aye <= primary_title.councillors_voting_nay }
+			limit = { primary_title.magocracy_councillors_voting_aye <= primary_title.magocracy_councillors_voting_nay }
 			primary_title = {
 				every_in_list = {
 					variable = magocracy_families_list

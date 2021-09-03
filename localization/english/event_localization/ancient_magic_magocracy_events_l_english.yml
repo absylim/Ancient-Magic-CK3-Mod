@@ -27,7 +27,7 @@
  merchant_magocracy_events.1007.desc:0 "The votes are in and the ballots have been tallied. Everything proceeded according to our design. When nothing is left to chance, when the right words are whispered in the right ears, and the right sums of gold make their way into the right pockets, then the outcome can never be in doubt. The people, when left to their own devices, can be capricious and impulsive and are easily swayed by malign influences; thus, like children, they have been guided, as if by the invisible hand of a benevolent parent, to the decision that is in their best interests: the continued and prosperous rule of the house of [GetPlayer.GetHouse.GetName]."
  merchant_magocracy_events.1007.a:1 "The way to retain power is to ensure the absolute unthinkability of oneself not being there."
  merchant_magocracy_events.1008.t:0 "Election Season - Councillor"
- merchant_magocracy_events.1008.desc:0 "You have been elected one of the councillors of [titular_magocracy.GetName] this election cycle. May you guide the Magocracy oneards into its glory days and the bright future ahead."
+ merchant_magocracy_events.1008.desc:0 "You have been elected one of the magocracy_councillors of [titular_magocracy.GetName] this election cycle. May you guide the Magocracy oneards into its glory days and the bright future ahead."
  merchant_magocracy_events.1008.a:1 "Greatness awaits"
 
  merchant_magocracy_events.1009.t:0 "Magocracy Reform"

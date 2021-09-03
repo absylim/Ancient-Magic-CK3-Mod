@@ -154,54 +154,54 @@ yearly_magocracy_check = {
 				#	remove_variable = elected_ruler_magocracy
 				#}
 				if = {
-					limit = { this = { exists = var:councillor_1 } }
+					limit = { this = { exists = var:magocracy_councillor_1 } }
 					holder.primary_title = {
 						set_variable = {
-							name = councillor_1
-							value = this.var:councillor_1
+							name = magocracy_councillor_1
+							value = this.var:magocracy_councillor_1
 						}
 					}
-					remove_variable = councillor_1
+					remove_variable = magocracy_councillor_1
 				}
 				if = {
-					limit = { this = { exists = var:councillor_2 } }
+					limit = { this = { exists = var:magocracy_councillor_2 } }
 					holder.primary_title = {
 						set_variable = {
-							name = councillor_2
-							value = this.var:councillor_2
+							name = magocracy_councillor_2
+							value = this.var:magocracy_councillor_2
 						}
 					}
-					remove_variable = councillor_2
+					remove_variable = magocracy_councillor_2
 				}
 				if = {
-					limit = { this = { exists = var:councillor_3 } }
+					limit = { this = { exists = var:magocracy_councillor_3 } }
 					holder.primary_title = {
 						set_variable = {
-							name = councillor_3
-							value = this.var:councillor_3
+							name = magocracy_councillor_3
+							value = this.var:magocracy_councillor_3
 						}
 					}
-					remove_variable = councillor_3
+					remove_variable = magocracy_councillor_3
 				}
 				if = {
-					limit = { this = { exists = var:councillor_4 } }
+					limit = { this = { exists = var:magocracy_councillor_4 } }
 					holder.primary_title = {
 						set_variable = {
-							name = councillor_4
-							value = this.var:councillor_4
+							name = magocracy_councillor_4
+							value = this.var:magocracy_councillor_4
 						}
 					}
-					remove_variable = councillor_4
+					remove_variable = magocracy_councillor_4
 				}
 				if = {
-					limit = { this = { exists = var:councillor_5 } }
+					limit = { this = { exists = var:magocracy_councillor_5 } }
 					holder.primary_title = {
 						set_variable = {
-							name = councillor_5
-							value = this.var:councillor_5
+							name = magocracy_councillor_5
+							value = this.var:magocracy_councillor_5
 						}
 					}
-					remove_variable = councillor_5
+					remove_variable = magocracy_councillor_5
 				}
 				if = {
 					limit = { this = { exists = var:nobility_appeasement } }
@@ -1758,38 +1758,38 @@ transfer_your_old_magocracy_variables = {
 			set_variable = elected_ruler_magocracy
 		}
 		if = {
-			limit = { scope:title = { exists = var:councillor_1 } }
+			limit = { scope:title = { exists = var:magocracy_councillor_1 } }
 			set_variable = {
-				name = councillor_1
-				value = scope:title.var:councillor_1
+				name = magocracy_councillor_1
+				value = scope:title.var:magocracy_councillor_1
 			}
 		}
 		if = {
-			limit = { scope:title = { exists = var:councillor_2 } }
+			limit = { scope:title = { exists = var:magocracy_councillor_2 } }
 			set_variable = {
-				name = councillor_2
-				value = scope:title.var:councillor_2
+				name = magocracy_councillor_2
+				value = scope:title.var:magocracy_councillor_2
 			}
 		}
 		if = {
-			limit = { scope:title = { exists = var:councillor_3 } }
+			limit = { scope:title = { exists = var:magocracy_councillor_3 } }
 			set_variable = {
-				name = councillor_3
-				value = scope:title.var:councillor_3
+				name = magocracy_councillor_3
+				value = scope:title.var:magocracy_councillor_3
 			}
 		}
 		if = {
-			limit = { scope:title = { exists = var:councillor_4 } }
+			limit = { scope:title = { exists = var:magocracy_councillor_4 } }
 			set_variable = {
-				name = councillor_4
-				value = scope:title.var:councillor_4
+				name = magocracy_councillor_4
+				value = scope:title.var:magocracy_councillor_4
 			}
 		}
 		if = {
-			limit = { scope:title = { exists = var:councillor_5 } }
+			limit = { scope:title = { exists = var:magocracy_councillor_5 } }
 			set_variable = {
-				name = councillor_5
-				value = scope:title.var:councillor_5
+				name = magocracy_councillor_5
+				value = scope:title.var:magocracy_councillor_5
 			}
 		}
 		if = {
@@ -1949,38 +1949,38 @@ transfer_your_old_magocracy_variables_different = {
 		#	set_variable = elected_ruler_magocracy
 		#}
 		if = {
-			limit = { scope:landed_title = { exists = var:councillor_1 } }
+			limit = { scope:landed_title = { exists = var:magocracy_councillor_1 } }
 			set_variable = {
-				name = councillor_1
-				value = scope:landed_title.var:councillor_1
+				name = magocracy_councillor_1
+				value = scope:landed_title.var:magocracy_councillor_1
 			}
 		}
 		if = {
-			limit = { scope:landed_title = { exists = var:councillor_2 } }
+			limit = { scope:landed_title = { exists = var:magocracy_councillor_2 } }
 			set_variable = {
-				name = councillor_2
-				value = scope:landed_title.var:councillor_2
+				name = magocracy_councillor_2
+				value = scope:landed_title.var:magocracy_councillor_2
 			}
 		}
 		if = {
-			limit = { scope:landed_title = { exists = var:councillor_3 } }
+			limit = { scope:landed_title = { exists = var:magocracy_councillor_3 } }
 			set_variable = {
-				name = councillor_3
-				value = scope:landed_title.var:councillor_3
+				name = magocracy_councillor_3
+				value = scope:landed_title.var:magocracy_councillor_3
 			}
 		}
 		if = {
-			limit = { scope:landed_title = { exists = var:councillor_4 } }
+			limit = { scope:landed_title = { exists = var:magocracy_councillor_4 } }
 			set_variable = {
-				name = councillor_4
-				value = scope:landed_title.var:councillor_4
+				name = magocracy_councillor_4
+				value = scope:landed_title.var:magocracy_councillor_4
 			}
 		}
 		if = {
-			limit = { scope:landed_title = { exists = var:councillor_5 } }
+			limit = { scope:landed_title = { exists = var:magocracy_councillor_5 } }
 			set_variable = {
-				name = councillor_5
-				value = scope:landed_title.var:councillor_5
+				name = magocracy_councillor_5
+				value = scope:landed_title.var:magocracy_councillor_5
 			}
 		}
 		if = {
@@ -2232,54 +2232,54 @@ transfer_your_old_magocracy_variables_to_title = {
 		#	remove_variable = elected_ruler_magocracy
 		#}
 		if = {
-			limit = { this = { exists = var:councillor_1 } }
+			limit = { this = { exists = var:magocracy_councillor_1 } }
 			primary_title = {
 				set_variable = {
-					name = councillor_1
-					value = this.var:councillor_1
+					name = magocracy_councillor_1
+					value = this.var:magocracy_councillor_1
 				}
 			}
-			remove_variable = councillor_1
+			remove_variable = magocracy_councillor_1
 		}
 		if = {
-			limit = { this = { exists = var:councillor_2 } }
+			limit = { this = { exists = var:magocracy_councillor_2 } }
 			primary_title = {
 				set_variable = {
-					name = councillor_2
-					value = this.var:councillor_2
+					name = magocracy_councillor_2
+					value = this.var:magocracy_councillor_2
 				}
 			}
-			remove_variable = councillor_2
+			remove_variable = magocracy_councillor_2
 		}
 		if = {
-			limit = { this = { exists = var:councillor_3 } }
+			limit = { this = { exists = var:magocracy_councillor_3 } }
 			primary_title = {
 				set_variable = {
-					name = councillor_3
-					value = this.var:councillor_3
+					name = magocracy_councillor_3
+					value = this.var:magocracy_councillor_3
 				}
 			}
-			remove_variable = councillor_3
+			remove_variable = magocracy_councillor_3
 		}
 		if = {
-			limit = { this = { exists = var:councillor_4 } }
+			limit = { this = { exists = var:magocracy_councillor_4 } }
 			primary_title = {
 				set_variable = {
-					name = councillor_4
-					value = this.var:councillor_4
+					name = magocracy_councillor_4
+					value = this.var:magocracy_councillor_4
 				}
 			}
-			remove_variable = councillor_4
+			remove_variable = magocracy_councillor_4
 		}
 		if = {
-			limit = { this = { exists = var:councillor_5 } }
+			limit = { this = { exists = var:magocracy_councillor_5 } }
 			primary_title = {
 				set_variable = {
-					name = councillor_5
-					value = this.var:councillor_5
+					name = magocracy_councillor_5
+					value = this.var:magocracy_councillor_5
 				}
 			}
-			remove_variable = councillor_5
+			remove_variable = magocracy_councillor_5
 		}
 		if = {
 			limit = { this = { exists = var:nobility_appeasement } }

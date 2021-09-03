@@ -162,7 +162,7 @@ double_military_strength = {
 	multiply = 2
 }
 
-councillors_voting_aye = {
+magocracy_councillors_voting_aye = {
 	every_in_list = {
 		variable = magocracy_families_list
 		limit = { has_variable = house_votes_yea }
@@ -170,7 +170,7 @@ councillors_voting_aye = {
 	}
 }
 
-councillors_voting_aye_plus_yours = {
+magocracy_councillors_voting_aye_plus_yours = {
 	every_in_list = {
 		variable = magocracy_families_list
 		limit = { has_variable = house_votes_yea }
@@ -179,7 +179,7 @@ councillors_voting_aye_plus_yours = {
 	add = 1
 }
 
-councillors_voting_nay = {
+magocracy_councillors_voting_nay = {
 	every_in_list = {
 		variable = magocracy_families_list
 		limit = { has_variable = house_votes_nay }
@@ -187,7 +187,7 @@ councillors_voting_nay = {
 	}
 }
 
-councillors_voting_nay_plus_yours = {
+magocracy_councillors_voting_nay_plus_yours = {
 	every_in_list = {
 		variable = magocracy_families_list
 		limit = { has_variable = house_votes_nay }
@@ -290,7 +290,7 @@ all_votes_nay_dragging_over = {
 	}
 }
 
-councillors_yea_dragging_over = {
+magocracy_councillors_yea_dragging_over = {
 	value = 0
 	every_in_list = {
 		variable = blackmailing_house_heads
@@ -299,7 +299,7 @@ councillors_yea_dragging_over = {
 	}
 }
 
-councillors_nay_dragging_over = {
+magocracy_councillors_nay_dragging_over = {
 	value = 0
 	every_in_list = {
 		variable = blackmailing_house_heads

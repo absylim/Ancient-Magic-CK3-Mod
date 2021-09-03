@@ -207,7 +207,7 @@ merchant_magocracy_events.1007 = { # Maintained power
 	}
 }
 
-merchant_magocracy_events.1008 = { # Elected councillor
+merchant_magocracy_events.1008 = { # Elected magocracy_councillor
 	type = character_event
 	title = merchant_magocracy_events.1008.t
 	desc = merchant_magocracy_events.1008.desc

@@ -233,27 +233,27 @@
                                 spriteborder = { 6 6 }
                             }
                             vbox = {
-                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_4').House.GetHeadOfHouse]"
+                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('magocracy_councillor_4').House.GetHeadOfHouse]"
                                 position = { 25% 100% }
                                 portrait_head = {}
                             }
                             vbox = {
-                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_3').House.GetHeadOfHouse]"
+                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('magocracy_councillor_3').House.GetHeadOfHouse]"
                                 position = { 100% 40% }
                                 portrait_head = {}
                             }
                             vbox = {
-                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_2').House.GetHeadOfHouse]"
+                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('magocracy_councillor_2').House.GetHeadOfHouse]"
                                 position = { 0% 40% }
                                 portrait_head = {}
                             }
                             vbox = {
-                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_1').House.GetHeadOfHouse]"
+                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('magocracy_councillor_1').House.GetHeadOfHouse]"
                                 position = { 50% 0% }
                                 portrait_head = {}
                             }
                             vbox = {
-                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_5').House.GetHeadOfHouse]"
+                                datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('magocracy_councillor_5').House.GetHeadOfHouse]"
                                 position = { 75% 100% }
                                 portrait_head = {}
                             }
@@ -306,7 +306,7 @@
                                                 }
                                                 hbox = {
                                                     button = {
-                                                        texture = "gfx/interface/icons/message_feed/a_catch_all_councillor_icon.dds"
+                                                        texture = "gfx/interface/icons/message_feed/a_catch_all_magocracy_councillor_icon.dds"
                                                         size = { 80 80 }
                                                         tooltip = PROPOSE_TT
                                                         clicksound = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_diplomacy"
