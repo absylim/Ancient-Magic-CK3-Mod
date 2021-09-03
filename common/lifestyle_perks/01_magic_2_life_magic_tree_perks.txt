@@ -48,7 +48,6 @@
 	effect = {
 		gain_mana_gen_perk = { VALUE = life_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = life_mage_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = life_mage_perk_mage_xp }
 		make_mage_effect = yes
 		trigger_event = { on_action = on_reset_mana_system }
 	}
@@ -70,7 +69,6 @@ inward_reflection_perk = {
 	effect = {
 		gain_mana_gen_perk = { VALUE = inward_reflection_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = inward_reflection_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = inward_reflection_perk_mage_xp }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -87,7 +85,6 @@ inward_perfection_perk = {
 	effect = {
 		gain_mana_gen_perk = { VALUE = inward_perfection_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = inward_perfection_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = inward_perfection_perk_mage_xp }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 
@@ -110,7 +107,6 @@ heal_perk = {
 		unlock_heal_spell = yes
 		gain_mana_gen_perk = { VALUE = heal_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = heal_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = heal_perk_mage_xp }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -128,7 +124,6 @@ greater_heal_perk = {
 		unlock_greater_heal_spell = yes
 		gain_mana_gen_perk = { VALUE = greater_heal_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = greater_heal_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = greater_heal_perk_mage_xp }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -149,7 +144,6 @@ battlefield_life_mage_perk = {
 	effect = {
 		gain_mana_gen_perk = { VALUE = battlefield_life_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = battlefield_life_mage_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = battlefield_life_mage_perk_mage_xp }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -170,7 +164,6 @@ greater_battlefield_life_mage_perk = {
 	effect = {
 		gain_mana_gen_perk = { VALUE = greater_battlefield_life_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = greater_battlefield_life_mage_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = greater_battlefield_life_mage_perk_mage_xp }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -193,7 +186,6 @@ purity_of_body_perk = {
 	effect = {
 		gain_mana_gen_perk = { VALUE = purity_of_body_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = purity_of_body_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = purity_of_body_perk_mage_xp }
 		immune_to_disease_effect = yes
 		trigger_event = { on_action = on_reset_mana_system }
 	}
@@ -212,7 +204,6 @@ avatar_of_life_perk = {
 		unlock_avatar_of_life_spell = yes
 		gain_mana_gen_perk = { VALUE = avatar_of_life_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = avatar_of_life_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = avatar_of_life_perk_mage_xp }
 		add_trait_force_tooltip = avatar_of_life
 		trigger_event = { on_action = on_reset_mana_system }
 	}

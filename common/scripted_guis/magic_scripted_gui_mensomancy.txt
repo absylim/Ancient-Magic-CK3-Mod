@@ -25,6 +25,7 @@ entrance_spell = {
 			}
 		}
 		change_mana_with_tooltip = { VALUE = entrance_spell_cost.neg }
+		change_mage_xp = { VALUE = entrance_spell_cost.abs }
 	}
 }
 
@@ -72,6 +73,7 @@ incite_lust_spell = {
 	effect = {
 		scope:spell_target = { set_relation_lover = prev }
 		change_mana_with_tooltip = { VALUE = incite_lust_spell_cost.neg }
+		change_mage_xp = { VALUE = incite_lust_spell_cost.abs }
 	}
 }
 
@@ -125,6 +127,7 @@ incite_obedience_spell = {
 			type = ancient_magic_hook_obedient
 		}
 		change_mana_with_tooltip = { VALUE = incite_obedience_spell_cost.neg }
+		change_mage_xp = { VALUE = incite_obedience_spell_cost.abs }
 	}
 }
 
@@ -179,6 +182,7 @@ dominate_spell = {
 			type = ancient_magic_hook_dominated
 		}
 		change_mana_with_tooltip = { VALUE = dominate_spell_cost.neg }
+		change_mage_xp = { VALUE = dominate_spell_cost.abs }
 	}
 }
 
@@ -227,6 +231,7 @@ beguiling_aura_spell = { # aura of majesty
 			display_aura_times = { VALUE = mage_level }
 			change_mana_with_tooltip = { VALUE = beguiling_aura_spell_cost.neg }
 			change_mana_gen_tooltip = { VALUE = beguiling_aura_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = beguiling_aura_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = beguiling_aura_modifier
@@ -279,6 +284,7 @@ friendship_spell = {
 	effect = {
 		scope:spell_target = { set_relation_friend = prev }
 		change_mana_with_tooltip = { VALUE = friendship_spell_cost.neg }
+		change_mage_xp = { VALUE = friendship_spell_cost.abs }
 	}
 }
 
@@ -326,6 +332,7 @@ rivalry_spell = {
 	effect = {
 		scope:spell_target = { set_relation_rival = prev }
 		change_mana_with_tooltip = { VALUE = rivalry_spell_cost.neg }
+		change_mage_xp = { VALUE = rivalry_spell_cost.abs }
 	}
 }
 
@@ -374,6 +381,7 @@ enchanting_aura_spell = { # aura of truth
 			display_aura_times = { VALUE = mage_level }
 			change_mana_with_tooltip = { VALUE = enchanting_aura_spell_cost.neg }
 			change_mana_gen_tooltip = { VALUE = enchanting_aura_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = enchanting_aura_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = enchanting_aura_modifier
@@ -429,6 +437,7 @@ sculpt_mind_spell = {
 			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
 		change_mana_with_tooltip = { VALUE = sculpt_mind_spell_cost.neg }
+		change_mage_xp = { VALUE = sculpt_mind_spell_cost.abs }
 	}
 }
 
@@ -482,6 +491,7 @@ master_of_puppets_spell = {
 			type = ancient_magic_hook_puppet
 		}
 		change_mana_with_tooltip = { VALUE = master_of_puppets_spell_cost.neg }
+		change_mage_xp = { VALUE = master_of_puppets_spell_cost.abs }
 	}
 }
 

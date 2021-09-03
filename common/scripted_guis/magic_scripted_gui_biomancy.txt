@@ -22,6 +22,7 @@ rewrite_beauty_spell = {
 			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
 		change_mana_with_tooltip = { VALUE = scope:spell_cost.neg }
+		change_mage_xp = { VALUE = scope:spell_cost.abs }
 	}
 }
 
@@ -97,6 +98,7 @@ rewrite_physique_spell = {
 			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
 		change_mana_with_tooltip = { VALUE = scope:spell_cost.neg }
+		change_mage_xp = { VALUE = scope:spell_cost.abs }
 	}
 }
 
@@ -172,6 +174,7 @@ rewrite_intellect_spell = {
 			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
 		change_mana_with_tooltip = { VALUE = scope:spell_cost.neg }
+		change_mage_xp = { VALUE = scope:spell_cost.abs }
 	}
 }
 
@@ -238,6 +241,7 @@ sculpter_of_flesh_spell = {
 			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
 		change_mana_with_tooltip = { VALUE = sculpter_of_flesh_spell_cost.neg }
+		change_mage_xp = { VALUE = sculpter_of_flesh_spell_cost.abs }
 	}
 }
 
@@ -292,6 +296,7 @@ fertility_control_spell = {
 						prev = {
 							change_mana_with_tooltip = { VALUE = fertility_control_spell_cost.neg }
 							change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual.neg }
+							change_mage_xp = { VALUE = fertility_control_spell_cost.abs }
 						}
 					}
 					else = {
@@ -306,6 +311,7 @@ fertility_control_spell = {
 						prev = {
 							change_mana_with_tooltip = { VALUE = fertility_control_spell_cost.neg }
 							change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual.neg }
+							change_mage_xp = { VALUE = fertility_control_spell_cost.abs }
 						}
 					}
 					else = {
@@ -373,6 +379,7 @@ impregnate_spell = {
 			no = { ancient_magic_impregnate_effect = { MOTHER = scope:spell_target FATHER = this } }
 		}
 		change_mana_with_tooltip = { VALUE = impregnate_spell_cost.neg }
+		change_mage_xp = { VALUE = impregnate_spell_cost.abs }
 	}
 }
 

@@ -35,7 +35,6 @@ reset_mana_system_decision = {
 		OR = {
 			#always = yes
 			debug_only = yes
-			has_variable = mage_xp
 			NOT = { has_global_variable_list = spell_categories_list }
 			has_perk = finacial_times_perk
 		}
@@ -49,6 +48,13 @@ reset_mana_system_decision = {
 				if = {
 					limit = { has_trait = mage }
 					if = {
+						limit = { NOT = { has_variable = mage_xp } }
+						set_variable = {
+							name = mage_xp
+							value = 0
+						}
+					}
+					if = {
 						limit = { has_perk = finacial_times_perk }
 						remove_perk = finacial_times_perk
 						add_perk = financial_times_perk
@@ -58,7 +64,6 @@ reset_mana_system_decision = {
 						remove_all_character_modifier_instances = finacial_times_modifier
 						add_character_modifier = financial_times_modifier
 					}
-					remove_variable = mage_xp
 					remove_character_flag = magic_potential_1_mana_added
 					remove_character_flag = magic_potential_2_mana_added
 					remove_character_flag = magic_potential_3_mana_added
@@ -73,6 +78,7 @@ reset_mana_system_decision = {
 				}
 			}
 			set_up_spells = yes
+			trigger_event = { on_action = set_up_tri_indices }
 		}
 	}
 
