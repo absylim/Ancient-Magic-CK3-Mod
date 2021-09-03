@@ -574,3 +574,23 @@ ancient_magic_mage_xp = {
 	if = { limit = { has_perk = enchanting_aura_perk } add = enchanting_aura_perk_mage_xp }
 	if = { limit = { has_perk = master_of_puppets_perk } add = master_of_puppets_perk_mage_xp }
 }
+
+###########
+# Utility
+###########
+
+abs = {
+	value = this
+	if = {
+		limit = { this < 0 }
+		multiply = -1
+	}
+}
+
+neg = {
+	value = this
+	if = {
+		limit = { this > 0 }
+		multiply = -1
+	}
+}
