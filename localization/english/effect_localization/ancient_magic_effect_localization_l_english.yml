@@ -1,8 +1,8 @@
 ﻿l_english:
  # Perk effects
- MANA_GEN_MAGIC_PERK_EFFECT: "Increases monthly mana generation by [EmptyScope.ScriptValue('mana_gen_per_perk')|0]"
- MAX_MANA_MAGIC_PERK_EFFECT: "Increases max mana by [EmptyScope.ScriptValue('max_mana_per_perk')|0]"
- MAGE_XP_MAGIC_PERK_EFFECT: "Gain [EmptyScope.ScriptValue('mage_xp_per_perk')|0] mage XP"
+ MANA_GEN_MAGIC_PERK_EFFECT: "Increases monthly mana generation by $VALUE|0$"
+ MAX_MANA_MAGIC_PERK_EFFECT: "Increases max mana by $VALUE|0$"
+ MAGE_XP_MAGIC_PERK_EFFECT: "Gain $VALUE|0$ mage XP"
  IMMUNE_TO_DISEASE_EFFECT: "Become immune to disease #weak prevents vanilla events from giving you diseases#!"
 
  # Spell effects

@@ -1,18 +1,21 @@
 ﻿gain_mana_gen_perk = {
 	custom_description_no_bullet = {
 		text = gain_mana_gen_perk
+		value = $VALUE$
 	}
 }
 
 gain_max_mana_perk = {
 	custom_description_no_bullet = {
 		text = gain_max_mana_perk
+		value = $VALUE$
 	}
 }
 
 gain_mage_xp_perk = {
 	custom_description_no_bullet = {
 		text = gain_mage_xp_perk
+		value = $VALUE$
 	}
 }
 
