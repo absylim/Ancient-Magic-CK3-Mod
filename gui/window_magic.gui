@@ -267,7 +267,7 @@
 						allow_outside = yes
 						ignoreinvisible = yes
 						maxhorizontalslots = 1
-						maxverticalslots = 100
+						maxverticalslots = 255
 						block "datamodel" {
 							datamodel = "[GetPlayer.MakeScope.GetList('spell_candidates')]"
 						}
