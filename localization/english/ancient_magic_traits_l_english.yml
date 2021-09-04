@@ -30,4 +30,4 @@
  trait_mana_devouring_1:0 "Mana Devouring"
  trait_mana_devouring_1_desc:0 "This character has contracted a disease which mostly afflicts those with magic potential. It causes continuous [mana_drain|E]."
  trait_mana_devouring_2:0 "Body Devouring"
- trait_mana_devouring_2_desc:0 "This character has an advanced mana devouring disease. Because [ROOT.GetSheHe] no longer has enough [mana|El] to manage the illness, it has begun to consume [ROOT.GetHerHis] body."
+ trait_mana_devouring_2_desc:0 "This character has an advanced mana devouring disease. Because [ROOT.Char.GetSheHe] no longer has enough [mana|El] to manage the illness, it has begun to consume [ROOT.Char.GetHerHis] body."
