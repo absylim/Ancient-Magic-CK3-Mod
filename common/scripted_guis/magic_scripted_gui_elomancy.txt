@@ -177,11 +177,11 @@ golem_creation_spell = {
 	}
 	effect = {
 		spawn_army = {
-			name = golem_army
+			name = stone_golem_army
 			uses_supply = no
 			inheritable = no
 			men_at_arms = {
-				type = golem
+				type = stone_golems
 				stacks = var:army_stacks
 			}
 			location = scope:spell_target.location
@@ -407,7 +407,7 @@ lord_of_the_elements_spell = {
 			uses_supply = no
 			inheritable = no
 			men_at_arms = {
-				type = lava_golem
+				type = lava_golems
 				stacks = var:army_stacks
 			}
 			location = scope:spell_target.location

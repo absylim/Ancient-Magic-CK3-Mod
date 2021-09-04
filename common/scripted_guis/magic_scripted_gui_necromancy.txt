@@ -162,11 +162,11 @@ necromancy_spell = {
 	}
 	effect = {
 		spawn_army = {
-			name = undead_horde
+			name = lesser_undead_army
 			uses_supply = no
 			inheritable = no
 			men_at_arms = {
-				type = undead
+				type = lesser_undead
 				stacks = var:army_stacks
 			}
 			location = scope:spell_target.location
