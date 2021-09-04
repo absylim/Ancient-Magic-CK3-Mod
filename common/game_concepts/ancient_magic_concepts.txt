@@ -68,7 +68,7 @@ school_of_magic = {
 }
 
 undead = {
-    alias = { lesser_undead greater_undead }
+    alias = { greater_undead }
 }
 
 magocracy = {
@@ -78,12 +78,7 @@ magocracy = {
 city_of_magic = {
 }
 
-arcane_lifestyle = {
-}
-
-##################################################
-############ Ley Line System #####################
-##################################################
+## Ley Line system
 ley_line = {
 	texture = "gfx/interface/icons/modifiers/ley_line.dds"
 	alias = { ley_lines }
@@ -93,8 +88,7 @@ focal_point = {
 	texture = "gfx/interface/icons/modifiers/focal_point.dds"
 }
 
-##################################################
-# SPELL DESCRIPTIONS
+## Spell descriptions
 # Chronomancy
 glimpse_the_future_spell = {}
 
@@ -186,3 +180,16 @@ enchanting_aura_spell = {}
 sculpt_mind_spell = {}
 
 master_of_puppets_spell = {}
+
+## Men At Arms
+stone_golems = {
+	texture = "gfx/interface/icons/regimenttypes/stone_golems.dds"
+}
+
+lava_golems = {
+	texture = "gfx/interface/icons/regimenttypes/lava_golems.dds"
+}
+
+lesser_undead = {
+	texture = "gfx/interface/icons/regimenttypes/lesser_undead.dds"
+}

@@ -1,8 +1,11 @@
 ﻿l_english:
  # MAA
  stone_golems: "Stone Golems"
- stone_golems_flavor: "#F Large and in charge, stone golems are large constructs made entirely of stone, capable of withstanding most attacks.#!"
+ stone_golems_maa_base_desc: "Large and in charge, stone golems are large constructs made entirely of stone, capable of withstanding most attacks."
+ stone_golems_flavor: "#F $stone_golems_maa_base_desc$#!"
  lava_golems: "Lava Golems"
- lava_golems_flavor: "#F A terrible force to be reckoned with, constructs made of liquid fire tear through army and fortification, alike.#!"
+ lava_golems_maa_base_desc: "A terrible force to be reckoned with, constructs made of liquid fire tear through army and fortification, alike."
+ lava_golems_flavor: "#F $lava_golems_maa_base_desc$#!"
  lesser_undead: "Lesser Undead"
- lesser_undead_flavor: "#F What they lack in strength, these undead soldiers more than make up for in numbers. Quite good at protecting flanks, or eviscerating them.#!"
+ lesser_undead_maa_base_desc: "What they lack in strength, these undead soldiers more than make up for in numbers. Quite good at protecting flanks, or eviscerating them."
+ lesser_undead_flavor: "#F $lesser_undead_maa_base_desc$#!"

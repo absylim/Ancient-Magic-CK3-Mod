@@ -242,8 +242,8 @@
 
  # MAA types
  game_concept_stone_golems: "$stone_golems$"
- game_concept_stone_golems_desc: "$stone_golems_flavor$\n\nSoldiers: #P [EmptyScope.ScriptValue('stone_golems_maa_stack_amount')]#! per stack\nDamage: #P 20#!\nToughness: #P 20#!\nPursuit: #P 0#!\nScreen: #P 0#!\nSiege Value: #P 0.4#! per stack"
+ game_concept_stone_golems_desc: "$stone_golems_maa_base_desc$\n\nSoldiers: #P [EmptyScope.ScriptValue('stone_golems_maa_stack_amount')]#! per stack\nDamage: #P 20#!\nToughness: #P 20#!\nPursuit: #P 0#!\nScreen: #P 0#!\nSiege Value: #P 0.4#! per stack"
  game_concept_lava_golems: "$lava_golems$"
- game_concept_lava_golems_desc: "$lava_golems_flavor$\n\nSoldiers: #P [EmptyScope.ScriptValue('lava_golems_maa_stack_amount')]#! per stack\nDamage: #P 400#!\nToughness: #P 400#!\nPursuit: #P 0#!\nScreen: #P 0#!\nSiege Value: #P 2.0#! per stack"
+ game_concept_lava_golems_desc: "$lava_golems_maa_base_desc$\n\nSoldiers: #P [EmptyScope.ScriptValue('lava_golems_maa_stack_amount')]#! per stack\nDamage: #P 400#!\nToughness: #P 400#!\nPursuit: #P 0#!\nScreen: #P 0#!\nSiege Value: #P 2.0#! per stack"
  game_concept_lesser_undead: "$lesser_undead$"
- game_concept_lesser_undead_desc: "$lesser_undead_flavor$\n\nSoldiers: #P [EmptyScope.ScriptValue('lesser_undead_maa_stack_amount')]#! per stack\nDamage: #P 5#!\nToughness: #P 1#!\nPursuit: #P 20#!\nScreen: #P 20#!\nSiege Value: #P 0.0#! per stack"
+ game_concept_lesser_undead_desc: "$lesser_undead_maa_base_desc$\n\nSoldiers: #P [EmptyScope.ScriptValue('lesser_undead_maa_stack_amount')]#! per stack\nDamage: #P 5#!\nToughness: #P 1#!\nPursuit: #P 20#!\nScreen: #P 20#!\nSiege Value: #P 0.0#! per stack"
