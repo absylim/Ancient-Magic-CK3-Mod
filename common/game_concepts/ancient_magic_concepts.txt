@@ -86,6 +86,7 @@ ley_line = {
 
 focal_point = {
 	texture = "gfx/interface/icons/modifiers/focal_point.dds"
+    alias = { focal_points }
 }
 
 ## Spell descriptions
