@@ -19,6 +19,27 @@ ancient_magic_reset_mana_system = {
 	}
 }
 
+quarterly_playable_pulse = {
+	trigger = {
+		has_trait = mage
+	}
+
+	on_actions = {
+		monthly_mage_xp
+		delay = { months = 1 }
+		monthly_mage_xp
+		delay = { months = 2 }
+		monthly_mage_xp
+	}
+}
+
+# gain xp passively for channelling spells
+monthly_mage_xp = {
+	effect = {
+		change_mage_xp = { VALUE = ancient_magic_mana_drain_auras.abs }
+	}
+}
+
 death_stare_action = {
 	effect = {
 		scope:spell_target = {
