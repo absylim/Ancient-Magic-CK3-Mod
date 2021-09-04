@@ -91,7 +91,7 @@
 											flowcontainer = {
 												resizeparent = yes
 												text_single = {
-													text = "[Localize(Concatenate(Concatenate(Concatenate('@icon_',Scope.GetFlagName), '_category'), '!'))]"
+													text = "[Localize(Concatenate(Concatenate('@icon_',Scope.GetFlagName), '_category!'))]"
 													fontsize = 16
 												}
 											}
