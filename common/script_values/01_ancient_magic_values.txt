@@ -129,6 +129,11 @@ max_mana_legacy_3 = 100
 max_mana_per_perk = 30
 max_mana_per_potency = 100
 
+# MAA-summoning spell amounts
+stone_golems_maa_stack_amount = 20
+lava_golems_maa_stack_amount = 1
+lesser_undead_maa_stack_amount = 200
+
 # Misc
 mage_level_legacy_4 = 1
 
