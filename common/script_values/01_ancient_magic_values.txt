@@ -168,6 +168,13 @@ mage_level_internal = {
 mage_level = {
 	value = mage_level_internal
 	add = 1
+	if = {
+		limit = {
+			exists = dynasty
+			dynasty = { has_dynasty_perk = arcane_legacy_4 }
+		}
+		add = 1
+	}
 }
 
 mage_xp_display = {
@@ -177,7 +184,8 @@ mage_xp_display = {
 }
 
 mage_xp_to_next_level = {
-	value = mage_level
+	value = mage_level_internal
+	add = 1
 	multiply = 1000
 }
 
@@ -285,8 +293,12 @@ ancient_magic_mana_drain_lifestyle = {
 ancient_magic_mana_drain_disease = {
 	value = 0
 	if = {
-		limit = { has_trait = mana_devouring }
-		add = mana_drain_disease
+		limit = { has_trait = mana_devouring_1 }
+		add = mana_devouring_1_gen_cost
+	}
+	else_if = {
+		limit = { has_trait = mana_devouring_2 }
+		add = mana_devouring_2_gen_cost
 	}
 }
 
