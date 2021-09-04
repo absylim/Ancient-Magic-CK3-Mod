@@ -1,4 +1,9 @@
 ﻿l_english:
+ # Armies
+ stone_golem_army: "Stone Golem Army"
+ lava_golem_army: "Lava Golem Army"
+ lesser_undead_army: "Undead Horde"
+
  # MAA
  stone_golems: "Stone Golems"
  stone_golems_maa_base_desc: "Large and in charge, stone golems are large constructs made entirely of stone, capable of withstanding most attacks."
