@@ -60,7 +60,6 @@
 	effect = {
 		gain_mana_gen_perk = { VALUE = time_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = time_mage_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = time_mage_perk_mage_xp }
 		make_mage_effect = yes
 		trigger_event = { on_action = on_reset_mana_system }
 	}
@@ -127,7 +126,6 @@ glimpse_the_future_perk = {
 		unlock_glimpse_the_future_spell = yes
 		gain_mana_gen_perk = { VALUE = glimpse_the_future_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = glimpse_the_future_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = glimpse_the_future_perk_mage_xp }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -194,7 +192,6 @@ financial_times_perk = {
 		unlock_financial_times_spell = yes
 		gain_mana_gen_perk = { VALUE = financial_times_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = financial_times_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = financial_times_perk_mage_xp }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -261,7 +258,6 @@ celerity_perk = {
 		unlock_celerity_spell = yes
 		gain_mana_gen_perk = { VALUE = celerity_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = celerity_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = celerity_perk_mage_xp }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -328,7 +324,6 @@ mass_celerity_perk = {
 		unlock_mass_celerity_spell = yes
 		gain_mana_gen_perk = { VALUE = mass_celerity_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = mass_celerity_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = mass_celerity_perk_mage_xp }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -395,7 +390,6 @@ slowness_perk = {
 		unlock_slowness_spell = yes
 		gain_mana_gen_perk = { VALUE = slowness_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = slowness_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = slowness_perk_mage_xp }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -462,7 +456,6 @@ mass_slowness_perk = {
 		unlock_mass_slowness_spell = yes
 		gain_mana_gen_perk = { VALUE = mass_slowness_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = mass_slowness_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = mass_slowness_perk_mage_xp }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -532,7 +525,6 @@ temporal_manipulation_perk = {
 		unlock_haste_spell = yes
 		gain_mana_gen_perk = { VALUE = temporal_manipulation_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = temporal_manipulation_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = temporal_manipulation_perk_mage_xp }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -599,7 +591,6 @@ master_of_time_perk = {
 		unlock_master_of_time_spell = yes
 		gain_mana_gen_perk = { VALUE = master_of_time_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = master_of_time_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = master_of_time_perk_mage_xp }
 		add_trait_force_tooltip = master_of_time
 		trigger_event = { on_action = on_reset_mana_system }
 	}

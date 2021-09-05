@@ -1,4 +1,104 @@
-﻿texticon = { 
+﻿texticon = {
+    icon = aura_icon_active
+    iconsize = {
+        texture = "gfx/interface/icons/icon_active_aura.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }
+}
+
+texticon = {
+    icon = aura_icon_inactive
+    iconsize = {
+        texture = "gfx/interface/icons/icon_inactive_aura.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }
+}
+
+texticon = {
+    icon = drain_icon_active
+    iconsize = {
+        texture = "gfx/interface/icons/icon_active_aura_time.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }
+}
+
+texticon = {
+    icon = drain_icon_inactive
+    iconsize = {
+        texture = "gfx/interface/icons/icon_inactive_aura_time.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }
+}
+
+texticon = {
+    icon = aura_icon_inactive
+    iconsize = {
+        texture = "gfx/interface/icons/icon_inactive_aura.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }
+}
+
+texticon = {
+    icon = drain_icon_active
+    iconsize = {
+        texture = "gfx/interface/icons/icon_active_aura_time.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }
+}
+
+texticon = {
+    icon = drain_icon_inactive
+    iconsize = {
+        texture = "gfx/interface/icons/icon_inactive_aura_time.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }
+}
+
+texticon = {
+    icon = maa_stone_golems
+    iconsize = {
+        texture = "gfx/interface/icons/regimenttypes/stone_golems.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }
+}
+
+texticon = {
+    icon = maa_lava_golems
+    iconsize = {
+        texture = "gfx/interface/icons/regimenttypes/lava_golems.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }
+}
+
+texticon = {
+    icon = maa_lesser_undead
+    iconsize = {
+        texture = "gfx/interface/icons/regimenttypes/lesser_undead.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }
+}
+
+texticon = {
 	icon = icon_time_category
 	iconsize = {
 		texture = "gfx/magic/time_magic.dds"
@@ -7,7 +107,7 @@
 	}
 }
 
-texticon = { 
+texticon = {
 	icon = icon_life_category
 	iconsize = {
 		texture = "gfx/magic/life_magic.dds"
@@ -16,7 +116,7 @@ texticon = {
 	}
 }
 
-texticon = { 
+texticon = {
 	icon = icon_elemental_category
 	iconsize = {
 		texture = "gfx/magic/elemental_magic.dds"
@@ -25,7 +125,7 @@ texticon = {
 	}
 }
 
-texticon = { 
+texticon = {
 	icon = icon_necromancy_category
 	iconsize = {
 		texture = "gfx/magic/necromancy_magic.dds"
@@ -34,7 +134,7 @@ texticon = {
 	}
 }
 
-texticon = { 
+texticon = {
 	icon = icon_biomancy_category
 	iconsize = {
 		texture = "gfx/magic/biomancy_magic.dds"
@@ -43,7 +143,7 @@ texticon = {
 	}
 }
 
-texticon = { 
+texticon = {
 	icon = icon_mind_magic_category
 	iconsize = {
 		texture = "gfx/magic/mind_magic.dds"

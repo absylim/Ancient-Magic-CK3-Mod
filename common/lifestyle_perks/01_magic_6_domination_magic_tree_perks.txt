@@ -54,7 +54,6 @@
 	effect = {
 		gain_mana_gen_perk = { VALUE = domination_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = domination_mage_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = domination_mage_perk_mage_xp }
 		make_mage_effect = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
@@ -72,7 +71,6 @@ entrance_perk = {
 		unlock_entrance_spell = yes
 		gain_mana_gen_perk = { VALUE = entrance_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = entrance_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = entrance_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -90,7 +88,6 @@ incite_lust_perk = {
 		unlock_incite_lust_spell = yes
 		gain_mana_gen_perk = { VALUE = incite_lust_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = incite_lust_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = incite_lust_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -108,7 +105,6 @@ incite_obedience_perk = {
 		unlock_incite_obedience_spell = yes
 		gain_mana_gen_perk = { VALUE = incite_obedience_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = incite_obedience_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = incite_obedience_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -126,7 +122,6 @@ dominate_perk = {
 		unlock_dominate_spell = yes
 		gain_mana_gen_perk = { VALUE = dominate_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = dominate_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = dominate_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -144,7 +139,6 @@ beguiling_aura_perk = {
 		unlock_beguiling_aura_spell = yes
 		gain_mana_gen_perk = { VALUE = beguiling_aura_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = beguiling_aura_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = beguiling_aura_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -163,7 +157,6 @@ friendship_perk = {
 		unlock_rivalry_spell = yes
 		gain_mana_gen_perk = { VALUE = friendship_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = friendship_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = friendship_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -183,7 +176,6 @@ enchanting_aura_perk = {
 		unlock_enchanting_aura_spell = yes
 		gain_mana_gen_perk = { VALUE = enchanting_aura_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = enchanting_aura_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = enchanting_aura_perk_mage_xp }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -202,7 +194,6 @@ master_of_puppets_perk = {
 		unlock_sculpt_mind_spell = yes
 		gain_mana_gen_perk = { VALUE = master_of_puppets_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = master_of_puppets_perk_max_mana }
-		gain_mage_xp_perk = { VALUE = master_of_puppets_perk_mage_xp }
 		add_trait_force_tooltip = master_of_puppets
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}

@@ -10,10 +10,34 @@ gain_max_mana_perk = {
 	third = MAX_MANA_MAGIC_PERK_EFFECT
 }
 
-gain_mage_xp_perk = {
-	global = MAGE_XP_MAGIC_PERK_EFFECT
-	first = MAGE_XP_MAGIC_PERK_EFFECT
-	third = MAGE_XP_MAGIC_PERK_EFFECT
+change_mage_xp = {
+	global = GLOBAL_GAIN_MAGE_XP_EFFECT
+	global_neg = GLOBAL_LOSE_MAGE_XP_EFFECT
+	global_past = GLOBAL_GAINED_MAGE_XP_EFFECT
+	global_past_neg = GLOBAL_LOST_MAGE_XP_EFFECT
+	first = FIRST_GAIN_MAGE_XP_EFFECT
+	first_neg = FIRST_LOSE_MAGE_XP_EFFECT
+	first_past = FIRST_GAINED_MAGE_XP_EFFECT
+	first_past_neg = FIRST_LOST_MAGE_XP_EFFECT
+	third = THIRD_GAIN_MAGE_XP_EFFECT
+	third_neg = THIRD_LOSE_MAGE_XP_EFFECT
+	third_past = THIRD_GAINED_MAGE_XP_EFFECT
+	third_past_neg = THIRD_LOST_MAGE_XP_EFFECT
+}
+
+change_mage_level = {
+	global = GLOBAL_GAIN_MAGE_LEVEL_EFFECT
+	global_neg = GLOBAL_LOSE_MAGE_LEVEL_EFFECT
+	global_past = GLOBAL_GAINED_MAGE_LEVEL_EFFECT
+	global_past_neg = GLOBAL_LOST_MAGE_LEVEL_EFFECT
+	first = FIRST_MAGE_LEVEL_EFFECT
+	first_neg = FIRST_LOSE_MAGE_LEVEL_EFFECT
+	first_past = FIRST_GAINED_MAGE_LEVEL_EFFECT
+	first_past_neg = FIRST_LOST_MAGE_LEVEL_EFFECT
+	third = THIRD_MAGE_LEVEL_EFFECT
+	third_neg = THIRD_LOSE_MAGE_LEVEL_EFFECT
+	third_past = THIRD_GAINED_MAGE_LEVEL_EFFECT
+	third_past_neg = THIRD_LOST_MAGE_LEVEL_EFFECT
 }
 
 immune_to_disease_effect = {

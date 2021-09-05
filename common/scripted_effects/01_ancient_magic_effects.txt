@@ -8,6 +8,13 @@
 			value = 0
 		}
 	}
+	if = {
+		limit = { NOT = { exists = var:mage_xp } }
+		set_variable = {
+			name = mage_xp
+			value = 0
+		}
+	}
 }
 
 change_mana_with_tooltip = {
@@ -23,6 +30,43 @@ change_mana_gen_tooltip = {
 		text = change_mana_gen
 		value = $VALUE$
 		trigger_event = { on_action = on_reset_mana_system }
+	}
+}
+
+change_mage_xp = {
+	save_temporary_scope_value_as = {
+		name = old_level
+		value = mage_level
+	}
+	save_temporary_scope_value_as = {
+		name = xp_increase
+		value = {
+			value = mage_potency
+			add = mage_education
+			multiply = 0.1
+			add = 1
+			multiply = $VALUE$
+		}
+	}
+	custom_description = {
+		text = change_mage_xp
+		value = scope:xp_increase
+		change_variable = {
+			name = mage_xp
+			add = scope:xp_increase
+		}
+	}
+	if = {
+		limit = { mage_level.compare_value > scope:old_level.compare_value }
+		send_interface_toast = {
+			title = mage_level_increase
+			left_icon = root
+			custom_description = {
+				text = change_mage_level
+				value = mage_level
+				trigger_event = { on_action = on_reset_mana_system }
+			}
+		}
 	}
 }
 

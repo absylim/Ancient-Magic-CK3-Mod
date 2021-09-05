@@ -14,6 +14,7 @@ flame_aura_spell = {
 			display_aura_times = { VALUE = mage_level }
 			change_mana_with_tooltip = { VALUE = flame_aura_spell_cost.neg }
 			change_mana_gen_tooltip = { VALUE = flame_aura_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = flame_aura_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = flame_aura_modifier
@@ -67,6 +68,7 @@ flaming_weapons_spell = {
 			display_aura_times = { VALUE = mage_level }
 			change_mana_with_tooltip = { VALUE = flaming_weapons_spell_cost.neg }
 			change_mana_gen_tooltip = { VALUE = flaming_weapons_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = flaming_weapons_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = flaming_weapons_modifier
@@ -120,6 +122,7 @@ living_earthworks_spell = {
 			display_aura_times = { VALUE = mage_level }
 			change_mana_with_tooltip = { VALUE = living_earthworks_spell_cost.neg }
 			change_mana_gen_tooltip = { VALUE = living_earthworks_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = living_earthworks_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = living_earthworks_modifier
@@ -174,11 +177,11 @@ golem_creation_spell = {
 	}
 	effect = {
 		spawn_army = {
-			name = golem_army
+			name = stone_golem_army
 			uses_supply = no
 			inheritable = no
 			men_at_arms = {
-				type = golem
+				type = stone_golems
 				stacks = var:army_stacks
 			}
 			location = scope:spell_target.location
@@ -188,6 +191,7 @@ golem_creation_spell = {
 			years = 5
 		}
 		change_mana_with_tooltip = { VALUE = golem_creation_spell_cost.neg }
+		change_mage_xp = { VALUE = golem_creation_spell_cost.abs }
 	}
 }
 
@@ -236,6 +240,7 @@ control_water_spell = {
 			display_aura_times = { VALUE = mage_level }
 			change_mana_with_tooltip = { VALUE = control_water_spell_cost.neg }
 			change_mana_gen_tooltip = { VALUE = control_water_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = control_water_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = control_water_modifier
@@ -289,6 +294,7 @@ drought_spell = {
 			display_aura_times = { VALUE = mage_level }
 			change_mana_with_tooltip = { VALUE = drought_spell_cost.neg }
 			change_mana_gen_tooltip = { VALUE = drought_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = drought_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = drought_modifier
@@ -342,6 +348,7 @@ elemental_warrior_spell = {
 			display_aura_times = { VALUE = mage_level }
 			change_mana_with_tooltip = { VALUE = elemental_warrior_spell_cost.neg }
 			change_mana_gen_tooltip = { VALUE = elemental_warrior_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = elemental_warrior_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = elemental_warrior_modifier
@@ -400,7 +407,7 @@ lord_of_the_elements_spell = {
 			uses_supply = no
 			inheritable = no
 			men_at_arms = {
-				type = lava_golem
+				type = lava_golems
 				stacks = var:army_stacks
 			}
 			location = scope:spell_target.location
@@ -410,6 +417,7 @@ lord_of_the_elements_spell = {
 			years = 5
 		}
 		change_mana_with_tooltip = { VALUE = lord_of_the_elements_spell_cost.neg }
+		change_mage_xp = { VALUE = lord_of_the_elements_spell_cost.abs }
 	}
 }
 

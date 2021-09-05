@@ -3,7 +3,7 @@
  game_concept_magocracies:0 "Magocracies"
  game_concept_magocratic:0 "Magocratic"
  game_concept_magocratic_government:0 "Magocratic Government"
- game_concept_magocracy_desc:1 "$game_concept_magocratic_government$ is an unplayable [government_form|E] where a powerful [mage|El] rules for life — the $game_concept_government_form$ of wizards, witches, and other magic users.\n\n$game_concept_magocratic$ [vassals|E] have static [obligations|E] that normally cannot be changed, but are higher if their [liege|El] is also a mage."
+ game_concept_magocracy_desc:1 "$game_concept_magocratic_government$ is an unplayable [government_form|E] where a powerful mage rules for life — the $game_concept_government_form$ of wizards, witches, and other magic users.\n\n$game_concept_magocratic$ [vassals|E] have static [obligations|E] that normally cannot be changed, but are higher if their [liege|El] is also a mage."
 
  magocracy_government:0 "Magocracy"
  magocracy_government_adjective:0 "Magocracy"

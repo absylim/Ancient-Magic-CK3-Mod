@@ -1,12 +1,39 @@
 ﻿on_game_start = {
 	on_actions = {
 		set_up_spells
+		set_up_tri_indices
 	}
 }
 
 set_up_spells = {
 	effect = {
 		set_up_spells = yes
+	}
+}
+
+set_up_tri_indices = {
+	effect = {
+		set_local_variable = { name = tmp value = 0 }
+		every_province = {
+			remove_variable = tri_num
+			remove_variable = tri_sum
+		}
+		while = {
+			count = 100
+			random_province = {
+				limit = { NOT = { has_variable = tri_num } }
+				set_variable = { name = tri_num value = local_var:tmp }
+				set_variable = {
+					name = tri_sum
+					value = var:tri_num.sum_n
+				}
+			}
+			change_local_variable = {
+				name = tmp
+				add = 1
+			}
+		}
+		remove_local_variable = tmp
 	}
 }
 

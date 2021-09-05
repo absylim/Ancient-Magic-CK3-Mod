@@ -1,64 +1,73 @@
-﻿golem = {
+﻿stone_golems = {
 	type = heavy_infantry
-	
+
 	can_recruit = no
 
-	damage = 200
-	toughness = 200
+	damage = 20
+	toughness = 20
 	pursuit = 0
 	screen = 0
-	siege_value = 0.1
+	siege_value = 0.4
 	siege_tier = 1
-	
+
 	terrain_bonus = {
+		wetlands = { damage = -5 toughness = -5 }
 	}
-	
+
 	counters = {
-		light_infantry = 3
+		skirmishers = 3
+		archers = 2
 	}
-	
+
+	#stack = stone_golems_maa_stack_amount
 	stack = 20
-	icon = heavy_infantry
+	icon = stone_golems
 }
-lava_golem = {
-	type = heavy_infantry
-	
+
+lava_golems = {
+	type = siege_weapon
+
 	can_recruit = no
 
 	damage = 400
 	toughness = 400
 	pursuit = 0
 	screen = 0
-	siege_value = 5
+	siege_value = 2
 	siege_tier = 5
-	
+
 	terrain_bonus = {
+		wetlands = { damage = -200 toughness = -200 }
 	}
-	
+
 	counters = {
-		light_infantry = 3
+		skirmishers = 3
+		archers = 2
 	}
-	
+
+	#stack = lava_golems_maa_stack_amount
 	stack = 1
-	icon = heavy_infantry
+	icon = lava_golems
 }
 
-undead = {
+lesser_undead = {
 	type = light_infantry
-	
+
 	can_recruit = no
 
 	damage = 5
 	toughness = 1
 	pursuit = 20
 	screen = 20
-	
+
 	terrain_bonus = {
 	}
-	
+
 	counters = {
+		skirmishers = 1
 	}
-	
+
+	#stack = lesser_undead_maa_stack_amount
 	stack = 200
-	icon = light_infantry
+	icon = lesser_undead
 }

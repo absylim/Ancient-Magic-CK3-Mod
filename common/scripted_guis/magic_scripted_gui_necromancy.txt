@@ -13,6 +13,7 @@ inflict_illness_spell = {
 			add_trait = ill
 		}
 		change_mana_with_tooltip = { VALUE = inflict_illness_spell_cost.neg }
+		change_mage_xp = { VALUE = inflict_illness_spell_cost.abs }
 	}
 }
 
@@ -60,6 +61,7 @@ plague_lord_spell = {
 			add_trait = bubonic_plague
 		}
 		change_mana_with_tooltip = { VALUE = plague_lord_spell_cost.neg }
+		change_mage_xp = { VALUE = plague_lord_spell_cost.abs }
 	}
 }
 
@@ -108,6 +110,7 @@ aura_of_death_spell = {
 			display_aura_times = { VALUE = mage_level }
 			change_mana_with_tooltip = { VALUE = aura_of_death_spell_cost.neg }
 			change_mana_gen_tooltip = { VALUE = aura_of_death_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = aura_of_death_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = aura_of_death_modifier
@@ -159,11 +162,11 @@ necromancy_spell = {
 	}
 	effect = {
 		spawn_army = {
-			name = undead_horde
+			name = lesser_undead_army
 			uses_supply = no
 			inheritable = no
 			men_at_arms = {
-				type = undead
+				type = lesser_undead
 				stacks = var:army_stacks
 			}
 			location = scope:spell_target.location
@@ -173,6 +176,7 @@ necromancy_spell = {
 			years = 2
 		}
 		change_mana_with_tooltip = { VALUE = necromancy_spell_cost.neg }
+		change_mage_xp = { VALUE = necromancy_spell_cost.abs }
 	}
 }
 
@@ -238,6 +242,7 @@ drain_life_spell = {
 			years = mage_level
 		}
 		change_mana_with_tooltip = { VALUE = drain_life_spell_cost.neg }
+		change_mage_xp = { VALUE = drain_life_spell_cost.abs }
 	}
 }
 
@@ -296,6 +301,7 @@ death_stare_spell = {
 			trigger_event = { on_action = death_stare_action }
 		}
 		change_mana_with_tooltip = { VALUE = death_stare_spell_cost.neg }
+		change_mage_xp = { VALUE = death_stare_spell_cost.abs }
 	}
 }
 
@@ -345,6 +351,7 @@ deacon_of_death_spell = {
 	effect = {
 		scope:spell_target = { convert_undead = yes }
 		change_mana_with_tooltip = { VALUE = deacon_of_death_spell_cost.neg }
+		change_mage_xp = { VALUE = deacon_of_death_spell_cost.abs }
 	}
 }
 
