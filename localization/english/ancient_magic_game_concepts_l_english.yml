@@ -157,7 +157,7 @@
  game_concept_inflict_illness_spell: "$inflict_illness_spell_name$"
  game_concept_inflict_illness_spell_desc: "$inflict_illness_spell_desc$\n\nTarget:\nGains the [GetTrait('ill').GetName(GetNullCharacter)] trait"
  game_concept_plague_lord_spell: "$plague_lord_spell_name$"
- game_concept_plague_lord_spell_desc: "$inflict_illness_spell_desc$\n\nTarget:\nGains the [GetTrait('bubonic_plague').GetName( GetNullCharacter )] trait\n@warning_icon! #N This disease may spread to others#!"
+ game_concept_plague_lord_spell_desc: "$plague_lord_spell_desc$\n\nTarget:\nGains the [GetTrait('bubonic_plague').GetName( GetNullCharacter )] trait\n@warning_icon! #N This disease may spread to others#!"
  game_concept_aura_of_death_spell: "$aura_of_death_spell_name$"
  game_concept_aura_of_death_spell_desc: "$aura_of_death_spell_desc$\n\n#P +5#! [dread|E] @dread_icon! / [mage_level|E]"
  game_concept_necromancy_spell: "$necromancy_spell_name$"
@@ -269,4 +269,3 @@
  game_concept_lava_golems_desc: "$lava_golems_maa_base_desc$\n\nSoldiers: #P [EmptyScope.ScriptValue('lava_golems_maa_stack_amount')]#! per stack\nDamage: #P 400#!\nToughness: #P 400#!\nPursuit: #P 0#!\nScreen: #P 0#!\nSiege Value: #P 2.0#! per stack"
  game_concept_lesser_undead: "$lesser_undead$"
  game_concept_lesser_undead_desc: "$lesser_undead_maa_base_desc$\n\nSoldiers: #P [EmptyScope.ScriptValue('lesser_undead_maa_stack_amount')]#! per stack\nDamage: #P 5#!\nToughness: #P 1#!\nPursuit: #P 20#!\nScreen: #P 20#!\nSiege Value: #P 0.0#! per stack"
- 
