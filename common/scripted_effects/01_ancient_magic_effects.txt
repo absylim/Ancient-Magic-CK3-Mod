@@ -8,6 +8,13 @@
 			value = 0
 		}
 	}
+	if = {
+		limit = { NOT = { exists = var:mage_xp } }
+		set_variable = {
+			name = mage_xp
+			value = 0
+		}
+	}
 }
 
 change_mana_with_tooltip = {
