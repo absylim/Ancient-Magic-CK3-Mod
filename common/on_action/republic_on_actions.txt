@@ -550,6 +550,9 @@ yearly_magocracy_check = {
 						has_variable = titular_magocracy
 					}
 				}
+				NOT = {
+					has_government = governor_government
+				}
 				OR = {
 					holds_valid_magocracy = yes
 					AND = {

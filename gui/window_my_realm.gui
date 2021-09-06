@@ -311,6 +311,20 @@ window = {
 						onclick = "[GetVariableSystem.Clear('show_governors')]"
 						text = "MY_REALM_WINDOW_SUCCESSION_TAB_REPUBLIC"
 					}
+
+					button_tab = {
+						visible = "[GetScriptedGui('qualifies_for_governorships').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						name = "tutorial_highlight_governor_tab"
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+						onclick = "[GetScriptedGui('find_governors').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						onclick = "[GetVariableSystem.Set('show_governors','exists')]"
+						down = "[GetVariableSystem.Exists('show_governors')]"
+						onclick = "[GetScriptedGui('get_all_governorships').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						onclick = "[GetScriptedGui('additional_titles_for_governor').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+						text = "Governorships"
+					}
 				}
 
 				### DOMAIN TAB
@@ -1846,6 +1860,177 @@ window = {
 
 							vassal_contract_not_default_icon = {}
 						}
+					}
+				}
+
+				### GOV TAB
+				vbox = {
+					name = "tab_governors"
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					visible = "[GetVariableSystem.Exists('show_governors')]"
+
+					state = {
+						name = _show
+						using = Animation_FadeIn_Quick
+					}
+
+					state = {
+						name = _hide
+						alpha = 0
+					}
+
+					scrollbox = {
+						size = { 530 700 }
+						
+						blockoverride "scrollbox_margins" {
+							margin = { 5 5 }
+						}
+						layoutpolicy_vertical = expanding
+						background = {
+							texture = "gfx/interface/illustrations/lifestyles_background/diplomacy_lifestyle.dds"
+							alpha = 0.3
+							modify_texture = {
+								name = "mask"
+								texture = "gfx/interface/component_masks/mask_rough_edges.dds"
+								spriteType = Corneredstretched
+								spriteborder = { 0 0 }
+								blend_mode = alphamultiply
+							}
+						}
+						blockoverride "scrollbox_content"
+						{
+							dynamicgridbox = {
+								datacontext = "[GetPlayer]"
+								layoutpolicy_vertical = expanding
+								allow_outside = yes
+								ignoreinvisible = yes
+								maxhorizontalslots = 1
+								maxverticalslots = 100
+								block "datamodel" {
+									datamodel = "[GetPlayer.GetPrimaryTitle.MakeScope.GetList('governorships_for_title_list')]"
+								}
+								item = {
+									widget = {
+										allow_outside = yes
+										block "size" {
+											size = { 500 140 }
+										}
+										hbox = {
+											datacontext = "[Scope.Title]"
+											coa_title_medium = {}
+											vbox = {
+												text_single = {
+													fontsize = 18
+													text = "[Scope.Title.GetName]"
+													minimumsize = { 300 -1 }
+												}
+												dynamicgridbox = {
+													visible = "[GetScriptedGui('additional_titles_for_governor').IsShown(GuiScope.SetRoot(Scope.Title.GetHolder.MakeScope).End)]"
+													layoutpolicy_vertical = expanding
+													layoutpolicy_horizontal = expanding
+													allow_outside = yes
+													ignoreinvisible = yes
+													maxverticalslots = 1
+													maxhorizontalslots = 99
+													flipdirection = yes
+													block "datamodel" {
+														datamodel = "[Scope.Title.GetHolder.MakeScope.GetList('additional_titles')]"
+													}
+													item = {
+														widget = {
+															block "size" {
+																size = { 35 35 }
+															}
+															hbox = {
+																datacontext = "[Scope.Title]"
+																coa_title_tiny = {}
+																expand = {}
+															}
+														}
+													}
+												}
+												spacer = {
+													size = { 0 5 }
+												}
+												text_single = {
+													visible = "[GetScriptedGui('holder_is_not_you').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('important_holder',Scope.Title.GetHolder.MakeScope).End)]"
+													text = "EFFECTIVENESS"
+													minimumsize = { 300 -1 }
+													tooltip = EFFECTIVENESS_TOOLTIP
+												}
+											}
+											vbox = {
+												datacontext = "[Scope.Title.GetHolder]"
+												hbox = {
+													visible = "[GetScriptedGui('holder_is_not_you').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('important_holder',Scope.Title.GetHolder.MakeScope).End)]"
+													portrait_head = {}
+												}
+												hbox = {
+													visible = "[GetScriptedGui('holder_is_you').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('important_holder',Scope.Title.GetHolder.MakeScope).End)]"
+													button = {
+														texture = "gfx/portraits/unknown_portraits/unknown_head.dds"
+														size = { 98 120 }
+														onclick = "[GetVariableSystem.Toggle( 'window_appoint_governor' )]"
+														onclick = "[GetScriptedGui('get_all_governor_candidates').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('selected_new_governorship',Scope.Title.MakeScope).End)]"
+														background = {
+															using = Background_Area_Solid
+														}
+													}
+												}
+											}
+											expand = {}
+										}
+									}
+								}
+							}
+							expand = {}
+						}
+					}
+					vbox = {
+						#visible = "[GetVariableSystem.HasValue( 'show_governors', '1' )]"
+						layoutpolicy_horizontal = expanding
+						margin = { 15 5 }
+						margin_bottom = 15
+						spacing = 8
+
+						hbox = {
+							visible = "[GetVariableSystem.HasValue( 'show_governors', '1' )]"
+							tooltip = "[GetPlayer.GetDomainLimitTooltip]"
+							spacing = 2
+
+							text_single = {
+								text = "[SelectLocalization(MyRealmWindow.IsOverDomainLimit, 'MY_REALM_WINDOW_DOMAIN_LIMIT_WARNING', 'MY_REALM_WINDOW_DOMAIN_LIMIT')]"
+							}
+
+							icon = {
+								size = { 35 35 }
+								texture = "gfx/interface/icons/icon_domain.dds"
+							}
+
+							text_single = {
+								text = "[SelectLocalization(MyRealmWindow.IsOverDomainLimit, 'MY_REALM_WINDOW_DOMAIN_LIMIT_VALUE_WARNING', 'MY_REALM_WINDOW_DOMAIN_LIMIT_VALUE')]"
+							}
+						}
+						hbox = {
+							visible = "[GetVariableSystem.HasValue( 'show_governors', '1' )]"
+							tooltip = "[GetPlayer.GetDomainLimitTooltip]"
+							spacing = 2
+
+							text_single = {
+								text = " Office land: "
+							}
+
+							icon = {
+								size = { 30 30 }
+								texture = "gfx/interface/icons/icon_vassal.dds"
+							}
+
+							text_single = {
+								text = "[GetPlayer.MakeScope.Var('office_slots').GetValue|0]/[GetPlayer.MakeScope.Var('office_slots_max').GetValue|0] Holdings"
+							}
+						}					
+
 					}
 				}
 			}
