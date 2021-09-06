@@ -174,6 +174,7 @@ start_aura_effect = {
 	change_mana_gen_tooltip = { VALUE = $SPELL$_gen_cost_individual.neg }
 	change_mage_xp = { VALUE = $SPELL$_cost.abs }
 	mod_bit = { BIT = $SPELL$_aura_bit OP = set }
+	trigger_event = { on_action = on_reset_mana_system }
 }
 
 update_aura_effect = {
@@ -198,6 +199,7 @@ stop_aura_effect = {
 		limit = { variable_list_size = { name = $SPELL$_targets value = 0 } }
 		mod_bit = { BIT = $SPELL$_aura_bit OP = unset }
 	}
+	trigger_event = { on_action = on_reset_mana_system }
 }
 
 remove_prev_from_this_aura_spell_targets_effect = {
