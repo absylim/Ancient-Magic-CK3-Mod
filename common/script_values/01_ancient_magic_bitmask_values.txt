@@ -1,0 +1,436 @@
+﻿## Bit accesses
+# Time tree
+time_mage_perk_bit = { value = var:time_perk_mask_0.bit00 }
+glimpse_the_future_perk_bit = { value = var:time_perk_mask_0.bit01 }
+financial_times_perk_bit = { value = var:time_perk_mask_0.bit02 }
+celerity_perk_bit = { value = var:time_perk_mask_0.bit03 }
+mass_celerity_perk_bit = { value = var:time_perk_mask_0.bit04 }
+slowness_perk_bit = { value = var:time_perk_mask_0.bit05 }
+mass_slowness_perk_bit = { value = var:time_perk_mask_0.bit06 }
+temporal_manipulation_perk_bit = { value = var:time_perk_mask_0.bit07 }
+master_of_time_perk_bit = { value = var:time_perk_mask_0.bit08 }
+
+# Life tree
+life_mage_perk_bit = { value = var:life_perk_mask_0.bit00 }
+inward_reflection_perk_bit = { value = var:life_perk_mask_0.bit01 }
+inward_perfection_perk_bit = { value = var:life_perk_mask_0.bit02 }
+heal_perk_bit = { value = var:life_perk_mask_0.bit03 }
+greater_heal_perk_bit = { value = var:life_perk_mask_0.bit04 }
+battlefield_life_mage_perk_bit = { value = var:life_perk_mask_0.bit05 }
+greater_battlefield_life_mage_perk_bit = { value = var:life_perk_mask_0.bit06 }
+purity_of_body_perk_bit = { value = var:life_perk_mask_0.bit07 }
+avatar_of_life_perk_bit = { value = var:life_perk_mask_0.bit08 }
+
+# Elemental tree
+elemental_mage_perk_bit = { value = var:elomancy_perk_mask_0.bit00 }
+flame_aura_perk_bit = { value = var:elomancy_perk_mask_0.bit01 }
+flaming_weapons_perk_bit = { value = var:elomancy_perk_mask_0.bit02 }
+living_earthworks_perk_bit = { value = var:elomancy_perk_mask_0.bit03 }
+golem_creation_perk_bit = { value = var:elomancy_perk_mask_0.bit04 }
+control_water_perk_bit = { value = var:elomancy_perk_mask_0.bit05 }
+drought_perk_bit = { value = var:elomancy_perk_mask_0.bit06 }
+elemental_warrior_perk_bit = { value = var:elomancy_perk_mask_0.bit07 }
+lord_of_the_elements_perk_bit = { value = var:elomancy_perk_mask_0.bit08 }
+
+# Death tree
+death_mage_perk_bit = { value = var:necromancy_perk_mask_0.bit00 }
+inflict_illness_perk_bit = { value = var:necromancy_perk_mask_0.bit01 }
+plague_lord_perk_bit = { value = var:necromancy_perk_mask_0.bit02 }
+aura_of_death_perk_bit = { value = var:necromancy_perk_mask_0.bit03 }
+necromancy_perk_bit = { value = var:necromancy_perk_mask_0.bit04 }
+drain_life_perk_bit = { value = var:necromancy_perk_mask_0.bit05 }
+death_stare_perk_bit = { value = var:necromancy_perk_mask_0.bit06 }
+blight_perk_bit = { value = var:necromancy_perk_mask_0.bit07 }
+deacon_of_death_perk_bit = { value = var:necromancy_perk_mask_0.bit08 }
+
+# Biomancy tree
+biomancy_mage_perk_bit = { value = var:biomancy_perk_mask_0.bit00 }
+improve_trait_perk_bit = { value = var:biomancy_perk_mask_0.bit01 }
+perfect_trait_perk_bit = { value = var:biomancy_perk_mask_0.bit02 }
+fertility_control_perk_bit = { value = var:biomancy_perk_mask_0.bit03 }
+impregnate_perk_bit = { value = var:biomancy_perk_mask_0.bit04 }
+weaken_trait_perk_bit = { value = var:biomancy_perk_mask_0.bit05 }
+criple_trait_perk_bit = { value = var:biomancy_perk_mask_0.bit06 }
+sculpter_of_flesh_perk_bit = { value = var:biomancy_perk_mask_0.bit07 }
+architect_of_bloodlines_perk_bit = { value = var:biomancy_perk_mask_0.bit08 }
+
+# Domination tree
+domination_mage_perk_bit = { value = var:mensomancy_perk_mask_0.bit00 }
+entrance_perk_bit = { value = var:mensomancy_perk_mask_0.bit01 }
+incite_lust_perk_bit = { value = var:mensomancy_perk_mask_0.bit02 }
+incite_obedience_perk_bit = { value = var:mensomancy_perk_mask_0.bit03 }
+dominate_perk_bit = { value = var:mensomancy_perk_mask_0.bit04 }
+beguiling_aura_perk_bit = { value = var:mensomancy_perk_mask_0.bit05 }
+friendship_perk_bit = { value = var:mensomancy_perk_mask_0.bit06 }
+enchanting_aura_perk_bit = { value = var:mensomancy_perk_mask_0.bit07 }
+master_of_puppets_perk_bit = { value = var:mensomancy_perk_mask_0.bit08 }
+
+# Aura spells
+glimpse_the_future_spell_aura_bit = { value = var:aura_mask_0.bit00 }
+financial_times_spell_aura_bit = { value = var:aura_mask_0.bit01 }
+celerity_spell_aura_bit = { value = var:aura_mask_0.bit02 }
+mass_celerity_spell_aura_bit = { value = var:aura_mask_0.bit03 }
+slowness_spell_aura_bit = { value = var:aura_mask_0.bit04 }
+mass_slowness_spell_aura_bit = { value = var:aura_mask_0.bit05 }
+temporal_manipulation_spell_aura_bit = { value = var:aura_mask_0.bit06 }
+haste_spell_aura_bit = { value = var:aura_mask_0.bit07 }
+master_of_time_spell_aura_bit = { value = var:aura_mask_0.bit08 }
+flame_aura_spell_aura_bit = { value = var:aura_mask_0.bit09 }
+flaming_weapons_spell_aura_bit = { value = var:aura_mask_0.bit10 }
+living_earthworks_spell_aura_bit = { value = var:aura_mask_0.bit11 }
+control_water_spell_aura_bit = { value = var:aura_mask_0.bit12 }
+drought_spell_aura_bit = { value = var:aura_mask_0.bit13 }
+elemental_warrior_spell_aura_bit = { value = var:aura_mask_0.bit14 }
+aura_of_death_spell_aura_bit = { value = var:aura_mask_0.bit15 }
+blight_spell_aura_bit = { value = var:aura_mask_0.bit16 }
+fertility_control_spell_aura_bit = { value = var:aura_mask_0.bit17 }
+beguiling_aura_spell_aura_bit = { value = var:aura_mask_0.bit18 }
+enchanting_aura_spell_aura_bit = { value = var:aura_mask_0.bit19 }
+
+## Bit flips
+# Time tree
+time_mage_perk_bit_flip = { value = var:time_perk_mask_0.flip00 }
+glimpse_the_future_perk_bit_flip = { value = var:time_perk_mask_0.flip01 }
+financial_times_perk_bit_flip = { value = var:time_perk_mask_0.flip02 }
+celerity_perk_bit_flip = { value = var:time_perk_mask_0.flip03 }
+mass_celerity_perk_bit_flip = { value = var:time_perk_mask_0.flip04 }
+slowness_perk_bit_flip = { value = var:time_perk_mask_0.flip05 }
+mass_slowness_perk_bit_flip = { value = var:time_perk_mask_0.flip06 }
+temporal_manipulation_perk_bit_flip = { value = var:time_perk_mask_0.flip07 }
+master_of_time_perk_bit_flip = { value = var:time_perk_mask_0.flip08 }
+
+# Life tree
+life_mage_perk_bit_flip = { value = var:life_perk_mask_0.flip00 }
+inward_reflection_perk_bit_flip = { value = var:life_perk_mask_0.flip01 }
+inward_perfection_perk_bit_flip = { value = var:life_perk_mask_0.flip02 }
+heal_perk_bit_flip = { value = var:life_perk_mask_0.flip03 }
+greater_heal_perk_bit_flip = { value = var:life_perk_mask_0.flip04 }
+battlefield_life_mage_perk_bit_flip = { value = var:life_perk_mask_0.flip05 }
+greater_battlefield_life_mage_perk_bit_flip = { value = var:life_perk_mask_0.flip06 }
+purity_of_body_perk_bit_flip = { value = var:life_perk_mask_0.flip07 }
+avatar_of_life_perk_bit_flip = { value = var:life_perk_mask_0.flip08 }
+
+# Elemental tree
+elemental_mage_perk_bit_flip = { value = var:elomancy_perk_mask_0.flip00 }
+flame_aura_perk_bit_flip = { value = var:elomancy_perk_mask_0.flip01 }
+flaming_weapons_perk_bit_flip = { value = var:elomancy_perk_mask_0.flip02 }
+living_earthworks_perk_bit_flip = { value = var:elomancy_perk_mask_0.flip03 }
+golem_creation_perk_bit_flip = { value = var:elomancy_perk_mask_0.flip04 }
+control_water_perk_bit_flip = { value = var:elomancy_perk_mask_0.flip05 }
+drought_perk_bit_flip = { value = var:elomancy_perk_mask_0.flip06 }
+elemental_warrior_perk_bit_flip = { value = var:elomancy_perk_mask_0.flip07 }
+lord_of_the_elements_perk_bit_flip = { value = var:elomancy_perk_mask_0.flip08 }
+
+# Death tree
+death_mage_perk_bit_flip = { value = var:necromancy_perk_mask_0.flip00 }
+inflict_illness_perk_bit_flip = { value = var:necromancy_perk_mask_0.flip01 }
+plague_lord_perk_bit_flip = { value = var:necromancy_perk_mask_0.flip02 }
+aura_of_death_perk_bit_flip = { value = var:necromancy_perk_mask_0.flip03 }
+necromancy_perk_bit_flip = { value = var:necromancy_perk_mask_0.flip04 }
+drain_life_perk_bit_flip = { value = var:necromancy_perk_mask_0.flip05 }
+death_stare_perk_bit_flip = { value = var:necromancy_perk_mask_0.flip06 }
+blight_perk_bit_flip = { value = var:necromancy_perk_mask_0.flip07 }
+deacon_of_death_perk_bit_flip = { value = var:necromancy_perk_mask_0.flip08 }
+
+# Biomancy tree
+biomancy_mage_perk_bit_flip = { value = var:biomancy_perk_mask_0.flip00 }
+improve_trait_perk_bit_flip = { value = var:biomancy_perk_mask_0.flip01 }
+perfect_trait_perk_bit_flip = { value = var:biomancy_perk_mask_0.flip02 }
+fertility_control_perk_bit_flip = { value = var:biomancy_perk_mask_0.flip03 }
+impregnate_perk_bit_flip = { value = var:biomancy_perk_mask_0.flip04 }
+weaken_trait_perk_bit_flip = { value = var:biomancy_perk_mask_0.flip05 }
+criple_trait_perk_bit_flip = { value = var:biomancy_perk_mask_0.flip06 }
+sculpter_of_flesh_perk_bit_flip = { value = var:biomancy_perk_mask_0.flip07 }
+architect_of_bloodlines_perk_bit_flip = { value = var:biomancy_perk_mask_0.flip08 }
+
+# Domination tree
+domination_mage_perk_bit_flip = { value = var:mensomancy_perk_mask_0.flip00 }
+entrance_perk_bit_flip = { value = var:mensomancy_perk_mask_0.flip01 }
+incite_lust_perk_bit_flip = { value = var:mensomancy_perk_mask_0.flip02 }
+incite_obedience_perk_bit_flip = { value = var:mensomancy_perk_mask_0.flip03 }
+dominate_perk_bit_flip = { value = var:mensomancy_perk_mask_0.flip04 }
+beguiling_aura_perk_bit_flip = { value = var:mensomancy_perk_mask_0.flip05 }
+friendship_perk_bit_flip = { value = var:mensomancy_perk_mask_0.flip06 }
+enchanting_aura_perk_bit_flip = { value = var:mensomancy_perk_mask_0.flip07 }
+master_of_puppets_perk_bit_flip = { value = var:mensomancy_perk_mask_0.flip08 }
+
+# Aura spells
+glimpse_the_future_spell_aura_bit_flip = { value = var:aura_mask_0.flip00 }
+financial_times_spell_aura_bit_flip = { value = var:aura_mask_0.flip01 }
+celerity_spell_aura_bit_flip = { value = var:aura_mask_0.flip02 }
+mass_celerity_spell_aura_bit_flip = { value = var:aura_mask_0.flip03 }
+slowness_spell_aura_bit_flip = { value = var:aura_mask_0.flip04 }
+mass_slowness_spell_aura_bit_flip = { value = var:aura_mask_0.flip05 }
+temporal_manipulation_spell_aura_bit_flip = { value = var:aura_mask_0.flip06 }
+haste_spell_aura_bit_flip = { value = var:aura_mask_0.flip07 }
+master_of_time_spell_aura_bit_flip = { value = var:aura_mask_0.flip08 }
+flame_aura_spell_aura_bit_flip = { value = var:aura_mask_0.flip09 }
+flaming_weapons_spell_aura_bit_flip = { value = var:aura_mask_0.flip10 }
+living_earthworks_spell_aura_bit_flip = { value = var:aura_mask_0.flip11 }
+control_water_spell_aura_bit_flip = { value = var:aura_mask_0.flip12 }
+drought_spell_aura_bit_flip = { value = var:aura_mask_0.flip13 }
+elemental_warrior_spell_aura_bit_flip = { value = var:aura_mask_0.flip14 }
+aura_of_death_spell_aura_bit_flip = { value = var:aura_mask_0.flip15 }
+blight_spell_aura_bit_flip = { value = var:aura_mask_0.flip16 }
+fertility_control_spell_aura_bit_flip = { value = var:aura_mask_0.flip17 }
+beguiling_aura_spell_aura_bit_flip = { value = var:aura_mask_0.flip18 }
+enchanting_aura_spell_aura_bit_flip = { value = var:aura_mask_0.flip19 }
+
+## Bit sets
+# Time tree
+time_mage_perk_bit_set = { value = var:time_perk_mask_0.set00 }
+glimpse_the_future_perk_bit_set = { value = var:time_perk_mask_0.set01 }
+financial_times_perk_bit_set = { value = var:time_perk_mask_0.set02 }
+celerity_perk_bit_set = { value = var:time_perk_mask_0.set03 }
+mass_celerity_perk_bit_set = { value = var:time_perk_mask_0.set04 }
+slowness_perk_bit_set = { value = var:time_perk_mask_0.set05 }
+mass_slowness_perk_bit_set = { value = var:time_perk_mask_0.set06 }
+temporal_manipulation_perk_bit_set = { value = var:time_perk_mask_0.set07 }
+master_of_time_perk_bit_set = { value = var:time_perk_mask_0.set08 }
+
+# Life tree
+life_mage_perk_bit_set = { value = var:life_perk_mask_0.set00 }
+inward_reflection_perk_bit_set = { value = var:life_perk_mask_0.set01 }
+inward_perfection_perk_bit_set = { value = var:life_perk_mask_0.set02 }
+heal_perk_bit_set = { value = var:life_perk_mask_0.set03 }
+greater_heal_perk_bit_set = { value = var:life_perk_mask_0.set04 }
+battlefield_life_mage_perk_bit_set = { value = var:life_perk_mask_0.set05 }
+greater_battlefield_life_mage_perk_bit_set = { value = var:life_perk_mask_0.set06 }
+purity_of_body_perk_bit_set = { value = var:life_perk_mask_0.set07 }
+avatar_of_life_perk_bit_set = { value = var:life_perk_mask_0.set08 }
+
+# Elemental tree
+elemental_mage_perk_bit_set = { value = var:elomancy_perk_mask_0.set00 }
+flame_aura_perk_bit_set = { value = var:elomancy_perk_mask_0.set01 }
+flaming_weapons_perk_bit_set = { value = var:elomancy_perk_mask_0.set02 }
+living_earthworks_perk_bit_set = { value = var:elomancy_perk_mask_0.set03 }
+golem_creation_perk_bit_set = { value = var:elomancy_perk_mask_0.set04 }
+control_water_perk_bit_set = { value = var:elomancy_perk_mask_0.set05 }
+drought_perk_bit_set = { value = var:elomancy_perk_mask_0.set06 }
+elemental_warrior_perk_bit_set = { value = var:elomancy_perk_mask_0.set07 }
+lord_of_the_elements_perk_bit_set = { value = var:elomancy_perk_mask_0.set08 }
+
+# Death tree
+death_mage_perk_bit_set = { value = var:necromancy_perk_mask_0.set00 }
+inflict_illness_perk_bit_set = { value = var:necromancy_perk_mask_0.set01 }
+plague_lord_perk_bit_set = { value = var:necromancy_perk_mask_0.set02 }
+aura_of_death_perk_bit_set = { value = var:necromancy_perk_mask_0.set03 }
+necromancy_perk_bit_set = { value = var:necromancy_perk_mask_0.set04 }
+drain_life_perk_bit_set = { value = var:necromancy_perk_mask_0.set05 }
+death_stare_perk_bit_set = { value = var:necromancy_perk_mask_0.set06 }
+blight_perk_bit_set = { value = var:necromancy_perk_mask_0.set07 }
+deacon_of_death_perk_bit_set = { value = var:necromancy_perk_mask_0.set08 }
+
+# Biomancy tree
+biomancy_mage_perk_bit_set = { value = var:biomancy_perk_mask_0.set00 }
+improve_trait_perk_bit_set = { value = var:biomancy_perk_mask_0.set01 }
+perfect_trait_perk_bit_set = { value = var:biomancy_perk_mask_0.set02 }
+fertility_control_perk_bit_set = { value = var:biomancy_perk_mask_0.set03 }
+impregnate_perk_bit_set = { value = var:biomancy_perk_mask_0.set04 }
+weaken_trait_perk_bit_set = { value = var:biomancy_perk_mask_0.set05 }
+criple_trait_perk_bit_set = { value = var:biomancy_perk_mask_0.set06 }
+sculpter_of_flesh_perk_bit_set = { value = var:biomancy_perk_mask_0.set07 }
+architect_of_bloodlines_perk_bit_set = { value = var:biomancy_perk_mask_0.set08 }
+
+# Domination tree
+domination_mage_perk_bit_set = { value = var:mensomancy_perk_mask_0.set00 }
+entrance_perk_bit_set = { value = var:mensomancy_perk_mask_0.set01 }
+incite_lust_perk_bit_set = { value = var:mensomancy_perk_mask_0.set02 }
+incite_obedience_perk_bit_set = { value = var:mensomancy_perk_mask_0.set03 }
+dominate_perk_bit_set = { value = var:mensomancy_perk_mask_0.set04 }
+beguiling_aura_perk_bit_set = { value = var:mensomancy_perk_mask_0.set05 }
+friendship_perk_bit_set = { value = var:mensomancy_perk_mask_0.set06 }
+enchanting_aura_perk_bit_set = { value = var:mensomancy_perk_mask_0.set07 }
+master_of_puppets_perk_bit_set = { value = var:mensomancy_perk_mask_0.set08 }
+
+# Aura spells
+glimpse_the_future_spell_aura_bit_set = { value = var:aura_mask_0.set00 }
+financial_times_spell_aura_bit_set = { value = var:aura_mask_0.set01 }
+celerity_spell_aura_bit_set = { value = var:aura_mask_0.set02 }
+mass_celerity_spell_aura_bit_set = { value = var:aura_mask_0.set03 }
+slowness_spell_aura_bit_set = { value = var:aura_mask_0.set04 }
+mass_slowness_spell_aura_bit_set = { value = var:aura_mask_0.set05 }
+temporal_manipulation_spell_aura_bit_set = { value = var:aura_mask_0.set06 }
+haste_spell_aura_bit_set = { value = var:aura_mask_0.set07 }
+master_of_time_spell_aura_bit_set = { value = var:aura_mask_0.set08 }
+flame_aura_spell_aura_bit_set = { value = var:aura_mask_0.set09 }
+flaming_weapons_spell_aura_bit_set = { value = var:aura_mask_0.set10 }
+living_earthworks_spell_aura_bit_set = { value = var:aura_mask_0.set11 }
+control_water_spell_aura_bit_set = { value = var:aura_mask_0.set12 }
+drought_spell_aura_bit_set = { value = var:aura_mask_0.set13 }
+elemental_warrior_spell_aura_bit_set = { value = var:aura_mask_0.set14 }
+aura_of_death_spell_aura_bit_set = { value = var:aura_mask_0.set15 }
+blight_spell_aura_bit_set = { value = var:aura_mask_0.set16 }
+fertility_control_spell_aura_bit_set = { value = var:aura_mask_0.set17 }
+beguiling_aura_spell_aura_bit_set = { value = var:aura_mask_0.set18 }
+enchanting_aura_spell_aura_bit_set = { value = var:aura_mask_0.set19 }
+
+## Bit unsets
+# Time tree
+time_mage_perk_bit_unset = { value = var:time_perk_mask_0.unset00 }
+glimpse_the_future_perk_bit_unset = { value = var:time_perk_mask_0.unset01 }
+financial_times_perk_bit_unset = { value = var:time_perk_mask_0.unset02 }
+celerity_perk_bit_unset = { value = var:time_perk_mask_0.unset03 }
+mass_celerity_perk_bit_unset = { value = var:time_perk_mask_0.unset04 }
+slowness_perk_bit_unset = { value = var:time_perk_mask_0.unset05 }
+mass_slowness_perk_bit_unset = { value = var:time_perk_mask_0.unset06 }
+temporal_manipulation_perk_bit_unset = { value = var:time_perk_mask_0.unset07 }
+master_of_time_perk_bit_unset = { value = var:time_perk_mask_0.unset08 }
+
+# Life tree
+life_mage_perk_bit_unset = { value = var:life_perk_mask_0.unset00 }
+inward_reflection_perk_bit_unset = { value = var:life_perk_mask_0.unset01 }
+inward_perfection_perk_bit_unset = { value = var:life_perk_mask_0.unset02 }
+heal_perk_bit_unset = { value = var:life_perk_mask_0.unset03 }
+greater_heal_perk_bit_unset = { value = var:life_perk_mask_0.unset04 }
+battlefield_life_mage_perk_bit_unset = { value = var:life_perk_mask_0.unset05 }
+greater_battlefield_life_mage_perk_bit_unset = { value = var:life_perk_mask_0.unset06 }
+purity_of_body_perk_bit_unset = { value = var:life_perk_mask_0.unset07 }
+avatar_of_life_perk_bit_unset = { value = var:life_perk_mask_0.unset08 }
+
+# Elemental tree
+elemental_mage_perk_bit_unset = { value = var:elomancy_perk_mask_0.unset00 }
+flame_aura_perk_bit_unset = { value = var:elomancy_perk_mask_0.unset01 }
+flaming_weapons_perk_bit_unset = { value = var:elomancy_perk_mask_0.unset02 }
+living_earthworks_perk_bit_unset = { value = var:elomancy_perk_mask_0.unset03 }
+golem_creation_perk_bit_unset = { value = var:elomancy_perk_mask_0.unset04 }
+control_water_perk_bit_unset = { value = var:elomancy_perk_mask_0.unset05 }
+drought_perk_bit_unset = { value = var:elomancy_perk_mask_0.unset06 }
+elemental_warrior_perk_bit_unset = { value = var:elomancy_perk_mask_0.unset07 }
+lord_of_the_elements_perk_bit_unset = { value = var:elomancy_perk_mask_0.unset08 }
+
+# Death tree
+death_mage_perk_bit_unset = { value = var:necromancy_perk_mask_0.unset00 }
+inflict_illness_perk_bit_unset = { value = var:necromancy_perk_mask_0.unset01 }
+plague_lord_perk_bit_unset = { value = var:necromancy_perk_mask_0.unset02 }
+aura_of_death_perk_bit_unset = { value = var:necromancy_perk_mask_0.unset03 }
+necromancy_perk_bit_unset = { value = var:necromancy_perk_mask_0.unset04 }
+drain_life_perk_bit_unset = { value = var:necromancy_perk_mask_0.unset05 }
+death_stare_perk_bit_unset = { value = var:necromancy_perk_mask_0.unset06 }
+blight_perk_bit_unset = { value = var:necromancy_perk_mask_0.unset07 }
+deacon_of_death_perk_bit_unset = { value = var:necromancy_perk_mask_0.unset08 }
+
+# Biomancy tree
+biomancy_mage_perk_bit_unset = { value = var:biomancy_perk_mask_0.unset00 }
+improve_trait_perk_bit_unset = { value = var:biomancy_perk_mask_0.unset01 }
+perfect_trait_perk_bit_unset = { value = var:biomancy_perk_mask_0.unset02 }
+fertility_control_perk_bit_unset = { value = var:biomancy_perk_mask_0.unset03 }
+impregnate_perk_bit_unset = { value = var:biomancy_perk_mask_0.unset04 }
+weaken_trait_perk_bit_unset = { value = var:biomancy_perk_mask_0.unset05 }
+criple_trait_perk_bit_unset = { value = var:biomancy_perk_mask_0.unset06 }
+sculpter_of_flesh_perk_bit_unset = { value = var:biomancy_perk_mask_0.unset07 }
+architect_of_bloodlines_perk_bit_unset = { value = var:biomancy_perk_mask_0.unset08 }
+
+# Domination tree
+domination_mage_perk_bit_unset = { value = var:mensomancy_perk_mask_0.unset00 }
+entrance_perk_bit_unset = { value = var:mensomancy_perk_mask_0.unset01 }
+incite_lust_perk_bit_unset = { value = var:mensomancy_perk_mask_0.unset02 }
+incite_obedience_perk_bit_unset = { value = var:mensomancy_perk_mask_0.unset03 }
+dominate_perk_bit_unset = { value = var:mensomancy_perk_mask_0.unset04 }
+beguiling_aura_perk_bit_unset = { value = var:mensomancy_perk_mask_0.unset05 }
+friendship_perk_bit_unset = { value = var:mensomancy_perk_mask_0.unset06 }
+enchanting_aura_perk_bit_unset = { value = var:mensomancy_perk_mask_0.unset07 }
+master_of_puppets_perk_bit_unset = { value = var:mensomancy_perk_mask_0.unset08 }
+
+# Aura spells
+glimpse_the_future_spell_aura_bit_unset = { value = var:aura_mask_0.unset00 }
+financial_times_spell_aura_bit_unset = { value = var:aura_mask_0.unset01 }
+celerity_spell_aura_bit_unset = { value = var:aura_mask_0.unset02 }
+mass_celerity_spell_aura_bit_unset = { value = var:aura_mask_0.unset03 }
+slowness_spell_aura_bit_unset = { value = var:aura_mask_0.unset04 }
+mass_slowness_spell_aura_bit_unset = { value = var:aura_mask_0.unset05 }
+temporal_manipulation_spell_aura_bit_unset = { value = var:aura_mask_0.unset06 }
+haste_spell_aura_bit_unset = { value = var:aura_mask_0.unset07 }
+master_of_time_spell_aura_bit_unset = { value = var:aura_mask_0.unset08 }
+flame_aura_spell_aura_bit_unset = { value = var:aura_mask_0.unset09 }
+flaming_weapons_spell_aura_bit_unset = { value = var:aura_mask_0.unset10 }
+living_earthworks_spell_aura_bit_unset = { value = var:aura_mask_0.unset11 }
+control_water_spell_aura_bit_unset = { value = var:aura_mask_0.unset12 }
+drought_spell_aura_bit_unset = { value = var:aura_mask_0.unset13 }
+elemental_warrior_spell_aura_bit_unset = { value = var:aura_mask_0.unset14 }
+aura_of_death_spell_aura_bit_unset = { value = var:aura_mask_0.unset15 }
+blight_spell_aura_bit_unset = { value = var:aura_mask_0.unset16 }
+fertility_control_spell_aura_bit_unset = { value = var:aura_mask_0.unset17 }
+beguiling_aura_spell_aura_bit_unset = { value = var:aura_mask_0.unset18 }
+enchanting_aura_spell_aura_bit_unset = { value = var:aura_mask_0.unset19 }
+
+## Setter Helpers
+# You are able to use these directly, but it's much more efficient
+# if you recall var:<spell_school>_perk_mask instead!
+time_perk_mask_0_maker = {
+	value = 0
+	if = { limit = { has_perk = time_mage_perk } add = 1 }
+	if = { limit = { has_perk = glimpse_the_future_perk } add = 2 }
+	if = { limit = { has_perk = financial_times_perk } add = 4 }
+	if = { limit = { has_perk = celerity_perk } add = 8 }
+	if = { limit = { has_perk = mass_celerity_perk } add = 16 }
+	if = { limit = { has_perk = slowness_perk } add = 32 }
+	if = { limit = { has_perk = mass_slowness_perk } add = 64 }
+	if = { limit = { has_perk = temporal_manipulation_perk } add = 128 }
+	if = { limit = { has_perk = master_of_time_perk } add = 256 }
+}
+
+life_perk_mask_0_maker = {
+	value = 0
+	if = { limit = { has_perk = life_mage_perk } add = 1 }
+	if = { limit = { has_perk = inward_reflection_perk } add = 2 }
+	if = { limit = { has_perk = inward_perfection_perk } add = 4 }
+	if = { limit = { has_perk = heal_perk } add = 8 }
+	if = { limit = { has_perk = greater_heal_perk } add = 16 }
+	if = { limit = { has_perk = battlefield_life_mage_perk } add = 32 }
+	if = { limit = { has_perk = greater_battlefield_life_mage_perk } add = 64 }
+	if = { limit = { has_perk = purity_of_body_perk } add = 128 }
+	if = { limit = { has_perk = avatar_of_life_perk } add = 256 }
+}
+
+elomancy_perk_mask_0_maker = {
+	value = 0
+	if = { limit = { has_perk = elemental_mage_perk } add = 1 }
+	if = { limit = { has_perk = flame_aura_perk } add = 2 }
+	if = { limit = { has_perk = flaming_weapons_perk } add = 4 }
+	if = { limit = { has_perk = living_earthworks_perk } add = 8 }
+	if = { limit = { has_perk = golem_creation_perk } add = 16 }
+	if = { limit = { has_perk = control_water_perk } add = 32 }
+	if = { limit = { has_perk = drought_perk } add = 64 }
+	if = { limit = { has_perk = elemental_warrior_perk } add = 128 }
+	if = { limit = { has_perk = lord_of_the_elements_perk } add = 256 }
+}
+
+necromancy_perk_mask_0_maker = {
+	value = 0
+	if = { limit = { has_perk = death_mage_perk } add = 1 }
+	if = { limit = { has_perk = inflict_illness_perk } add = 2 }
+	if = { limit = { has_perk = plague_lord_perk } add = 4 }
+	if = { limit = { has_perk = aura_of_death_perk } add = 8 }
+	if = { limit = { has_perk = necromancy_perk } add = 16 }
+	if = { limit = { has_perk = drain_life_perk } add = 32 }
+	if = { limit = { has_perk = death_stare_perk } add = 64 }
+	if = { limit = { has_perk = blight_perk } add = 128 }
+	if = { limit = { has_perk = deacon_of_death_perk } add = 256 }
+}
+
+biomancy_perk_mask_0_maker = {
+	value = 0
+	if = { limit = { has_perk = biomancy_mage_perk } add = 1 }
+	if = { limit = { has_perk = improve_trait_perk } add = 2 }
+	if = { limit = { has_perk = perfect_trait_perk } add = 4 }
+	if = { limit = { has_perk = fertility_control_perk } add = 8 }
+	if = { limit = { has_perk = impregnate_perk } add = 16 }
+	if = { limit = { has_perk = weaken_trait_perk } add = 32 }
+	if = { limit = { has_perk = criple_trait_perk } add = 64 }
+	if = { limit = { has_perk = sculpter_of_flesh_perk } add = 128 }
+	if = { limit = { has_perk = architect_of_bloodlines_perk } add = 256 }
+}
+
+mensomancy_perk_mask_0_maker = {
+	value = 0
+	if = { limit = { has_perk = domination_mage_perk } add = 1 }
+	if = { limit = { has_perk = entrance_perk } add = 2 }
+	if = { limit = { has_perk = incite_lust_perk } add = 4 }
+	if = { limit = { has_perk = incite_obedience_perk } add = 8 }
+	if = { limit = { has_perk = dominate_perk } add = 16 }
+	if = { limit = { has_perk = beguiling_aura_perk } add = 32 }
+	if = { limit = { has_perk = friendship_perk } add = 64 }
+	if = { limit = { has_perk = enchanting_aura_perk } add = 128 }
+	if = { limit = { has_perk = master_of_puppets_perk } add = 256 }
+}

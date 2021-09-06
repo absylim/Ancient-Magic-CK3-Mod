@@ -15,6 +15,55 @@
 			value = 0
 		}
 	}
+	if = {
+		limit = { NOT = { exists = var:aura_mask_0 } }
+		set_variable = {
+			name = aura_mask_0
+			value = 0
+		}
+	}
+	if = {
+		limit = { NOT = { exists = var:time_perk_mask_0 } }
+		set_variable = {
+			name = time_perk_mask_0
+			value = 0
+		}
+	}
+	if = {
+		limit = { NOT = { exists = var:life_perk_mask_0 } }
+		set_variable = {
+			name = life_perk_mask_0
+			value = 0
+		}
+	}
+	if = {
+		limit = { NOT = { exists = var:elomancy_perk_mask_0 } }
+		set_variable = {
+			name = elomancy_perk_mask_0
+			value = 0
+		}
+	}
+	if = {
+		limit = { NOT = { exists = var:necromancy_perk_mask_0 } }
+		set_variable = {
+			name = necromancy_perk_mask_0
+			value = 0
+		}
+	}
+	if = {
+		limit = { NOT = { exists = var:biomancy_perk_mask_0 } }
+		set_variable = {
+			name = biomancy_perk_mask_0
+			value = 0
+		}
+	}
+	if = {
+		limit = { NOT = { exists = var:mensomancy_perk_mask_0 } }
+		set_variable = {
+			name = mensomancy_perk_mask_0
+			value = 0
+		}
+	}
 }
 
 change_mana_with_tooltip = {
@@ -116,25 +165,49 @@ add_immortal_years_since_lifetime_reset = {
 	change_variable = { name = immortal_years_since_lifetime_reset add = 1 }
 }
 
-init_immortal_years_since_master_of_time_spell = {
+start_aura_effect = {
+	save_temporary_scope_value_as = { name = spell_cost value = $SPELL$_cost }
+	add_to_variable_list = { name = $SPELL$_targets target = scope:spell_target }
+	scope:spell_target = { add_character_modifier = $SPELL$_modifier }
+	display_aura_times = { VALUE = mage_level }
+	change_mana_with_tooltip = { VALUE = $SPELL$_cost.neg }
+	change_mana_gen_tooltip = { VALUE = $SPELL$_gen_cost_individual.neg }
+	change_mage_xp = { VALUE = $SPELL$_cost.abs }
+	mod_bit = { BIT = $SPELL$_aura_bit OP = set }
+}
+
+update_aura_effect = {
 	if = {
-		limit = {
-			NOT = { exists = var:immortal_years_since_master_of_time_spell }
-		}
-		set_variable = {
-			name = immortal_years_since_master_of_time_spell
-			value = 0
+		limit = { var:aura_mask_$MASK_NUM$.$SPELL$_aura_bit.compare_value = 1 }
+		every_in_list = {
+			variable = $SPELL$_targets
+			remove_all_character_modifier_instances = $SPELL$_modifier
+			while = {
+				count = mage_level
+				add_character_modifier = { modifier = $SPELL$_modifier }
+			}
 		}
 	}
 }
 
-add_immortal_years_since_master_of_time_spell = {
-	init_immortal_years_since_master_of_time_spell = yes
-	change_variable = { name = immortal_years_since_master_of_time_spell add = 1 }
+stop_aura_effect = {
+	remove_list_variable = { name = $SPELL$_targets target = scope:spell_target }
+	scope:spell_target = { remove_all_character_modifier_instances = $SPELL$_modifier }
+	change_mana_gen_tooltip = { VALUE = $SPELL$_gen_cost_individual.abs }
+	if = {
+		limit = { variable_list_size = { name = $SPELL$_targets value = 0 } }
+		mod_bit = { BIT = $SPELL$_aura_bit OP = unset }
+	}
 }
 
-remove_immortal_years_since_master_of_time_spell = {
-	remove_variable = immortal_years_since_master_of_time_spell
+remove_prev_from_this_aura_spell_targets_effect = {
+	if = {
+		limit = {
+			has_spell_aura_targets_trigger = { SPELL = $SPELL$ }
+			is_target_in_variable_list = { name = $SPELL$_targets target = prev }
+		}
+		remove_list_variable = { name = $SPELL$_targets target = prev }
+	}
 }
 
 remove_single_minor_illness_effect = {

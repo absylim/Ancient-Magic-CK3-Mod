@@ -1,5 +1,5 @@
 ﻿domination_mage_perk = {
-	lifestyle = arcane_lifestyle
+	lifestyle = ancient_magic_lifestyle
 	tree = domination_magic
 	position = { 2 0 }
 	icon = node_diplomacy
@@ -55,12 +55,13 @@
 		gain_mana_gen_perk = { VALUE = domination_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = domination_mage_perk_max_mana }
 		make_mage_effect = yes
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { BIT = domination_mage_perk_bit OP = set }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 entrance_perk = {
-	lifestyle = arcane_lifestyle
+	lifestyle = ancient_magic_lifestyle
 	tree = domination_magic
 	position = { 0 1.25 }
 	icon = node_diplomacy
@@ -71,13 +72,13 @@ entrance_perk = {
 		unlock_entrance_spell = yes
 		gain_mana_gen_perk = { VALUE = entrance_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = entrance_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { BIT = entrance_perk_bit OP = set }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
-
 incite_lust_perk = {
-	lifestyle = arcane_lifestyle
+	lifestyle = ancient_magic_lifestyle
 	tree = domination_magic
 	position = { 0 2.5 }
 	icon = node_diplomacy
@@ -88,13 +89,13 @@ incite_lust_perk = {
 		unlock_incite_lust_spell = yes
 		gain_mana_gen_perk = { VALUE = incite_lust_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = incite_lust_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { BIT = incite_lust_perk_bit OP = set }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
-
 incite_obedience_perk = {
-	lifestyle = arcane_lifestyle
+	lifestyle = ancient_magic_lifestyle
 	tree = domination_magic
 	position = { 2 1.25 }
 	icon = node_diplomacy
@@ -105,13 +106,13 @@ incite_obedience_perk = {
 		unlock_incite_obedience_spell = yes
 		gain_mana_gen_perk = { VALUE = incite_obedience_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = incite_obedience_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { BIT = incite_obedience_perk_bit OP = set }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
-
 dominate_perk = {
-	lifestyle = arcane_lifestyle
+	lifestyle = ancient_magic_lifestyle
 	tree = domination_magic
 	position = { 2 2.5 }
 	icon = node_diplomacy
@@ -122,13 +123,13 @@ dominate_perk = {
 		unlock_dominate_spell = yes
 		gain_mana_gen_perk = { VALUE = dominate_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = dominate_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { BIT = dominate_perk_bit OP = set }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
-
 beguiling_aura_perk = {
-	lifestyle = arcane_lifestyle
+	lifestyle = ancient_magic_lifestyle
 	tree = domination_magic
 	position = { 4 1.25 }
 	icon = node_diplomacy
@@ -139,13 +140,13 @@ beguiling_aura_perk = {
 		unlock_beguiling_aura_spell = yes
 		gain_mana_gen_perk = { VALUE = beguiling_aura_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = beguiling_aura_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { BIT = beguiling_aura_perk_bit OP = set }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
-
 friendship_perk = {
-	lifestyle = arcane_lifestyle
+	lifestyle = ancient_magic_lifestyle
 	tree = domination_magic
 	position = { 4 2.5 }
 	icon = node_diplomacy
@@ -157,13 +158,13 @@ friendship_perk = {
 		unlock_rivalry_spell = yes
 		gain_mana_gen_perk = { VALUE = friendship_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = friendship_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { BIT = friendship_perk_bit OP = set }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
-
 enchanting_aura_perk = {
-	lifestyle = arcane_lifestyle
+	lifestyle = ancient_magic_lifestyle
 	tree = domination_magic
 	position = { 2 3.75 }
 	icon = node_diplomacy
@@ -176,13 +177,13 @@ enchanting_aura_perk = {
 		unlock_enchanting_aura_spell = yes
 		gain_mana_gen_perk = { VALUE = enchanting_aura_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = enchanting_aura_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { BIT = enchanting_aura_perk_bit OP = set }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
-
 master_of_puppets_perk = {
-	lifestyle = arcane_lifestyle
+	lifestyle = ancient_magic_lifestyle
 	tree = domination_magic
 	position = { 2 5 }
 	icon = master_of_puppets
@@ -195,6 +196,7 @@ master_of_puppets_perk = {
 		gain_mana_gen_perk = { VALUE = master_of_puppets_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = master_of_puppets_perk_max_mana }
 		add_trait_force_tooltip = master_of_puppets
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { BIT = master_of_puppets_perk_bit OP = set }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }

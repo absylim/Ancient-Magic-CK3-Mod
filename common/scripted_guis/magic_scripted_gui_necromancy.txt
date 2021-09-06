@@ -20,7 +20,7 @@ inflict_illness_spell = {
 inflict_illness_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = inflict_illness_perk
+		has_perk_trigger = { PERK = inflict_illness_perk }
 	}
 	is_valid = {
 		always = yes
@@ -68,7 +68,7 @@ plague_lord_spell = {
 plague_lord_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = plague_lord_perk
+		has_perk_trigger = { PERK = plague_lord_perk }
 	}
 	is_valid = {
 		always = yes
@@ -105,16 +105,11 @@ aura_of_death_spell = {
 	}
 	effect = {
 		if = {
-			limit = { NOT = { has_character_modifier = aura_of_death_modifier } }
-			add_character_modifier = aura_of_death_modifier
-			display_aura_times = { VALUE = mage_level }
-			change_mana_with_tooltip = { VALUE = aura_of_death_spell_cost.neg }
-			change_mana_gen_tooltip = { VALUE = aura_of_death_spell_gen_cost_individual.neg }
-			change_mage_xp = { VALUE = aura_of_death_spell_cost.abs }
+			limit = { is_target_in_variable_list = { name = aura_of_death_spell_targets target = scope:spell_target } }
+			stop_aura_effect = { SPELL = aura_of_death_spell }
 		}
 		else = {
-			remove_all_character_modifier_instances = aura_of_death_modifier
-			change_mana_gen_tooltip = { VALUE = aura_of_death_spell_gen_cost_individual.abs }
+			start_aura_effect = { SPELL = aura_of_death_spell }
 		}
 	}
 }
@@ -122,7 +117,7 @@ aura_of_death_spell = {
 aura_of_death_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = aura_of_death_perk
+		has_perk_trigger = { PERK = aura_of_death_perk }
 	}
 	is_valid = {
 		always = yes
@@ -183,7 +178,7 @@ necromancy_spell = {
 necromancy_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = necromancy_perk
+		has_perk_trigger = { PERK = necromancy_perk }
 	}
 	is_valid = {
 		always = yes
@@ -249,7 +244,7 @@ drain_life_spell = {
 drain_life_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = drain_life_perk
+		has_perk_trigger = { PERK = drain_life_perk }
 	}
 	is_valid = {
 		always = yes
@@ -308,7 +303,7 @@ death_stare_spell = {
 death_stare_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = death_stare_perk
+		has_perk_trigger = { PERK = death_stare_perk }
 	}
 	is_valid = {
 		always = yes
@@ -326,6 +321,68 @@ death_stare_spell_has_properties = {
 }
 
 death_stare_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+blight_spell = {
+	scope = character
+	is_shown = {
+		OR = {
+			AND = {
+				NOT = { scope:spell_target = { has_character_modifier = blight_modifier } }
+				OR = {
+					NOT = { has_variable_list = blight_spell_targets }
+					variable_list_size = { name = blight_spell_targets value < 3 }
+				}
+			}
+			AND = {
+				has_variable_list = blight_spell_targets
+				is_target_in_variable_list = { name = blight_spell_targets target = scope:spell_target }
+			}
+		}
+		NOT = { this = scope:spell_target }
+	}
+	is_valid = {
+		has_enough_mana_trigger = { SPELL = blight_spell }
+	}
+	effect = {
+		if = {
+			limit = { is_target_in_variable_list = { name = blight_spell_targets target = scope:spell_target } }
+			stop_aura_effect = { SPELL = blight_spell }
+		}
+		else = {
+			start_aura_effect = { SPELL = blight_spell }
+		}
+	}
+}
+
+blight_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk_trigger = { PERK = blight_perk }
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+blight_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+blight_spell_has_list = {
 	scope = character
 	is_shown = {
 		always = no
@@ -358,7 +415,7 @@ deacon_of_death_spell = {
 deacon_of_death_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = deacon_of_death_perk
+		has_perk_trigger = { PERK = deacon_of_death_perk }
 	}
 	is_valid = {
 		always = yes

@@ -1,0 +1,7 @@
+﻿# Valid OPs: flip, set, unset
+mod_bit = {
+	set_variable = {
+		name = $BIT$
+		value = $BIT$_$OP$
+	}
+}

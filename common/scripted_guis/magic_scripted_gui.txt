@@ -130,10 +130,7 @@ increase_times_repeated = {
 	is_valid = {
 		save_temporary_scope_value_as = {
 			name = potential_repeat_spell
-			value = {
-				value = var:repeat_spell
-				add = 1
-			}
+			value = var:repeat_spell.inc
 		}
 		save_temporary_scope_value_as = {
 			name = total_cost

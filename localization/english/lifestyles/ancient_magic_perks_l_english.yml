@@ -38,7 +38,7 @@
  necromancy_perk_name:0 "Necromancy"
  drain_life_perk_name:0 "Drain Life"
  death_stare_perk_name:0 "Death Stare"
- death_magic_8_perk_name:0 "Placeholder"
+ blight_perk_name:0 "Blight"
  deacon_of_death_perk_name:0 "Deacon of Death"
 
  # elemental magic
@@ -76,7 +76,6 @@
  friendship_perk_name:0 "Friendship"
  enchanting_aura_perk_name:0 "Enchanting Aura"
  master_of_puppets_perk_name:0 "Master of Puppets"
- 
-#effects
- monthly_arcane_lifestyle_xp_gain_mult:0 "Monthly Magic [lifestyle|E] Experience"
+
+ # effects
  full_restoration_modifier_effect:0 "Fully Restored"

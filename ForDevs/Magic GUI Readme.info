@@ -11,15 +11,11 @@
   2a. How to add a new spell to the system
   2b. How to add a new spell category
 
-3. File References
-  3a. Files
-
 ##### 1. Introduction ######
 This magic spellbook system is intended to be as intuitive and painless a method for adding new spells as
 we could make it. In CK3, that can be difficult, but hopefully it works out. This system really only
 involves the spellbook and casting of spells, mechanisms to unlock spells are left as an exercise to the
-reader. Though traditionally they have been lifestyle perks, that may change if I ever decide to implement
-a spell advancement system
+reader. Though traditionally they have been lifestyle perks, the method of their unlocking is up to you
 
 ##### 2. Additions #####
 ### 2a. How to add a new spell category
@@ -39,7 +35,10 @@ a spell advancement system
 
 ### 2b. How to add a new spell
 * 'common/scripted_effects/magic_base_effects.txt'
-Add an entry to one of the category lists
+- Add an entry to one of the category lists
+- If you want the player to be able to select multiple list options for your spell at the same time, add an entry to `multiple_option_select_spells`
+- If your trait has a list of options and directly edits the target's traits, add an entry to `modify_trait_spells`
+- If your spell is an aura (constant effects on a target, with a mana upkeep cost), add an entry to the `drain_auras` list
 
 * 'common/scripted_effects/magic_gui_effects.txt'
 If your spell has a list of options for a player to choose:
@@ -48,29 +47,49 @@ If your spell has a list of options for a player to choose:
   - invoke the effect in 'effect_open_magic_window'
   - clear the list in 'effect_close_magic_window'
 
-* 'common/scripted_triggers/magic_gui_triggers.txt'
-If the spell is an aura, add a line for it in 'trigger_magic_is_aura'
+* 'common/scripted_triggers/01_ancient_magic_triggers.txt'
+If the spell is an aura, add a line for it in 'is_magic_aura_trigger'
+
+* 'common/script_values/01_ancient_magic_bitmask_values.txt'
+If your spell is an aura, add four script values for it:
+  - <spell_name>_aura_bit - for reading if the aura is active
+  - <spell_name>_aura_bit_flip - for toggling the aura
+  - <spell_name>_aura_bit_set - for turning on the aura
+  - <spell_name>_aura_bit_unset - for turning off the aura
+NOTE: Be sure to use a mask+bit/flip/set/unset number that is not already taken. Valid values are from 00 to 31
+
+* 'common/script_values/01_ancient_magic_bitmask_values.txt'
+If your spell is an aura, add an entry to `ancient_magic_mana_drain_auras` for it
+  - your added line should be `add = <spell_name>_gen_cost`
 
 * 'common/script_values/magic_cost_values.txt'
 Add an entry for the spell:
   - <spell_name>_cost
+If the spell is an aura, add two more entries for the spell:
+  - <spell_name>_gen_cost_individual - the mana upkeep to cast it on one person
+  - <spell_name>_gen_cost - the mana upkeep for all people it is *currently* cast on
+    - NOTE: Do not include pending spell targets, only targets that are already in the target list
 
-* 'common/scripted_guis/magic_scripted_gui.txt'
+* 'common/scripted_guis/magic_scripted_gui_<spell_school>.txt'
 Add four entries for your spell
   - <spell_name>
     - is_shown - whether a given spell target can have this spell cast on them
     - is_valid - whether or not the spell is castable
       - the 'cast spell' button includes an is_shown check, so you don't need to check for those conditions in is_valid
-    - effect - the effect the spell has when it is cast. NOTE: The spell effect is responsible for calculating and deducting the spell cost, for tooltip purposes
+    - effect - the effect the spell has when it is cast.
+      - NOTE: The spell effect is responsible for calculating and deducting the spell cost, for tooltip purposes (except auras)
+      - If your spell is an aura, use `start_aura_effect = { SPELL = <spell_name> }` and `stop_aura_effect = { SPELL = <spell_name> }`
+        - `start_aura_effect` and `stop_aura_effect` take care of spell costs for auras
     - scopes:
       - root - character, the caster
       - scope:spell_target - character, the spell's target
     - vars:
       - root.var:repeat_count - script_value/CFixedPoint, number of times to cast the spell
     - root's variable lists:
-      - selected_list_options - list of flags, the options chosen by the player. Still need to use every_in_list even if there's only one option chosen
+      - selected_list_options - list of flags, the options chosen by the player. Should use list traversal even if there's only one option chosen
   - <spell_name>_spellbook
     - is_shown - whether or not the spell will appear in the spell book as an option
+      - if it's unlocked by a perk, use `has_perk_trigger = { PERK = <perk_key> }` instead of `has_perk`
     - is_valid - whether or not the spell will be selectable in the spell book (though it's generally better to invalidate casting than selection)
     - scopes:
       - root - character, the caster
@@ -95,15 +114,3 @@ Add four entries for your spell
  - <spell_name>_desc - spell description
 For any list options the spell might have:
  - <option_name>_list_name - name of the option
-
-##### 3. File References #####
-### 3a. Files
-common/on_action/magic_on_actions.txt: Initializes the spell lists on start
-common/script_values/magic_cost_values.txt: The mana costs for all spells
-common/scripted_guis/magic_scripted_gui.txt: Contains a few selection scripted guis as well as the unique effects for each spell
-common/scripted_effects/magic_base_effects.txt: Holds the location for the base lists of spells and spell categories
-common/scripted_triggers/magic_target_triggers.txt: Stores the triggers for which possible people can be targets for your spell
-gui/hud.gui: Contains the button to open the window
-gui/magic_texticons.gui: Stores the unique category icons
-gui/window_magic.gui: The window UI. Be warned, I did abuse Concatenate and variable systems in here
-localization/english/magic_gui_l_english.yml: Stores all the loc

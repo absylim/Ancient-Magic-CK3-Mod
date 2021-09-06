@@ -146,6 +146,8 @@ drain_life_spell = {}
 
 death_stare_spell = {}
 
+blight_spell = {}
+
 deacon_of_death_spell = {}
 
 # Biomancy

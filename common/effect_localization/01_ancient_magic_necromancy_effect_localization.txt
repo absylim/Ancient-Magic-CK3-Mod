@@ -40,6 +40,12 @@ death_stare = {
 	third = THIRD_DEATH_STARE_EFFECT
 }
 
+unlock_blight_spell = {
+	global = GLOBAL_UNLOCK_BLIGHT_SPELL
+	first = FIRST_UNLOCK_BLIGHT_SPELL
+	third = THIRD_UNLOCK_BLIGHT_SPELL
+}
+
 unlock_deacon_of_death_spell = {
 	global = GLOBAL_UNLOCK_DEACON_OF_DEATH_SPELL
 	first = FIRST_UNLOCK_DEACON_OF_DEATH_SPELL

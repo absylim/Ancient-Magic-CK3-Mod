@@ -1,0 +1,47 @@
+﻿is_magic_aura_trigger = {
+	switch = {
+		trigger = $SPELL$
+		flag:glimpse_the_future_spell = { always = yes }
+		flag:financial_times_spell = { always = yes }
+		flag:celerity_spell = { always = yes }
+		flag:mass_celerity_spell = { always = yes }
+		flag:slowness_spell = { always = yes }
+		flag:mass_slowness_spell = { always = yes }
+		flag:temporal_manipulation_spell = { always = yes }
+		flag:master_of_time_spell = { always = yes }
+		flag:flame_aura_spell = { always = yes }
+		flag:flaming_weapons_spell = { always = yes }
+		flag:living_earthworks_spell = { always = yes }
+		flag:control_water_spell = { always = yes }
+		flag:drought_spell = { always = yes }
+		flag:elemental_warrior_spell = { always = yes }
+		flag:aura_of_death_spell = { always = yes }
+		flag:blight_spell = { always = yes }
+		flag:beguiling_aura_spell = { always = yes }
+		flag:enchanting_aura_spell = { always = yes }
+		fallback = { always = no }
+	}
+}
+
+has_any_aura_spell_modifier_trigger = {
+    OR = {
+		has_character_modifier = glimpse_the_future_spell_modifier
+		has_character_modifier = financial_times_spell_modifier
+		has_character_modifier = celerity_spell_modifier
+		has_character_modifier = mass_celerity_spell_modifier
+		has_character_modifier = slowness_spell_modifier
+		has_character_modifier = mass_slowness_spell_modifier
+		has_character_modifier = temporal_manipulation_spell_modifier
+		has_character_modifier = haste_spell_modifier
+		has_character_modifier = flame_aura_spell_modifier
+		has_character_modifier = flaming_weapons_spell_modifier
+		has_character_modifier = living_earthworks_spell_modifier
+		has_character_modifier = control_water_spell_modifier
+		has_character_modifier = drought_spell_modifier
+		has_character_modifier = elemental_warrior_spell_modifier
+		has_character_modifier = aura_of_death_spell_modifier 
+		has_character_modifier = blight_spell_modifier
+		has_character_modifier = beguiling_aura_spell_modifier
+		has_character_modifier = enchanting_aura_spell_modifier
+    }
+}

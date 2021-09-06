@@ -1,0 +1,11 @@
+﻿has_perk_trigger = {
+	var:$PERK$_bit.compare_value = 1
+}
+
+has_any_spell_aura_targets_trigger = {
+    var:aura_mask_0.compare_value > 0
+}
+
+has_spell_aura_targets_trigger = {
+    $SPELL$_aura_bit.compare_value = 0
+}

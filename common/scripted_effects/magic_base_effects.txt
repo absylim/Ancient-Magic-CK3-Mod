@@ -45,6 +45,7 @@
 	add_to_global_variable_list = { name = necromancy_spells_list target = flag:necromancy_spell }
 	add_to_global_variable_list = { name = necromancy_spells_list target = flag:drain_life_spell }
 	add_to_global_variable_list = { name = necromancy_spells_list target = flag:death_stare_spell }
+	add_to_global_variable_list = { name = necromancy_spells_list target = flag:blight_spell }
 	add_to_global_variable_list = { name = necromancy_spells_list target = flag:deacon_of_death_spell }
 
 	# Biomancy
@@ -169,6 +170,7 @@
 	add_to_global_variable_list = { name = drain_auras target = flag:drought_spell }
 	add_to_global_variable_list = { name = drain_auras target = flag:elemental_warrior_spell }
 	add_to_global_variable_list = { name = drain_auras target = flag:aura_of_death_spell }
+	add_to_global_variable_list = { name = drain_auras target = flag:blight_spell }
 	add_to_global_variable_list = { name = drain_auras target = flag:fertility_control_spell }
 	add_to_global_variable_list = { name = drain_auras target = flag:beguiling_aura_spell }
 	add_to_global_variable_list = { name = drain_auras target = flag:enchanting_aura_spell }

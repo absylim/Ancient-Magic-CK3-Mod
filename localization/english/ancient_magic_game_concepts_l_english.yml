@@ -166,6 +166,8 @@
  game_concept_drain_life_spell_desc: "$drain_life_spell_desc$\n\n[health|E]: #P Massive Boost#!: 1 year / [mage_level|E]\n\nTarget:\n[health|E]: #N Severe Penalty#!: 1 year / [mage_level|E]"
  game_concept_death_stare_spell: "$death_stare_spell_name$"
  game_concept_death_stare_spell_desc: "$death_stare_spell_desc$\n\nTarget:\n@death_icon!#bold #N DIES#!#!@death_icon!"
+ game_concept_blight_spell: "$blight_spell_name$"
+ game_concept_blight_spell_desc: "$blight_spell_desc$\n\nTarget:\n[Concept('command_modifier','@command_modifier_icon!')|E][supply|E] Duration: #N -5%#! / [mage_level|E]"
  game_concept_deacon_of_death_spell: "$deacon_of_death_spell_name$"
  game_concept_deacon_of_death_spell_desc: "$deacon_of_death_spell_desc$\n\nTarget:\nGains the [GetTrait('undead').GetName(GetNullCharacter)] trait"
 
