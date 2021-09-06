@@ -207,7 +207,7 @@ merchant_magocracy_events.1007 = { # Maintained power
 	}
 }
 
-merchant_magocracy_events.1008 = { # Elected councillor
+merchant_magocracy_events.1008 = { # Elected magocracy_councillor
 	type = character_event
 	title = merchant_magocracy_events.1008.t
 	desc = merchant_magocracy_events.1008.desc
@@ -236,30 +236,24 @@ merchant_magocracy_events.1009 = { # Becoming a Family
 	title = merchant_magocracy_events.1009.t
 	desc = {
 		first_valid = {
-			triggered_desc = {
-				trigger = {
-					magocracy_has_senate_form = yes
-				}
-				desc = merchant_magocracy_events.1009.senate_desc
-			}
+			#triggered_desc = {
+			#	trigger = {
+			#		magocracy_has_senate_form = yes
+			#	}
+			#	desc = merchant_magocracy_events.1009.senate_desc
+			#}
 			triggered_desc = {
 				trigger = {
 					magocracy_has_council_form = yes
 				}
 				desc = merchant_magocracy_events.1009.council_desc
 			}
-			triggered_desc = {
-				trigger = {
-					magocracy_has_elected_ruler_form = yes
-				}
-				desc = merchant_magocracy_events.1009.elected_ruler_desc
-			}
-			triggered_desc = {
-				trigger = {
-					magocracy_has_bicameral_form = yes
-				}
-				desc = merchant_magocracy_events.1009.bicameral_desc
-			}
+			#triggered_desc = {
+			#	trigger = {
+			#		magocracy_has_elected_ruler_form = yes
+			#	}
+			#	desc = merchant_magocracy_events.1009.elected_ruler_desc
+			#}
 			triggered_desc = {
 				trigger = {
 					house = {

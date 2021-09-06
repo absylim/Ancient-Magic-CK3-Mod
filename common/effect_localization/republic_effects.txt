@@ -93,28 +93,12 @@ effect_reform_into_council = {
 	third_past = reform_into_council
 }
 
-effect_reform_into_bicameral = {
-	global = reform_into_bicameral
-	first = reform_into_bicameral
-	first_past = reform_into_bicameral
-	third = reform_into_bicameral
-	third_past = reform_into_bicameral
-}
-
 effect_reform_into_elected_ruler = {
 	global = reform_into_elected_ruler
 	first = reform_into_elected_ruler
 	first_past = reform_into_elected_ruler
 	third = reform_into_elected_ruler
 	third_past = reform_into_elected_ruler
-}
-
-effect_reform_into_bicameral = {
-	global = reform_into_bicameral
-	first = reform_into_bicameral
-	first_past = reform_into_bicameral
-	third = reform_into_bicameral
-	third_past = reform_into_bicameral
 }
 
 effect_trigger_election_cycle = {

@@ -63,8 +63,6 @@ window = {
 						name = "my_magocracy_council"
 						layoutpolicy_horizontal = expanding
 						layoutpolicy_vertical = expanding
-
-						using = Animation_Tab_Switch
 					}
 				}
 			}
@@ -94,7 +92,7 @@ types MagocracyCouncilWindow {
 		size = { 150 180 }
 
 		### Required Datacontexts
-		# The councillor
+		# The magocracy_councillor
 		widget = {
 			size = { 100% 100% }
 
@@ -109,7 +107,7 @@ types MagocracyCouncilWindow {
 			}
 
 			portrait_torso = {
-				name = "councillor_portrait"
+				name = "magocracy_councillor_portrait"
 			}
 		}
 		vbox = {
@@ -201,7 +199,7 @@ types MagocracyCouncilWindow {
 					coa_realm_small_crown = {
 						visible = "[Character.HasLandedTitles]"
 						parentanchor = bottom
-						name = "councillor_realm"
+						name = "magocracy_councillor_realm"
 					}
 				}
 
@@ -365,7 +363,7 @@ types MagocracyCouncilTaskTypes {
 				widget_magocracy_councillor_item = {
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
-					datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_2').House.GetHeadOfHouse]"
+					datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('magocracy_councillor_2').House.GetHeadOfHouse]"
 
 					background =  {
 						texture = "gfx/interface/skinned/illustrations/council/bg_council_chancellor.dds"
@@ -384,7 +382,7 @@ types MagocracyCouncilTaskTypes {
 				widget_magocracy_councillor_item = {
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
-					datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('councillor_3').House.GetHeadOfHouse]"
+					datacontext = "[GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.MakeScope.Var('magocracy_councillor_3').House.GetHeadOfHouse]"
 
 					background =  {
 						texture = "gfx/interface/skinned/illustrations/council/bg_council_chancellor.dds"

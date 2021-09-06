@@ -411,8 +411,7 @@ call_emergency_vote_decision = {
 				holds_valid_magocracy = yes
 				OR = {
 					magocracy_has_council_form = yes
-					magocracy_has_senate_form = yes
-					magocracy_has_bicameral_form = yes
+					#magocracy_has_senate_form = yes
 				}
 			}
 			AND = {
@@ -421,8 +420,7 @@ call_emergency_vote_decision = {
 					holds_valid_magocracy = yes
 					OR = {
 						magocracy_has_council_form = yes
-						magocracy_has_senate_form = yes
-						magocracy_has_bicameral_form = yes
+						#magocracy_has_senate_form = yes
 					}
 				}
 			}
@@ -457,17 +455,13 @@ call_emergency_vote_decision = {
 		custom_description = {
 			text = effect_trigger_election_cycle
 			house.var:titular_magocracy = {
-				if = {
-					limit = { exists = var:senate_government_magocracy }
-					trigger_election_cycle = yes
-				}
+				#if = {
+				#	limit = { exists = var:senate_government_magocracy }
+				#	trigger_election_cycle = yes
+				#}
 				if = {
 					limit = { exists = var:council_government_magocracy }
 					trigger_council_election_cycle = yes
-				}
-				if = {
-					limit = { exists = var:bicameral_government_magocracy }
-					bicameral_laws_voting = yes
 				}
 			}
 		}

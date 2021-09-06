@@ -7,7 +7,15 @@ holds_valid_magocracy = {
 		is_independent_ruler = yes
 		AND = {
 			exists = liege
-			liege = { NAND = { has_government = magocracy_government has_government = republic_government has_government = tribal_government has_government = theocracy_government } }
+			liege = { 
+				NAND = { 
+					has_government = magocracy_government 
+					has_government = republic_government 
+					has_government = tribal_government 
+					has_government = theocracy_government 
+					has_government = governor_government
+				} 
+			}
 		}
 	}
 }
