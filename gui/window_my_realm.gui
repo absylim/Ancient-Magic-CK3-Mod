@@ -12,6 +12,7 @@ window = {
 	magocracy_council_view = {}
 	magocracy_term_limits_window = {}
 	magocracy_families_window = {}
+	window_appoint_governor = {}
 	layer = windows_layer
 
 	using = Window_Size_MainTab
