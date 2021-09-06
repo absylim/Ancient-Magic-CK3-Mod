@@ -9,7 +9,8 @@ heal_spell = {
 	}
 	effect = {
 		scope:spell_target = { remove_single_minor_illness_effect = yes }
-		deduct_mana_with_tooltip = { VALUE = heal_spell_cost }
+		change_mana_with_tooltip = { VALUE = heal_spell_cost.neg }
+		change_mage_xp = { VALUE = heal_spell_cost.abs }
 	}
 }
 
@@ -58,7 +59,8 @@ greater_heal_spell = {
 	}
 	effect = {
 		scope:spell_target = { remove_single_greater_or_minor_illness_effect = yes }
-		deduct_mana_with_tooltip = { VALUE = greater_heal_spell_cost }
+		change_mana_with_tooltip = { VALUE = greater_heal_spell_cost.neg }
+		change_mage_xp = { VALUE = greater_heal_spell_cost.abs }
 	}
 }
 
@@ -117,7 +119,8 @@ avatar_of_life_spell = {
 				years = 5
 			}
 		}
-		deduct_mana_with_tooltip = { VALUE = avatar_of_life_spell_cost }
+		change_mana_with_tooltip = { VALUE = avatar_of_life_spell_cost.neg }
+		change_mage_xp = { VALUE = avatar_of_life_spell_cost.abs }
 	}
 }
 

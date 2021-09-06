@@ -14,28 +14,15 @@ rewrite_beauty_spell = {
 			value = rewrite_beauty_spell_cost
 		}
 		scope:spell_target = {
-			if = {
-				limit = { is_itpp_installed_trigger = yes }
-				remove_trait = beauty_good_5
-				remove_trait = beauty_good_4
-			}
-			remove_trait = beauty_good_3
-			remove_trait = beauty_good_2
-			remove_trait = beauty_good_1
-			remove_trait = beauty_bad_1
-			remove_trait = beauty_bad_2
-			remove_trait = beauty_bad_3
-			if = {
-				limit = { is_itpp_installed_trigger = yes }
-				remove_trait = beauty_bad_4
-				remove_trait = beauty_bad_5
-			}
+			remove_traits_from_group_effect = { GROUP = flag:beauty_good }
+			remove_traits_from_group_effect = { GROUP = flag:beauty_bad }
 		}
 		every_in_list = {
 			variable = selected_list_options
 			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		change_mana_with_tooltip = { VALUE = scope:spell_cost.neg }
+		change_mage_xp = { VALUE = scope:spell_cost.abs }
 	}
 }
 
@@ -103,28 +90,15 @@ rewrite_physique_spell = {
 			value = rewrite_physique_spell_cost
 		}
 		scope:spell_target = {
-			if = {
-				limit = { is_itpp_installed_trigger = yes }
-				remove_trait = physique_good_5
-				remove_trait = physique_good_4
-			}
-			remove_trait = physique_good_3
-			remove_trait = physique_good_2
-			remove_trait = physique_good_1
-			remove_trait = physique_bad_1
-			remove_trait = physique_bad_2
-			remove_trait = physique_bad_3
-			if = {
-				limit = { is_itpp_installed_trigger = yes }
-				remove_trait = physique_bad_4
-				remove_trait = physique_bad_5
-			}
+			remove_traits_from_group_effect = { GROUP = flag:physique_good }
+			remove_traits_from_group_effect = { GROUP = flag:physique_bad }
 		}
 		every_in_list = {
 			variable = selected_list_options
 			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		change_mana_with_tooltip = { VALUE = scope:spell_cost.neg }
+		change_mage_xp = { VALUE = scope:spell_cost.abs }
 	}
 }
 
@@ -192,28 +166,15 @@ rewrite_intellect_spell = {
 			value = rewrite_intellect_spell_cost
 		}
 		scope:spell_target = {
-			if = {
-				limit = { is_itpp_installed_trigger = yes }
-				remove_trait = intellect_good_5
-				remove_trait = intellect_good_4
-			}
-			remove_trait = intellect_good_3
-			remove_trait = intellect_good_2
-			remove_trait = intellect_good_1
-			remove_trait = intellect_bad_1
-			remove_trait = intellect_bad_2
-			remove_trait = intellect_bad_3
-			if = {
-				limit = { is_itpp_installed_trigger = yes }
-				remove_trait = intellect_bad_4
-				remove_trait = intellect_bad_5
-			}
+			remove_traits_from_group_effect = { GROUP = flag:intellect_good }
+			remove_traits_from_group_effect = { GROUP = flag:intellect_bad }
 		}
 		every_in_list = {
 			variable = selected_list_options
 			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
-		deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
+		change_mana_with_tooltip = { VALUE = scope:spell_cost.neg }
+		change_mage_xp = { VALUE = scope:spell_cost.abs }
 	}
 }
 
@@ -279,7 +240,8 @@ sculpter_of_flesh_spell = {
 			check_range_bounds = no
 			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
-		deduct_mana_with_tooltip = { VALUE = sculpter_of_flesh_spell_cost }
+		change_mana_with_tooltip = { VALUE = sculpter_of_flesh_spell_cost.neg }
+		change_mage_xp = { VALUE = sculpter_of_flesh_spell_cost.abs }
 	}
 }
 
@@ -332,13 +294,14 @@ fertility_control_spell = {
 						limit = { NOT = { scope:spell_target = { has_character_modifier = biomantic_fertility_modifier } } }
 						scope:spell_target = { add_character_modifier = biomantic_fertility_modifier }
 						prev = {
-							deduct_mana_with_tooltip = { VALUE = fertility_control_spell_cost }
-							change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual }
+							change_mana_with_tooltip = { VALUE = fertility_control_spell_cost.neg }
+							change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual.neg }
+							change_mage_xp = { VALUE = fertility_control_spell_cost.abs }
 						}
 					}
 					else = {
 						scope:spell_target = { remove_all_character_modifier_instances = biomantic_fertility_modifier }
-						prev = { change_opposite_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual } }
+						prev = { change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual.abs } }
 					}
 				}
 				flag:dec_fertility = {
@@ -346,13 +309,14 @@ fertility_control_spell = {
 						limit = { NOT = { scope:spell_target = { has_character_modifier = biomantic_infertility_modifier } } }
 						scope:spell_target = { add_character_modifier = biomantic_infertility_modifier }
 						prev = {
-							deduct_mana_with_tooltip = { VALUE = fertility_control_spell_cost }
-							change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual }
+							change_mana_with_tooltip = { VALUE = fertility_control_spell_cost.neg }
+							change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual.neg }
+							change_mage_xp = { VALUE = fertility_control_spell_cost.abs }
 						}
 					}
 					else = {
 						scope:spell_target = { remove_all_character_modifier_instances = biomantic_infertility_modifier }
-						prev = { change_opposite_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual } }
+						prev = { change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual.abs } }
 					}
 				}
 			}
@@ -414,7 +378,8 @@ impregnate_spell = {
 			yes = { ancient_magic_impregnate_effect = { MOTHER = this FATHER = scope:spell_target } }
 			no = { ancient_magic_impregnate_effect = { MOTHER = scope:spell_target FATHER = this } }
 		}
-		deduct_mana_with_tooltip = { VALUE = impregnate_spell_cost }
+		change_mana_with_tooltip = { VALUE = impregnate_spell_cost.neg }
+		change_mage_xp = { VALUE = impregnate_spell_cost.abs }
 	}
 }
 

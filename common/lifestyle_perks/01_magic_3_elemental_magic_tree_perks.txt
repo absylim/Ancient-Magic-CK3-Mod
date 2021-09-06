@@ -46,9 +46,8 @@
 	}
 
 	effect = {
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = elemental_mage_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = elemental_mage_perk_max_mana }
 		make_mage_effect = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
@@ -64,9 +63,8 @@ flame_aura_perk = {
 
 	effect = {
 		unlock_flame_aura_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = flame_aura_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = flame_aura_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -82,9 +80,8 @@ flaming_weapons_perk = {
 
 	effect = {
 		unlock_flaming_weapons_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = flaming_weapons_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = flaming_weapons_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -100,9 +97,8 @@ living_earthworks_perk = {
 
 	effect = {
 		unlock_living_earthworks_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = living_earthworks_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = living_earthworks_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -118,9 +114,8 @@ golem_creation_perk = {
 
 	effect = {
 		unlock_golem_creation_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = golem_creation_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = golem_creation_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -140,9 +135,8 @@ control_water_perk = {
 
 	effect = {
 		unlock_control_water_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = control_water_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = control_water_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -158,9 +152,8 @@ drought_perk = {
 
 	effect = {
 		unlock_drought_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = drought_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = drought_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -178,9 +171,8 @@ elemental_warrior_perk = {
 
 	effect = {
 		unlock_elemental_warrior_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = elemental_warrior_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = elemental_warrior_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -196,9 +188,8 @@ lord_of_the_elements_perk = {
 
 	effect = {
 		unlock_lord_of_the_elements_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = lord_of_the_elements_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = lord_of_the_elements_perk_max_mana }
 		add_trait_force_tooltip = lord_of_the_elements
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}

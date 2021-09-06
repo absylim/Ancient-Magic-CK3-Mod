@@ -129,64 +129,13 @@ max_mana_legacy_3 = 100
 max_mana_per_perk = 30
 max_mana_per_potency = 100
 
+# MAA-summoning spell amounts
+stone_golems_maa_stack_amount = 20
+lava_golems_maa_stack_amount = 1
+lesser_undead_maa_stack_amount = 200
+
 # Misc
 mage_level_legacy_4 = 1
-
-# Perk _mage_xps
-time_mage_perk_mage_xp = 15
-glimpse_the_future_perk_mage_xp = 15
-financial_times_perk_mage_xp = 15
-celerity_perk_mage_xp = 15
-mass_celerity_perk_mage_xp = 15
-slowness_perk_mage_xp = 15
-mass_slowness_perk_mage_xp = 15
-temporal_manipulation_perk_mage_xp = 15
-master_of_time_perk_mage_xp = 15
-life_mage_perk_mage_xp = 15
-inward_reflection_perk_mage_xp = 15
-inward_perfection_perk_mage_xp = 15
-heal_perk_mage_xp = 15
-greater_heal_perk_mage_xp = 15
-battlefield_life_mage_perk_mage_xp = 15
-greater_battlefield_life_mage_perk_mage_xp = 15
-purity_of_body_perk_mage_xp = 15
-avatar_of_life_perk_mage_xp = 15
-elemental_mage_perk_mage_xp = 15
-flame_aura_perk_mage_xp = 15
-flaming_weapons_perk_mage_xp = 15
-living_earthworks_perk_mage_xp = 15
-golem_creation_perk_mage_xp = 15
-control_water_perk_mage_xp = 15
-drought_perk_mage_xp = 15
-elemental_warrior_perk_mage_xp = 15
-lord_of_the_elements_perk_mage_xp = 15
-death_mage_perk_mage_xp = 15
-inflict_illness_perk_mage_xp = 15
-plague_lord_perk_mage_xp = 15
-aura_of_death_perk_mage_xp = 15
-necromancy_perk_mage_xp = 15
-drain_life_perk_mage_xp = 15
-death_stare_perk_mage_xp = 15
-death_magic_8_perk_mage_xp = 15
-deacon_of_death_perk_mage_xp = 15
-biomancy_mage_perk_mage_xp = 15
-improve_trait_perk_mage_xp = 15
-perfect_trait_perk_mage_xp = 15
-fertility_control_perk_mage_xp = 15
-impregnate_perk_mage_xp = 15
-weaken_trait_perk_mage_xp = 15
-criple_trait_perk_mage_xp = 15
-sculpter_of_flesh_perk_mage_xp = 15
-architect_of_bloodlines_perk_mage_xp = 15
-domination_mage_perk_mage_xp = 15
-entrance_perk_mage_xp = 15
-incite_lust_perk_mage_xp = 15
-incite_obedience_perk_mage_xp = 15
-dominate_perk_mage_xp = 15
-beguiling_aura_perk_mage_xp = 15
-friendship_perk_mage_xp = 15
-enchanting_aura_perk_mage_xp = 15
-master_of_puppets_perk_mage_xp = 15
 
 # No-brainer value in a magic mod.
 # Uses - Is a character even possibly a mage? 'mage_potency > 0' Is the character not a mage? 'mage_potency < 1' How much potential does this mage have? 'mage_potency >= x'
@@ -207,31 +156,37 @@ mage_education = { # UNCOMMENT WHEN SYSTEM IN PLACE!!!
 	else_if = { limit = { has_trait = education_arcane_4 } value = 4 }
 }
 
-mage_level_divider = {
-	value = 12
-	subtract = mage_potency
-	subtract = mage_education
-	multiply = 15
+mage_level_internal_helper = {
+	value = var:mage_xp
+	divide = 1000
 }
 
-mage_level_base = {
-	value = ancient_magic_mage_xp
-	divide = mage_level_divider
-	add = 1
-	floor = yes
+mage_level_internal = {
+	value = mage_level_internal_helper.tri
 }
 
 mage_level = {
-	value = mage_level_base
+	value = mage_level_internal
+	add = 1
 	if = {
-		limit = { dynasty = { has_dynasty_perk = arcane_legacy_4 } }
-		add = mage_level_legacy_4
+		limit = {
+			exists = dynasty
+			dynasty = { has_dynasty_perk = arcane_legacy_4 }
+		}
+		add = 1
 	}
 }
 
+mage_xp_display = {
+	value = mage_level_internal.sum_n.neg
+	multiply = 1000
+	add = var:mage_xp
+}
+
 mage_xp_to_next_level = {
-	value = mage_level_base
-	multiply = mage_level_divider
+	value = mage_level_internal
+	add = 1
+	multiply = 1000
 }
 
 magic_circles_owned_by_character = {
@@ -338,8 +293,12 @@ ancient_magic_mana_drain_lifestyle = {
 ancient_magic_mana_drain_disease = {
 	value = 0
 	if = {
-		limit = { has_trait = mana_devouring }
-		add = mana_drain_disease
+		limit = { has_trait = mana_devouring_1 }
+		add = mana_devouring_1_gen_cost
+	}
+	else_if = {
+		limit = { has_trait = mana_devouring_2 }
+		add = mana_devouring_2_gen_cost
 	}
 }
 
@@ -506,71 +465,41 @@ ancient_magic_max_mana_perks = {
 	if = { limit = { has_perk = master_of_puppets_perk } add = master_of_puppets_perk_max_mana }
 }
 
-ancient_magic_mage_xp = {
-	value = 0
-	# Time tree
-	if = { limit = { has_perk = time_mage_perk } add = time_mage_perk_mage_xp }
-	if = { limit = { has_perk = glimpse_the_future_perk } add = glimpse_the_future_perk_mage_xp }
-	if = { limit = { has_perk = financial_times_perk } add = financial_times_perk_mage_xp }
-	if = { limit = { has_perk = celerity_perk } add = celerity_perk_mage_xp }
-	if = { limit = { has_perk = mass_celerity_perk } add = mass_celerity_perk_mage_xp }
-	if = { limit = { has_perk = slowness_perk } add = slowness_perk_mage_xp }
-	if = { limit = { has_perk = mass_slowness_perk } add = mass_slowness_perk_mage_xp }
-	if = { limit = { has_perk = temporal_manipulation_perk } add = temporal_manipulation_perk_mage_xp }
-	if = { limit = { has_perk = master_of_time_perk } add = master_of_time_perk_mage_xp }
-	
-	# Life tree
-	if = { limit = { has_perk = life_mage_perk } add = life_mage_perk_mage_xp }
-	if = { limit = { has_perk = inward_reflection_perk } add = inward_reflection_perk_mage_xp }
-	if = { limit = { has_perk = inward_perfection_perk } add = inward_perfection_perk_mage_xp }
-	if = { limit = { has_perk = heal_perk } add = heal_perk_mage_xp }
-	if = { limit = { has_perk = greater_heal_perk } add = greater_heal_perk_mage_xp }
-	if = { limit = { has_perk = battlefield_life_mage_perk } add = battlefield_life_mage_perk_mage_xp }
-	if = { limit = { has_perk = greater_battlefield_life_mage_perk } add = greater_battlefield_life_mage_perk_mage_xp }
-	if = { limit = { has_perk = purity_of_body_perk } add = purity_of_body_perk_mage_xp }
-	if = { limit = { has_perk = avatar_of_life_perk } add = avatar_of_life_perk_mage_xp }
-	
-	# Elemental tree
-	if = { limit = { has_perk = elemental_mage_perk } add = elemental_mage_perk_mage_xp }
-	if = { limit = { has_perk = flame_aura_perk } add = flame_aura_perk_mage_xp }
-	if = { limit = { has_perk = flaming_weapons_perk } add = flaming_weapons_perk_mage_xp }
-	if = { limit = { has_perk = living_earthworks_perk } add = living_earthworks_perk_mage_xp }
-	if = { limit = { has_perk = golem_creation_perk } add = golem_creation_perk_mage_xp }
-	if = { limit = { has_perk = control_water_perk } add = control_water_perk_mage_xp }
-	if = { limit = { has_perk = drought_perk } add = drought_perk_mage_xp }
-	if = { limit = { has_perk = elemental_warrior_perk } add = elemental_warrior_perk_mage_xp }
-	if = { limit = { has_perk = lord_of_the_elements_perk } add = lord_of_the_elements_perk_mage_xp }
-	
-	# Death tree
-	if = { limit = { has_perk = death_mage_perk } add = death_mage_perk_mage_xp }
-	if = { limit = { has_perk = inflict_illness_perk } add = inflict_illness_perk_mage_xp }
-	if = { limit = { has_perk = plague_lord_perk } add = plague_lord_perk_mage_xp }
-	if = { limit = { has_perk = aura_of_death_perk } add = aura_of_death_perk_mage_xp }
-	if = { limit = { has_perk = necromancy_perk } add = necromancy_perk_mage_xp }
-	if = { limit = { has_perk = drain_life_perk } add = drain_life_perk_mage_xp }
-	if = { limit = { has_perk = death_stare_perk } add = death_stare_perk_mage_xp }
-	if = { limit = { has_perk = death_magic_8_perk } add = death_magic_8_perk_mage_xp }
-	if = { limit = { has_perk = deacon_of_death_perk } add = deacon_of_death_perk_mage_xp }
-	
-	# Biomancy tree
-	if = { limit = { has_perk = biomancy_mage_perk } add = biomancy_mage_perk_mage_xp }
-	if = { limit = { has_perk = improve_trait_perk } add = improve_trait_perk_mage_xp }
-	if = { limit = { has_perk = perfect_trait_perk } add = perfect_trait_perk_mage_xp }
-	if = { limit = { has_perk = fertility_control_perk } add = fertility_control_perk_mage_xp }
-	if = { limit = { has_perk = impregnate_perk } add = impregnate_perk_mage_xp }
-	if = { limit = { has_perk = weaken_trait_perk } add = weaken_trait_perk_mage_xp }
-	if = { limit = { has_perk = criple_trait_perk } add = criple_trait_perk_mage_xp }
-	if = { limit = { has_perk = sculpter_of_flesh_perk } add = sculpter_of_flesh_perk_mage_xp }
-	if = { limit = { has_perk = architect_of_bloodlines_perk } add = architect_of_bloodlines_perk_mage_xp }
-	
-	# Domination tree
-	if = { limit = { has_perk = domination_mage_perk } add = domination_mage_perk_mage_xp }
-	if = { limit = { has_perk = entrance_perk } add = entrance_perk_mage_xp }
-	if = { limit = { has_perk = incite_lust_perk } add = incite_lust_perk_mage_xp }
-	if = { limit = { has_perk = incite_obedience_perk } add = incite_obedience_perk_mage_xp }
-	if = { limit = { has_perk = dominate_perk } add = dominate_perk_mage_xp }
-	if = { limit = { has_perk = beguiling_aura_perk } add = beguiling_aura_perk_mage_xp }
-	if = { limit = { has_perk = friendship_perk } add = friendship_perk_mage_xp }
-	if = { limit = { has_perk = enchanting_aura_perk } add = enchanting_aura_perk_mage_xp }
-	if = { limit = { has_perk = master_of_puppets_perk } add = master_of_puppets_perk_mage_xp }
+###########
+# Utility
+###########
+
+abs = {
+	value = this
+	if = {
+		limit = { this < 0 }
+		multiply = -1
+	}
+}
+
+neg = {
+	value = this
+	if = {
+		limit = { this > 0 }
+		multiply = -1
+	}
+}
+
+sum_n = {
+	value = this
+	add = 1
+	multiply = this
+	divide = 2
+}
+
+tri = {
+	ordered_province = {
+		limit = {
+			has_variable = tri_sum
+			var:tri_sum < prev
+		}
+		order_by = var:tri_num
+		position = 0
+		value = var:tri_num
+	}
 }

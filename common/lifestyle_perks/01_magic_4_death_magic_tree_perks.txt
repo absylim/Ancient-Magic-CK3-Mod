@@ -64,9 +64,8 @@
 	}
 
 	effect = {
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = death_mage_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = death_mage_perk_max_mana }
 		make_mage_effect = yes
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
@@ -82,9 +81,8 @@ inflict_illness_perk = {
 
 	effect = {
 		unlock_inflict_illness_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = inflict_illness_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = inflict_illness_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -100,9 +98,8 @@ plague_lord_perk = {
 
 	effect = {
 		unlock_plague_lord_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = plague_lord_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = plague_lord_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -118,9 +115,8 @@ aura_of_death_perk = {
 
 	effect = {
 		unlock_aura_of_death_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = aura_of_death_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = aura_of_death_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -136,9 +132,8 @@ necromancy_perk = {
 
 	effect = {
 		unlock_necromancy_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = necromancy_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = necromancy_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -154,9 +149,8 @@ drain_life_perk = {
 
 	effect = {
 		unlock_drain_life_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = drain_life_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = drain_life_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -172,9 +166,8 @@ death_stare_perk = {
 
 	effect = {
 		unlock_death_stare_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = death_stare_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = death_stare_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -195,9 +188,8 @@ death_magic_8_perk = {
 	}
 
 	effect = {
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = death_magic_8_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = death_magic_8_perk_max_mana }
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}
 }
@@ -213,9 +205,8 @@ deacon_of_death_perk = {
 
 	effect = {
 		unlock_deacon_of_death_spell = yes
-		gain_mana_gen_perk = yes
-		gain_max_mana_perk = yes
-		gain_mage_xp_perk = yes
+		gain_mana_gen_perk = { VALUE = deacon_of_death_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = deacon_of_death_perk_max_mana }
 		add_trait_force_tooltip = deacon_of_death
 		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
 	}

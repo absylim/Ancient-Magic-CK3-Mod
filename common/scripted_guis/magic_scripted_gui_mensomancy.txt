@@ -24,7 +24,8 @@ entrance_spell = {
 				modifier = entrance_spell_opinion
 			}
 		}
-		deduct_mana_with_tooltip = { VALUE = entrance_spell_cost }
+		change_mana_with_tooltip = { VALUE = entrance_spell_cost.neg }
+		change_mage_xp = { VALUE = entrance_spell_cost.abs }
 	}
 }
 
@@ -71,7 +72,8 @@ incite_lust_spell = {
 	}
 	effect = {
 		scope:spell_target = { set_relation_lover = prev }
-		deduct_mana_with_tooltip = { VALUE = incite_lust_spell_cost }
+		change_mana_with_tooltip = { VALUE = incite_lust_spell_cost.neg }
+		change_mage_xp = { VALUE = incite_lust_spell_cost.abs }
 	}
 }
 
@@ -124,7 +126,8 @@ incite_obedience_spell = {
 			target = scope:spell_target
 			type = ancient_magic_hook_obedient
 		}
-		deduct_mana_with_tooltip = { VALUE = incite_obedience_spell_cost }
+		change_mana_with_tooltip = { VALUE = incite_obedience_spell_cost.neg }
+		change_mage_xp = { VALUE = incite_obedience_spell_cost.abs }
 	}
 }
 
@@ -178,7 +181,8 @@ dominate_spell = {
 			target = scope:spell_target
 			type = ancient_magic_hook_dominated
 		}
-		deduct_mana_with_tooltip = { VALUE = dominate_spell_cost }
+		change_mana_with_tooltip = { VALUE = dominate_spell_cost.neg }
+		change_mage_xp = { VALUE = dominate_spell_cost.abs }
 	}
 }
 
@@ -225,12 +229,13 @@ beguiling_aura_spell = { # aura of majesty
 			limit = { NOT = { has_character_modifier = beguiling_aura_modifier } }
 			add_character_modifier = beguiling_aura_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = beguiling_aura_spell_cost }
-			change_mana_gen_tooltip = { VALUE = beguiling_aura_spell_gen_cost_individual }
+			change_mana_with_tooltip = { VALUE = beguiling_aura_spell_cost.neg }
+			change_mana_gen_tooltip = { VALUE = beguiling_aura_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = beguiling_aura_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = beguiling_aura_modifier
-			change_opposite_mana_gen_tooltip = { VALUE = beguiling_aura_spell_gen_cost_individual }
+			change_mana_gen_tooltip = { VALUE = beguiling_aura_spell_gen_cost_individual.abs }
 		}
 	}
 }
@@ -278,7 +283,8 @@ friendship_spell = {
 	}
 	effect = {
 		scope:spell_target = { set_relation_friend = prev }
-		deduct_mana_with_tooltip = { VALUE = friendship_spell_cost }
+		change_mana_with_tooltip = { VALUE = friendship_spell_cost.neg }
+		change_mage_xp = { VALUE = friendship_spell_cost.abs }
 	}
 }
 
@@ -325,7 +331,8 @@ rivalry_spell = {
 	}
 	effect = {
 		scope:spell_target = { set_relation_rival = prev }
-		deduct_mana_with_tooltip = { VALUE = rivalry_spell_cost }
+		change_mana_with_tooltip = { VALUE = rivalry_spell_cost.neg }
+		change_mage_xp = { VALUE = rivalry_spell_cost.abs }
 	}
 }
 
@@ -372,12 +379,13 @@ enchanting_aura_spell = { # aura of truth
 			limit = { NOT = { has_character_modifier = enchanting_aura_modifier } }
 			add_character_modifier = enchanting_aura_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = enchanting_aura_spell_cost }
-			change_mana_gen_tooltip = { VALUE = enchanting_aura_spell_gen_cost_individual }
+			change_mana_with_tooltip = { VALUE = enchanting_aura_spell_cost.neg }
+			change_mana_gen_tooltip = { VALUE = enchanting_aura_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = enchanting_aura_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = enchanting_aura_modifier
-			change_opposite_mana_gen_tooltip = { VALUE = enchanting_aura_spell_gen_cost_individual }
+			change_mana_gen_tooltip = { VALUE = enchanting_aura_spell_gen_cost_individual.abs }
 		}
 	}
 }
@@ -428,7 +436,8 @@ sculpt_mind_spell = {
 			check_range_bounds = no
 			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
-		deduct_mana_with_tooltip = { VALUE = sculpt_mind_spell_cost }
+		change_mana_with_tooltip = { VALUE = sculpt_mind_spell_cost.neg }
+		change_mage_xp = { VALUE = sculpt_mind_spell_cost.abs }
 	}
 }
 
@@ -481,7 +490,8 @@ master_of_puppets_spell = {
 			target = scope:spell_target
 			type = ancient_magic_hook_puppet
 		}
-		deduct_mana_with_tooltip = { VALUE = master_of_puppets_spell_cost }
+		change_mana_with_tooltip = { VALUE = master_of_puppets_spell_cost.neg }
+		change_mage_xp = { VALUE = master_of_puppets_spell_cost.abs }
 	}
 }
 

@@ -12,12 +12,13 @@ glimpse_the_future_spell = {
 			limit = { NOT = { has_character_modifier = glimpse_the_future_modifier } }
 			add_character_modifier = glimpse_the_future_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = glimpse_the_future_spell_cost }
-			change_mana_gen_tooltip = { VALUE = glimpse_the_future_spell_gen_cost_individual }
+			change_mana_with_tooltip = { VALUE = glimpse_the_future_spell_cost.neg }
+			change_mana_gen_tooltip = { VALUE = glimpse_the_future_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = glimpse_the_future_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = glimpse_the_future_modifier
-			change_opposite_mana_gen_tooltip = { VALUE = glimpse_the_future_spell_gen_cost_individual }
+			change_mana_gen_tooltip = { VALUE = glimpse_the_future_spell_gen_cost_individual.abs }
 		}
 	}
 }
@@ -65,12 +66,13 @@ financial_times_spell = {
 			limit = { NOT = { has_character_modifier = financial_times_modifier } }
 			add_character_modifier = financial_times_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = financial_times_spell_cost }
-			change_mana_gen_tooltip = { VALUE = financial_times_spell_gen_cost_individual }
+			change_mana_with_tooltip = { VALUE = financial_times_spell_cost.neg }
+			change_mana_gen_tooltip = { VALUE = financial_times_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = financial_times_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = financial_times_modifier
-			change_opposite_mana_gen_tooltip = { VALUE = financial_times_spell_gen_cost_individual }
+			change_mana_gen_tooltip = { VALUE = financial_times_spell_gen_cost_individual.abs }
 		}
 	}
 }
@@ -118,12 +120,13 @@ celerity_spell = {
 			limit = { NOT = { has_character_modifier = celerity_modifier } }
 			add_character_modifier = celerity_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = celerity_spell_cost }
-			change_mana_gen_tooltip = { VALUE = celerity_spell_gen_cost_individual }
+			change_mana_with_tooltip = { VALUE = celerity_spell_cost.neg }
+			change_mana_gen_tooltip = { VALUE = celerity_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = celerity_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = celerity_modifier
-			change_opposite_mana_gen_tooltip = { VALUE = celerity_spell_gen_cost_individual }
+			change_mana_gen_tooltip = { VALUE = celerity_spell_gen_cost_individual.abs }
 		}
 	}
 }
@@ -171,12 +174,13 @@ mass_celerity_spell = {
 			limit = { NOT = { has_character_modifier = mass_celerity_modifier } }
 			add_character_modifier = mass_celerity_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = mass_celerity_spell_cost }
-			change_mana_gen_tooltip = { VALUE = mass_celerity_spell_gen_cost_individual }
+			change_mana_with_tooltip = { VALUE = mass_celerity_spell_cost.neg }
+			change_mana_gen_tooltip = { VALUE = mass_celerity_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = mass_celerity_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = mass_celerity_modifier
-			change_opposite_mana_gen_tooltip = { VALUE = mass_celerity_spell_gen_cost_individual }
+			change_mana_gen_tooltip = { VALUE = mass_celerity_spell_gen_cost_individual.abs }
 		}
 	}
 }
@@ -237,15 +241,16 @@ slowness_spell = {
 			limit = { is_target_in_variable_list = { name = slowness_spell_targets target = scope:spell_target } }
 			remove_list_variable = { name = slowness_spell_targets target = scope:spell_target }
 			scope:spell_target = { remove_all_character_modifier_instances = slowness_modifier }
-			change_opposite_mana_gen_tooltip = { VALUE = slowness_spell_gen_cost_individual }
+			change_mana_gen_tooltip = { VALUE = slowness_spell_gen_cost_individual.abs }
 		}
 		else = {
 			save_temporary_scope_value_as = { name = spell_cost value = slowness_spell_cost }
 			add_to_variable_list = { name = master_of_time_spell_targets target = scope:spell_target }
 			scope:spell_target = { add_character_modifier = slowness_modifier }
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = slowness_spell_cost }
-			change_mana_gen_tooltip = { VALUE = slowness_spell_gen_cost_individual }
+			change_mana_with_tooltip = { VALUE = slowness_spell_cost.neg }
+			change_mana_gen_tooltip = { VALUE = slowness_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = slowness_spell_cost.abs }
 		}
 	}
 }
@@ -306,15 +311,16 @@ mass_slowness_spell = {
 			limit = { is_target_in_variable_list = { name = mass_slowness_spell_targets target = scope:spell_target } }
 			remove_list_variable = { name = mass_slowness_spell_targets target = scope:spell_target }
 			scope:spell_target = { remove_all_character_modifier_instances = mass_slowness_modifier }
-			change_opposite_mana_gen_tooltip = { VALUE = mass_slowness_spell_gen_cost_individual }
+			change_mana_gen_tooltip = { VALUE = mass_slowness_spell_gen_cost_individual.abs }
 		}
 		else = {
 			save_temporary_scope_value_as = { name = spell_cost value = mass_slowness_spell_cost }
 			add_to_variable_list = { name = master_of_time_spell_targets target = scope:spell_target }
 			scope:spell_target = { add_character_modifier = mass_slowness_modifier }
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = mass_slowness_spell_cost }
-			change_mana_gen_tooltip = { VALUE = mass_slowness_spell_gen_cost_individual }
+			change_mana_with_tooltip = { VALUE = mass_slowness_spell_cost.neg }
+			change_mana_gen_tooltip = { VALUE = mass_slowness_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = mass_slowness_spell_cost.abs }
 		}
 	}
 }
@@ -362,12 +368,13 @@ temporal_manipulation_spell = {
 			limit = { NOT = { has_character_modifier = temporal_manipulation_modifier } }
 			add_character_modifier = temporal_manipulation_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = temporal_manipulation_spell_cost }
-			change_mana_gen_tooltip = { VALUE = temporal_manipulation_spell_gen_cost_individual }
+			change_mana_with_tooltip = { VALUE = temporal_manipulation_spell_cost.neg }
+			change_mana_gen_tooltip = { VALUE = temporal_manipulation_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = temporal_manipulation_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = temporal_manipulation_modifier
-			change_opposite_mana_gen_tooltip = { VALUE = temporal_manipulation_spell_gen_cost_individual }
+			change_mana_gen_tooltip = { VALUE = temporal_manipulation_spell_gen_cost_individual.abs }
 		}
 	}
 }
@@ -415,12 +422,13 @@ haste_spell = {
 			limit = { NOT = { has_character_modifier = magic_haste_modifier } }
 			add_character_modifier = magic_haste_modifier
 			display_aura_times = { VALUE = mage_level }
-			deduct_mana_with_tooltip = { VALUE = haste_spell_cost }
-			change_mana_gen_tooltip = { VALUE = haste_spell_gen_cost_individual }
+			change_mana_with_tooltip = { VALUE = haste_spell_cost.neg }
+			change_mana_gen_tooltip = { VALUE = haste_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = haste_spell_cost.abs }
 		}
 		else = {
 			remove_all_character_modifier_instances = magic_haste_modifier
-			change_opposite_mana_gen_tooltip = { VALUE = haste_spell_gen_cost_individual }
+			change_mana_gen_tooltip = { VALUE = haste_spell_gen_cost_individual.abs }
 		}
 	}
 }
@@ -480,15 +488,16 @@ master_of_time_spell = {
 			limit = { is_target_in_variable_list = { name = master_of_time_spell_targets target = scope:spell_target } }
 			remove_list_variable = { name = master_of_time_spell_targets target = scope:spell_target }
 			scope:spell_target = { remove_trait = immortal }
-			change_opposite_mana_gen_tooltip = { VALUE = master_of_time_spell_gen_cost_individual }
+			change_mana_gen_tooltip = { VALUE = master_of_time_spell_gen_cost_individual.abs }
 			remove_immortal_years_since_master_of_time_spell = yes
 		}
 		else = {
 			save_temporary_scope_value_as = { name = spell_cost value = master_of_time_spell_cost }
 			scope:spell_target = { add_trait = immortal }
 			add_to_variable_list = { name = master_of_time_spell_targets target = scope:spell_target }
-			deduct_mana_with_tooltip = { VALUE = scope:spell_cost }
-			change_mana_gen_tooltip = { VALUE = master_of_time_spell_gen_cost_individual }
+			change_mana_with_tooltip = { VALUE = scope:spell_cost.neg }
+			change_mana_gen_tooltip = { VALUE = master_of_time_spell_gen_cost_individual.neg }
+			change_mage_xp = { VALUE = scope:spell_cost.abs }
 		}
 	}
 }
