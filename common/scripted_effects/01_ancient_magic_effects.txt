@@ -173,18 +173,18 @@ start_aura_effect = {
 	change_mana_with_tooltip = { VALUE = $SPELL$_cost.neg }
 	change_mana_gen_tooltip = { VALUE = $SPELL$_gen_cost_individual.neg }
 	change_mage_xp = { VALUE = $SPELL$_cost.abs }
-	mod_bit = { BIT = $SPELL$_aura_bit OP = set }
+	mod_bit = { MASK = aura_mask_0 BIT = $SPELL$_aura_bit OP = set }
 	trigger_event = { on_action = on_reset_mana_system }
 }
 
 update_aura_effect = {
 	if = {
-		limit = { var:aura_mask_$MASK_NUM$.$SPELL$_aura_bit.compare_value = 1 }
+		limit = { var:$MASK$.$SPELL$_aura_bit.compare_value = 1 }
 		every_in_list = {
 			variable = $SPELL$_targets
 			remove_all_character_modifier_instances = $SPELL$_modifier
 			while = {
-				count = mage_level
+				count = prev.mage_level
 				add_character_modifier = { modifier = $SPELL$_modifier }
 			}
 		}
@@ -196,8 +196,8 @@ stop_aura_effect = {
 	scope:spell_target = { remove_all_character_modifier_instances = $SPELL$_modifier }
 	change_mana_gen_tooltip = { VALUE = $SPELL$_gen_cost_individual.abs }
 	if = {
-		limit = { variable_list_size = { name = $SPELL$_targets value = 0 } }
-		mod_bit = { BIT = $SPELL$_aura_bit OP = unset }
+		limit = { NOT = { has_variable_list = $SPELL$_targets } }
+		mod_bit = { MASK = aura_mask_0 BIT = $SPELL$_aura_bit OP = unset }
 	}
 	trigger_event = { on_action = on_reset_mana_system }
 }

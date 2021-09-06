@@ -55,7 +55,7 @@
 		gain_mana_gen_perk = { VALUE = biomancy_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = biomancy_mage_perk_max_mana }
 		make_mage_effect = yes
-		mod_bit = { BIT = biomancy_mage_perk_bit OP = set }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = biomancy_mage_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -80,7 +80,7 @@ improve_trait_perk = {
 		unlock_positive_trait_t1_upgrade_rewrite_intellect = yes
 		gain_mana_gen_perk = { VALUE = improve_trait_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = improve_trait_perk_max_mana }
-		mod_bit = { BIT = improve_trait_perk_bit OP = set }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = improve_trait_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -99,7 +99,7 @@ perfect_trait_perk = {
 		unlock_positive_trait_t2_upgrade_rewrite_intellect = yes
 		gain_mana_gen_perk = { VALUE = perfect_trait_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = perfect_trait_perk_max_mana }
-		mod_bit = { BIT = perfect_trait_perk_bit OP = set }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = perfect_trait_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -116,7 +116,7 @@ fertility_control_perk = {
 		unlock_fertility_control_spell = yes
 		gain_mana_gen_perk = { VALUE = fertility_control_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = fertility_control_perk_max_mana }
-		mod_bit = { BIT = fertility_control_perk_bit OP = set }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = fertility_control_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -133,7 +133,7 @@ impregnate_perk = {
 		unlock_impregnate_spell = yes
 		gain_mana_gen_perk = { VALUE = impregnate_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = impregnate_perk_max_mana }
-		mod_bit = { BIT = impregnate_perk_bit OP = set }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = impregnate_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -158,7 +158,7 @@ weaken_trait_perk = {
 		unlock_negative_trait_t1_upgrade_rewrite_intellect = yes
 		gain_mana_gen_perk = { VALUE = weaken_trait_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = weaken_trait_perk_max_mana }
-		mod_bit = { BIT = weaken_trait_perk_bit OP = set }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = weaken_trait_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -177,7 +177,7 @@ criple_trait_perk = {
 		unlock_negative_trait_t2_upgrade_rewrite_intellect = yes
 		gain_mana_gen_perk = { VALUE = criple_trait_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = criple_trait_perk_max_mana }
-		mod_bit = { BIT = criple_trait_perk_bit OP = set }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = criple_trait_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -196,7 +196,7 @@ sculpter_of_flesh_perk = {
 		unlock_sculpter_of_flesh_spell = yes
 		gain_mana_gen_perk = { VALUE = sculpter_of_flesh_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = sculpter_of_flesh_perk_max_mana }
-		mod_bit = { BIT = sculpter_of_flesh_perk_bit OP = set }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = sculpter_of_flesh_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -219,7 +219,7 @@ architect_of_bloodlines_perk = {
 		gain_mana_gen_perk = { VALUE = architect_of_bloodlines_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = architect_of_bloodlines_perk_max_mana }
 		add_trait_force_tooltip = architect_of_bloodlines
-		mod_bit = { BIT = architect_of_bloodlines_perk_bit OP = set }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = architect_of_bloodlines_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }

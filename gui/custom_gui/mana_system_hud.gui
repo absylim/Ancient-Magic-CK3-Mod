@@ -358,7 +358,7 @@ types mana_hud_guis {
 						tooltipwidget = {
 							widget_gen_breakdown_tooltip_targets = {
 								blockoverride "setup_context" {
-									context = "[Scope]"
+									datacontext = "[Scope]"
 								}
 								blockoverride "datamodel" {
 									datamodel = "[GetPlayer.MakeScope.GetList(Concatenate(Scope.GetFlagName,'_targets'))]"
@@ -383,6 +383,7 @@ types mana_hud_guis {
 		name = "gen_values_grid"
 		size = { 50 50 }
 		alwaystransparent = no
+		block "setup_context" {}
 
 		background = {
 			using = Background_Area_Border_Solid
@@ -390,7 +391,7 @@ types mana_hud_guis {
 
 		state = {
 			name = _show
-			block "setup_context" {}
+
 			on_start = "[GetVariableSystem.Set('tooltip_spell_cost_name',Concatenate(Scope.GetFlagName,'_gen_cost_individual'))]"
 		}
 

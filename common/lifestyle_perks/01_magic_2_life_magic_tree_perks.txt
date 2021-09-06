@@ -49,7 +49,7 @@
 		gain_mana_gen_perk = { VALUE = life_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = life_mage_perk_max_mana }
 		make_mage_effect = yes
-		mod_bit = { BIT = life_mage_perk_bit OP = set }
+		mod_bit = { MASK = life_perk_mask_0 BIT = life_mage_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -70,7 +70,7 @@ inward_reflection_perk = {
 	effect = {
 		gain_mana_gen_perk = { VALUE = inward_reflection_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = inward_reflection_perk_max_mana }
-		mod_bit = { BIT = inward_reflection_perk_bit OP = set }
+		mod_bit = { MASK = life_perk_mask_0 BIT = inward_reflection_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -86,7 +86,7 @@ inward_perfection_perk = {
 	effect = {
 		gain_mana_gen_perk = { VALUE = inward_perfection_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = inward_perfection_perk_max_mana }
-		mod_bit = { BIT = inward_perfection_perk_bit OP = set }
+		mod_bit = { MASK = life_perk_mask_0 BIT = inward_perfection_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 
@@ -109,7 +109,7 @@ heal_perk = {
 		unlock_heal_spell = yes
 		gain_mana_gen_perk = { VALUE = heal_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = heal_perk_max_mana }
-		mod_bit = { BIT = heal_perk_bit OP = set }
+		mod_bit = { MASK = life_perk_mask_0 BIT = heal_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -126,7 +126,7 @@ greater_heal_perk = {
 		unlock_greater_heal_spell = yes
 		gain_mana_gen_perk = { VALUE = greater_heal_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = greater_heal_perk_max_mana }
-		mod_bit = { BIT = greater_heal_perk_bit OP = set }
+		mod_bit = { MASK = life_perk_mask_0 BIT = greater_heal_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -146,7 +146,7 @@ battlefield_life_mage_perk = {
 	effect = {
 		gain_mana_gen_perk = { VALUE = battlefield_life_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = battlefield_life_mage_perk_max_mana }
-		mod_bit = { BIT = battlefield_life_mage_perk_bit OP = set }
+		mod_bit = { MASK = life_perk_mask_0 BIT = battlefield_life_mage_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -166,7 +166,7 @@ greater_battlefield_life_mage_perk = {
 	effect = {
 		gain_mana_gen_perk = { VALUE = greater_battlefield_life_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = greater_battlefield_life_mage_perk_max_mana }
-		mod_bit = { BIT = greater_battlefield_life_mage_perk_bit OP = set }
+		mod_bit = { MASK = life_perk_mask_0 BIT = greater_battlefield_life_mage_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -189,7 +189,7 @@ purity_of_body_perk = {
 		gain_mana_gen_perk = { VALUE = purity_of_body_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = purity_of_body_perk_max_mana }
 		immune_to_disease_effect = yes
-		mod_bit = { BIT = purity_of_body_perk_bit OP = set }
+		mod_bit = { MASK = life_perk_mask_0 BIT = purity_of_body_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -207,7 +207,7 @@ avatar_of_life_perk = {
 		gain_mana_gen_perk = { VALUE = avatar_of_life_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = avatar_of_life_perk_max_mana }
 		add_trait_force_tooltip = avatar_of_life
-		mod_bit = { BIT = avatar_of_life_perk_bit OP = set }
+		mod_bit = { MASK = life_perk_mask_0 BIT = avatar_of_life_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }

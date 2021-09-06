@@ -468,218 +468,259 @@ ancient_magic_max_mana_perks = {
 # Utility
 ###########
 
+unset = { value = 0 }
+set = { value = 1 }
 inc = { value = this add = 1 }
 dec = { value = this add = -1 }
 par = { value = this modulo = 2 }
 div2 = { value = this divide = 2 }
+mul2 = { value = this multiply = 2 }
 clearbit00 = { value = this subtract = par.abs }
-bitshift01 = { value = clearbit00.div2 }
-bitshift02 = { value = bitshift01.bitshift01 }
-bitshift04 = { value = bitshift02.bitshift02 }
-bitshift08 = { value = bitshift04.bitshift04 }
-bitshift16 = { value = bitshift08.bitshift08 }
+rshift01 = { value = clearbit00.div2 }
+rshift02 = { value = rshift01.rshift01 }
+rshift04 = { value = rshift02.rshift02 }
+rshift08 = { value = rshift04.rshift04 }
+rshift16 = { value = rshift08.rshift08 }
+lshift01 = { value = unset31.mul2 }
+lshift02 = { value = lshift01.lshift01 }
+lshift04 = { value = lshift02.lshift02 }
+lshift08 = { value = lshift04.lshift04 }
+lshift16 = { value = lshift08.lshift08 }
 
 bit00 = { value = par }
-bit01 = { value = bitshift01.par }
-bit02 = { value = bitshift02.par }
-bit03 = { value = bitshift02.bitshift01.par }
-bit04 = { value = bitshift04.par }
-bit05 = { value = bitshift04.bitshift01.par }
-bit06 = { value = bitshift04.bitshift02.par }
-bit07 = { value = bitshift04.bitshift02.bitshift01.par }
-bit08 = { value = bitshift08.par }
-bit09 = { value = bitshift08.bitshift01.par }
-bit10 = { value = bitshift08.bitshift02.par }
-bit11 = { value = bitshift08.bitshift02.bitshift01.par }
-bit12 = { value = bitshift08.bitshift04.par }
-bit13 = { value = bitshift08.bitshift04.bitshift01.par }
-bit14 = { value = bitshift08.bitshift04.bitshift02.par }
-bit15 = { value = bitshift08.bitshift04.bitshift02.bitshift01.par }
-bit16 = { value = bitshift16.par }
-bit17 = { value = bitshift16.bitshift01.par }
-bit18 = { value = bitshift16.bitshift02.par }
-bit19 = { value = bitshift16.bitshift02.bitshift01.par }
-bit20 = { value = bitshift16.bitshift04.par }
-bit21 = { value = bitshift16.bitshift04.bitshift01.par }
-bit22 = { value = bitshift16.bitshift04.bitshift02.par }
-bit23 = { value = bitshift16.bitshift04.bitshift02.bitshift01.par }
-bit24 = { value = bitshift16.bitshift08.par }
-bit25 = { value = bitshift16.bitshift08.bitshift01.par }
-bit26 = { value = bitshift16.bitshift08.bitshift02.par }
-bit27 = { value = bitshift16.bitshift08.bitshift02.bitshift01.par }
-bit28 = { value = bitshift16.bitshift08.bitshift04.par }
-bit29 = { value = bitshift16.bitshift08.bitshift04.bitshift01.par }
-bit30 = { value = bitshift16.bitshift08.bitshift04.bitshift02.par }
-bit31 = { value = bitshift16.bitshift08.bitshift04.bitshift02.bitshift01.par }
+bit01 = { value = rshift01.par }
+bit02 = { value = rshift02.par }
+bit03 = { value = rshift02.rshift01.par }
+bit04 = { value = rshift04.par }
+bit05 = { value = rshift04.rshift01.par }
+bit06 = { value = rshift04.rshift02.par }
+bit07 = { value = rshift04.rshift02.rshift01.par }
+bit08 = { value = rshift08.par }
+bit09 = { value = rshift08.rshift01.par }
+bit10 = { value = rshift08.rshift02.par }
+bit11 = { value = rshift08.rshift02.rshift01.par }
+bit12 = { value = rshift08.rshift04.par }
+bit13 = { value = rshift08.rshift04.rshift01.par }
+bit14 = { value = rshift08.rshift04.rshift02.par }
+bit15 = { value = rshift08.rshift04.rshift02.rshift01.par }
+bit16 = { value = rshift16.par }
+bit17 = { value = rshift16.rshift01.par }
+bit18 = { value = rshift16.rshift02.par }
+bit19 = { value = rshift16.rshift02.rshift01.par }
+bit20 = { value = rshift16.rshift04.par }
+bit21 = { value = rshift16.rshift04.rshift01.par }
+bit22 = { value = rshift16.rshift04.rshift02.par }
+bit23 = { value = rshift16.rshift04.rshift02.rshift01.par }
+bit24 = { value = rshift16.rshift08.par }
+bit25 = { value = rshift16.rshift08.rshift01.par }
+bit26 = { value = rshift16.rshift08.rshift02.par }
+bit27 = { value = rshift16.rshift08.rshift02.rshift01.par }
+bit28 = { value = rshift16.rshift08.rshift04.par }
+bit29 = { value = rshift16.rshift08.rshift04.rshift01.par }
+bit30 = { value = rshift16.rshift08.rshift04.rshift02.par }
+bit31 = { value = rshift16.rshift08.rshift04.rshift02.rshift01.par }
 
-flip00 = { value = this if = { limit = { bit00 = 0 } add = 1 } else = { subtract = 1 } }
-flip01 = { value = this if = { limit = { bit01 = 0 } add = 2 } else = { subtract = 2 } }
-flip02 = { value = this if = { limit = { bit02 = 0 } add = 4 } else = { subtract = 4 } }
-flip03 = { value = this if = { limit = { bit03 = 0 } add = 8 } else = { subtract = 8 } }
-flip04 = { value = this if = { limit = { bit04 = 0 } add = 16 } else = { subtract = 16 } }
-flip05 = { value = this if = { limit = { bit05 = 0 } add = 32 } else = { subtract = 32 } }
-flip06 = { value = this if = { limit = { bit06 = 0 } add = 64 } else = { subtract = 64 } }
-flip07 = { value = this if = { limit = { bit07 = 0 } add = 128 } else = { subtract = 128 } }
-flip08 = { value = this if = { limit = { bit08 = 0 } add = 256 } else = { subtract = 256 } }
-flip09 = { value = this if = { limit = { bit09 = 0 } add = 512 } else = { subtract = 512 } }
-flip10 = { value = this if = { limit = { bit10 = 0 } add = 1024 } else = { subtract = 1024 } }
-flip11 = { value = this if = { limit = { bit11 = 0 } add = 2048 } else = { subtract = 2048 } }
-flip12 = { value = this if = { limit = { bit12 = 0 } add = 4096 } else = { subtract = 4096 } }
-flip13 = { value = this if = { limit = { bit13 = 0 } add = 8192 } else = { subtract = 8192 } }
-flip14 = { value = this if = { limit = { bit14 = 0 } add = 16384 } else = { subtract = 16384 } }
-flip15 = { value = this if = { limit = { bit15 = 0 } add = 32768 } else = { subtract = 32768 } }
-flip16 = { value = this if = { limit = { bit16 = 0 } add = 65536 } else = { subtract = 65536 } }
-flip17 = { value = this if = { limit = { bit17 = 0 } add = 131072 } else = { subtract = 131072 } }
-flip18 = { value = this if = { limit = { bit18 = 0 } add = 262144 } else = { subtract = 262144 } }
-flip19 = { value = this if = { limit = { bit19 = 0 } add = 524288 } else = { subtract = 524288 } }
-flip20 = { value = this if = { limit = { bit20 = 0 } add = 1048576 } else = { subtract = 1048576 } }
-flip21 = { value = this if = { limit = { bit21 = 0 } add = 2097152 } else = { subtract = 2097152 } }
-flip22 = { value = this if = { limit = { bit22 = 0 } add = 4194304 } else = { subtract = 4194304 } }
-flip23 = { value = this if = { limit = { bit23 = 0 } add = 8388608 } else = { subtract = 8388608 } }
-flip24 = { value = this if = { limit = { bit24 = 0 } add = 16777216 } else = { subtract = 16777216 } }
-flip25 = { value = this if = { limit = { bit25 = 0 } add = 33554432 } else = { subtract = 33554432 } }
-flip26 = { value = this if = { limit = { bit26 = 0 } add = 67108864 } else = { subtract = 67108864 } }
-flip27 = { value = this if = { limit = { bit27 = 0 } add = 134217728 } else = { subtract = 134217728 } }
-flip28 = { value = this if = { limit = { bit28 = 0 } add = 268435456 } else = { subtract = 268435456 } }
-flip29 = { value = this if = { limit = { bit29 = 0 } add = 536870912 } else = { subtract = 536870912 } }
-flip30 = { value = this if = { limit = { bit30 = 0 } add = 1073741824 } else = { subtract = 1073741824 } }
-flip31 = { value = this if = { limit = { bit31 = 0 } add = 2147483648 } else = { subtract = 2147483648 } }
+makebit00 = { value = bit00 }
+makebit01 = { value = bit00.lshift01 }
+makebit02 = { value = bit00.lshift02 }
+makebit03 = { value = bit00.lshift02.lshift01 }
+makebit04 = { value = bit00.lshift04 }
+makebit05 = { value = bit00.lshift04.lshift01 }
+makebit06 = { value = bit00.lshift04.lshift02 }
+makebit07 = { value = bit00.lshift04.lshift02.lshift01 }
+makebit08 = { value = bit00.lshift08 }
+makebit09 = { value = bit00.lshift08.lshift01 }
+makebit10 = { value = bit00.lshift08.lshift02 }
+makebit11 = { value = bit00.lshift08.lshift02.lshift01 }
+makebit12 = { value = bit00.lshift08.lshift04 }
+makebit13 = { value = bit00.lshift08.lshift04.lshift01 }
+makebit14 = { value = bit00.lshift08.lshift04.lshift02 }
+makebit15 = { value = bit00.lshift08.lshift04.lshift02.lshift01 }
+makebit16 = { value = bit00.lshift16 }
+makebit17 = { value = bit00.lshift16.lshift01 }
+makebit18 = { value = bit00.lshift16.lshift02 }
+makebit19 = { value = bit00.lshift16.lshift02.lshift01 }
+makebit20 = { value = bit00.lshift16.lshift04 }
+makebit21 = { value = bit00.lshift16.lshift04.lshift01 }
+makebit22 = { value = bit00.lshift16.lshift04.lshift02 }
+makebit23 = { value = bit00.lshift16.lshift04.lshift02.lshift01 }
+makebit24 = { value = bit00.lshift16.lshift08 }
+makebit25 = { value = bit00.lshift16.lshift08.lshift01 }
+makebit26 = { value = bit00.lshift16.lshift08.lshift02 }
+makebit27 = { value = bit00.lshift16.lshift08.lshift02.lshift01 }
+makebit28 = { value = bit00.lshift16.lshift08.lshift04 }
+makebit29 = { value = bit00.lshift16.lshift08.lshift04.lshift01 }
+makebit30 = { value = bit00.lshift16.lshift08.lshift04.lshift02 }
+makebit31 = { value = bit00.lshift16.lshift08.lshift04.lshift02.lshift01 }
 
-set00 = { value = this if = { limit = { bit00 = 0 } add = 1 } }
-set01 = { value = this if = { limit = { bit01 = 0 } add = 2 } }
-set02 = { value = this if = { limit = { bit02 = 0 } add = 4 } }
-set03 = { value = this if = { limit = { bit03 = 0 } add = 8 } }
-set04 = { value = this if = { limit = { bit04 = 0 } add = 16 } }
-set05 = { value = this if = { limit = { bit05 = 0 } add = 32 } }
-set06 = { value = this if = { limit = { bit06 = 0 } add = 64 } }
-set07 = { value = this if = { limit = { bit07 = 0 } add = 128 } }
-set08 = { value = this if = { limit = { bit08 = 0 } add = 256 } }
-set09 = { value = this if = { limit = { bit09 = 0 } add = 512 } }
-set10 = { value = this if = { limit = { bit10 = 0 } add = 1024 } }
-set11 = { value = this if = { limit = { bit11 = 0 } add = 2048 } }
-set12 = { value = this if = { limit = { bit12 = 0 } add = 4096 } }
-set13 = { value = this if = { limit = { bit13 = 0 } add = 8192 } }
-set14 = { value = this if = { limit = { bit14 = 0 } add = 16384 } }
-set15 = { value = this if = { limit = { bit15 = 0 } add = 32768 } }
-set16 = { value = this if = { limit = { bit16 = 0 } add = 65536 } }
-set17 = { value = this if = { limit = { bit17 = 0 } add = 131072 } }
-set18 = { value = this if = { limit = { bit18 = 0 } add = 262144 } }
-set19 = { value = this if = { limit = { bit19 = 0 } add = 524288 } }
-set20 = { value = this if = { limit = { bit20 = 0 } add = 1048576 } }
-set21 = { value = this if = { limit = { bit21 = 0 } add = 2097152 } }
-set22 = { value = this if = { limit = { bit22 = 0 } add = 4194304 } }
-set23 = { value = this if = { limit = { bit23 = 0 } add = 8388608 } }
-set24 = { value = this if = { limit = { bit24 = 0 } add = 16777216 } }
-set25 = { value = this if = { limit = { bit25 = 0 } add = 33554432 } }
-set26 = { value = this if = { limit = { bit26 = 0 } add = 67108864 } }
-set27 = { value = this if = { limit = { bit27 = 0 } add = 134217728 } }
-set28 = { value = this if = { limit = { bit28 = 0 } add = 268435456 } }
-set29 = { value = this if = { limit = { bit29 = 0 } add = 536870912 } }
-set30 = { value = this if = { limit = { bit30 = 0 } add = 1073741824 } }
-set31 = { value = this if = { limit = { bit31 = 0 } add = 2147483648 } }
+flip00 = { value = this if = { limit = { bit00 = unset } add = set.makebit00 } else = { subtract = set.makebit00 } }
+flip01 = { value = this if = { limit = { bit01 = unset } add = set.makebit01 } else = { subtract = set.makebit01 } }
+flip02 = { value = this if = { limit = { bit02 = unset } add = set.makebit02 } else = { subtract = set.makebit02 } }
+flip03 = { value = this if = { limit = { bit03 = unset } add = set.makebit03 } else = { subtract = set.makebit03 } }
+flip04 = { value = this if = { limit = { bit04 = unset } add = set.makebit04 } else = { subtract = set.makebit04 } }
+flip05 = { value = this if = { limit = { bit05 = unset } add = set.makebit05 } else = { subtract = set.makebit05 } }
+flip06 = { value = this if = { limit = { bit06 = unset } add = set.makebit06 } else = { subtract = set.makebit06 } }
+flip07 = { value = this if = { limit = { bit07 = unset } add = set.makebit07 } else = { subtract = set.makebit07 } }
+flip08 = { value = this if = { limit = { bit08 = unset } add = set.makebit08 } else = { subtract = set.makebit08 } }
+flip09 = { value = this if = { limit = { bit09 = unset } add = set.makebit09 } else = { subtract = set.makebit09 } }
+flip10 = { value = this if = { limit = { bit10 = unset } add = set.makebit10 } else = { subtract = set.makebit10 } }
+flip11 = { value = this if = { limit = { bit11 = unset } add = set.makebit11 } else = { subtract = set.makebit11 } }
+flip12 = { value = this if = { limit = { bit12 = unset } add = set.makebit12 } else = { subtract = set.makebit12 } }
+flip13 = { value = this if = { limit = { bit13 = unset } add = set.makebit13 } else = { subtract = set.makebit13 } }
+flip14 = { value = this if = { limit = { bit14 = unset } add = set.makebit14 } else = { subtract = set.makebit14 } }
+flip15 = { value = this if = { limit = { bit15 = unset } add = set.makebit15 } else = { subtract = set.makebit15 } }
+flip16 = { value = this if = { limit = { bit16 = unset } add = set.makebit16 } else = { subtract = set.makebit16 } }
+flip17 = { value = this if = { limit = { bit17 = unset } add = set.makebit17 } else = { subtract = set.makebit17 } }
+flip18 = { value = this if = { limit = { bit18 = unset } add = set.makebit18 } else = { subtract = set.makebit18 } }
+flip19 = { value = this if = { limit = { bit19 = unset } add = set.makebit19 } else = { subtract = set.makebit19 } }
+flip20 = { value = this if = { limit = { bit20 = unset } add = set.makebit20 } else = { subtract = set.makebit20 } }
+flip21 = { value = this if = { limit = { bit21 = unset } add = set.makebit21 } else = { subtract = set.makebit21 } }
+flip22 = { value = this if = { limit = { bit22 = unset } add = set.makebit22 } else = { subtract = set.makebit22 } }
+flip23 = { value = this if = { limit = { bit23 = unset } add = set.makebit23 } else = { subtract = set.makebit23 } }
+flip24 = { value = this if = { limit = { bit24 = unset } add = set.makebit24 } else = { subtract = set.makebit24 } }
+flip25 = { value = this if = { limit = { bit25 = unset } add = set.makebit25 } else = { subtract = set.makebit25 } }
+flip26 = { value = this if = { limit = { bit26 = unset } add = set.makebit26 } else = { subtract = set.makebit26 } }
+flip27 = { value = this if = { limit = { bit27 = unset } add = set.makebit27 } else = { subtract = set.makebit27 } }
+flip28 = { value = this if = { limit = { bit28 = unset } add = set.makebit28 } else = { subtract = set.makebit28 } }
+flip29 = { value = this if = { limit = { bit29 = unset } add = set.makebit29 } else = { subtract = set.makebit29 } }
+flip30 = { value = this if = { limit = { bit30 = unset } add = set.makebit30 } else = { subtract = set.makebit30 } }
+flip31 = { value = this if = { limit = { bit31 = unset } add = set.makebit31 } else = { subtract = set.makebit31 } }
 
-unset00 = { value = this if = { limit = { bit00 = 1 } subtract = 1 } }
-unset01 = { value = this if = { limit = { bit01 = 1 } subtract = 2 } }
-unset02 = { value = this if = { limit = { bit02 = 1 } subtract = 4 } }
-unset03 = { value = this if = { limit = { bit03 = 1 } subtract = 8 } }
-unset04 = { value = this if = { limit = { bit04 = 1 } subtract = 16 } }
-unset05 = { value = this if = { limit = { bit05 = 1 } subtract = 32 } }
-unset06 = { value = this if = { limit = { bit06 = 1 } subtract = 64 } }
-unset07 = { value = this if = { limit = { bit07 = 1 } subtract = 128 } }
-unset08 = { value = this if = { limit = { bit08 = 1 } subtract = 256 } }
-unset09 = { value = this if = { limit = { bit09 = 1 } subtract = 512 } }
-unset10 = { value = this if = { limit = { bit10 = 1 } subtract = 1024 } }
-unset11 = { value = this if = { limit = { bit11 = 1 } subtract = 2048 } }
-unset12 = { value = this if = { limit = { bit12 = 1 } subtract = 4096 } }
-unset13 = { value = this if = { limit = { bit13 = 1 } subtract = 8192 } }
-unset14 = { value = this if = { limit = { bit14 = 1 } subtract = 16384 } }
-unset15 = { value = this if = { limit = { bit15 = 1 } subtract = 32768 } }
-unset16 = { value = this if = { limit = { bit16 = 1 } subtract = 65536 } }
-unset17 = { value = this if = { limit = { bit17 = 1 } subtract = 131072 } }
-unset18 = { value = this if = { limit = { bit18 = 1 } subtract = 262144 } }
-unset19 = { value = this if = { limit = { bit19 = 1 } subtract = 524288 } }
-unset20 = { value = this if = { limit = { bit20 = 1 } subtract = 1048576 } }
-unset21 = { value = this if = { limit = { bit21 = 1 } subtract = 2097152 } }
-unset22 = { value = this if = { limit = { bit22 = 1 } subtract = 4194304 } }
-unset23 = { value = this if = { limit = { bit23 = 1 } subtract = 8388608 } }
-unset24 = { value = this if = { limit = { bit24 = 1 } subtract = 16777216 } }
-unset25 = { value = this if = { limit = { bit25 = 1 } subtract = 33554432 } }
-unset26 = { value = this if = { limit = { bit26 = 1 } subtract = 67108864 } }
-unset27 = { value = this if = { limit = { bit27 = 1 } subtract = 134217728 } }
-unset28 = { value = this if = { limit = { bit28 = 1 } subtract = 268435456 } }
-unset29 = { value = this if = { limit = { bit29 = 1 } subtract = 536870912 } }
-unset30 = { value = this if = { limit = { bit30 = 1 } subtract = 1073741824 } }
-unset31 = { value = this if = { limit = { bit31 = 1 } subtract = 2147483648 } }
+set00 = { value = this if = { limit = { bit00 = unset } add = set.makebit00 } }
+set01 = { value = this if = { limit = { bit01 = unset } add = set.makebit01 } }
+set02 = { value = this if = { limit = { bit02 = unset } add = set.makebit02 } }
+set03 = { value = this if = { limit = { bit03 = unset } add = set.makebit03 } }
+set04 = { value = this if = { limit = { bit04 = unset } add = set.makebit04 } }
+set05 = { value = this if = { limit = { bit05 = unset } add = set.makebit05 } }
+set06 = { value = this if = { limit = { bit06 = unset } add = set.makebit06 } }
+set07 = { value = this if = { limit = { bit07 = unset } add = set.makebit07 } }
+set08 = { value = this if = { limit = { bit08 = unset } add = set.makebit08 } }
+set09 = { value = this if = { limit = { bit09 = unset } add = set.makebit09 } }
+set10 = { value = this if = { limit = { bit10 = unset } add = set.makebit10 } }
+set11 = { value = this if = { limit = { bit11 = unset } add = set.makebit11 } }
+set12 = { value = this if = { limit = { bit12 = unset } add = set.makebit12 } }
+set13 = { value = this if = { limit = { bit13 = unset } add = set.makebit13 } }
+set14 = { value = this if = { limit = { bit14 = unset } add = set.makebit14 } }
+set15 = { value = this if = { limit = { bit15 = unset } add = set.makebit15 } }
+set16 = { value = this if = { limit = { bit16 = unset } add = set.makebit16 } }
+set17 = { value = this if = { limit = { bit17 = unset } add = set.makebit17 } }
+set18 = { value = this if = { limit = { bit18 = unset } add = set.makebit18 } }
+set19 = { value = this if = { limit = { bit19 = unset } add = set.makebit19 } }
+set20 = { value = this if = { limit = { bit20 = unset } add = set.makebit20 } }
+set21 = { value = this if = { limit = { bit21 = unset } add = set.makebit21 } }
+set22 = { value = this if = { limit = { bit22 = unset } add = set.makebit22 } }
+set23 = { value = this if = { limit = { bit23 = unset } add = set.makebit23 } }
+set24 = { value = this if = { limit = { bit24 = unset } add = set.makebit24 } }
+set25 = { value = this if = { limit = { bit25 = unset } add = set.makebit25 } }
+set26 = { value = this if = { limit = { bit26 = unset } add = set.makebit26 } }
+set27 = { value = this if = { limit = { bit27 = unset } add = set.makebit27 } }
+set28 = { value = this if = { limit = { bit28 = unset } add = set.makebit28 } }
+set29 = { value = this if = { limit = { bit29 = unset } add = set.makebit29 } }
+set30 = { value = this if = { limit = { bit30 = unset } add = set.makebit30 } }
+set31 = { value = this if = { limit = { bit31 = unset } add = set.makebit31 } }
+
+unset00 = { value = this if = { limit = { bit00 = set } subtract = set.makebit00 } }
+unset01 = { value = this if = { limit = { bit01 = set } subtract = set.makebit01 } }
+unset02 = { value = this if = { limit = { bit02 = set } subtract = set.makebit02 } }
+unset03 = { value = this if = { limit = { bit03 = set } subtract = set.makebit03 } }
+unset04 = { value = this if = { limit = { bit04 = set } subtract = set.makebit04 } }
+unset05 = { value = this if = { limit = { bit05 = set } subtract = set.makebit05 } }
+unset06 = { value = this if = { limit = { bit06 = set } subtract = set.makebit06 } }
+unset07 = { value = this if = { limit = { bit07 = set } subtract = set.makebit07 } }
+unset08 = { value = this if = { limit = { bit08 = set } subtract = set.makebit08 } }
+unset09 = { value = this if = { limit = { bit09 = set } subtract = set.makebit09 } }
+unset10 = { value = this if = { limit = { bit10 = set } subtract = set.makebit10 } }
+unset11 = { value = this if = { limit = { bit11 = set } subtract = set.makebit11 } }
+unset12 = { value = this if = { limit = { bit12 = set } subtract = set.makebit12 } }
+unset13 = { value = this if = { limit = { bit13 = set } subtract = set.makebit13 } }
+unset14 = { value = this if = { limit = { bit14 = set } subtract = set.makebit14 } }
+unset15 = { value = this if = { limit = { bit15 = set } subtract = set.makebit15 } }
+unset16 = { value = this if = { limit = { bit16 = set } subtract = set.makebit16 } }
+unset17 = { value = this if = { limit = { bit17 = set } subtract = set.makebit17 } }
+unset18 = { value = this if = { limit = { bit18 = set } subtract = set.makebit18 } }
+unset19 = { value = this if = { limit = { bit19 = set } subtract = set.makebit19 } }
+unset20 = { value = this if = { limit = { bit20 = set } subtract = set.makebit20 } }
+unset21 = { value = this if = { limit = { bit21 = set } subtract = set.makebit21 } }
+unset22 = { value = this if = { limit = { bit22 = set } subtract = set.makebit22 } }
+unset23 = { value = this if = { limit = { bit23 = set } subtract = set.makebit23 } }
+unset24 = { value = this if = { limit = { bit24 = set } subtract = set.makebit24 } }
+unset25 = { value = this if = { limit = { bit25 = set } subtract = set.makebit25 } }
+unset26 = { value = this if = { limit = { bit26 = set } subtract = set.makebit26 } }
+unset27 = { value = this if = { limit = { bit27 = set } subtract = set.makebit27 } }
+unset28 = { value = this if = { limit = { bit28 = set } subtract = set.makebit28 } }
+unset29 = { value = this if = { limit = { bit29 = set } subtract = set.makebit29 } }
+unset30 = { value = this if = { limit = { bit30 = set } subtract = set.makebit30 } }
+unset31 = { value = this if = { limit = { bit31 = set } subtract = set.makebit31 } }
 
 and = {
 	value = 0
-	if = { limit = { bit00 = 1 prev.bit00 = 1 } add = 1 }
-	if = { limit = { bit01 = 1 prev.bit01 = 1 } add = 2 }
-	if = { limit = { bit02 = 1 prev.bit02 = 1 } add = 4 }
-	if = { limit = { bit03 = 1 prev.bit03 = 1 } add = 8 }
-	if = { limit = { bit04 = 1 prev.bit04 = 1 } add = 16 }
-	if = { limit = { bit05 = 1 prev.bit05 = 1 } add = 32 }
-	if = { limit = { bit06 = 1 prev.bit06 = 1 } add = 64 }
-	if = { limit = { bit07 = 1 prev.bit07 = 1 } add = 128 }
-	if = { limit = { bit08 = 1 prev.bit08 = 1 } add = 256 }
-	if = { limit = { bit09 = 1 prev.bit09 = 1 } add = 512 }
-	if = { limit = { bit10 = 1 prev.bit10 = 1 } add = 1024 }
-	if = { limit = { bit11 = 1 prev.bit11 = 1 } add = 2048 }
-	if = { limit = { bit12 = 1 prev.bit12 = 1 } add = 4096 }
-	if = { limit = { bit13 = 1 prev.bit13 = 1 } add = 8192 }
-	if = { limit = { bit14 = 1 prev.bit14 = 1 } add = 16384 }
-	if = { limit = { bit15 = 1 prev.bit15 = 1 } add = 32768 }
-	if = { limit = { bit16 = 1 prev.bit16 = 1 } add = 65536 }
-	if = { limit = { bit17 = 1 prev.bit17 = 1 } add = 131072 }
-	if = { limit = { bit18 = 1 prev.bit18 = 1 } add = 262144 }
-	if = { limit = { bit19 = 1 prev.bit19 = 1 } add = 524288 }
-	if = { limit = { bit20 = 1 prev.bit20 = 1 } add = 1048576 }
-	if = { limit = { bit21 = 1 prev.bit21 = 1 } add = 2097152 }
-	if = { limit = { bit22 = 1 prev.bit22 = 1 } add = 4194304 }
-	if = { limit = { bit23 = 1 prev.bit23 = 1 } add = 8388608 }
-	if = { limit = { bit24 = 1 prev.bit24 = 1 } add = 16777216 }
-	if = { limit = { bit25 = 1 prev.bit25 = 1 } add = 33554432 }
-	if = { limit = { bit26 = 1 prev.bit26 = 1 } add = 67108864 }
-	if = { limit = { bit27 = 1 prev.bit27 = 1 } add = 134217728 }
-	if = { limit = { bit28 = 1 prev.bit28 = 1 } add = 268435456 }
-	if = { limit = { bit29 = 1 prev.bit29 = 1 } add = 536870912 }
-	if = { limit = { bit30 = 1 prev.bit30 = 1 } add = 1073741824 }
-	if = { limit = { bit31 = 1 prev.bit31 = 1 } add = 2147483648 }
+	if = { limit = { bit00 = set prev.bit00 = set } add = set.makebit00 }
+	if = { limit = { bit01 = set prev.bit01 = set } add = set.makebit01 }
+	if = { limit = { bit02 = set prev.bit02 = set } add = set.makebit02 }
+	if = { limit = { bit03 = set prev.bit03 = set } add = set.makebit03 }
+	if = { limit = { bit04 = set prev.bit04 = set } add = set.makebit04 }
+	if = { limit = { bit05 = set prev.bit05 = set } add = set.makebit05 }
+	if = { limit = { bit06 = set prev.bit06 = set } add = set.makebit06 }
+	if = { limit = { bit07 = set prev.bit07 = set } add = set.makebit07 }
+	if = { limit = { bit08 = set prev.bit08 = set } add = set.makebit08 }
+	if = { limit = { bit09 = set prev.bit09 = set } add = set.makebit09 }
+	if = { limit = { bit10 = set prev.bit10 = set } add = set.makebit10 }
+	if = { limit = { bit11 = set prev.bit11 = set } add = set.makebit11 }
+	if = { limit = { bit12 = set prev.bit12 = set } add = set.makebit12 }
+	if = { limit = { bit13 = set prev.bit13 = set } add = set.makebit13 }
+	if = { limit = { bit14 = set prev.bit14 = set } add = set.makebit14 }
+	if = { limit = { bit15 = set prev.bit15 = set } add = set.makebit15 }
+	if = { limit = { bit16 = set prev.bit16 = set } add = set.makebit16 }
+	if = { limit = { bit17 = set prev.bit17 = set } add = set.makebit17 }
+	if = { limit = { bit18 = set prev.bit18 = set } add = set.makebit18 }
+	if = { limit = { bit19 = set prev.bit19 = set } add = set.makebit19 }
+	if = { limit = { bit20 = set prev.bit20 = set } add = set.makebit20 }
+	if = { limit = { bit21 = set prev.bit21 = set } add = set.makebit21 }
+	if = { limit = { bit22 = set prev.bit22 = set } add = set.makebit22 }
+	if = { limit = { bit23 = set prev.bit23 = set } add = set.makebit23 }
+	if = { limit = { bit24 = set prev.bit24 = set } add = set.makebit24 }
+	if = { limit = { bit25 = set prev.bit25 = set } add = set.makebit25 }
+	if = { limit = { bit26 = set prev.bit26 = set } add = set.makebit26 }
+	if = { limit = { bit27 = set prev.bit27 = set } add = set.makebit27 }
+	if = { limit = { bit28 = set prev.bit28 = set } add = set.makebit28 }
+	if = { limit = { bit29 = set prev.bit29 = set } add = set.makebit29 }
+	if = { limit = { bit30 = set prev.bit30 = set } add = set.makebit30 }
+	if = { limit = { bit31 = set prev.bit31 = set } add = set.makebit31 }
 }
 or = {
 	value = 0
-	if = { limit = { OR = { bit00 = 1 prev.bit00 = 1 } } add = 1 }
-	if = { limit = { OR = { bit01 = 1 prev.bit01 = 1 } } add = 2 }
-	if = { limit = { OR = { bit02 = 1 prev.bit02 = 1 } } add = 4 }
-	if = { limit = { OR = { bit03 = 1 prev.bit03 = 1 } } add = 8 }
-	if = { limit = { OR = { bit04 = 1 prev.bit04 = 1 } } add = 16 }
-	if = { limit = { OR = { bit05 = 1 prev.bit05 = 1 } } add = 32 }
-	if = { limit = { OR = { bit06 = 1 prev.bit06 = 1 } } add = 64 }
-	if = { limit = { OR = { bit07 = 1 prev.bit07 = 1 } } add = 128 }
-	if = { limit = { OR = { bit08 = 1 prev.bit08 = 1 } } add = 256 }
-	if = { limit = { OR = { bit09 = 1 prev.bit09 = 1 } } add = 512 }
-	if = { limit = { OR = { bit10 = 1 prev.bit10 = 1 } } add = 1024 }
-	if = { limit = { OR = { bit11 = 1 prev.bit11 = 1 } } add = 2048 }
-	if = { limit = { OR = { bit12 = 1 prev.bit12 = 1 } } add = 4096 }
-	if = { limit = { OR = { bit13 = 1 prev.bit13 = 1 } } add = 8192 }
-	if = { limit = { OR = { bit14 = 1 prev.bit14 = 1 } } add = 16384 }
-	if = { limit = { OR = { bit15 = 1 prev.bit15 = 1 } } add = 32768 }
-	if = { limit = { OR = { bit16 = 1 prev.bit16 = 1 } } add = 65536 }
-	if = { limit = { OR = { bit17 = 1 prev.bit17 = 1 } } add = 131072 }
-	if = { limit = { OR = { bit18 = 1 prev.bit18 = 1 } } add = 262144 }
-	if = { limit = { OR = { bit19 = 1 prev.bit19 = 1 } } add = 524288 }
-	if = { limit = { OR = { bit20 = 1 prev.bit20 = 1 } } add = 1048576 }
-	if = { limit = { OR = { bit21 = 1 prev.bit21 = 1 } } add = 2097152 }
-	if = { limit = { OR = { bit22 = 1 prev.bit22 = 1 } } add = 4194304 }
-	if = { limit = { OR = { bit23 = 1 prev.bit23 = 1 } } add = 8388608 }
-	if = { limit = { OR = { bit24 = 1 prev.bit24 = 1 } } add = 16777216 }
-	if = { limit = { OR = { bit25 = 1 prev.bit25 = 1 } } add = 33554432 }
-	if = { limit = { OR = { bit26 = 1 prev.bit26 = 1 } } add = 67108864 }
-	if = { limit = { OR = { bit27 = 1 prev.bit27 = 1 } } add = 134217728 }
-	if = { limit = { OR = { bit28 = 1 prev.bit28 = 1 } } add = 268435456 }
-	if = { limit = { OR = { bit29 = 1 prev.bit29 = 1 } } add = 536870912 }
-	if = { limit = { OR = { bit30 = 1 prev.bit30 = 1 } } add = 1073741824 }
-	if = { limit = { OR = { bit31 = 1 prev.bit31 = 1 } } add = 2147483648 }
+	if = { limit = { OR = { bit00 = set prev.bit00 = set } } add = set.makebit00 }
+	if = { limit = { OR = { bit01 = set prev.bit01 = set } } add = set.makebit01 }
+	if = { limit = { OR = { bit02 = set prev.bit02 = set } } add = set.makebit02 }
+	if = { limit = { OR = { bit03 = set prev.bit03 = set } } add = set.makebit03 }
+	if = { limit = { OR = { bit04 = set prev.bit04 = set } } add = set.makebit04 }
+	if = { limit = { OR = { bit05 = set prev.bit05 = set } } add = set.makebit05 }
+	if = { limit = { OR = { bit06 = set prev.bit06 = set } } add = set.makebit06 }
+	if = { limit = { OR = { bit07 = set prev.bit07 = set } } add = set.makebit07 }
+	if = { limit = { OR = { bit08 = set prev.bit08 = set } } add = set.makebit08 }
+	if = { limit = { OR = { bit09 = set prev.bit09 = set } } add = set.makebit09 }
+	if = { limit = { OR = { bit10 = set prev.bit10 = set } } add = set.makebit10 }
+	if = { limit = { OR = { bit11 = set prev.bit11 = set } } add = set.makebit11 }
+	if = { limit = { OR = { bit12 = set prev.bit12 = set } } add = set.makebit12 }
+	if = { limit = { OR = { bit13 = set prev.bit13 = set } } add = set.makebit13 }
+	if = { limit = { OR = { bit14 = set prev.bit14 = set } } add = set.makebit14 }
+	if = { limit = { OR = { bit15 = set prev.bit15 = set } } add = set.makebit15 }
+	if = { limit = { OR = { bit16 = set prev.bit16 = set } } add = set.makebit16 }
+	if = { limit = { OR = { bit17 = set prev.bit17 = set } } add = set.makebit17 }
+	if = { limit = { OR = { bit18 = set prev.bit18 = set } } add = set.makebit18 }
+	if = { limit = { OR = { bit19 = set prev.bit19 = set } } add = set.makebit19 }
+	if = { limit = { OR = { bit20 = set prev.bit20 = set } } add = set.makebit20 }
+	if = { limit = { OR = { bit21 = set prev.bit21 = set } } add = set.makebit21 }
+	if = { limit = { OR = { bit22 = set prev.bit22 = set } } add = set.makebit22 }
+	if = { limit = { OR = { bit23 = set prev.bit23 = set } } add = set.makebit23 }
+	if = { limit = { OR = { bit24 = set prev.bit24 = set } } add = set.makebit24 }
+	if = { limit = { OR = { bit25 = set prev.bit25 = set } } add = set.makebit25 }
+	if = { limit = { OR = { bit26 = set prev.bit26 = set } } add = set.makebit26 }
+	if = { limit = { OR = { bit27 = set prev.bit27 = set } } add = set.makebit27 }
+	if = { limit = { OR = { bit28 = set prev.bit28 = set } } add = set.makebit28 }
+	if = { limit = { OR = { bit29 = set prev.bit29 = set } } add = set.makebit29 }
+	if = { limit = { OR = { bit30 = set prev.bit30 = set } } add = set.makebit30 }
+	if = { limit = { OR = { bit31 = set prev.bit31 = set } } add = set.makebit31 }
 }
 not = { value = this add = 1 multiply = -1 }
 

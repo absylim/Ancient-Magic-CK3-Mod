@@ -49,7 +49,7 @@
 		gain_mana_gen_perk = { VALUE = elemental_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = elemental_mage_perk_max_mana }
 		make_mage_effect = yes
-		mod_bit = { BIT = elemental_mage_perk_bit OP = set }
+		mod_bit = { MASK = elomancy_perk_mask_0 BIT = elemental_mage_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -66,7 +66,7 @@ flame_aura_perk = {
 		unlock_flame_aura_spell = yes
 		gain_mana_gen_perk = { VALUE = flame_aura_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = flame_aura_perk_max_mana }
-		mod_bit = { BIT = flame_aura_perk_bit OP = set }
+		mod_bit = { MASK = elomancy_perk_mask_0 BIT = flame_aura_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -83,7 +83,7 @@ flaming_weapons_perk = {
 		unlock_flaming_weapons_spell = yes
 		gain_mana_gen_perk = { VALUE = flaming_weapons_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = flaming_weapons_perk_max_mana }
-		mod_bit = { BIT = flaming_weapons_perk_bit OP = set }
+		mod_bit = { MASK = elomancy_perk_mask_0 BIT = flaming_weapons_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -100,7 +100,7 @@ living_earthworks_perk = {
 		unlock_living_earthworks_spell = yes
 		gain_mana_gen_perk = { VALUE = living_earthworks_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = living_earthworks_perk_max_mana }
-		mod_bit = { BIT = living_earthworks_perk_bit OP = set }
+		mod_bit = { MASK = elomancy_perk_mask_0 BIT = living_earthworks_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -117,7 +117,7 @@ golem_creation_perk = {
 		unlock_golem_creation_spell = yes
 		gain_mana_gen_perk = { VALUE = golem_creation_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = golem_creation_perk_max_mana }
-		mod_bit = { BIT = golem_creation_perk_bit OP = set }
+		mod_bit = { MASK = elomancy_perk_mask_0 BIT = golem_creation_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -138,7 +138,7 @@ control_water_perk = {
 		unlock_control_water_spell = yes
 		gain_mana_gen_perk = { VALUE = control_water_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = control_water_perk_max_mana }
-		mod_bit = { BIT = control_water_perk_bit OP = set }
+		mod_bit = { MASK = elomancy_perk_mask_0 BIT = control_water_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -155,7 +155,7 @@ drought_perk = {
 		unlock_drought_spell = yes
 		gain_mana_gen_perk = { VALUE = drought_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = drought_perk_max_mana }
-		mod_bit = { BIT = drought_perk_bit OP = set }
+		mod_bit = { MASK = elomancy_perk_mask_0 BIT = drought_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -174,7 +174,7 @@ elemental_warrior_perk = {
 		unlock_elemental_warrior_spell = yes
 		gain_mana_gen_perk = { VALUE = elemental_warrior_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = elemental_warrior_perk_max_mana }
-		mod_bit = { BIT = elemental_warrior_perk_bit OP = set }
+		mod_bit = { MASK = elomancy_perk_mask_0 BIT = elemental_warrior_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -192,7 +192,7 @@ lord_of_the_elements_perk = {
 		gain_mana_gen_perk = { VALUE = lord_of_the_elements_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = lord_of_the_elements_perk_max_mana }
 		add_trait_force_tooltip = lord_of_the_elements
-		mod_bit = { BIT = lord_of_the_elements_perk_bit OP = set }
+		mod_bit = { MASK = elomancy_perk_mask_0 BIT = lord_of_the_elements_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }

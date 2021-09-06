@@ -1,5 +1,12 @@
 ﻿has_perk_trigger = {
-	$PERK$_bit.compare_value = 1
+    OR = {
+	    var:time_perk_mask_0.$PERK$_bit.compare_value = set
+	    var:life_perk_mask_0.$PERK$_bit.compare_value = set
+	    var:elomancy_perk_mask_0.$PERK$_bit.compare_value = set
+	    var:necromancy_perk_mask_0.$PERK$_bit.compare_value = set
+	    var:biomancy_perk_mask_0.$PERK$_bit.compare_value = set
+	    var:mensomancy_perk_mask_0.$PERK$_bit.compare_value = set
+    }
 }
 
 has_any_spell_aura_targets_trigger = {
@@ -7,5 +14,5 @@ has_any_spell_aura_targets_trigger = {
 }
 
 has_spell_aura_targets_trigger = {
-    $SPELL$_aura_bit.compare_value = 1
+    var:aura_mask_0.$SPELL$_aura_bit.compare_value = set
 }
