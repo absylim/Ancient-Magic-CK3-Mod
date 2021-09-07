@@ -722,7 +722,81 @@ or = {
 	if = { limit = { OR = { bit30 = set prev.bit30 = set } } add = set.makebit30 }
 	if = { limit = { OR = { bit31 = set prev.bit31 = set } } add = set.makebit31 }
 }
+xor = {
+	value = 0
+	if = { limit = { NOT = { bit00 = prev.bit00 } } add = set.makebit00 }
+	if = { limit = { NOT = { bit01 = prev.bit01 } } add = set.makebit01 }
+	if = { limit = { NOT = { bit02 = prev.bit02 } } add = set.makebit02 }
+	if = { limit = { NOT = { bit03 = prev.bit03 } } add = set.makebit03 }
+	if = { limit = { NOT = { bit04 = prev.bit04 } } add = set.makebit04 }
+	if = { limit = { NOT = { bit05 = prev.bit05 } } add = set.makebit05 }
+	if = { limit = { NOT = { bit06 = prev.bit06 } } add = set.makebit06 }
+	if = { limit = { NOT = { bit07 = prev.bit07 } } add = set.makebit07 }
+	if = { limit = { NOT = { bit08 = prev.bit08 } } add = set.makebit08 }
+	if = { limit = { NOT = { bit09 = prev.bit09 } } add = set.makebit09 }
+	if = { limit = { NOT = { bit10 = prev.bit10 } } add = set.makebit10 }
+	if = { limit = { NOT = { bit11 = prev.bit11 } } add = set.makebit11 }
+	if = { limit = { NOT = { bit12 = prev.bit12 } } add = set.makebit12 }
+	if = { limit = { NOT = { bit13 = prev.bit13 } } add = set.makebit13 }
+	if = { limit = { NOT = { bit14 = prev.bit14 } } add = set.makebit14 }
+	if = { limit = { NOT = { bit15 = prev.bit15 } } add = set.makebit15 }
+	if = { limit = { NOT = { bit16 = prev.bit16 } } add = set.makebit16 }
+	if = { limit = { NOT = { bit17 = prev.bit17 } } add = set.makebit17 }
+	if = { limit = { NOT = { bit18 = prev.bit18 } } add = set.makebit18 }
+	if = { limit = { NOT = { bit19 = prev.bit19 } } add = set.makebit19 }
+	if = { limit = { NOT = { bit20 = prev.bit20 } } add = set.makebit20 }
+	if = { limit = { NOT = { bit21 = prev.bit21 } } add = set.makebit21 }
+	if = { limit = { NOT = { bit22 = prev.bit22 } } add = set.makebit22 }
+	if = { limit = { NOT = { bit23 = prev.bit23 } } add = set.makebit23 }
+	if = { limit = { NOT = { bit24 = prev.bit24 } } add = set.makebit24 }
+	if = { limit = { NOT = { bit25 = prev.bit25 } } add = set.makebit25 }
+	if = { limit = { NOT = { bit26 = prev.bit26 } } add = set.makebit26 }
+	if = { limit = { NOT = { bit27 = prev.bit27 } } add = set.makebit27 }
+	if = { limit = { NOT = { bit28 = prev.bit28 } } add = set.makebit28 }
+	if = { limit = { NOT = { bit29 = prev.bit29 } } add = set.makebit29 }
+	if = { limit = { NOT = { bit30 = prev.bit30 } } add = set.makebit30 }
+	if = { limit = { NOT = { bit31 = prev.bit31 } } add = set.makebit31 }
+}
 not = { value = this add = 1 multiply = -1 }
+nand = { value = and.not }
+nor = { value = or.not }
+xnor = { value = xor.not }
+
+num_set_bits = {
+	value = 0
+	add = bit00
+	add = bit01
+	add = bit02
+	add = bit03
+	add = bit04
+	add = bit05
+	add = bit06
+	add = bit07
+	add = bit08
+	add = bit09
+	add = bit10
+	add = bit11
+	add = bit12
+	add = bit13
+	add = bit14
+	add = bit15
+	add = bit16
+	add = bit17
+	add = bit18
+	add = bit19
+	add = bit20
+	add = bit21
+	add = bit22
+	add = bit23
+	add = bit24
+	add = bit25
+	add = bit26
+	add = bit27
+	add = bit28
+	add = bit29
+	add = bit30
+	add = bit31
+}
 
 abs = {
 	value = this

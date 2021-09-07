@@ -434,3 +434,10 @@ mensomancy_perk_mask_0_maker = {
 	if = { limit = { has_perk = enchanting_aura_perk } add = set.makebit07 }
 	if = { limit = { has_perk = master_of_puppets_perk } add = set.makebit08 }
 }
+
+num_time_perks = { value = var:time_perk_mask_0.num_set_bits }
+num_life_perks = { value = var:life_perk_mask_0.num_set_bits }
+num_elomancy_perks = { value = var:elomancy_perk_mask_0.num_set_bits }
+num_necromancy_perks = { value = var:necromancy_perk_mask_0.num_set_bits }
+num_biomancy_perks = { value = var:biomancy_perk_mask_0.num_set_bits }
+num_mensomancy_perks = { value = var:mensomancy_perk_mask_0.num_set_bits }
