@@ -2542,7 +2542,7 @@ widget = {
 			}
 
 			button_hud_character_bar = {
-				name = "tab_magic"
+				name = "tab_spellbook"
 				tooltip = "MAGIC_BUTTON"
 
 				enabled = "[GetScriptedGui('can_use_magic_window').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -2552,8 +2552,8 @@ widget = {
 				highlight_icon = {
 					parentanchor = center
 					position = { 0 5}
-					size = { 45 45 }
-					texture = "gfx/magic/maintab_magic.dds"
+					size = { 33 40 }
+					texture = "gfx/magic/maintab_spellbook.dds"
 
 					glow = {
 						color = { 0 0 0 0.8 }

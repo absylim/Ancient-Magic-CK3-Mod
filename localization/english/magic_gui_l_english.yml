@@ -1,6 +1,6 @@
 ﻿l_english:
  ## GUI
- MAGIC_BUTTON: "Open Magic"
+ MAGIC_BUTTON: "Open Spellbook"
  MAGIC_VIEW: "Magic"
  MAGE_LEVEL: "Mage Level: [GetPlayer.MakeScope.ScriptValue('mage_level')|0]"
  MAGE_XP_TNL: "Mage XP: [GetPlayer.MakeScope.ScriptValue('mage_xp_display')|0] / [GetPlayer.MakeScope.ScriptValue('mage_xp_to_next_level')|0]"
