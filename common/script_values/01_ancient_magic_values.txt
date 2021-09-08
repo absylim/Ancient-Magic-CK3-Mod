@@ -825,7 +825,7 @@ tri = {
 	ordered_province = {
 		limit = {
 			has_variable = tri_sum
-			var:tri_sum < prev
+			var:tri_sum.compare_value < prev
 		}
 		order_by = var:tri_num
 		position = 0
