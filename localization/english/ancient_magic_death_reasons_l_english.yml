@@ -1,4 +1,4 @@
 ﻿l_english:
- death_stare:0 "Death Stare"
- death_mana_devouring_1:1 "died from [GetTrait('mana_devouring_1').GetName( CHARACTER.Self )]"
- death_mana_devouring_2:1 "died from [GetTrait('mana_devouring_2').GetName( CHARACTER.Self )]"
+ death_stare: "died from [TARGET_CHARACTER.GetUIName] destroying their soul"
+ death_mana_devouring_1: "died from [GetTrait('mana_devouring_1').GetName( CHARACTER.Self )]"
+ death_mana_devouring_2: "died from [GetTrait('mana_devouring_2').GetName( CHARACTER.Self )]"
