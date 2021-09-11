@@ -378,10 +378,10 @@ can_add_or_remove_trait_trigger = {
 		flag:fecund = { NOT = { has_trait = infertile } }
 		flag:strong = { NOR = { has_trait = weak has_trait = spindly has_trait = physique_bad } }
 		flag:shrewd = { NOR = { has_trait = dull has_trait = intellect_bad } }
-		flag:clubfooted = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = surefooted } } }
-		flag:hunchbacked = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = regal_bearing } } }
+		flag:clubfooted = { OR = { is_pih_installed_trigger = no NOT = { has_trait = surefooted } } }
+		flag:hunchbacked = { OR = { is_pih_installed_trigger = no NOT = { has_trait = regal_bearing } } }
 		flag:lisping = { always = yes }
-		flag:stuttering = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = silver_tongued } } }
+		flag:stuttering = { OR = { is_pih_installed_trigger = no NOT = { has_trait = silver_tongued } } }
 		flag:dwarf = { NOT = { has_trait = giant } }
 		flag:giant = { NOT = { has_trait = dwarf } }
 		flag:inbred = { always = yes }
@@ -389,10 +389,10 @@ can_add_or_remove_trait_trigger = {
 		flag:dull = { NOR = { has_trait = shrewd has_trait = intellect_good } }
 		flag:impotent = { always = yes }
 		flag:spindly = { NOT = { has_trait = strong has_trait = physique_good } }
-		flag:scaly = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = glowing } } }
+		flag:scaly = { OR = { is_pih_installed_trigger = no NOT = { has_trait = glowing } } }
 		flag:albino = { always = yes }
-		flag:wheezing = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = hardy_lung } } }
-		flag:bleeder = { OR = { is_itpp_installed_trigger = no NOT = { has_trait = pt_balanced_humors } } }
+		flag:wheezing = { OR = { is_pih_installed_trigger = no NOT = { has_trait = hardy_lung } } }
+		flag:bleeder = { OR = { is_pih_installed_trigger = no NOT = { has_trait = pt_balanced_humors } } }
 		flag:infertile = { NOT = { has_trait = fecund } }
 		flag:celibate = { always = yes }
 		flag:pilgrim = { always = yes }
