@@ -407,6 +407,7 @@ deacon_of_death_spell = {
 	}
 	effect = {
 		scope:spell_target = { convert_undead = yes }
+		add_hook_no_toast = { type = ancient_magic_hook_undead_master target = scope:spell_target }
 		change_mana_with_tooltip = { VALUE = deacon_of_death_spell_cost.neg }
 		change_mage_xp = { VALUE = deacon_of_death_spell_cost.abs }
 	}
