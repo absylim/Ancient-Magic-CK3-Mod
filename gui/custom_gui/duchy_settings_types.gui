@@ -1,23 +1,16 @@
-types DuchyHudSettings {
+﻿types DuchyHudSettings {
 	type duchy_settings_toolbar_view = window {
 		position = { 420 70 }
 		alwaystransparent = yes
 		layer = top
 		allow_outside = yes
+		duchy_change_holding_view = {}
 		
 		visible = "[GetScriptedGui('is_duchy_settings_toolbar_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 	
 		using = Window_Background
 		using = Window_Decoration
 		using = Animation_ShowHide_Quick
-
-		state = {
-			name = _show
-		}
-
-		state = {
-			name = _hide
-		}
 		
 		# Not shown to the player, but is used by the hotkey system
 		button_normal = {
@@ -53,9 +46,7 @@ types DuchyHudSettings {
 				
 
 				widget = {
-					datacontext = "[CharacterInteractionMenuWindow.GetCharacter]"
 					size = { 100% 28 }
-					name = "character_info"
 
 					hbox = {
 						layoutpolicy_horizontal = expanding
@@ -65,52 +56,9 @@ types DuchyHudSettings {
 							name = "character_name"
 							visible = "[Not(Character.IsLocalPlayer)]"
 							layoutpolicy_horizontal = expanding
-							text = "#Bold [Character.GetUINameNoTooltip|U]#!"
+							text = "#Bold Duchy settings #!"
 							align = nobaseline
 							autoresize = no
-						}
-
-						text_single = {
-							name = "character_name_me"
-							visible = "[Character.IsLocalPlayer]"
-							layoutpolicy_horizontal = expanding
-							text = "FRAME_RELATION_ME"
-							align = nobaseline
-							autoresize = no
-						}
-
-						expand = {}
-
-						hbox = {
-							button_pin = {
-								name = "button_pin"
-								visible = "[Not(Character.IsPinned)]"
-								onclick = "[Character.ToggleCharacterPinned]"
-								size = { 25 25 }
-
-								tooltip = "PIN_TT"
-								using = tooltip_se
-							}
-
-							button_barbershop = {
-								name = "customize_portrait"
-								visible = "[Character.CanCustomizePortrait]"
-								onclick = "[Character.OnCustomizePortrait]"
-								onclick = "[CharacterInteractionMenuWindow.Close]"
-								size = { 25 25 }
-
-								tooltip = "CV_CUSTOMIZE_PORTRAIT"
-								using = tooltip_ne
-							}
-
-							button_go_to_my_location = {
-								name = "button_go_to_my_location"
-								onclick = "[CharacterInteractionMenuWindow.GoToCharacter]"
-								size = { 25 25 }
-
-								tooltip = "GOTO_CHARACTER"
-								using = tooltip_ne
-							}
 						}
 					}
 				}

@@ -1,4 +1,4 @@
-is_duchy_settings_toolbar_open = {
+﻿is_duchy_settings_toolbar_open = {
 	scope = character
 	is_valid = {
 		has_variable = toolbar_duchy_settings_view

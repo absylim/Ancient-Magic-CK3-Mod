@@ -623,7 +623,7 @@ window = {
 			button = {
 				size = { 45 45  }
 				
-				onclick = "[GetScriptedGui('toggle_duchy_settings_toolbar').Execute(GuiScope.SetRoot(GetPlayer.MakeScope)).End]"
+				onclick = "[GetScriptedGui('toggle_duchy_settings_toolbar').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 
 				icon_building_tab = {
 					parentanchor = center
