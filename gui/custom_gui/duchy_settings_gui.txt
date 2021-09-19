@@ -1,0 +1,164 @@
+types DuchyHudSettings {
+	type duchy_settings_toolbar_view = window {
+		position = { 420 70 }
+		alwaystransparent = yes
+		layer = top
+		allow_outside = yes
+		
+		visible = "[GetScriptedGui('is_duchy_settings_toolbar_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	
+		using = Window_Background
+		using = Window_Decoration
+		using = Animation_ShowHide_Quick
+
+		state = {
+			name = _show
+		}
+
+		state = {
+			name = _hide
+		}
+		
+		# Not shown to the player, but is used by the hotkey system
+		button_normal = {
+			name = "button_close"
+			size = { 0 0 }
+			onclick = "GetScriptedGui('toggle_duchy_settings_toolbar').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			shortcut = "close_window"
+		}
+		
+		container = {
+			alwaystransparent = yes
+			resizeparent = yes
+			allow_outside = yes
+			
+			flowcontainer = {
+				alwaystransparent = no
+				direction = vertical
+				ignoreinvisible = yes
+
+				background = {
+					texture = "gfx/interface/component_tiles/interaction_menu_bg.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 11 11 }
+					spriteborder_top = 49
+					margin = { 8 14 }
+
+					modify_texture = {
+						name = "overlay"
+						texture = "gfx/interface/component_overlay/overlay_window.dds"
+						blend_mode = overlay
+					}
+				}
+				
+
+				widget = {
+					datacontext = "[CharacterInteractionMenuWindow.GetCharacter]"
+					size = { 100% 28 }
+					name = "character_info"
+
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						margin = { 10 0 }
+
+						text_single = {
+							name = "character_name"
+							visible = "[Not(Character.IsLocalPlayer)]"
+							layoutpolicy_horizontal = expanding
+							text = "#Bold [Character.GetUINameNoTooltip|U]#!"
+							align = nobaseline
+							autoresize = no
+						}
+
+						text_single = {
+							name = "character_name_me"
+							visible = "[Character.IsLocalPlayer]"
+							layoutpolicy_horizontal = expanding
+							text = "FRAME_RELATION_ME"
+							align = nobaseline
+							autoresize = no
+						}
+
+						expand = {}
+
+						hbox = {
+							button_pin = {
+								name = "button_pin"
+								visible = "[Not(Character.IsPinned)]"
+								onclick = "[Character.ToggleCharacterPinned]"
+								size = { 25 25 }
+
+								tooltip = "PIN_TT"
+								using = tooltip_se
+							}
+
+							button_barbershop = {
+								name = "customize_portrait"
+								visible = "[Character.CanCustomizePortrait]"
+								onclick = "[Character.OnCustomizePortrait]"
+								onclick = "[CharacterInteractionMenuWindow.Close]"
+								size = { 25 25 }
+
+								tooltip = "CV_CUSTOMIZE_PORTRAIT"
+								using = tooltip_ne
+							}
+
+							button_go_to_my_location = {
+								name = "button_go_to_my_location"
+								onclick = "[CharacterInteractionMenuWindow.GoToCharacter]"
+								size = { 25 25 }
+
+								tooltip = "GOTO_CHARACTER"
+								using = tooltip_ne
+							}
+						}
+					}
+				}
+
+			}
+		}
+	}
+
+	type duchy_change_holding_view = window {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+		parentanchor = center
+		layer = windows_layer
+		allow_outside = yes
+		
+		visible = "[GetScriptedGui('toggle_duchy_settings_holding_convert_window').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	
+		using = Window_Background
+		using = Window_Decoration
+		using = Animation_ShowHide_Standard
+	
+		vbox = {
+			using = Window_Margins
+			restrictparent_min = yes
+
+			header_pattern = {
+				layoutpolicy_horizontal = expanding
+
+				blockoverride "header_text"
+				{
+					text = "MAGIC_VIEW"
+				}
+
+				blockoverride "button_close"
+				{
+					onclick = "[GetScriptedGui('toggle_magic_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+			}
+			
+			hbox = {
+				scrollbox = {
+					name = "get_all_holding_types"
+				}
+				
+				vbox = {
+					
+				}
+			}
+		}
+	}
+}

@@ -13,6 +13,8 @@ window = {
 	datacontext = "[HoldingView.GetHolding]"
 	datacontext = "[HoldingView.GetProvince]"
 	datacontext = "[Province.GetCounty]"
+	
+	duchy_settings_toolbar_view = {}
 
 	background = {
 		texture = "gfx/interface/component_tiles/tile_window_background_subwindow.dds"
@@ -620,13 +622,14 @@ window = {
 			expand = {}
 			button = {
 				size = { 45 45  }
+				
+				onclick = "[GetScriptedGui('toggle_duchy_settings_toolbar').Execute(GuiScope.SetRoot(GetPlayer.MakeScope)).End]"
 
 				icon_building_tab = {
 					parentanchor = center
 					position = { 0 1 }
-					size = { 35 25 }
+					size = { 25 25 }
 					alwaystransparent = yes
-					down = "[GUICountyHolding.IsSelected]"
 					texture = "gfx/interface/icons/icon_duchy_settings.dds"
 
 					blockoverride "button_frames"
