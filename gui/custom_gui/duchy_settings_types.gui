@@ -1,8 +1,10 @@
 ﻿types DuchyHudSettings {
 	type duchy_settings_toolbar_view = window {
-		position = { 420 70 }
-		alwaystransparent = yes
-		layer = top
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+		parentanchor = center
+		layer = windows_layer
+		#layer = top
 		allow_outside = yes
 		duchy_change_holding_view = {}
 		
@@ -13,12 +15,12 @@
 		using = Animation_ShowHide_Quick
 		
 		# Not shown to the player, but is used by the hotkey system
-		button_normal = {
-			name = "button_close"
-			size = { 0 0 }
-			onclick = "GetScriptedGui('toggle_duchy_settings_toolbar').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-			shortcut = "close_window"
-		}
+		#button_normal = {
+		#	name = "button_close"
+		#	size = { 0 0 }
+		#	onclick = "GetScriptedGui('toggle_duchy_settings_toolbar').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+		#	shortcut = "close_window"
+		#}
 		
 		container = {
 			alwaystransparent = yes
@@ -30,21 +32,6 @@
 				direction = vertical
 				ignoreinvisible = yes
 
-				background = {
-					texture = "gfx/interface/component_tiles/interaction_menu_bg.dds"
-					spriteType = Corneredtiled
-					spriteborder = { 11 11 }
-					spriteborder_top = 49
-					margin = { 8 14 }
-
-					modify_texture = {
-						name = "overlay"
-						texture = "gfx/interface/component_overlay/overlay_window.dds"
-						blend_mode = overlay
-					}
-				}
-				
-
 				widget = {
 					size = { 100% 28 }
 
@@ -54,12 +41,18 @@
 
 						text_single = {
 							name = "character_name"
-							visible = "[Not(Character.IsLocalPlayer)]"
 							layoutpolicy_horizontal = expanding
 							text = "#Bold Duchy settings #!"
 							align = nobaseline
 							autoresize = no
 						}
+					}
+					
+					button = {
+						name = "open_duchy_change_holding_view"
+						text = "MANAGE_DUCHY_HOLDING"
+						visible = yes
+						onclick = "GetScriptedGui('toggle_duchy_settings_holding_convert_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)"
 					}
 				}
 
@@ -74,7 +67,7 @@
 		layer = windows_layer
 		allow_outside = yes
 		
-		visible = "[GetScriptedGui('toggle_duchy_settings_holding_convert_window').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+		visible = "[GetScriptedGui('is_duchy_settings_toolbar_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 	
 		using = Window_Background
 		using = Window_Decoration
@@ -94,7 +87,7 @@
 
 				blockoverride "button_close"
 				{
-					onclick = "[GetScriptedGui('toggle_magic_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					onclick = "[GetScriptedGui('toggle_duchy_settings_holding_convert_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 				}
 			}
 			

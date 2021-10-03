@@ -620,29 +620,31 @@ window = {
 			}
 
 			expand = {}
-			button = {
-				size = { 45 45  }
-				
-				onclick = "[GetScriptedGui('toggle_duchy_settings_toolbar').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			#button = {
+			#	name = "duchy_settings_button"
+			#	size = { 45 45  }
+			#	
+			#	down = "[GetScriptedGui('is_duchy_settings_toolbar_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			#	onclick = "[GetScriptedGui('toggle_magic_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]]"
+#
+#				icon_building_tab = {
+#					parentanchor = center
+#					position = { 0 1 }
+#					size = { 25 25 }
+#					alwaystransparent = yes
+#					texture = "gfx/interface/icons/icon_duchy_settings.dds"
 
-				icon_building_tab = {
-					parentanchor = center
-					position = { 0 1 }
-					size = { 25 25 }
-					alwaystransparent = yes
-					texture = "gfx/interface/icons/icon_duchy_settings.dds"
-
-					blockoverride "button_frames"
-					{
-						gfxtype = togglepushbuttongfx
-						effectname = "NoHighlight"
-						upframe = 4
-						uphoverframe = 5
-						uppressedframe = 6
-						downframe = 5
-					}
-				}
-			}
+#					blockoverride "button_frames"
+#					{
+#						gfxtype = togglepushbuttongfx
+#						effectname = "NoHighlight"
+#						upframe = 4
+#						uphoverframe = 5
+#						uppressedframe = 6
+#						downframe = 5
+#					}
+#				}
+#			}
 		}
 
 		####################################
@@ -1126,6 +1128,7 @@ window = {
 				vbox = {
 					layoutpolicy_vertical = expanding
 					margin = { 7 3 }
+					
 
 					hbox = {
 						icon = { # Mild Winter
