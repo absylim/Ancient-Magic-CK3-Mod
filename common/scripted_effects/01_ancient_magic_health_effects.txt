@@ -49,6 +49,7 @@ contract_magical_disease_effect = {
 				OR = {
 					scope:disease_type = flag:mana_devouring_1
 					scope:disease_type = flag:mana_devouring_2
+					scope:disease_type = flag:mage_dementia
 				}
 			}
 
