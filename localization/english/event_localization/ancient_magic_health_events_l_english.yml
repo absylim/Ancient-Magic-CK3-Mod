@@ -9,6 +9,11 @@
  AMHealth.0002.desc:0 "The supernatural disease has run out of [mana|El] to feed on, and now it's begun to consume my physical vitality instead, eating away at me. I've never felt more ill in my life and, if I don't get more [mana|El] soon, I fear that I may waste away completely..."
  AMHealth.0002.court_physician.desc:0 "The affliction has spread to your body, my [ROOT.Char.GetLadyLord]. We need to get you some [mana|El] at once!"
  AMHealth.0002.a:0 "I'm being eaten alive..."
+#Mage Dementia
+ AMHealth.0005.t:1 "[SCOPE.Custom('EventTitleDisease')]: An Ailment of The Mind"
+ AMHealth.0005.desc:0 "I've lived so long that its truly hard to remember how old i really am. But... . What was i saying again ? Where is my sword ? We should go and hunt that cloud who looked threatiningly at me just now !"
+ AMHealth.0005.court_physician.desc:0 "My [ROOT.Char.GetLadyLord], your mind has reached the limit of human capabilities."
+ AMHealth.0005.a:0 "Who am i again?"
  
  #Rocovery fisrt stage
  AMHealth.1101.t:1 "[SCOPE.Custom('EventTitleDisease')]: Will Recovery"
@@ -29,3 +34,4 @@
 #DISEASES DESC
  disease_mana_devouring_1:0 "mana devouring"
  disease_mana_devouring_2:0 "body devouring"
+ disease_mage_dementia:0 "Dementia"

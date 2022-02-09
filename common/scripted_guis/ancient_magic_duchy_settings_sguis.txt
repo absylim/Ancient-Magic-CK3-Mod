@@ -1,0 +1,43 @@
+﻿is_duchy_settings_toolbar_open = {
+	scope = character
+	is_valid = {
+		has_variable = toolbar_duchy_settings_view
+	}
+}
+
+toggle_duchy_settings_toolbar = {
+	scope = character
+	effect = {
+		if = {
+			limit = {
+				has_variable = toolbar_duchy_settings_view
+			}
+			effect_close_duchy_settings_toolbar = yes
+		}
+		else = {
+			effect_open_duchy_settings_toolbar = yes
+		}
+	}
+}
+
+is_duchy_settings_holding_convert_window_open = {
+	scope = character
+	is_valid = {
+		has_variable = window_duchy_settings_holding_convert_view
+	}
+}
+
+toggle_duchy_settings_holding_convert_window = {
+	scope = character
+	effect = {
+		if = {
+			limit = {
+				has_variable = window_duchy_settings_holding_convert_view
+			}
+			effect_close_duchy_settings_holding_convert_window = yes
+		}
+		else = {
+			effect_open_duchy_settings_holding_convert_window = yes
+		}
+	}
+}

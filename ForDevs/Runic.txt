@@ -1,0 +1,27 @@
+﻿#Some primodial runes from which all other magic and magical constructs are constructed
+
+Gra
+Rune that gathers surrounding mana, thanks to beding space-time and create point to which surrounding mana gravitates to
+
+Zii
+Rune ionisises atmosphere around it
+
+Fa
+Rune that oscillates surrounding attoms and creates heat
+
+Fasu
+Rune that makes mana fuse and create higher energy concentrated mana particle
+
+Ord
+Rune thats transfering mana from one point to other, it works on priciple of slingshot
+
+Swu
+Wind generating rune, which starts to move surroinding attoms in one coherent way 
+
+Loga
+Stores inputed mana
+
+# Examples of combination
+Gra + Loga - creates time slowing effect
+Zii + Swu - creates Lightning
+Fa + Swu - generates flame

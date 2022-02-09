@@ -1,0 +1,25 @@
+effect_open_duchy_settings_toolbar = {
+	scope:actor = {
+		set_variable = {
+			name = toolbar_duchy_settings_view
+			value = 1
+		}
+	}
+}
+
+effect_close_duchy_settings_toolbar = {
+	remove_variable = toolbar_duchy_settings_view
+}
+
+effect_open_duchy_settings_holding_convert_window = {
+	scope:actor = {
+		set_variable = {
+			name = window_duchy_settings_holding_convert_view
+			value = 1
+		}
+	}
+}
+
+effect_close_duchy_settings_holding_convert_window = {
+	remove_variable = window_duchy_settings_holding_convert_view
+}

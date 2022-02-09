@@ -31,3 +31,5 @@
  trait_mana_devouring_1_desc:0 "This character has contracted a disease which mostly afflicts those with magic potential. It causes continuous [mana_drain|E]."
  trait_mana_devouring_2:0 "Body Devouring"
  trait_mana_devouring_2_desc:0 "This character has an advanced mana devouring disease. Because [ROOT.Char.GetSheHe] no longer has enough [mana|El] to manage the illness, it has begun to consume [ROOT.Char.GetHerHis] body."
+ trait_mage_dementia:0 "Dementia"
+ trait_mage_dementia_desc:0 "Mental illness that strikes people with not enough memory capacity, mainly this is illness that is contracted by immortals who dont have anymore space for their lifes."

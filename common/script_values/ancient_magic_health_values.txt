@@ -2,6 +2,83 @@
 mana_devouring_min_recovery_time = minimum_recovery_time
 mana_devouring_max_recovery_time = 20950
 
+######################################
+#	Memory Life capacity (in years)
+######################################
+
+base_memory_life_capacity = 300
+
+memory_life_capacity = {
+	value = base_memory_life_capacity
+}
+
+memory_life_ammount = {
+	value = 0
+	add = age
+	
+	# Time tree
+	if = { limit = { has_perk = glimpse_the_future_perk } add = 10 }
+	if = { limit = { has_perk = temporal_manipulation_perk } add = 5 }
+	if = { 
+		limit = { 
+			has_perk = master_of_time_perk 
+		} 
+		add = 25 
+	}
+	
+	# Life tree
+	if = { limit = { has_perk = inward_reflection_perk } add = 5 }
+	if = { limit = { has_perk = inward_perfection_perk } add = -10 }
+	if = { limit = { has_perk = heal_perk } add = 5 }
+	if = { limit = { has_perk = greater_heal_perk } add = 10 }
+	if = { limit = { has_perk = purity_of_body_perk } add = 5 }
+	if = { 
+		limit = { 
+			has_perk = avatar_of_life_perk 
+		} 
+		add = 25 
+	}
+	
+	# Elemental tree
+	if = { 
+		limit = { 
+			has_perk = lord_of_the_elements_perk 
+		} 
+		add = 25 
+	}
+	
+	# Death tree
+	if = { 
+		limit = { 
+			has_perk = deacon_of_death_perk 
+		} 
+		add = 25 
+	}
+	
+	# Biomancy tree
+	if = { limit = { has_perk = improve_trait_perk } add = 5 }
+	if = { limit = { has_perk = perfect_trait_perk } add = 20 }
+	if = { limit = { has_perk = architect_of_bloodlines_perk } add = 25 }
+	
+	# Domination tree
+	if = { limit = { has_perk = domination_mage_perk } add = -10 }
+	if = { limit = { has_perk = master_of_puppets_perk } add = -5 } #The knowlage is pretty big, but also as this is in domain of mind
+}
+
+memory_life_capacity_left = {
+	value = memory_life_capacity
+	
+	if = {
+		limit = {
+			NOT = { has_character_flag = materilised_soul }
+		}
+		
+		substract = memory_life_ammount
+	}
+	else = {
+		value = 999
+	}
+}
 
 #################
 #	Weight
