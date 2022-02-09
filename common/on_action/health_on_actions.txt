@@ -98,7 +98,7 @@ disease_outbreak_pulse = {
 		
 		if = {
 			limit = {
-				memory_life_capacity <= 5
+				var:memory_life_capacity_left <= 5
 			}
 			4000 = AMHealth.0005
 		}

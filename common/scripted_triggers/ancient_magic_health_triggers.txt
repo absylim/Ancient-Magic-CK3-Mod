@@ -17,7 +17,7 @@ can_contract_magical_disease_trigger = {
 		is_magus = yes
 		AND = {
 			$DISEASE$ = mage_dementia
-			memory_life_capacity <= 10
+			var:memory_life_capacity_left <= 10
 		}
 	}
 
@@ -59,7 +59,7 @@ can_contract_magical_disease_trigger = {
 	NOR = {
 		AND = {
 			$DISEASE$ = mage_dementia
-			memory_life_capacity > 10
+			var:memory_life_capacity_left > 10
 		}
 	}
 }

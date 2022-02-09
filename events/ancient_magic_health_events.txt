@@ -410,27 +410,27 @@ AMHealth.0005 = {
 	weight_multiplier = {
 		base = 1
 		modifier = {
-			memory_life_capacity < 5
+			var:memory_life_capacity_left < 5
 			factor = 1.1
 		}
 		modifier = {
-			memory_life_capacity < 4
+			var:memory_life_capacity_left < 4
 			factor = 1.5
 		}
 		modifier = {
-			memory_life_capacity < 3
+			var:memory_life_capacity_left < 3
 			factor = 1.75
 		}
 		modifier = {
-			memory_life_capacity < 2
+			var:memory_life_capacity_left < 2
 			factor = 2
 		}
 		modifier = {
-			memory_life_capacity < 1
+			var:memory_life_capacity_left < 1
 			factor = 2.5
 		}
 		modifier = {
-			memory_life_capacity < 0
+			var:memory_life_capacity_left < 0
 			factor = 500
 		}
 		

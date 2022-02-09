@@ -330,7 +330,24 @@ recover_from_magical_disease_effect = {
 	}
 
 	if = { #They actually have the disease you want to remove
-		limit = { has_trait = $DISEASE$ }
+		limit = { 
+			OR = {
+				AND = {
+					has_trait = $DISEASE$
+					NOT = {$DISEASE$ = mage_dementia}
+				}
+				OR = {
+					AND = {
+						has_trait = mage_dementia
+						has_character_flag = materilised_soul
+					}
+					AND = {
+						has_trait = mage_dementia
+						var:memory_life_capacity_left > 10
+					}
+				}
+			}
+		}
 
 		save_scope_as = sick_character
 
