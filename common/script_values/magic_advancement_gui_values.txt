@@ -1,0 +1,145 @@
+﻿None_bg_pos_x = { value = 0 multiply = 1920 }
+None_bg_pos_y = { value = 0 multiply = 1080 }
+
+time_bg_pos_x = { value = -0.2 multiply = 1920 }
+time_bg_pos_y = { value = -0.15 multiply = 1080 }
+
+life_bg_pos_x = { value = 0.0 multiply = 1920 }
+life_bg_pos_y = { value = -0.3 multiply = 1080 }
+
+elomancy_bg_pos_x = { value = 0.2 multiply = 1920 }
+elomancy_bg_pos_y = { value = 0.15 multiply = 1080 }
+
+necromancy_bg_pos_x = { value = 0.0 multiply = 1920 }
+necromancy_bg_pos_y = { value = 0.3 multiply = 1080 }
+
+biomancy_bg_pos_x = { value = -0.2 multiply = 1920 }
+biomancy_bg_pos_y = { value = 0.15 multiply = 1080 }
+
+mensomancy_bg_pos_x = { value = 0.2 multiply = 1920 }
+mensomancy_bg_pos_y = { value = -0.15 multiply = 1080 }
+
+None_bg_frame = 1
+time_bg_frame = 2
+life_bg_frame = 3
+elomancy_bg_frame = 4
+necromancy_bg_frame = 5
+biomancy_bg_frame = 6
+mensomancy_bg_frame = 7
+
+mage_perk_pos_x = { value = 170 }
+mage_perk_pos_y = { value = 170 }
+
+time_mage_perk_pos_x = { value = 171 }
+time_mage_perk_pos_y = { value = 288 }
+glimpse_the_future_perk_pos_x = { value = 87 }
+glimpse_the_future_perk_pos_y = { value = 252 }
+financial_times_perk_pos_x = { value = 252 }
+financial_times_perk_pos_y = { value = 257 }
+celerity_perk_pos_x = { value = 290 }
+celerity_perk_pos_y = { value = 169 }
+mass_celerity_perk_pos_x = { value = 252 }
+mass_celerity_perk_pos_y = { value = 80 }
+slowness_perk_pos_x = { value = 52 }
+slowness_perk_pos_y = { value = 169 }
+mass_slowness_perk_pos_x = { value = 87 }
+mass_slowness_perk_pos_y = { value = 80 }
+temporal_manipulation_perk_pos_x = { value = 171 }
+temporal_manipulation_perk_pos_y = { value = 48 }
+master_of_time_perk_pos_x = { value = 171 }
+master_of_time_perk_pos_y = { value = 169 }
+
+life_mage_perk_pos_x = { value = 0 }
+life_mage_perk_pos_y = { value = 0 }
+inward_reflection_perk_pos_x = { value = 1 }
+inward_reflection_perk_pos_y = { value = 0 }
+inward_perfection_perk_pos_x = { value = 2 }
+inward_perfection_perk_pos_y = { value = 0 }
+heal_perk_pos_x = { value = 3 }
+heal_perk_pos_y = { value = 0 }
+greater_heal_perk_pos_x = { value = 4 }
+greater_heal_perk_pos_y = { value = 0 }
+battlefield_life_mage_perk_pos_x = { value = 0 }
+battlefield_life_mage_perk_pos_y = { value = 1 }
+greater_battlefield_life_mage_perk_pos_x = { value = 1 }
+greater_battlefield_life_mage_perk_pos_y = { value = 1 }
+purity_of_body_perk_pos_x = { value = 2 }
+purity_of_body_perk_pos_y = { value = 1 }
+avatar_of_life_perk_pos_x = { value = 3 }
+avatar_of_life_perk_pos_y = { value = 1 }
+
+elemental_mage_perk_pos_x = { value = 0 }
+elemental_mage_perk_pos_y = { value = 0 }
+flame_aura_perk_pos_x = { value = 1 }
+flame_aura_perk_pos_y = { value = 0 }
+flaming_weapons_perk_pos_x = { value = 2 }
+flaming_weapons_perk_pos_y = { value = 0 }
+living_earthworks_perk_pos_x = { value = 3 }
+living_earthworks_perk_pos_y = { value = 0 }
+golem_creation_perk_pos_x = { value = 4 }
+golem_creation_perk_pos_y = { value = 0 }
+control_water_perk_pos_x = { value = 0 }
+control_water_perk_pos_y = { value = 1 }
+drought_perk_pos_x = { value = 1 }
+drought_perk_pos_y = { value = 1 }
+elemental_warrior_perk_pos_x = { value = 2 }
+elemental_warrior_perk_pos_y = { value = 1 }
+lord_of_the_elements_perk_pos_x = { value = 3 }
+lord_of_the_elements_perk_pos_y = { value = 1 }
+
+death_mage_perk_pos_x = { value = 64 }
+death_mage_perk_pos_y = { value = 245 }
+inflict_illness_perk_pos_x = { value = 144 }
+inflict_illness_perk_pos_y = { value = 160 }
+plague_lord_perk_pos_x = { value = 117 }
+plague_lord_perk_pos_y = { value = 97 }
+aura_of_death_perk_pos_x = { value = 182 }
+aura_of_death_perk_pos_y = { value = 154 }
+necromancy_perk_pos_x = { value = 125 }
+necromancy_perk_pos_y = { value = 241 }
+drain_life_perk_pos_x = { value = 241 }
+drain_life_perk_pos_y = { value = 140 }
+death_stare_perk_pos_x = { value = 250 }
+death_stare_perk_pos_y = { value = 78 }
+blight_perk_pos_x = { value = 189 }
+blight_perk_pos_y = { value = 80 }
+deacon_of_death_perk_pos_x = { value = 188 }
+deacon_of_death_perk_pos_y = { value = 35 }
+
+biomancy_mage_perk_pos_x = { value = 169 }
+biomancy_mage_perk_pos_y = { value = 272 }
+improve_trait_perk_pos_x = { value = 169 }
+improve_trait_perk_pos_y = { value = 249 }
+perfect_trait_perk_pos_x = { value = 169 }
+perfect_trait_perk_pos_y = { value = 101 }
+fertility_control_perk_pos_x = { value = 136 }
+fertility_control_perk_pos_y = { value = 227 }
+impregnate_perk_pos_x = { value = 200 }
+impregnate_perk_pos_y = { value = 227 }
+weaken_trait_perk_pos_x = { value = 231 }
+weaken_trait_perk_pos_y = { value = 215 }
+criple_trait_perk_pos_x = { value = 116 }
+criple_trait_perk_pos_y = { value = 180 }
+sculpter_of_flesh_perk_pos_x = { value = 136 }
+sculpter_of_flesh_perk_pos_y = { value = 122 }
+architect_of_bloodlines_perk_pos_x = { value = 169 }
+architect_of_bloodlines_perk_pos_y = { value = 75 }
+
+domination_mage_perk_pos_x = { value = 0 }
+domination_mage_perk_pos_y = { value = 0 }
+entrance_perk_pos_x = { value = 1 }
+entrance_perk_pos_y = { value = 0 }
+incite_lust_perk_pos_x = { value = 2 }
+incite_lust_perk_pos_y = { value = 0 }
+incite_obedience_perk_pos_x = { value = 3 }
+incite_obedience_perk_pos_y = { value = 0 }
+dominate_perk_pos_x = { value = 4 }
+dominate_perk_pos_y = { value = 0 }
+beguiling_aura_perk_pos_x = { value = 0 }
+beguiling_aura_perk_pos_y = { value = 1 }
+friendship_perk_pos_x = { value = 1 }
+friendship_perk_pos_y = { value = 1 }
+enchanting_aura_perk_pos_x = { value = 2 }
+enchanting_aura_perk_pos_y = { value = 1 }
+master_of_puppets_perk_pos_x = { value = 3 }
+master_of_puppets_perk_pos_y = { value = 1 }

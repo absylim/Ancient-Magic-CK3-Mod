@@ -1,8 +1,10 @@
 ﻿domination_mage_perk = {
-	lifestyle = arcane_lifestyle
-	tree = domination_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_mensomancy
 	position = { 2 0 }
 	icon = node_diplomacy
+
+	parent = mage_perk
 
 	auto_selection_weight = {
 		value = 11
@@ -54,15 +56,15 @@
 	effect = {
 		gain_mana_gen_perk = { VALUE = domination_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = domination_mage_perk_max_mana }
-		make_mage_effect = yes
 		mod_bit = { MASK = mensomancy_perk_mask_0 BIT = domination_mage_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 entrance_perk = {
-	lifestyle = arcane_lifestyle
-	tree = domination_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_mensomancy
 	position = { 0 1.25 }
 	icon = node_diplomacy
 
@@ -73,13 +75,14 @@ entrance_perk = {
 		gain_mana_gen_perk = { VALUE = entrance_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = entrance_perk_max_mana }
 		mod_bit = { MASK = mensomancy_perk_mask_0 BIT = entrance_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 incite_lust_perk = {
-	lifestyle = arcane_lifestyle
-	tree = domination_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_mensomancy
 	position = { 0 2.5 }
 	icon = node_diplomacy
 
@@ -90,13 +93,14 @@ incite_lust_perk = {
 		gain_mana_gen_perk = { VALUE = incite_lust_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = incite_lust_perk_max_mana }
 		mod_bit = { MASK = mensomancy_perk_mask_0 BIT = incite_lust_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 incite_obedience_perk = {
-	lifestyle = arcane_lifestyle
-	tree = domination_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_mensomancy
 	position = { 2 1.25 }
 	icon = node_diplomacy
 
@@ -107,13 +111,14 @@ incite_obedience_perk = {
 		gain_mana_gen_perk = { VALUE = incite_obedience_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = incite_obedience_perk_max_mana }
 		mod_bit = { MASK = mensomancy_perk_mask_0 BIT = incite_obedience_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 dominate_perk = {
-	lifestyle = arcane_lifestyle
-	tree = domination_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_mensomancy
 	position = { 2 2.5 }
 	icon = node_diplomacy
 
@@ -124,13 +129,14 @@ dominate_perk = {
 		gain_mana_gen_perk = { VALUE = dominate_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = dominate_perk_max_mana }
 		mod_bit = { MASK = mensomancy_perk_mask_0 BIT = dominate_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 beguiling_aura_perk = {
-	lifestyle = arcane_lifestyle
-	tree = domination_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_mensomancy
 	position = { 4 1.25 }
 	icon = node_diplomacy
 
@@ -141,13 +147,14 @@ beguiling_aura_perk = {
 		gain_mana_gen_perk = { VALUE = beguiling_aura_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = beguiling_aura_perk_max_mana }
 		mod_bit = { MASK = mensomancy_perk_mask_0 BIT = beguiling_aura_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 friendship_perk = {
-	lifestyle = arcane_lifestyle
-	tree = domination_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_mensomancy
 	position = { 4 2.5 }
 	icon = node_diplomacy
 
@@ -159,13 +166,14 @@ friendship_perk = {
 		gain_mana_gen_perk = { VALUE = friendship_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = friendship_perk_max_mana }
 		mod_bit = { MASK = mensomancy_perk_mask_0 BIT = friendship_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 enchanting_aura_perk = {
-	lifestyle = arcane_lifestyle
-	tree = domination_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_mensomancy
 	position = { 2 3.75 }
 	icon = node_diplomacy
 
@@ -178,13 +186,14 @@ enchanting_aura_perk = {
 		gain_mana_gen_perk = { VALUE = enchanting_aura_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = enchanting_aura_perk_max_mana }
 		mod_bit = { MASK = mensomancy_perk_mask_0 BIT = enchanting_aura_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 master_of_puppets_perk = {
-	lifestyle = arcane_lifestyle
-	tree = domination_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_mensomancy
 	position = { 2 5 }
 	icon = master_of_puppets
 
@@ -197,6 +206,7 @@ master_of_puppets_perk = {
 		gain_max_mana_perk = { VALUE = master_of_puppets_perk_max_mana }
 		add_trait_force_tooltip = master_of_puppets
 		mod_bit = { MASK = mensomancy_perk_mask_0 BIT = master_of_puppets_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }

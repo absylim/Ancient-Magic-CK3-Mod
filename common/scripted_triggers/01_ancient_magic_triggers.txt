@@ -1,4 +1,11 @@
-﻿is_magic_aura_trigger = {
+﻿is_mage_trigger = {
+	OR = {
+		has_trait = mage
+		any_secret = { secret_type = secret_mage }
+	}
+}
+
+is_magic_aura_trigger = {
 	switch = {
 		trigger = $SPELL$
 		flag:glimpse_the_future_spell = { always = yes }

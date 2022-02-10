@@ -128,24 +128,3 @@
  reset_mana_system_decision_desc:0 "Recalculates the maximum mana and mana regen for every character in the game. Useful after updating the game."
  reset_mana_system_decision_effect_tooltip:0 "Reset all characters' mana systems"
  reset_mana_system_decision_confirm:0 "Reset!"
-
- #magocracy
- call_emergency_vote_decision:0 "Call Session"
- call_emergency_vote_decision_tooltip:0 "Call a session to vote on proposals before the next session begins."
- call_emergency_vote_decision_desc:0 "As one of the patricians of the [GetPlayer.GetHouse.MakeScope.Var('titular_magocracy').Title.GetName], you can call a session before the next one begins, allowing you to vote on proposals early. This will annoy other patricians though."
- call_emergency_vote_decision_confirm:0 "Send the news"
- 
- convert_whole_realm_to_magocracy_decision:0 "Found Magocracy"
- convert_whole_realm_to_magocracy_decision_desc:0 "Government that is based around mage council."
- convert_whole_realm_to_magocracy_decision_confirm:0 "For Greater Truth!"
- convert_whole_realm_to_magocracy_decision_tooltip:0 "Change [government|E] type by adopting Magocracyan government"
-
- convert_to_magocracy_decision:0 "Convert to a Magocracy"
- convert_to_magocracy_decision_tooltip:0 "You can turn your feudal power into a magocracy."
- convert_to_magocracy_decision_desc:0 "You have enough power and respect that you can turn [GetPlayer.GetPrimaryTitle.GetName] into a [magocracy|E]. You may end up losing your title over time, but it will be worth it."
- convert_to_magocracy_decision_confirm:0 "Take the step"
- 
- give_speech_decision:0 "Give a Speech"
- give_speech_decision_tooltip:0 "You can give a speech to the citizens of the magocracy."
- give_speech_decision_desc:0 "As a leader in your magocracy, you can give a speech to the citizens, to appease them and make them happy with their current government."
- give_speech_decision_confirm:0 "My friends, countrymen, let me speak."

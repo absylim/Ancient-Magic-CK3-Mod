@@ -32,3 +32,6 @@
  # Ley Lines
  focal_point_modifier: "Focal Point"
  ley_line_modifier: "Ley line"
+
+ # Magic Advancement
+ magic_advancement_modifier: "Studying Magic"

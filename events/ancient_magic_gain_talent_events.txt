@@ -3,6 +3,7 @@
 ancient_magic_gain_talent_events.001 = {
 	title = ancient_magic_gain_talent_events.001.t
 	desc = ancient_magic_gain_talent_events.001.desc
+	theme = faith
 	
 	option = {
 		name = ancient_magic_gain_talent_events.001.a

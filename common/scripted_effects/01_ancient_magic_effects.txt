@@ -1,72 +1,4 @@
-﻿make_mage_effect = {
-	add_trait_force_tooltip = mage
-	add_trait_force_tooltip = mana
-	if = {
-		limit = { NOT = { exists = var:mana } }
-		set_variable = {
-			name = mana
-			value = 0
-		}
-	}
-	if = {
-		limit = { NOT = { exists = var:mage_xp } }
-		set_variable = {
-			name = mage_xp
-			value = 0
-		}
-	}
-	if = {
-		limit = { NOT = { exists = var:aura_mask_0 } }
-		set_variable = {
-			name = aura_mask_0
-			value = 0
-		}
-	}
-	if = {
-		limit = { NOT = { exists = var:time_perk_mask_0 } }
-		set_variable = {
-			name = time_perk_mask_0
-			value = 0
-		}
-	}
-	if = {
-		limit = { NOT = { exists = var:life_perk_mask_0 } }
-		set_variable = {
-			name = life_perk_mask_0
-			value = 0
-		}
-	}
-	if = {
-		limit = { NOT = { exists = var:elomancy_perk_mask_0 } }
-		set_variable = {
-			name = elomancy_perk_mask_0
-			value = 0
-		}
-	}
-	if = {
-		limit = { NOT = { exists = var:necromancy_perk_mask_0 } }
-		set_variable = {
-			name = necromancy_perk_mask_0
-			value = 0
-		}
-	}
-	if = {
-		limit = { NOT = { exists = var:biomancy_perk_mask_0 } }
-		set_variable = {
-			name = biomancy_perk_mask_0
-			value = 0
-		}
-	}
-	if = {
-		limit = { NOT = { exists = var:mensomancy_perk_mask_0 } }
-		set_variable = {
-			name = mensomancy_perk_mask_0
-			value = 0
-		}
-	}
-}
-
-change_mana_with_tooltip = {
+﻿change_mana_with_tooltip = {
 	custom_description = {
 		text = change_mana
 		value = $VALUE$
@@ -83,37 +15,44 @@ change_mana_gen_tooltip = {
 }
 
 change_mage_xp = {
-	save_temporary_scope_value_as = {
-		name = old_level
-		value = mage_level
-	}
-	save_temporary_scope_value_as = {
-		name = xp_increase
-		value = {
-			value = mage_potency
-			add = mage_education
-			multiply = 0.1
-			add = 1
-			multiply = $VALUE$
-		}
-	}
-	custom_description = {
-		text = change_mage_xp
-		value = scope:xp_increase
-		change_variable = {
-			name = mage_xp
-			add = scope:xp_increase
-		}
-	}
 	if = {
-		limit = { mage_level.compare_value > scope:old_level.compare_value }
-		send_interface_toast = {
-			title = mage_level_increase
-			left_icon = root
-			custom_description = {
-				text = change_mage_level
-				value = mage_level
-				trigger_event = { on_action = on_reset_mana_system }
+		limit = { has_character_modifier = magic_advancement_modifier }
+		save_temporary_scope_value_as = {
+			name = old_level
+			value = mage_level
+		}
+		save_temporary_scope_value_as = {
+			name = xp_increase
+			value = {
+				value = mage_potency
+				add = mage_education
+				multiply = 0.1
+				add = 1
+				multiply = $VALUE$
+			}
+		}
+		custom_description = {
+			text = change_mage_xp
+			value = scope:xp_increase
+			change_variable = {
+				name = mage_xp
+				add = scope:xp_increase
+			}
+		}
+		if = {
+			limit = { mage_level.compare_value > scope:old_level.compare_value }
+			send_interface_toast = {
+				title = mage_level_increase
+				left_icon = root
+				custom_description = {
+					text = change_mage_level
+					value = mage_level
+					trigger_event = { on_action = on_reset_mana_system }
+					set_variable = {
+						name = available_magic_perks
+						value = num_available_magic_perks
+					}
+				}
 			}
 		}
 	}
@@ -163,6 +102,12 @@ reset_immortal_years_since_lifetime_reset = {
 add_immortal_years_since_lifetime_reset = {
 	init_immortal_years_since_lifetime_reset = yes
 	change_variable = { name = immortal_years_since_lifetime_reset add = 1 }
+}
+
+earn_mage_xp_effect = {
+	custom_description_no_bullet = {
+		text = earn_mage_xp_effect
+	}
 }
 
 start_aura_effect = {

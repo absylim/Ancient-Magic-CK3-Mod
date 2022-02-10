@@ -6,21 +6,20 @@ types mana_hud_guis {
 		margin_left = 7
 		margin_right = 5
 
-		using = tooltip_ne
-
-		tooltipwidget = {
-			widget_mana_gen_breakdown_tooltip = {}
-		}
-
 		hbox = {
 			name = "mana"
 			layoutpolicy_vertical = expanding
-			datacontext = "[GetTrait('mage')]"
 
 			hbox = {
 				spacing = 0
 				margin_top = -11
-				visible = "[And( Not(IsObserver), GetPlayer.HasTrait(Trait.Self) )]"
+				visible = "[And( Not(IsObserver), GetScriptedGui('perk_select').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag('mage_perk')).End) )]"
+
+				using = tooltip_ne
+		
+				tooltipwidget = {
+					widget_mana_gen_breakdown_tooltip = {}
+				}
 
 				icon = {
 					name = "mana_icon"
@@ -55,7 +54,7 @@ types mana_hud_guis {
 			hbox = {
 				spacing = 6
 				margin_top = -11
-				visible = "[Or( IsObserver, Not(GetPlayer.HasTrait(Trait.Self)) )]"
+				visible = "[Or( IsObserver, Not(GetScriptedGui('perk_select').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag('mage_perk')).End)) )]"
 
 				icon = {
 					name = "inactive_icon"
@@ -72,7 +71,7 @@ types mana_hud_guis {
 					text_single = {
 						name = "mana_value"
 						layoutpolicy_horizontal = expanding
-						text = "0"
+						raw_text = "0"
 						max_width = 50
 						default_format = "#high"
 						using = Font_Size_Medium
@@ -81,7 +80,7 @@ types mana_hud_guis {
 					text_single = {
 						name = "mana_balance"
 						layoutpolicy_horizontal = expanding
-						text = "0"
+						raw_text = "0"
 						max_width = 50
 						default_format = "#low"
 					}

@@ -21,7 +21,7 @@ ancient_magic_reset_mana_system = {
 
 quarterly_playable_pulse = {
 	trigger = {
-		has_trait = mage
+		is_mage_trigger = yes
 	}
 
 	on_actions = {
@@ -55,28 +55,13 @@ death_stare_action = {
 random_yearly_everyone_pulse = {
 	on_actions = {
 		check_lifetime_flags_for_immortal
-		update_immortal_years_since_master_of_time_spell
-	}
-}
-
-update_immortal_years_since_master_of_time_spell= {
-	trigger = {
-		has_trait = immortal
-	}
-
-	effect = {
-		limit = {
-			has_variable_list = master_of_time_spell_targets
-			is_target_in_variable_list = { name = master_of_time_spell_targets target = prev }
-		}
-		add_immortal_years_since_master_of_time_spell = yes
 	}
 }
 
 check_lifetime_flags_for_immortal = {
 	trigger = {
 		is_immortal = yes
-		#is_ai = no # Because they aren't real people :(
+		is_ai = no # Because they aren't real people :(
 		NOT = { has_game_rule = none_immortal_lifetime_events_reset }
 		immortal_has_lifetime_flags = yes
 	}

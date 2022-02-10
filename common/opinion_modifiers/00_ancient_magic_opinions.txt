@@ -4,6 +4,7 @@
 	decaying = yes
 }
 
+
 witchcraft_allowed = {
 	opinion = 15
 }
@@ -20,42 +21,4 @@ necromancy_intolerant = {
 
 necromancy_allowed = {
 	opinion = 30
-}
-
-cursed_my_bloodline = {
-	opinion = -50
-	years = 50
-	decaying = yes
-}
-
-blessed_my_bloodline = {
-	opinion = 50
-	years = 50
-	decaying = yes
-}
-
-used_magic_on_me = { # If religion has witchcraft illegal
-	opinion = -20
-	years = 5
-	decaying = yes
-}
-
-cursed_me_spell = {
-	opinion = -20
-	years = 5
-	decaying = yes
-}
-
-blessed_me_spell = {
-	opinion = 20
-	years = 5
-	decaying = yes
-}
-
-cursed_me_spell_active = {
-	opinion = -20
-}
-
-blessed_me_spell_active = {
-	opinion = 20
 }

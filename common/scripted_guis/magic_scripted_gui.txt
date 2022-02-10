@@ -1,6 +1,6 @@
 ﻿can_use_magic_window = {
 	is_valid = {
-		has_trait = mage
+		is_mage_trigger = yes
 	}
 }
 
@@ -142,7 +142,7 @@ increase_times_repeated = {
 		AND = {
 			OR = {
 				NOT = { is_magic_aura_trigger = { SPELL = scope:spell } }
-				scope:potential_repeat_spell < mage_level
+				scope:potential_repeat_spell <= mage_level
 			}
 			scope:total_cost.compare_value < var:mana.compare_value
 		}

@@ -8,24 +8,24 @@ ancient_magic_aura_update_events.001 = {
 	}
 
 	immediate = {
-		update_aura_effect = { SPELL = glimpse_the_future_spell }
-		update_aura_effect = { SPELL = financial_times_spell }
-		update_aura_effect = { SPELL = celerity_spell }
-		update_aura_effect = { SPELL = mass_celerity_spell }
-		update_aura_effect = { SPELL = slowness_spell }
-		update_aura_effect = { SPELL = mass_slowness_spell }
-		update_aura_effect = { SPELL = temporal_manipulation_spell }
-		update_aura_effect = { SPELL = haste_spell }
-		update_aura_effect = { SPELL = flame_aura_spell }
-		update_aura_effect = { SPELL = flaming_weapons_spell }
-		update_aura_effect = { SPELL = living_earthworks_spell }
-		update_aura_effect = { SPELL = control_water_spell }
-		update_aura_effect = { SPELL = drought_spell }
-		update_aura_effect = { SPELL = elemental_warrior_spell }
-		update_aura_effect = { SPELL = aura_of_death_spell }
-		update_aura_effect = { SPELL = blight_spell }
-		update_aura_effect = { SPELL = beguiling_aura_spell }
-		update_aura_effect = { SPELL = enchanting_aura_spell }
-		update_aura_effect = { SPELL = glimpse_the_future_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = glimpse_the_future_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = financial_times_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = celerity_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = mass_celerity_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = slowness_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = mass_slowness_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = temporal_manipulation_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = haste_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = flame_aura_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = flaming_weapons_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = living_earthworks_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = control_water_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = drought_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = elemental_warrior_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = aura_of_death_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = blight_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = beguiling_aura_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = enchanting_aura_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = glimpse_the_future_spell }
 	}
 }

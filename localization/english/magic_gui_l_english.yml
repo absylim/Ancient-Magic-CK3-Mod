@@ -14,18 +14,21 @@
  SPELL_PARAMETERS: "Spell Properties"
 
  ## Spell Categories
+ None_category: "Basic"
  time_category: "Chronomancy"
  life_category: "Chiromancy"
- elemental_category: "Elomancy"
+ elomancy_category: "Elomancy"
  necromancy_category: "Necromancy"
  biomancy_category: "Biomancy"
- mind_magic_category: "Mensomancy"
+ mensomancy_category: "Mensomancy"
 
  ### Spells
  ## Spell Names
  # error catching
  dummy_spell_name: ""
 
+ # None
+ spark_spell_name: "Practice Spark"
  # Time
  glimpse_the_future_spell_name: "Glimpse the Future"
  financial_times_spell_name: "Financial Times"
@@ -40,7 +43,7 @@
  heal_spell_name: "Heal"
  greater_heal_spell_name: "Greater Heal"
  avatar_of_life_spell_name: "Avatar of Life"
- # Elemental
+ # Elomancy
  flame_aura_spell_name: "Flame Aura"
  flaming_weapons_spell_name: "Flaming Weapons"
  living_earthworks_spell_name: "Living Earthworks"
@@ -82,6 +85,9 @@
  dummy_spell_desc: ""
 
  #Time
+ spark_spell_desc: "This spell is the first spell a mage learns. By practicing channelling mana, the mage can gain spellcasting experience. The more skilled a mage is, the more experience they can gain from the same amount of mana."
+
+ #Time
  glimpse_the_future_spell_desc: "This spell allows the user brief insights into the future of their culture, allowing them to view new innovations and technologies. Gives a bonus to [cultural_fascination|E] research speed."
  financial_times_spell_desc: "A more directed application of future sight, this spell allows the user to see specific events, such as resource abundances or shortages, well in advance, allowing them to gain a market advantage. Gives a bonus to monthly [income|E]."
  celerity_spell_desc: "A relatively simple application of [chronomancy|E], this spell allows the user to increase the flow of time around themselves, giving them extraordinarily fast reaction times. Best used in short bursts, so as not to age oneself too quickly. Gives a bonus to [prowess|E]."
@@ -97,7 +103,7 @@
  greater_heal_spell_desc: "A more advanced application of [chiromancy|E], this spell uses mana directly to seal wounds, replace blood, destroy infections, etc., and so can be used to heal more dangerous illnesses. Effectively heals the target of any single common or dangerous affliction."
  avatar_of_life_spell_desc: "The most advanced application of [chiromancy|E], this spell uses pure magical power to replace organs and blood, annihilate infectious invaders, and even target diseases the body doesn't recognize as diseases. Effectively heals the target of any single affliction."
 
- # Elemental
+ # Elomancy
  flame_aura_spell_desc: "$lorem_ipsum$"
  flaming_weapons_spell_desc: "$lorem_ipsum$"
  living_earthworks_spell_desc: "$lorem_ipsum$"
@@ -125,7 +131,7 @@
  fertility_control_spell_desc: "$lorem_ipsum$"
  impregnate_spell_desc: "$lorem_ipsum$"
 
- # Mind Magic
+ # Mensomancy
  entrance_spell_desc: "$lorem_ipsum$"
  incite_lust_spell_desc: "$lorem_ipsum$"
  incite_obedience_spell_desc: "$lorem_ipsum$"

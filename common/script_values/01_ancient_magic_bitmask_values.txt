@@ -1,4 +1,7 @@
 ﻿## Bit accesses
+# None tree
+mage_perk_bit = { value = bit00 }
+
 # Time tree
 time_mage_perk_bit = { value = bit00 }
 glimpse_the_future_perk_bit = { value = bit01 }
@@ -21,7 +24,7 @@ greater_battlefield_life_mage_perk_bit = { value = bit06 }
 purity_of_body_perk_bit = { value = bit07 }
 avatar_of_life_perk_bit = { value = bit08 }
 
-# Elemental tree
+# Elomancy tree
 elemental_mage_perk_bit = { value = bit00 }
 flame_aura_perk_bit = { value = bit01 }
 flaming_weapons_perk_bit = { value = bit02 }
@@ -54,7 +57,7 @@ criple_trait_perk_bit = { value = bit06 }
 sculpter_of_flesh_perk_bit = { value = bit07 }
 architect_of_bloodlines_perk_bit = { value = bit08 }
 
-# Domination tree
+# Mensomancy tree
 domination_mage_perk_bit = { value = bit00 }
 entrance_perk_bit = { value = bit01 }
 incite_lust_perk_bit = { value = bit02 }
@@ -88,6 +91,9 @@ beguiling_aura_spell_aura_bit = { value = bit18 }
 enchanting_aura_spell_aura_bit = { value = bit19 }
 
 ## Bit flips
+# None tree
+mage_perk_bit_flip = { value = flip00 }
+
 # Time tree
 time_mage_perk_bit_flip = { value = flip00 }
 glimpse_the_future_perk_bit_flip = { value = flip01 }
@@ -110,7 +116,7 @@ greater_battlefield_life_mage_perk_bit_flip = { value = flip06 }
 purity_of_body_perk_bit_flip = { value = flip07 }
 avatar_of_life_perk_bit_flip = { value = flip08 }
 
-# Elemental tree
+# Elomancy tree
 elemental_mage_perk_bit_flip = { value = flip00 }
 flame_aura_perk_bit_flip = { value = flip01 }
 flaming_weapons_perk_bit_flip = { value = flip02 }
@@ -143,7 +149,7 @@ criple_trait_perk_bit_flip = { value = flip06 }
 sculpter_of_flesh_perk_bit_flip = { value = flip07 }
 architect_of_bloodlines_perk_bit_flip = { value = flip08 }
 
-# Domination tree
+# Mensomancy tree
 domination_mage_perk_bit_flip = { value = flip00 }
 entrance_perk_bit_flip = { value = flip01 }
 incite_lust_perk_bit_flip = { value = flip02 }
@@ -177,6 +183,9 @@ beguiling_aura_spell_aura_bit_flip = { value = flip18 }
 enchanting_aura_spell_aura_bit_flip = { value = flip19 }
 
 ## Bit sets
+# None tree
+mage_perk_bit_set = { value = set00 }
+
 # Time tree
 time_mage_perk_bit_set = { value = set00 }
 glimpse_the_future_perk_bit_set = { value = set01 }
@@ -199,7 +208,7 @@ greater_battlefield_life_mage_perk_bit_set = { value = set06 }
 purity_of_body_perk_bit_set = { value = set07 }
 avatar_of_life_perk_bit_set = { value = set08 }
 
-# Elemental tree
+# Elomancy tree
 elemental_mage_perk_bit_set = { value = set00 }
 flame_aura_perk_bit_set = { value = set01 }
 flaming_weapons_perk_bit_set = { value = set02 }
@@ -232,7 +241,7 @@ criple_trait_perk_bit_set = { value = set06 }
 sculpter_of_flesh_perk_bit_set = { value = set07 }
 architect_of_bloodlines_perk_bit_set = { value = set08 }
 
-# Domination tree
+# Mensomancy tree
 domination_mage_perk_bit_set = { value = set00 }
 entrance_perk_bit_set = { value = set01 }
 incite_lust_perk_bit_set = { value = set02 }
@@ -266,6 +275,9 @@ beguiling_aura_spell_aura_bit_set = { value = set18 }
 enchanting_aura_spell_aura_bit_set = { value = set19 }
 
 ## Bit unsets
+# None tree
+mage_perk_bit_unset = { value = unset00 }
+
 # Time tree
 time_mage_perk_bit_unset = { value = unset00 }
 glimpse_the_future_perk_bit_unset = { value = unset01 }
@@ -288,7 +300,7 @@ greater_battlefield_life_mage_perk_bit_unset = { value = unset06 }
 purity_of_body_perk_bit_unset = { value = unset07 }
 avatar_of_life_perk_bit_unset = { value = unset08 }
 
-# Elemental tree
+# Elomancy tree
 elemental_mage_perk_bit_unset = { value = unset00 }
 flame_aura_perk_bit_unset = { value = unset01 }
 flaming_weapons_perk_bit_unset = { value = unset02 }
@@ -321,7 +333,7 @@ criple_trait_perk_bit_unset = { value = unset06 }
 sculpter_of_flesh_perk_bit_unset = { value = unset07 }
 architect_of_bloodlines_perk_bit_unset = { value = unset08 }
 
-# Domination tree
+# Mensomancy tree
 domination_mage_perk_bit_unset = { value = unset00 }
 entrance_perk_bit_unset = { value = unset01 }
 incite_lust_perk_bit_unset = { value = unset02 }
@@ -357,6 +369,11 @@ enchanting_aura_spell_aura_bit_unset = { value = unset19 }
 ## Setter Helpers
 # You are able to use these directly, but it's much more efficient
 # if you recall var:<spell_school>_perk_mask instead!
+none_perk_mask_0_maker = {
+	value = 0
+	if = { limit = { has_perk = mage_perk } add = set.makebit00 }
+}
+
 time_perk_mask_0_maker = {
 	value = 0
 	if = { limit = { has_perk = time_mage_perk } add = set.makebit00 }
@@ -435,9 +452,21 @@ mensomancy_perk_mask_0_maker = {
 	if = { limit = { has_perk = master_of_puppets_perk } add = set.makebit08 }
 }
 
-num_time_perks = { value = var:time_perk_mask_0.num_set_bits }
-num_life_perks = { value = var:life_perk_mask_0.num_set_bits }
-num_elomancy_perks = { value = var:elomancy_perk_mask_0.num_set_bits }
-num_necromancy_perks = { value = var:necromancy_perk_mask_0.num_set_bits }
-num_biomancy_perks = { value = var:biomancy_perk_mask_0.num_set_bits }
-num_mensomancy_perks = { value = var:mensomancy_perk_mask_0.num_set_bits }
+none_num_perks = { value = var:none_perk_mask_0.num_set_bits }
+time_num_perks = { value = var:time_perk_mask_0.num_set_bits }
+life_num_perks = { value = var:life_perk_mask_0.num_set_bits }
+elomancy_num_perks = { value = var:elomancy_perk_mask_0.num_set_bits }
+necromancy_num_perks = { value = var:necromancy_perk_mask_0.num_set_bits }
+biomancy_num_perks = { value = var:biomancy_perk_mask_0.num_set_bits }
+mensomancy_num_perks = { value = var:mensomancy_perk_mask_0.num_set_bits }
+
+num_available_magic_perks = {
+	value = mage_level
+	subtract = none_num_perks
+	subtract = time_num_perks
+	subtract = life_num_perks
+	subtract = elomancy_num_perks
+	subtract = necromancy_num_perks
+	subtract = biomancy_num_perks
+	subtract = mensomancy_num_perks
+}

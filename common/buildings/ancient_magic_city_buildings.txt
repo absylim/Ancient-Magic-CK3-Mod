@@ -285,7 +285,7 @@ city_of_magic_01 = {
 			factor = 2
 			scope:holder = {
 				AND = {
-					has_trait = mage
+					is_mage_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
@@ -297,7 +297,7 @@ city_of_magic_01 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					has_trait = mage
+					is_mage_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -309,7 +309,7 @@ city_of_magic_01 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					NOT = { has_trait = mage }
+					NOT = { is_mage_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_shunned
 					}
@@ -320,7 +320,7 @@ city_of_magic_01 = {
 			factor = 0
 			scope:holder = {
 				AND = {
-					NOT = { has_trait = mage }
+					NOT = { is_mage_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -614,7 +614,7 @@ city_of_magic_02 = {
 			factor = 2
 			scope:holder = {
 				AND = {
-					has_trait = mage
+					is_mage_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
@@ -626,7 +626,7 @@ city_of_magic_02 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					has_trait = mage
+					is_mage_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -638,7 +638,7 @@ city_of_magic_02 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					NOT = { has_trait = mage }
+					NOT = { is_mage_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_shunned
 					}
@@ -649,7 +649,7 @@ city_of_magic_02 = {
 			factor = 0
 			scope:holder = {
 				AND = {
-					NOT = { has_trait = mage }
+					NOT = { is_mage_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -899,7 +899,7 @@ city_of_magic_03 = {
 			factor = 2
 			scope:holder = {
 				AND = {
-					has_trait = mage
+					is_mage_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
@@ -911,7 +911,7 @@ city_of_magic_03 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					has_trait = mage
+					is_mage_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -923,7 +923,7 @@ city_of_magic_03 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					NOT = { has_trait = mage }
+					NOT = { is_mage_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_shunned
 					}
@@ -934,7 +934,7 @@ city_of_magic_03 = {
 			factor = 0
 			scope:holder = {
 				AND = {
-					NOT = { has_trait = mage }
+					NOT = { is_mage_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -1183,7 +1183,7 @@ city_of_magic_04 = {
 			factor = 2
 			scope:holder = {
 				AND = {
-					has_trait = mage
+					is_mage_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
@@ -1195,7 +1195,7 @@ city_of_magic_04 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					has_trait = mage
+					is_mage_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -1207,7 +1207,7 @@ city_of_magic_04 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					NOT = { has_trait = mage }
+					NOT = { is_mage_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_shunned
 					}
@@ -1218,7 +1218,7 @@ city_of_magic_04 = {
 			factor = 0
 			scope:holder = {
 				AND = {
-					NOT = { has_trait = mage }
+					NOT = { is_mage_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -1292,10 +1292,7 @@ guild_halls_01 = {
 		modifier = {
 			add = 500
 			scope:holder = {
-				OR = {
-					has_government = magocracy_government
-					has_government = republic_government
-				}
+				has_government = republic_government
 			}
 		}
 	}
@@ -1333,10 +1330,7 @@ guild_halls_02 = {
 		modifier = {
 			add = 9
 			scope:holder = {
-				OR = {
-					has_government = magocracy_government
-					has_government = republic_government
-				}
+				has_government = republic_government
 			}
 		}
 	}
@@ -1374,10 +1368,7 @@ guild_halls_03 = {
 		modifier = {
 			add = 8
 			scope:holder = {
-				OR = {
-					has_government = magocracy_government
-					has_government = republic_government
-				}
+				has_government = republic_government
 			}
 		}
 	}
@@ -1415,10 +1406,7 @@ guild_halls_04 = {
 		modifier = {
 			add = 7
 			scope:holder = {
-				OR = {
-					has_government = magocracy_government
-					has_government = republic_government
-				}
+				has_government = republic_government
 			}
 		}
 	}
@@ -1456,10 +1444,7 @@ guild_halls_05 = {
 		modifier = {
 			add = 6
 			scope:holder = {
-				OR = {
-					has_government = magocracy_government
-					has_government = republic_government
-				}
+				has_government = republic_government
 			}
 		}
 	}
@@ -1497,10 +1482,7 @@ guild_halls_06 = {
 		modifier = {
 			add = 5
 			scope:holder = {
-				OR = {
-					has_government = magocracy_government
-					has_government = republic_government
-				}
+				has_government = republic_government
 			}
 		}
 	}
@@ -1538,10 +1520,7 @@ guild_halls_07 = {
 		modifier = {
 			add = 4
 			scope:holder = {
-				OR = {
-					has_government = magocracy_government
-					has_government = republic_government
-				}
+				has_government = republic_government
 			}
 		}
 	}
@@ -1578,10 +1557,7 @@ guild_halls_08 = {
 		modifier = {
 			add = 3
 			scope:holder = {
-				OR = {
-					has_government = magocracy_government
-					has_government = republic_government
-				}
+				has_government = republic_government
 			}
 		}
 	}

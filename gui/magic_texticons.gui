@@ -99,6 +99,25 @@ texticon = {
 }
 
 texticon = {
+    icon = xp_icon
+    iconsize = {
+		texture = "gfx/magic/maintab_spellbook.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }
+}
+
+texticon = {
+	icon = icon_None_category
+	iconsize = {
+		texture = "gfx/magic/maintab_spellbook.dds"
+		size = { 80 80 }
+		fontsize = 16
+	}
+}
+
+texticon = {
 	icon = icon_time_category
 	iconsize = {
 		texture = "gfx/magic/time_magic.dds"

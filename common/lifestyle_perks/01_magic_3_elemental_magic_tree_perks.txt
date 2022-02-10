@@ -1,8 +1,10 @@
 ﻿elemental_mage_perk = {
-	lifestyle = arcane_lifestyle
-	tree = elemental_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_elomancy
 	position = { 2 0 }
 	icon = node_diplomacy
+
+	parent = mage_perk
 
 	auto_selection_weight = {
 		value = 11
@@ -48,15 +50,15 @@
 	effect = {
 		gain_mana_gen_perk = { VALUE = elemental_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = elemental_mage_perk_max_mana }
-		make_mage_effect = yes
 		mod_bit = { MASK = elomancy_perk_mask_0 BIT = elemental_mage_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 flame_aura_perk = {
-	lifestyle = arcane_lifestyle
-	tree = elemental_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_elomancy
 	position = { 0 1.25 }
 	icon = node_diplomacy
 
@@ -67,13 +69,14 @@ flame_aura_perk = {
 		gain_mana_gen_perk = { VALUE = flame_aura_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = flame_aura_perk_max_mana }
 		mod_bit = { MASK = elomancy_perk_mask_0 BIT = flame_aura_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 flaming_weapons_perk = {
-	lifestyle = arcane_lifestyle
-	tree = elemental_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_elomancy
 	position = { 0 2.5 }
 	icon = node_diplomacy
 
@@ -84,13 +87,14 @@ flaming_weapons_perk = {
 		gain_mana_gen_perk = { VALUE = flaming_weapons_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = flaming_weapons_perk_max_mana }
 		mod_bit = { MASK = elomancy_perk_mask_0 BIT = flaming_weapons_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 living_earthworks_perk = {
-	lifestyle = arcane_lifestyle
-	tree = elemental_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_elomancy
 	position = { 2 1.25 }
 	icon = node_diplomacy
 
@@ -101,13 +105,14 @@ living_earthworks_perk = {
 		gain_mana_gen_perk = { VALUE = living_earthworks_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = living_earthworks_perk_max_mana }
 		mod_bit = { MASK = elomancy_perk_mask_0 BIT = living_earthworks_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 golem_creation_perk = {
-	lifestyle = arcane_lifestyle
-	tree = elemental_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_elomancy
 	position = { 2 2.5 }
 	icon = node_diplomacy
 
@@ -118,13 +123,14 @@ golem_creation_perk = {
 		gain_mana_gen_perk = { VALUE = golem_creation_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = golem_creation_perk_max_mana }
 		mod_bit = { MASK = elomancy_perk_mask_0 BIT = golem_creation_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 control_water_perk = {
-	lifestyle = arcane_lifestyle
-	tree = elemental_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_elomancy
 	position = { 4 1.25 }
 	icon = node_diplomacy
 
@@ -139,13 +145,14 @@ control_water_perk = {
 		gain_mana_gen_perk = { VALUE = control_water_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = control_water_perk_max_mana }
 		mod_bit = { MASK = elomancy_perk_mask_0 BIT = control_water_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 drought_perk = {
-	lifestyle = arcane_lifestyle
-	tree = elemental_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_elomancy
 	position = { 4 2.5 }
 	icon = node_diplomacy
 
@@ -156,13 +163,14 @@ drought_perk = {
 		gain_mana_gen_perk = { VALUE = drought_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = drought_perk_max_mana }
 		mod_bit = { MASK = elomancy_perk_mask_0 BIT = drought_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 elemental_warrior_perk = {
-	lifestyle = arcane_lifestyle
-	tree = elemental_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_elomancy
 	position = { 2 3.75 }
 	icon = node_diplomacy
 
@@ -175,13 +183,14 @@ elemental_warrior_perk = {
 		gain_mana_gen_perk = { VALUE = elemental_warrior_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = elemental_warrior_perk_max_mana }
 		mod_bit = { MASK = elomancy_perk_mask_0 BIT = elemental_warrior_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 lord_of_the_elements_perk = {
-	lifestyle = arcane_lifestyle
-	tree = elemental_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_elomancy
 	position = { 2 5 }
 	icon = lord_of_the_elements
 
@@ -193,6 +202,7 @@ lord_of_the_elements_perk = {
 		gain_max_mana_perk = { VALUE = lord_of_the_elements_perk_max_mana }
 		add_trait_force_tooltip = lord_of_the_elements
 		mod_bit = { MASK = elomancy_perk_mask_0 BIT = lord_of_the_elements_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }

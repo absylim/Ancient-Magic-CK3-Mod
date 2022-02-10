@@ -1,0 +1,37 @@
+﻿glimpse_the_future_modifier = {}
+
+finacial_times_modifier = {}
+
+financial_times_modifier = {}
+
+celerity_modifier = {}
+
+mass_celerity_modifier = {}
+
+slowness_modifier = {}
+
+mass_slowness_modifier = {}
+
+temporal_manipulation_modifier = {}
+
+haste_modifier = {}
+
+flame_aura_modifier = {}
+
+flaming_weapons_modifier = {}
+
+living_earthworks_modifier = {}
+
+control_water_modifier = {}
+
+drought_modifier = {}
+
+elemental_warrior_modifier = {}
+
+aura_of_death_modifier = {}
+
+blight_modifier = {}
+
+beguiling_aura_modifier = {}
+
+enchanting_aura_modifier = {}

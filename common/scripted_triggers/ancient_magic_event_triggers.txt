@@ -73,23 +73,3 @@ has_magical_potential = {
 		has_trait = magic_potential_3
 	}
 }
-
-		#trigger_if = {
-		#	limit = {
-		#		NOT = { $MANA_COST$ = 0 }
-		#	}
-		#	var:mana >= $MANA_COST$
-		#}
-		#trigger_if = {
-		#	limit = {
-		#		NOT = { $DRAIN_COST$ = 0 }
-		#	}
-		#	var:mana_gen >= $DRAIN_COST$
-		#}
-		#trigger_if = {
-		#	limit = {
-		#		NOT = { $PERK$ = 0 }
-		#	}
-		#	has_perk = $PERK$
-		#}
-#}

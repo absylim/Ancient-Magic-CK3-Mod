@@ -3,6 +3,7 @@
 # It's baked into the UI now, though, so I don't wanna change it at this point
 
 # Perk _gen_costs
+mage_perk_gen_cost = 0
 time_mage_perk_gen_cost = 2
 glimpse_the_future_perk_gen_cost = 2
 financial_times_perk_gen_cost = 2
@@ -69,6 +70,7 @@ mana_devouring_1_gen_cost = -150
 mana_devouring_2_gen_cost = -150
 
 # Perk _max_manas
+mage_perk_max_mana = 0
 time_mage_perk_max_mana = 30
 glimpse_the_future_perk_max_mana = 30
 financial_times_perk_max_mana = 30
@@ -328,6 +330,9 @@ spell_caster_mage_level = {
 ############################################################################################
 ancient_magic_mana_gen_perks = {
 	value = 0
+	# None tree
+	add = { value = var:none_perk_mask_0.mage_perk_bit multiply = mage_perk_gen_cost }
+
 	# Time tree
 	add = { value = var:time_perk_mask_0.time_mage_perk_bit multiply = time_mage_perk_gen_cost }
 	add = { value = var:time_perk_mask_0.glimpse_the_future_perk_bit multiply = glimpse_the_future_perk_gen_cost }
@@ -397,6 +402,9 @@ ancient_magic_mana_gen_perks = {
 
 ancient_magic_max_mana_perks = {
 	value = 0
+	# None tree
+	add = { value = var:none_perk_mask_0.mage_perk_bit multiply = mage_perk_max_mana }
+
 	# Time tree
 	add = { value = var:time_perk_mask_0.time_mage_perk_bit multiply = time_mage_perk_max_mana }
 	add = { value = var:time_perk_mask_0.glimpse_the_future_perk_bit multiply = glimpse_the_future_perk_max_mana }
@@ -825,7 +833,7 @@ tri = {
 	ordered_province = {
 		limit = {
 			has_variable = tri_sum
-			var:tri_sum.compare_value < prev
+			var:tri_sum.compare_value < prev.compare_value
 		}
 		order_by = var:tri_num
 		position = 0

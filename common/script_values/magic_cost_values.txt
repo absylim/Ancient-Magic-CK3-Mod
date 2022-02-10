@@ -3,6 +3,12 @@ dummy_spell_cost = { value = 0 }
 
 ## Spell mana costs
 #Time
+spark_spell_cost = {
+	value = 10
+	multiply = mage_level
+}
+
+#Time
 glimpse_the_future_spell_cost = { value = 100 }
 financial_times_spell_cost = { value = 100 }
 celerity_spell_cost = { value = 100 }
@@ -309,27 +315,15 @@ haste_spell_gen_cost = {
 	multiply = haste_spell_gen_cost_individual
 }
 
-#Halt Aging (Immortality spell)
 master_of_time_spell_gen_cost_individual = { value = -30 }
-master_of_time_spell_gen_cost_years_multiplier = { value = 5 }
-master_of_time_spell_gen_cost_multiply_every_x_years = { value = 5 }
 master_of_time_spell_gen_cost = {
 	value = 0
 	every_in_list = {
 		variable = master_of_time_spell_targets
 		limit = { exists = this has_trait = immortal }
-		add = {
-			value = 1
-			
-			multiply = master_of_time_spell_gen_cost_individual
-			
-			add = { #Per every 'x' years of this spell active, increase the cost by
-				value = var:immortal_years_since_master_of_time_spell
-				divide = master_of_time_spell_gen_cost_multiply_every_n_years
-				multiply = master_of_time_spell_gen_cost_years_multiplier
-			}
-		}
+		add = 1
 	}
+	multiply = master_of_time_spell_gen_cost_individual
 }
 
 # Elomancy

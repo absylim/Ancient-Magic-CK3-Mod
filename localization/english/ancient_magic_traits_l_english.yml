@@ -26,8 +26,10 @@
  trait_undead_liche: "Líché"
  trait_undead_liche_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is an undead mage. While the spark of a living being's spirit is normally lost during the transition from life to undeath, due to [ROOT.GetCharacter.GetHerHis] innate magical potential, and the exquisite nature of the spell used to create [ROOT.GetCharacter.GetHerHim], [ROOT.GetCharacter.GetSheHe] has effectively become immortal, and will never know pain, hunger, or disease again."
 
-#Diseases
+ #Diseases
  trait_mana_devouring_1: "Mana Devouring"
- trait_mana_devouring_1_desc: "This character has contracted a disease which mostly afflicts those with magic potential. It causes continuous [mana_drain|E]."
+ trait_mana_devouring_1_desc: "[ROOT.Char.GetNameNoTooltip] has contracted a disease which mostly afflicts those with magic potential. It causes continuous [mana_drain|E]."
+ trait_mana_devouring_1_character_desc: "This character has contracted a disease which mostly afflicts those with magic potential. It causes continuous [mana_drain|E]."
  trait_mana_devouring_2: "Body Devouring"
- trait_mana_devouring_2_desc: "This character has an advanced mana devouring disease. Because [ROOT.Char.GetSheHe] no longer has enough [mana|El] to manage the illness, it has begun to consume [ROOT.Char.GetHerHis] body."
+ trait_mana_devouring_2_desc: "[ROOT.Char.GetNameNoTooltip] has an advanced mana devouring disease. Because [ROOT.Char.GetSheHe] no longer has enough [mana|El] to manage the illness, it has begun to consume [ROOT.Char.GetHerHis] body."
+ trait_mana_devouring_2_character_desc: "This character has an advanced mana devouring disease. Because they no longer have enough [mana|El] to manage the illness, it has begun to consume their body."

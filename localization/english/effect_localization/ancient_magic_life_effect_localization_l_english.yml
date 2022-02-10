@@ -1,8 +1,8 @@
 ﻿l_english:
  # Perk effects
- GLOBAL_UNLOCK_HEAL_PERK_EFFECT: "Unlocks [heal_spell|E]"
- FIRST_UNLOCK_HEAL_PERK_EFFECT: "Allows you to cast [heal_spell|E]"
- THIRD_UNLOCK_HEAL_PERK_EFFECT: "Allows #V [CHARACTER.GetTitledFirstName]#! to cast [heal_spell|E]"
+ GLOBAL_UNLOCK_HEAL_SPELL: "Unlocks [heal_spell|E]"
+ FIRST_UNLOCK_HEAL_SPELL: "Allows you to cast [heal_spell|E]"
+ THIRD_UNLOCK_HEAL_SPELL: "Allows #V [CHARACTER.GetTitledFirstName]#! to cast [heal_spell|E]"
  GLOBAL_UNLOCK_GREATER_HEAL_SPELL: "Unlocks [greater_heal_spell|E]"
  FIRST_UNLOCK_GREATER_HEAL_SPELL: "Allows you to cast [greater_heal_spell|E]"
  THIRD_UNLOCK_GREATER_HEAL_SPELL: "Allows #V [CHARACTER.GetTitledFirstName]#! to cast [greater_heal_spell|E]"

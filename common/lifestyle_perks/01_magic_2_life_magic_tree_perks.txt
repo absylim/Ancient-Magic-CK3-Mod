@@ -1,8 +1,10 @@
 ﻿life_mage_perk = {
-	lifestyle = arcane_lifestyle
-	tree = life_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_life
 	position = { 2 0 }
 	icon = node_diplomacy
+
+	parent = mage_perk
 
 	auto_selection_weight = {
 		value = 11
@@ -48,15 +50,15 @@
 	effect = {
 		gain_mana_gen_perk = { VALUE = life_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = life_mage_perk_max_mana }
-		make_mage_effect = yes
 		mod_bit = { MASK = life_perk_mask_0 BIT = life_mage_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 inward_reflection_perk = {
-	lifestyle = arcane_lifestyle
-	tree = life_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_life
 	position = { 0 1.25 }
 	icon = node_diplomacy
 
@@ -71,13 +73,14 @@ inward_reflection_perk = {
 		gain_mana_gen_perk = { VALUE = inward_reflection_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = inward_reflection_perk_max_mana }
 		mod_bit = { MASK = life_perk_mask_0 BIT = inward_reflection_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 inward_perfection_perk = {
-	lifestyle = arcane_lifestyle
-	tree = life_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_life
 	position = { 0 2.5 }
 	icon = node_diplomacy
 
@@ -87,6 +90,7 @@ inward_perfection_perk = {
 		gain_mana_gen_perk = { VALUE = inward_perfection_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = inward_perfection_perk_max_mana }
 		mod_bit = { MASK = life_perk_mask_0 BIT = inward_perfection_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 
@@ -98,8 +102,8 @@ inward_perfection_perk = {
 }
 
 heal_perk = {
-	lifestyle = arcane_lifestyle
-	tree = life_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_life
 	position = { 2 1.25 }
 	icon = node_diplomacy
 
@@ -110,13 +114,14 @@ heal_perk = {
 		gain_mana_gen_perk = { VALUE = heal_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = heal_perk_max_mana }
 		mod_bit = { MASK = life_perk_mask_0 BIT = heal_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 greater_heal_perk = {
-	lifestyle = arcane_lifestyle
-	tree = life_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_life
 	position = { 2 2.5 }
 	icon = node_diplomacy
 
@@ -127,13 +132,14 @@ greater_heal_perk = {
 		gain_mana_gen_perk = { VALUE = greater_heal_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = greater_heal_perk_max_mana }
 		mod_bit = { MASK = life_perk_mask_0 BIT = greater_heal_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 battlefield_life_mage_perk = {
-	lifestyle = arcane_lifestyle
-	tree = life_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_life
 	position = { 4 1.25 }
 	icon = node_diplomacy
 
@@ -147,13 +153,14 @@ battlefield_life_mage_perk = {
 		gain_mana_gen_perk = { VALUE = battlefield_life_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = battlefield_life_mage_perk_max_mana }
 		mod_bit = { MASK = life_perk_mask_0 BIT = battlefield_life_mage_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 greater_battlefield_life_mage_perk = {
-	lifestyle = arcane_lifestyle
-	tree = life_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_life
 	position = { 4 2.5 }
 	icon = node_diplomacy
 
@@ -167,13 +174,14 @@ greater_battlefield_life_mage_perk = {
 		gain_mana_gen_perk = { VALUE = greater_battlefield_life_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = greater_battlefield_life_mage_perk_max_mana }
 		mod_bit = { MASK = life_perk_mask_0 BIT = greater_battlefield_life_mage_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 purity_of_body_perk = {
-	lifestyle = arcane_lifestyle
-	tree = life_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_life
 	position = { 2 3.75 }
 	icon = node_diplomacy
 
@@ -190,13 +198,14 @@ purity_of_body_perk = {
 		gain_max_mana_perk = { VALUE = purity_of_body_perk_max_mana }
 		immune_to_disease_effect = yes
 		mod_bit = { MASK = life_perk_mask_0 BIT = purity_of_body_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 avatar_of_life_perk = {
-	lifestyle = arcane_lifestyle
-	tree = life_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_life
 	position = { 2 5 }
 	icon = avatar_of_life
 
@@ -208,6 +217,7 @@ avatar_of_life_perk = {
 		gain_max_mana_perk = { VALUE = avatar_of_life_perk_max_mana }
 		add_trait_force_tooltip = avatar_of_life
 		mod_bit = { MASK = life_perk_mask_0 BIT = avatar_of_life_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }

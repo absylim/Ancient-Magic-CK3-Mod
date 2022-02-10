@@ -1,5 +1,0 @@
-﻿is_magus = {
-	OR = {
-		has_trait = mage
-	}
-}

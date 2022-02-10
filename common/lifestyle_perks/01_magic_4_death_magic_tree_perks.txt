@@ -1,8 +1,10 @@
 ﻿death_mage_perk = {
-	lifestyle = arcane_lifestyle
-	tree = death_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_necromancy
 	position = { 2 0 }
 	icon = node_diplomacy
+
+	parent = mage_perk
 
 	auto_selection_weight = {
 		value = 11
@@ -66,15 +68,15 @@
 	effect = {
 		gain_mana_gen_perk = { VALUE = death_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = death_mage_perk_max_mana }
-		make_mage_effect = yes
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = death_mage_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 inflict_illness_perk = {
-	lifestyle = arcane_lifestyle
-	tree = death_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_necromancy
 	position = { 0 1.25 }
 	icon = node_diplomacy
 
@@ -85,13 +87,14 @@ inflict_illness_perk = {
 		gain_mana_gen_perk = { VALUE = inflict_illness_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = inflict_illness_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = inflict_illness_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 plague_lord_perk = {
-	lifestyle = arcane_lifestyle
-	tree = death_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_necromancy
 	position = { 0 2.5 }
 	icon = node_diplomacy
 
@@ -102,13 +105,14 @@ plague_lord_perk = {
 		gain_mana_gen_perk = { VALUE = plague_lord_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = plague_lord_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = plague_lord_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 aura_of_death_perk = {
-	lifestyle = arcane_lifestyle
-	tree = death_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_necromancy
 	position = { 2 1.25 }
 	icon = node_diplomacy
 
@@ -119,13 +123,14 @@ aura_of_death_perk = {
 		gain_mana_gen_perk = { VALUE = aura_of_death_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = aura_of_death_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = aura_of_death_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 necromancy_perk = {
-	lifestyle = arcane_lifestyle
-	tree = death_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_necromancy
 	position = { 2 2.5 }
 	icon = node_diplomacy
 
@@ -136,13 +141,14 @@ necromancy_perk = {
 		gain_mana_gen_perk = { VALUE = necromancy_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = necromancy_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = necromancy_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 drain_life_perk = {
-	lifestyle = arcane_lifestyle
-	tree = death_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_necromancy
 	position = { 4 1.25 }
 	icon = node_diplomacy
 
@@ -153,13 +159,14 @@ drain_life_perk = {
 		gain_mana_gen_perk = { VALUE = drain_life_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = drain_life_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = drain_life_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 death_stare_perk = {
-	lifestyle = arcane_lifestyle
-	tree = death_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_necromancy
 	position = { 4 2.5 }
 	icon = node_diplomacy
 
@@ -170,13 +177,14 @@ death_stare_perk = {
 		gain_mana_gen_perk = { VALUE = death_stare_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = death_stare_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = death_stare_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 blight_perk = {
-	lifestyle = arcane_lifestyle
-	tree = death_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_necromancy
 	position = { 2 3.75 }
 	icon = node_diplomacy
 
@@ -189,13 +197,14 @@ blight_perk = {
 		gain_mana_gen_perk = { VALUE = blight_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = blight_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = blight_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 deacon_of_death_perk = {
-	lifestyle = arcane_lifestyle
-	tree = death_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_necromancy
 	position = { 2 5 }
 	icon = deacon_of_death
 
@@ -207,6 +216,7 @@ deacon_of_death_perk = {
 		gain_max_mana_perk = { VALUE = deacon_of_death_perk_max_mana }
 		add_trait_force_tooltip = deacon_of_death
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = deacon_of_death_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }

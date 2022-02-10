@@ -1091,7 +1091,7 @@ am_religious_special.2010 = { # Failure
 
 	immediate = {
 		add_character_modifier = {
-			modifier = mm_failed_convocation_modifier
+			modifier = am_failed_convocation_modifier
 			years = 20
 		}
 		scope:chaplain = {

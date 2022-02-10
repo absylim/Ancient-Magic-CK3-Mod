@@ -66,7 +66,7 @@ reset_mana_system_decision = {
 		hidden_effect = {
 			every_living_character = {
 				if = {
-					limit = { has_trait = mage }
+					limit = { is_mage_trigger = yes }
 					if = {
 						limit = { NOT = { has_variable = mage_xp } }
 						set_variable = {
@@ -87,6 +87,10 @@ reset_mana_system_decision = {
 					set_variable = {
 						name = aura_mask_0
 						value = 0
+					}
+					set_variable = {
+						name = none_perk_mask_0
+						value = none_perk_mask_0_maker
 					}
 					set_variable = {
 						name = time_perk_mask_0
@@ -122,25 +126,25 @@ reset_mana_system_decision = {
 					remove_character_flag = ancient_magic_arcana_focus_mana_added
 					remove_character_flag = arcane_legacy_2_mana_added
 					remove_character_flag = arcane_legacy_3_mana_added
-					remove_variable_list = glimpse_the_future_spell_targets
-					remove_variable_list = financial_times_spell_targets
-					remove_variable_list = celerity_spell_targets
-					remove_variable_list = mass_celerity_spell_targets
-					remove_variable_list = slowness_spell_targets
-					remove_variable_list = mass_slowness_spell_targets
-					remove_variable_list = temporal_manipulation_spell_targets
-					remove_variable_list = haste_spell_targets
-					remove_variable_list = master_of_time_spell_targets
-					remove_variable_list = flame_aura_spell_targets
-					remove_variable_list = flaming_weapons_spell_targets
-					remove_variable_list = living_earthworks_spell_targets
-					remove_variable_list = control_water_spell_targets
-					remove_variable_list = drought_spell_targets
-					remove_variable_list = elemental_warrior_spell_targets
-					remove_variable_list = aura_of_death_spell_targets
-					remove_variable_list = blight_spell_targets
-					remove_variable_list = beguiling_aura_spell_targets
-					remove_variable_list = enchanting_aura_spell_targets
+					clear_variable_list = glimpse_the_future_spell_targets
+					clear_variable_list = financial_times_spell_targets
+					clear_variable_list = celerity_spell_targets
+					clear_variable_list = mass_celerity_spell_targets
+					clear_variable_list = slowness_spell_targets
+					clear_variable_list = mass_slowness_spell_targets
+					clear_variable_list = temporal_manipulation_spell_targets
+					clear_variable_list = haste_spell_targets
+					clear_variable_list = master_of_time_spell_targets
+					clear_variable_list = flame_aura_spell_targets
+					clear_variable_list = flaming_weapons_spell_targets
+					clear_variable_list = living_earthworks_spell_targets
+					clear_variable_list = control_water_spell_targets
+					clear_variable_list = drought_spell_targets
+					clear_variable_list = elemental_warrior_spell_targets
+					clear_variable_list = aura_of_death_spell_targets
+					clear_variable_list = blight_spell_targets
+					clear_variable_list = beguiling_aura_spell_targets
+					clear_variable_list = enchanting_aura_spell_targets
 					if = {
 						limit = { has_character_modifier = glimpse_the_future_spell_modifier }
 						remove_all_character_modifier_instances = glimpse_the_future_spell_modifier
