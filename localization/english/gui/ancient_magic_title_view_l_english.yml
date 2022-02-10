@@ -1,3 +1,0 @@
-﻿l_english:
- GRANT_TO_LOCAL_MAGE_HEADER:0 "Grant to Mage"
- GRANT_TO_LOCAL_MAGE_BUTTON_HOLDING_VIEW_TOOLTIP:0 "#T $GRANT_TO_LOCAL_MAGE_HEADER$#!\nGrant this [barony|E] to a random notable member of the mage community"

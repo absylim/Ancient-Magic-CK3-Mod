@@ -8,16 +8,9 @@ widget = {
 	visible = "[IsDefaultGUIMode]"
 	layer = bottom
 	magic_window_view = {}
+	magic_advancement_view = {}
 	trait_initializer = {}
-
 	using = Animation_ShowHide_Standard
-	
-	##Used for magocracy council window
-	#state = {
-	#	name = am_magocracy
-	#	trigger_on_create = yes
-	#	on_start = "[ExecuteConsoleCommand('gui.createwidget gui/custom_gui/window_magocracy_council.gui magocracy_council_window')]"
-	#}
 
 	flowcontainer = {
 		name = "observer_status"
@@ -85,7 +78,7 @@ widget = {
 
 widget = {
 	name = "ingame_topbar"
-	visible = "[InGameTopbar.ShouldBeVisible]"
+	visible = "[And( InGameTopbar.ShouldBeVisible, Not( GetScriptedGui('is_magic_advancement_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End) ) )]"
 	size = { 100% 100% }
 	layer = hud_layer
 
@@ -93,7 +86,7 @@ widget = {
 	notifications_alerts = {
 		visible = "[Not( IsPauseMenuShown )]"
 		parentanchor = top|right
-		position = { -720 0 }
+		position = { -770 0 }
 		spacing = 10
 
 		using = Animation_ShowHide_Quick
@@ -239,7 +232,7 @@ widget = {
 					translate_uv = { -0.2 -0.79 }
 					alpha = 0
 				}
-				
+
 				modify_texture = {
 					name = "glow_magic"
 					texture = "gfx/interface/skinned/hud_maintab_bg_glow.dds"
@@ -247,7 +240,7 @@ widget = {
 					translate_uv = { -0.15 -0.68 }
 					alpha = 0
 				}
-				
+
 				# My Realm
 				state = {
 					name = "hud_tab_glow_my_realm_enter"
@@ -502,38 +495,6 @@ widget = {
 						on_start = "[PdxGuiInterruptThenTriggerAllAnimations('hud_tab_glow_council_enter','hud_tab_glow_council_leave')]"
 					}
 				}
-				
-				
-				######################################
-				########### Magocracy button ##########
-				######################################
-
-				#widget_hud_main_tab = {
-				#	name = "tab_magocracy"
-				#	tooltip = "REPUBLIC_BUTTON"
-				#	datacontext = "[GetScriptedGui( 'has_magocracy_government' )]"
-				#	visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-				#
-				#	blockoverride "maintab_button"
-				#	{
-				#		texture = "gfx/interface/skinned/hud_maintab/maintab_council.dds"
-				#
-				#		onclick = "[GetScriptedGui('toggle_magocracy_council_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('actor',GetPlayer.MakeScope).AddScope('recipient',GetPlayer.MakeScope).End)]"
-				#		shortcut = "magocracy_council_window"
-				#		down = "[GetScriptedGui('is_magocracy_council_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-				#	}
-				#
-				#	state = {
-				#		name = _mouse_hierarchy_enter
-				#		on_start = "[PdxGuiInterruptThenTriggerAllAnimations('hud_tab_glow_council_leave','hud_tab_glow_council_enter')]"
-				#	}
-				#
-				#	state = {
-				#		name = _mouse_hierarchy_leave
-				#		on_start = "[PdxGuiInterruptThenTriggerAllAnimations('hud_tab_glow_council_enter','hud_tab_glow_council_leave')]"
-				#	}
-				#}
-			
 			}
 
 			widget = {
@@ -1475,7 +1436,7 @@ icon = {
 ### Bottom Left
 widget = {
 	name = "bottom_bar"
-	visible = "[And( Not( IsPauseMenuShown ), IsDefaultGUIMode )]"
+	visible = "[And( And( Not( IsPauseMenuShown ), IsDefaultGUIMode ), Not( GetScriptedGui('is_magic_advancement_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End) ) )]"
 	size = { 100% 100% }
 	layer = bottom
 	datacontext = "[GetPlayer]"
@@ -1485,7 +1446,7 @@ widget = {
 	icon = {
 		visible = "[And(GetPlayer.IsValid, Not(GetVariableSystem.Exists( 'hide_bottom_left_HUD')))]"
 		parentanchor = bottom|left
-		size = { 462 64 }
+		size = { 622 64 }
 		texture = "gfx/interface/skinned/hud_bg_character_bar.dds"
 		spritetype = corneredtiled
 		spriteborder_left = 70
@@ -2286,14 +2247,36 @@ widget = {
 					}
 				}
 			}
-			
+
 			button_hud_character_bar = {
-				name = "tab_magic"
+				name = "spellbook_button"
 				tooltip = "MAGIC_BUTTON"
 
 				enabled = "[GetScriptedGui('can_use_magic_window').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 				down = "[GetScriptedGui('is_magic_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 				onclick = "[GetScriptedGui('toggle_magic_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('actor',GetPlayer.MakeScope).AddScope('recipient',GetPlayer.MakeScope).End)]"
+
+				highlight_icon = {
+					parentanchor = center
+					position = { 0 5}
+					size = { 33 40 }
+					texture = "gfx/magic/maintab_spellbook.dds"
+
+					glow = {
+						color = { 0 0 0 0.8 }
+						glow_radius = 3
+						using = Glow_Standard
+					}
+				}
+			}
+
+			button_hud_character_bar = {
+				name = "magic_advancement_button"
+				tooltip = "MAGIC_ADVANCEMENT_BUTTON"
+
+				enabled = "[GetScriptedGui('can_use_magic_advancement_window').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				down = "[GetScriptedGui('is_magic_advancement_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[GetScriptedGui('toggle_magic_advancement_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 
 				highlight_icon = {
 					parentanchor = center
@@ -3687,7 +3670,7 @@ types HUD
 
 	type widget_top_right_bar = widget
 	{
-		size = { 640 38 }
+		size = { 690 38 }
 		filter_mouse = all
 		alwaystransparent = no
 		layer = top
@@ -3717,20 +3700,20 @@ types HUD
 				name = "spendables"
 				layoutpolicy_horizontal = expanding
 				layoutpolicy_vertical = expanding
+				margin_left = 15
+
+				mana_hud = {}
+
+				divider_light = {
+					layoutpolicy_vertical = expanding
+					alpha = 0.8
+				}
 
 				hbox = {
 					name = "tutorial_highlight_resources_bar"
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
 					margin_right = 5
-					margin_left = 15
-					
-					mana_hud = {}
-
-					divider_light = {
-						layoutpolicy_vertical = expanding
-						alpha = 0.8
-					}
 
 					hbox = {
 						name = "gold"

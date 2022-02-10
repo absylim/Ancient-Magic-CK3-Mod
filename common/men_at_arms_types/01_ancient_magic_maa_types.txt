@@ -1,7 +1,7 @@
 ﻿stone_golems = {
 	type = heavy_infantry
 
-	can_recruit = no
+	can_recruit = { always = no }
 
 	damage = 20
 	toughness = 20
@@ -27,7 +27,7 @@
 lava_golems = {
 	type = siege_weapon
 
-	can_recruit = no
+	can_recruit = { always = no }
 
 	damage = 400
 	toughness = 400
@@ -53,7 +53,7 @@ lava_golems = {
 lesser_undead = {
 	type = light_infantry
 
-	can_recruit = no
+	can_recruit = { always = no }
 
 	damage = 5
 	toughness = 1

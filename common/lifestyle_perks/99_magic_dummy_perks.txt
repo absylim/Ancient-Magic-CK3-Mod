@@ -1,0 +1,3 @@
+﻿finacial_times_perk = {}
+
+death_magic_8_perk = {}

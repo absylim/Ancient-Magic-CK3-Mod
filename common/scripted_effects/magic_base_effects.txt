@@ -1,13 +1,18 @@
 ﻿set_up_spells = {
 	# Spell Categories
 	clear_global_variable_list = spell_categories_list
+	add_to_global_variable_list = { name = spell_categories_list target = flag:none }
 	add_to_global_variable_list = { name = spell_categories_list target = flag:time }
 	add_to_global_variable_list = { name = spell_categories_list target = flag:life }
-	add_to_global_variable_list = { name = spell_categories_list target = flag:elemental }
+	add_to_global_variable_list = { name = spell_categories_list target = flag:elomancy }
 	add_to_global_variable_list = { name = spell_categories_list target = flag:necromancy }
 	add_to_global_variable_list = { name = spell_categories_list target = flag:biomancy }
-	add_to_global_variable_list = { name = spell_categories_list target = flag:mind_magic }
-	
+	add_to_global_variable_list = { name = spell_categories_list target = flag:mensomancy }
+
+	#None
+	clear_global_variable_list = None_spells_list
+	add_to_global_variable_list = { name = None_spells_list target = flag:spark_spell }
+
 	#Time
 	clear_global_variable_list = time_spells_list
 	add_to_global_variable_list = { name = time_spells_list target = flag:glimpse_the_future_spell }
@@ -26,16 +31,16 @@
 	add_to_global_variable_list = { name = life_spells_list target = flag:greater_heal_spell }
 	add_to_global_variable_list = { name = life_spells_list target = flag:avatar_of_life_spell }
 
-	# Elemental
-	clear_global_variable_list = elemental_spells_list
-	add_to_global_variable_list = { name = elemental_spells_list target = flag:flame_aura_spell }
-	add_to_global_variable_list = { name = elemental_spells_list target = flag:flaming_weapons_spell }
-	add_to_global_variable_list = { name = elemental_spells_list target = flag:living_earthworks_spell }
-	add_to_global_variable_list = { name = elemental_spells_list target = flag:golem_creation_spell }
-	add_to_global_variable_list = { name = elemental_spells_list target = flag:control_water_spell }
-	add_to_global_variable_list = { name = elemental_spells_list target = flag:drought_spell }
-	add_to_global_variable_list = { name = elemental_spells_list target = flag:elemental_warrior_spell }
-	add_to_global_variable_list = { name = elemental_spells_list target = flag:lord_of_the_elements_spell }
+	# Elomancy
+	clear_global_variable_list = elomancy_spells_list
+	add_to_global_variable_list = { name = elomancy_spells_list target = flag:flame_aura_spell }
+	add_to_global_variable_list = { name = elomancy_spells_list target = flag:flaming_weapons_spell }
+	add_to_global_variable_list = { name = elomancy_spells_list target = flag:living_earthworks_spell }
+	add_to_global_variable_list = { name = elomancy_spells_list target = flag:golem_creation_spell }
+	add_to_global_variable_list = { name = elomancy_spells_list target = flag:control_water_spell }
+	add_to_global_variable_list = { name = elomancy_spells_list target = flag:drought_spell }
+	add_to_global_variable_list = { name = elomancy_spells_list target = flag:elemental_warrior_spell }
+	add_to_global_variable_list = { name = elomancy_spells_list target = flag:lord_of_the_elements_spell }
 
 	# Necromancy
 	clear_global_variable_list = necromancy_spells_list
@@ -45,6 +50,7 @@
 	add_to_global_variable_list = { name = necromancy_spells_list target = flag:necromancy_spell }
 	add_to_global_variable_list = { name = necromancy_spells_list target = flag:drain_life_spell }
 	add_to_global_variable_list = { name = necromancy_spells_list target = flag:death_stare_spell }
+	add_to_global_variable_list = { name = necromancy_spells_list target = flag:blight_spell }
 	add_to_global_variable_list = { name = necromancy_spells_list target = flag:deacon_of_death_spell }
 
 	# Biomancy
@@ -57,17 +63,94 @@
 	add_to_global_variable_list = { name = biomancy_spells_list target = flag:impregnate_spell }
 
 	# Mind Magic
-	clear_global_variable_list = mind_magic_spells_list
-	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:entrance_spell }
-	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:incite_lust_spell }
-	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:incite_obedience_spell }
-	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:dominate_spell }
-	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:beguiling_aura_spell }
-	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:friendship_spell }
-	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:rivalry_spell }
-	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:enchanting_aura_spell }
-	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:sculpt_mind_spell }
-	add_to_global_variable_list = { name = mind_magic_spells_list target = flag:master_of_puppets_spell }
+	clear_global_variable_list = mensomancy_spells_list
+	add_to_global_variable_list = { name = mensomancy_spells_list target = flag:entrance_spell }
+	add_to_global_variable_list = { name = mensomancy_spells_list target = flag:incite_lust_spell }
+	add_to_global_variable_list = { name = mensomancy_spells_list target = flag:incite_obedience_spell }
+	add_to_global_variable_list = { name = mensomancy_spells_list target = flag:dominate_spell }
+	add_to_global_variable_list = { name = mensomancy_spells_list target = flag:beguiling_aura_spell }
+	add_to_global_variable_list = { name = mensomancy_spells_list target = flag:friendship_spell }
+	add_to_global_variable_list = { name = mensomancy_spells_list target = flag:rivalry_spell }
+	add_to_global_variable_list = { name = mensomancy_spells_list target = flag:enchanting_aura_spell }
+	add_to_global_variable_list = { name = mensomancy_spells_list target = flag:sculpt_mind_spell }
+	add_to_global_variable_list = { name = mensomancy_spells_list target = flag:master_of_puppets_spell }
+
+	# Perk Categories
+	# None
+	clear_global_variable_list = None_perk_list
+	add_to_global_variable_list = { name = None_perk_list target = flag:mage_perk }
+
+	# Time
+	clear_global_variable_list = time_perk_list
+	add_to_global_variable_list = { name = time_perk_list target = flag:time_mage_perk }
+	add_to_global_variable_list = { name = time_perk_list target = flag:glimpse_the_future_perk }
+	add_to_global_variable_list = { name = time_perk_list target = flag:financial_times_perk }
+	add_to_global_variable_list = { name = time_perk_list target = flag:celerity_perk }
+	add_to_global_variable_list = { name = time_perk_list target = flag:mass_celerity_perk }
+	add_to_global_variable_list = { name = time_perk_list target = flag:slowness_perk }
+	add_to_global_variable_list = { name = time_perk_list target = flag:mass_slowness_perk }
+	add_to_global_variable_list = { name = time_perk_list target = flag:temporal_manipulation_perk }
+	add_to_global_variable_list = { name = time_perk_list target = flag:master_of_time_perk }
+
+	# Life
+	clear_global_variable_list = life_perk_list
+	add_to_global_variable_list = { name = life_perk_list target = flag:life_mage_perk }
+	add_to_global_variable_list = { name = life_perk_list target = flag:inward_reflection_perk }
+	add_to_global_variable_list = { name = life_perk_list target = flag:inward_perfection_perk }
+	add_to_global_variable_list = { name = life_perk_list target = flag:heal_perk }
+	add_to_global_variable_list = { name = life_perk_list target = flag:greater_heal_perk }
+	add_to_global_variable_list = { name = life_perk_list target = flag:battlefield_life_mage_perk }
+	add_to_global_variable_list = { name = life_perk_list target = flag:greater_battlefield_life_mage_perk }
+	add_to_global_variable_list = { name = life_perk_list target = flag:purity_of_body_perk }
+	add_to_global_variable_list = { name = life_perk_list target = flag:avatar_of_life_perk }
+
+	# Elomancy
+	clear_global_variable_list = elomancy_perk_list
+	add_to_global_variable_list = { name = elomancy_perk_list target = flag:elemental_mage_perk }
+	add_to_global_variable_list = { name = elomancy_perk_list target = flag:flame_aura_perk }
+	add_to_global_variable_list = { name = elomancy_perk_list target = flag:flaming_weapons_perk }
+	add_to_global_variable_list = { name = elomancy_perk_list target = flag:living_earthworks_perk }
+	add_to_global_variable_list = { name = elomancy_perk_list target = flag:golem_creation_perk }
+	add_to_global_variable_list = { name = elomancy_perk_list target = flag:control_water_perk }
+	add_to_global_variable_list = { name = elomancy_perk_list target = flag:drought_perk }
+	add_to_global_variable_list = { name = elomancy_perk_list target = flag:elemental_warrior_perk }
+	add_to_global_variable_list = { name = elomancy_perk_list target = flag:lord_of_the_elements_perk }
+
+	# Necromancy
+	clear_global_variable_list = necromancy_perk_list
+	add_to_global_variable_list = { name = necromancy_perk_list target = flag:death_mage_perk }
+	add_to_global_variable_list = { name = necromancy_perk_list target = flag:inflict_illness_perk }
+	add_to_global_variable_list = { name = necromancy_perk_list target = flag:plague_lord_perk }
+	add_to_global_variable_list = { name = necromancy_perk_list target = flag:aura_of_death_perk }
+	add_to_global_variable_list = { name = necromancy_perk_list target = flag:necromancy_perk }
+	add_to_global_variable_list = { name = necromancy_perk_list target = flag:drain_life_perk }
+	add_to_global_variable_list = { name = necromancy_perk_list target = flag:death_stare_perk }
+	add_to_global_variable_list = { name = necromancy_perk_list target = flag:blight_perk }
+	add_to_global_variable_list = { name = necromancy_perk_list target = flag:deacon_of_death_perk }
+
+	# Biomancy
+	clear_global_variable_list = biomancy_perk_list
+	add_to_global_variable_list = { name = biomancy_perk_list target = flag:biomancy_mage_perk }
+	add_to_global_variable_list = { name = biomancy_perk_list target = flag:improve_trait_perk }
+	add_to_global_variable_list = { name = biomancy_perk_list target = flag:perfect_trait_perk }
+	add_to_global_variable_list = { name = biomancy_perk_list target = flag:fertility_control_perk }
+	add_to_global_variable_list = { name = biomancy_perk_list target = flag:impregnate_perk }
+	add_to_global_variable_list = { name = biomancy_perk_list target = flag:weaken_trait_perk }
+	add_to_global_variable_list = { name = biomancy_perk_list target = flag:criple_trait_perk }
+	add_to_global_variable_list = { name = biomancy_perk_list target = flag:sculpter_of_flesh_perk }
+	add_to_global_variable_list = { name = biomancy_perk_list target = flag:architect_of_bloodlines_perk }
+
+	# Mensomancy
+	clear_global_variable_list = mensomancy_perk_list
+	add_to_global_variable_list = { name = mensomancy_perk_list target = flag:domination_mage_perk }
+	add_to_global_variable_list = { name = mensomancy_perk_list target = flag:entrance_perk }
+	add_to_global_variable_list = { name = mensomancy_perk_list target = flag:incite_lust_perk }
+	add_to_global_variable_list = { name = mensomancy_perk_list target = flag:incite_obedience_perk }
+	add_to_global_variable_list = { name = mensomancy_perk_list target = flag:dominate_perk }
+	add_to_global_variable_list = { name = mensomancy_perk_list target = flag:beguiling_aura_perk }
+	add_to_global_variable_list = { name = mensomancy_perk_list target = flag:friendship_perk }
+	add_to_global_variable_list = { name = mensomancy_perk_list target = flag:enchanting_aura_perk }
+	add_to_global_variable_list = { name = mensomancy_perk_list target = flag:master_of_puppets_perk }
 
 	# Spells that allow you to select multiple options at the same time
 	clear_global_variable_list = multiple_option_select_spells
@@ -128,7 +211,7 @@
 	add_to_global_variable_list = { name = gen_perks target = flag:necromancy_perk }
 	add_to_global_variable_list = { name = gen_perks target = flag:drain_life_perk }
 	add_to_global_variable_list = { name = gen_perks target = flag:death_stare_perk }
-	add_to_global_variable_list = { name = gen_perks target = flag:death_magic_8_perk }
+	add_to_global_variable_list = { name = gen_perks target = flag:blight_perk }
 	add_to_global_variable_list = { name = gen_perks target = flag:deacon_of_death_perk }
 	add_to_global_variable_list = { name = gen_perks target = flag:biomancy_mage_perk }
 	add_to_global_variable_list = { name = gen_perks target = flag:improve_trait_perk }
@@ -169,10 +252,11 @@
 	add_to_global_variable_list = { name = drain_auras target = flag:drought_spell }
 	add_to_global_variable_list = { name = drain_auras target = flag:elemental_warrior_spell }
 	add_to_global_variable_list = { name = drain_auras target = flag:aura_of_death_spell }
+	add_to_global_variable_list = { name = drain_auras target = flag:blight_spell }
 	add_to_global_variable_list = { name = drain_auras target = flag:fertility_control_spell }
 	add_to_global_variable_list = { name = drain_auras target = flag:beguiling_aura_spell }
 	add_to_global_variable_list = { name = drain_auras target = flag:enchanting_aura_spell }
 	clear_global_variable_list = drain_disease
-	add_to_global_variable_list = { name = gen_potency target = flag:mana_devouring_1 }
-	add_to_global_variable_list = { name = gen_potency target = flag:mana_devouring_2 }
+	add_to_global_variable_list = { name = drain_disease target = flag:mana_devouring_1 }
+	add_to_global_variable_list = { name = drain_disease target = flag:mana_devouring_2 }
 }

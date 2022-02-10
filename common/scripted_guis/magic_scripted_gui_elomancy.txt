@@ -9,16 +9,11 @@ flame_aura_spell = {
 	}
 	effect = {
 		if = {
-			limit = { NOT = { has_character_modifier = flame_aura_modifier } }
-			add_character_modifier = flame_aura_modifier
-			display_aura_times = { VALUE = mage_level }
-			change_mana_with_tooltip = { VALUE = flame_aura_spell_cost.neg }
-			change_mana_gen_tooltip = { VALUE = flame_aura_spell_gen_cost_individual.neg }
-			change_mage_xp = { VALUE = flame_aura_spell_cost.abs }
+			limit = { is_target_in_variable_list = { name = flame_aura_spell_targets target = scope:spell_target } }
+			stop_aura_effect = { SPELL = flame_aura_spell }
 		}
 		else = {
-			remove_all_character_modifier_instances = flame_aura_modifier
-			change_mana_gen_tooltip = { VALUE = flame_aura_spell_gen_cost_individual.abs }
+			start_aura_effect = { SPELL = flame_aura_spell }
 		}
 	}
 }
@@ -26,7 +21,7 @@ flame_aura_spell = {
 flame_aura_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = flame_aura_perk
+		has_perk_trigger = { PERK = flame_aura_perk }
 	}
 	is_valid = {
 		always = yes
@@ -63,16 +58,11 @@ flaming_weapons_spell = {
 	}
 	effect = {
 		if = {
-			limit = { NOT = { has_character_modifier = flaming_weapons_modifier } }
-			add_character_modifier = flaming_weapons_modifier
-			display_aura_times = { VALUE = mage_level }
-			change_mana_with_tooltip = { VALUE = flaming_weapons_spell_cost.neg }
-			change_mana_gen_tooltip = { VALUE = flaming_weapons_spell_gen_cost_individual.neg }
-			change_mage_xp = { VALUE = flaming_weapons_spell_cost.abs }
+			limit = { is_target_in_variable_list = { name = flaming_weapons_spell_targets target = scope:spell_target } }
+			stop_aura_effect = { SPELL = flaming_weapons_spell }
 		}
 		else = {
-			remove_all_character_modifier_instances = flaming_weapons_modifier
-			change_mana_gen_tooltip = { VALUE = flaming_weapons_spell_gen_cost_individual.abs }
+			start_aura_effect = { SPELL = flaming_weapons_spell }
 		}
 	}
 }
@@ -80,7 +70,7 @@ flaming_weapons_spell = {
 flaming_weapons_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = flaming_weapons_perk
+		has_perk_trigger = { PERK = flaming_weapons_perk }
 	}
 	is_valid = {
 		always = yes
@@ -117,16 +107,11 @@ living_earthworks_spell = {
 	}
 	effect = {
 		if = {
-			limit = { NOT = { has_character_modifier = living_earthworks_modifier } }
-			add_character_modifier = living_earthworks_modifier
-			display_aura_times = { VALUE = mage_level }
-			change_mana_with_tooltip = { VALUE = living_earthworks_spell_cost.neg }
-			change_mana_gen_tooltip = { VALUE = living_earthworks_spell_gen_cost_individual.neg }
-			change_mage_xp = { VALUE = living_earthworks_spell_cost.abs }
+			limit = { is_target_in_variable_list = { name = living_earthworks_spell_targets target = scope:spell_target } }
+			stop_aura_effect = { SPELL = living_earthworks_spell }
 		}
 		else = {
-			remove_all_character_modifier_instances = living_earthworks_modifier
-			change_mana_gen_tooltip = { VALUE = living_earthworks_spell_gen_cost_individual.abs }
+			start_aura_effect = { SPELL = living_earthworks_spell }
 		}
 	}
 }
@@ -134,7 +119,7 @@ living_earthworks_spell = {
 living_earthworks_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = living_earthworks_perk
+		has_perk_trigger = { PERK = living_earthworks_perk }
 	}
 	is_valid = {
 		always = yes
@@ -198,7 +183,7 @@ golem_creation_spell = {
 golem_creation_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = golem_creation_perk
+		has_perk_trigger = { PERK = golem_creation_perk }
 	}
 	is_valid = {
 		always = yes
@@ -235,16 +220,11 @@ control_water_spell = {
 	}
 	effect = {
 		if = {
-			limit = { NOT = { has_character_modifier = control_water_modifier } }
-			add_character_modifier = control_water_modifier
-			display_aura_times = { VALUE = mage_level }
-			change_mana_with_tooltip = { VALUE = control_water_spell_cost.neg }
-			change_mana_gen_tooltip = { VALUE = control_water_spell_gen_cost_individual.neg }
-			change_mage_xp = { VALUE = control_water_spell_cost.abs }
+			limit = { is_target_in_variable_list = { name = control_water_spell_targets target = scope:spell_target } }
+			stop_aura_effect = { SPELL = control_water_spell }
 		}
 		else = {
-			remove_all_character_modifier_instances = control_water_modifier
-			change_mana_gen_tooltip = { VALUE = control_water_spell_gen_cost_individual.abs }
+			start_aura_effect = { SPELL = control_water_spell }
 		}
 	}
 }
@@ -252,7 +232,7 @@ control_water_spell = {
 control_water_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = control_water_perk
+		has_perk_trigger = { PERK = control_water_perk }
 	}
 	is_valid = {
 		always = yes
@@ -289,16 +269,11 @@ drought_spell = {
 	}
 	effect = {
 		if = {
-			limit = { NOT = { has_character_modifier = drought_modifier } }
-			add_character_modifier = drought_modifier
-			display_aura_times = { VALUE = mage_level }
-			change_mana_with_tooltip = { VALUE = drought_spell_cost.neg }
-			change_mana_gen_tooltip = { VALUE = drought_spell_gen_cost_individual.neg }
-			change_mage_xp = { VALUE = drought_spell_cost.abs }
+			limit = { is_target_in_variable_list = { name = drought_spell_targets target = scope:spell_target } }
+			stop_aura_effect = { SPELL = drought_spell }
 		}
 		else = {
-			remove_all_character_modifier_instances = drought_modifier
-			change_mana_gen_tooltip = { VALUE = drought_spell_gen_cost_individual.abs }
+			start_aura_effect = { SPELL = drought_spell }
 		}
 	}
 }
@@ -306,7 +281,7 @@ drought_spell = {
 drought_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = drought_perk
+		has_perk_trigger = { PERK = drought_perk }
 	}
 	is_valid = {
 		always = yes
@@ -343,16 +318,11 @@ elemental_warrior_spell = {
 	}
 	effect = {
 		if = {
-			limit = { NOT = { has_character_modifier = elemental_warrior_modifier } }
-			add_character_modifier = elemental_warrior_modifier
-			display_aura_times = { VALUE = mage_level }
-			change_mana_with_tooltip = { VALUE = elemental_warrior_spell_cost.neg }
-			change_mana_gen_tooltip = { VALUE = elemental_warrior_spell_gen_cost_individual.neg }
-			change_mage_xp = { VALUE = elemental_warrior_spell_cost.abs }
+			limit = { is_target_in_variable_list = { name = elemental_warrior_spell_targets target = scope:spell_target } }
+			stop_aura_effect = { SPELL = elemental_warrior_spell }
 		}
 		else = {
-			remove_all_character_modifier_instances = elemental_warrior_modifier
-			change_mana_gen_tooltip = { VALUE = elemental_warrior_spell_gen_cost_individual.abs }
+			start_aura_effect = { SPELL = elemental_warrior_spell }
 		}
 	}
 }
@@ -360,7 +330,7 @@ elemental_warrior_spell = {
 elemental_warrior_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = elemental_warrior_perk
+		has_perk_trigger = { PERK = elemental_mage_perk }
 	}
 	is_valid = {
 		always = yes
@@ -424,7 +394,7 @@ lord_of_the_elements_spell = {
 lord_of_the_elements_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = lord_of_the_elements_perk
+		has_perk_trigger = { PERK = lord_of_the_elements_perk }
 	}
 	is_valid = {
 		always = yes

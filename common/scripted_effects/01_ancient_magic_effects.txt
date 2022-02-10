@@ -1,23 +1,4 @@
-﻿make_mage_effect = {
-	add_trait_force_tooltip = mage
-	add_trait_force_tooltip = mana
-	if = {
-		limit = { NOT = { exists = var:mana } }
-		set_variable = {
-			name = mana
-			value = 0
-		}
-	}
-	if = {
-		limit = { NOT = { exists = var:mage_xp } }
-		set_variable = {
-			name = mage_xp
-			value = 0
-		}
-	}
-}
-
-change_mana_with_tooltip = {
+﻿change_mana_with_tooltip = {
 	custom_description = {
 		text = change_mana
 		value = $VALUE$
@@ -34,37 +15,44 @@ change_mana_gen_tooltip = {
 }
 
 change_mage_xp = {
-	save_temporary_scope_value_as = {
-		name = old_level
-		value = mage_level
-	}
-	save_temporary_scope_value_as = {
-		name = xp_increase
-		value = {
-			value = mage_potency
-			add = mage_education
-			multiply = 0.1
-			add = 1
-			multiply = $VALUE$
-		}
-	}
-	custom_description = {
-		text = change_mage_xp
-		value = scope:xp_increase
-		change_variable = {
-			name = mage_xp
-			add = scope:xp_increase
-		}
-	}
 	if = {
-		limit = { mage_level.compare_value > scope:old_level.compare_value }
-		send_interface_toast = {
-			title = mage_level_increase
-			left_icon = root
-			custom_description = {
-				text = change_mage_level
-				value = mage_level
-				trigger_event = { on_action = on_reset_mana_system }
+		limit = { has_character_modifier = magic_advancement_modifier }
+		save_temporary_scope_value_as = {
+			name = old_level
+			value = mage_level
+		}
+		save_temporary_scope_value_as = {
+			name = xp_increase
+			value = {
+				value = mage_potency
+				add = mage_education
+				multiply = 0.1
+				add = 1
+				multiply = $VALUE$
+			}
+		}
+		custom_description = {
+			text = change_mage_xp
+			value = scope:xp_increase
+			change_variable = {
+				name = mage_xp
+				add = scope:xp_increase
+			}
+		}
+		if = {
+			limit = { mage_level.compare_value > scope:old_level.compare_value }
+			send_interface_toast = {
+				title = mage_level_increase
+				left_icon = root
+				custom_description = {
+					text = change_mage_level
+					value = mage_level
+					trigger_event = { on_action = on_reset_mana_system }
+					set_variable = {
+						name = available_magic_perks
+						value = num_available_magic_perks
+					}
+				}
 			}
 		}
 	}
@@ -116,25 +104,57 @@ add_immortal_years_since_lifetime_reset = {
 	change_variable = { name = immortal_years_since_lifetime_reset add = 1 }
 }
 
-init_immortal_years_since_master_of_time_spell = {
+earn_mage_xp_effect = {
+	custom_description_no_bullet = {
+		text = earn_mage_xp_effect
+	}
+}
+
+start_aura_effect = {
+	save_temporary_scope_value_as = { name = spell_cost value = $SPELL$_cost }
+	add_to_variable_list = { name = $SPELL$_targets target = scope:spell_target }
+	scope:spell_target = { add_character_modifier = $SPELL$_modifier }
+	display_aura_times = { VALUE = mage_level }
+	change_mana_with_tooltip = { VALUE = $SPELL$_cost.neg }
+	change_mana_gen_tooltip = { VALUE = $SPELL$_gen_cost_individual.neg }
+	change_mage_xp = { VALUE = $SPELL$_cost.abs }
+	mod_bit = { MASK = aura_mask_0 BIT = $SPELL$_aura_bit OP = set }
+	trigger_event = { on_action = on_reset_mana_system }
+}
+
+update_aura_effect = {
 	if = {
-		limit = {
-			NOT = { exists = var:immortal_years_since_master_of_time_spell }
-		}
-		set_variable = {
-			name = immortal_years_since_master_of_time_spell
-			value = 0
+		limit = { var:$MASK$.$SPELL$_aura_bit.compare_value = 1 }
+		every_in_list = {
+			variable = $SPELL$_targets
+			remove_all_character_modifier_instances = $SPELL$_modifier
+			while = {
+				count = prev.mage_level
+				add_character_modifier = { modifier = $SPELL$_modifier }
+			}
 		}
 	}
 }
 
-add_immortal_years_since_master_of_time_spell = {
-	init_immortal_years_since_master_of_time_spell = yes
-	change_variable = { name = immortal_years_since_master_of_time_spell add = 1 }
+stop_aura_effect = {
+	remove_list_variable = { name = $SPELL$_targets target = scope:spell_target }
+	scope:spell_target = { remove_all_character_modifier_instances = $SPELL$_modifier }
+	change_mana_gen_tooltip = { VALUE = $SPELL$_gen_cost_individual.abs }
+	if = {
+		limit = { NOT = { has_variable_list = $SPELL$_targets } }
+		mod_bit = { MASK = aura_mask_0 BIT = $SPELL$_aura_bit OP = unset }
+	}
+	trigger_event = { on_action = on_reset_mana_system }
 }
 
-remove_immortal_years_since_master_of_time_spell = {
-	remove_variable = immortal_years_since_master_of_time_spell
+remove_prev_from_this_aura_spell_targets_effect = {
+	if = {
+		limit = {
+			has_spell_aura_targets_trigger = { SPELL = $SPELL$ }
+			is_target_in_variable_list = { name = $SPELL$_targets target = prev }
+		}
+		remove_list_variable = { name = $SPELL$_targets target = prev }
+	}
 }
 
 remove_single_minor_illness_effect = {

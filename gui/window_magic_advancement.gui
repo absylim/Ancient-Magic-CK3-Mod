@@ -1,0 +1,503 @@
+﻿types MagicAdvancementWindow {
+	type magic_advancement_view = window {
+		name = "magic_advancement_window"
+		size = { 100% 100% }
+		parentanchor = center|hcenter
+		layer = top
+		movable = no
+		filter_mouse = all
+		visible = "[GetScriptedGui('is_magic_advancement_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+		datacontext = "[GetPlayer]"
+
+		background = {
+			texture = "gfx/interface/component_tiles/tile_window_background_no_edge.dds"
+			spriteType = Corneredtiled
+			spriteborder = { 18 0 }
+			margin = { 20 0 }
+			texture_density = 2
+
+			modify_texture = {
+				texture = "gfx/interface/component_overlay/overlay_effect.dds"
+				blend_mode = overlay
+			}
+		}
+
+		background = {
+			texture = "gfx/interface/component_masks/mask_fade_corner.dds"
+			color = { 0.12 0.12 0.12 1 }
+			mirror = horizontal
+			margin_right = -1200
+			alpha = 0.6
+		}
+
+		state = {
+			name = _show
+			using = Animation_FadeIn_Standard
+			using = Sound_WindowShow_Standard
+			using = Sound_Window_AmbienceMute_Snapshot
+		}
+
+		state = {
+			name = _hide
+			using = Animation_FadeOut_Standard
+			using = Sound_WindowHide_Standard
+		}
+
+		widget = {
+			parentanchor = bottom|left
+			size = { 305 835 }
+			allow_outside = no
+
+			portrait_lifestyles = {
+				parentanchor = bottom|left
+				position = { -110 0 }
+			}
+		}
+
+		vbox = {
+			name = "magic_advancement_view"
+
+			using = Window_Margins
+
+			state = {
+				name = _show
+				using = Animation_FadeIn_Quick
+			}
+
+			state = {
+				name = _hide
+				using = Animation_FadeOut_Quick
+			}
+
+			background = {
+				texture = "gfx/interface/component_masks/mask_fade_vertical_up.dds"
+				margin_top = -500
+				color = { 0 0 0 0.7 }
+				alpha = 0.7
+			}
+
+			header_standard = {
+				layoutpolicy_horizontal = expanding
+
+				blockoverride "header_text"
+				{
+					text = "MAGIC_ADVANCEMENT_HEADER"
+				}
+
+				blockoverride "button_close"
+				{
+					onclick = "[GetScriptedGui('toggle_magic_advancement_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+
+				blockoverride "button_back"
+				{
+					visible = no
+				}
+			}
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+
+				vbox = {
+					layoutpolicy_vertical = expanding
+					minimumsize = { 250 -1 }
+					margin_left = -15
+
+					spacer = { size = { 0 25 } }
+
+					button_standard = {
+						size = { 200 50 }
+						text = "MAGIC_ADVANCEMENT_TOGGLE_STUDY"
+						clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
+						tooltip = "[GetScriptedGui('toggle_magic_xp_or_focus_xp').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						enabled = "[GetScriptedGui('toggle_magic_xp_or_focus_xp').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						onclick = "[GetScriptedGui('toggle_magic_xp_or_focus_xp').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					}
+
+					text_multi = {
+						name = "skill_value"
+						size = { 270 110 }
+						margin_top = 10
+						text = "MAGIC_ADVANCEMENT_FOCUS_PRECLUSION_DESC"
+						default_format = "#high"
+						using = Font_Size_Medium
+						align = center
+					}
+
+					spacer = { size = { 0 10 } }
+
+					text_single = {
+						maximumsize = { 270 -1 }
+						visible = "[GetScriptedGui('perk_select').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag('mage_perk')).End)]"
+						name = "num_available_magic_perks"
+						text = "MAGIC_ADVANCEMENT_AVAILABLE_PERKS"
+						default_format = "#high"
+						using = Font_Size_Medium
+						align = center
+					}
+
+					expand = {}
+				}
+
+				## CENTER AREA
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+					margin_left = 15
+
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+						margin = { 22 22 }
+
+						background = {
+							texture = "gfx/interface/window_lifestyles/lifestyles_tree_area_bg.dds"
+							margin = { 5 5 }
+							spriteType = Corneredtiled
+							spriteborder = { 200 200 }
+						}
+
+						## Trees
+						hbox = {
+							layoutpolicy_horizontal = expanding
+							layoutpolicy_vertical = expanding
+							spacing = 10
+
+							background = {
+								texture = "gfx/interface/window_magic_advancement/magic_advancement_tree_area_bg.dds"
+								spriteType = Corneredstretched
+							}
+
+							widget = {
+								size = "[PdxGetWidgetScreenSize( PdxGuiWidget.AccessParent.Self )]"
+								datamodel = "[GetGlobalList('spell_categories_list')]"
+								datacontext = "[GetScriptedGui('perk_select')]"
+
+								item = {
+									widget = {
+										parentanchor = center|hcenter
+										widgetanchor = center|hcenter
+										datamodel = "[GetGlobalList(Concatenate(Scope.GetFlagName,'_perk_list'))]"
+										size = { 360 360 }
+
+										state = {
+											name = start
+											trigger_on_create = yes
+											duration = 0.01
+											position_x = "[FixedPointToFloat(EmptyScope.ScriptValue(Concatenate(Scope.GetFlagName,'_bg_pos_x')))]"
+											position_y = "[FixedPointToFloat(EmptyScope.ScriptValue(Concatenate(Scope.GetFlagName,'_bg_pos_y')))]"
+										}
+
+										background = {
+											texture = "gfx/interface/window_magic_advancement/magic_advancement_schools_bg.dds"
+											framesize = { 540 540 }
+											frame = "[FixedPointToInt(EmptyScope.ScriptValue(Concatenate(Scope.GetFlagName,'_bg_frame')))]"
+										}
+
+										item = {
+											widget = {
+												size = { 20 20 }
+												parentanchor = top|left
+												datacontext = "[GetPerk(Scope.GetFlagName)]"
+
+												state = {
+													name = start
+													trigger_on_create = yes
+													duration = 0.01
+													position_x = "[FixedPointToFloat(EmptyScope.ScriptValue(Concatenate(Scope.GetFlagName,'_pos_x')))]"
+													position_y = "[FixedPointToFloat(EmptyScope.ScriptValue(Concatenate(Scope.GetFlagName,'_pos_y')))]"
+												}
+
+												# perk unavailable
+												magic_perk_icon = {
+													visible = "[And(Not(ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)), Not(ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)))]"
+													blockoverride "texture" {
+														texture = "gfx/interface/window_magic_advancement/magic_advancement_perk_unavailable.dds"
+													}
+												}
+												# perk available, not obtained
+												button_normal = {
+													parentanchor = center|hcenter
+													size = "[PdxGetWidgetScreenSize( PdxGuiWidget.AccessParent.Self )]"
+													visible = "[And(Not(ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)), ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End))]"
+													texture = "gfx/interface/window_magic_advancement/magic_advancement_perk_available.dds"
+													onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)]"
+
+													using = tooltip_se
+
+													tooltipwidget = {
+														using = magic_perk_tooltip_selection
+													}
+
+													blockoverride "input_info_text" {
+														visible = "yes"
+														text = "CHOOSE_PERK_UNLOCK_TEXT"
+													}
+												}
+												# perk obtained
+												magic_perk_icon = {
+													visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)]"
+													blockoverride "texture" {
+														texture = "gfx/interface/window_magic_advancement/magic_advancement_perk_obtained.dds"
+													}
+												}
+											}
+										}
+
+										expand = {}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		flowcontainer = {
+			parentanchor = bottom|left
+			position = { 20 -10 }
+			spacing = 10
+			direction = vertical
+			datacontext = "[GetPlayer.MakeScope]"
+
+			flowcontainer = {
+				spacing = 5
+				margin_left = 15
+				margin_right = 25
+
+				background = {
+					name = "skill_icon_bg"
+					texture = "gfx/interface/window_magic_advancement/magic_advancement_perks_bg.dds"
+					framesize = { 70 26 }
+					frame = 1
+				}
+
+				icon = {
+					name = "skill_icon"
+					size = { 35 35 }
+					framesize = { 60 60 }
+					frame = 1
+					texture = "gfx/interface/icons/icon_magic_skills.dds"
+				}
+
+				text_single = {
+					name = "skill_value"
+					parentanchor = vcenter
+					text = "[Scope.ScriptValue('none_num_perks')|0]"
+					default_format = "#high"
+					using = Font_Size_Medium
+					align = nobaseline
+				}
+			}
+
+			flowcontainer = {
+				spacing = 5
+				margin_left = 15
+				margin_right = 25
+
+				background = {
+					name = "skill_icon_bg"
+					texture = "gfx/interface/window_magic_advancement/magic_advancement_perks_bg.dds"
+					framesize = { 70 26 }
+					frame = 2
+				}
+
+				icon = {
+					name = "skill_icon"
+					size = { 35 35 }
+					framesize = { 60 60 }
+					frame = 2
+					texture = "gfx/interface/icons/icon_magic_skills.dds"
+				}
+
+				text_single = {
+					name = "skill_value"
+					parentanchor = vcenter
+					text = "[Scope.ScriptValue('time_num_perks')|0]"
+					default_format = "#high"
+					using = Font_Size_Medium
+					align = nobaseline
+				}
+			}
+
+			flowcontainer = {
+				spacing = 5
+				margin_left = 15
+				margin_right = 25
+
+				background = {
+					name = "skill_icon_bg"
+					texture = "gfx/interface/window_magic_advancement/magic_advancement_perks_bg.dds"
+					framesize = { 70 26 }
+					frame = 3
+				}
+
+				icon = {
+					name = "skill_icon"
+					size = { 35 35 }
+					framesize = { 60 60 }
+					frame = 3
+					texture = "gfx/interface/icons/icon_magic_skills.dds"
+				}
+
+				text_single = {
+					name = "skill_value"
+					parentanchor = vcenter
+					text = "[Scope.ScriptValue('life_num_perks')|0]"
+					default_format = "#high"
+					using = Font_Size_Medium
+					align = nobaseline
+				}
+			}
+
+			flowcontainer = {
+				spacing = 5
+				margin_left = 15
+				margin_right = 25
+
+				background = {
+					name = "skill_icon_bg"
+					texture = "gfx/interface/window_magic_advancement/magic_advancement_perks_bg.dds"
+					framesize = { 70 26 }
+					frame = 4
+				}
+
+				icon = {
+					name = "skill_icon"
+					size = { 35 35 }
+					framesize = { 60 60 }
+					frame = 4
+					texture = "gfx/interface/icons/icon_magic_skills.dds"
+				}
+
+				text_single = {
+					name = "skill_value"
+					parentanchor = vcenter
+					text = "[Scope.ScriptValue('elomancy_num_perks')|0]"
+					default_format = "#high"
+					using = Font_Size_Medium
+					align = nobaseline
+				}
+			}
+
+			flowcontainer = {
+				spacing = 5
+				margin_left = 15
+				margin_right = 25
+
+				background = {
+					name = "skill_icon_bg"
+					texture = "gfx/interface/window_magic_advancement/magic_advancement_perks_bg.dds"
+					framesize = { 70 26 }
+					frame = 5
+				}
+
+				icon = {
+					name = "skill_icon"
+					size = { 35 35 }
+					framesize = { 60 60 }
+					frame = 5
+					texture = "gfx/interface/icons/icon_magic_skills.dds"
+				}
+
+				text_single = {
+					name = "skill_value"
+					parentanchor = vcenter
+					text = "[Scope.ScriptValue('necromancy_num_perks')|0]"
+					default_format = "#high"
+					using = Font_Size_Medium
+					align = nobaseline
+				}
+			}
+
+			flowcontainer = {
+				spacing = 5
+				margin_left = 15
+				margin_right = 25
+
+				background = {
+					name = "skill_icon_bg"
+					texture = "gfx/interface/window_magic_advancement/magic_advancement_perks_bg.dds"
+					framesize = { 70 26 }
+					frame = 6
+				}
+
+				icon = {
+					name = "skill_icon"
+					size = { 35 35 }
+					framesize = { 60 60 }
+					frame = 6
+					texture = "gfx/interface/icons/icon_magic_skills.dds"
+				}
+
+				text_single = {
+					name = "skill_value"
+					parentanchor = vcenter
+					text = "[Scope.ScriptValue('biomancy_num_perks')|0]"
+					default_format = "#high"
+					using = Font_Size_Medium
+					align = nobaseline
+				}
+			}
+
+			flowcontainer = {
+				spacing = 5
+				margin_left = 15
+				margin_right = 25
+
+				background = {
+					name = "skill_icon_bg"
+					texture = "gfx/interface/window_magic_advancement/magic_advancement_perks_bg.dds"
+					framesize = { 70 26 }
+					frame = 7
+				}
+
+				icon = {
+					name = "skill_icon"
+					size = { 35 35 }
+					framesize = { 60 60 }
+					frame = 7
+					texture = "gfx/interface/icons/icon_magic_skills.dds"
+				}
+
+				text_single = {
+					name = "skill_value"
+					parentanchor = vcenter
+					text = "[Scope.ScriptValue('mensomancy_num_perks')|0]"
+					default_format = "#high"
+					using = Font_Size_Medium
+					align = nobaseline
+				}
+			}
+		}
+	}
+
+	type magic_perk_icon = widget {
+		parentanchor = center|hcenter
+		size = "[PdxGetWidgetScreenSize( PdxGuiWidget.AccessParent.Self )]"
+
+		using = tooltip_se
+
+		tooltipwidget = {
+			using = magic_perk_tooltip_selection
+		}
+
+		icon = {
+			parentanchor = center|hcenter
+			size = "[PdxGetWidgetScreenSize( PdxGuiWidget.AccessParent.Self )]"
+			block "texture" {}
+		}
+	}
+}
+
+template magic_perk_tooltip_selection {
+	container = {
+		alwaystransparent = no
+		name = "MagicAdvancementPerkTooltipSelection"
+
+		using = perk_tooltip_contents
+	}
+}

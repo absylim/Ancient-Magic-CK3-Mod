@@ -37,6 +37,26 @@ reset_mana_system_decision = {
 			debug_only = yes
 			NOT = { has_global_variable_list = spell_categories_list }
 			has_perk = finacial_times_perk
+			has_perk = death_magic_8_perk
+			has_character_modifier = finacial_times_modifier
+			has_character_modifier = glimpse_the_future_modifier
+			has_character_modifier = financial_times_modifier
+			has_character_modifier = celerity_modifier
+			has_character_modifier = mass_celerity_modifier
+			has_character_modifier = slowness_modifier
+			has_character_modifier = mass_slowness_modifier
+			has_character_modifier = temporal_manipulation_modifier
+			has_character_modifier = haste_modifier
+			has_character_modifier = flame_aura_modifier
+			has_character_modifier = flaming_weapons_modifier
+			has_character_modifier = living_earthworks_modifier
+			has_character_modifier = control_water_modifier
+			has_character_modifier = drought_modifier
+			has_character_modifier = elemental_warrior_modifier
+			has_character_modifier = aura_of_death_modifier
+			has_character_modifier = blight_modifier
+			has_character_modifier = beguiling_aura_modifier
+			has_character_modifier = enchanting_aura_modifier
 		}
 	}
 
@@ -46,7 +66,7 @@ reset_mana_system_decision = {
 		hidden_effect = {
 			every_living_character = {
 				if = {
-					limit = { has_trait = mage }
+					limit = { is_mage_trigger = yes }
 					if = {
 						limit = { NOT = { has_variable = mage_xp } }
 						set_variable = {
@@ -60,9 +80,41 @@ reset_mana_system_decision = {
 						add_perk = financial_times_perk
 					}
 					if = {
-						limit = { has_character_modifier = finacial_times_modifier }
-						remove_all_character_modifier_instances = finacial_times_modifier
-						add_character_modifier = financial_times_modifier
+						limit = { has_perk = death_magic_8_perk }
+						remove_perk = death_magic_8_perk
+						add_perk = blight_perk
+					}
+					set_variable = {
+						name = aura_mask_0
+						value = 0
+					}
+					set_variable = {
+						name = none_perk_mask_0
+						value = none_perk_mask_0_maker
+					}
+					set_variable = {
+						name = time_perk_mask_0
+						value = time_perk_mask_0_maker
+					}
+					set_variable = {
+						name = life_perk_mask_0
+						value = life_perk_mask_0_maker
+					}
+					set_variable = {
+						name = elomancy_perk_mask_0
+						value = elomancy_perk_mask_0_maker
+					}
+					set_variable = {
+						name = necromancy_perk_mask_0
+						value = necromancy_perk_mask_0_maker
+					}
+					set_variable = {
+						name = biomancy_perk_mask_0
+						value = biomancy_perk_mask_0_maker
+					}
+					set_variable = {
+						name = mensomancy_perk_mask_0
+						value = mensomancy_perk_mask_0_maker
 					}
 					remove_character_flag = magic_potential_1_mana_added
 					remove_character_flag = magic_potential_2_mana_added
@@ -74,6 +126,173 @@ reset_mana_system_decision = {
 					remove_character_flag = ancient_magic_arcana_focus_mana_added
 					remove_character_flag = arcane_legacy_2_mana_added
 					remove_character_flag = arcane_legacy_3_mana_added
+					clear_variable_list = glimpse_the_future_spell_targets
+					clear_variable_list = financial_times_spell_targets
+					clear_variable_list = celerity_spell_targets
+					clear_variable_list = mass_celerity_spell_targets
+					clear_variable_list = slowness_spell_targets
+					clear_variable_list = mass_slowness_spell_targets
+					clear_variable_list = temporal_manipulation_spell_targets
+					clear_variable_list = haste_spell_targets
+					clear_variable_list = master_of_time_spell_targets
+					clear_variable_list = flame_aura_spell_targets
+					clear_variable_list = flaming_weapons_spell_targets
+					clear_variable_list = living_earthworks_spell_targets
+					clear_variable_list = control_water_spell_targets
+					clear_variable_list = drought_spell_targets
+					clear_variable_list = elemental_warrior_spell_targets
+					clear_variable_list = aura_of_death_spell_targets
+					clear_variable_list = blight_spell_targets
+					clear_variable_list = beguiling_aura_spell_targets
+					clear_variable_list = enchanting_aura_spell_targets
+					if = {
+						limit = { has_character_modifier = glimpse_the_future_spell_modifier }
+						remove_all_character_modifier_instances = glimpse_the_future_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = financial_times_spell_modifier }
+						remove_all_character_modifier_instances = financial_times_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = celerity_spell_modifier }
+						remove_all_character_modifier_instances = celerity_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = mass_celerity_spell_modifier }
+						remove_all_character_modifier_instances = mass_celerity_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = slowness_spell_modifier }
+						remove_all_character_modifier_instances = slowness_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = mass_slowness_spell_modifier }
+						remove_all_character_modifier_instances = mass_slowness_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = temporal_manipulation_spell_modifier }
+						remove_all_character_modifier_instances = temporal_manipulation_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = haste_spell_modifier }
+						remove_all_character_modifier_instances = haste_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = flame_aura_spell_modifier }
+						remove_all_character_modifier_instances = flame_aura_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = flaming_weapons_spell_modifier }
+						remove_all_character_modifier_instances = flaming_weapons_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = living_earthworks_spell_modifier }
+						remove_all_character_modifier_instances = living_earthworks_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = control_water_spell_modifier }
+						remove_all_character_modifier_instances = control_water_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = drought_spell_modifier }
+						remove_all_character_modifier_instances = drought_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = elemental_warrior_spell_modifier }
+						remove_all_character_modifier_instances = elemental_warrior_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = aura_of_death_spell_modifier }
+						remove_all_character_modifier_instances = aura_of_death_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = blight_spell_modifier }
+						remove_all_character_modifier_instances = blight_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = beguiling_aura_spell_modifier }
+						remove_all_character_modifier_instances = beguiling_aura_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = enchanting_aura_spell_modifier }
+						remove_all_character_modifier_instances = enchanting_aura_spell_modifier
+					}
+					if = {
+						limit = { has_character_modifier = finacial_times_modifier }
+						remove_all_character_modifier_instances = finacial_times_modifier
+					}
+					if = {
+						limit = { has_character_modifier = glimpse_the_future_modifier }
+						remove_all_character_modifier_instances = glimpse_the_future_modifier
+					}
+					if = {
+						limit = { has_character_modifier = financial_times_modifier }
+						remove_all_character_modifier_instances = financial_times_modifier
+					}
+					if = {
+						limit = { has_character_modifier = celerity_modifier }
+						remove_all_character_modifier_instances = celerity_modifier
+					}
+					if = {
+						limit = { has_character_modifier = mass_celerity_modifier }
+						remove_all_character_modifier_instances = mass_celerity_modifier
+					}
+					if = {
+						limit = { has_character_modifier = slowness_modifier }
+						remove_all_character_modifier_instances = slowness_modifier
+					}
+					if = {
+						limit = { has_character_modifier = mass_slowness_modifier }
+						remove_all_character_modifier_instances = mass_slowness_modifier
+					}
+					if = {
+						limit = { has_character_modifier = temporal_manipulation_modifier }
+						remove_all_character_modifier_instances = temporal_manipulation_modifier
+					}
+					if = {
+						limit = { has_character_modifier = haste_modifier }
+						remove_all_character_modifier_instances = haste_modifier
+					}
+					if = {
+						limit = { has_character_modifier = flame_aura_modifier }
+						remove_all_character_modifier_instances = flame_aura_modifier
+					}
+					if = {
+						limit = { has_character_modifier = flaming_weapons_modifier }
+						remove_all_character_modifier_instances = flaming_weapons_modifier
+					}
+					if = {
+						limit = { has_character_modifier = living_earthworks_modifier }
+						remove_all_character_modifier_instances = living_earthworks_modifier
+					}
+					if = {
+						limit = { has_character_modifier = control_water_modifier }
+						remove_all_character_modifier_instances = control_water_modifier
+					}
+					if = {
+						limit = { has_character_modifier = drought_modifier }
+						remove_all_character_modifier_instances = drought_modifier
+					}
+					if = {
+						limit = { has_character_modifier = elemental_warrior_modifier }
+						remove_all_character_modifier_instances = elemental_warrior_modifier
+					}
+					if = {
+						limit = { has_character_modifier = aura_of_death_modifier }
+						remove_all_character_modifier_instances = aura_of_death_modifier
+					}
+					if = {
+						limit = { has_character_modifier = blight_modifier }
+						remove_all_character_modifier_instances = blight_modifier
+					}
+					if = {
+						limit = { has_character_modifier = beguiling_aura_modifier }
+						remove_all_character_modifier_instances = beguiling_aura_modifier
+					}
+					if = {
+						limit = { has_character_modifier = enchanting_aura_modifier }
+						remove_all_character_modifier_instances = enchanting_aura_modifier
+					}
 					trigger_event = { on_action = on_reset_mana_system }
 				}
 			}
@@ -87,51 +306,4 @@ reset_mana_system_decision = {
 	ai_potential = { always = no }
 
 	ai_will_do = { base = 0 }
-}
-
-forge_material_soul = {
-	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
-	major = yes
-
-	is_shown = {
-		is_magus = yes
-		NOT = { has_character_flag = materilised_soul }
-	}
-	
-	is_valid = {
-		has_perk = deacon_of_death_perk
-		has_perk = master_of_puppets_perk
-		var:mana >= var:soul_materialisation_mana_cost
-	}
-	
-	effect = {
-		trigger_event = ancient_magic_rituals_events.001
-	}
-	
-	ai_check_interval = 50
-
-	ai_will_do = {
-		base = 40
-		modifier = {
-			var:mage_level >= 10
-			add = 10
-		}
-		modifier = {
-			var:mage_level >= 15
-			add = 10
-		}
-		modifier = {
-			var:mage_level >= 20
-			add = 10
-		}
-		modifier = {
-			var:mage_level >= 25
-			add = 10
-		}
-		modifier = {
-			var:memory_life_capacity_left <= 10
-			multiply = 1.5
-		}
-	}
-	
 }

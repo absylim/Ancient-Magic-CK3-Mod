@@ -1,0 +1,62 @@
+﻿mage_perk = {
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_none
+	position = { 0 0 }
+	icon = node_diplomacy
+
+	auto_selection_weight = {
+		value = 11
+		if = {
+			limit = {
+				OR = {
+					has_trait = magic_potential
+					has_trait = education_arcane
+				}
+			}
+			add = 1989
+		}
+		if = {
+			limit = {
+				has_trait = ambitious
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_trait = greedy
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				NOT = { is_immortal = yes }
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				can_start_new_lifestyle_tree_trigger = no
+			}
+			multiply = 0
+		}
+	}
+
+	effect = {
+		awaken_magical_potential = yes
+		unlock_spark_spell = yes
+		give_mage_secret_or_trait_effect = yes
+		mod_bit = { MASK = none_perk_mask_0 BIT = mage_perk_bit OP = set }
+		set_variable = {
+			name = mana
+			value = 0
+		}
+		set_variable = {
+			name = mage_xp
+			value = 0
+		}
+		set_variable = {
+			name = available_magic_perks
+			value = 0
+		}
+	}
+}

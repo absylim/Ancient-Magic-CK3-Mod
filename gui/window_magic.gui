@@ -46,63 +46,83 @@
 			vbox = {
 				layoutpolicy_horizontal = expanding
 				layoutpolicy_vertical = expanding
+
 				hbox = {
 					layoutpolicy_horizontal = expanding
 					margin = { 30 10 }
+
 					text_single = {
 						text = "MAGE_LEVEL"
 					}
+
 					expand = {}
+
 					text_single = {
 						text = "MAGE_XP_TNL"
 					}
 				}
-				scrollarea = {
-					name = "spell_categories_scrollarea"
-					layoutpolicy_horizontal = expanding
 
-					size = { 660 81 }
-					scrollbarpolicy_vertical = always_off
-					scrollbar_horizontal = {
-						using = Scrollbar_Horizontal
-					}
-					scrollwidget = {
-						dynamicgridbox = {
-							datacontext = "[GetPlayer]"
-							layoutpolicy_vertical = expanding
-							allow_outside = yes
-							ignoreinvisible = yes
-							flipdirection = yes
-							maxhorizontalslots = 100
-							maxverticalslots = 1
-							block "datamodel" {
-								datamodel = "[GetGlobalList('spell_categories_list')]"
-							}
-							item = {
-								widget = {
-									#datacontext = "[Scope.GetFlagName]"
-									block "size" {
-										size = { 80 90 }
-									}
-									hbox = {
-										button_tertiary = {
-											onclick = "[GetVariableSystem.Set('current_category',Scope.GetFlagName)]"
-											enabled = "[Not(GetVariableSystem.HasValue('current_category',Scope.GetFlagName))]"
-											flowcontainer = {
-												resizeparent = yes
-												text_single = {
-													text = "[Localize(Concatenate(Concatenate('@icon_',Scope.GetFlagName), '_category!'))]"
-													fontsize = 16
-												}
-											}
-											size = { 80 80 }
-											tooltip = "[Localize(Concatenate(Scope.GetFlagName,'_category'))]"
+				hbox = {
+					size = { 660 90 }
+					expand = {}
+
+					scrollarea = {
+						name = "spell_categories_scrollarea"
+						layoutpolicy_horizontal = expanding
+						size = { 560 81 }
+						scrollbarpolicy_vertical = always_off
+
+						scrollbar_horizontal = {
+							using = Scrollbar_Horizontal
+						}
+
+						scrollwidget = {
+							dynamicgridbox = {
+								datacontext = "[GetPlayer]"
+								layoutpolicy_vertical = expanding
+								allow_outside = yes
+								ignoreinvisible = yes
+								flipdirection = yes
+								maxhorizontalslots = 100
+								maxverticalslots = 1
+
+								block "datamodel" {
+									datamodel = "[GetGlobalList('spell_categories_list')]"
+								}
+
+								item = {
+									widget = {
+										#datacontext = "[Scope.GetFlagName]"
+
+										block "size" {
+											size = { 80 90 }
 										}
-										expand = {}
+
+										hbox = {
+											button_tertiary = {
+												onclick = "[GetVariableSystem.Set('current_category',Scope.GetFlagName)]"
+												enabled = "[Not(GetVariableSystem.HasValue('current_category',Scope.GetFlagName))]"
+
+												flowcontainer = {
+													resizeparent = yes
+													text_single = {
+														text = "[Localize(Concatenate(Concatenate('@icon_',Scope.GetFlagName), '_category!'))]"
+														fontsize = 16
+													}
+												}
+
+												size = { 80 80 }
+												tooltip = "[Localize(Concatenate(Scope.GetFlagName,'_category'))]"
+											}
+
+											expand = {}
+										}
 									}
 								}
 							}
 						}
+
+						expand = {}
 					}
 				}
 				scrollbox = {
@@ -120,36 +140,46 @@
 							ignoreinvisible = yes
 							maxhorizontalslots = 1
 							maxverticalslots = 100
+
 							block "datamodel" {
 								datamodel = "[GetGlobalList(Concatenate(GetVariableSystem.Get('current_category'),'_spells_list'))]"
 							}
+
 							item = {
 								widget = {
 									visible = "[GetScriptedGui(Concatenate(Scope.GetFlagName,'_spellbook')).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End)]"
-									size = { 630 58 }
+									size = { 595 58 }
+
 									button_standard_clean = {
 										size = { 100% 85% }
 										enabled = "[GetScriptedGui(Concatenate(Scope.GetFlagName,'_spellbook')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End)]"
 										down = "[GetVariableSystem.HasValue('current_spell_selected',Scope.GetFlagName)]"
 										onclick = "[GetScriptedGui('clear_list_options').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										onclick = "[GetVariableSystem.Set('current_spell_selected',Scope.GetFlagName)]"
+
 										hbox = {
 											margin = { 10 0 }
 											spacer = { size = { 15 0 } }
+
 											text_single = {
 												text = "[Localize(Concatenate(Scope.GetFlagName,'_name'))]"
 												minimumsize = { 160 -1 }
 											}
+
 											expand = {}
+
 											icon = {
 												texture = "gfx/magic/MagicIcon.dds"
 												size = { 15 23 }
 											}
+
 											spacer = { size = { 5 0 } }
+
 											text_single = {
 												text = "[Abs_CFixedPoint(GetPlayer.MakeScope.ScriptValue(Concatenate(Scope.GetFlagName,'_cost')))|0]"
 												minimumsize = { 30 -1 }
 											}
+
 											spacer = { size = { 15 0 } }
 										}
 									}
@@ -158,7 +188,9 @@
 						}
 					}
 				}
+
 				spacer = { size = { 0 20 } }
+
 				text_multi = {
 					margin = { 20 20 }
 					visible = "[GetVariableSystem.Exists('current_spell_selected')]"
@@ -172,12 +204,16 @@
 
 				hbox = {
 					layoutpolicy_horizontal = expanding
+
 					spacer = { size = { 20 0 } }
+
 					vbox = {
 						datacontext = "[GetPlayer.MakeScope.Var('spell_target').GetCharacter]"
 						portrait_shoulders_magic = {}
 					}
+
 					spacer = { size = { 20 0 } }
+
 					vbox = {
 						layoutpolicy_vertical = expanding
 						text_multi = {
@@ -188,14 +224,20 @@
 							align = center
 							using = Background_Area_Dark
 						}
+
 						expand = {}
 					}
+
 					expand = {}
 				}
+
 				spacer = { size = { 0 20 } }
+
 				hbox = {
 					layoutpolicy_horizontal = expanding
+
 					expand = {}
+
 					button_tertiary_magic = {
 						text = "CAST_SPELL"
 						enabled = "[And(GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End),GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End))]"
@@ -204,22 +246,29 @@
 						onclick = "[GetScriptedGui('toggle_magic_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
 					}
+
 					spacer = { size = { 20 0 } }
+
 					icon = {
 						texture = "gfx/magic/MagicIcon.dds"
 						size = { 31 46 }
 					}
+
 					vbox = {
 						text_single = {
 							text = "CURRENT_MANA"
 						}
+
 						text_single = {
 							text = "CURRENT_MANA_NUM"
 						}
 					}
+
 					spacer = { size = { 30 0 } }
 				}
+
 				expand = {}
+
 				spacer = { size = { 0 20 } }
 			}
 		}
@@ -268,35 +317,47 @@
 						ignoreinvisible = yes
 						maxhorizontalslots = 1
 						maxverticalslots = 255
+
 						block "datamodel" {
 							datamodel = "[GetPlayer.MakeScope.GetList('spell_candidates')]"
 						}
+
 						item = {
 							widget = {
 								datacontext = "[Scope.GetCharacter]"
 								visible = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',Scope.Char.MakeScope).End)]"
+
 								block "size" {
 									size = { 300 90 }
 								}
+
 								button_tertiary = {
 									onclick = "[GetScriptedGui('select_character_target').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',Scope.Char.MakeScope).End)]"
 									onclick = "[GetVariableSystem.Clear( 'select_spell_target' )]"
+
 									flowcontainer = {
 										resizeparent = yes
+
 										spacer = { size = { 15 0 } }
+
 										portrait_head_small = {}
+
 										spacer = { size = { 15 0 } }
+
 										flowcontainer = {
 											ignoreinvisible = yes
 											direction = vertical
+
 											spacer = {
 												size = { 0 14 }
 											}
+
 											text_single = {
 												fontsize = 16
 												text = "SELECT_THIS"
 												default_format = "#italic"
 											}
+
 											text_single = {
 												text = "[Character.GetTitleAsNameNoTooltip]"
 												fontsize = 16
@@ -304,6 +365,7 @@
 												minimumsize = { 150 -1 }
 												visible = "[Character.HasLandedTitles]"
 											}
+
 											text_single = {
 												text = "[Character.GetFirstName]"
 												fontsize = 18
@@ -312,6 +374,7 @@
 											}
 										}
 									}
+
 									expand = {}
 								}
 							}
@@ -353,8 +416,10 @@
 
 			hbox = {
 				visible = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_has_properties')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
 				button = {
 					texture = "gfx/magic/icons/window_back.dds"
+
 					modify_texture = {
 						texture = "gfx/interface/colors/colors_textured.dds"
 						blend_mode = add
@@ -364,18 +429,22 @@
 							frame = 1
 						}
 					}
+
 					size = { 50 50 }
 					onclick = "[GetScriptedGui('decrease_times_repeated').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 					enabled = "[GetScriptedGui('decrease_times_repeated').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 				}
+
 				text_single = {
 					text = "REPEAT_X_TIMES"
 					fontsize = 18
 					minimumsize = { 60 -1 }
 					align = center
 				}
+
 				button = {
 					texture = "gfx/magic/icons/window_forward.dds"
+
 					modify_texture = {
 						texture = "gfx/interface/colors/colors_textured.dds"
 						blend_mode = add
@@ -385,9 +454,10 @@
 							frame = 1
 						}
 					}
+
 					size = { 50 50 }
-					onclick = "[GetScriptedGui('increase_times_repeated').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
-					enabled = "[GetScriptedGui('increase_times_repeated').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
+					onclick = "[GetScriptedGui('increase_times_repeated').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).AddScope('spell_cost',MakeScopeValue(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost')))).End)]"
+					enabled = "[GetScriptedGui('increase_times_repeated').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).AddScope('spell_cost',MakeScopeValue(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost')))).End)]"
 				}
 			}
 
@@ -406,24 +476,31 @@
 						addrow = 50
 						datamodel_reuse_widgets = yes
 						datamodel = "[GetPlayer.MakeScope.GetList(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_list'))]"
+
 						item = {
 							widget = {
 								size = { 100% 100% }
+
 								button_standard_clean = {
 									tooltip = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_has_list')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
 									enabled = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_has_list')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
 									down = "[GetScriptedGui('select_list_option').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).End)]"
 									onclick = "[GetScriptedGui('select_list_option').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('list_option',MakeScopeFlag(Scope.GetFlagName)).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
+
 									flowcontainer = {
 										resizeparent = yes
 										margin = { 10 10 }
+
 										spacer = { size = { 15 0 } }
+
 										text_single = {
 											text = "[Localize(Concatenate(Scope.GetFlagName,'_list_name'))]"
 											minimumsize = { 200% -1 }
 										}
+
 										expand = {}
 									}
+
 									expand = {}
 								}
 							}
@@ -431,7 +508,9 @@
 					}
 				}
 			}
+
 			expand = {}
+
 			spacer = { size = { 0 20 } }
 		}
 	}

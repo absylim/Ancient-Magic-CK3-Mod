@@ -11,10 +11,11 @@ mana = {
 }
 
 mana_cost = {
-    alias = { spell_energy mana_draw }
+    alias = { spell_cost }
 }
 
 mana_drain = {
+    alias = { mana_draw }
 }
 
 magic_talent = {
@@ -67,12 +68,24 @@ school_of_magic = {
     alias = { magic_school magical_school magic_discipline magical_discipline }
 }
 
+## Men At Arms
+stone_golems = {
+	texture = "gfx/interface/icons/regimenttypes/stone_golems.dds"
+    alias = { stone_golem }
+}
+
+lava_golems = {
+	texture = "gfx/interface/icons/regimenttypes/lava_golems.dds"
+    alias = { lava_golem }
+}
+
 undead = {
-    alias = { greater_undead }
+	texture = "gfx/interface/icons/regimenttypes/lesser_undead.dds"
+    alias = { lesser_undead greater_undead }
 }
 
 magocracy = {
-    alias = { magocracies magocratic magocracy_government }
+    alias = { magocracies magocratic magocratic_government }
 }
 
 city_of_magic = {
@@ -90,6 +103,9 @@ focal_point = {
 }
 
 ## Spell descriptions
+# None
+spark_spell = {}
+
 # Chronomancy
 glimpse_the_future_spell = {}
 
@@ -146,6 +162,8 @@ drain_life_spell = {}
 
 death_stare_spell = {}
 
+blight_spell = {}
+
 deacon_of_death_spell = {}
 
 # Biomancy
@@ -181,16 +199,3 @@ enchanting_aura_spell = {}
 sculpt_mind_spell = {}
 
 master_of_puppets_spell = {}
-
-## Men At Arms
-stone_golems = {
-	texture = "gfx/interface/icons/regimenttypes/stone_golems.dds"
-}
-
-lava_golems = {
-	texture = "gfx/interface/icons/regimenttypes/lava_golems.dds"
-}
-
-lesser_undead = {
-	texture = "gfx/interface/icons/regimenttypes/lesser_undead.dds"
-}

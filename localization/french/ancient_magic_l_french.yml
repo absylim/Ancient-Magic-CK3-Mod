@@ -26,8 +26,8 @@
  trait_master_of_puppets:0 "Master of Puppets"
  trait_master_of_puppets_desc:0 "This character has mastered the magic of the mind and can bend others to their will"
 #lifestyle
- arcane_lifestyle_name:0 "Magic"
- arcane_lifestyle_desc:0 "Arcane Mysteries"
+ ancient_magic_lifestyle_name:0 "Magic"
+ ancient_magic_lifestyle_desc:0 "Arcane Mysteries"
 #Focuses
  magic_arcana_focus:0 "Arcana"
  magic_arcana_focus_effect_desc:0 "You focus on your studies of the arcane to learn new magics faster."
@@ -102,7 +102,7 @@
  enchanting_aura_perk_name:0 "Enchanting Aura"
  master_of_puppets_perk_name:0 "Master of Puppets"
 #effects
- monthly_arcane_lifestyle_xp_gain_mult:0 "Monthly Magic [lifestyle|E] Experience"
+ monthly_ancient_magic_lifestyle_xp_gain_mult:0 "Monthly Magic [lifestyle|E] Experience"
  full_restoration_modifier_effect:0 "Fully Restored"
  MANA_GEN_MAGIC_PERK_EFFECT:0 "Increases monthly mana generation by [EmptyScope.ScriptValue('mana_gen_per_perk')|0]"
  MAX_MANA_MAGIC_PERK_EFFECT:0 "Increases monthly mana generation by [EmptyScope.ScriptValue('max_mana_per_perk')|0]"

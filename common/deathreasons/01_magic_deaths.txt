@@ -20,8 +20,3 @@ death_mana_devouring_2 = {
 	priority = 70
 	icon = "death_disease.dds"
 }
-
-death_botched_soul_forging = {
-	public_knowlage = yes
-	icon = "death_unknown.dds"
-}

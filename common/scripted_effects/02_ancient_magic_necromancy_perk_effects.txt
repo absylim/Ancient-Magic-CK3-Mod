@@ -34,6 +34,12 @@ unlock_death_stare_spell = {
 	}
 }
 
+unlock_blight_spell = {
+	custom_description_no_bullet = {
+		text = unlock_blight_spell
+	}
+}
+
 unlock_deacon_of_death_spell = {
 	custom_description_no_bullet = {
 		text = unlock_deacon_of_death_spell

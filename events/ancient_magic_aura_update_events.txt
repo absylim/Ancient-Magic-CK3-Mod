@@ -4,155 +4,28 @@ ancient_magic_aura_update_events.001 = {
 	hidden = yes
 
 	trigger = {
-		has_trait = mage
+		has_any_spell_aura_targets_trigger = yes
 	}
 
 	immediate = {
-		if = {
-			limit = { has_character_modifier = glimpse_the_future_modifier }
-			remove_all_character_modifier_instances = glimpse_the_future_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = glimpse_the_future_modifier }
-			}
-		}
-		if = {
-			limit = { has_character_modifier = financial_times_modifier }
-			remove_all_character_modifier_instances = financial_times_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = financial_times_modifier }
-			}
-		}
-		if = {
-			limit = { has_character_modifier = celerity_modifier }
-			remove_all_character_modifier_instances = celerity_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = celerity_modifier }
-			}
-		}
-		if = {
-			limit = { has_character_modifier = mass_celerity_modifier }
-			remove_all_character_modifier_instances = mass_celerity_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = mass_celerity_modifier }
-			}
-		}
-		if = {
-			limit = {
-				has_variable_list = slowness_spell_targets
-			}
-			every_in_list = {
-				variable = slowness_spell_targets
-				remove_all_character_modifier_instances = slowness_modifier
-				while = {
-					count = prev.mage_level
-					add_character_modifier = { modifier = slowness_modifier }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_variable_list = mass_slowness_spell_targets
-			}
-			every_in_list = {
-				variable = mass_slowness_spell_targets
-				remove_all_character_modifier_instances = mass_slowness_modifier
-				while = {
-					count = prev.mage_level
-					add_character_modifier = { modifier = mass_slowness_modifier }
-				}
-			}
-		}
-		if = {
-			limit = { has_character_modifier = temporal_manipulation_modifier }
-			remove_all_character_modifier_instances = temporal_manipulation_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = temporal_manipulation_modifier }
-			}
-		}
-		if = {
-			limit = { has_character_modifier = magic_haste_modifier }
-			remove_all_character_modifier_instances = magic_haste_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = magic_haste_modifier }
-			}
-		}
-		if = {
-			limit = { has_character_modifier = flame_aura_modifier }
-			remove_all_character_modifier_instances = flame_aura_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = flame_aura_modifier }
-			}
-		}
-		if = {
-			limit = { has_character_modifier = flaming_weapons_modifier }
-			remove_all_character_modifier_instances = flaming_weapons_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = flaming_weapons_modifier }
-			}
-		}
-		if = {
-			limit = { has_character_modifier = living_earthworks_modifier }
-			remove_all_character_modifier_instances = living_earthworks_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = living_earthworks_modifier }
-			}
-		}
-		if = {
-			limit = { has_character_modifier = control_water_modifier }
-			remove_all_character_modifier_instances = control_water_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = control_water_modifier }
-			}
-		}
-		if = {
-			limit = { has_character_modifier = drought_modifier }
-			remove_all_character_modifier_instances = drought_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = drought_modifier }
-			}
-		}
-		if = {
-			limit = { has_character_modifier = elemental_warrior_modifier }
-			remove_all_character_modifier_instances = elemental_warrior_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = elemental_warrior_modifier }
-			}
-		}
-		if = {
-			limit = { has_character_modifier = aura_of_death_modifier }
-			remove_all_character_modifier_instances = aura_of_death_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = aura_of_death_modifier }
-			}
-		}
-		if = {
-			limit = { has_character_modifier = beguiling_aura_modifier }
-			remove_all_character_modifier_instances = beguiling_aura_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = beguiling_aura_modifier }
-			}
-		}
-		if = {
-			limit = { has_character_modifier = enchanting_aura_modifier }
-			remove_all_character_modifier_instances = enchanting_aura_modifier
-			while = {
-				count = mage_level
-				add_character_modifier = { modifier = enchanting_aura_modifier }
-			}
-		}
+		update_aura_effect = { MASK = aura_mask_0 SPELL = glimpse_the_future_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = financial_times_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = celerity_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = mass_celerity_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = slowness_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = mass_slowness_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = temporal_manipulation_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = haste_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = flame_aura_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = flaming_weapons_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = living_earthworks_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = control_water_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = drought_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = elemental_warrior_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = aura_of_death_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = blight_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = beguiling_aura_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = enchanting_aura_spell }
+		update_aura_effect = { MASK = aura_mask_0 SPELL = glimpse_the_future_spell }
 	}
 }

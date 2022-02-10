@@ -1,0 +1,11 @@
+﻿awaken_magical_potential = {
+	custom_description_no_bullet = {
+		text = awaken_magical_potential
+	}
+}
+
+unlock_spark_spell = {
+	custom_description_no_bullet = {
+		text = unlock_spark_spell
+	}
+}
