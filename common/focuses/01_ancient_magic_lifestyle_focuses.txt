@@ -1,6 +1,8 @@
 ﻿magic_arcana_focus = {
 	lifestyle = arcane_lifestyle
 	
+	focus_id = 101
+	
 	desc = {
 		desc = magic_arcana_focus_desc
 		desc = line_break
@@ -45,12 +47,11 @@
 			add = -300
 		}
 	}
-	
-	focus_id = 9501
 }
 
 magic_meditation_focus = {
 	lifestyle = arcane_lifestyle
+	focus_id = 102
 	
 	desc = {
 		desc = magic_meditation_focus_desc
@@ -86,12 +87,11 @@ magic_meditation_focus = {
 			add = 300
 		}
 	}
-	
-	focus_id = 9502
 }
 
 magic_mana_focus = {
 	lifestyle = arcane_lifestyle
+	focus_id = 103
 	
 	desc = {
 		desc = magic_mana_focus_desc
@@ -125,6 +125,4 @@ magic_mana_focus = {
 			add = 350;
 		}
 	}
-	
-	focus_id = 9503
 }

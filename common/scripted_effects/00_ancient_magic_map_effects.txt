@@ -280,7 +280,7 @@ populate_ley_lines = {
 	create_ley_lines = { TITLE = b_al-mandab }
 	create_ley_lines = { TITLE = b_berbera }
 	create_ley_lines = { TITLE = b_sheikh }
-	create_ley_lines = { TITLE = b_mudug-sout }
+	create_ley_lines = { TITLE = b_mudug-south }
 	create_ley_lines = { TITLE = b_hobyo-north }
 	create_ley_lines = { TITLE = c_faras }
 	create_ley_lines = { TITLE = b_sheikh_dawud }
