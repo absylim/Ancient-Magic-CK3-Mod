@@ -144,3 +144,9 @@ full_restoration_modifier = {
 	icon = health_positive
 	health = 100
 }
+
+studying_arcane = {
+	icon = arcane_positive
+	learning = 2
+	martial = 1
+}
