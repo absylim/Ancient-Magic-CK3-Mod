@@ -75,10 +75,10 @@ magocracy_councilor_template = {
 	}
 	after_creation = {
 		random_list = {
-			50 = { add_arcane_lifestyle_xp = 3000 }
-			30 = { add_arcane_lifestyle_xp = 4000 }
-			15 = { add_arcane_lifestyle_xp = 6000 }
-			5 = { add_arcane_lifestyle_xp = 8000 }
+			50 = { change_mage_xp = { VALUE =  3000 } }
+			30 = { change_mage_xp = { VALUE =  4000 } }
+			15 = { change_mage_xp = { VALUE =  6000 } }
+			5 = { change_mage_xp = { VALUE =  8000 } }
 		}
 		if = {
 			limit = {
@@ -87,13 +87,13 @@ magocracy_councilor_template = {
 			random_list = {
 				50 = {}
 				30 = {
-					add_arcane_lifestyle_xp = 500
+					change_mage_xp = { VALUE = 500 }
 				}
 				20 = {
-					add_arcane_lifestyle_xp = 1000
+					change_mage_xp = { VALUE = 1000 }
 				}
 				5 = {
-					add_arcane_lifestyle_xp = 1500
+					change_mage_xp = { VALUE = 1500 }
 				}
 			}
 		}
@@ -104,13 +104,13 @@ magocracy_councilor_template = {
 			random_list = {
 				25 = {}
 				50 = {
-					add_arcane_lifestyle_xp = 1000
+					change_mage_xp = { VALUE = 1000 }
 				}
 				20 = {
-					add_arcane_lifestyle_xp = 2000
+					change_mage_xp = { VALUE = 2000 }
 				}
 				5 = {
-					add_arcane_lifestyle_xp = 3000
+					change_mage_xp = { VALUE = 3000 }
 				}
 			}
 		}
@@ -121,13 +121,13 @@ magocracy_councilor_template = {
 			random_list = {
 				25 = {}
 				50 = {
-					add_arcane_lifestyle_xp = 1500
+					change_mage_xp = { VALUE = 1500 }
 				}
 				20 = {
-					add_arcane_lifestyle_xp = 3000
+					change_mage_xp = { VALUE = 3000 }
 				}
 				5 = {
-					add_arcane_lifestyle_xp = 4000
+					change_mage_xp = { VALUE = 4000 }
 				}
 			}
 		}
@@ -138,13 +138,13 @@ magocracy_councilor_template = {
 			random_list = {
 				25 = {}
 				50 = {
-					add_arcane_lifestyle_xp = 2000
+					change_mage_xp = { VALUE = 2000 }
 				}
 				20 = {
-					add_arcane_lifestyle_xp = 4000
+					change_mage_xp = { VALUE = 4000 }
 				}
 				5 = {
-					add_arcane_lifestyle_xp = 5000
+					change_mage_xp = { VALUE = 5000 }
 				}
 			}
 		}
@@ -155,13 +155,13 @@ magocracy_councilor_template = {
 			random_list = {
 				25 = {}
 				50 = {
-					add_arcane_lifestyle_xp = 2500
+					change_mage_xp = { VALUE = 2500 }
 				}
 				20 = {
-					add_arcane_lifestyle_xp = 5000
+					change_mage_xp = { VALUE = 5000 }
 				}
 				5 = {
-					add_arcane_lifestyle_xp = 6000
+					change_mage_xp = { VALUE = 6000 }
 				}
 			}
 		}
