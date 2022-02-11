@@ -8,11 +8,15 @@ spark_spell = {
 		has_enough_mana_trigger = { SPELL = spark_spell }
 	}
 	effect = {
-		while = {
-			count = var:repeat_count
-			change_mana_with_tooltip = { VALUE = spark_spell_cost.neg }
-			change_mage_xp = { VALUE = spark_spell_cost.abs }
+		save_temporary_scope_value_as = {
+			name = spell_cost
+			value = {
+				value = spark_spell_cost.abs
+				multiply = var:repeat_count
+			}
 		}
+		change_mana_with_tooltip = { VALUE = spell_cost.neg }
+		change_mage_xp = { VALUE = scope:spell_cost }
 	}
 }
 
