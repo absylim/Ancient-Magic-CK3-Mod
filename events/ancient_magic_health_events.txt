@@ -419,6 +419,8 @@ AMHealth.0005 = {
 
 	trigger = {
 		can_contract_disease_trigger = { DISEASE = mana_devouring }
+		exists = memory_life_capacity_left
+		memory_life_capacity_left <= 5
 	}
 
 	weight_multiplier = {
@@ -680,14 +682,13 @@ AMHealth.2202 = {
 AMHealth.3001 = {
 	hidden = yes
 	trigger = {
-		OR = { has_trait = mana }
+		is_magus_trigger = yes
 	}
 	
 	immediate = {
 		if = {
 			limit = {
 				has_character_flag = flag:mana_devouring_1
-				has_trait = mana
 				var:mana <= 0
 				var:mana_gen <= 0
 			}
@@ -696,7 +697,6 @@ AMHealth.3001 = {
 		else_if = {
 			limit = {
 				has_character_flag = flag:mana_devouring_2
-				has_trait = mana
 				var:mana >= 200
 				var:mana_gen >= 1
 			}
