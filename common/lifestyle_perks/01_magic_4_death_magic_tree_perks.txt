@@ -1,5 +1,4 @@
 ﻿death_mage_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_necromancy
 	position = { 2 0 }
 	icon = node_diplomacy
@@ -75,7 +74,6 @@
 }
 
 inflict_illness_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_necromancy
 	position = { 0 1.25 }
 	icon = node_diplomacy
@@ -93,7 +91,6 @@ inflict_illness_perk = {
 }
 
 plague_lord_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_necromancy
 	position = { 0 2.5 }
 	icon = node_diplomacy
@@ -111,7 +108,6 @@ plague_lord_perk = {
 }
 
 aura_of_death_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_necromancy
 	position = { 2 1.25 }
 	icon = node_diplomacy
@@ -129,7 +125,6 @@ aura_of_death_perk = {
 }
 
 necromancy_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_necromancy
 	position = { 2 2.5 }
 	icon = node_diplomacy
@@ -147,7 +142,6 @@ necromancy_perk = {
 }
 
 drain_life_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_necromancy
 	position = { 4 1.25 }
 	icon = node_diplomacy
@@ -165,7 +159,6 @@ drain_life_perk = {
 }
 
 death_stare_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_necromancy
 	position = { 4 2.5 }
 	icon = node_diplomacy
@@ -183,7 +176,6 @@ death_stare_perk = {
 }
 
 blight_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_necromancy
 	position = { 2 3.75 }
 	icon = node_diplomacy
@@ -203,7 +195,6 @@ blight_perk = {
 }
 
 deacon_of_death_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_necromancy
 	position = { 2 5 }
 	icon = deacon_of_death

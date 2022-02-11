@@ -1,5 +1,4 @@
 ﻿time_mage_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_time
 	position = { 2 0 }
 	icon = node_diplomacy
@@ -68,7 +67,6 @@
 }
 
 glimpse_the_future_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_time
 	position = { 0 1.25 }
 	icon = node_diplomacy
@@ -135,7 +133,6 @@ glimpse_the_future_perk = {
 }
 
 financial_times_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_time
 	position = { 0 2.5 }
 	icon = node_diplomacy
@@ -202,7 +199,6 @@ financial_times_perk = {
 }
 
 celerity_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_time
 	position = { 2 1.25 }
 	icon = node_diplomacy
@@ -269,7 +265,6 @@ celerity_perk = {
 }
 
 mass_celerity_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_time
 	position = { 2 2.5 }
 	icon = node_diplomacy
@@ -336,7 +331,6 @@ mass_celerity_perk = {
 }
 
 slowness_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_time
 	position = { 4 1.25 }
 	icon = node_diplomacy
@@ -403,7 +397,6 @@ slowness_perk = {
 }
 
 mass_slowness_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_time
 	position = { 4 2.5 }
 	icon = node_diplomacy
@@ -470,7 +463,6 @@ mass_slowness_perk = {
 }
 
 temporal_manipulation_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_time
 	position = { 2 3.75 }
 	icon = node_diplomacy
@@ -540,7 +532,6 @@ temporal_manipulation_perk = {
 }
 
 master_of_time_perk = {
-	lifestyle = ancient_magic_lifestyle
 	tree = ancient_magic_time
 	position = { 2 5 }
 	icon = master_of_time
