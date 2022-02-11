@@ -130,14 +130,11 @@ on_reset_mana_system = {
 			name = mana_gen
 			value = 0
 		}
+		# Hook up to this action's on_actions to register the things your mod needs
+		# to do to update the player's mana and mana gen
 		trigger_event = { on_action = reset_mana_system }
 		trigger_event = { on_action = delayed_mana_clamp }
 	}
-}
-
-# Hook up to this action's on_actions to register the things your mod needs
-# to do to update the player's mana and mana gen
-reset_mana_system = {
 }
 
 delayed_mana_clamp = {
