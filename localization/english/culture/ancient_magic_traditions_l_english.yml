@@ -1,0 +1,11 @@
+﻿l_english:
+ tradition_wonders_of_magic_name:0 "Wonders of Magic"
+ tradition_wonders_of_magic_desc:1 "Magic is wonderous and very practicle, so lets support magic for our new wonderous future!"
+ 
+#penalty descriptions
+ witchcraft_illegal_desc:1 "The [faith|E] has Witchcraft Criminal"
+ witchcraft_shunned_desc:1 "The [faith|E] has Witchcraft Shunned"
+ 
+#parameters
+ culture_parameter_magical_traits_renown: "Magicals gain bit of [dynasty_prestige_i][dynasty_prestige|E]"
+ culture_parameter_magical_traits_opinion_boost: "Megical gain [culture|E] [opinion|E] boost"
