@@ -12,7 +12,7 @@
 		if = {
 			limit = {
 				NOT = {
-					has_character_modifier = beguiling_aura_modifier
+					has_character_modifier = beguiling_aura_spell_modifier
 				}
 			}
 
@@ -23,7 +23,7 @@
 			while = {
 				count = mage_level
 				add_character_modifier = {
-					modifier = beguiling_aura_modifier
+					modifier = beguiling_aura_spell_modifier
 					mode = add
 				}
 			}
@@ -31,14 +31,14 @@
 		else_if = {
 			limit = {
 				OR = {
-					has_character_modifier = beguiling_aura_modifier
+					has_character_modifier = beguiling_aura_spell_modifier
 				}
 			}
 			change_mana_gen = { VALUE = 15 }
 
 			while = {
 				count = 100
-				remove_character_modifier = beguiling_aura_modifier
+				remove_character_modifier = beguiling_aura_spell_modifier
 			}
 		}
 	}
@@ -59,12 +59,12 @@
 		
 		modifier = {
 			factor = 0
-			has_character_modifier = beguiling_aura_modifier
+			has_character_modifier = beguiling_aura_spell_modifier
 		}
 		
 		modifier = {
 			add = 50
-			has_character_modifier = beguiling_aura_modifier
+			has_character_modifier = beguiling_aura_spell_modifier
 			var:mana_gen <= 0
 		}
 	}
@@ -84,7 +84,7 @@ enchanting_aura_ai_spell_decision = {
 		if = {
 			limit = {
 				NOT = {
-					has_character_modifier = enchanting_aura_modifier
+					has_character_modifier = enchanting_aura_spell_modifier
 				}
 			}
 
@@ -95,7 +95,7 @@ enchanting_aura_ai_spell_decision = {
 			while = {
 				count = mage_level
 				add_character_modifier = {
-					modifier = enchanting_aura_modifier
+					modifier = enchanting_aura_spell_modifier
 					mode = add
 				}
 			}
@@ -103,7 +103,7 @@ enchanting_aura_ai_spell_decision = {
 		else_if = {
 			limit = {
 				OR = {
-					has_character_modifier = enchanting_aura_modifier
+					has_character_modifier = enchanting_aura_spell_modifier
 				}
 			}
 
@@ -111,7 +111,7 @@ enchanting_aura_ai_spell_decision = {
 
 			while = {
 				count = 100
-				remove_character_modifier = enchanting_aura_modifier
+				remove_character_modifier = enchanting_aura_spell_modifier
 			}
 		}
 	}
@@ -132,13 +132,13 @@ enchanting_aura_ai_spell_decision = {
 		
 		modifier = {
 			factor = 0
-			has_character_modifier = enchanting_aura_modifier
+			has_character_modifier = enchanting_aura_spell_modifier
 		}
 		
 		modifier = {
 			add = 50
 			AND = {
-				has_character_modifier = enchanting_aura_modifier
+				has_character_modifier = enchanting_aura_spell_modifier
 				var:mana_gen <= 0
 			}
 		}

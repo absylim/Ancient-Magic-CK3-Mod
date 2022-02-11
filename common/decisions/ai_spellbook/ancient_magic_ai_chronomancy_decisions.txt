@@ -12,7 +12,7 @@
 		if = {
 			limit = {
 				NOT = {
-					has_character_modifier = haste_spell_modifier
+					has_character_modifier = mass_celerity_spell_modifier
 				}
 			}
 
@@ -23,7 +23,7 @@
 			while = {
 				count = mage_level
 				add_character_modifier = {
-					modifier = haste_spell_modifier
+					modifier = mass_celerity_spell_modifier
 					mode = add
 				}
 			}
@@ -31,14 +31,14 @@
 		else_if = {
 			limit = {
 				OR = {
-					has_character_modifier = haste_spell_modifier
+					has_character_modifier = mass_celerity_spell_modifier
 				}
 			}
 			change_mana_gen = { VALUE = 15 }
 
 			while = {
 				count = 100
-				remove_character_modifier = haste_spell_modifier
+				remove_character_modifier = mass_celerity_spell_modifier
 			}
 		}
 	}
@@ -59,12 +59,12 @@
 		
 		modifier = {
 			factor = 0
-			has_character_modifier = haste_spell_modifier
+			has_character_modifier = mass_celerity_spell_modifier
 		}
 		
 		modifier = {
 			add = 50
-			has_character_modifier = haste_spell_modifier
+			has_character_modifier = mass_celerity_spell_modifier
 			var:mana_gen <= 0
 		}
 	}
@@ -84,7 +84,7 @@ glimpse_the_future_ai_spell_decision = {
 		if = {
 			limit = {
 				NOT = {
-					has_character_modifier = glimpse_the_future_modifier
+					has_character_modifier = glimpse_the_future_spell_modifier
 				}
 			}
 
@@ -95,7 +95,7 @@ glimpse_the_future_ai_spell_decision = {
 			while = {
 				count = mage_level
 				add_character_modifier = {
-					modifier = glimpse_the_future_modifier
+					modifier = glimpse_the_future_spell_modifier
 					mode = add
 				}
 			}
@@ -103,7 +103,7 @@ glimpse_the_future_ai_spell_decision = {
 		else_if = {
 			limit = {
 				OR = {
-					has_character_modifier = glimpse_the_future_modifier
+					has_character_modifier = glimpse_the_future_spell_modifier
 				}
 			}
 
@@ -111,7 +111,7 @@ glimpse_the_future_ai_spell_decision = {
 
 			while = {
 				count = 100
-				remove_character_modifier = glimpse_the_future_modifier
+				remove_character_modifier = glimpse_the_future_spell_modifier
 			}
 		}
 	}
@@ -132,13 +132,13 @@ glimpse_the_future_ai_spell_decision = {
 		
 		modifier = {
 			factor = 0
-			has_character_modifier = glimpse_the_future_modifier
+			has_character_modifier = glimpse_the_future_spell_modifier
 		}
 		
 		modifier = {
 			add = 50
 			AND = {
-				has_character_modifier = glimpse_the_future_modifier
+				has_character_modifier = glimpse_the_future_spell_modifier
 				var:mana_gen <= 0
 			}
 		}
@@ -159,7 +159,7 @@ financial_times_ai_spell_decision = {
 		if = {
 			limit = {
 				NOT = {
-					has_character_modifier = financial_times_modifier
+					has_character_modifier = financial_times_spell_modifier
 				}
 			}
 
@@ -170,7 +170,7 @@ financial_times_ai_spell_decision = {
 			while = {
 				count = mage_level
 				add_character_modifier = {
-					modifier = financial_times_modifier
+					modifier = financial_times_spell_modifier
 					mode = add
 				}
 			}
@@ -178,7 +178,7 @@ financial_times_ai_spell_decision = {
 		else_if = {
 			limit = {
 				OR = {
-					has_character_modifier = financial_times_modifier
+					has_character_modifier = financial_times_spell_modifier
 				}
 			}
 
@@ -186,7 +186,7 @@ financial_times_ai_spell_decision = {
 
 			while = {
 				count = 100
-				remove_character_modifier = financial_times_modifier
+				remove_character_modifier = financial_times_spell_modifier
 			}
 		}
 	}
@@ -211,12 +211,12 @@ financial_times_ai_spell_decision = {
 		
 		modifier = {
 			factor = 0
-			has_character_modifier = financial_times_modifier
+			has_character_modifier = financial_times_spell_modifier
 		}
 		
 		modifier = {
 			add = 50
-			has_character_modifier = financial_times_modifier
+			has_character_modifier = financial_times_spell_modifier
 			var:mana_gen <= 0
 		}
 	}
@@ -236,7 +236,7 @@ celerity_ai_spell_decision = {
 		if = {
 			limit = {
 				NOT = {
-					has_character_modifier = celerity_modifier
+					has_character_modifier = celerity_spell_modifier
 				}
 			}
 
@@ -247,7 +247,7 @@ celerity_ai_spell_decision = {
 			while = {
 				count = mage_level
 				add_character_modifier = {
-					modifier = celerity_modifier
+					modifier = celerity_spell_modifier
 					mode = add
 				}
 			}
@@ -255,7 +255,7 @@ celerity_ai_spell_decision = {
 		else_if = {
 			limit = {
 				OR = {
-					has_character_modifier = celerity_modifier
+					has_character_modifier = celerity_spell_modifier
 				}
 			}
 
@@ -263,7 +263,7 @@ celerity_ai_spell_decision = {
 
 			while = {
 				count = 100
-				remove_character_modifier = celerity_modifier
+				remove_character_modifier = celerity_spell_modifier
 			}
 		}
 	}
@@ -288,12 +288,12 @@ celerity_ai_spell_decision = {
 		
 		modifier = {
 			factor = 0
-			has_character_modifier = celerity_modifier
+			has_character_modifier = celerity_spell_modifier
 		}
 		
 		modifier = {
 			add = 50
-			has_character_modifier = celerity_modifier
+			has_character_modifier = celerity_spell_modifier
 			var:mana_gen <= 0
 		}
 	}
@@ -313,7 +313,7 @@ temporal_manipulation_ai_spell_decision = {
 		if = {
 			limit = {
 				NOT = {
-					has_character_modifier = temporal_manipulation_modifier
+					has_character_modifier = temporal_manipulation_spell_modifier
 				}
 			}
 
@@ -324,7 +324,7 @@ temporal_manipulation_ai_spell_decision = {
 			while = {
 				count = mage_level
 				add_character_modifier = {
-					modifier = temporal_manipulation_modifier
+					modifier = temporal_manipulation_spell_modifier
 					mode = add
 				}
 			}
@@ -332,7 +332,7 @@ temporal_manipulation_ai_spell_decision = {
 		else_if = {
 			limit = {
 				OR = {
-					has_character_modifier = temporal_manipulation_modifier
+					has_character_modifier = temporal_manipulation_spell_modifier
 				}
 			}
 
@@ -340,7 +340,7 @@ temporal_manipulation_ai_spell_decision = {
 
 			while = {
 				count = 100
-				remove_character_modifier = temporal_manipulation_modifier
+				remove_character_modifier = temporal_manipulation_spell_modifier
 			}
 		}
 	}
@@ -361,12 +361,12 @@ temporal_manipulation_ai_spell_decision = {
 		
 		modifier = {
 			factor = 0
-			has_character_modifier = temporal_manipulation_modifier
+			has_character_modifier = temporal_manipulation_spell_modifier
 		}
 		
 		modifier = {
 			add = 50
-			has_character_modifier = temporal_manipulation_modifier
+			has_character_modifier = temporal_manipulation_spell_modifier
 			var:mana_gen <= 0
 		}
 	}

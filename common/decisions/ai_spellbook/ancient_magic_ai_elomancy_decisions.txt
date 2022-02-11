@@ -105,7 +105,7 @@ flame_aura_ai_spell_decision = {
 			limit = {
 				var:mana.compare_value >= var:flame_aura_spell_cost.compare_value
 				NOT = {
-					has_character_modifier = flame_aura_modifier
+					has_character_modifier = flame_aura_spell_modifier
 				}
 			}
 
@@ -116,7 +116,7 @@ flame_aura_ai_spell_decision = {
 			while = {
 				count = mage_level
 				add_character_modifier = {
-					modifier = flame_aura_modifier
+					modifier = flame_aura_spell_modifier
 					mode = add
 				}
 			}
@@ -124,7 +124,7 @@ flame_aura_ai_spell_decision = {
 		else_if = {
 			limit = {
 				OR = {
-					has_character_modifier = flame_aura_modifier
+					has_character_modifier = flame_aura_spell_modifier
 				}
 			}
 
@@ -132,7 +132,7 @@ flame_aura_ai_spell_decision = {
 
 			while = {
 				count = 100
-				remove_character_modifier = flame_aura_modifier
+				remove_character_modifier = flame_aura_spell_modifier
 			}
 		}
 	}
@@ -149,12 +149,12 @@ flame_aura_ai_spell_decision = {
 		
 		modifier = {
 			factor = 0
-			has_character_modifier = flame_aura_modifier
+			has_character_modifier = flame_aura_spell_modifier
 		}
 		
 		modifier = {
 			add = 50
-			has_character_modifier = flame_aura_modifier
+			has_character_modifier = flame_aura_spell_modifier
 			var:mana_gen <= 0
 		}
 	}
@@ -175,7 +175,7 @@ flaming_weapons_ai_spell_decision = {
 			limit = {
 				var:mana.compare_value >= var:flaming_weapons_spell_cost.compare_value
 				NOT = {
-					has_character_modifier = flaming_weapons_modifier
+					has_character_modifier = flaming_weapons_spell_modifier
 				}
 			}
 
@@ -186,7 +186,7 @@ flaming_weapons_ai_spell_decision = {
 			while = {
 				count = mage_level
 				add_character_modifier = {
-					modifier = flaming_weapons_modifier
+					modifier = flaming_weapons_spell_modifier
 					mode = add
 				}
 			}
@@ -194,7 +194,7 @@ flaming_weapons_ai_spell_decision = {
 		else_if = {
 			limit = {
 				OR = {
-					has_character_modifier = flaming_weapons_modifier
+					has_character_modifier = flaming_weapons_spell_modifier
 				}
 			}
 
@@ -202,7 +202,7 @@ flaming_weapons_ai_spell_decision = {
 
 			while = {
 				count = 100
-				remove_character_modifier = flaming_weapons_modifier
+				remove_character_modifier = flaming_weapons_spell_modifier
 			}
 		}
 	}
@@ -219,12 +219,12 @@ flaming_weapons_ai_spell_decision = {
 		
 		modifier = {
 			factor = 0
-			has_character_modifier = flaming_weapons_modifier
+			has_character_modifier = flaming_weapons_spell_modifier
 		}
 		
 		modifier = {
 			add = 50
-			has_character_modifier = flaming_weapons_modifier
+			has_character_modifier = flaming_weapons_spell_modifier
 			var:mana_gen <= 0
 		}
 	}
@@ -245,7 +245,7 @@ living_earthworks_ai_spell_decision = {
 			limit = {
 				var:mana.compare_value >= var:living_earthworks_spell_cost.compare_value
 				NOT = {
-					has_character_modifier = living_earthworks_modifier
+					has_character_modifier = living_earthworks_spell_modifier
 				}
 			}
 
@@ -256,7 +256,7 @@ living_earthworks_ai_spell_decision = {
 			while = {
 				count = mage_level
 				add_character_modifier = {
-					modifier = living_earthworks_modifier
+					modifier = living_earthworks_spell_modifier
 					mode = add
 				}
 			}
@@ -264,7 +264,7 @@ living_earthworks_ai_spell_decision = {
 		else_if = {
 			limit = {
 				OR = {
-					has_character_modifier = living_earthworks_modifier
+					has_character_modifier = living_earthworks_spell_modifier
 				}
 			}
 
@@ -272,7 +272,7 @@ living_earthworks_ai_spell_decision = {
 
 			while = {
 				count = 100
-				remove_character_modifier = living_earthworks_modifier
+				remove_character_modifier = living_earthworks_spell_modifier
 			}
 		}
 	}
@@ -289,12 +289,12 @@ living_earthworks_ai_spell_decision = {
 		
 		modifier = {
 			factor = 0
-			has_character_modifier = living_earthworks_modifier
+			has_character_modifier = living_earthworks_spell_modifier
 		}
 		
 		modifier = {
 			add = 50
-			has_character_modifier = living_earthworks_modifier
+			has_character_modifier = living_earthworks_spell_modifier
 			var:mana_gen <= 0
 		}
 	}
@@ -315,7 +315,7 @@ water_control_ai_spell_decision = {
 			limit = {
 				var:mana.compare_value >= var:control_water_spell_cost.compare_value
 				NOT = {
-					has_character_modifier = control_water_modifier
+					has_character_modifier = control_water_spell_modifier
 				}
 			}
 
@@ -326,7 +326,7 @@ water_control_ai_spell_decision = {
 			while = {
 				count = mage_level
 				add_character_modifier = {
-					modifier = control_water_modifier
+					modifier = control_water_spell_modifier
 					mode = add
 				}
 			}
@@ -334,7 +334,7 @@ water_control_ai_spell_decision = {
 		else_if = {
 			limit = {
 				OR = {
-					has_character_modifier = control_water_modifier
+					has_character_modifier = control_water_spell_modifier
 				}
 			}
 
@@ -342,7 +342,7 @@ water_control_ai_spell_decision = {
 
 			while = {
 				count = 100
-				remove_character_modifier = control_water_modifier
+				remove_character_modifier = control_water_spell_modifier
 			}
 		}
 	}
@@ -359,12 +359,12 @@ water_control_ai_spell_decision = {
 		
 		modifier = {
 			factor = 0
-			has_character_modifier = control_water_modifier
+			has_character_modifier = control_water_spell_modifier
 		}
 		
 		modifier = {
 			add = 50
-			has_character_modifier = control_water_modifier
+			has_character_modifier = control_water_spell_modifier
 			var:mana_gen <= 0
 		}
 	}
@@ -384,7 +384,7 @@ cloak_of_elements_ai_spell_decision = {
 		if = {
 			limit = {
 				NOT = {
-					has_character_modifier = elemental_warrior_modifier
+					has_character_modifier = elemental_warrior_spell_modifier
 				}
 			}
 
@@ -395,7 +395,7 @@ cloak_of_elements_ai_spell_decision = {
 			while = {
 				count = mage_level
 				add_character_modifier = {
-					modifier = elemental_warrior_modifier
+					modifier = elemental_warrior_spell_modifier
 					mode = add
 				}
 			}
@@ -403,7 +403,7 @@ cloak_of_elements_ai_spell_decision = {
 		else_if = {
 			limit = {
 				OR = {
-					has_character_modifier = elemental_warrior_modifier
+					has_character_modifier = elemental_warrior_spell_modifier
 				}
 			}
 
@@ -411,7 +411,7 @@ cloak_of_elements_ai_spell_decision = {
 
 			while = {
 				count = 100
-				remove_character_modifier = elemental_warrior_modifier
+				remove_character_modifier = elemental_warrior_spell_modifier
 			}
 		}
 	}
@@ -428,12 +428,12 @@ cloak_of_elements_ai_spell_decision = {
 		
 		modifier = {
 			factor = 0
-			has_character_modifier = elemental_warrior_modifier
+			has_character_modifier = elemental_warrior_spell_modifier
 		}
 		
 		modifier = {
 			add = 50
-			has_character_modifier = elemental_warrior_modifier
+			has_character_modifier = elemental_warrior_spell_modifier
 			var:mana_gen <= 0
 		}
 	}
