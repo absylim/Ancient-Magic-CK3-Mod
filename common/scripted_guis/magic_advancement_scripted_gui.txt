@@ -1,5 +1,6 @@
 ﻿can_use_magic_advancement_window = {
 	is_valid = {
+		exists = this
 		OR = {
 			mage_potency > 0
 			mage_education > 0
@@ -10,6 +11,7 @@
 is_magic_advancement_window_open = {
 	scope = character
 	is_valid = {
+		exists = this
 		has_variable = window_magic_advancement_view
 	}
 }

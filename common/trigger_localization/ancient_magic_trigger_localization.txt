@@ -23,3 +23,9 @@ personality_traits_under_limit_trigger = {
 	first = FIRST_PERSONALITY_IS_UNDER
 	third = THIRD_PERSONALITY_IS_UNDER
 }
+
+cant_blackmail_another_mage = {
+    global = GLOBAL_CANT_BLACKMAIL_ANOTHER_MAGE
+    first = FIRST_CANT_BLACKMAIL_ANOTHER_MAGE
+    third = THIRD_CANT_BLACKMAIL_ANOTHER_MAGE
+}

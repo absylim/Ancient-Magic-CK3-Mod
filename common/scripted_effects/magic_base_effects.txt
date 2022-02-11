@@ -170,11 +170,9 @@
 	add_to_global_variable_list = { name = mana_gen_income target = flag:gen_perks }
 	add_to_global_variable_list = { name = mana_gen_income target = flag:gen_potency }
 	add_to_global_variable_list = { name = mana_gen_income target = flag:gen_circles }
-	add_to_global_variable_list = { name = mana_gen_income target = flag:gen_lifestyle }
 	add_to_global_variable_list = { name = mana_gen_income target = flag:gen_legacy }
 	clear_global_variable_list = mana_gen_expenses
 	add_to_global_variable_list = { name = mana_gen_expenses target = flag:drain_auras }
-	add_to_global_variable_list = { name = mana_gen_expenses target = flag:drain_lifestyle }
 	add_to_global_variable_list = { name = mana_gen_expenses target = flag:drain_disease }
 	clear_global_variable_list = gen_perks
 	add_to_global_variable_list = { name = gen_perks target = flag:time_mage_perk }

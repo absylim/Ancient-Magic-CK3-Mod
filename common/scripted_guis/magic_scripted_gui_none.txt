@@ -12,7 +12,7 @@ spark_spell = {
 			name = spell_cost
 			value = {
 				value = spark_spell_cost.abs
-				multiply = var:repeat_count
+				multiply = var:repeat_spell
 			}
 		}
 		change_mana_with_tooltip = { VALUE = spell_cost.neg }
