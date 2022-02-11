@@ -25,7 +25,7 @@ can_contract_magical_disease_trigger = {
 	OR = {
 		is_magus_trigger = yes
 		AND = {
-			disease_type_for_trigger = flag:mage_dementia
+			scope:disease_type_for_trigger = flag:mage_dementia
 			var:memory_life_capacity_left <= 10
 		}
 	}
@@ -60,7 +60,7 @@ can_contract_magical_disease_trigger = {
 	#If mental dissease but non-mage
 	NOR = {
 		AND = {
-			disease_type_for_trigger = flag:mage_dementia
+			scope:disease_type_for_trigger = flag:mage_dementia
 			var:memory_life_capacity_left > 10
 		}
 	}
