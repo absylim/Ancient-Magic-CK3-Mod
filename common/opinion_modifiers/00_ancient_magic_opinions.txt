@@ -4,7 +4,6 @@
 	decaying = yes
 }
 
-
 witchcraft_allowed = {
 	opinion = 15
 }
