@@ -962,11 +962,6 @@ set_up_the_magocracys = {
 				magocracy_council_succesion = yes
 				post_appeasement_change = yes
 			}
-			title:d_iceland = {
-				holder = {
-					set_up_senate_magocracy = yes
-				}
-			}
 		}
 	}
 }
