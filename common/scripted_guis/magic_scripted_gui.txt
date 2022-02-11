@@ -1,4 +1,11 @@
-﻿can_use_magic_window = {
+﻿display_mana_hud = {
+	is_valid = {
+		is_magus_trigger = yes
+		has_variable = none_perk_mask_0
+	}
+}
+
+can_use_magic_window = {
 	is_valid = {
 		is_magus_trigger = yes
 	}
