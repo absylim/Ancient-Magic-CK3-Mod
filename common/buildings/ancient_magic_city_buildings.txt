@@ -285,7 +285,7 @@ city_of_magic_01 = {
 			factor = 2
 			scope:holder = {
 				AND = {
-					is_mage_trigger = yes
+					is_magus_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
@@ -297,7 +297,7 @@ city_of_magic_01 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					is_mage_trigger = yes
+					is_magus_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -309,7 +309,7 @@ city_of_magic_01 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					NOT = { is_mage_trigger = yes }
+					NOT = { is_magus_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_shunned
 					}
@@ -320,7 +320,7 @@ city_of_magic_01 = {
 			factor = 0
 			scope:holder = {
 				AND = {
-					NOT = { is_mage_trigger = yes }
+					NOT = { is_magus_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -614,7 +614,7 @@ city_of_magic_02 = {
 			factor = 2
 			scope:holder = {
 				AND = {
-					is_mage_trigger = yes
+					is_magus_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
@@ -626,7 +626,7 @@ city_of_magic_02 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					is_mage_trigger = yes
+					is_magus_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -638,7 +638,7 @@ city_of_magic_02 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					NOT = { is_mage_trigger = yes }
+					NOT = { is_magus_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_shunned
 					}
@@ -649,7 +649,7 @@ city_of_magic_02 = {
 			factor = 0
 			scope:holder = {
 				AND = {
-					NOT = { is_mage_trigger = yes }
+					NOT = { is_magus_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -899,7 +899,7 @@ city_of_magic_03 = {
 			factor = 2
 			scope:holder = {
 				AND = {
-					is_mage_trigger = yes
+					is_magus_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
@@ -911,7 +911,7 @@ city_of_magic_03 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					is_mage_trigger = yes
+					is_magus_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -923,7 +923,7 @@ city_of_magic_03 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					NOT = { is_mage_trigger = yes }
+					NOT = { is_magus_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_shunned
 					}
@@ -934,7 +934,7 @@ city_of_magic_03 = {
 			factor = 0
 			scope:holder = {
 				AND = {
-					NOT = { is_mage_trigger = yes }
+					NOT = { is_magus_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -1183,7 +1183,7 @@ city_of_magic_04 = {
 			factor = 2
 			scope:holder = {
 				AND = {
-					is_mage_trigger = yes
+					is_magus_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_accepted
 					}
@@ -1195,7 +1195,7 @@ city_of_magic_04 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					is_mage_trigger = yes
+					is_magus_trigger = yes
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}
@@ -1207,7 +1207,7 @@ city_of_magic_04 = {
 			factor = 0.5
 			scope:holder = {
 				AND = {
-					NOT = { is_mage_trigger = yes }
+					NOT = { is_magus_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_shunned
 					}
@@ -1218,7 +1218,7 @@ city_of_magic_04 = {
 			factor = 0
 			scope:holder = {
 				AND = {
-					NOT = { is_mage_trigger = yes }
+					NOT = { is_magus_trigger = yes }
 					faith = {
 						has_doctrine_parameter = witchcraft_illegal
 					}

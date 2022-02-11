@@ -46,7 +46,7 @@
 			multiply = 0
 			scope:recipient = {
 				NOT = {
-					is_magus = yes
+					is_magus_trigger = yes
 				}
 			}
 		}

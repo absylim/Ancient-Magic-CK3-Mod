@@ -1,6 +1,6 @@
 ﻿can_use_magic_window = {
 	is_valid = {
-		is_mage_trigger = yes
+		is_magus_trigger = yes
 	}
 }
 

@@ -115,7 +115,7 @@ AMHealth.0001 = {
 		base = 1
 
 		modifier = {
-			NOT = { is_mage_trigger = yes }
+			NOT = { is_magus_trigger = yes }
 			factor = 0
 		}
 		modifier = {

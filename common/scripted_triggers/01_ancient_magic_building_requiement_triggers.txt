@@ -1,6 +1,6 @@
 ﻿building_ancient_magic_mage_buildings_requirement = {
 	scope:holder = {
-		is_mage_trigger = yes
+		is_magus_trigger = yes
 	}
 }
 

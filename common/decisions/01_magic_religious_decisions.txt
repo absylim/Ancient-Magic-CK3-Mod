@@ -9,14 +9,14 @@ am_spiritual_hof_change_to_witchcraft_decision = { # Challenge Spiritual Head of
 		is_adult = yes
 		OR = {
 			AND = {
-				is_mage_trigger = yes
+				is_magus_trigger = yes
 				OR = {
 					faith = { has_doctrine = doctrine_witchcraft_crime }
 					faith = { has_doctrine = doctrine_witchcraft_shunned }
 				}
 			}
 			AND = {
-				NOT = { is_mage_trigger = yes }
+				NOT = { is_magus_trigger = yes }
 				OR = {
 					faith = { has_doctrine = doctrine_witchcraft_accepted }
 					faith = { has_doctrine = doctrine_witchcraft_shunned }
@@ -52,7 +52,7 @@ am_spiritual_hof_change_to_witchcraft_decision = { # Challenge Spiritual Head of
 
 	effect = {
 		if = {
-			limit = { is_mage_trigger = yes }
+			limit = { is_magus_trigger = yes }
 			if = {
 				limit = { faith = { has_doctrine = doctrine_witchcraft_crime } }
 				trigger_event = am_religious_special.1001
@@ -104,14 +104,14 @@ am_no_hof_unreformed_or_tribal_witchcraft_decision = { # Call Convocation to est
 		is_adult = yes
 		OR = {
 			AND = {
-				is_mage_trigger = yes
+				is_magus_trigger = yes
 				OR = {
 					faith = { has_doctrine = doctrine_witchcraft_crime }
 					faith = { has_doctrine = doctrine_witchcraft_shunned }
 				}
 			}
 			AND = {
-				NOT = { is_mage_trigger = yes }
+				NOT = { is_magus_trigger = yes }
 				OR = {
 					faith = { has_doctrine = doctrine_witchcraft_accepted }
 					faith = { has_doctrine = doctrine_witchcraft_shunned }
@@ -160,7 +160,7 @@ am_no_hof_unreformed_or_tribal_witchcraft_decision = { # Call Convocation to est
 
 	effect = {
 		if = {
-			limit = { is_mage_trigger = yes }
+			limit = { is_magus_trigger = yes }
 			if = {
 				limit = { faith = { has_doctrine = doctrine_witchcraft_crime } }
 				trigger_event = am_religious_special.2001

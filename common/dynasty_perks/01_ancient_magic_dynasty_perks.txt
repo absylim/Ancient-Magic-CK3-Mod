@@ -13,7 +13,7 @@ arcane_legacy_1 = { # Powerful blood
 		}
 		if = {
 			limit = {
-				is_mage_trigger = yes
+				is_magus_trigger = yes
 			}
 			multiply = 5
 		}

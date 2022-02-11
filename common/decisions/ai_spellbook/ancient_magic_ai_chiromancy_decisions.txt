@@ -1,7 +1,7 @@
 ﻿heal_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
-		is_magus = yes
+		is_magus_trigger = yes
 		var:mana >= 75
 		has_perk = heal_perk
 		OR = {
@@ -22,7 +22,7 @@
 	}
 	
 	ai_potential = {
-		is_magus = yes
+		is_magus_trigger = yes
 	}
 	
 	ai_will_do = {
@@ -37,7 +37,7 @@
 greater_heal_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
-		is_magus = yes
+		is_magus_trigger = yes
 		var:mana >= 150
 		has_perk = greater_heal_perk
 		OR = {
@@ -61,7 +61,7 @@ greater_heal_ai_spell_decision = {
 	}
 	
 	ai_potential = {
-		is_magus = yes
+		is_magus_trigger = yes
 	}
 	
 	ai_will_do = {
@@ -76,7 +76,7 @@ greater_heal_ai_spell_decision = {
 full_restoration_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
-		is_magus = yes
+		is_magus_trigger = yes
 		has_trait = avatar_of_life
 		var:mana >= 250
 		
@@ -99,7 +99,7 @@ full_restoration_ai_spell_decision = {
 	}
 	
 	ai_potential = {
-		is_magus = yes
+		is_magus_trigger = yes
 	}
 	
 	ai_will_do = {

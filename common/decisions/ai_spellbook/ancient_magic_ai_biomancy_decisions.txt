@@ -1,7 +1,7 @@
 ﻿improve_intellect_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
-		is_magus = yes
+		is_magus_trigger = yes
 		OR = {
 			AND = {
 				var:mana >= 100
@@ -56,7 +56,7 @@
 improve_beauty_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
-		is_magus = yes
+		is_magus_trigger = yes
 		OR = {
 			AND = {
 				var:mana >= 100
@@ -111,7 +111,7 @@ improve_beauty_ai_spell_decision = {
 improve_physique_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
-		is_magus = yes
+		is_magus_trigger = yes
 		OR = {
 			AND = {
 				var:mana >= 100

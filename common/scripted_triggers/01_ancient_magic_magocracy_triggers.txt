@@ -112,7 +112,7 @@ can_be_chancellor_trigger = {
 				OR = {
 					magocracy_has_council_form = yes
 				}
-				OR = { is_magus = yes }
+				OR = { is_magus_trigger = yes }
 				primary_title = {
 					any_in_list = {
 						variable = valid_council_targets_list
@@ -124,7 +124,7 @@ can_be_chancellor_trigger = {
 				OR = {
 					magocracy_has_council_form = yes
 				}
-				OR = { is_magus = yes }
+				OR = { is_magus_trigger = yes }
 				primary_title = {
 					exists = var:leaders_discretion_council_appointment
 				}
@@ -158,7 +158,7 @@ can_be_steward_trigger = {
 				OR = {
 					magocracy_has_council_form = yes
 				}
-				OR = { is_magus = yes }
+				OR = { is_magus_trigger = yes }
 				primary_title = {
 					any_in_list = {
 						variable = valid_council_targets_list
@@ -170,7 +170,7 @@ can_be_steward_trigger = {
 				OR = {
 					magocracy_has_council_form = yes
 				}
-				OR = { is_magus = yes }
+				OR = { is_magus_trigger = yes }
 				primary_title = {
 					exists = var:leaders_discretion_council_appointment
 				}
@@ -208,7 +208,7 @@ can_be_marshal_trigger = {
 				OR = {
 					magocracy_has_council_form = yes
 				}
-				OR = { is_magus = yes }
+				OR = { is_magus_trigger = yes }
 				primary_title = {
 					any_in_list = {
 						variable = valid_council_targets_list
@@ -220,7 +220,7 @@ can_be_marshal_trigger = {
 				OR = {
 					magocracy_has_council_form = yes
 				}
-				OR = { is_magus = yes }
+				OR = { is_magus_trigger = yes }
 				primary_title = {
 					exists = var:leaders_discretion_council_appointment
 				}
@@ -245,7 +245,7 @@ can_be_spymaster_trigger = {
 					magocracy_has_council_form = yes
 					holds_valid_magocracy = yes
 				}
-				is_magus = yes
+				is_magus_trigger = yes
 				primary_title = {
 					any_in_list = {
 						variable = valid_council_targets_list
@@ -257,7 +257,7 @@ can_be_spymaster_trigger = {
 				OR = {
 					magocracy_has_council_form = yes
 				}
-				OR = { is_magus = yes }
+				OR = { is_magus_trigger = yes }
 				primary_title = {
 					exists = var:leaders_discretion_council_appointment
 				}
@@ -269,6 +269,6 @@ can_be_spymaster_trigger = {
 is_patrician = {
 	exists = house
 	is_house_head = yes
-	is_magus = yes
+	is_magus_trigger = yes
 	house = { exists = var:titular_magocracy }
 }

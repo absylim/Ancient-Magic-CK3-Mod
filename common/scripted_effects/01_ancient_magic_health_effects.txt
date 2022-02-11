@@ -332,7 +332,7 @@ recover_from_magical_disease_effect = {
 	if = { #They actually have the disease you want to remove
 		limit = {
 			OR = {
-				AND  = {
+				AND = {
 					has_trait = $DISEASE$
 					NOT = { $DISEASE$ = mage_dementia }
 				}

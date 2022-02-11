@@ -9,7 +9,7 @@
 
 	is_valid = {
 		scope:actor = {
-			is_mage_trigger = yes
+			is_magus_trigger = yes
 		}
 	}
 

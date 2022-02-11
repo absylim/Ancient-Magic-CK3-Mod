@@ -21,7 +21,7 @@ ancient_magic_reset_mana_system = {
 
 quarterly_playable_pulse = {
 	trigger = {
-		is_mage_trigger = yes
+		is_magus_trigger = yes
 	}
 
 	on_actions = {

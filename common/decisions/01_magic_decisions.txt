@@ -66,7 +66,7 @@ reset_mana_system_decision = {
 		hidden_effect = {
 			every_living_character = {
 				if = {
-					limit = { is_mage_trigger = yes }
+					limit = { is_magus_trigger = yes }
 					if = {
 						limit = { NOT = { has_variable = mage_xp } }
 						set_variable = {
@@ -313,7 +313,7 @@ forge_material_soul = {
 	major = yes
 
 	is_shown = {
-		is_mage_trigger = yes
+		is_magus_trigger = yes
 		NOT = { has_character_flag = materilised_soul }
 	}
 
