@@ -218,7 +218,6 @@ ancient_magic_mana_gen_gen_only = {
 	add = ancient_magic_mana_gen_perks
 	add = ancient_magic_mana_gen_potency
 	add = ancient_magic_mana_gen_circles
-	add = ancient_magic_mana_gen_lifestyle
 	add = ancient_magic_mana_gen_legacy
 }
 
@@ -234,14 +233,6 @@ ancient_magic_mana_gen_circles = {
 	multiply = mana_gen_per_magic_circle
 }
 
-ancient_magic_mana_gen_lifestyle = {
-	value = 0
-	if = {
-		limit = { has_focus = magic_mana_focus }
-		add = mana_gen_lifestyle
-	}
-}
-
 ancient_magic_mana_gen_legacy = {
 	value = 0
 	if = {
@@ -255,7 +246,6 @@ ancient_magic_mana_gen_legacy = {
 
 ancient_magic_mana_gen_drain_only = {
 	add = ancient_magic_mana_drain_auras
-	add = ancient_magic_mana_drain_lifestyle
 	add = ancient_magic_mana_drain_disease
 }
 
@@ -281,14 +271,6 @@ ancient_magic_mana_drain_auras = {
 	add = fertility_control_spell_gen_cost
 	add = beguiling_aura_spell_gen_cost
 	add = enchanting_aura_spell_gen_cost
-}
-
-ancient_magic_mana_drain_lifestyle = {
-	value = 0
-	if = {
-		limit = { has_focus = magic_arcana_focus }
-		subtract = mana_gen_lifestyle
-	}
 }
 
 ancient_magic_mana_drain_disease = {
