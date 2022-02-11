@@ -143,6 +143,7 @@
 
 				## CENTER AREA
 				vbox = {
+					name = "Center Area VBox"
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
 					margin_left = 15
@@ -161,6 +162,7 @@
 
 						## Trees
 						hbox = {
+							name = "Trees"
 							layoutpolicy_horizontal = expanding
 							layoutpolicy_vertical = expanding
 							spacing = 10
