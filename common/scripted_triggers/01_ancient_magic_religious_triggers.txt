@@ -134,33 +134,6 @@ trait_is_criminal_in_faith_trigger = {
 	}	
 }
 
-trait_is_shunned_or_criminal_in_faith_trigger = {
-	OR = {
-		trait_is_shunned_in_faith_trigger = { TRAIT = $TRAIT$ FAITH = $FAITH$ GENDER_CHARACTER = $GENDER_CHARACTER$ }
-		trait_is_criminal_in_faith_trigger = { TRAIT = $TRAIT$ FAITH = $FAITH$ GENDER_CHARACTER = $GENDER_CHARACTER$ }
-	}
-}
-
-trait_is_shunned_or_criminal_in_my_or_lieges_faith_trigger = {
-	OR = {
-		AND = {
-			faith = { #My faith doesn't approve
-				save_temporary_scope_as = check_faith
-			}
-			trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = $TRAIT$ FAITH = scope:check_faith GENDER_CHARACTER = $GENDER_CHARACTER$ }
-		}
-		AND = { #Liege's faith doesn't approve
-			exists = liege
-			liege = {
-				faith = {
-					save_temporary_scope_as = check_faith
-				}
-			}
-			trait_is_shunned_or_criminal_in_faith_trigger = { TRAIT = $TRAIT$ FAITH = scope:check_faith GENDER_CHARACTER = $GENDER_CHARACTER$ }
-		}
-	}
-}
-
 has_any_shunned_or_criminal_trait_in_faith_trigger = {
 	$CHARACTER$ = {
 		OR = {

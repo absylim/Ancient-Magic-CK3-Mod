@@ -28,16 +28,6 @@ hud_mana_gen_circles = {
 	}
 }
 
-hud_mana_gen_lifestyle = {
-	is_shown = {
-		always = no
-	}
-
-	is_valid = {
-		ancient_magic_mana_gen_lifestyle > 0
-	}
-}
-
 hud_mana_gen_legacy = {
 	is_shown = {
 		always = no
@@ -55,16 +45,6 @@ hud_mana_drain_auras = {
 
 	is_valid = {
 		ancient_magic_mana_drain_auras < 0
-	}
-}
-
-hud_mana_drain_lifestyle = {
-	is_shown = {
-		always = no
-	}
-
-	is_valid = {
-		ancient_magic_mana_drain_lifestyle < 0
 	}
 }
 

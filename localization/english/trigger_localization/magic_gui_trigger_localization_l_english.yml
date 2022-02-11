@@ -11,3 +11,8 @@
 
  NOT_NUMBER_OF_TRAITS_TRIGGER: "[CHARACTER.GetName] cannot have any more personality traits"
  NOT_HAS_MADE_SELECTION: "You must select something from the list!"
+
+ # Blackmail
+ GLOBAL_CANT_BLACKMAIL_ANOTHER_MAGE: "A [GetTrait('mage').GetName( CHARACTER.Self )] cannot blackmail another Mage for being a Mage"
+ FIRST_CANT_BLACKMAIL_ANOTHER_MAGE: "You cannot blackmail another [GetTrait('mage').GetName( CHARACTER.Self )] for being a Mage"
+ THIRD_CANT_BLACKMAIL_ANOTHER_MAGE: "They cannot blackmail another [GetTrait('mage').GetName( CHARACTER.Self )] for being a Mage"
