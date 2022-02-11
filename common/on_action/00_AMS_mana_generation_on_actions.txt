@@ -15,29 +15,185 @@ yearly_mana_pulse = {
 
 yearly_mana_gen_setup = {
 	on_actions = {
+		setup_year_mana_gen_from_jan
+	}
+}
+
+setup_year_mana_gen_from_jan = {
+	on_actions = {
 		monthly_mana_gen_setup_31
 		delay = { days = 31 }
+		setup_year_mana_gen_from_feb
+	}
+}
+
+setup_year_mana_gen_from_feb = {
+	on_actions = {
 		monthly_mana_gen_setup_28
-		delay = { days = 59 }
+		delay = { days = 28 }
+		setup_year_mana_gen_from_mch
+	}
+}
+
+setup_year_mana_gen_from_mch = {
+	on_actions = {
 		monthly_mana_gen_setup_31
-		delay = { days = 90 }
+		delay = { days = 31 }
+		setup_year_mana_gen_from_apr
+	}
+}
+
+setup_year_mana_gen_from_apr = {
+	on_actions = {
 		monthly_mana_gen_setup_30
-		delay = { days = 120 }
+		delay = { days = 30 }
+		setup_year_mana_gen_from_may
+	}
+}
+
+setup_year_mana_gen_from_may = {
+	on_actions = {
 		monthly_mana_gen_setup_31
-		delay = { days = 151 }
+		delay = { days = 31 }
+		setup_year_mana_gen_from_jun
+	}
+}
+
+setup_year_mana_gen_from_jun = {
+	on_actions = {
 		monthly_mana_gen_setup_30
-		delay = { days = 181 }
+		delay = { days = 30 }
+		setup_year_mana_gen_from_jly
+	}
+}
+
+setup_year_mana_gen_from_jly = {
+	on_actions = {
 		monthly_mana_gen_setup_31
-		delay = { days = 212 }
+		delay = { days = 31 }
+		setup_year_mana_gen_from_aug
+	}
+}
+
+setup_year_mana_gen_from_aug = {
+	on_actions = {
 		monthly_mana_gen_setup_31
-		delay = { days = 243 }
+		delay = { days = 31 }
+		setup_year_mana_gen_from_sep
+	}
+}
+
+setup_year_mana_gen_from_sep = {
+	on_actions = {
 		monthly_mana_gen_setup_30
-		delay = { days = 273 }
+		delay = { days = 30 }
+		setup_year_mana_gen_from_oct
+	}
+}
+
+setup_year_mana_gen_from_oct = {
+	on_actions = {
 		monthly_mana_gen_setup_31
-		delay = { days = 304 }
+		delay = { days = 31 }
+		setup_year_mana_gen_from_nov
+	}
+}
+
+setup_year_mana_gen_from_nov = {
+	on_actions = {
 		monthly_mana_gen_setup_30
-		delay = { days = 334 }
+		delay = { days = 30 }
+		setup_year_mana_gen_from_dec
+	}
+}
+
+setup_year_mana_gen_from_dec = {
+	on_actions = {
 		monthly_mana_gen_setup_31
+	}
+}
+
+setup_month_mana_gen_from_wk1 = {
+	on_actions = {
+		weekly_mana_gen_setup
+		delay = { days = 7 }
+		setup_month_mana_gen_from_oct
+	}
+}
+
+setup_month_mana_gen_from_wk2 = {
+	on_actions = {
+		weekly_mana_gen_setup
+		delay = { days = 7 }
+		setup_month_mana_gen_from_nov
+	}
+}
+
+setup_month_mana_gen_from_wk3 = {
+	on_actions = {
+		weekly_mana_gen_setup
+		delay = { days = 7 }
+		setup_month_mana_gen_from_dec
+	}
+}
+
+setup_month_mana_gen_from_wk4 = {
+	on_actions = {
+		weekly_mana_gen_setup
+	}
+}
+
+setup_week_mana_gen_from_day1 = {
+	on_actions = {
+		daily_mana_gen_setup
+		delay = { days = 1 }
+		setup_week_mana_gen_from_day2
+	}
+}
+
+setup_week_mana_gen_from_day2 = {
+	on_actions = {
+		daily_mana_gen_setup
+		delay = { days = 1 }
+		setup_week_mana_gen_from_day3
+	}
+}
+
+setup_week_mana_gen_from_day3 = {
+	on_actions = {
+		daily_mana_gen_setup
+		delay = { days = 1 }
+		setup_week_mana_gen_from_day4
+	}
+}
+
+setup_week_mana_gen_from_day4 = {
+	on_actions = {
+		daily_mana_gen_setup
+		delay = { days = 1 }
+		setup_week_mana_gen_from_day5
+	}
+}
+
+setup_week_mana_gen_from_day5 = {
+	on_actions = {
+		daily_mana_gen_setup
+		delay = { days = 1 }
+		setup_week_mana_gen_from_day6
+	}
+}
+
+setup_week_mana_gen_from_day6 = {
+	on_actions = {
+		daily_mana_gen_setup
+		delay = { days = 1 }
+		setup_week_mana_gen_from_day7
+	}
+}
+
+setup_week_mana_gen_from_day7 = {
+	on_actions = {
+		daily_mana_gen_setup
 	}
 }
 
@@ -111,6 +267,203 @@ daily_mana_gen_setup = {
 	}
 }
 
+set_up_remaining_mana_gen_for_year = {
+	effect = {
+		if = {
+			limit = { current_month = 1 }
+			trigger_event = { on_action = { setup_remaining_gen_from_jan } }
+		}
+		else_if = {
+			limit = { current_month = 2 }
+			trigger_event = { on_action = { setup_remaining_gen_from_feb } }
+		}
+		else_if = {
+			limit = { current_month = 3 }
+			trigger_event = { on_action = { setup_remaining_gen_from_mch } }
+		}
+		else_if = {
+			limit = { current_month = 4 }
+			trigger_event = { on_action = { setup_remaining_gen_from_apr } }
+		}
+		else_if = {
+			limit = { current_month = 5 }
+			trigger_event = { on_action = { setup_remaining_gen_from_may } }
+		}
+		else_if = {
+			limit = { current_month = 6 }
+			trigger_event = { on_action = { setup_remaining_gen_from_jun } }
+		}
+		else_if = {
+			limit = { current_month = 7 }
+			trigger_event = { on_action = { setup_remaining_gen_from_jly } }
+		}
+		else_if = {
+			limit = { current_month = 8 }
+			trigger_event = { on_action = { setup_remaining_gen_from_aug } }
+		}
+		else_if = {
+			limit = { current_month = 9 }
+			trigger_event = { on_action = { setup_remaining_gen_from_sep } }
+		}
+		else_if = {
+			limit = { current_month = 10 }
+			trigger_event = { on_action = { setup_remaining_gen_from_oct } }
+		}
+		else_if = {
+			limit = { current_month = 11 }
+			trigger_event = { on_action = { setup_remaining_gen_from_nov } }
+		}
+		if = {
+			limit = { days_left_in_month > 28 }
+			trigger_event = { on_action = { setup_remaining_gen_from_wk1 } }
+		}
+		else_if = {
+			limit = { days_left_in_month > 21 }
+			trigger_event = { on_action = { setup_remaining_gen_from_wk2 } }
+		}
+		else_if = {
+			limit = { days_left_in_month > 14 }
+			trigger_event = { on_action = { setup_remaining_gen_from_wk3 } }
+		}
+		else_if = {
+			limit = { days_left_in_month > 7 }
+			trigger_event = { on_action = { setup_remaining_gen_from_wk4 } }
+		}
+		if = {
+			limit = { days_left_in_week = 6 }
+			trigger_event = { on_action = { setup_week_mana_gen_from_day1 } }
+		}
+		else_if = {
+			limit = { days_left_in_week = 5 }
+			trigger_event = { on_action = { setup_week_mana_gen_from_day2 } }
+		}
+		else_if = {
+			limit = { days_left_in_week = 4 }
+			trigger_event = { on_action = { setup_week_mana_gen_from_day3 } }
+		}
+		else_if = {
+			limit = { days_left_in_week = 3 }
+			trigger_event = { on_action = { setup_week_mana_gen_from_day4 } }
+		}
+		else_if = {
+			limit = { days_left_in_week = 2 }
+			trigger_event = { on_action = { setup_week_mana_gen_from_day5 } }
+		}
+		else_if = {
+			limit = { days_left_in_week = 1 }
+			trigger_event = { on_action = { setup_week_mana_gen_from_day6 } }
+		}
+		else = {
+			trigger_event = { on_action = { setup_week_mana_gen_from_day7 } }
+		}
+	}
+}
+
+setup_remaining_gen_from_jan = {
+	on_actions = {
+		delay = { days = days_left_in_month }
+		setup_year_mana_gen_from_feb
+	}
+}
+
+setup_remaining_gen_from_feb = {
+	on_actions = {
+		delay = { days = days_left_in_month }
+		setup_year_mana_gen_from_mch
+	}
+}
+
+setup_remaining_gen_from_mch = {
+	on_actions = {
+		delay = { days = days_left_in_month }
+		setup_year_mana_gen_from_apr
+	}
+}
+
+setup_remaining_gen_from_apr = {
+	on_actions = {
+		delay = { days = days_left_in_month }
+		setup_year_mana_gen_from_may
+	}
+}
+
+setup_remaining_gen_from_may = {
+	on_actions = {
+		delay = { days = days_left_in_month }
+		setup_year_mana_gen_from_jun
+	}
+}
+
+setup_remaining_gen_from_jun = {
+	on_actions = {
+		delay = { days = days_left_in_month }
+		setup_year_mana_gen_from_jly
+	}
+}
+
+setup_remaining_gen_from_jly = {
+	on_actions = {
+		delay = { days = days_left_in_month }
+		setup_year_mana_gen_from_aug
+	}
+}
+
+setup_remaining_gen_from_aug = {
+	on_actions = {
+		delay = { days = days_left_in_month }
+		setup_year_mana_gen_from_sep
+	}
+}
+
+setup_remaining_gen_from_sep = {
+	on_actions = {
+		delay = { days = days_left_in_month }
+		setup_year_mana_gen_from_oct
+	}
+}
+
+setup_remaining_gen_from_oct = {
+	on_actions = {
+		delay = { days = days_left_in_month }
+		setup_year_mana_gen_from_nov
+	}
+}
+
+setup_remaining_gen_from_nov = {
+	on_actions = {
+		delay = { days = days_left_in_month }
+		setup_year_mana_gen_from_dec
+	}
+}
+
+setup_remaining_gen_from_wk1 = {
+	on_actions = {
+		delay = { days = days_left_in_week }
+		setup_month_mana_gen_from_wk2
+	}
+}
+
+setup_remaining_gen_from_wk2 = {
+	on_actions = {
+		delay = { days = days_left_in_week }
+		setup_month_mana_gen_from_wk3
+	}
+}
+
+setup_remaining_gen_from_wk3 = {
+	on_actions = {
+		delay = { days = days_left_in_week }
+		setup_month_mana_gen_from_wk4
+	}
+}
+
+setup_remaining_gen_from_wk4 = {
+	on_actions = {
+		delay = { days = days_left_in_week }
+		setup_year_mana_gen_from_dec
+	}
+}
+
 # Fire this action to make updates to the player's mana and mana gen
 # Some on_actions (specifically on_title_gained, among others) don't
 # fire triggered events immediately, they register them to be fired
@@ -138,12 +491,14 @@ on_reset_mana_system = {
 }
 
 delayed_mana_clamp = {
-	set_variable = {
-		name = mana
-		value = {
-			value = var:mana
-			max = var:max_mana
-			min = 0
+	effect = {
+		set_variable = {
+			name = mana
+			value = {
+				value = var:mana
+				max = var:max_mana
+				min = 0
+			}
 		}
 	}
 }

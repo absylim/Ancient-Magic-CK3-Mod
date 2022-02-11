@@ -1,0 +1,26 @@
+﻿days_left_in_week = {
+    value = current_day
+    modulo = 7
+    subtract = 7
+    multiply = -1
+}
+
+days_left_in_month = {
+    value = 31
+    if = {
+        limit = {
+            OR = {
+                current_month = 4
+                current_month = 6
+                current_month = 9
+                current_month = 11
+            }
+            subtract = 1
+        }
+    }
+    else_if = {
+        limit = { current_month = 2 }
+        subtract = 3
+    }
+    subtract = current_day
+}
