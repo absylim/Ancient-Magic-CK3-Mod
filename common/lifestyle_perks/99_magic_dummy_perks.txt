@@ -1,3 +1,7 @@
-﻿finacial_times_perk = {}
+﻿finacial_times_perk = {
+	lifestyle = arcane_lifestyle #dummy lifestyle
+}
 
-death_magic_8_perk = {}
+death_magic_8_perk = {
+	lifestyle = arcane_lifestyle
+}

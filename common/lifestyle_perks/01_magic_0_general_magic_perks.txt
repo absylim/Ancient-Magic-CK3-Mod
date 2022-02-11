@@ -1,4 +1,5 @@
 ﻿mage_perk = {
+	lifestyle = arcane_lifestyle
 	tree = ancient_magic_none
 	position = { 0 0 }
 	icon = node_diplomacy

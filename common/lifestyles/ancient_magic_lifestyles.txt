@@ -1,0 +1,9 @@
+arcane_lifestyle = { #Dummy lifestyle
+	
+	is_valid = {
+		always = no
+	}
+
+	xp_per_level = 1000
+	base_xp_gain = 25
+}

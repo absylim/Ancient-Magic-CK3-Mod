@@ -1,4 +1,5 @@
 ﻿elemental_mage_perk = {
+	lifestyle = arcane_lifestyle
 	tree = ancient_magic_elomancy
 	position = { 2 0 }
 	icon = node_diplomacy
@@ -56,6 +57,7 @@
 }
 
 flame_aura_perk = {
+	lifestyle = arcane_lifestyle
 	tree = ancient_magic_elomancy
 	position = { 0 1.25 }
 	icon = node_diplomacy
@@ -73,6 +75,7 @@ flame_aura_perk = {
 }
 
 flaming_weapons_perk = {
+	lifestyle = arcane_lifestyle
 	tree = ancient_magic_elomancy
 	position = { 0 2.5 }
 	icon = node_diplomacy
@@ -90,6 +93,7 @@ flaming_weapons_perk = {
 }
 
 living_earthworks_perk = {
+	lifestyle = arcane_lifestyle
 	tree = ancient_magic_elomancy
 	position = { 2 1.25 }
 	icon = node_diplomacy
@@ -107,6 +111,7 @@ living_earthworks_perk = {
 }
 
 golem_creation_perk = {
+	lifestyle = arcane_lifestyle
 	tree = ancient_magic_elomancy
 	position = { 2 2.5 }
 	icon = node_diplomacy
@@ -124,6 +129,7 @@ golem_creation_perk = {
 }
 
 control_water_perk = {
+	lifestyle = arcane_lifestyle
 	tree = ancient_magic_elomancy
 	position = { 4 1.25 }
 	icon = node_diplomacy
@@ -145,6 +151,7 @@ control_water_perk = {
 }
 
 drought_perk = {
+	lifestyle = arcane_lifestyle
 	tree = ancient_magic_elomancy
 	position = { 4 2.5 }
 	icon = node_diplomacy
@@ -162,6 +169,7 @@ drought_perk = {
 }
 
 elemental_warrior_perk = {
+	lifestyle = arcane_lifestyle
 	tree = ancient_magic_elomancy
 	position = { 2 3.75 }
 	icon = node_diplomacy
@@ -181,6 +189,7 @@ elemental_warrior_perk = {
 }
 
 lord_of_the_elements_perk = {
+	lifestyle = arcane_lifestyle
 	tree = ancient_magic_elomancy
 	position = { 2 5 }
 	icon = lord_of_the_elements
