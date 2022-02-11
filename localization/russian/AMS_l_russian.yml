@@ -1,0 +1,20 @@
+﻿l_russian:
+ PLACEHOLDER_EFFECT:0 "Placeholder"
+#traits
+ trait_mana:0 "Mana"
+ trait_mana_desc:0 "[ROOT.GetCharacter.MakeScope.Var('mana').GetValue|0]/[ROOT.GetCharacter.MakeScope.Var('max_mana').GetValue|0] #weak you currently generate [ROOT.GetCharacter.MakeScope.Var('mana_gen').GetValue|0] per month#"
+ trait_mage:0 "Mage"
+ trait_mage_desc:0 "This character is a mage."
+#mana effects
+ character_var_greater_or_equal:0 "You need $VALUE|0$ Mana"
+ I_GAINED_MANA_EFFECT:0 "You Gained Mana $VALUE|V0$"
+ I_LOST_MANA_EFFECT:0 "You Lost Mana $VALUE|V0$"
+ GAINED_MANA_EFFECT:0 "Gained Mana $VALUE|V0$"
+ LOST_MANA_EFFECT:0 "Lost Mana $VALUE|V0$"
+ I_GAIN_MANA_EFFECT:0 "You gain Mana $VALUE|V0$"
+ I_LOSE_MANA_EFFECT:0 "You lose Mana $VALUE|V0$"
+ GAIN_MANA_EFFECT:0 "Gains Mana $VALUE|V0$"
+ LOSE_MANA_EFFECT:0 "Loses Mana $VALUE|V0$"
+#interactions
+ AMS_magic_interactions:0 "Magic"
+ AMS_INTERACTIONS:0 "Magic Actions"
