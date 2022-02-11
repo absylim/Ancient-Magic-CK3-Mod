@@ -153,8 +153,8 @@ enchanting_aura_spell_modifier = {
 
 studying_arcane = {
 	icon = learning_positive
-	intrigue = 1
 	learning = 2
+	martial = 1
 }
 
 am_failed_convocation_modifier = {

@@ -307,3 +307,49 @@ reset_mana_system_decision = {
 
 	ai_will_do = { base = 0 }
 }
+
+forge_material_soul = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	major = yes
+
+	is_shown = {
+		is_mage_trigger = yes
+		NOT = { has_character_flag = materilised_soul }
+	}
+
+	is_valid = {
+		has_perk = deacon_of_death_perk
+		has_perk = master_of_puppets_perk
+		var:mana >= var:soul_materialisation_mana_cost
+	}
+
+	effect = {
+		trigger_event = ancient_magic_rituals_events.001
+	}
+
+	ai_check_interval = 50
+
+	ai_will_do = {
+		base = 40
+		modifier = {
+			var:mage_level >= 10
+			add = 10
+		}
+		modifier = {
+			var:mage_level >= 15
+			add = 10
+		}
+		modifier = {
+			var:mage_level >= 20
+			add = 10
+		}
+		modifier = {
+			var:mage_level >= 25
+			add = 10
+		}
+		modifier = {
+			var:memory_life_capacity_left <= 10
+			multiply = 1.5
+		}
+	}
+}

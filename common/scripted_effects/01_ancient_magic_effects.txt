@@ -26,6 +26,20 @@ change_mage_xp = {
 			value = {
 				value = mage_potency
 				add = mage_education
+				every_directly_owned_province = {
+					if = {
+						limit = { has_building = ancient_magic_academy_01 }
+						add = 1
+					}
+					if = {
+						limit = { has_building = ancient_magic_academy_02 }
+						add = 2
+					}
+					if = {
+						limit = { has_building = ancient_magic_academy_03 }
+						add = 4
+					}
+				}
 				multiply = 0.1
 				add = 1
 				multiply = $VALUE$
