@@ -57,6 +57,14 @@ reset_mana_system_decision = {
 			has_character_modifier = blight_modifier
 			has_character_modifier = beguiling_aura_modifier
 			has_character_modifier = enchanting_aura_modifier
+			AND = {
+				is_magus_trigger = no
+				OR = {
+					has_variable = mana
+					has_variable = max_mana
+					has_variable = mana_gen
+				}
+			}
 		}
 	}
 
@@ -65,6 +73,19 @@ reset_mana_system_decision = {
 		
 		hidden_effect = {
 			every_living_character = {
+				if = {
+					limit = {
+						AND = {
+							is_magus_trigger = no
+							OR = {
+								has_variable = mana
+								has_variable = max_mana
+								has_variable = mana_gen
+							}
+						}
+					}
+					give_mage_secret_or_trait_effect = yes
+				}
 				if = {
 					limit = { is_magus_trigger = yes }
 					if = {
