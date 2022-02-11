@@ -74,12 +74,24 @@ title_all_family_respect = {
 
 title_all_family_respect_divided_by_total_votes = {
 	value = title_all_family_respect
-	divide = var:senators_count
+	if ={
+		limit = {
+			exists = var:senators_count
+		}
+		
+		divide = var:senators_count
+	}
 }
 
 family_votes = {
 	value = family_respect
-	divide = var:titular_magocracy.title_all_family_respect_divided_by_total_votes
+	if ={
+		limit = {
+			exists = var:titular_magocracy.title_all_family_respect_divided_by_total_votes
+		}
+		
+		divide = var:titular_magocracy.title_all_family_respect_divided_by_total_votes
+	} 
 }
 
 modulo_votes_family = {

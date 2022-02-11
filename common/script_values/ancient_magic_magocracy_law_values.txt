@@ -1207,7 +1207,13 @@ de_facto_citizenship_upper_house = {
 
 average_family_votes = {
 	value = 100
-	divide = magocracys_size_from_person
+	if ={
+		limit = {
+			exists = magocracys_size_from_person
+		}
+		
+		divide = magocracys_size_from_person
+	} 
 }
 
 war_proposal_lower_house = {
