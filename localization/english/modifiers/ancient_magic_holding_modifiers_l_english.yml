@@ -1,0 +1,10 @@
+﻿l_english:
+ city_of_magic_holding_build_speed:1 "City [buildings|E] Construction Time"
+ city_of_magic_holding_build_gold_cost:0 "City [buildings|E] Construction Cost"
+ city_of_magic_holding_build_piety_cost:0 "City [buildings|E] Construction Cost"
+ city_of_magic_holding_build_prestige_cost:0 "City [buildings|E] Construction Cost"
+ city_of_magic_holding_holding_build_speed:0 "City [holding|E] Construction Time"
+ city_of_magic_holding_holding_build_gold_cost:0 "City [holding|E] Construction Cost"
+ city_of_magic_holding_holding_build_piety_cost:0 "City [holding|E] Construction Cost"
+ city_of_magic_holding_holding_build_prestige_cost:0 "City [holding|E] Construction Cost"
+ 

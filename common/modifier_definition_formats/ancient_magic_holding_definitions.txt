@@ -1,0 +1,47 @@
+﻿city_of_magic_holding_build_speed = {
+	decimals = 0
+	color = bad
+	percent = yes
+}
+
+city_of_magic_holding_build_gold_cost = {
+	decimals = 0
+	color = bad
+	percent = yes
+}
+
+city_of_magic_holding_build_piety_cost = {
+	decimals = 0
+	color = bad
+	percent = yes
+}
+
+city_of_magic_holding_build_prestige_cost = {
+	decimals = 0
+	color = bad
+	percent = yes
+}
+
+city_of_magic_holding_holding_build_speed = {
+	decimals = 0
+	color = bad
+	percent = yes
+}
+
+city_of_magic_holding_holding_build_gold_cost = {
+	decimals = 0
+	color = bad
+	percent = yes
+}
+
+city_of_magic_holding_holding_build_piety_cost = {
+	decimals = 0
+	color = bad
+	percent = yes
+}
+
+city_of_magic_holding_holding_build_prestige_cost = {
+	decimals = 0
+	color = bad
+	percent = yes
+}
