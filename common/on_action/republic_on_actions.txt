@@ -564,7 +564,7 @@ yearly_magocracy_check = {
 					AND = {
 						OR = {
 							holds_valid_magocracy = yes
-							culture_group = liege_or_court_owner.culture_group
+							culture = liege_or_court_owner.culture
 						}
 						#NOT = { magocracy_has_bicameral_form = yes }
 					}
@@ -925,7 +925,7 @@ set_up_the_magocracys = {
 				limit = {
 					exists = house
 					is_house_head = yes
-					culture_group = liege_or_court_owner.culture_group
+					culture = liege_or_court_owner.culture
 				}
 				add_family_to_magocracy_families = yes
 			}
