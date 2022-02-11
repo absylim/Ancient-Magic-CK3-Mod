@@ -15,9 +15,9 @@
 		has_trait = mage
 	}
 	
-	character_modifier = {
-		monthly_arcane_lifestyle_xp_gain_mult = 0.1
-	}
+	#character_modifier = {
+	#	monthly_arcane_lifestyle_xp_gain_mult = 0.1
+	#}
 
 	vassal_contract = {
 		feudal_government_taxes

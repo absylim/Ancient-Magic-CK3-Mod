@@ -1,101 +1,4 @@
-﻿HasDisease = {
-	type = character
-
-	random_valid = yes
-
-	text = {
-		weight_multiplier = { base = 1 }
-		trigger = {
-			has_trait = ill
-		}
-		localization_key = HasDisease_ill
-	}
-	text = {
-		weight_multiplier = { base = 10 }
-		trigger = {
-			has_trait = pneumonic
-		}
-		localization_key = HasDisease_pneumonic
-	}
-	text = {
-		weight_multiplier = { base = 10 }
-		trigger = {
-			has_trait = gout_ridden
-		}
-		localization_key = HasDisease_gout_ridden
-	}
-	text = {
-		weight_multiplier = { base = 10 }
-		trigger = {
-			has_trait = leper
-		}
-		localization_key = HasDisease_leper
-	}
-	text = {
-		weight_multiplier = { base = 50 }
-		trigger = {
-			has_trait = typhus
-		}
-		localization_key = HasDisease_typhus
-	}
-	text = {
-		weight_multiplier = { base = 50 }
-		trigger = {
-			has_trait = consumption
-		}
-		localization_key = HasDisease_consumption
-	}
-	text = {
-		weight_multiplier = { base = 100 }
-		trigger = {
-			has_trait = cancer
-		}
-		localization_key = HasDisease_cancer
-	}
-	text = {
-		weight_multiplier = { base = 10 }
-		trigger = {
-			has_trait = lovers_pox
-		}
-		localization_key = HasDisease_lovers_pox
-	}
-	text = {
-		weight_multiplier = { base = 10 }
-		trigger = {
-			has_trait = early_great_pox
-		}
-		localization_key = HasDisease_early_great_pox
-	}
-	text = {
-		weight_multiplier = { base = 50 }
-		trigger = {
-			has_trait = great_pox
-		}
-		localization_key = HasDisease_great_pox
-	}
-	text = {
-		weight_multiplier = { base = 100 }
-		trigger = {
-			has_trait = smallpox
-		}
-		localization_key = HasDisease_smallpox
-	}
-	text = {
-		weight_multiplier = { base = 100 }
-		trigger = {
-			has_trait = bubonic_plague
-		}
-		localization_key = HasDisease_bubonic_plague
-	}
-	text = {
-		weight_multiplier = { base = 10 }
-		trigger = {
-			has_trait = mana_devouring
-		}
-		localization_key = HasDisease_mana_devouring
-	}
-	
-}
+﻿
 
 PossessedEpisode = {
 	type = character
@@ -123,10 +26,6 @@ EventTitleDisease = {
 	text = {
 		trigger = { scope:disease_type = flag:ill }
 		localization_key = trait_ill
-	}
-	text = {
-		trigger = { scope:disease_type = flag:mana_devouring }
-		localization_key = trait_mana_devouring
 	}
 	text = {
 		trigger = { scope:disease_type = flag:pneumonic }
@@ -175,6 +74,10 @@ EventTitleDisease = {
 	text = {
 		trigger = { has_trait = wounded }
 		localization_key = trait_wounded
+	}
+	text = {
+		trigger = { scope:disease_type = flag:mana_devouring }
+		localization_key = trait_mana_devouring
 	}
 }
 

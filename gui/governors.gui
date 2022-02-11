@@ -83,7 +83,7 @@
                                                     minimumsize = { 100 -1 }
                                                     hbox = {
                                                         text_single = {
-                                                            text = "Diplomacy:  "
+                                                            raw_text = "Diplomacy:  "
                                                         }
                                                         text_single = {
                                                             text = "[Character.MakeScope.ScriptValue('diplomacy_governor')|0]"
@@ -91,7 +91,7 @@
                                                     }
                                                     hbox = {
                                                         text_single = {
-                                                            text = "Stewardship:  "
+                                                            raw_text = "Stewardship:  "
                                                         }
                                                         text_single = {
                                                             text = "[Character.MakeScope.ScriptValue('stewardship_governor')|0]"
@@ -99,7 +99,7 @@
                                                     }
                                                     hbox = {
                                                         text_single = {
-                                                            text = "Martial:  "
+                                                            raw_text = "Martial:  "
                                                         }
                                                         text_single = {
                                                             text = "[Character.MakeScope.ScriptValue('martial_governor')|0]"
@@ -110,7 +110,7 @@
                                                     minimumsize = { 100 -1 }
                                                     hbox = {
                                                         text_single = {
-                                                            text = "Intrigue:  "
+                                                            raw_text = "Intrigue:  "
                                                         }
                                                         text_single = {
                                                             text = "[Character.MakeScope.ScriptValue('intrigue_governor')|0]"
@@ -118,7 +118,7 @@
                                                     }
                                                     hbox = {
                                                         text_single = {
-                                                            text = "Learning:  "
+                                                            raw_text = "Learning:  "
                                                         }
                                                         text_single = {
                                                             text = "[Character.MakeScope.ScriptValue('learning_governor')|0]"
@@ -126,7 +126,7 @@
                                                     }
                                                     hbox = {
                                                         text_single = {
-                                                            text = "Prowess:  "
+                                                            raw_text = "Prowess:  "
                                                         }
                                                         text_single = {
                                                             text = "[Character.GetProwess]"

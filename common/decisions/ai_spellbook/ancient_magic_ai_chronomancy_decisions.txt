@@ -12,7 +12,7 @@
 		if = {
 			limit = {
 				NOT = {
-					has_character_modifier = magic_haste_modifier
+					has_character_modifier = haste_spell_modifier
 				}
 			}
 
@@ -23,7 +23,7 @@
 			while = {
 				count = mage_level
 				add_character_modifier = {
-					modifier = magic_haste_modifier
+					modifier = haste_spell_modifier
 					mode = add
 				}
 			}
@@ -31,14 +31,14 @@
 		else_if = {
 			limit = {
 				OR = {
-					has_character_modifier = magic_haste_modifier
+					has_character_modifier = haste_spell_modifier
 				}
 			}
 			change_mana_gen = { VALUE = 15 }
 
 			while = {
 				count = 100
-				remove_character_modifier = magic_haste_modifier
+				remove_character_modifier = haste_spell_modifier
 			}
 		}
 	}
@@ -59,12 +59,12 @@
 		
 		modifier = {
 			factor = 0
-			has_character_modifier = magic_haste_modifier
+			has_character_modifier = haste_spell_modifier
 		}
 		
 		modifier = {
 			add = 50
-			has_character_modifier = magic_haste_modifier
+			has_character_modifier = haste_spell_modifier
 			var:mana_gen <= 0
 		}
 	}
