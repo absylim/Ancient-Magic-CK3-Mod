@@ -1,0 +1,69 @@
+﻿has_perk_trigger = {
+	switch = {
+		trigger = flag:$PERK$
+		flag:mage_perk = { var:none_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:time_mage_perk = { var:time_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:glimpse_the_future_perk = { var:time_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:financial_times_perk = { var:time_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:celerity_perk = { var:time_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:mass_celerity_perk = { var:time_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:slowness_perk = { var:time_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:mass_slowness_perk = { var:time_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:temporal_manipulation_perk = { var:time_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:master_of_time_perk = { var:time_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:life_mage_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:inward_reflection_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:inward_perfection_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:heal_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:greater_heal_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:battlefield_life_mage_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:greater_battlefield_life_mage_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:purity_of_body_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:avatar_of_life_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:elemental_mage_perk = { var:elomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:flame_aura_perk = { var:elomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:flaming_weapons_perk = { var:elomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:living_earthworks_perk = { var:elomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:golem_creation_perk = { var:elomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:control_water_perk = { var:elomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:drought_perk = { var:elomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:elemental_warrior_perk = { var:elomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:lord_of_the_elements_perk = { var:elomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:death_mage_perk = { var:necromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:inflict_illness_perk = { var:necromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:plague_lord_perk = { var:necromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:aura_of_death_perk = { var:necromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:necromancy_perk = { var:necromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:drain_life_perk = { var:necromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:death_stare_perk = { var:necromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:blight_perk = { var:necromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:deacon_of_death_perk = { var:necromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:biomancy_mage_perk = { var:biomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:improve_trait_perk = { var:biomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:perfect_trait_perk = { var:biomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:fertility_control_perk = { var:biomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:impregnate_perk = { var:biomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:weaken_trait_perk = { var:biomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:criple_trait_perk = { var:biomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:sculpter_of_flesh_perk = { var:biomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:architect_of_bloodlines_perk = { var:biomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:domination_mage_perk = { var:mensomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:entrance_perk = { var:mensomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:incite_lust_perk = { var:mensomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:incite_obedience_perk = { var:mensomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:dominate_perk = { var:mensomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:beguiling_aura_perk = { var:mensomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:friendship_perk = { var:mensomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:enchanting_aura_perk = { var:mensomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:master_of_puppets_perk = { var:mensomancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		fallback = { has_perk = $PERK$ }
+	}
+}
+
+has_any_spell_aura_targets_trigger = {
+	var:aura_mask_0.compare_value > 0
+}
+
+has_spell_aura_targets_trigger = {
+	var:aura_mask_0.$SPELL$_aura_bit.compare_value = set
+}

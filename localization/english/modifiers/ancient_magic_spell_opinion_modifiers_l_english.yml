@@ -1,17 +1,16 @@
 ﻿l_english:
 #cooldowns
- witchcraft_allowed:0 "Witchract allowed"
- undead_crime:0 "Known [GetTrait('undead').GetName( GetNullCharacter )]"
- necromancy_crime:0 "Known [GetTrait('undead').GetName( GetNullCharacter )]"
- necromancy_intolerant:0 "Known [GetTrait('undead').GetName( GetNullCharacter )]"
- necromancy_allowed:0 "Necromancy Accepted"
- 
+ witchcraft_allowed: "Witchcraft allowed"
+ undead_crime: "Known [GetTrait('undead').GetName( GetNullCharacter )]"
+ necromancy_crime: "Known [GetTrait('undead').GetName( GetNullCharacter )]"
+ necromancy_intolerant: "Known [GetTrait('undead').GetName( GetNullCharacter )]"
+ necromancy_allowed: "Necromancy Accepted"
+
 #magic casted
- cursed_my_bloodline:0 "Cursed my bloodline!"
- blessed_my_bloodline:0 "Blessed my bloodline"
- used_magic_on_me:0 "Used magic on me!"
- cursed_me_spell:0 "Cursed me!"
- cursed_me_spell_active:0 "Cursed me!"
- blessed_me_spell:0 "Blessed me"
- blessed_me_spell_active:0 "Blessed me"
- 
+ cursed_my_bloodline: "Cursed my bloodline!"
+ blessed_my_bloodline: "Blessed my bloodline"
+ used_magic_on_me: "Used magic on me!"
+ cursed_me_spell: "Cursed me!"
+ cursed_me_spell_active: "Cursed me!"
+ blessed_me_spell: "Blessed me"
+ blessed_me_spell_active: "Blessed me"

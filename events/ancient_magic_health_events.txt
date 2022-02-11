@@ -51,6 +51,23 @@ scripted_trigger AMhealth_2202_contagious_recovery_trigger = {
 	}
 }
 
+scripted_trigger health_event_is_worried_trigger = {
+	OR = {
+		ai_compassion >= medium_positive_ai_value
+		dread_modified_ai_boldness = {
+			dreaded_character = $CHARACTER$
+			value <= medium_negative_ai_value
+		}
+		has_relation_friend = $CHARACTER$
+		has_relation_lover = $CHARACTER$
+		opinion = {
+			target = $CHARACTER$
+			value >= high_positive_opinion
+		}
+	}
+	$CHARACTER$.health < fine_health
+}
+
 #########################
 #########################
 # MANA DEVOURING EVENTS #
@@ -98,7 +115,7 @@ AMHealth.0001 = {
 		base = 1
 
 		modifier = {
-			NOT = { has_trait = mage }
+			NOT = { is_magus_trigger = yes }
 			factor = 0
 		}
 		modifier = {
@@ -359,16 +376,13 @@ AMHealth.0002 = {
 		no_disease_treatment_effect = yes
 		ai_chance = { base = 0 }
 	}
-
 }
-
 
 ########################
 ########################
 # Mage Dementia EVENTS #
 ########################
 ########################
-
 
 #You contract Mage Dementia
 AMHealth.0005 = {
@@ -479,9 +493,7 @@ AMHealth.0005 = {
 		no_disease_treatment_effect = yes
 		ai_chance = { base = 0 }
 	}
-
 }
-
 
 ##################
 # RECOVERY EVENTS

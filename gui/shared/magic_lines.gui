@@ -1,0 +1,43 @@
+template Line_MagicPerk
+{
+	effectname = "PdxGuiLineScreenSpace"
+	width = 5
+	line_cap = yes
+	color = { 0.45 0.40 0.35 1.0 }
+
+	#animation_speed = { 0.15 0.15 }
+	texture = "gfx/lines/tiling_noise.dds"
+	uv_scale = { 1.0 1.0 }
+
+	mask = "gfx/lines/mask.dds"
+	mask_uv_scale = { 0.1 1.0 }
+}
+
+template Line_MagicPerk_Base
+{
+	width = 3
+
+	uv_scale = { 0.01 1.0 }
+	mask = "gfx/lines/line_lifestyles_mask.dds"
+	mask_uv_scale = { 0.025 1.0 }
+}
+
+template Line_MagicPerk_Unlocked
+{
+	using = Line_MagicPerk_Base
+	animation_speed = { 0.2 0.0 }
+	texture = "gfx/lines/line_lifestyles_unlocked.dds"
+}
+
+template Line_MagicPerk_CanUnlock
+{
+	using = Line_MagicPerk_Base
+	animation_speed = { 0.1 0.0 }
+	texture = "gfx/lines/line_lifestyles_can_unlock.dds"
+}
+
+template Line_MagicPerk_Unavailable
+{
+	using = Line_MagicPerk_Base
+	texture = "gfx/lines/line_lifestyles_unavailable.dds"
+}

@@ -9,7 +9,7 @@ convert_whole_realm_to_magocracy_decision = {
 	is_shown = {
 		has_government = tribal_government
 		is_independent_ruler = yes
-		is_magus = yes
+		is_magus_trigger = yes
 	}
 
 	is_valid = {
@@ -80,7 +80,7 @@ convert_whole_realm_to_magocracy_decision = {
 			limit = { 
 				exists = house 
 				is_house_head = yes 
-				is_magus = yes
+				is_magus_trigger = yes
 			}
 			add_family_to_magocracy_families = yes
 		}
@@ -222,7 +222,7 @@ convert_to_magocracy_decision = {
 		is_landed = yes
 		is_independent_ruler = yes
 		highest_held_title_tier > tier_county
-		is_magus = yes
+		is_magus_trigger = yes
 		OR = {
 			has_government = feudal_government
 			has_government = clan_government

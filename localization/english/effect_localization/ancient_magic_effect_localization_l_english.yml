@@ -57,3 +57,6 @@
  FIRST_REMOVE_ALL_CHARACTER_MODIFIER_INSTANCES_PAST_EFFECT: "You lost all $MODIFIER$ Modifiers"
  THIRD_REMOVE_ALL_CHARACTER_MODIFIER_INSTANCES_EFFECT: "#V [CHARACTER.GetTitledFirstName]#! loses all $MODIFIER$ Modifiers"
  THIRD_REMOVE_ALL_CHARACTER_MODIFIER_INSTANCES_PAST_EFFECT: "#V [CHARACTER.GetTitledFirstName]#! lost all $MODIFIER$ Modifiers"
+
+ # Magic Advancement
+ EARNING_MAGE_XP_EFFECT: "This character is spending all their time studying magic, instead of more worldly pursuits."

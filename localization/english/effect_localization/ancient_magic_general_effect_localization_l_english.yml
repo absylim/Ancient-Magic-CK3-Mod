@@ -1,0 +1,8 @@
+﻿l_english:
+ # Perk effects
+ GLOBAL_AWAKEN_MAGICAL_POTENTIAL: "Awaken magical potential"
+ FIRST_AWAKEN_MAGICAL_POTENTIAL: "Awaken your magical potential"
+ THIRD_AWAKEN_MAGICAL_POTENTIAL: "#V [CHARACTER.GetTitledFirstName]#! awakens their magical potential"
+ GLOBAL_UNLOCK_SPARK_SPELL: "Unlocks [spark_spell|E]"
+ FIRST_UNLOCK_SPARK_SPELL: "Allows you to cast [spark_spell|E]"
+ THIRD_UNLOCK_SPARK_SPELL: "Allows #V [CHARACTER.GetTitledFirstName]#! to cast [spark_spell|E]"

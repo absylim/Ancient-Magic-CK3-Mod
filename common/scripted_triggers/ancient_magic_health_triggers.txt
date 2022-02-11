@@ -13,10 +13,11 @@ can_contract_magical_disease_trigger = {
 	NOT = { has_character_flag = immune_to_disease }
 	
 	#Checks if the person is gifted with magic, as magical diseases are only contractable by those with the gift
+	is_magus_trigger = yes
 	OR = {
-		is_magus = yes
+		NOT = { $DISEASE$ = mage_dementia }
 		AND = {
-			$DISEASE$ == mage_dementia
+			$DISEASE$ = mage_dementia
 			var:memory_life_capacity_left <= 10
 		}
 	}
@@ -53,14 +54,6 @@ can_contract_magical_disease_trigger = {
 		has_character_flag = contraction_cooldown_general #Haven't had a disease for 2 years
 		#No specific cooldowns:
 		#Mana devourin, after one time you are immune
-	}
-	
-	#If mental dissease but non-mage
-	NOR = {
-		AND = {
-			$DISEASE$ = mage_dementia
-			var:memory_life_capacity_left > 10
-		}
 	}
 }
 

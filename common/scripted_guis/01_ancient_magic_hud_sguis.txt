@@ -94,92 +94,88 @@ should_show_breakdown_for_flag = {
 	is_shown = {
 		switch = {
 			trigger = scope:flag_name
-			flag:time_mage_perk = { has_perk = time_mage_perk }
-			flag:glimpse_the_future_perk = { has_perk = glimpse_the_future_perk }
-			flag:financial_times_perk = { has_perk = financial_times_perk }
-			flag:celerity_perk = { has_perk = celerity_perk }
-			flag:mass_celerity_perk = { has_perk = mass_celerity_perk }
-			flag:slowness_perk = { has_perk = slowness_perk }
-			flag:mass_slowness_perk = { has_perk = mass_slowness_perk }
-			flag:temporal_manipulation_perk = { has_perk = temporal_manipulation_perk }
-			flag:master_of_time_perk = { has_perk = master_of_time_perk }
-			flag:life_mage_perk = { has_perk = life_mage_perk }
-			flag:inward_reflection_perk = { has_perk = inward_reflection_perk }
-			flag:inward_perfection_perk = { has_perk = inward_perfection_perk }
-			flag:heal_perk = { has_perk = heal_perk }
-			flag:greater_heal_perk = { has_perk = greater_heal_perk }
-			flag:battlefield_life_mage_perk = { has_perk = battlefield_life_mage_perk }
-			flag:greater_battlefield_life_mage_perk = { has_perk = greater_battlefield_life_mage_perk }
-			flag:purity_of_body_perk = { has_perk = purity_of_body_perk }
-			flag:avatar_of_life_perk = { has_perk = avatar_of_life_perk }
-			flag:elemental_mage_perk = { has_perk = elemental_mage_perk }
-			flag:flame_aura_perk = { has_perk = flame_aura_perk }
-			flag:flaming_weapons_perk = { has_perk = flaming_weapons_perk }
-			flag:living_earthworks_perk = { has_perk = living_earthworks_perk }
-			flag:golem_creation_perk = { has_perk = golem_creation_perk }
-			flag:control_water_perk = { has_perk = control_water_perk }
-			flag:drought_perk = { has_perk = drought_perk }
-			flag:elemental_warrior_perk = { has_perk = elemental_warrior_perk }
-			flag:lord_of_the_elements_perk = { has_perk = lord_of_the_elements_perk }
-			flag:death_mage_perk = { has_perk = death_mage_perk }
-			flag:inflict_illness_perk = { has_perk = inflict_illness_perk }
-			flag:plague_lord_perk = { has_perk = plague_lord_perk }
-			flag:aura_of_death_perk = { has_perk = aura_of_death_perk }
-			flag:necromancy_perk = { has_perk = necromancy_perk }
-			flag:drain_life_perk = { has_perk = drain_life_perk }
-			flag:death_stare_perk = { has_perk = death_stare_perk }
-			flag:death_magic_8_perk = { has_perk = death_magic_8_perk }
-			flag:deacon_of_death_perk = { has_perk = deacon_of_death_perk }
-			flag:biomancy_mage_perk = { has_perk = biomancy_mage_perk }
-			flag:improve_trait_perk = { has_perk = improve_trait_perk }
-			flag:perfect_trait_perk = { has_perk = perfect_trait_perk }
-			flag:fertility_control_perk = { has_perk = fertility_control_perk }
-			flag:impregnate_perk = { has_perk = impregnate_perk }
-			flag:weaken_trait_perk = { has_perk = weaken_trait_perk }
-			flag:criple_trait_perk = { has_perk = criple_trait_perk }
-			flag:sculpter_of_flesh_perk = { has_perk = sculpter_of_flesh_perk }
-			flag:architect_of_bloodlines_perk = { has_perk = architect_of_bloodlines_perk }
-			flag:domination_mage_perk = { has_perk = domination_mage_perk }
-			flag:entrance_perk = { has_perk = entrance_perk }
-			flag:incite_lust_perk = { has_perk = incite_lust_perk }
-			flag:incite_obedience_perk = { has_perk = incite_obedience_perk }
-			flag:dominate_perk = { has_perk = dominate_perk }
-			flag:beguiling_aura_perk = { has_perk = beguiling_aura_perk }
-			flag:friendship_perk = { has_perk = friendship_perk }
-			flag:enchanting_aura_perk = { has_perk = enchanting_aura_perk }
-			flag:master_of_puppets_perk = { has_perk = master_of_puppets_perk }
+			flag:time_mage_perk = { has_perk_trigger = { PERK = time_mage_perk } }
+			flag:glimpse_the_future_perk = { has_perk_trigger = { PERK = glimpse_the_future_perk } }
+			flag:financial_times_perk = { has_perk_trigger = { PERK = financial_times_perk } }
+			flag:celerity_perk = { has_perk_trigger = { PERK = celerity_perk } }
+			flag:mass_celerity_perk = { has_perk_trigger = { PERK = mass_celerity_perk } }
+			flag:slowness_perk = { has_perk_trigger = { PERK = slowness_perk } }
+			flag:mass_slowness_perk = { has_perk_trigger = { PERK = mass_slowness_perk } }
+			flag:temporal_manipulation_perk = { has_perk_trigger = { PERK = temporal_manipulation_perk } }
+			flag:master_of_time_perk = { has_perk_trigger = { PERK = master_of_time_perk } }
+			flag:life_mage_perk = { has_perk_trigger = { PERK = life_mage_perk } }
+			flag:inward_reflection_perk = { has_perk_trigger = { PERK = inward_reflection_perk } }
+			flag:inward_perfection_perk = { has_perk_trigger = { PERK = inward_perfection_perk } }
+			flag:heal_perk = { has_perk_trigger = { PERK = heal_perk } }
+			flag:greater_heal_perk = { has_perk_trigger = { PERK = greater_heal_perk } }
+			flag:battlefield_life_mage_perk = { has_perk_trigger = { PERK = battlefield_life_mage_perk } }
+			flag:greater_battlefield_life_mage_perk = { has_perk_trigger = { PERK = greater_battlefield_life_mage_perk } }
+			flag:purity_of_body_perk = { has_perk_trigger = { PERK = purity_of_body_perk } }
+			flag:avatar_of_life_perk = { has_perk_trigger = { PERK = avatar_of_life_perk } }
+			flag:elemental_mage_perk = { has_perk_trigger = { PERK = elemental_mage_perk } }
+			flag:flame_aura_perk = { has_perk_trigger = { PERK = flame_aura_perk } }
+			flag:flaming_weapons_perk = { has_perk_trigger = { PERK = flaming_weapons_perk } }
+			flag:living_earthworks_perk = { has_perk_trigger = { PERK = living_earthworks_perk } }
+			flag:golem_creation_perk = { has_perk_trigger = { PERK = golem_creation_perk } }
+			flag:control_water_perk = { has_perk_trigger = { PERK = control_water_perk } }
+			flag:drought_perk = { has_perk_trigger = { PERK = drought_perk } }
+			flag:elemental_warrior_perk = { has_perk_trigger = { PERK = elemental_warrior_perk } }
+			flag:lord_of_the_elements_perk = { has_perk_trigger = { PERK = lord_of_the_elements_perk } }
+			flag:death_mage_perk = { has_perk_trigger = { PERK = death_mage_perk } }
+			flag:inflict_illness_perk = { has_perk_trigger = { PERK = inflict_illness_perk } }
+			flag:plague_lord_perk = { has_perk_trigger = { PERK = plague_lord_perk } }
+			flag:aura_of_death_perk = { has_perk_trigger = { PERK = aura_of_death_perk } }
+			flag:necromancy_perk = { has_perk_trigger = { PERK = necromancy_perk } }
+			flag:drain_life_perk = { has_perk_trigger = { PERK = drain_life_perk } }
+			flag:death_stare_perk = { has_perk_trigger = { PERK = death_stare_perk } }
+			flag:blight_perk = { has_perk_trigger = { PERK = blight_perk } }
+			flag:deacon_of_death_perk = { has_perk_trigger = { PERK = deacon_of_death_perk } }
+			flag:biomancy_mage_perk = { has_perk_trigger = { PERK = biomancy_mage_perk } }
+			flag:improve_trait_perk = { has_perk_trigger = { PERK = improve_trait_perk } }
+			flag:perfect_trait_perk = { has_perk_trigger = { PERK = perfect_trait_perk } }
+			flag:fertility_control_perk = { has_perk_trigger = { PERK = fertility_control_perk } }
+			flag:impregnate_perk = { has_perk_trigger = { PERK = impregnate_perk } }
+			flag:weaken_trait_perk = { has_perk_trigger = { PERK = weaken_trait_perk } }
+			flag:criple_trait_perk = { has_perk_trigger = { PERK = criple_trait_perk } }
+			flag:sculpter_of_flesh_perk = { has_perk_trigger = { PERK = sculpter_of_flesh_perk } }
+			flag:architect_of_bloodlines_perk = { has_perk_trigger = { PERK = architect_of_bloodlines_perk } }
+			flag:domination_mage_perk = { has_perk_trigger = { PERK = domination_mage_perk } }
+			flag:entrance_perk = { has_perk_trigger = { PERK = entrance_perk } }
+			flag:incite_lust_perk = { has_perk_trigger = { PERK = incite_lust_perk } }
+			flag:incite_obedience_perk = { has_perk_trigger = { PERK = incite_obedience_perk } }
+			flag:dominate_perk = { has_perk_trigger = { PERK = dominate_perk } }
+			flag:beguiling_aura_perk = { has_perk_trigger = { PERK = beguiling_aura_perk } }
+			flag:friendship_perk = { has_perk_trigger = { PERK = friendship_perk } }
+			flag:enchanting_aura_perk = { has_perk_trigger = { PERK = enchanting_aura_perk } }
+			flag:master_of_puppets_perk = { has_perk_trigger = { PERK = master_of_puppets_perk } }
 			flag:magic_potential_1 = { has_trait = magic_potential_1 }
 			flag:magic_potential_2 = { has_trait = magic_potential_2 }
 			flag:magic_potential_3 = { has_trait = magic_potential_3 }
-			flag:glimpse_the_future_spell = { glimpse_the_future_spell_gen_cost < 0 }
-			flag:financial_times_spell = { financial_times_spell_gen_cost < 0 }
-			flag:celerity_spell = { celerity_spell_gen_cost < 0 }
-			flag:mass_celerity_spell = { mass_celerity_spell_gen_cost < 0 }
-			flag:slowness_spell = { slowness_spell_gen_cost < 0 }
-			flag:mass_slowness_spell = { mass_slowness_spell_gen_cost < 0 }
-			flag:temporal_manipulation_spell = { temporal_manipulation_spell_gen_cost < 0 }
-			flag:haste_spell = { haste_spell_gen_cost < 0 }
-			flag:master_of_time_spell = { master_of_time_spell_gen_cost < 0 }
-			flag:flame_aura_spell = { flame_aura_spell_gen_cost < 0 }
-			flag:flaming_weapons_spell = { flaming_weapons_spell_gen_cost < 0 }
-			flag:living_earthworks_spell = { living_earthworks_spell_gen_cost < 0 }
-			flag:control_water_spell = { control_water_spell_gen_cost < 0 }
-			flag:drought_spell = { drought_spell_gen_cost < 0 }
-			flag:elemental_warrior_spell = { elemental_warrior_spell_gen_cost < 0 }
-			flag:aura_of_death_spell = { aura_of_death_spell_gen_cost < 0 }
+			flag:glimpse_the_future_spell = { has_spell_aura_targets_trigger = { SPELL = glimpse_the_future_spell } }
+			flag:financial_times_spell = { has_spell_aura_targets_trigger = { SPELL = financial_times_spell } }
+			flag:celerity_spell = { has_spell_aura_targets_trigger = { SPELL = celerity_spell } }
+			flag:mass_celerity_spell = { has_spell_aura_targets_trigger = { SPELL = mass_celerity_spell } }
+			flag:slowness_spell = { has_spell_aura_targets_trigger = { SPELL = slowness_spell } }
+			flag:mass_slowness_spell = { has_spell_aura_targets_trigger = { SPELL = mass_slowness_spell } }
+			flag:temporal_manipulation_spell = { has_spell_aura_targets_trigger = { SPELL = temporal_manipulation_spell } }
+			flag:haste_spell = { has_spell_aura_targets_trigger = { SPELL = haste_spell } }
+			flag:master_of_time_spell = { has_spell_aura_targets_trigger = { SPELL = master_of_time_spell } }
+			flag:flame_aura_spell = { has_spell_aura_targets_trigger = { SPELL = flame_aura_spell } }
+			flag:flaming_weapons_spell = { has_spell_aura_targets_trigger = { SPELL = flaming_weapons_spell } }
+			flag:living_earthworks_spell = { has_spell_aura_targets_trigger = { SPELL = living_earthworks_spell } }
+			flag:control_water_spell = { has_spell_aura_targets_trigger = { SPELL = control_water_spell } }
+			flag:drought_spell = { has_spell_aura_targets_trigger = { SPELL = drought_spell } }
+			flag:elemental_warrior_spell = { has_spell_aura_targets_trigger = { SPELL = elemental_warrior_spell } }
+			flag:aura_of_death_spell = { has_spell_aura_targets_trigger = { SPELL = aura_of_death_spell } }
 			flag:fertility_control_spell = { fertility_control_spell_gen_cost < 0 }
-			flag:beguiling_aura_spell = { beguiling_aura_spell_gen_cost < 0 }
-			flag:enchanting_aura_spell = { enchanting_aura_spell_gen_cost < 0 }
+			flag:beguiling_aura_spell = { has_spell_aura_targets_trigger = { SPELL = beguiling_aura_spell } }
+			flag:enchanting_aura_spell = { has_spell_aura_targets_trigger = { SPELL = enchanting_aura_spell } }
 			flag:mana_devouring_1 = { has_trait = mana_devouring_1 }
 			flag:mana_devouring_2 = { has_trait = mana_devouring_2 }
 		}
 	}
 
 	is_valid = {
-		switch = {
-			trigger = scope:flag_name
-			flag:master_of_time_spell = { always = yes }
-			fallback = { always = no }
-		}
+		is_magic_aura_trigger = { SPELL = scope:flag_name }
 	}
 }

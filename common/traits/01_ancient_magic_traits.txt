@@ -56,18 +56,51 @@ architect_of_bloodlines = {
 	index = 9005
 
 	ruler_designer_cost = 50
+
 	ai_rationality = very_low_positive_ai_value
 }
 
 master_of_time = {
 	index = 9006
 
-	immortal = yes
-
 	ruler_designer_cost = 50
+
 	ai_rationality = very_low_positive_ai_value
 }
 
+deacon_of_death = {
+	index = 9008
+
+	ruler_designer_cost = 50
+
+	ai_compassion = low_negative_ai_value
+	ai_rationality = very_low_positive_ai_value
+}
+
+avatar_of_life = {
+	index = 9009
+
+	ruler_designer_cost = 50
+
+	ai_compassion = low_positive_ai_value
+	ai_rationality = very_low_positive_ai_value
+}
+
+lord_of_the_elements = {
+	index = 9010
+
+	ruler_designer_cost = 50
+
+	ai_rationality = very_low_positive_ai_value
+}
+
+master_of_puppets = {
+	index = 9011
+
+	ruler_designer_cost = 50
+
+	ai_rationality = very_low_positive_ai_value
+}
 
 mage = {
 	index = 33302
@@ -123,33 +156,6 @@ undead = {
 		opinion_modifier = necromancy_allowed
 		ignore_opinion_value_if_same_trait = yes
 	}
-}
-deacon_of_death = {
-	index = 9008
-
-	ruler_designer_cost = 50
-	ai_compassion = low_negative_ai_value
-	ai_rationality = very_low_positive_ai_value
-}
-avatar_of_life = {
-	index = 9009
-
-	ai_compassion = low_positive_ai_value
-	ai_rationality = very_low_positive_ai_value
-
-	ruler_designer_cost = 50
-}
-lord_of_the_elements = {
-	index = 9010
-
-	ruler_designer_cost = 50
-	ai_rationality = very_low_positive_ai_value
-}
-master_of_puppets = {
-	index = 9011
-
-	ruler_designer_cost = 50
-	ai_rationality = very_low_positive_ai_value
 }
 
 ##############################################
@@ -270,7 +276,7 @@ education_arcane_1 = {
 	minimum_age = 16
 	learning = 2
 	education = yes
-	monthly_arcane_lifestyle_xp_gain_mult = 0.1
+
 	ruler_designer_cost = 0
 
 	desc = {
@@ -294,7 +300,7 @@ education_arcane_2 = {
 	learning = 3
 	prowess = 1
 	education = yes
-	monthly_arcane_lifestyle_xp_gain_mult = 0.2
+
 	ruler_designer_cost = 20
 
 	desc = {
@@ -318,7 +324,7 @@ education_arcane_3 = {
 	learning = 4
 	prowess = 2
 	education = yes
-	monthly_arcane_lifestyle_xp_gain_mult = 0.3
+
 	ruler_designer_cost = 40
 
 	desc = {
@@ -342,7 +348,7 @@ education_arcane_4 = {
 	learning = 6
 	prowess = 4
 	education = yes
-	monthly_arcane_lifestyle_xp_gain_mult = 0.4
+
 	ruler_designer_cost = 80
 
 	desc = {

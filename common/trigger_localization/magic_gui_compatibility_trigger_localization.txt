@@ -1,4 +1,4 @@
-is_pih_installed_trigger = {
+﻿is_pih_installed_trigger = {
     global = PIH_INSTALLED
     first = PIH_INSTALLED
     third = PIH_INSTALLED

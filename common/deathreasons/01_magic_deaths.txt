@@ -22,6 +22,6 @@ death_mana_devouring_2 = {
 }
 
 death_botched_soul_forging = {
-	public_knowlage = yes
+	public_knowledge = yes
 	icon = "death_unknown.dds"
 }

@@ -1,4 +1,4 @@
-city_of_magic_holding = {
+﻿city_of_magic_holding = {
 	primary_building = city_of_magic_01
 	buildings = {
 		outposts_01

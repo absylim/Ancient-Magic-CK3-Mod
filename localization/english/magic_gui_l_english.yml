@@ -1,6 +1,6 @@
 ﻿l_english:
  ## GUI
- MAGIC_BUTTON: "Open Magic"
+ MAGIC_BUTTON: "Open Spellbook"
  MAGIC_VIEW: "Magic"
  MAGE_LEVEL: "Mage Level: [GetPlayer.MakeScope.ScriptValue('mage_level')|0]"
  MAGE_XP_TNL: "Mage XP: [GetPlayer.MakeScope.ScriptValue('mage_xp_display')|0] / [GetPlayer.MakeScope.ScriptValue('mage_xp_to_next_level')|0]"
@@ -14,18 +14,21 @@
  SPELL_PARAMETERS: "Spell Properties"
 
  ## Spell Categories
+ None_category: "Basic"
  time_category: "Chronomancy"
  life_category: "Chiromancy"
- elemental_category: "Elomancy"
+ elomancy_category: "Elomancy"
  necromancy_category: "Necromancy"
  biomancy_category: "Biomancy"
- mind_magic_category: "Mensomancy"
+ mensomancy_category: "Mensomancy"
 
  ### Spells
  ## Spell Names
  # error catching
  dummy_spell_name: ""
 
+ # None
+ spark_spell_name: "Practice Spark"
  # Time
  glimpse_the_future_spell_name: "Glimpse the Future"
  financial_times_spell_name: "Financial Times"
@@ -40,7 +43,7 @@
  heal_spell_name: "Heal"
  greater_heal_spell_name: "Greater Heal"
  avatar_of_life_spell_name: "Avatar of Life"
- # Elemental
+ # Elomancy
  flame_aura_spell_name: "Flame Aura"
  flaming_weapons_spell_name: "Flaming Weapons"
  living_earthworks_spell_name: "Living Earthworks"
@@ -56,6 +59,7 @@
  necromancy_spell_name: "Necromancy"
  drain_life_spell_name: "Drain Life"
  death_stare_spell_name: "Death Stare"
+ blight_spell_name: "Blight"
  deacon_of_death_spell_name: "Deacon of Death"
  # Biomancy
  rewrite_beauty_spell_name: "Rewrite Beauty"
@@ -81,6 +85,9 @@
  dummy_spell_desc: ""
 
  #Time
+ spark_spell_desc: "This spell is the first spell a mage learns. By practicing channelling mana, the mage can gain spellcasting experience. The more skilled a mage is, the more experience they can gain from the same amount of mana."
+
+ #Time
  glimpse_the_future_spell_desc: "This spell allows the user brief insights into the future of their culture, allowing them to view new innovations and technologies. Gives a bonus to [cultural_fascination|E] research speed."
  financial_times_spell_desc: "A more directed application of future sight, this spell allows the user to see specific events, such as resource abundances or shortages, well in advance, allowing them to gain a market advantage. Gives a bonus to monthly [income|E]."
  celerity_spell_desc: "A relatively simple application of [chronomancy|E], this spell allows the user to increase the flow of time around themselves, giving them extraordinarily fast reaction times. Best used in short bursts, so as not to age oneself too quickly. Gives a bonus to [prowess|E]."
@@ -89,14 +96,14 @@
  mass_slowness_spell_desc: "More powerful than [slowness_spell|E], not as powerful as [haste_spell|E], this spell gives the user enough fine control to slow enemy soldiers under a given commander, even in the middle of pitched battle. Gives a penalty to [advantage|E] and an enemy [dead_soldiers|E] increase."
  temporal_manipulation_spell_desc: "The true successor to [celerity_spell|E], this spell allows the user to increase the flow of time around a specific area, allowing tasks to be performed at a much faster rate. Gives a bonus to [building|E] construction speed."
  haste_spell_desc: "Contrary to the name, this spell is actually a more powerful version of [slowness_spell|E]. Instead of slowing a single target, the mage slows all but a select group. While those affected still move at a normal speed, they appear to be moving at great speed. Gives a bonus to army movement speed."
- master_of_time_spell_desc: "Having mastered the nuances of time's flow, this spell allows the user to completely halt the passage of time for another person, while still allowing them to interact with the world as normal. Makes the target [GetTrait('immortal').GetName(GetPlayer)]."
+ master_of_time_spell_desc: "Having mastered the nuances of time's flow, this spell allows the user to completely halt the passage of time for another person, while still allowing them to interact with the world as normal. Makes the target [GetTrait('immortal').GetName(GetNullCharacter)]."
 
  # Life
  heal_spell_desc: "The most basic application of [chiromancy|E], this spell increases the speed of the body's natural healing processes: sealing wounds, increasing blood production, and bolstering immune system strength. Effectively heals the target of any single common affliction."
  greater_heal_spell_desc: "A more advanced application of [chiromancy|E], this spell uses mana directly to seal wounds, replace blood, destroy infections, etc., and so can be used to heal more dangerous illnesses. Effectively heals the target of any single common or dangerous affliction."
  avatar_of_life_spell_desc: "The most advanced application of [chiromancy|E], this spell uses pure magical power to replace organs and blood, annihilate infectious invaders, and even target diseases the body doesn't recognize as diseases. Effectively heals the target of any single affliction."
 
- # Elemental
+ # Elomancy
  flame_aura_spell_desc: "$lorem_ipsum$"
  flaming_weapons_spell_desc: "$lorem_ipsum$"
  living_earthworks_spell_desc: "$lorem_ipsum$"
@@ -107,12 +114,13 @@
  lord_of_the_elements_spell_desc: "$lorem_ipsum$"
 
  # Necromancy
- inflict_illness_spell_desc: "$lorem_ipsum$"
- plague_lord_spell_desc: "The pestilence spell, when cast in its weakest form, acts upon its subject's immune system, diminishing it in ways which leave the target vulnerable to all manner of illnesses which they would normally be able to fight off.\n\nWhen employed by an expert [necromancer|E], however, this spell becomes a horrific demonstration of the power of this [school_of_magic|E]. By keeping the victim's immune system weakened, and directly influencing the growth of their illness, the practioner is able to engineer a truly virulent and deadly plague. This plague is almost always lethal to any individual that is exposed to it, and is able to spread from one victim to another, killing droves."
+ inflict_illness_spell_desc: "This basic [necromancy|E] spell acts upon its subject's immune system, diminishing it in ways which leave the target vulnerable to all manner of illnesses which they would normally be able to fight off. Makes the target [GetTrait('ill').GetName(GetNullCharacter)]."
+ plague_lord_spell_desc: "A more concentrated form of [inflict_illness_spell|E], the practioner is able to engineer a truly virulent and deadly plague. This plague has very high lethality, and is able to spread from one victim to another, killing droves. Gives the target the [GetTrait('bubonic_plague').GetName(GetNullCharacter)]."
  aura_of_death_spell_desc: "[necromancy|E] is a dangerous [school_of_magic|E]. Living things can feel this at a visceral level. Among the simplest of all aura spells, the necromancer's 'aura of death' doesn't do anything particularly flashy. All a practioner needs to do in order to cast this spell is to place themselves in the state of mind required to cast a necromancy spell. This voluntary madness, and the energies associated with it, produce a pervasive sense of unease in anyone near the spell caster."
  necromancy_spell_desc: "This spell is the quintessential [necromancy|E] ritual. In order to cast the spell, the necromancer must extend their madness out into the world, pressing it upon the bodies of the deceased, and then exerting their will, denying death as a certainty so completely that reality shifts, molding itself to the madness of the caster.\n\nTo achieve this obscene ritual, even the most powerful of [GetTrait('mage').GetName( GetNullCharacter ) |LVl]s require a number of physical spell mnemonics, usually in the form of a ritual dagger, which has been placed in the funeral pyres of hundreds of the recently deceased, and often, a number of assitants to help with various elements of the ritual."
  drain_life_spell_desc: "This infamous spell is among the most evil of spells known in any [school_of_magic|E]. It draws on the corrosive, destructive, and hungry nature of [necromancy|E], using that nature to drain the life-force of the spell's target and feed it back into its caster. If the caster exerts more will, they may even drain the target so quickly that the victim expires immediately, though this approach disperses the victim's life-force so rapdily that the caster is unable to consume it."
  death_stare_spell_desc: "$lorem_ipsum$"
+ blight_spell_desc: "$lorem_ipsum$"
  deacon_of_death_spell_desc: "$lorem_ipsum$"
 
  # Biomancy
@@ -123,7 +131,7 @@
  fertility_control_spell_desc: "$lorem_ipsum$"
  impregnate_spell_desc: "$lorem_ipsum$"
 
- # Mind Magic
+ # Mensomancy
  entrance_spell_desc: "$lorem_ipsum$"
  incite_lust_spell_desc: "$lorem_ipsum$"
  incite_obedience_spell_desc: "$lorem_ipsum$"

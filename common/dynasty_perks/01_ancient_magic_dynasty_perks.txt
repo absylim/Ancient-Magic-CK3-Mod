@@ -1,4 +1,4 @@
-# ARCANE LEGACIES
+﻿# ARCANE LEGACIES
 
 arcane_legacy_1 = { # Powerful blood
 	legacy = arcane_legacy_track
@@ -13,7 +13,7 @@ arcane_legacy_1 = { # Powerful blood
 		}
 		if = {
 			limit = {
-				has_trait = mage
+				is_magus_trigger = yes
 			}
 			multiply = 5
 		}

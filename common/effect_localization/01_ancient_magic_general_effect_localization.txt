@@ -1,0 +1,11 @@
+﻿awaken_magical_potential = {
+	global = GLOBAL_AWAKEN_MAGICAL_POTENTIAL
+    first = FIRST_AWAKEN_MAGICAL_POTENTIAL
+    third = THIRD_AWAKEN_MAGICAL_POTENTIAL
+}
+
+unlock_spark_spell = {
+	global = GLOBAL_UNLOCK_SPARK_SPELL
+    first = FIRST_UNLOCK_SPARK_SPELL
+    third = THIRD_UNLOCK_SPARK_SPELL
+}

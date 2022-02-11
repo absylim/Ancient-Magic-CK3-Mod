@@ -34,7 +34,7 @@ patrician = {
 	conditions = { 
 		exists = house 
 		is_house_head = yes 
-		is_magus = yes
+		is_magus_trigger = yes
 		house = { exists = var:titular_magocracy } 
 	} 
 }
@@ -44,7 +44,7 @@ valid_propogandist = {
 	conditions = { 
 		exists = house 
 		is_house_head = yes 
-		is_magus = yes
+		is_magus_trigger = yes
 		house = { has_variable_list = propoganda_campaigns_list } 
 	} 
 }

@@ -1,4 +1,4 @@
-namespace = ancient_magic_rituals_events
+﻿namespace = ancient_magic_rituals_events
 
 ancient_magic_rituals_events.001 = { #Forge soul
 	title = ancient_magic_rituals_events.001.t

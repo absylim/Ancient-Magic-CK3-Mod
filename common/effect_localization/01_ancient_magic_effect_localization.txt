@@ -63,3 +63,9 @@ change_mana_gen = {
 	third = THIRD_POSITIVE_MANA_DRAIN
 	third_neg = THIRD_NEGATIVE_MANA_DRAIN
 }
+
+earn_mage_xp_effect = {
+	global = EARNING_MAGE_XP_EFFECT
+	first = EARNING_MAGE_XP_EFFECT
+	third = EARNING_MAGE_XP_EFFECT
+}

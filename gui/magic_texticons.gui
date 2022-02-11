@@ -99,6 +99,25 @@ texticon = {
 }
 
 texticon = {
+    icon = xp_icon
+    iconsize = {
+		texture = "gfx/magic/maintab_spellbook.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }
+}
+
+texticon = {
+	icon = icon_None_category
+	iconsize = {
+		texture = "gfx/magic/maintab_spellbook.dds"
+		size = { 80 80 }
+		fontsize = 16
+	}
+}
+
+texticon = {
 	icon = icon_time_category
 	iconsize = {
 		texture = "gfx/magic/time_magic.dds"
@@ -117,9 +136,9 @@ texticon = {
 }
 
 texticon = {
-	icon = icon_elemental_category
+	icon = icon_elomancy_category
 	iconsize = {
-		texture = "gfx/magic/elemental_magic.dds"
+		texture = "gfx/magic/elomancy_magic.dds"
 		size = { 80 80 }
 		fontsize = 16
 	}
@@ -144,9 +163,9 @@ texticon = {
 }
 
 texticon = {
-	icon = icon_mind_magic_category
+	icon = icon_mensomancy_category
 	iconsize = {
-		texture = "gfx/magic/mind_magic.dds"
+		texture = "gfx/magic/mensomancy_magic.dds"
 		size = { 80 80 }
 		fontsize = 16
 	}

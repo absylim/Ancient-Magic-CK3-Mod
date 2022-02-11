@@ -1,0 +1,51 @@
+﻿#Time
+spark_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		has_enough_mana_trigger = { SPELL = spark_spell }
+	}
+	effect = {
+		save_temporary_scope_value_as = {
+			name = spell_cost
+			value = {
+				value = spark_spell_cost.abs
+				multiply = var:repeat_count
+			}
+		}
+		change_mana_with_tooltip = { VALUE = spell_cost.neg }
+		change_mage_xp = { VALUE = scope:spell_cost }
+	}
+}
+
+spark_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk_trigger = { PERK = mage_perk }
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+spark_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+spark_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}

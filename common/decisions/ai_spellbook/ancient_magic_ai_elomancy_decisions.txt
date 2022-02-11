@@ -1,7 +1,7 @@
 ﻿stone_golem_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
-		is_magus = yes
+		is_magus_trigger = yes
 		has_perk = golem_creation_perk
 		var:mana.compare_value >= var:golem_creation_spell_cost.compare_value
 		NOT = { has_character_modifier = golem_cooldown_modifier }
@@ -42,7 +42,7 @@
 lava_golem_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
-		is_magus = yes
+		is_magus_trigger = yes
 		has_trait = lord_of_the_elements
 		var:mana.compare_value >= var:lord_of_the_elements_spell_cost.compare_value
 		NOT = { has_character_modifier = lava_golem_cooldown_modifier }
@@ -93,7 +93,7 @@ lava_golem_ai_spell_decision = {
 flame_aura_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
-		is_magus = yes
+		is_magus_trigger = yes
 		has_perk = flame_aura_perk
 		var:mana.compare_value >= var:flame_aura_spell_cost.compare_value
 	}
@@ -163,7 +163,7 @@ flame_aura_ai_spell_decision = {
 flaming_weapons_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
-		is_magus = yes
+		is_magus_trigger = yes
 		has_perk = flaming_weapons_perk
 		var:mana.compare_value >= var:flaming_weapons_spell_cost.compare_value
 	}
@@ -233,7 +233,7 @@ flaming_weapons_ai_spell_decision = {
 living_earthworks_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
-		is_magus = yes
+		is_magus_trigger = yes
 		has_perk = living_earthworks_perk
 		var:mana.compare_value >= var:living_earthworks_spell_cost.compare_value
 	}
@@ -303,7 +303,7 @@ living_earthworks_ai_spell_decision = {
 water_control_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
-		is_magus = yes
+		is_magus_trigger = yes
 		has_perk = control_water_perk
 		var:mana.compare_value >= var:control_water_spell_cost.compare_value
 	}
@@ -373,7 +373,7 @@ water_control_ai_spell_decision = {
 cloak_of_elements_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
-		is_magus = yes
+		is_magus_trigger = yes
 		has_perk = elemental_warrior_perk
 		var:mana.compare_value >= var:elemental_warrior_spell_cost.compare_value
 	}

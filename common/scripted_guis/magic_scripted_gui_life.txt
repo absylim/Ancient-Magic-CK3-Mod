@@ -17,7 +17,7 @@ heal_spell = {
 heal_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = heal_perk
+		has_perk_trigger = { PERK = heal_perk }
 	}
 	is_valid = {
 		always = yes
@@ -67,7 +67,7 @@ greater_heal_spell = {
 greater_heal_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = greater_heal_perk
+		has_perk_trigger = { PERK = greater_heal_perk }
 	}
 	is_valid = {
 		always = yes
@@ -127,7 +127,7 @@ avatar_of_life_spell = {
 avatar_of_life_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = avatar_of_life_perk
+		has_perk_trigger = { PERK = avatar_of_life_perk }
 	}
 	is_valid = {
 		always = yes

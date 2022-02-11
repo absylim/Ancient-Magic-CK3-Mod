@@ -1,8 +1,10 @@
 ﻿biomancy_mage_perk = {
-	lifestyle = arcane_lifestyle
-	tree = biomancy_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_biomancy
 	position = { 2 0 }
 	icon = node_diplomacy
+
+	parent = mage_perk
 
 	auto_selection_weight = {
 		value = 11
@@ -54,14 +56,15 @@
 	effect = {
 		gain_mana_gen_perk = { VALUE = biomancy_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = biomancy_mage_perk_max_mana }
-		make_mage_effect = yes
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = biomancy_mage_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 improve_trait_perk = {
-	lifestyle = arcane_lifestyle
-	tree = biomancy_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_biomancy
 	position = { 0 1.25 }
 	icon = node_diplomacy
 
@@ -79,13 +82,15 @@ improve_trait_perk = {
 		unlock_positive_trait_t1_upgrade_rewrite_intellect = yes
 		gain_mana_gen_perk = { VALUE = improve_trait_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = improve_trait_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = improve_trait_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 perfect_trait_perk = {
-	lifestyle = arcane_lifestyle
-	tree = biomancy_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_biomancy
 	position = { 0 2.5 }
 	icon = node_diplomacy
 
@@ -97,13 +102,15 @@ perfect_trait_perk = {
 		unlock_positive_trait_t2_upgrade_rewrite_intellect = yes
 		gain_mana_gen_perk = { VALUE = perfect_trait_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = perfect_trait_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = perfect_trait_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 fertility_control_perk = {
-	lifestyle = arcane_lifestyle
-	tree = biomancy_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_biomancy
 	position = { 2 1.25 }
 	icon = node_diplomacy
 
@@ -113,13 +120,15 @@ fertility_control_perk = {
 		unlock_fertility_control_spell = yes
 		gain_mana_gen_perk = { VALUE = fertility_control_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = fertility_control_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = fertility_control_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 impregnate_perk = {
-	lifestyle = arcane_lifestyle
-	tree = biomancy_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_biomancy
 	position = { 2 2.5 }
 	icon = node_diplomacy
 
@@ -129,13 +138,15 @@ impregnate_perk = {
 		unlock_impregnate_spell = yes
 		gain_mana_gen_perk = { VALUE = impregnate_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = impregnate_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = impregnate_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 weaken_trait_perk = {
-	lifestyle = arcane_lifestyle
-	tree = biomancy_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_biomancy
 	position = { 4 1.25 }
 	icon = node_diplomacy
 
@@ -153,13 +164,15 @@ weaken_trait_perk = {
 		unlock_negative_trait_t1_upgrade_rewrite_intellect = yes
 		gain_mana_gen_perk = { VALUE = weaken_trait_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = weaken_trait_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = weaken_trait_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 criple_trait_perk = {
-	lifestyle = arcane_lifestyle
-	tree = biomancy_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_biomancy
 	position = { 4 2.5 }
 	icon = node_diplomacy
 
@@ -171,13 +184,15 @@ criple_trait_perk = {
 		unlock_negative_trait_t2_upgrade_rewrite_intellect = yes
 		gain_mana_gen_perk = { VALUE = criple_trait_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = criple_trait_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = criple_trait_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 sculpter_of_flesh_perk = {
-	lifestyle = arcane_lifestyle
-	tree = biomancy_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_biomancy
 	position = { 2 3.75 }
 	icon = node_diplomacy
 
@@ -189,14 +204,15 @@ sculpter_of_flesh_perk = {
 		unlock_sculpter_of_flesh_spell = yes
 		gain_mana_gen_perk = { VALUE = sculpter_of_flesh_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = sculpter_of_flesh_perk_max_mana }
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = sculpter_of_flesh_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
-
 architect_of_bloodlines_perk = {
-	lifestyle = arcane_lifestyle
-	tree = biomancy_magic
+	lifestyle = ancient_magic_lifestyle
+	tree = ancient_magic_biomancy
 	position = { 2 5 }
 	icon = architect_of_bloodlines
 
@@ -212,6 +228,8 @@ architect_of_bloodlines_perk = {
 		gain_mana_gen_perk = { VALUE = architect_of_bloodlines_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = architect_of_bloodlines_perk_max_mana }
 		add_trait_force_tooltip = architect_of_bloodlines
-		hidden_effect = { trigger_event = { on_action = on_reset_mana_system } }
+		mod_bit = { MASK = biomancy_perk_mask_0 BIT = architect_of_bloodlines_perk_bit OP = set }
+		change_variable = { name = available_magic_perks subtract = 1 }
+		trigger_event = { on_action = on_reset_mana_system }
 	}
 }

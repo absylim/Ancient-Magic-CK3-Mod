@@ -1,6 +1,6 @@
 ﻿l_english:
  # Spell unlocks:
- GLOBAL_UNLOCK_REWRITE_BEAUTY_SPELL:0 "Unlocks [rewrite_beauty_spell|E]"
+ GLOBAL_UNLOCK_REWRITE_BEAUTY_SPELL: "Unlocks [rewrite_beauty_spell|E]"
  FIRST_UNLOCK_REWRITE_BEAUTY_SPELL: "Allows you to cast [rewrite_beauty_spell|E]"
  THIRD_UNLOCK_REWRITE_BEAUTY_SPELL: "Allows #V [CHARACTER.GetTitledFirstName]#! to cast [rewrite_beauty_spell|E]"
  GLOBAL_UNLOCK_REWRITE_PHYSIQUE_SPELL: "Unlocks [rewrite_physique_spell|E]"

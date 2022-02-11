@@ -3,7 +3,7 @@
 		default = {
 			levies = {
 				if = {
-					limit = { scope.liege = { has_government = magocracy_government } }
+					limit = { scope:liege = { has_government = magocracy_government } }
 					value = 0.3
 				}
 				else = {

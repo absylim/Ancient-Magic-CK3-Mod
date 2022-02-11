@@ -30,8 +30,8 @@ rewrite_beauty_spell_spellbook = {
 	scope = character
 	is_shown = {
 		OR = {
-			has_perk = improve_trait_perk
-			has_perk = weaken_trait_perk
+			has_perk_trigger = { PERK = improve_trait_perk }
+			has_perk_trigger = { PERK = weaken_trait_perk }
 		}
 	}
 	is_valid = {
@@ -75,10 +75,7 @@ rewrite_beauty_spell_has_list = {
 rewrite_physique_spell = {
 	scope = character
 	is_shown = {
-		OR = {
-			has_perk = improve_trait_perk
-			has_perk = weaken_trait_perk
-		}
+		always = yes
 	}
 	is_valid = {
 		has_made_selection_trigger = yes
@@ -106,8 +103,8 @@ rewrite_physique_spell_spellbook = {
 	scope = character
 	is_shown = {
 		OR = {
-			has_perk = improve_trait_perk
-			has_perk = weaken_trait_perk
+			has_perk_trigger = { PERK = improve_trait_perk }
+			has_perk_trigger = { PERK = weaken_trait_perk }
 		}
 	}
 	is_valid = {
@@ -151,10 +148,7 @@ rewrite_physique_spell_has_list = {
 rewrite_intellect_spell = {
 	scope = character
 	is_shown = {
-		OR = {
-			has_perk = improve_trait_perk
-			has_perk = weaken_trait_perk
-		}
+		always = yes
 	}
 	is_valid = {
 		has_made_selection_trigger = yes
@@ -182,8 +176,8 @@ rewrite_intellect_spell_spellbook = {
 	scope = character
 	is_shown = {
 		OR = {
-			has_perk = improve_trait_perk
-			has_perk = weaken_trait_perk
+			has_perk_trigger = { PERK = improve_trait_perk }
+			has_perk_trigger = { PERK = weaken_trait_perk }
 		}
 	}
 	is_valid = {
@@ -248,7 +242,7 @@ sculpter_of_flesh_spell = {
 sculpter_of_flesh_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = sculpter_of_flesh_perk
+		has_perk_trigger = { PERK = sculpter_of_flesh_perk }
 	}
 	is_valid = {
 		always = yes
@@ -327,7 +321,7 @@ fertility_control_spell = {
 fertility_control_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = fertility_control_perk
+		has_perk_trigger = { PERK = fertility_control_perk }
 	}
 	is_valid = {
 		always = yes
@@ -386,7 +380,7 @@ impregnate_spell = {
 impregnate_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk = impregnate_perk
+		has_perk_trigger = { PERK = impregnate_perk }
 	}
 	is_valid = {
 		always = yes

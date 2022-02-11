@@ -1,0 +1,45 @@
+﻿effect_open_magic_advancement_window = {
+	set_variable = {
+		name = window_magic_advancement_view
+		value = yes
+	}
+}
+
+effect_close_magic_advancement_window = {
+	remove_variable = window_magic_advancement_view
+}
+
+init_perk_masks_effect = {
+	set_variable = {
+		name = aura_mask_0
+		value = 0
+	}
+	set_variable = {
+		name = none_perk_mask_0
+		value = 0
+	}
+	set_variable = {
+		name = time_perk_mask_0
+		value = 0
+	}
+	set_variable = {
+		name = life_perk_mask_0
+		value = 0
+	}
+	set_variable = {
+		name = elomancy_perk_mask_0
+		value = 0
+	}
+	set_variable = {
+		name = necromancy_perk_mask_0
+		value = 0
+	}
+	set_variable = {
+		name = biomancy_perk_mask_0
+		value = 0
+	}
+	set_variable = {
+		name = mensomancy_perk_mask_0
+		value = 0
+	}
+}
