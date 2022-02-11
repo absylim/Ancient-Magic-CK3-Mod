@@ -30,12 +30,6 @@
 		}
 		if = {
 			limit = {
-				has_trait = cruel
-			}
-			multiply = 2
-		}
-		if = {
-			limit = {
 				has_trait = arrogant
 			}
 			multiply = 2

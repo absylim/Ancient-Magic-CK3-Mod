@@ -37,6 +37,48 @@ window = {
 			widget = {
 				name = "education_focuses_and_portrait"
 				size = { 350 350 }
+
+				background = {
+					name = "martial_disposition"
+					framesize = { 352 352 }
+					texture =  "gfx/interface/window_lifestyles/education_affinity_up_side.dds"
+					frame = "[CharacterFocusWindow.GetDispositionFrame('1')]"
+				}
+
+				background = {
+					name = "diplomacy_disposition"
+					framesize = { 352 352 }
+
+					texture =  "gfx/interface/window_lifestyles/education_affinity_up_side.dds"
+					mirror = horizontal
+					frame = "[CharacterFocusWindow.GetDispositionFrame('0')]"
+				}
+
+				background = {
+					name = "stewardship_disposition"
+					framesize = { 352 352 }
+
+					texture =  "gfx/interface/window_lifestyles/education_affinity_down_side.dds"
+					frame = "[CharacterFocusWindow.GetDispositionFrame('2')]"
+				}
+
+				background = {
+					name = "learning_disposition"
+					framesize = { 352 352 }
+
+					texture =  "gfx/interface/window_lifestyles/education_affinity_down_side.dds"
+					mirror = horizontal
+					frame = "[CharacterFocusWindow.GetDispositionFrame('3')]"
+				}
+
+				background = {
+					name = "intrigue_disposition"
+					framesize = { 352 352 }
+
+					texture =  "gfx/interface/window_lifestyles/education_affinity_up.dds"
+					frame = "[CharacterFocusWindow.GetDispositionFrame('4')]"
+				}
+
 				### Diplomacy
 				button = {
 					name = "diplomacy_button"
@@ -277,7 +319,3 @@ window = {
 		}
 	}
 }
-
-
-
-

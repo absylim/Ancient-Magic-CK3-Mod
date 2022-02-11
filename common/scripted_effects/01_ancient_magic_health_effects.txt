@@ -334,16 +334,16 @@ recover_from_magical_disease_effect = {
 			OR = {
 				AND = {
 					has_trait = $DISEASE$
-					NOT = { $DISEASE$ = mage_dementia }
+					NOT = { flag:$DISEASE$ = flag:mage_dementia }
 				}
 				OR = {
 					AND  = {
-						$DISEASE$ = mage_dementia
+						flag:$DISEASE$ = flag:mage_dementia
 						has_trait = mage_dementia
 						has_character_flag = materilised_soul
 					}
 					AND  = {
-						$DISEASE$ = mage_dementia
+						flag:$DISEASE$ = flag:mage_dementia
 						has_trait = mage_dementia
 						var:memory_life_capacity_left > 10
 					}

@@ -46,7 +46,7 @@ become_liche_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		has_perk = deacon_of_death
+		has_perk = deacon_of_death_perk
 		var:mana.compare_value >= var:deacon_of_death_spell_cost.compare_value
 		NOT = { has_trait = undead }
 	}

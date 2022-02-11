@@ -18,12 +18,6 @@
 		}
 		if = {
 			limit = {
-				has_trait = kind
-			}
-			multiply = 2
-		}
-		if = {
-			limit = {
 				has_trait = gregarious
 			}
 			multiply = 2
