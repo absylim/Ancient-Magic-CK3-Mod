@@ -109,7 +109,7 @@ texticon = {
 }
 
 texticon = {
-	icon = icon_None_category
+	icon = icon_basic_category
 	iconsize = {
 		texture = "gfx/magic/maintab_spellbook.dds"
 		size = { 80 80 }

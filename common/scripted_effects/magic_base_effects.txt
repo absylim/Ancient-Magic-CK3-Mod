@@ -1,7 +1,7 @@
 ﻿set_up_spells = {
 	# Spell Categories
 	clear_global_variable_list = spell_categories_list
-	add_to_global_variable_list = { name = spell_categories_list target = flag:none }
+	add_to_global_variable_list = { name = spell_categories_list target = flag:basic }
 	add_to_global_variable_list = { name = spell_categories_list target = flag:time }
 	add_to_global_variable_list = { name = spell_categories_list target = flag:life }
 	add_to_global_variable_list = { name = spell_categories_list target = flag:elomancy }
@@ -9,9 +9,9 @@
 	add_to_global_variable_list = { name = spell_categories_list target = flag:biomancy }
 	add_to_global_variable_list = { name = spell_categories_list target = flag:mensomancy }
 
-	#None
-	clear_global_variable_list = None_spells_list
-	add_to_global_variable_list = { name = None_spells_list target = flag:spark_spell }
+	#Basic
+	clear_global_variable_list = basic_spells_list
+	add_to_global_variable_list = { name = basic_spells_list target = flag:spark_spell }
 
 	#Time
 	clear_global_variable_list = time_spells_list
@@ -76,9 +76,9 @@
 	add_to_global_variable_list = { name = mensomancy_spells_list target = flag:master_of_puppets_spell }
 
 	# Perk Categories
-	# None
-	clear_global_variable_list = None_perk_list
-	add_to_global_variable_list = { name = None_perk_list target = flag:mage_perk }
+	# Basic
+	clear_global_variable_list = basic_perk_list
+	add_to_global_variable_list = { name = basic_perk_list target = flag:mage_perk }
 
 	# Time
 	clear_global_variable_list = time_perk_list

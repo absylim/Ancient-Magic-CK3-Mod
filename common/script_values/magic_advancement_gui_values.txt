@@ -1,5 +1,5 @@
-﻿None_bg_pos_x = { value = 0 multiply = 1920 }
-None_bg_pos_y = { value = 0 multiply = 1080 }
+﻿basic_bg_pos_x = { value = 0 multiply = 1920 }
+basic_bg_pos_y = { value = 0 multiply = 1080 }
 
 time_bg_pos_x = { value = -0.2 multiply = 1920 }
 time_bg_pos_y = { value = -0.15 multiply = 1080 }
@@ -19,7 +19,7 @@ biomancy_bg_pos_y = { value = 0.15 multiply = 1080 }
 mensomancy_bg_pos_x = { value = 0.2 multiply = 1920 }
 mensomancy_bg_pos_y = { value = -0.15 multiply = 1080 }
 
-None_bg_frame = 1
+basic_bg_frame = 1
 time_bg_frame = 2
 life_bg_frame = 3
 elomancy_bg_frame = 4
