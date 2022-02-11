@@ -70,7 +70,7 @@ will_target_have_trait_trigger = {
 personality_traits_under_limit_trigger = {
 	custom_description = {
 		text = "personality_traits_under_limit_trigger"
-		num_target_personality_traits < personality_trait_limit
+		num_target_personality_traits.compare_value < personality_trait_limit
 	}
 }
 

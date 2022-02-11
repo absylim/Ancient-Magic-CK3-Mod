@@ -12,7 +12,7 @@ memory_life_capacity = {
 	value = base_memory_life_capacity
 }
 
-memory_life_ammount = {
+memory_life_amount = {
 	value = 0
 	add = age
 	
@@ -73,7 +73,7 @@ memory_life_capacity_left = {
 			NOT = { has_character_flag = materilised_soul }
 		}
 		
-		subtract = memory_life_ammount
+		subtract = memory_life_amount
 	}
 	else = {
 		value = 999

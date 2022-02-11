@@ -13,10 +13,10 @@ types mana_hud_guis {
 			hbox = {
 				spacing = 0
 				margin_top = -11
-				visible = "[And( Not(IsObserver), GetScriptedGui('perk_select').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag('mage_perk')).End) )]"
+				visible = "[And( Not(IsObserver), GetScriptedGui('display_mana_hud').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)) )]"
 
 				using = tooltip_ne
-		
+
 				tooltipwidget = {
 					widget_mana_gen_breakdown_tooltip = {}
 				}
@@ -54,7 +54,7 @@ types mana_hud_guis {
 			hbox = {
 				spacing = 6
 				margin_top = -11
-				visible = "[Or( IsObserver, Not(GetScriptedGui('perk_select').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag('mage_perk')).End)) )]"
+				visible = "[Or( IsObserver, Not(GetScriptedGui('display_mana_hud').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End))) )]"
 
 				icon = {
 					name = "inactive_icon"
