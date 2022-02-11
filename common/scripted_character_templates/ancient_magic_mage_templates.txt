@@ -38,10 +38,10 @@ wandering_mage_character = {
 	
 	after_creation = {
 		random_list = {
-			50 = { add_arcane_lifestyle_xp = 2000 }
-			30 = { add_arcane_lifestyle_xp = 3000 }
-			15 = { add_arcane_lifestyle_xp = 4000 }
-			5 = { add_arcane_lifestyle_xp = 5000 }
+			50 = { change_mage_xp = { VALUE = 2000 } }
+			30 = { change_mage_xp = { VALUE = 3000 } }
+			15 = { change_mage_xp = { VALUE = 4000 } }
+			5 = { change_mage_xp = { VALUE = 5000 } }
 		}
 		if = {
 			limit = {
@@ -50,13 +50,13 @@ wandering_mage_character = {
 			random_list = {
 				50 = {}
 				30 = {
-					add_arcane_lifestyle_xp = 500
+					change_mage_xp = { VALUE = 500 }
 				}
 				20 = {
-					add_arcane_lifestyle_xp = 1000
+					change_mage_xp = { VALUE = 1000 }
 				}
 				5 = {
-					add_arcane_lifestyle_xp = 1500
+					change_mage_xp = { VALUE = 1500 }
 				}
 			}
 		}
