@@ -1,0 +1,63 @@
+﻿namespace = AMS_mana_events
+
+AMS_mana_events.001 = {
+	hidden = yes
+	immediate = {
+		# the effect clamps to 0 < mana < max_mana
+		change_mana = { VALUE = var:mana_gen }
+
+		if = { #Infinite mana trait
+			limit = { has_trait = infinite_mana }
+			set_variable = {
+				name = max_mana
+				value = 999999
+			}
+			set_variable = {
+				name = mana
+				value = var:max_mana
+			}
+		}
+	}
+}
+
+AMS_mana_events.002 = {
+	hidden = yes
+	immediate = {
+		change_mana = { VALUE = 1000 }
+	}
+}
+
+AMS_mana_events.003 = {
+	hidden = yes
+	immediate = {
+		change_mana = { VALUE = -1000 }
+	}
+}
+
+AMS_mana_events.004 = {
+	hidden = yes
+	immediate = {
+		# the effect clamps to 0 < mana < max_mana
+		save_temporary_scope_value_as = {
+			name = daily_gen
+			value = {
+				value = var:mana_gen
+				multiply = 12
+				divide = 365
+			}
+		}
+		change_mana = { VALUE = scope:daily_gen }
+
+		if = { #Infinite mana trait
+			limit = { has_trait = infinite_mana }
+			set_variable = {
+				name = max_mana
+				value = 999999
+			}
+			set_variable = {
+				name = mana
+				value = var:max_mana
+			}
+		}
+	}
+}

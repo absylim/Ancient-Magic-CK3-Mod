@@ -1,0 +1,11 @@
+mana = {
+	index = 33301
+}
+
+mage = {
+	index = 33302
+}
+
+infinite_mana = {
+	index = 33303
+}

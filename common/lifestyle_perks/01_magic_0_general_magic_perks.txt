@@ -58,5 +58,6 @@
 			name = available_magic_perks
 			value = 0
 		}
+		trigger_event = { on_action = { set_up_remaining_mana_gen_for_year } }
 	}
 }

@@ -124,7 +124,7 @@ perk_select = {
 	is_valid = { # aka can_be_selected
 		AND = {
 			OR = {
-				NOT = { is_magus_trigger = yes } # workaround to keep non-mages from throwing 62 errors per frame
+				is_magus_trigger = no # workaround to keep non-mages from throwing 62 errors per frame
 				var:available_magic_perks > 0
 			}
 			has_character_modifier = magic_advancement_modifier
