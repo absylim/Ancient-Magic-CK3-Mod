@@ -6,11 +6,9 @@
  action_lifestyle_ancient_magic_click: "$action_can_spend_perk_point_click$"
 
  # mage perk
- ancient_magic_none_name: "ancient_magic_none"
  mage_perk_name: "Mage"
 
  # time magic
- ancient_magic_time_name: "ancient_magic_time"
  time_mage_perk_name: "Chronomancer"
  glimpse_the_future_perk_name: "Glimpse the Future"
  financial_times_perk_name: "Financial Times"
@@ -22,7 +20,6 @@
  master_of_time_perk_name: "Master of Time"
 
  # life magic
- ancient_magic_life_name: "ancient_magic_life"
  life_mage_perk_name: "Chiromancer"
  inward_reflection_perk_name: "Inward Reflection"
  inward_perfection_perk_name: "Inward perfection"
@@ -34,7 +31,6 @@
  avatar_of_life_perk_name: "Avatar of Life"
 
  # death magic
- ancient_magic_necromancy_name: "ancient_magic_necromancy"
  death_mage_perk_name: "Necromancer"
  inflict_illness_perk_name: "Inflict Illness"
  plague_lord_perk_name: "Plague Lord"
@@ -46,7 +42,6 @@
  deacon_of_death_perk_name: "Deacon of Death"
 
  # elemental magic
- ancient_magic_elomancy_name: "ancient_magic_elomancy"
  elemental_mage_perk_name: "Elomancer"
  flame_aura_perk_name: "Flame Aura"
  flaming_weapons_perk_name: "Flaming Weapons"
@@ -58,7 +53,6 @@
  lord_of_the_elements_perk_name: "Lord of the Elements"
 
  # biomancy
- ancient_magic_biomancy_name: "ancient_magic_biomancy"
  biomancy_mage_perk_name: "Biomancer"
  improve_trait_perk_name: "Strengthen Blood"
  perfect_trait_perk_name: "Perfect Blood"
@@ -70,7 +64,6 @@
  architect_of_bloodlines_perk_name: "Architect of Bloodlines"
 
  # mensomancy
- ancient_magic_mensomancy_name: "ancient_magic_mensomancy"
  domination_mage_perk_name: "Mensomancer"
  entrance_perk_name: "Entrance"
  incite_lust_perk_name: "Incite Lust"

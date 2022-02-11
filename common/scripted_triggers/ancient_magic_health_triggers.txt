@@ -1,6 +1,7 @@
 ﻿can_get_non_epidemic_magical_disease_trigger = { #Diseases shouldn't stack. Don't add a non-epidemic disease if you have another, unless that disease is lover's pox
 	NOR = {
 		has_trait = mana_devouring
+		has_trait = mage_dementia
 	}
 }
 
@@ -12,8 +13,13 @@ can_contract_magical_disease_trigger = {
 	NOT = { has_character_flag = immune_to_disease }
 	
 	#Checks if the person is gifted with magic, as magical diseases are only contractable by those with the gift
+	is_magus_trigger = yes
 	OR = {
-		has_trait = mana
+		NOT = { $DISEASE$ = mage_dementia }
+		AND = {
+			$DISEASE$ = mage_dementia
+			var:memory_life_capacity_left <= 10
+		}
 	}
 
 	#Doesn't already have the trait

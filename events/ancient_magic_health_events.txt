@@ -376,10 +376,124 @@ AMHealth.0002 = {
 		no_disease_treatment_effect = yes
 		ai_chance = { base = 0 }
 	}
-
 }
 
+########################
+########################
+# Mage Dementia EVENTS #
+########################
+########################
 
+#You contract Mage Dementia
+AMHealth.0005 = {
+	type = character_event
+	title = AMHealth.0001.t
+	desc = {
+		desc = AMHealth.0001.desc
+		triggered_desc = {
+			trigger = {
+				court_physician_available_trigger = yes
+				liege_picks_treatment_trigger = no
+			}
+			desc = AMHealth.0001.court_physician.desc
+		}
+	}
+	
+	theme = healthcare
+	left_portrait = {
+		character = root
+		animation = sick
+	}
+	right_portrait = {
+		character = scope:physician
+		triggered_animation = {
+			trigger = { scope:physician = { health_event_is_worried_trigger = { CHARACTER = root } } }
+			animation = worry
+		}
+		triggered_animation = {
+			trigger = { scope:physician = { ai_rationality >= 0 } } #Don't look rational if you're not
+			animation = personality_rational
+		}
+		animation = idle
+	}
+
+	trigger = {
+		can_contract_disease_trigger = { DISEASE = mana_devouring }
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			var:memory_life_capacity_left < 5
+			factor = 1.1
+		}
+		modifier = {
+			var:memory_life_capacity_left < 4
+			factor = 1.5
+		}
+		modifier = {
+			var:memory_life_capacity_left < 3
+			factor = 1.75
+		}
+		modifier = {
+			var:memory_life_capacity_left < 2
+			factor = 2
+		}
+		modifier = {
+			var:memory_life_capacity_left < 1
+			factor = 2.5
+		}
+		modifier = {
+			var:memory_life_capacity_left < 0
+			factor = 500
+		}
+		
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_illness"
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+		contract_magical_disease_effect = { DISEASE = mage_dementia TREATMENT_EVENT = no } #Adds the trait, sends event "health.2201" to those who care
+	}
+
+	#OK
+	option = {
+		trigger = {
+			trigger_if = {
+				limit = { exists = scope:physician }
+				liege_picks_treatment_trigger = yes
+			}
+			trigger_else = {
+				always = yes
+			}
+		}
+		name = AMHealth.0005.a
+		ai_chance = { base = 1 }
+	}
+
+	###COURT PHYSICIAN OPTIONS###
+	#Forget something
+	#option = {
+	#	trigger = {
+	#		exists = scope:physician
+	#		liege_picks_treatment_trigger = no
+	#	}
+	#	name = health.3101.a
+	#	safe_disease_treatment_effect = { PATIENT = root TREATMENT_PICKER = root }
+	#	ai_chance = { base = 10 }
+	#}
+
+	#No treatment
+	option = {
+		trigger = {
+			exists = scope:physician
+			liege_picks_treatment_trigger = no
+		}
+		name = health.3101.d
+		no_disease_treatment_effect = yes
+		ai_chance = { base = 0 }
+	}
+}
 
 ##################
 # RECOVERY EVENTS
