@@ -271,90 +271,90 @@ set_up_remaining_mana_gen_for_year = {
 	effect = {
 		if = {
 			limit = { current_month = 1 }
-			trigger_event = {on_action = setup_remaining_gen_from_jan }
+			trigger_event = { on_action = setup_remaining_gen_from_jan }
 		}
 		else_if = {
 			limit = { current_month = 2 }
-			trigger_event = {on_action = setup_remaining_gen_from_feb }
+			trigger_event = { on_action = setup_remaining_gen_from_feb }
 		}
 		else_if = {
 			limit = { current_month = 3 }
-			trigger_event = {on_action = setup_remaining_gen_from_mch }
+			trigger_event = { on_action = setup_remaining_gen_from_mch }
 		}
 		else_if = {
 			limit = { current_month = 4 }
-			trigger_event = {on_action = setup_remaining_gen_from_apr }
+			trigger_event = { on_action = setup_remaining_gen_from_apr }
 		}
 		else_if = {
 			limit = { current_month = 5 }
-			trigger_event = {on_action = setup_remaining_gen_from_may }
+			trigger_event = { on_action = setup_remaining_gen_from_may }
 		}
 		else_if = {
 			limit = { current_month = 6 }
-			trigger_event = {on_action = setup_remaining_gen_from_jun }
+			trigger_event = { on_action = setup_remaining_gen_from_jun }
 		}
 		else_if = {
 			limit = { current_month = 7 }
-			trigger_event = {on_action = setup_remaining_gen_from_jly }
+			trigger_event = { on_action = setup_remaining_gen_from_jly }
 		}
 		else_if = {
 			limit = { current_month = 8 }
-			trigger_event = {on_action = setup_remaining_gen_from_aug }
+			trigger_event = { on_action = setup_remaining_gen_from_aug }
 		}
 		else_if = {
 			limit = { current_month = 9 }
-			trigger_event = {on_action = setup_remaining_gen_from_sep }
+			trigger_event = { on_action = setup_remaining_gen_from_sep }
 		}
 		else_if = {
 			limit = { current_month = 10 }
-			trigger_event = {on_action = setup_remaining_gen_from_oct }
+			trigger_event = { on_action = setup_remaining_gen_from_oct }
 		}
 		else_if = {
 			limit = { current_month = 11 }
-			trigger_event = {on_action = setup_remaining_gen_from_nov }
+			trigger_event = { on_action = setup_remaining_gen_from_nov }
 		}
 		if = {
 			limit = { days_left_in_month > 28 }
-			trigger_event = {on_action = setup_remaining_gen_from_wk1 }
+			trigger_event = { on_action = setup_remaining_gen_from_wk1 }
 		}
 		else_if = {
 			limit = { days_left_in_month > 21 }
-			trigger_event = {on_action = setup_remaining_gen_from_wk2 }
+			trigger_event = { on_action = setup_remaining_gen_from_wk2 }
 		}
 		else_if = {
 			limit = { days_left_in_month > 14 }
-			trigger_event = {on_action = setup_remaining_gen_from_wk3 }
+			trigger_event = { on_action = setup_remaining_gen_from_wk3 }
 		}
 		else_if = {
 			limit = { days_left_in_month > 7 }
-			trigger_event = {on_action = setup_remaining_gen_from_wk4 }
+			trigger_event = { on_action = setup_remaining_gen_from_wk4 }
 		}
 		if = {
 			limit = { days_left_in_week = 6 }
-			trigger_event = {on_action = setup_week_mana_gen_from_day1 }
+			trigger_event = { on_action = setup_week_mana_gen_from_day1 }
 		}
 		else_if = {
 			limit = { days_left_in_week = 5 }
-			trigger_event = {on_action = setup_week_mana_gen_from_day2 }
+			trigger_event = { on_action = setup_week_mana_gen_from_day2 }
 		}
 		else_if = {
 			limit = { days_left_in_week = 4 }
-			trigger_event = {on_action = setup_week_mana_gen_from_day3 }
+			trigger_event = { on_action = setup_week_mana_gen_from_day3 }
 		}
 		else_if = {
 			limit = { days_left_in_week = 3 }
-			trigger_event = {on_action = setup_week_mana_gen_from_day4 }
+			trigger_event = { on_action = setup_week_mana_gen_from_day4 }
 		}
 		else_if = {
 			limit = { days_left_in_week = 2 }
-			trigger_event = {on_action = setup_week_mana_gen_from_day5 }
+			trigger_event = { on_action = setup_week_mana_gen_from_day5 }
 		}
 		else_if = {
 			limit = { days_left_in_week = 1 }
-			trigger_event = {on_action = setup_week_mana_gen_from_day6 }
+			trigger_event = { on_action = setup_week_mana_gen_from_day6 }
 		}
 		else = {
-			trigger_event = {on_action = setup_week_mana_gen_from_day7 }
+			trigger_event = { on_action = setup_week_mana_gen_from_day7 }
 		}
 	}
 }
