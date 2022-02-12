@@ -1,6 +1,6 @@
 ﻿namespace = ancient_magic_ai_spellbook_events
 
-#time spells
+#chronomancy spells
 
 #life spells
 

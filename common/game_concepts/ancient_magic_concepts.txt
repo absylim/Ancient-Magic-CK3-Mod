@@ -7,11 +7,13 @@ magic_potential = {
 }
 
 mana = {
-    alias = { magical_power }
+	texture = "gfx/interface/icons/icon_active_aura.dds"
+    alias = { magical_power mana_i }
 }
 
 mana_cost = {
-    alias = { spell_cost }
+	texture = "gfx/interface/icons/icon_inactive_aura.dds"
+    alias = { spell_cost mana_cost_i }
 }
 
 mana_drain = {
@@ -23,6 +25,7 @@ magic_talent = {
 }
 
 mage_spell = {
+	alias = { mage_spells }
 }
 
 mage_aura = {
@@ -41,31 +44,38 @@ worst_health_issues = {
 }
 
 chronomancy = {
-    alias = { time_magic time_mage skip_mage chronomancer }
+	texture = "gfx/magic/chronomancy_magic.dds"
+    alias = { chronomancy_magic chronomancy_mage time_magic time_mage skip_mage chronomancer chronomancy_i }
 }
 
 chiromancy = {
-    alias = { healing_magic healer_mage chiromancer white_mage }
+	texture = "gfx/magic/life_magic.dds"
+    alias = { healing_magic healer_mage chiromancer white_mage chiromancy_i }
 }
 
 elomancy = {
-    alias = { battle_magic elomancer battle_mage elementalist war_mage elementalism }
+	texture = "gfx/magic/elomancy_magic.dds"
+    alias = { elomancy_i battle_magic elomancer battle_mage elementalist war_mage elementalism }
 }
 
 necromancy = {
-    alias = { death_magic necromancer death_mage pale_mage black_mage }
+	texture = "gfx/magic/necromancy_magic.dds"
+    alias = { necromancy_i death_magic necromancer death_mage pale_mage black_mage }
 }
 
 biomancy = {
-    alias = { nature_magic druid_mage nature_mage biomancer  }
+	texture = "gfx/magic/biomancy_magic.dds"
+    alias = { biomancy_i nature_magic druid_mage nature_mage biomancer  }
 }
 
 mensomancy = {
-    alias = { psychomancy psychomancer mensomancer mentalism mentalist }
+	texture = "gfx/magic/mensomancy_magic.dds"
+    alias = { mensomancy_i psychomancy psychomancer mensomancer mentalism mentalist }
 }
 
 school_of_magic = {
-    alias = { magic_school magical_school magic_discipline magical_discipline }
+	texture = "gfx/magic/maintab_magic.dds"
+    alias = { school_of_magic_i magic_school magical_school magic_discipline magical_discipline }
 }
 
 ## Men At Arms

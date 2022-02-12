@@ -35,9 +35,9 @@
  magic_meditation_focus_effect_desc:0 "You contemplate your arcane gifts while drawing in mana."
  magic_mana_focus:0 "Mana Generation"
  magic_mana_focus_effect_desc:0 "You forego aquiring new gifts to focus entirely on generating mana"
-#time magic
- time_magic_name:0 "Chronomancy"
- time_mage_perk_name:0 "Chronomancer"
+#chronomancy magic
+ chronomancy_magic_name:0 "Chronomancy"
+ chronomancy_mage_perk_name:0 "Chronomancer"
  glimpse_the_future_perk_name:0 "Glimpse the Future"
  finacial_times_perk_name:0 "Finacial Times"
  celerity_perk_name:0 "Celerity"
@@ -283,7 +283,7 @@
  ancient_magic_spellbook_events.007.h:0 "Enchanting Aura"
 #spell descriptions
  ancient_magic_spellbook_cast_spell:0 "Cast Spell"
-#time spells
+#chronomancy spells
  ancient_magic_spellbook_events.201.t:0 "Halt aging"
  ancient_magic_spellbook_events.201.desc:0 "Unlocks one use of the 'Grant Gift of Time' character interaction for 500 mana. Grant Gift of Time can be used on any character without the 'master of time' or 'immortal' traits, the interaction gives the target the 'immortal' trait. Expires after 6 months if not used."
  ancient_magic_spellbook_events.202.t:0 "Restart aging"

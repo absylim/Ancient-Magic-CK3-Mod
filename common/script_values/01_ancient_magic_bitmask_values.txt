@@ -2,8 +2,8 @@
 # None tree
 mage_perk_bit = { value = bit00 }
 
-# Time tree
-time_mage_perk_bit = { value = bit00 }
+# Chronomancy tree
+chronomancy_mage_perk_bit = { value = bit00 }
 glimpse_the_future_perk_bit = { value = bit01 }
 financial_times_perk_bit = { value = bit02 }
 celerity_perk_bit = { value = bit03 }
@@ -94,8 +94,8 @@ enchanting_aura_spell_aura_bit = { value = bit19 }
 # None tree
 mage_perk_bit_flip = { value = flip00 }
 
-# Time tree
-time_mage_perk_bit_flip = { value = flip00 }
+# Chronomancy tree
+chronomancy_mage_perk_bit_flip = { value = flip00 }
 glimpse_the_future_perk_bit_flip = { value = flip01 }
 financial_times_perk_bit_flip = { value = flip02 }
 celerity_perk_bit_flip = { value = flip03 }
@@ -186,8 +186,8 @@ enchanting_aura_spell_aura_bit_flip = { value = flip19 }
 # None tree
 mage_perk_bit_set = { value = set00 }
 
-# Time tree
-time_mage_perk_bit_set = { value = set00 }
+# Chronomancy tree
+chronomancy_mage_perk_bit_set = { value = set00 }
 glimpse_the_future_perk_bit_set = { value = set01 }
 financial_times_perk_bit_set = { value = set02 }
 celerity_perk_bit_set = { value = set03 }
@@ -278,8 +278,8 @@ enchanting_aura_spell_aura_bit_set = { value = set19 }
 # None tree
 mage_perk_bit_unset = { value = unset00 }
 
-# Time tree
-time_mage_perk_bit_unset = { value = unset00 }
+# Chronomancy tree
+chronomancy_mage_perk_bit_unset = { value = unset00 }
 glimpse_the_future_perk_bit_unset = { value = unset01 }
 financial_times_perk_bit_unset = { value = unset02 }
 celerity_perk_bit_unset = { value = unset03 }
@@ -374,9 +374,9 @@ basic_perk_mask_0_maker = {
 	if = { limit = { has_perk = mage_perk } add = set.makebit00 }
 }
 
-time_perk_mask_0_maker = {
+chronomancy_perk_mask_0_maker = {
 	value = 0
-	if = { limit = { has_perk = time_mage_perk } add = set.makebit00 }
+	if = { limit = { has_perk = chronomancy_mage_perk } add = set.makebit00 }
 	if = { limit = { has_perk = glimpse_the_future_perk } add = set.makebit01 }
 	if = { limit = { has_perk = financial_times_perk } add = set.makebit02 }
 	if = { limit = { has_perk = celerity_perk } add = set.makebit03 }
@@ -452,8 +452,8 @@ mensomancy_perk_mask_0_maker = {
 	if = { limit = { has_perk = master_of_puppets_perk } add = set.makebit08 }
 }
 
-basic_num_perks = { value = var:basic_perk_mask_0.num_set_bits }
-time_num_perks = { value = var:time_perk_mask_0.num_set_bits }
+none_num_perks = { value = var:none_perk_mask_0.num_set_bits }
+chronomancy_num_perks = { value = var:chronomancy_perk_mask_0.num_set_bits }
 life_num_perks = { value = var:life_perk_mask_0.num_set_bits }
 elomancy_num_perks = { value = var:elomancy_perk_mask_0.num_set_bits }
 necromancy_num_perks = { value = var:necromancy_perk_mask_0.num_set_bits }
@@ -462,8 +462,8 @@ mensomancy_num_perks = { value = var:mensomancy_perk_mask_0.num_set_bits }
 
 num_available_magic_perks = {
 	value = mage_level
-	subtract = basic_num_perks
-	subtract = time_num_perks
+	subtract = none_num_perks
+	subtract = chronomancy_num_perks
 	subtract = life_num_perks
 	subtract = elomancy_num_perks
 	subtract = necromancy_num_perks

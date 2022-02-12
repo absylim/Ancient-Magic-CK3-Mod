@@ -4,7 +4,7 @@
 	third = THIRD_UNLOCK_GLIMPSE_THE_FUTURE_SPELL
 }
 
-unlock_financial_times_spell = {
+unlock_financial_times_spell = {	
 	global = GLOBAL_UNLOCK_FINANCIAL_TIMES_SPELL
 	first = FIRST_UNLOCK_FINANCIAL_TIMES_SPELL
 	third = THIRD_UNLOCK_FINANCIAL_TIMES_SPELL

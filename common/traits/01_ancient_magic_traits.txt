@@ -111,6 +111,18 @@ mage = {
 
 	ai_boldness = very_low_positive_ai_value
 	ai_rationality = high_positive_ai_value
+	
+	culture_modifier = {
+		parameter = magical_traits_renown
+		
+		monthly_dynasty_prestige = 0.05
+	}
+	
+	culture_modifier = {
+		parameter = magical_traits_opinion_boost
+		
+		same_culture_opinion = 20
+	}
 
 	triggered_opinion = {
 		parameter = witchcraft_illegal

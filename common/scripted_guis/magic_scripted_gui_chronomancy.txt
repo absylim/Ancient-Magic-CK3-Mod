@@ -1,4 +1,4 @@
-﻿#Time
+﻿#Chronomancy
 glimpse_the_future_spell = {
 	scope = character
 	is_shown = {

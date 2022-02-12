@@ -1,0 +1,21 @@
+﻿l_english:
+ tradition_wonders_of_magic_name:0 "Wonders of Magic"
+ tradition_wonders_of_magic_desc:1 "Magic is wonderous and very practicle, so lets support magic for our new wonderous future!"
+ tradition_mythology_egypt_name:0 "Lagacy of Ancients"
+ tradition_mythology_egypt_desc:1 "We are descendants of of great Ancient civilisation, which excelled in construction and also healing and necromantic magics."
+ tradition_mythology_norse_name:0 "Lagacy of Ygdrasil"
+ tradition_mythology_norse_desc:1 "Our peoples might was always known by thunder with which we arrived, they were affraid of our cunning, and most of all they were scared of the future we foresaw."
+ 
+#penalty descriptions
+ witchcraft_illegal_desc:1 "The [faith|E] has Witchcraft Criminal"
+ witchcraft_shunned_desc:1 "The [faith|E] has Witchcraft Shunned"
+ 
+#parameters
+ culture_parameter_magical_traits_renown: "Magicals gain bit of [dynasty_prestige_i][dynasty_prestige|E]"
+ culture_parameter_magical_traits_opinion_boost: "Megical gain [culture|E] [opinion|E] boost"
+ culture_parameter_chiromancy_magic_cost_reduction: "[mage_spells|E] of [chiromancy|E] [school_of_magic|E] have lower [mana_cost_i][mana_cost|E]"
+ culture_parameter_necromancy_magic_cost_reduction: "[mage_spells|E] of [necromancy|E] [school_of_magic|E] have lower [mana_cost_i][mana_cost|E]"
+ culture_parameter_chronomancy_magic_cost_reduction: "[mage_spells|E] of [chronomancy|E] [school_of_magic|E] have lower [mana_cost_i][mana_cost|E]"
+ culture_parameter_elomancy_magic_cost_reduction: "[mage_spells|E] of [elomancy|E] [school_of_magic|E] have lower [mana_cost_i][mana_cost|E]"
+ culture_parameter_biomancy_magic_cost_reduction: "[mage_spells|E] of [biomancy|E] [school_of_magic|E] have lower [mana_cost_i][mana_cost|E]"
+ culture_parameter_mensomancy_magic_cost_reduction: "[mage_spells|E] of [mensomancy|E] [school_of_magic|E] have lower [mana_cost_i][mana_cost|E]"

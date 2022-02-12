@@ -39,36 +39,6 @@ texticon = {
 }
 
 texticon = {
-    icon = aura_icon_inactive
-    iconsize = {
-        texture = "gfx/interface/icons/icon_inactive_aura.dds"
-        size = { 25 25 }
-        offset = { 0 6 }
-        fontsize = 16
-    }
-}
-
-texticon = {
-    icon = drain_icon_active
-    iconsize = {
-        texture = "gfx/interface/icons/icon_active_aura_time.dds"
-        size = { 25 25 }
-        offset = { 0 6 }
-        fontsize = 16
-    }
-}
-
-texticon = {
-    icon = drain_icon_inactive
-    iconsize = {
-        texture = "gfx/interface/icons/icon_inactive_aura_time.dds"
-        size = { 25 25 }
-        offset = { 0 6 }
-        fontsize = 16
-    }
-}
-
-texticon = {
     icon = maa_stone_golems
     iconsize = {
         texture = "gfx/interface/icons/regimenttypes/stone_golems.dds"
@@ -118,9 +88,9 @@ texticon = {
 }
 
 texticon = {
-	icon = icon_time_category
+	icon = icon_chronomancy_category
 	iconsize = {
-		texture = "gfx/magic/time_magic.dds"
+		texture = "gfx/magic/chronomancy_magic.dds"
 		size = { 80 80 }
 		fontsize = 16
 	}
@@ -169,4 +139,14 @@ texticon = {
 		size = { 80 80 }
 		fontsize = 16
 	}
+}
+
+texticon = {
+    icon = icon_mana_cost
+    iconsize = {
+        texture = "gfx/interface/icons/icon_inactive_aura.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }
 }

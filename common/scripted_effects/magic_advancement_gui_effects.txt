@@ -19,7 +19,7 @@ init_perk_masks_effect = {
 		value = 0
 	}
 	set_variable = {
-		name = time_perk_mask_0
+		name = chronomancy_perk_mask_0
 		value = 0
 	}
 	set_variable = {

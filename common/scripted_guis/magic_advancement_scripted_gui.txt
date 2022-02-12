@@ -63,7 +63,7 @@ perk_select = {
 		switch = {
 			trigger = scope:perk
 			flag:mage_perk = { has_perk_trigger = { PERK = mage_perk } }
-			flag:time_mage_perk = { has_perk_trigger = { PERK = time_mage_perk } }
+			flag:chronomancy_mage_perk = { has_perk_trigger = { PERK = chronomancy_mage_perk } }
 			flag:glimpse_the_future_perk = { has_perk_trigger = { PERK = glimpse_the_future_perk } }
 			flag:financial_times_perk = { has_perk_trigger = { PERK = financial_times_perk } }
 			flag:celerity_perk = { has_perk_trigger = { PERK = celerity_perk } }
@@ -131,9 +131,9 @@ perk_select = {
 			switch = {
 				trigger = scope:perk
 				flag:mage_perk = { always = yes }
-				flag:time_mage_perk = { has_perk_trigger = { PERK = mage_perk } }
-				flag:glimpse_the_future_perk = { has_perk_trigger = { PERK = time_mage_perk } }
-				flag:financial_times_perk = { has_perk_trigger = { PERK = time_mage_perk } }
+				flag:chronomancy_mage_perk = { has_perk_trigger = { PERK = mage_perk } }
+				flag:glimpse_the_future_perk = { has_perk_trigger = { PERK = chronomancy_mage_perk } }
+				flag:financial_times_perk = { has_perk_trigger = { PERK = chronomancy_mage_perk } }
 				flag:celerity_perk = { has_perk_trigger = { PERK = financial_times_perk } }
 				flag:mass_celerity_perk = { has_perk_trigger = { PERK = celerity_perk } }
 				flag:slowness_perk = { has_perk_trigger = { PERK = glimpse_the_future_perk } }
@@ -194,15 +194,15 @@ perk_select = {
 		switch = {
 			trigger = scope:perk
 			flag:mage_perk = { add_perk_from_school_effect = { SCHOOL = none PERK = mage_perk } }
-			flag:time_mage_perk = { add_perk_from_school_effect = { SCHOOL = time PERK = time_mage_perk } }
-			flag:glimpse_the_future_perk = { add_perk_from_school_effect = { SCHOOL = time PERK = glimpse_the_future_perk } }
-			flag:financial_times_perk = { add_perk_from_school_effect = { SCHOOL = time PERK = financial_times_perk } }
-			flag:celerity_perk = { add_perk_from_school_effect = { SCHOOL = time PERK = celerity_perk } }
-			flag:mass_celerity_perk = { add_perk_from_school_effect = { SCHOOL = time PERK = mass_celerity_perk } }
-			flag:slowness_perk = { add_perk_from_school_effect = { SCHOOL = time PERK = slowness_perk } }
-			flag:mass_slowness_perk = { add_perk_from_school_effect = { SCHOOL = time PERK = mass_slowness_perk } }
-			flag:temporal_manipulation_perk = { add_perk_from_school_effect = { SCHOOL = time PERK = temporal_manipulation_perk } }
-			flag:master_of_time_perk = { add_perk_from_school_effect = { SCHOOL = time PERK = master_of_time_perk } }
+			flag:chronomancy_mage_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = chronomancy_mage_perk } }
+			flag:glimpse_the_future_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = glimpse_the_future_perk } }
+			flag:financial_times_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = financial_times_perk } }
+			flag:celerity_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = celerity_perk } }
+			flag:mass_celerity_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = mass_celerity_perk } }
+			flag:slowness_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = slowness_perk } }
+			flag:mass_slowness_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = mass_slowness_perk } }
+			flag:temporal_manipulation_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = temporal_manipulation_perk } }
+			flag:master_of_time_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = master_of_time_perk } }
 			flag:life_mage_perk = { add_perk_from_school_effect = { SCHOOL = life PERK = life_mage_perk } }
 			flag:inward_reflection_perk = { add_perk_from_school_effect = { SCHOOL = life PERK = inward_reflection_perk } }
 			flag:inward_perfection_perk = { add_perk_from_school_effect = { SCHOOL = life PERK = inward_perfection_perk } }

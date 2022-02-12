@@ -143,6 +143,7 @@
 
 				## CENTER AREA
 				vbox = {
+					name = "Center Area VBox"
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
 					margin_left = 15
@@ -161,6 +162,7 @@
 
 						## Trees
 						hbox = {
+							name = "Trees"
 							layoutpolicy_horizontal = expanding
 							layoutpolicy_vertical = expanding
 							spacing = 10
@@ -316,7 +318,7 @@
 				text_single = {
 					name = "skill_value"
 					parentanchor = vcenter
-					text = "[Scope.ScriptValue('time_num_perks')|0]"
+					text = "[Scope.ScriptValue('chronomancy_num_perks')|0]"
 					default_format = "#high"
 					using = Font_Size_Medium
 					align = nobaseline
