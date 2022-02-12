@@ -22,32 +22,32 @@ soul_materialisation_mana_cost = {
 
 chronomancy_spell_discount = {
 	value = 1
-	min = 0.25 #the greates reduction can be 75%
+	min = 0.25 #the greatest reduction can be 75%
 	max = 1
 }
 chiromancy_spell_discount = {
 	value = 1
-	min = 0.25 #the greates reduction can be 75%
+	min = 0.25 #the greatest reduction can be 75%
 	max = 1
 }
 necromancy_spell_discount = {
 	value = 1
-	min = 0.25 #the greates reduction can be 75%
+	min = 0.25 #the greatest reduction can be 75%
 	max = 1
 }
 elomancy_spell_discount = {
 	value = 1
-	min = 0.25 #the greates reduction can be 75%
+	min = 0.25 #the greatest reduction can be 75%
 	max = 1
 }
 menomancy_spell_discount = {
 	value = 1
-	min = 0.25 #the greates reduction can be 75%
+	min = 0.25 #the greatest reduction can be 75%
 	max = 1
 }
 biomancy_spell_discount = {
 	value = 1
-	min = 0.25 #the greates reduction can be 75%
+	min = 0.25 #the greatest reduction can be 75%
 	max = 1
 }
 
@@ -66,13 +66,13 @@ glimpse_the_future_spell_cost = {
 	value = 100
 	multiply = chronomancy_spell_discount
 }
-financial_times_spell_cost = { value = 100 }
-celerity_spell_cost = { value = 100 }
-mass_celerity_spell_cost = { value = 100 }
-slowness_spell_cost = { value = 100 }
-mass_slowness_spell_cost = { value = 100 }
-temporal_manipulation_spell_cost = { value = 100 }
-haste_spell_cost = { value = 100 }
+financial_times_spell_cost = { value = 100 multiply = chronomancy_spell_discount }
+celerity_spell_cost = { value = 100 multiply = chronomancy_spell_discount }
+mass_celerity_spell_cost = { value = 100 multiply = chronomancy_spell_discount }
+slowness_spell_cost = { value = 100 multiply = chronomancy_spell_discount }
+mass_slowness_spell_cost = { value = 100 multiply = chronomancy_spell_discount }
+temporal_manipulation_spell_cost = { value = 100 multiply = chronomancy_spell_discount }
+haste_spell_cost = { value = 100 multiply = chronomancy_spell_discount }
 master_of_time_spell_cost = {
 	value = 100
 	multiply = {
@@ -95,32 +95,33 @@ master_of_time_spell_cost = {
 			}
 		}
 	}
+	multiply = chronomancy_spell_discount
 }
 
 #Life
-heal_spell_cost = { value = 50 }
-greater_heal_spell_cost = { value = 100 }
-avatar_of_life_spell_cost = { value = 200 }
+heal_spell_cost = { value = 50 multiply = chiromancy_spell_discount }
+greater_heal_spell_cost = { value = 100 multiply = chiromancy_spell_discount }
+avatar_of_life_spell_cost = { value = 200 multiply = chiromancy_spell_discount }
 
 #Elemental
-flame_aura_spell_cost = { value = 100 }
-flaming_weapons_spell_cost = { value = 100 }
-living_earthworks_spell_cost = { value = 100 }
-golem_creation_spell_cost = { value = 100 }
-control_water_spell_cost = { value = 100 }
-drought_spell_cost = { value = 100 }
-elemental_warrior_spell_cost = { value = 100 }
-lord_of_the_elements_spell_cost = { value = 400 }
+flame_aura_spell_cost = { value = 100 multiply = elomancy_spell_discount }
+flaming_weapons_spell_cost = { value = 100 multiply = elomancy_spell_discount }
+living_earthworks_spell_cost = { value = 100 multiply = elomancy_spell_discount }
+golem_creation_spell_cost = { value = 100 multiply = elomancy_spell_discount }
+control_water_spell_cost = { value = 100 multiply = elomancy_spell_discount }
+drought_spell_cost = { value = 100 multiply = elomancy_spell_discount }
+elemental_warrior_spell_cost = { value = 100 multiply = elomancy_spell_discount }
+lord_of_the_elements_spell_cost = { value = 400 multiply = elomancy_spell_discount }
 
 #Necromancy
-inflict_illness_spell_cost = { value = 50 }
-plague_lord_spell_cost = { value = 300 }
-aura_of_death_spell_cost = { value = 100 }
-necromancy_spell_cost = { value = 200 }
-drain_life_spell_cost = { value = 50 }
-death_stare_spell_cost = { value = 600 }
-blight_spell_cost = { value = 100 }
-deacon_of_death_spell_cost = { value = 600 }
+inflict_illness_spell_cost = { value = 50 multiply = necromancy_spell_discount }
+plague_lord_spell_cost = { value = 300 multiply = necromancy_spell_discount }
+aura_of_death_spell_cost = { value = 100 multiply = necromancy_spell_discount }
+necromancy_spell_cost = { value = 200 multiply = necromancy_spell_discount }
+drain_life_spell_cost = { value = 50 multiply = necromancy_spell_discount }
+death_stare_spell_cost = { value = 600 multiply = necromancy_spell_discount }
+blight_spell_cost = { value = 100 multiply = necromancy_spell_discount }
+deacon_of_death_spell_cost = { value = 600 multiply = necromancy_spell_discount }
 
 #Biomancy
 rewrite_beauty_spell_cost = {
@@ -160,6 +161,7 @@ rewrite_beauty_spell_cost = {
 		}
 	}
 	multiply = 200
+	multiply = biomancy_spell_discount
 }
 rewrite_physique_spell_cost = {
 	value = 1
@@ -198,6 +200,7 @@ rewrite_physique_spell_cost = {
 		}
 	}
 	multiply = 200
+	multiply = biomancy_spell_discount
 }
 rewrite_intellect_spell_cost = {
 	value = 1
@@ -236,6 +239,7 @@ rewrite_intellect_spell_cost = {
 		}
 	}
 	multiply = 200
+	multiply = biomancy_spell_discount
 }
 sculpter_of_flesh_spell_cost = {
 	value = 1
@@ -251,9 +255,10 @@ sculpter_of_flesh_spell_cost = {
 		}
 	}
 	multiply = 200
+	multiply = biomancy_spell_discount
 }
-fertility_control_spell_cost = { value = 100 }
-impregnate_spell_cost = { value = 300 }
+fertility_control_spell_cost = { value = 100 multiply = biomancy_spell_discount }
+impregnate_spell_cost = { value = 300 multiply = biomancy_spell_discount }
 
 #MindMagic
 entrance_spell_cost = { value = 100 }
