@@ -22,7 +22,7 @@
  
  #HOLDING
  city_of_magic_holding:0 "City of Magic"
- tribal_holding_concept_key:0 "[city_of_magic|E]"
+ city_of_magic_holding_concept_key:0 "[city_of_magic|E]"
  building_type_city_of_magic_01:0 "City of Magic"
  building_type_city_of_magic_01_desc:1 "A populous city which houses a large number of mages, schollars, merchants, and hard-working townsfolk. This city should be build on [ley_line|E]! or even better [focal_point|E] so that it can draw the power from it for its future development."
  building_city_of_magic_01:1 "Magical Village Center"
