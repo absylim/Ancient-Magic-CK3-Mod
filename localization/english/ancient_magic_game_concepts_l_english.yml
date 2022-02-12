@@ -14,10 +14,12 @@
  game_concept_mage_potency: "Magic Potency"
 
  game_concept_mana: "Mana"
+ game_concept_mana_i:0 "@aura_icon_active!"
  game_concept_mana_desc: "Mana is a fundamental force in the universe. It is a raw expression of 'potential' which may be used by a skilled magical practitioner to bend the laws of reality to their will.\n\nWhenever a mage casts a spell, they are channeling this 'potential' into an outcome of their own choosing, expending their mana reserves in the process. The more powerful an effect a [GetTrait('mage').GetName( GetNullCharacter ) |LVl] wishes to bring about, the more mana that effect requires."
  game_concept_magical_power: "Magic Power"
 
  game_concept_mana_cost: "Mana Cost"
+ game_concept_mana_cost_i: "@icon_mana_cost!"
  game_concept_mana_cost_desc: "The mana cost of a spell is the amount of [mana|E] which is required to cast or dispel a given spell. In general, weaker spells require less mana and [magic_skill|E] to cast, while stronger spells require more."
  game_concept_spell_cost: "Spell Cost"
 
@@ -117,6 +119,7 @@
 
  ## Spell Descriptions
  game_concept_mage_spell: "Spell"
+ game_concept_mage_spells: "Spells"
  game_concept_mage_spell_desc: "When a [GetTrait('mage').GetName( GetNullCharacter ) |LV] says that they are casting a spell, what they mean is that they are drawing on years of training to put themselves into a certain state of mind. While not necessary, due to the complexity of even the most simple spells, most mages often uses specific spell mnemonics - words and gestures which help them to remember the state of mind a spell requires.\n\nOnce the mage has achieved the necessary state of mind, they "cast" this spell out into the world around them. The ability to "cast" is what distinguishes those with [GetTrait('magic_potential_1').GetName( GetNullCharacter ) |LV] from everyone else in the world. At the end of the day, anyone can achieve the frame of mind required to construct a spell, but only mages may "cast" their thoughts and will into the world around them, a process known as creating a spell construct."
  game_concept_mage_aura: "Aura"
  game_concept_mage_aura_desc: "All auras are [mage_spell|E]#E s#!, but not all spells are auras. An aura is a type of spell that a mage may usually only cast on themself. It represents an on-going shift in that practioner's frame of mind, as well as a constant expenditure of [mana|E], which the [GetTrait('mage').GetName( GetNullCharacter ) |LVl] uses to sustain the spell. In order to activate an aura, a mage must have enough mana to cast the spell, and they must be able to produce enough mana each month to sustain it."

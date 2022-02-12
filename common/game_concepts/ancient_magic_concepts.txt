@@ -7,11 +7,13 @@ magic_potential = {
 }
 
 mana = {
-    alias = { magical_power }
+	texture = "gfx/interface/icons/icon_active_aura.dds"
+    alias = { magical_power mana_i }
 }
 
 mana_cost = {
-    alias = { spell_cost }
+	texture = "gfx/interface/icons/icon_inactive_aura.dds"
+    alias = { spell_cost mana_cost_i }
 }
 
 mana_drain = {
@@ -23,6 +25,7 @@ magic_talent = {
 }
 
 mage_spell = {
+	alias = { mage_spells }
 }
 
 mage_aura = {
@@ -41,30 +44,37 @@ worst_health_issues = {
 }
 
 chronomancy = {
+	texture = "gfx/magic/time_magic.dds"
     alias = { time_magic time_mage skip_mage chronomancer }
 }
 
 chiromancy = {
+	texture = "gfx/magic/life_magic.dds"
     alias = { healing_magic healer_mage chiromancer white_mage }
 }
 
 elomancy = {
+	texture = "gfx/magic/elomancy_magic.dds"
     alias = { battle_magic elomancer battle_mage elementalist war_mage elementalism }
 }
 
 necromancy = {
+	texture = "gfx/magic/necromancy_magic.dds"
     alias = { death_magic necromancer death_mage pale_mage black_mage }
 }
 
 biomancy = {
+	texture = "gfx/magic/biomancy_magic.dds"
     alias = { nature_magic druid_mage nature_mage biomancer  }
 }
 
 mensomancy = {
+	texture = "gfx/magic/mensomancy_magic.dds"
     alias = { psychomancy psychomancer mensomancer mentalism mentalist }
 }
 
 school_of_magic = {
+	texture = "gfx/magic/maintab_magic.dds"
     alias = { magic_school magical_school magic_discipline magical_discipline }
 }
 
