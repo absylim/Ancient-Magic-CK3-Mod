@@ -369,7 +369,7 @@ enchanting_aura_spell_aura_bit_unset = { value = unset19 }
 ## Setter Helpers
 # You are able to use these directly, but it's much more efficient
 # if you recall var:<spell_school>_perk_mask instead!
-none_perk_mask_0_maker = {
+basic_perk_mask_0_maker = {
 	value = 0
 	if = { limit = { has_perk = mage_perk } add = set.makebit00 }
 }

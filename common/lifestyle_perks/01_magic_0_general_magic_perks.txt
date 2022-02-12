@@ -1,6 +1,6 @@
 ﻿mage_perk = {
 	lifestyle = arcane_lifestyle
-	tree = ancient_magic_none
+	tree = ancient_magic_basic
 	position = { 0 0 }
 	icon = node_diplomacy
 
@@ -45,7 +45,7 @@
 		awaken_magical_potential = yes
 		unlock_spark_spell = yes
 		give_mage_secret_or_trait_effect = yes
-		mod_bit = { MASK = none_perk_mask_0 BIT = mage_perk_bit OP = set }
+		mod_bit = { MASK = basic_perk_mask_0 BIT = mage_perk_bit OP = set }
 		set_variable = {
 			name = mana
 			value = 0

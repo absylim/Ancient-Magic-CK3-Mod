@@ -27,7 +27,7 @@ toggle_magic_advancement_window = {
 		}
 		else = {
 			if = {
-				limit = { NOT = { has_variable = none_perk_mask_0 } }
+				limit = { NOT = { has_variable = basic_perk_mask_0 } }
 				init_perk_masks_effect = yes
 			}
 			effect_open_magic_advancement_window = yes
@@ -147,17 +147,17 @@ perk_select = {
 				flag:greater_heal_perk = { has_perk_trigger = { PERK = heal_perk } }
 				flag:battlefield_life_mage_perk = { has_perk_trigger = { PERK = life_mage_perk } }
 				flag:greater_battlefield_life_mage_perk = { has_perk_trigger = { PERK = battlefield_life_mage_perk } }
-				flag:purity_of_body_perk = { OR = { has_perk_trigger = { PERK = inward_perfection_perk } has_perk_trigger = { PERK = greater_heal_perk } has_perk_trigger = { PERK = greater_battlefield_life_mage_perk } } }
+				flag:purity_of_body_perk = { has_perk_trigger = { PERK = greater_heal_perk } }
 				flag:avatar_of_life_perk = { has_perk_trigger = { PERK = purity_of_body_perk } }
 				flag:elemental_mage_perk = { has_perk_trigger = { PERK = mage_perk } }
-				flag:flame_aura_perk = { always = yes }
-				flag:flaming_weapons_perk = { always = yes }
-				flag:living_earthworks_perk = { always = yes }
-				flag:golem_creation_perk = { always = yes }
-				flag:control_water_perk = { always = yes }
-				flag:drought_perk = { always = yes }
-				flag:elemental_warrior_perk = { always = yes }
-				flag:lord_of_the_elements_perk = { always = yes }
+				flag:flame_aura_perk = { has_perk_trigger = { PERK = elemental_mage_perk } }
+				flag:flaming_weapons_perk = { has_perk_trigger = { PERK = elemental_mage_perk } }
+				flag:living_earthworks_perk = { has_perk_trigger = { PERK = elemental_mage_perk } }
+				flag:golem_creation_perk = { has_perk_trigger = { PERK = elemental_mage_perk } }
+				flag:control_water_perk = { has_perk_trigger = { PERK = elemental_mage_perk } }
+				flag:drought_perk = { has_perk_trigger = { PERK = elemental_mage_perk } }
+				flag:elemental_warrior_perk = { has_perk_trigger = { PERK = flame_aura_perk } has_perk_trigger = { PERK = flaming_weapons_perk } has_perk_trigger = { PERK = living_earthworks_perk } has_perk_trigger = { PERK = control_water_perk } has_perk_trigger = { PERK = drought_perk } }
+				flag:lord_of_the_elements_perk = { has_perk_trigger = { PERK = golem_creation_perk } }
 				flag:death_mage_perk = { has_perk_trigger = { PERK = mage_perk } }
 				flag:inflict_illness_perk = { has_perk_trigger = { PERK = necromancy_perk } }
 				flag:plague_lord_perk = { has_perk_trigger = { PERK = inflict_illness_perk } }
@@ -177,14 +177,14 @@ perk_select = {
 				flag:sculpter_of_flesh_perk = { AND = { has_perk_trigger = { PERK = perfect_trait_perk } has_perk_trigger = { PERK = impregnate_perk } has_perk_trigger = { PERK = criple_trait_perk } } }
 				flag:architect_of_bloodlines_perk = { has_perk_trigger = { PERK = sculpter_of_flesh_perk } }
 				flag:domination_mage_perk = { has_perk_trigger = { PERK = mage_perk } }
-				flag:entrance_perk = { always = yes }
-				flag:incite_lust_perk = { always = yes }
-				flag:incite_obedience_perk = { always = yes }
-				flag:dominate_perk = { always = yes }
-				flag:beguiling_aura_perk = { always = yes }
-				flag:friendship_perk = { always = yes }
-				flag:enchanting_aura_perk = { always = yes }
-				flag:master_of_puppets_perk = { always = yes }
+				flag:entrance_perk = { has_perk_trigger = { PERK = domination_mage_perk } }
+				flag:incite_lust_perk = { has_perk_trigger = { PERK = domination_mage_perk } }
+				flag:incite_obedience_perk = { has_perk_trigger = { PERK = domination_mage_perk } }
+				flag:dominate_perk = { has_perk_trigger = { PERK = incite_obedience_perk } }
+				flag:beguiling_aura_perk = { has_perk_trigger = { PERK = entrance_perk } }
+				flag:friendship_perk = { has_perk_trigger = { PERK = incite_lust_perk } }
+				flag:enchanting_aura_perk = { has_perk_trigger = { PERK = friendship_perk } }
+				flag:master_of_puppets_perk = { has_perk_trigger = { PERK = dominate_perk } }
 				fallback = { always = no }
 			}
 		}
