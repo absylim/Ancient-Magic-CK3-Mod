@@ -1,7 +1,7 @@
 ﻿has_perk_trigger = {
 	switch = {
 		trigger = flag:$PERK$
-		flag:mage_perk = { var:none_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:mage_perk = { var:basic_perk_mask_0.$PERK$_bit.compare_value = set }
 		flag:time_mage_perk = { var:time_perk_mask_0.$PERK$_bit.compare_value = set }
 		flag:glimpse_the_future_perk = { var:time_perk_mask_0.$PERK$_bit.compare_value = set }
 		flag:financial_times_perk = { var:time_perk_mask_0.$PERK$_bit.compare_value = set }

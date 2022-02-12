@@ -27,7 +27,7 @@ toggle_magic_advancement_window = {
 		}
 		else = {
 			if = {
-				limit = { NOT = { has_variable = none_perk_mask_0 } }
+				limit = { NOT = { has_variable = basic_perk_mask_0 } }
 				init_perk_masks_effect = yes
 			}
 			effect_open_magic_advancement_window = yes

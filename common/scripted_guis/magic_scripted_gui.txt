@@ -1,7 +1,7 @@
 ﻿display_mana_hud = {
 	is_valid = {
 		is_magus_trigger = yes
-		has_variable = none_perk_mask_0
+		has_variable = basic_perk_mask_0
 	}
 }
 

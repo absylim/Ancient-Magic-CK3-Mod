@@ -369,7 +369,7 @@ enchanting_aura_spell_aura_bit_unset = { value = unset19 }
 ## Setter Helpers
 # You are able to use these directly, but it's much more efficient
 # if you recall var:<spell_school>_perk_mask instead!
-none_perk_mask_0_maker = {
+basic_perk_mask_0_maker = {
 	value = 0
 	if = { limit = { has_perk = mage_perk } add = set.makebit00 }
 }
@@ -452,7 +452,7 @@ mensomancy_perk_mask_0_maker = {
 	if = { limit = { has_perk = master_of_puppets_perk } add = set.makebit08 }
 }
 
-none_num_perks = { value = var:none_perk_mask_0.num_set_bits }
+basic_num_perks = { value = var:basic_perk_mask_0.num_set_bits }
 time_num_perks = { value = var:time_perk_mask_0.num_set_bits }
 life_num_perks = { value = var:life_perk_mask_0.num_set_bits }
 elomancy_num_perks = { value = var:elomancy_perk_mask_0.num_set_bits }
@@ -462,7 +462,7 @@ mensomancy_num_perks = { value = var:mensomancy_perk_mask_0.num_set_bits }
 
 num_available_magic_perks = {
 	value = mage_level
-	subtract = none_num_perks
+	subtract = basic_num_perks
 	subtract = time_num_perks
 	subtract = life_num_perks
 	subtract = elomancy_num_perks

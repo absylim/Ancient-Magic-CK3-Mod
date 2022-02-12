@@ -286,7 +286,7 @@
 				text_single = {
 					name = "skill_value"
 					parentanchor = vcenter
-					text = "[Scope.ScriptValue('none_num_perks')|0]"
+					text = "[Scope.ScriptValue('basic_num_perks')|0]"
 					default_format = "#high"
 					using = Font_Size_Medium
 					align = nobaseline

@@ -15,7 +15,7 @@ init_perk_masks_effect = {
 		value = 0
 	}
 	set_variable = {
-		name = none_perk_mask_0
+		name = basic_perk_mask_0
 		value = 0
 	}
 	set_variable = {
