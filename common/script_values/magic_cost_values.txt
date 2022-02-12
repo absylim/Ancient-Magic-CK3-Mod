@@ -24,31 +24,91 @@ chronomancy_spell_discount = {
 	value = 1
 	min = 0.25 #the greatest reduction can be 75%
 	max = 1
+	
+	if = {
+		limit = {
+			scope:culture = {
+				has_cultural_parameter = chronomancy_magic_cost_reduction
+			}
+		}
+		
+		subtract = -0.2 #20% discount
+	}
 }
 chiromancy_spell_discount = {
 	value = 1
 	min = 0.25 #the greatest reduction can be 75%
 	max = 1
+	
+	if = {
+		limit = {
+			scope:culture = {
+				has_cultural_parameter = chiromancy_magic_cost_reduction
+			}
+		}
+		
+		subtract = -0.2 #20% discount
+	}
 }
 necromancy_spell_discount = {
 	value = 1
 	min = 0.25 #the greatest reduction can be 75%
 	max = 1
+	
+	if = {
+		limit = {
+			scope:culture = {
+				has_cultural_parameter = necromancy_magic_cost_reduction
+			}
+		}
+		
+		subtract = -0.2 #20% discount
+	}
 }
 elomancy_spell_discount = {
 	value = 1
 	min = 0.25 #the greatest reduction can be 75%
 	max = 1
+	
+	if = {
+		limit = {
+			scope:culture = {
+				has_cultural_parameter = elomancy_magic_cost_reduction
+			}
+		}
+		
+		subtract = -0.2 #20% discount
+	}
 }
-menomancy_spell_discount = {
+mensomancy_spell_discount = {
 	value = 1
 	min = 0.25 #the greatest reduction can be 75%
 	max = 1
+	
+	if = {
+		limit = {
+			scope:culture = {
+				has_cultural_parameter = mensomancy_magic_cost_reduction
+			}
+		}
+		
+		subtract = -0.2 #20% discount
+	}
 }
 biomancy_spell_discount = {
 	value = 1
 	min = 0.25 #the greatest reduction can be 75%
 	max = 1
+	
+	if = {
+		limit = {
+			scope:culture = {
+				has_cultural_parameter = biomancy_magic_cost_reduction
+			}
+		}
+		
+		subtract = -0.2 #20% discount
+	}
 }
 
 
@@ -261,14 +321,14 @@ fertility_control_spell_cost = { value = 100 multiply = biomancy_spell_discount 
 impregnate_spell_cost = { value = 300 multiply = biomancy_spell_discount }
 
 #MindMagic
-entrance_spell_cost = { value = 100 }
-incite_lust_spell_cost = { value = 300 }
-incite_obedience_spell_cost = { value = 200 }
-dominate_spell_cost = { value = 400 }
-beguiling_aura_spell_cost = { value = 100 }
-friendship_spell_cost = { value = 400 }
-rivalry_spell_cost = { value = 400 }
-enchanting_aura_spell_cost = { value = 100 }
+entrance_spell_cost = { value = 100 multiply = mensomancy_spell_discount }
+incite_lust_spell_cost = { value = 300 multiply = mensomancy_spell_discount }
+incite_obedience_spell_cost = { value = 200 multiply = mensomancy_spell_discount }
+dominate_spell_cost = { value = 400 multiply = mensomancy_spell_discount }
+beguiling_aura_spell_cost = { value = 100 multiply = mensomancy_spell_discount }
+friendship_spell_cost = { value = 400 multiply = mensomancy_spell_discount }
+rivalry_spell_cost = { value = 400 multiply = mensomancy_spell_discount }
+enchanting_aura_spell_cost = { value = 100 multiply = mensomancy_spell_discount }
 sculpt_mind_spell_cost = {
 	value = 1
 	if = {
@@ -283,8 +343,9 @@ sculpt_mind_spell_cost = {
 		}
 	}
 	multiply = 400
+	multiply = mensomancy_spell_discount
 }
-master_of_puppets_spell_cost = { value = 600 }
+master_of_puppets_spell_cost = { value = 600 multiply = mensomancy_spell_discount }
 
 ## Aura spell gen costs
 # Time

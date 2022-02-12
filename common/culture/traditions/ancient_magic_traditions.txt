@@ -122,9 +122,6 @@ tradition_mythology_egypt = {
 		city_holding_holding_build_speed = -0.15
 		castle_holding_holding_build_speed = -0.15
 		city_holding_build_gold_cost = -0.2
-		
-		add_spell_cost_dicount = { VALUE = 0.15 SCHOOL = chiromancy }
-		add_spell_cost_dicount = { VALUE = 0.10 SCHOOL = necromancy }
 	}
 	
 	cost = {
