@@ -558,7 +558,7 @@ flip12 = { value = this if = { limit = { bit12 = unset } add = set.makebit12 } e
 flip13 = { value = this if = { limit = { bit13 = unset } add = set.makebit13 } else = { subtract = set.makebit13 } }
 flip14 = { value = this if = { limit = { bit14 = unset } add = set.makebit14 } else = { subtract = set.makebit14 } }
 flip15 = { value = this if = { limit = { bit15 = unset } add = set.makebit15 } else = { subtract = set.makebit15 } }
-flip16 = { value = this if = { limit = { bit16 = unset } add = set.makebit16 } else = { subtract = set.makebit16 } }
+flip16 = { value = this if = { limit = { rshift16.par = unset } add = set.makebit16 } else = { subtract = set.makebit16 } }
 flip17 = { value = this if = { limit = { bit17 = unset } add = set.makebit17 } else = { subtract = set.makebit17 } }
 flip18 = { value = this if = { limit = { bit18 = unset } add = set.makebit18 } else = { subtract = set.makebit18 } }
 flip19 = { value = this if = { limit = { bit19 = unset } add = set.makebit19 } else = { subtract = set.makebit19 } }
@@ -591,7 +591,7 @@ set12 = { value = this if = { limit = { bit12 = unset } add = set.makebit12 } }
 set13 = { value = this if = { limit = { bit13 = unset } add = set.makebit13 } }
 set14 = { value = this if = { limit = { bit14 = unset } add = set.makebit14 } }
 set15 = { value = this if = { limit = { bit15 = unset } add = set.makebit15 } }
-set16 = { value = this if = { limit = { bit16 = unset } add = set.makebit16 } }
+set16 = { value = this if = { limit = { rshift16.par = unset } add = set.makebit16 } }
 set17 = { value = this if = { limit = { bit17 = unset } add = set.makebit17 } }
 set18 = { value = this if = { limit = { bit18 = unset } add = set.makebit18 } }
 set19 = { value = this if = { limit = { bit19 = unset } add = set.makebit19 } }
@@ -624,7 +624,7 @@ unset12 = { value = this if = { limit = { bit12 = set } subtract = set.makebit12
 unset13 = { value = this if = { limit = { bit13 = set } subtract = set.makebit13 } }
 unset14 = { value = this if = { limit = { bit14 = set } subtract = set.makebit14 } }
 unset15 = { value = this if = { limit = { bit15 = set } subtract = set.makebit15 } }
-unset16 = { value = this if = { limit = { bit16 = set } subtract = set.makebit16 } }
+unset16 = { value = this if = { limit = { rshift16.par = set } subtract = set.makebit16 } }
 unset17 = { value = this if = { limit = { bit17 = set } subtract = set.makebit17 } }
 unset18 = { value = this if = { limit = { bit18 = set } subtract = set.makebit18 } }
 unset19 = { value = this if = { limit = { bit19 = set } subtract = set.makebit19 } }
@@ -659,7 +659,7 @@ and = {
 	if = { limit = { bit13 = set prev.bit13 = set } add = set.makebit13 }
 	if = { limit = { bit14 = set prev.bit14 = set } add = set.makebit14 }
 	if = { limit = { bit15 = set prev.bit15 = set } add = set.makebit15 }
-	if = { limit = { bit16 = set prev.bit16 = set } add = set.makebit16 }
+	if = { limit = { rshift16.par = set prev.rshift16.par = set } add = set.makebit16 }
 	if = { limit = { bit17 = set prev.bit17 = set } add = set.makebit17 }
 	if = { limit = { bit18 = set prev.bit18 = set } add = set.makebit18 }
 	if = { limit = { bit19 = set prev.bit19 = set } add = set.makebit19 }
@@ -694,7 +694,7 @@ or = {
 	if = { limit = { OR = { bit13 = set prev.bit13 = set } } add = set.makebit13 }
 	if = { limit = { OR = { bit14 = set prev.bit14 = set } } add = set.makebit14 }
 	if = { limit = { OR = { bit15 = set prev.bit15 = set } } add = set.makebit15 }
-	if = { limit = { OR = { bit16 = set prev.bit16 = set } } add = set.makebit16 }
+	if = { limit = { OR = { rshift16.par = set prev.rshift16.par = set } } add = set.makebit16 }
 	if = { limit = { OR = { bit17 = set prev.bit17 = set } } add = set.makebit17 }
 	if = { limit = { OR = { bit18 = set prev.bit18 = set } } add = set.makebit18 }
 	if = { limit = { OR = { bit19 = set prev.bit19 = set } } add = set.makebit19 }
@@ -729,7 +729,7 @@ xor = {
 	if = { limit = { NOT = { bit13 = prev.bit13 } } add = set.makebit13 }
 	if = { limit = { NOT = { bit14 = prev.bit14 } } add = set.makebit14 }
 	if = { limit = { NOT = { bit15 = prev.bit15 } } add = set.makebit15 }
-	if = { limit = { NOT = { bit16 = prev.bit16 } } add = set.makebit16 }
+	if = { limit = { NOT = { rshift16.par = prev.rshift16.par } } add = set.makebit16 }
 	if = { limit = { NOT = { bit17 = prev.bit17 } } add = set.makebit17 }
 	if = { limit = { NOT = { bit18 = prev.bit18 } } add = set.makebit18 }
 	if = { limit = { NOT = { bit19 = prev.bit19 } } add = set.makebit19 }
@@ -769,7 +769,7 @@ num_set_bits = {
 	add = bit13
 	add = bit14
 	add = bit15
-	add = bit16
+	add = rshift16.par
 	add = bit17
 	add = bit18
 	add = bit19
