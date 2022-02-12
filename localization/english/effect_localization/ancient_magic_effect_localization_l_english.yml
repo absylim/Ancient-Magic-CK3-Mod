@@ -32,12 +32,12 @@
  THIRD_LOST_MAGE_XP_EFFECT: "[ROOT.Char.GetName] lost $VALUE|0$ [GetTrait('mage').GetName(ROOT.Char)] XP"
 
  # Spell effects
- GLOBAL_GAIN_MANA: "$AURA_ACTIVE$$VALUE|+0$ [mana|E] is gained"
- FIRST_GAIN_MANA: "You gain $AURA_ACTIVE$$VALUE|+0$ [mana|E]"
- THIRD_GAIN_MANA: "#V [CHARACTER.GetTitledFirstName]#! gains $AURA_ACTIVE$$VALUE|+0$ [mana|E]"
- GLOBAL_SPEND_MANA: "$AURA_INACTIVE$$VALUE|+0$ [mana|E] is spent"
- FIRST_SPEND_MANA: "You spend $AURA_INACTIVE$$VALUE|+0$ [mana|E]"
- THIRD_SPEND_MANA: "#V [CHARACTER.GetTitledFirstName]#! spends $AURA_INACTIVE$$VALUE|+0$ [mana|E]"
+ GLOBAL_GAIN_MANA: "[Concept('mana','$AURA_ACTIVE$$VALUE|+0$')|E] is gained"
+ FIRST_GAIN_MANA: "You gain [Concept('mana','$AURA_ACTIVE$$VALUE|+0$')|E]"
+ THIRD_GAIN_MANA: "#V [CHARACTER.GetTitledFirstName]#! gains [Concept('mana','$AURA_ACTIVE$$VALUE|+0$')|E]"
+ GLOBAL_SPEND_MANA: "[Concept('mana','$AURA_INACTIVE$$VALUE|+0$')|E] is spent"
+ FIRST_SPEND_MANA: "You spend [Concept('mana','$AURA_INACTIVE$$VALUE|+0$')|E]"
+ THIRD_SPEND_MANA: "#V [CHARACTER.GetTitledFirstName]#! spends [Concept('mana','$AURA_INACTIVE$$VALUE|+0$')|E]"
  GLOBAL_POSITIVE_MANA_DRAIN: "$DRAIN_ACTIVE$$VALUE|+0$ committed [mana|E] generation is regained"
  FIRST_POSITIVE_MANA_DRAIN: "You regain $DRAIN_ACTIVE$$VALUE|+0$ committed [mana|E] generation"
  THIRD_POSITIVE_MANA_DRAIN: "#V [CHARACTER.GetTitledFirstName]#! regains $DRAIN_ACTIVE$$VALUE|+0$ committed [mana|E] generation"
