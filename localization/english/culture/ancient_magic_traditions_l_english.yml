@@ -3,6 +3,8 @@
  tradition_wonders_of_magic_desc:1 "Magic is wonderous and very practicle, so lets support magic for our new wonderous future!"
  tradition_mythology_egypt_name:0 "Lagacy of Ancients"
  tradition_mythology_egypt_desc:1 "We are descendants of of great Ancient civilisation, which excelled in construction and also healing and necromantic magics."
+ tradition_mythology_norse_name:0 "Lagacy of Ygdrasil"
+ tradition_mythology_norse_desc:1 "Our peoples might was always known by thunder with which we arrived, they were affraid of our cunning, and most of all they were scared of the future we foresaw."
  
 #penalty descriptions
  witchcraft_illegal_desc:1 "The [faith|E] has Witchcraft Criminal"
