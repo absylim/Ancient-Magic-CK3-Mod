@@ -44,38 +44,38 @@ worst_health_issues = {
 }
 
 chronomancy = {
-	texture = "gfx/magic/time_magic.dds"
-    alias = { time_magic time_mage skip_mage chronomancer }
+	texture = "gfx/magic/chronomancy_magic.dds"
+    alias = { chronomancy_magic chronomancy_mage time_magic time_mage skip_mage chronomancer chronomancy_i }
 }
 
 chiromancy = {
 	texture = "gfx/magic/life_magic.dds"
-    alias = { healing_magic healer_mage chiromancer white_mage }
+    alias = { healing_magic healer_mage chiromancer white_mage chiromancy_i }
 }
 
 elomancy = {
 	texture = "gfx/magic/elomancy_magic.dds"
-    alias = { battle_magic elomancer battle_mage elementalist war_mage elementalism }
+    alias = { elomancy_i battle_magic elomancer battle_mage elementalist war_mage elementalism }
 }
 
 necromancy = {
 	texture = "gfx/magic/necromancy_magic.dds"
-    alias = { death_magic necromancer death_mage pale_mage black_mage }
+    alias = { necromancy_i death_magic necromancer death_mage pale_mage black_mage }
 }
 
 biomancy = {
 	texture = "gfx/magic/biomancy_magic.dds"
-    alias = { nature_magic druid_mage nature_mage biomancer  }
+    alias = { biomancy_i nature_magic druid_mage nature_mage biomancer  }
 }
 
 mensomancy = {
 	texture = "gfx/magic/mensomancy_magic.dds"
-    alias = { psychomancy psychomancer mensomancer mentalism mentalist }
+    alias = { mensomancy_i psychomancy psychomancer mensomancer mentalism mentalist }
 }
 
 school_of_magic = {
 	texture = "gfx/magic/maintab_magic.dds"
-    alias = { magic_school magical_school magic_discipline magical_discipline }
+    alias = { school_of_magic_i magic_school magical_school magic_discipline magical_discipline }
 }
 
 ## Men At Arms

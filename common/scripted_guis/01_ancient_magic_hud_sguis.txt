@@ -74,7 +74,7 @@ should_show_breakdown_for_flag = {
 	is_shown = {
 		switch = {
 			trigger = scope:flag_name
-			flag:time_mage_perk = { has_perk_trigger = { PERK = time_mage_perk } }
+			flag:chronomancy_mage_perk = { has_perk_trigger = { PERK = chronomancy_mage_perk } }
 			flag:glimpse_the_future_perk = { has_perk_trigger = { PERK = glimpse_the_future_perk } }
 			flag:financial_times_perk = { has_perk_trigger = { PERK = financial_times_perk } }
 			flag:celerity_perk = { has_perk_trigger = { PERK = celerity_perk } }

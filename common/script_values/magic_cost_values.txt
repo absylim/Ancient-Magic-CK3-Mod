@@ -115,13 +115,13 @@ biomancy_spell_discount = {
 ######################
 ## Spell mana costs ##
 ######################
-#Time
+#Chronomancy
 spark_spell_cost = {
 	value = 10
 	multiply = mage_level
 }
 
-#Time
+#Chronomancy
 glimpse_the_future_spell_cost = { 
 	value = 100
 	multiply = chronomancy_spell_discount
@@ -348,7 +348,7 @@ sculpt_mind_spell_cost = {
 master_of_puppets_spell_cost = { value = 600 multiply = mensomancy_spell_discount }
 
 ## Aura spell gen costs
-# Time
+# Chronomancy
 glimpse_the_future_spell_gen_cost_individual = { value = -15 }
 glimpse_the_future_spell_gen_cost = {
 	value = 0

@@ -318,7 +318,7 @@
 				text_single = {
 					name = "skill_value"
 					parentanchor = vcenter
-					text = "[Scope.ScriptValue('time_num_perks')|0]"
+					text = "[Scope.ScriptValue('chronomancy_num_perks')|0]"
 					default_format = "#high"
 					using = Font_Size_Medium
 					align = nobaseline
