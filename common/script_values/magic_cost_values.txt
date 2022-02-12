@@ -83,6 +83,9 @@ deacon_of_death_spell_cost = { value = 600 }
 
 #Biomancy
 rewrite_beauty_spell_cost = {
+	value = rewrite_beauty_spell_cost_raw.abs
+}
+rewrite_beauty_spell_cost_raw = {
 	value = 1
 	if = {
 		limit = {
@@ -121,6 +124,9 @@ rewrite_beauty_spell_cost = {
 	multiply = 200
 }
 rewrite_physique_spell_cost = {
+	value = rewrite_physique_spell_cost_raw.abs
+}
+rewrite_physique_spell_cost_raw = {
 	value = 1
 	if = {
 		limit = {
@@ -159,6 +165,9 @@ rewrite_physique_spell_cost = {
 	multiply = 200
 }
 rewrite_intellect_spell_cost = {
+	value = rewrite_intellect_spell_cost_raw.abs
+}
+rewrite_intellect_spell_cost_raw = {
 	value = 1
 	if = {
 		limit = {
