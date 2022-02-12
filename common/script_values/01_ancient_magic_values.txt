@@ -465,8 +465,7 @@ dec = { value = this add = -1 }
 par = { value = this modulo = 2 }
 div2 = { value = this divide = 2 }
 mul2 = { value = this multiply = 2 }
-clearbit00 = { value = this subtract = par.abs }
-rshift01 = { value = clearbit00.div2 }
+rshift01 = { value = unset00.div2 }
 rshift02 = { value = rshift01.rshift01 }
 rshift04 = { value = rshift02.rshift02 }
 rshift08 = { value = rshift04.rshift04 }
