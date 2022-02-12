@@ -22,8 +22,6 @@ soul_materialisation_mana_cost = {
 
 chronomancy_spell_discount = {
 	value = 1
-	min = 0.25 #the greatest reduction can be 75%
-	max = 1
 	
 	if = {
 		limit = {
@@ -32,13 +30,13 @@ chronomancy_spell_discount = {
 			}
 		}
 		
-		subtract = -0.2 #20% discount
+		subtract = -0.15 #15% discount
 	}
+	min = 0.25 #the greatest reduction can be 75%
+	max = 1
 }
 chiromancy_spell_discount = {
 	value = 1
-	min = 0.25 #the greatest reduction can be 75%
-	max = 1
 	
 	if = {
 		limit = {
@@ -49,11 +47,11 @@ chiromancy_spell_discount = {
 		
 		subtract = -0.2 #20% discount
 	}
+	min = 0.25 #the greatest reduction can be 75%
+	max = 1
 }
 necromancy_spell_discount = {
 	value = 1
-	min = 0.25 #the greatest reduction can be 75%
-	max = 1
 	
 	if = {
 		limit = {
@@ -64,11 +62,11 @@ necromancy_spell_discount = {
 		
 		subtract = -0.2 #20% discount
 	}
+	min = 0.25 #the greatest reduction can be 75%
+	max = 1
 }
 elomancy_spell_discount = {
 	value = 1
-	min = 0.25 #the greatest reduction can be 75%
-	max = 1
 	
 	if = {
 		limit = {
@@ -79,11 +77,11 @@ elomancy_spell_discount = {
 		
 		subtract = -0.2 #20% discount
 	}
+	min = 0.25 #the greatest reduction can be 75%
+	max = 1
 }
 mensomancy_spell_discount = {
 	value = 1
-	min = 0.25 #the greatest reduction can be 75%
-	max = 1
 	
 	if = {
 		limit = {
@@ -94,11 +92,11 @@ mensomancy_spell_discount = {
 		
 		subtract = -0.2 #20% discount
 	}
+	min = 0.25 #the greatest reduction can be 75%
+	max = 1
 }
 biomancy_spell_discount = {
 	value = 1
-	min = 0.25 #the greatest reduction can be 75%
-	max = 1
 	
 	if = {
 		limit = {
@@ -109,6 +107,8 @@ biomancy_spell_discount = {
 		
 		subtract = -0.2 #20% discount
 	}
+	min = 0.25 #the greatest reduction can be 75%
+	max = 1
 }
 
 
