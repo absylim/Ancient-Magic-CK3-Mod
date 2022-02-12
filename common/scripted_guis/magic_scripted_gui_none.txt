@@ -15,7 +15,7 @@ spark_spell = {
 				multiply = var:repeat_spell
 			}
 		}
-		change_mana_with_tooltip = { VALUE = spell_cost.neg }
+		change_mana_with_tooltip = { VALUE = scope:spell_cost.neg }
 		change_mage_xp = { VALUE = scope:spell_cost }
 	}
 }
