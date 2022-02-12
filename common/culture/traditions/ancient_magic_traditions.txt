@@ -2,7 +2,7 @@
 	category = societal
 
 	layers = {
-		0 = diplo
+		0 = steward
 		1 = western
 		4 = city.dds
 	}
@@ -23,8 +23,8 @@
 	}
 	
 	character_modifier = {
-		city_of_magic_holding_holding_build_speed = 0.1
-		city_of_magic_holding_build_gold_cost = 0.2
+		city_of_magic_holding_holding_build_speed = -0.1
+		city_of_magic_holding_build_gold_cost = -0.2
 	}
 	
 	cost = {
@@ -67,6 +67,107 @@
 		if = {
 			limit = {
 				has_trait = ambitious
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
+				has_trait = zealous
+				faith = {
+					has_doctrine_parameter = witchcraft_illegal
+				}
+			}
+			multiply = 0.1
+		}
+		if = {
+			limit = {
+				has_trait = zealous
+				faith = {
+					has_doctrine_parameter = witchcraft_shunned
+				}
+			}
+			multiply = 0.5
+		}
+	}
+}
+
+tradition_mythology_egypt = {
+	category = regional
+
+	layers = {
+		0 = steward
+		1 = mena
+		3 = 6.dds
+		4 = pyramid.dds
+	}
+	
+	is_shown = {
+		this = culture:egyptian
+	}
+	
+	parameters = {
+		magical_traits_renown = yes
+		magical_traits_opinion_boost = yes
+		chiromancy_magic_cost_reduction = yes
+		necromancy_magic_cost_reduction = yes
+	}
+
+	county_modifier = {
+		development_growth_factor = 0.15
+	}
+	
+	
+	character_modifier = {
+		city_of_magic_holding_holding_build_speed = -0.1
+		city_holding_holding_build_speed = -0.15
+		castle_holding_holding_build_speed = -0.15
+		city_holding_build_gold_cost = -0.2
+		
+		add_spell_cost_dicount = { VALUE = 0.15 SCHOOL = chiromancy }
+		add_spell_cost_dicount = { VALUE = 0.10 SCHOOL = necromancy }
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = { #based on religion
+				limit = {
+					scope:character.faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty #using this value as too lazy to add own one
+					multiply = 2
+					desc = witchcraft_illegal_desc
+				}
+			}
+			else_if = {
+				limit = {
+					scope:character.faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = witchcraft_shunned_desc
+				}
+			}
+
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				has_trait = ambitious
+				is_magus_trigger = yes
 			}
 			multiply = 1.5
 		}

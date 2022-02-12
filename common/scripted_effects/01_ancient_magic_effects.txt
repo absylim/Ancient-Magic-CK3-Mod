@@ -14,6 +14,16 @@ change_mana_gen_tooltip = {
 	}
 }
 
+add_spell_cost_dicount = {
+	set_variable = {
+		name = $SCHOOL$_spell_discount
+		value = {
+			value = var:$SCHOOL$_spell_discount
+			subtract = $VALUE$
+		}
+	}
+}
+
 change_mage_xp = {
 	if = {
 		limit = { has_character_modifier = magic_advancement_modifier }

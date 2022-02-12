@@ -16,7 +16,45 @@ soul_materialisation_mana_cost = {
 	}
 }
 
-## Spell mana costs
+##########################
+## Spell cost discount ##
+##########################
+
+chronomancy_spell_discount = {
+	value = 1
+	min = 0.25 #the greates reduction can be 75%
+	max = 1
+}
+chiromancy_spell_discount = {
+	value = 1
+	min = 0.25 #the greates reduction can be 75%
+	max = 1
+}
+necromancy_spell_discount = {
+	value = 1
+	min = 0.25 #the greates reduction can be 75%
+	max = 1
+}
+elomancy_spell_discount = {
+	value = 1
+	min = 0.25 #the greates reduction can be 75%
+	max = 1
+}
+menomancy_spell_discount = {
+	value = 1
+	min = 0.25 #the greates reduction can be 75%
+	max = 1
+}
+biomancy_spell_discount = {
+	value = 1
+	min = 0.25 #the greates reduction can be 75%
+	max = 1
+}
+
+
+######################
+## Spell mana costs ##
+######################
 #Time
 spark_spell_cost = {
 	value = 10
@@ -24,7 +62,10 @@ spark_spell_cost = {
 }
 
 #Time
-glimpse_the_future_spell_cost = { value = 100 }
+glimpse_the_future_spell_cost = { 
+	value = 100
+	multiply = chronomancy_spell_discount
+}
 financial_times_spell_cost = { value = 100 }
 celerity_spell_cost = { value = 100 }
 mass_celerity_spell_cost = { value = 100 }
