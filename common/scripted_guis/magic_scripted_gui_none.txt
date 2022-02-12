@@ -16,6 +16,17 @@ spark_spell = {
 			}
 		}
 		change_mana_with_tooltip = { VALUE = scope:spell_cost.neg }
+		save_temporary_scope_value_as = {
+			name = spell_cost
+			value = {
+				value = spark_spell_cost.abs
+				multiply = var:repeat_spell
+				multiply = {
+					value = mage_level.div2
+					min = 1
+				}
+			}
+		}
 		change_mage_xp = { VALUE = scope:spell_cost }
 	}
 }

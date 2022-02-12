@@ -20,7 +20,6 @@ soul_materialisation_mana_cost = {
 #Time
 spark_spell_cost = {
 	value = 10
-	multiply = mage_level
 }
 
 #Time
