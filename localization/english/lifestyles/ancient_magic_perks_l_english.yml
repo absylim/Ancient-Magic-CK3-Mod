@@ -8,7 +8,7 @@
  # mage perk
  mage_perk_name: "Mage"
 
- # time magic
+ # chronomancy magic
  time_mage_perk_name: "Chronomancer"
  glimpse_the_future_perk_name: "Glimpse the Future"
  financial_times_perk_name: "Financial Times"

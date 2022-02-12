@@ -1,4 +1,4 @@
-﻿#Time
+﻿#Basic
 spark_spell = {
 	scope = character
 	is_shown = {

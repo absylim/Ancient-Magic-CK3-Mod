@@ -1,6 +1,6 @@
-﻿time_mage_perk = {
+﻿chronomancy_mage_perk = {
 	lifestyle = arcane_lifestyle
-	tree = ancient_magic_time
+	tree = ancient_magic_chronomancy
 	position = { 2 0 }
 	icon = node_diplomacy
 
@@ -60,20 +60,20 @@
 	}
 
 	effect = {
-		gain_mana_gen_perk = { VALUE = time_mage_perk_gen_cost }
-		gain_max_mana_perk = { VALUE = time_mage_perk_max_mana }
-		mod_bit = { MASK = time_perk_mask_0 BIT = time_mage_perk_bit OP = set }
+		gain_mana_gen_perk = { VALUE = chronomancy_mage_perk_gen_cost }
+		gain_max_mana_perk = { VALUE = chronomancy_mage_perk_max_mana }
+		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = chronomancy_mage_perk_bit OP = set }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
 
 glimpse_the_future_perk = {
 	lifestyle = arcane_lifestyle
-	tree = ancient_magic_time
+	tree = ancient_magic_chronomancy
 	position = { 0 1.25 }
 	icon = node_diplomacy
 
-	parent = time_mage_perk
+	parent = chronomancy_mage_perk
 
 	auto_selection_weight = {
 		value = 11
@@ -128,7 +128,7 @@ glimpse_the_future_perk = {
 		unlock_glimpse_the_future_spell = yes
 		gain_mana_gen_perk = { VALUE = glimpse_the_future_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = glimpse_the_future_perk_max_mana }
-		mod_bit = { MASK = time_perk_mask_0 BIT = glimpse_the_future_perk_bit OP = set }
+		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = glimpse_the_future_perk_bit OP = set }
 		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
@@ -136,7 +136,7 @@ glimpse_the_future_perk = {
 
 financial_times_perk = {
 	lifestyle = arcane_lifestyle
-	tree = ancient_magic_time
+	tree = ancient_magic_chronomancy
 	position = { 0 2.5 }
 	icon = node_diplomacy
 
@@ -195,7 +195,7 @@ financial_times_perk = {
 		unlock_financial_times_spell = yes
 		gain_mana_gen_perk = { VALUE = financial_times_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = financial_times_perk_max_mana }
-		mod_bit = { MASK = time_perk_mask_0 BIT = financial_times_perk_bit OP = set }
+		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = financial_times_perk_bit OP = set }
 		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
@@ -203,11 +203,11 @@ financial_times_perk = {
 
 celerity_perk = {
 	lifestyle = arcane_lifestyle
-	tree = ancient_magic_time
+	tree = ancient_magic_chronomancy
 	position = { 2 1.25 }
 	icon = node_diplomacy
 
-	parent = time_mage_perk
+	parent = chronomancy_mage_perk
 
 	auto_selection_weight = {
 		value = 11
@@ -262,7 +262,7 @@ celerity_perk = {
 		unlock_celerity_spell = yes
 		gain_mana_gen_perk = { VALUE = celerity_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = celerity_perk_max_mana }
-		mod_bit = { MASK = time_perk_mask_0 BIT = celerity_perk_bit OP = set }
+		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = celerity_perk_bit OP = set }
 		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
@@ -270,7 +270,7 @@ celerity_perk = {
 
 mass_celerity_perk = {
 	lifestyle = arcane_lifestyle
-	tree = ancient_magic_time
+	tree = ancient_magic_chronomancy
 	position = { 2 2.5 }
 	icon = node_diplomacy
 
@@ -329,7 +329,7 @@ mass_celerity_perk = {
 		unlock_mass_celerity_spell = yes
 		gain_mana_gen_perk = { VALUE = mass_celerity_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = mass_celerity_perk_max_mana }
-		mod_bit = { MASK = time_perk_mask_0 BIT = mass_celerity_perk_bit OP = set }
+		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = mass_celerity_perk_bit OP = set }
 		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
@@ -337,11 +337,11 @@ mass_celerity_perk = {
 
 slowness_perk = {
 	lifestyle = arcane_lifestyle
-	tree = ancient_magic_time
+	tree = ancient_magic_chronomancy
 	position = { 4 1.25 }
 	icon = node_diplomacy
 
-	parent = time_mage_perk
+	parent = chronomancy_mage_perk
 
 	auto_selection_weight = {
 		value = 11
@@ -396,7 +396,7 @@ slowness_perk = {
 		unlock_slowness_spell = yes
 		gain_mana_gen_perk = { VALUE = slowness_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = slowness_perk_max_mana }
-		mod_bit = { MASK = time_perk_mask_0 BIT = slowness_perk_bit OP = set }
+		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = slowness_perk_bit OP = set }
 		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
@@ -404,7 +404,7 @@ slowness_perk = {
 
 mass_slowness_perk = {
 	lifestyle = arcane_lifestyle
-	tree = ancient_magic_time
+	tree = ancient_magic_chronomancy
 	position = { 4 2.5 }
 	icon = node_diplomacy
 
@@ -463,7 +463,7 @@ mass_slowness_perk = {
 		unlock_mass_slowness_spell = yes
 		gain_mana_gen_perk = { VALUE = mass_slowness_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = mass_slowness_perk_max_mana }
-		mod_bit = { MASK = time_perk_mask_0 BIT = mass_slowness_perk_bit OP = set }
+		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = mass_slowness_perk_bit OP = set }
 		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
@@ -471,7 +471,7 @@ mass_slowness_perk = {
 
 temporal_manipulation_perk = {
 	lifestyle = arcane_lifestyle
-	tree = ancient_magic_time
+	tree = ancient_magic_chronomancy
 	position = { 2 3.75 }
 	icon = node_diplomacy
 
@@ -533,7 +533,7 @@ temporal_manipulation_perk = {
 		unlock_haste_spell = yes
 		gain_mana_gen_perk = { VALUE = temporal_manipulation_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = temporal_manipulation_perk_max_mana }
-		mod_bit = { MASK = time_perk_mask_0 BIT = temporal_manipulation_perk_bit OP = set }
+		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = temporal_manipulation_perk_bit OP = set }
 		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
@@ -541,7 +541,7 @@ temporal_manipulation_perk = {
 
 master_of_time_perk = {
 	lifestyle = arcane_lifestyle
-	tree = ancient_magic_time
+	tree = ancient_magic_chronomancy
 	position = { 2 5 }
 	icon = master_of_time
 
@@ -601,7 +601,7 @@ master_of_time_perk = {
 		gain_mana_gen_perk = { VALUE = master_of_time_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = master_of_time_perk_max_mana }
 		add_trait_force_tooltip = master_of_time
-		mod_bit = { MASK = time_perk_mask_0 BIT = master_of_time_perk_bit OP = set }
+		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = master_of_time_perk_bit OP = set }
 		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }
 	}

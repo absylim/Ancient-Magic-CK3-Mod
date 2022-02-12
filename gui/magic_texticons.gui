@@ -88,9 +88,9 @@ texticon = {
 }
 
 texticon = {
-	icon = icon_time_category
+	icon = icon_chronomancy_category
 	iconsize = {
-		texture = "gfx/magic/time_magic.dds"
+		texture = "gfx/magic/chronomancy_magic.dds"
 		size = { 80 80 }
 		fontsize = 16
 	}

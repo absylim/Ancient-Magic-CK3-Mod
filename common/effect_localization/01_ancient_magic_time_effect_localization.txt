@@ -5,9 +5,9 @@
 }
 
 unlock_financial_times_spell = {
-	global = GLOBAL_UNLOCK_FINANCIAL_TIMES_SPELL
-	first = FIRST_UNLOCK_FINANCIAL_TIMES_SPELL
-	third = THIRD_UNLOCK_FINANCIAL_TIMES_SPELL
+	global = GLOBAL_UNLOCK_FINANCIAL_CHRONOMANCY_SPELL
+	first = FIRST_UNLOCK_FINANCIAL_CHRONOMANCY_SPELL
+	third = THIRD_UNLOCK_FINANCIAL_CHRONOMANCY_SPELL
 }
 
 unlock_celerity_spell = {
@@ -47,7 +47,7 @@ unlock_haste_spell = {
 }
 
 unlock_master_of_time_spell = {
-	global = GLOBAL_UNLOCK_MASTER_OF_TIME_SPELL
-	first = FIRST_UNLOCK_MASTER_OF_TIME_SPELL
-	third = THIRD_UNLOCK_MASTER_OF_TIME_SPELL
+	global = GLOBAL_UNLOCK_master_of_time_SPELL
+	first = FIRST_UNLOCK_master_of_time_SPELL
+	third = THIRD_UNLOCK_master_of_time_SPELL
 }
