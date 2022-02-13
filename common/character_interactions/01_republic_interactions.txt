@@ -38,7 +38,7 @@
 			add = {
 				value = 10
 				scope:recipient = {
-					multiply = mage_level
+					factor = mage_level
 				}
 			}
 		}
