@@ -5,7 +5,13 @@
  tradition_mythology_egypt_desc:1 "We are descendants of of great Ancient civilisation, which excelled in construction and also healing and necromantic magics."
  tradition_mythology_norse_name:0 "Lagacy of Ygdrasil"
  tradition_mythology_norse_desc:1 "Our peoples might was always known by thunder with which we arrived, they were affraid of our cunning, and most of all they were scared of the future we foresaw."
- 
+ tradition_mythology_greek_name:0 "Lagacy of Antics"
+ tradition_mythology_greek_desc:1 "Our gods controlled elements and life itsself, we are founders of phyloshophy and names and legend of our ancient heroes is known until this day."
+ tradition_mythology_roman_name:0 "Lagacy of Roman Empire"
+ tradition_mythology_roman_desc:1 "We created the greatest empire that has this world ever seen, we conquered most of ancient civilisation and we were at the peak of the world in knowlage mundane but also arcane, and we should once again rise from ashes and show the might of our culture to the rest of the WORLD!"
+ tradition_mythology_india_name:0 "Lagacy of Harappan"
+ tradition_mythology_india_desc:1 "We were one of the first civilisation and just like an Egypt and Mesopotamia our magical knowlage is extensive. And we should use it against or enemies not between us."
+  
 #penalty descriptions
  witchcraft_illegal_desc:1 "The [faith|E] has Witchcraft Criminal"
  witchcraft_shunned_desc:1 "The [faith|E] has Witchcraft Shunned"
