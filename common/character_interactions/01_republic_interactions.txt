@@ -38,7 +38,15 @@
 			add = {
 				value = 10
 				scope:recipient = {
-					factor = mage_level
+					if = {
+						limit = {
+							exists = mage_level
+						}
+						multiply = mage_level
+					}
+					else = {
+						multiply = 0
+					}
 				}
 			}
 		}
