@@ -38,17 +38,25 @@
 			add = {
 				value = 10
 				scope:recipient = {
-					factor = mage_level
+					if = {
+						limit = {
+							exists = mage_level
+						}
+						multiply = mage_level
+					}
+					else = {
+						multiply = 0
+					}
 				}
 			}
 		}
 		modifier = {
-			multiply = 0
 			scope:recipient = {
 				NOT = {
 					is_magus_trigger = yes
 				}
 			}
+			multiply = 0
 		}
 	}
 	ai_frequency = 60
@@ -380,7 +388,7 @@ request_imprisonment_interaction = {
 			}
 			is_independent_ruler = yes
 			OR = {
-				magocracy_has_senate_form = yes
+				#magocracy_has_senate_form = yes
 				magocracy_has_council_form = yes
 			}
 			primary_title = {
@@ -466,7 +474,7 @@ request_council_appointment_interaction = {
 		NOT = { scope:actor = scope:recipient }
 		scope:actor = {
 			OR = {
-				magocracy_has_senate_form = yes
+				#magocracy_has_senate_form = yes
 				magocracy_has_council_form = yes
 			}
 			is_independent_ruler = yes
