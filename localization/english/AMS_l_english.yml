@@ -6,7 +6,7 @@
  trait_mage:0 "Mage"
  trait_mage_desc:0 "This character is a mage."
 #mana effects
- character_var_greater_or_equal:0 "You need $VALUE|0$ Mana"
+ character_var_greater_or_equal:0 "You need $VALUE|0$ [mana_i|E][mana|E]"
  I_GAINED_MANA_EFFECT:0 "You Gained Mana $VALUE|V0$"
  I_LOST_MANA_EFFECT:0 "You Lost Mana $VALUE|V0$"
  GAINED_MANA_EFFECT:0 "Gained Mana $VALUE|V0$"
