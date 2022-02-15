@@ -114,8 +114,8 @@ reset_mana_system_decision = {
 						value = basic_perk_mask_0_maker
 					}
 					set_variable = {
-						name = time_perk_mask_0
-						value = time_perk_mask_0_maker
+						name = chronomancy_perk_mask_0
+						value = chronomancy_perk_mask_0_maker
 					}
 					set_variable = {
 						name = life_perk_mask_0

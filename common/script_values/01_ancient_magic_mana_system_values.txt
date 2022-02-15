@@ -4,7 +4,7 @@
 
 # Perk _gen_costs
 mage_perk_gen_cost = 0
-time_mage_perk_gen_cost = 2
+chronomancy_mage_perk_gen_cost = 2
 glimpse_the_future_perk_gen_cost = 2
 financial_times_perk_gen_cost = 2
 celerity_perk_gen_cost = 2
@@ -71,7 +71,7 @@ mana_devouring_2_gen_cost = -150
 
 # Perk _max_manas
 mage_perk_max_mana = 0
-time_mage_perk_max_mana = 30
+chronomancy_mage_perk_max_mana = 30
 glimpse_the_future_perk_max_mana = 30
 financial_times_perk_max_mana = 30
 celerity_perk_max_mana = 30
@@ -282,15 +282,15 @@ ancient_magic_mana_gen_perks = {
 	add = { value = var:basic_perk_mask_0.mage_perk_bit multiply = mage_perk_gen_cost }
 
 	# Time tree
-	add = { value = var:time_perk_mask_0.time_mage_perk_bit multiply = time_mage_perk_gen_cost }
-	add = { value = var:time_perk_mask_0.glimpse_the_future_perk_bit multiply = glimpse_the_future_perk_gen_cost }
-	add = { value = var:time_perk_mask_0.financial_times_perk_bit multiply = financial_times_perk_gen_cost }
-	add = { value = var:time_perk_mask_0.celerity_perk_bit multiply = celerity_perk_gen_cost }
-	add = { value = var:time_perk_mask_0.mass_celerity_perk_bit multiply = mass_celerity_perk_gen_cost }
-	add = { value = var:time_perk_mask_0.slowness_perk_bit multiply = slowness_perk_gen_cost }
-	add = { value = var:time_perk_mask_0.mass_slowness_perk_bit multiply = mass_slowness_perk_gen_cost }
-	add = { value = var:time_perk_mask_0.temporal_manipulation_perk_bit multiply = temporal_manipulation_perk_gen_cost }
-	add = { value = var:time_perk_mask_0.master_of_time_perk_bit multiply = master_of_time_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.chronomancy_mage_perk_bit multiply = chronomancy_mage_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.glimpse_the_future_perk_bit multiply = glimpse_the_future_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.financial_times_perk_bit multiply = financial_times_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.celerity_perk_bit multiply = celerity_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.mass_celerity_perk_bit multiply = mass_celerity_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.slowness_perk_bit multiply = slowness_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.mass_slowness_perk_bit multiply = mass_slowness_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.temporal_manipulation_perk_bit multiply = temporal_manipulation_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.master_of_time_perk_bit multiply = master_of_time_perk_gen_cost }
 
 	# Life tree
 	add = { value = var:life_perk_mask_0.life_mage_perk_bit multiply = life_mage_perk_gen_cost }
@@ -354,15 +354,15 @@ ancient_magic_max_mana_perks = {
 	add = { value = var:basic_perk_mask_0.mage_perk_bit multiply = mage_perk_max_mana }
 
 	# Time tree
-	add = { value = var:time_perk_mask_0.time_mage_perk_bit multiply = time_mage_perk_max_mana }
-	add = { value = var:time_perk_mask_0.glimpse_the_future_perk_bit multiply = glimpse_the_future_perk_max_mana }
-	add = { value = var:time_perk_mask_0.financial_times_perk_bit multiply = financial_times_perk_max_mana }
-	add = { value = var:time_perk_mask_0.celerity_perk_bit multiply = celerity_perk_max_mana }
-	add = { value = var:time_perk_mask_0.mass_celerity_perk_bit multiply = mass_celerity_perk_max_mana }
-	add = { value = var:time_perk_mask_0.slowness_perk_bit multiply = slowness_perk_max_mana }
-	add = { value = var:time_perk_mask_0.mass_slowness_perk_bit multiply = mass_slowness_perk_max_mana }
-	add = { value = var:time_perk_mask_0.temporal_manipulation_perk_bit multiply = temporal_manipulation_perk_max_mana }
-	add = { value = var:time_perk_mask_0.master_of_time_perk_bit multiply = master_of_time_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.chronomancy_mage_perk_bit multiply = chronomancy_mage_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.glimpse_the_future_perk_bit multiply = glimpse_the_future_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.financial_times_perk_bit multiply = financial_times_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.celerity_perk_bit multiply = celerity_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.mass_celerity_perk_bit multiply = mass_celerity_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.slowness_perk_bit multiply = slowness_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.mass_slowness_perk_bit multiply = mass_slowness_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.temporal_manipulation_perk_bit multiply = temporal_manipulation_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.master_of_time_perk_bit multiply = master_of_time_perk_max_mana }
 
 	# Life tree
 	add = { value = var:life_perk_mask_0.life_mage_perk_bit multiply = life_mage_perk_max_mana }
