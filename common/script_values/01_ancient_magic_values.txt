@@ -315,7 +315,8 @@ ancient_magic_mana_gen_perks = {
 	
 	if = {
 		limit = {
-			exists = var:basic_perk_mask_0.mage_perk_bit
+			always = yes
+			#exists = var:basic_perk_mask_0.mage_perk_bit
 		}
 		
 		# None tree
@@ -395,7 +396,8 @@ ancient_magic_max_mana_perks = {
 	
 	if = {
 		limit = {
-			exists = var:basic_perk_mask_0.mage_perk_bit
+			always = yes
+			#exists = var:basic_perk_mask_0.mage_perk_bit
 		}
 		
 		# None tree
