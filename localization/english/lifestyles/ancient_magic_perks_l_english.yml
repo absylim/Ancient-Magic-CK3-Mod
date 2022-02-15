@@ -9,7 +9,7 @@
  mage_perk_name: "Mage"
 
  # chronomancy magic
- time_mage_perk_name: "Chronomancer"
+ chronomancy_mage_perk_name: "Chronomancer"
  glimpse_the_future_perk_name: "Glimpse the Future"
  financial_times_perk_name: "Financial Times"
  celerity_perk_name: "Celerity"
@@ -22,7 +22,7 @@
  # life magic
  life_mage_perk_name: "Chiromancer"
  inward_reflection_perk_name: "Inward Reflection"
- inward_perfection_perk_name: "Inward perfection"
+ inward_perfection_perk_name: "Inward Perfection"
  heal_perk_name: "Healing"
  greater_heal_perk_name: "Greater Healing"
  battlefield_life_mage_perk_name: "Battlefield Life Mage"
