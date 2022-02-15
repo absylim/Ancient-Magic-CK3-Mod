@@ -6,7 +6,7 @@
 		has_perk = beguiling_aura_perk
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		if = {
@@ -78,7 +78,7 @@ enchanting_aura_ai_spell_decision = {
 		has_perk = enchanting_aura_perk
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		if = {
