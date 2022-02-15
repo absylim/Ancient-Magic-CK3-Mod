@@ -1,4 +1,4 @@
-#Author: Donekulda
+﻿#Author: Donekulda
 #Desc: Every being has some mana affinity which states how their body is affected by mana, 
 #beings with higher mana affinity can store much more mana in their cells can more easily access it
 
@@ -15,5 +15,62 @@
 #########################################################################################################################
 
 mana_affinity = {
-	value = var:base_mana_affinity
+	value = 0
+	
+	if = {
+		limit = {
+			exists = var:base_mana_affinity
+		}
+		add = var:base_mana_affinity
+	}
+	else = {
+		give_base_mana_affinity = yes
+	}
+	
+}
+max_body_mana_per_affinity = { value = 200 }
+max_body_mana_peak_mage_level = { value = 25 }
+max_body_mana_rise_quickness = { value = -10 }
+max_body_mana_increase_per_mage_level = { 
+	value = 25
+	
+	multiply = mana_affinity
+}
+
+max_body_mana = {
+	value = mana_affinity
+	multiply = exponential_calculation
+}
+
+exponential_calculation = {
+	save_temporary_scope_value = {
+		name = temp_num_repeats
+		value = 0
+	}
+	
+	while = {
+		count = 9
+		value = 1
+		add = {
+			value = {
+				value = -1
+				multiply = {
+					value = var:mage_level
+					subtract = max_body_mana_peak_mage_level
+					
+					multiply = {
+						value = var:mage_level
+						subtract = max_body_mana_peak_mage_level
+					}
+				}
+				divide = {
+					value = max_body_mana_rise_quickness
+					multiply = 2
+				}
+			}
+			multiply = prev
+			divide = temp_num_repeats
+		}
+		change_variable = { name = temp_num_repeats add = 1 }
+	}
 }

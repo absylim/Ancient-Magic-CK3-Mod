@@ -1,0 +1,101 @@
+﻿give_base_mana_affinity = {
+	save_temporary_scope_value = {
+		name = temp_base_mana_affinity_value
+		value = 0
+	}
+	save_temporary_scope_value = {
+		name = temp_father_base_mana_affinity_value
+		value = 0
+	}
+	if = { #Checks if mana affinity should be inherited
+		limit = {
+			OR = {
+				scope:mother.has_variable = base_mana_affinity
+				scope:real_father.has_variable = base_mana_affinity
+			}
+		}
+		
+		scope:mother = {
+			if = {
+				limit = {
+					has_variable = base_mana_affinity
+				}
+					change_variable = { 
+						name = temp_base_mana_affinity_value 
+						value = {
+							value = base_mana_affinity
+							
+							if = {
+								limit = {
+									exists = var:mage_level
+								}
+								add = {
+									value = var:mage_level
+									divide = {
+										value = mana_affinity
+										multiply = 5
+									}
+									subtract = {
+										value = mana_affinity
+										devide = 5
+									}
+								}
+							}
+							else = { #if one isnt practicing magic their mana affinity could lower, this is mainly so for those of higher levels
+								subtract = {
+									value = mana_affinity
+									devide = 5
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		scope:real_father = {
+			if = {
+				limit = {
+					has_variable = base_mana_affinity
+				}
+					change_variable = { 
+						name = temp_base_mana_affinity_value 
+						value = {
+							value = base_mana_affinity
+							
+							if = {
+								limit = {
+									exists = var:mage_level
+								}
+								add = {
+									value = var:mage_level
+									divide = {
+										value = mana_affinity
+										multiply = 5
+										multiply = 2 # The factor of faster has to be lower as the mother is carrier of the child
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	else = {
+		random_list = { # Affinity given at random if noparents with magical affinity
+			10 = { change_variable = { name = temp_base_mana_affinity_value value = 0} } # 0
+			20 = { change_variable = { name = temp_base_mana_affinity_value value = 1} } # 1
+			20 = { change_variable = { name = temp_base_mana_affinity_value value = 2} } # 2
+			20 = { change_variable = { name = temp_base_mana_affinity_value value = 3} } # 3
+			20 = { change_variable = { name = temp_base_mana_affinity_value value = 4} } # 4
+			9 = { change_variable = { name = temp_base_mana_affinity_value value = 5} } # 5
+			1 = { change_variable = { name = temp_base_mana_affinity_value value = 6} }
+		}
+	}
+	
+	set_variable = {
+		name = base_mana_affinity
+		value = temp_base_mana_affinity_value
+	}
+}

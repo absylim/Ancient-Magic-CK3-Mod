@@ -287,10 +287,7 @@ ancient_magic_mana_drain_disease = {
 
 ancient_magic_max_mana = {
 	value = ancient_magic_max_mana_perks
-	add = {
-		value = mage_potency
-		multiply = max_mana_per_potency
-	}
+	add = max_body_mana
 	if = {
 		limit = {
 			exists = dynasty
