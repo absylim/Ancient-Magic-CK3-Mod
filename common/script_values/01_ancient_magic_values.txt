@@ -312,146 +312,163 @@ spell_caster_mage_level = {
 ############################################################################################
 ancient_magic_mana_gen_perks = {
 	value = 0
-	# None tree
-	add = { value = var:basic_perk_mask_0.mage_perk_bit multiply = mage_perk_gen_cost }
+	
+	if = {
+		limit = {
+			always = yes
+			#exists = var:basic_perk_mask_0.mage_perk_bit
+		}
+		
+		# None tree
+		add = { value = var:basic_perk_mask_0.mage_perk_bit multiply = mage_perk_gen_cost }
 
-	# Chronomancy tree
-	add = { value = var:chronomancy_perk_mask_0.chronomancy_mage_perk_bit multiply = chronomancy_mage_perk_gen_cost }
-	add = { value = var:chronomancy_perk_mask_0.glimpse_the_future_perk_bit multiply = glimpse_the_future_perk_gen_cost }
-	add = { value = var:chronomancy_perk_mask_0.financial_times_perk_bit multiply = financial_times_perk_gen_cost }
-	add = { value = var:chronomancy_perk_mask_0.celerity_perk_bit multiply = celerity_perk_gen_cost }
-	add = { value = var:chronomancy_perk_mask_0.mass_celerity_perk_bit multiply = mass_celerity_perk_gen_cost }
-	add = { value = var:chronomancy_perk_mask_0.slowness_perk_bit multiply = slowness_perk_gen_cost }
-	add = { value = var:chronomancy_perk_mask_0.mass_slowness_perk_bit multiply = mass_slowness_perk_gen_cost }
-	add = { value = var:chronomancy_perk_mask_0.temporal_manipulation_perk_bit multiply = temporal_manipulation_perk_gen_cost }
-	add = { value = var:chronomancy_perk_mask_0.master_of_time_perk_bit multiply = master_of_time_perk_gen_cost }
+		# Chronomancy tree
+		add = { value = var:chronomancy_perk_mask_0.chronomancy_mage_perk_bit multiply = chronomancy_mage_perk_gen_cost }
+		add = { value = var:chronomancy_perk_mask_0.glimpse_the_future_perk_bit multiply = glimpse_the_future_perk_gen_cost }
+		add = { value = var:chronomancy_perk_mask_0.financial_times_perk_bit multiply = financial_times_perk_gen_cost }
+		add = { value = var:chronomancy_perk_mask_0.celerity_perk_bit multiply = celerity_perk_gen_cost }
+		add = { value = var:chronomancy_perk_mask_0.mass_celerity_perk_bit multiply = mass_celerity_perk_gen_cost }
+		add = { value = var:chronomancy_perk_mask_0.slowness_perk_bit multiply = slowness_perk_gen_cost }
+		add = { value = var:chronomancy_perk_mask_0.mass_slowness_perk_bit multiply = mass_slowness_perk_gen_cost }
+		add = { value = var:chronomancy_perk_mask_0.temporal_manipulation_perk_bit multiply = temporal_manipulation_perk_gen_cost }
+		add = { value = var:chronomancy_perk_mask_0.master_of_time_perk_bit multiply = master_of_time_perk_gen_cost }
 
-	# Life tree
-	add = { value = var:life_perk_mask_0.life_mage_perk_bit multiply = life_mage_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.inward_reflection_perk_bit multiply = inward_reflection_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.inward_perfection_perk_bit multiply = inward_perfection_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.heal_perk_bit multiply = heal_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.greater_heal_perk_bit multiply = greater_heal_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.battlefield_life_mage_perk_bit multiply = battlefield_life_mage_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.greater_battlefield_life_mage_perk_bit multiply = greater_battlefield_life_mage_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.purity_of_body_perk_bit multiply = purity_of_body_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.avatar_of_life_perk_bit multiply = avatar_of_life_perk_gen_cost }
+		# Life tree
+		add = { value = var:life_perk_mask_0.life_mage_perk_bit multiply = life_mage_perk_gen_cost }
+		add = { value = var:life_perk_mask_0.inward_reflection_perk_bit multiply = inward_reflection_perk_gen_cost }
+		add = { value = var:life_perk_mask_0.inward_perfection_perk_bit multiply = inward_perfection_perk_gen_cost }
+		add = { value = var:life_perk_mask_0.heal_perk_bit multiply = heal_perk_gen_cost }
+		add = { value = var:life_perk_mask_0.greater_heal_perk_bit multiply = greater_heal_perk_gen_cost }
+		add = { value = var:life_perk_mask_0.battlefield_life_mage_perk_bit multiply = battlefield_life_mage_perk_gen_cost }
+		add = { value = var:life_perk_mask_0.greater_battlefield_life_mage_perk_bit multiply = greater_battlefield_life_mage_perk_gen_cost }
+		add = { value = var:life_perk_mask_0.purity_of_body_perk_bit multiply = purity_of_body_perk_gen_cost }
+		add = { value = var:life_perk_mask_0.avatar_of_life_perk_bit multiply = avatar_of_life_perk_gen_cost }
 
-	# Elemental tree
-	add = { value = var:elomancy_perk_mask_0.elemental_mage_perk_bit multiply = elemental_mage_perk_gen_cost }
-	add = { value = var:elomancy_perk_mask_0.flame_aura_perk_bit multiply = flame_aura_perk_gen_cost }
-	add = { value = var:elomancy_perk_mask_0.flaming_weapons_perk_bit multiply = flaming_weapons_perk_gen_cost }
-	add = { value = var:elomancy_perk_mask_0.living_earthworks_perk_bit multiply = living_earthworks_perk_gen_cost }
-	add = { value = var:elomancy_perk_mask_0.golem_creation_perk_bit multiply = golem_creation_perk_gen_cost }
-	add = { value = var:elomancy_perk_mask_0.control_water_perk_bit multiply = control_water_perk_gen_cost }
-	add = { value = var:elomancy_perk_mask_0.drought_perk_bit multiply = drought_perk_gen_cost }
-	add = { value = var:elomancy_perk_mask_0.elemental_warrior_perk_bit multiply = elemental_warrior_perk_gen_cost }
-	add = { value = var:elomancy_perk_mask_0.lord_of_the_elements_perk_bit multiply = lord_of_the_elements_perk_gen_cost }
+		# Elemental tree
+		add = { value = var:elomancy_perk_mask_0.elemental_mage_perk_bit multiply = elemental_mage_perk_gen_cost }
+		add = { value = var:elomancy_perk_mask_0.flame_aura_perk_bit multiply = flame_aura_perk_gen_cost }
+		add = { value = var:elomancy_perk_mask_0.flaming_weapons_perk_bit multiply = flaming_weapons_perk_gen_cost }
+		add = { value = var:elomancy_perk_mask_0.living_earthworks_perk_bit multiply = living_earthworks_perk_gen_cost }
+		add = { value = var:elomancy_perk_mask_0.golem_creation_perk_bit multiply = golem_creation_perk_gen_cost }
+		add = { value = var:elomancy_perk_mask_0.control_water_perk_bit multiply = control_water_perk_gen_cost }
+		add = { value = var:elomancy_perk_mask_0.drought_perk_bit multiply = drought_perk_gen_cost }
+		add = { value = var:elomancy_perk_mask_0.elemental_warrior_perk_bit multiply = elemental_warrior_perk_gen_cost }
+		add = { value = var:elomancy_perk_mask_0.lord_of_the_elements_perk_bit multiply = lord_of_the_elements_perk_gen_cost }
 
-	# Death tree
-	add = { value = var:necromancy_perk_mask_0.death_mage_perk_bit multiply = death_mage_perk_gen_cost }
-	add = { value = var:necromancy_perk_mask_0.inflict_illness_perk_bit multiply = inflict_illness_perk_gen_cost }
-	add = { value = var:necromancy_perk_mask_0.plague_lord_perk_bit multiply = plague_lord_perk_gen_cost }
-	add = { value = var:necromancy_perk_mask_0.aura_of_death_perk_bit multiply = aura_of_death_perk_gen_cost }
-	add = { value = var:necromancy_perk_mask_0.necromancy_perk_bit multiply = necromancy_perk_gen_cost }
-	add = { value = var:necromancy_perk_mask_0.drain_life_perk_bit multiply = drain_life_perk_gen_cost }
-	add = { value = var:necromancy_perk_mask_0.death_stare_perk_bit multiply = death_stare_perk_gen_cost }
-	add = { value = var:necromancy_perk_mask_0.blight_perk_bit multiply = blight_perk_gen_cost }
-	add = { value = var:necromancy_perk_mask_0.deacon_of_death_perk_bit multiply = deacon_of_death_perk_gen_cost }
+		# Death tree
+		add = { value = var:necromancy_perk_mask_0.death_mage_perk_bit multiply = death_mage_perk_gen_cost }
+		add = { value = var:necromancy_perk_mask_0.inflict_illness_perk_bit multiply = inflict_illness_perk_gen_cost }
+		add = { value = var:necromancy_perk_mask_0.plague_lord_perk_bit multiply = plague_lord_perk_gen_cost }
+		add = { value = var:necromancy_perk_mask_0.aura_of_death_perk_bit multiply = aura_of_death_perk_gen_cost }
+		add = { value = var:necromancy_perk_mask_0.necromancy_perk_bit multiply = necromancy_perk_gen_cost }
+		add = { value = var:necromancy_perk_mask_0.drain_life_perk_bit multiply = drain_life_perk_gen_cost }
+		add = { value = var:necromancy_perk_mask_0.death_stare_perk_bit multiply = death_stare_perk_gen_cost }
+		add = { value = var:necromancy_perk_mask_0.blight_perk_bit multiply = blight_perk_gen_cost }
+		add = { value = var:necromancy_perk_mask_0.deacon_of_death_perk_bit multiply = deacon_of_death_perk_gen_cost }
 
-	# Biomancy tree
-	add = { value = var:biomancy_perk_mask_0.biomancy_mage_perk_bit multiply = biomancy_mage_perk_gen_cost }
-	add = { value = var:biomancy_perk_mask_0.improve_trait_perk_bit multiply = improve_trait_perk_gen_cost }
-	add = { value = var:biomancy_perk_mask_0.perfect_trait_perk_bit multiply = perfect_trait_perk_gen_cost }
-	add = { value = var:biomancy_perk_mask_0.fertility_control_perk_bit multiply = fertility_control_perk_gen_cost }
-	add = { value = var:biomancy_perk_mask_0.impregnate_perk_bit multiply = impregnate_perk_gen_cost }
-	add = { value = var:biomancy_perk_mask_0.weaken_trait_perk_bit multiply = weaken_trait_perk_gen_cost }
-	add = { value = var:biomancy_perk_mask_0.criple_trait_perk_bit multiply = criple_trait_perk_gen_cost }
-	add = { value = var:biomancy_perk_mask_0.sculpter_of_flesh_perk_bit multiply = sculpter_of_flesh_perk_gen_cost }
-	add = { value = var:biomancy_perk_mask_0.architect_of_bloodlines_perk_bit multiply = architect_of_bloodlines_perk_gen_cost }
+		# Biomancy tree
+		add = { value = var:biomancy_perk_mask_0.biomancy_mage_perk_bit multiply = biomancy_mage_perk_gen_cost }
+		add = { value = var:biomancy_perk_mask_0.improve_trait_perk_bit multiply = improve_trait_perk_gen_cost }
+		add = { value = var:biomancy_perk_mask_0.perfect_trait_perk_bit multiply = perfect_trait_perk_gen_cost }
+		add = { value = var:biomancy_perk_mask_0.fertility_control_perk_bit multiply = fertility_control_perk_gen_cost }
+		add = { value = var:biomancy_perk_mask_0.impregnate_perk_bit multiply = impregnate_perk_gen_cost }
+		add = { value = var:biomancy_perk_mask_0.weaken_trait_perk_bit multiply = weaken_trait_perk_gen_cost }
+		add = { value = var:biomancy_perk_mask_0.criple_trait_perk_bit multiply = criple_trait_perk_gen_cost }
+		add = { value = var:biomancy_perk_mask_0.sculpter_of_flesh_perk_bit multiply = sculpter_of_flesh_perk_gen_cost }
+		add = { value = var:biomancy_perk_mask_0.architect_of_bloodlines_perk_bit multiply = architect_of_bloodlines_perk_gen_cost }
 
-	# Domination tree
-	add = { value = var:mensomancy_perk_mask_0.domination_mage_perk_bit multiply = domination_mage_perk_gen_cost }
-	add = { value = var:mensomancy_perk_mask_0.entrance_perk_bit multiply = entrance_perk_gen_cost }
-	add = { value = var:mensomancy_perk_mask_0.incite_lust_perk_bit multiply = incite_lust_perk_gen_cost }
-	add = { value = var:mensomancy_perk_mask_0.incite_obedience_perk_bit multiply = incite_obedience_perk_gen_cost }
-	add = { value = var:mensomancy_perk_mask_0.dominate_perk_bit multiply = dominate_perk_gen_cost }
-	add = { value = var:mensomancy_perk_mask_0.beguiling_aura_perk_bit multiply = beguiling_aura_perk_gen_cost }
-	add = { value = var:mensomancy_perk_mask_0.friendship_perk_bit multiply = friendship_perk_gen_cost }
-	add = { value = var:mensomancy_perk_mask_0.enchanting_aura_perk_bit multiply = enchanting_aura_perk_gen_cost }
-	add = { value = var:mensomancy_perk_mask_0.master_of_puppets_perk_bit multiply = master_of_puppets_perk_gen_cost }
+		# Domination tree
+		add = { value = var:mensomancy_perk_mask_0.domination_mage_perk_bit multiply = domination_mage_perk_gen_cost }
+		add = { value = var:mensomancy_perk_mask_0.entrance_perk_bit multiply = entrance_perk_gen_cost }
+		add = { value = var:mensomancy_perk_mask_0.incite_lust_perk_bit multiply = incite_lust_perk_gen_cost }
+		add = { value = var:mensomancy_perk_mask_0.incite_obedience_perk_bit multiply = incite_obedience_perk_gen_cost }
+		add = { value = var:mensomancy_perk_mask_0.dominate_perk_bit multiply = dominate_perk_gen_cost }
+		add = { value = var:mensomancy_perk_mask_0.beguiling_aura_perk_bit multiply = beguiling_aura_perk_gen_cost }
+		add = { value = var:mensomancy_perk_mask_0.friendship_perk_bit multiply = friendship_perk_gen_cost }
+		add = { value = var:mensomancy_perk_mask_0.enchanting_aura_perk_bit multiply = enchanting_aura_perk_gen_cost }
+		add = { value = var:mensomancy_perk_mask_0.master_of_puppets_perk_bit multiply = master_of_puppets_perk_gen_cost }
+		
+	}
 }
 
 ancient_magic_max_mana_perks = {
 	value = 0
-	# None tree
-	add = { value = var:basic_perk_mask_0.mage_perk_bit multiply = mage_perk_max_mana }
+	
+	if = {
+		limit = {
+			always = yes
+			#exists = var:basic_perk_mask_0.mage_perk_bit
+		}
+		
+		# None tree
+		add = { value = var:basic_perk_mask_0.mage_perk_bit multiply = mage_perk_max_mana }
 
-	# chronomancy tree
-	add = { value = var:chronomancy_perk_mask_0.chronomancy_mage_perk_bit multiply = chronomancy_mage_perk_max_mana }
-	add = { value = var:chronomancy_perk_mask_0.glimpse_the_future_perk_bit multiply = glimpse_the_future_perk_max_mana }
-	add = { value = var:chronomancy_perk_mask_0.financial_times_perk_bit multiply = financial_times_perk_max_mana }
-	add = { value = var:chronomancy_perk_mask_0.celerity_perk_bit multiply = celerity_perk_max_mana }
-	add = { value = var:chronomancy_perk_mask_0.mass_celerity_perk_bit multiply = mass_celerity_perk_max_mana }
-	add = { value = var:chronomancy_perk_mask_0.slowness_perk_bit multiply = slowness_perk_max_mana }
-	add = { value = var:chronomancy_perk_mask_0.mass_slowness_perk_bit multiply = mass_slowness_perk_max_mana }
-	add = { value = var:chronomancy_perk_mask_0.temporal_manipulation_perk_bit multiply = temporal_manipulation_perk_max_mana }
-	add = { value = var:chronomancy_perk_mask_0.master_of_time_perk_bit multiply = master_of_time_perk_max_mana }
+		# chronomancy tree
+		add = { value = var:chronomancy_perk_mask_0.chronomancy_mage_perk_bit multiply = chronomancy_mage_perk_max_mana }
+		add = { value = var:chronomancy_perk_mask_0.glimpse_the_future_perk_bit multiply = glimpse_the_future_perk_max_mana }
+		add = { value = var:chronomancy_perk_mask_0.financial_times_perk_bit multiply = financial_times_perk_max_mana }
+		add = { value = var:chronomancy_perk_mask_0.celerity_perk_bit multiply = celerity_perk_max_mana }
+		add = { value = var:chronomancy_perk_mask_0.mass_celerity_perk_bit multiply = mass_celerity_perk_max_mana }
+		add = { value = var:chronomancy_perk_mask_0.slowness_perk_bit multiply = slowness_perk_max_mana }
+		add = { value = var:chronomancy_perk_mask_0.mass_slowness_perk_bit multiply = mass_slowness_perk_max_mana }
+		add = { value = var:chronomancy_perk_mask_0.temporal_manipulation_perk_bit multiply = temporal_manipulation_perk_max_mana }
+		add = { value = var:chronomancy_perk_mask_0.master_of_time_perk_bit multiply = master_of_time_perk_max_mana }
 
-	# Life tree
-	add = { value = var:life_perk_mask_0.life_mage_perk_bit multiply = life_mage_perk_max_mana }
-	add = { value = var:life_perk_mask_0.inward_reflection_perk_bit multiply = inward_reflection_perk_max_mana }
-	add = { value = var:life_perk_mask_0.inward_perfection_perk_bit multiply = inward_perfection_perk_max_mana }
-	add = { value = var:life_perk_mask_0.heal_perk_bit multiply = heal_perk_max_mana }
-	add = { value = var:life_perk_mask_0.greater_heal_perk_bit multiply = greater_heal_perk_max_mana }
-	add = { value = var:life_perk_mask_0.battlefield_life_mage_perk_bit multiply = battlefield_life_mage_perk_max_mana }
-	add = { value = var:life_perk_mask_0.greater_battlefield_life_mage_perk_bit multiply = greater_battlefield_life_mage_perk_max_mana }
-	add = { value = var:life_perk_mask_0.purity_of_body_perk_bit multiply = purity_of_body_perk_max_mana }
-	add = { value = var:life_perk_mask_0.avatar_of_life_perk_bit multiply = avatar_of_life_perk_max_mana }
+		# Life tree
+		add = { value = var:life_perk_mask_0.life_mage_perk_bit multiply = life_mage_perk_max_mana }
+		add = { value = var:life_perk_mask_0.inward_reflection_perk_bit multiply = inward_reflection_perk_max_mana }
+		add = { value = var:life_perk_mask_0.inward_perfection_perk_bit multiply = inward_perfection_perk_max_mana }
+		add = { value = var:life_perk_mask_0.heal_perk_bit multiply = heal_perk_max_mana }
+		add = { value = var:life_perk_mask_0.greater_heal_perk_bit multiply = greater_heal_perk_max_mana }
+		add = { value = var:life_perk_mask_0.battlefield_life_mage_perk_bit multiply = battlefield_life_mage_perk_max_mana }
+		add = { value = var:life_perk_mask_0.greater_battlefield_life_mage_perk_bit multiply = greater_battlefield_life_mage_perk_max_mana }
+		add = { value = var:life_perk_mask_0.purity_of_body_perk_bit multiply = purity_of_body_perk_max_mana }
+		add = { value = var:life_perk_mask_0.avatar_of_life_perk_bit multiply = avatar_of_life_perk_max_mana }
 
-	# Elemental tree
-	add = { value = var:elomancy_perk_mask_0.elemental_mage_perk_bit multiply = elemental_mage_perk_max_mana }
-	add = { value = var:elomancy_perk_mask_0.flame_aura_perk_bit multiply = flame_aura_perk_max_mana }
-	add = { value = var:elomancy_perk_mask_0.flaming_weapons_perk_bit multiply = flaming_weapons_perk_max_mana }
-	add = { value = var:elomancy_perk_mask_0.living_earthworks_perk_bit multiply = living_earthworks_perk_max_mana }
-	add = { value = var:elomancy_perk_mask_0.golem_creation_perk_bit multiply = golem_creation_perk_max_mana }
-	add = { value = var:elomancy_perk_mask_0.control_water_perk_bit multiply = control_water_perk_max_mana }
-	add = { value = var:elomancy_perk_mask_0.drought_perk_bit multiply = drought_perk_max_mana }
-	add = { value = var:elomancy_perk_mask_0.elemental_warrior_perk_bit multiply = elemental_warrior_perk_max_mana }
-	add = { value = var:elomancy_perk_mask_0.lord_of_the_elements_perk_bit multiply = lord_of_the_elements_perk_max_mana }
+		# Elemental tree
+		add = { value = var:elomancy_perk_mask_0.elemental_mage_perk_bit multiply = elemental_mage_perk_max_mana }
+		add = { value = var:elomancy_perk_mask_0.flame_aura_perk_bit multiply = flame_aura_perk_max_mana }
+		add = { value = var:elomancy_perk_mask_0.flaming_weapons_perk_bit multiply = flaming_weapons_perk_max_mana }
+		add = { value = var:elomancy_perk_mask_0.living_earthworks_perk_bit multiply = living_earthworks_perk_max_mana }
+		add = { value = var:elomancy_perk_mask_0.golem_creation_perk_bit multiply = golem_creation_perk_max_mana }
+		add = { value = var:elomancy_perk_mask_0.control_water_perk_bit multiply = control_water_perk_max_mana }
+		add = { value = var:elomancy_perk_mask_0.drought_perk_bit multiply = drought_perk_max_mana }
+		add = { value = var:elomancy_perk_mask_0.elemental_warrior_perk_bit multiply = elemental_warrior_perk_max_mana }
+		add = { value = var:elomancy_perk_mask_0.lord_of_the_elements_perk_bit multiply = lord_of_the_elements_perk_max_mana }
 
-	# Death tree
-	add = { value = var:necromancy_perk_mask_0.death_mage_perk_bit multiply = death_mage_perk_max_mana }
-	add = { value = var:necromancy_perk_mask_0.inflict_illness_perk_bit multiply = inflict_illness_perk_max_mana }
-	add = { value = var:necromancy_perk_mask_0.plague_lord_perk_bit multiply = plague_lord_perk_max_mana }
-	add = { value = var:necromancy_perk_mask_0.aura_of_death_perk_bit multiply = aura_of_death_perk_max_mana }
-	add = { value = var:necromancy_perk_mask_0.necromancy_perk_bit multiply = necromancy_perk_max_mana }
-	add = { value = var:necromancy_perk_mask_0.drain_life_perk_bit multiply = drain_life_perk_max_mana }
-	add = { value = var:necromancy_perk_mask_0.death_stare_perk_bit multiply = death_stare_perk_max_mana }
-	add = { value = var:necromancy_perk_mask_0.blight_perk_bit multiply = blight_perk_max_mana }
-	add = { value = var:necromancy_perk_mask_0.deacon_of_death_perk_bit multiply = deacon_of_death_perk_max_mana }
+		# Death tree
+		add = { value = var:necromancy_perk_mask_0.death_mage_perk_bit multiply = death_mage_perk_max_mana }
+		add = { value = var:necromancy_perk_mask_0.inflict_illness_perk_bit multiply = inflict_illness_perk_max_mana }
+		add = { value = var:necromancy_perk_mask_0.plague_lord_perk_bit multiply = plague_lord_perk_max_mana }
+		add = { value = var:necromancy_perk_mask_0.aura_of_death_perk_bit multiply = aura_of_death_perk_max_mana }
+		add = { value = var:necromancy_perk_mask_0.necromancy_perk_bit multiply = necromancy_perk_max_mana }
+		add = { value = var:necromancy_perk_mask_0.drain_life_perk_bit multiply = drain_life_perk_max_mana }
+		add = { value = var:necromancy_perk_mask_0.death_stare_perk_bit multiply = death_stare_perk_max_mana }
+		add = { value = var:necromancy_perk_mask_0.blight_perk_bit multiply = blight_perk_max_mana }
+		add = { value = var:necromancy_perk_mask_0.deacon_of_death_perk_bit multiply = deacon_of_death_perk_max_mana }
 
-	# Biomancy tree
-	add = { value = var:biomancy_perk_mask_0.biomancy_mage_perk_bit multiply = biomancy_mage_perk_max_mana }
-	add = { value = var:biomancy_perk_mask_0.improve_trait_perk_bit multiply = improve_trait_perk_max_mana }
-	add = { value = var:biomancy_perk_mask_0.perfect_trait_perk_bit multiply = perfect_trait_perk_max_mana }
-	add = { value = var:biomancy_perk_mask_0.fertility_control_perk_bit multiply = fertility_control_perk_max_mana }
-	add = { value = var:biomancy_perk_mask_0.impregnate_perk_bit multiply = impregnate_perk_max_mana }
-	add = { value = var:biomancy_perk_mask_0.weaken_trait_perk_bit multiply = weaken_trait_perk_max_mana }
-	add = { value = var:biomancy_perk_mask_0.criple_trait_perk_bit multiply = criple_trait_perk_max_mana }
-	add = { value = var:biomancy_perk_mask_0.sculpter_of_flesh_perk_bit multiply = sculpter_of_flesh_perk_max_mana }
-	add = { value = var:biomancy_perk_mask_0.architect_of_bloodlines_perk_bit multiply = architect_of_bloodlines_perk_max_mana }
+		# Biomancy tree
+		add = { value = var:biomancy_perk_mask_0.biomancy_mage_perk_bit multiply = biomancy_mage_perk_max_mana }
+		add = { value = var:biomancy_perk_mask_0.improve_trait_perk_bit multiply = improve_trait_perk_max_mana }
+		add = { value = var:biomancy_perk_mask_0.perfect_trait_perk_bit multiply = perfect_trait_perk_max_mana }
+		add = { value = var:biomancy_perk_mask_0.fertility_control_perk_bit multiply = fertility_control_perk_max_mana }
+		add = { value = var:biomancy_perk_mask_0.impregnate_perk_bit multiply = impregnate_perk_max_mana }
+		add = { value = var:biomancy_perk_mask_0.weaken_trait_perk_bit multiply = weaken_trait_perk_max_mana }
+		add = { value = var:biomancy_perk_mask_0.criple_trait_perk_bit multiply = criple_trait_perk_max_mana }
+		add = { value = var:biomancy_perk_mask_0.sculpter_of_flesh_perk_bit multiply = sculpter_of_flesh_perk_max_mana }
+		add = { value = var:biomancy_perk_mask_0.architect_of_bloodlines_perk_bit multiply = architect_of_bloodlines_perk_max_mana }
 
-	# Domination tree
-	add = { value = var:mensomancy_perk_mask_0.domination_mage_perk_bit multiply = domination_mage_perk_max_mana }
-	add = { value = var:mensomancy_perk_mask_0.entrance_perk_bit multiply = entrance_perk_max_mana }
-	add = { value = var:mensomancy_perk_mask_0.incite_lust_perk_bit multiply = incite_lust_perk_max_mana }
-	add = { value = var:mensomancy_perk_mask_0.incite_obedience_perk_bit multiply = incite_obedience_perk_max_mana }
-	add = { value = var:mensomancy_perk_mask_0.dominate_perk_bit multiply = dominate_perk_max_mana }
-	add = { value = var:mensomancy_perk_mask_0.beguiling_aura_perk_bit multiply = beguiling_aura_perk_max_mana }
-	add = { value = var:mensomancy_perk_mask_0.friendship_perk_bit multiply = friendship_perk_max_mana }
-	add = { value = var:mensomancy_perk_mask_0.enchanting_aura_perk_bit multiply = enchanting_aura_perk_max_mana }
-	add = { value = var:mensomancy_perk_mask_0.master_of_puppets_perk_bit multiply = master_of_puppets_perk_max_mana }
+		# Domination tree
+		add = { value = var:mensomancy_perk_mask_0.domination_mage_perk_bit multiply = domination_mage_perk_max_mana }
+		add = { value = var:mensomancy_perk_mask_0.entrance_perk_bit multiply = entrance_perk_max_mana }
+		add = { value = var:mensomancy_perk_mask_0.incite_lust_perk_bit multiply = incite_lust_perk_max_mana }
+		add = { value = var:mensomancy_perk_mask_0.incite_obedience_perk_bit multiply = incite_obedience_perk_max_mana }
+		add = { value = var:mensomancy_perk_mask_0.dominate_perk_bit multiply = dominate_perk_max_mana }
+		add = { value = var:mensomancy_perk_mask_0.beguiling_aura_perk_bit multiply = beguiling_aura_perk_max_mana }
+		add = { value = var:mensomancy_perk_mask_0.friendship_perk_bit multiply = friendship_perk_max_mana }
+		add = { value = var:mensomancy_perk_mask_0.enchanting_aura_perk_bit multiply = enchanting_aura_perk_max_mana }
+		add = { value = var:mensomancy_perk_mask_0.master_of_puppets_perk_bit multiply = master_of_puppets_perk_max_mana }
+	}
 }
 
 ###########

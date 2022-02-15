@@ -1,4 +1,9 @@
 ﻿l_english:
+ #major
+ forge_material_soul_decision: "Forge Material Soul"
+ forge_material_soul_decision_tooltip: "With the use of [mana|E] you can materilise your soul into this realm."
+ forge_material_soul_decision_desc: "To reach true immortality one needs to forge ones soul, so that one can trancend ones mortal coil!"
+ forge_material_soul_decision_confirm: "Lets Forge my Soul"
  #intrigue menu
  open_spellbook_decision: "Open Spellbook"
  open_spellbook_decision_tooltip: "[ROOT.GetCharacter.GetFirstNameNoTooltip] casts a spell on [ROOT.GetCharacter.GetHerselfHimself]."

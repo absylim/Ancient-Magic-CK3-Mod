@@ -329,7 +329,7 @@ reset_mana_system_decision = {
 	ai_will_do = { base = 0 }
 }
 
-forge_material_soul = {
+forge_material_soul_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	major = yes
 
@@ -341,7 +341,7 @@ forge_material_soul = {
 	is_valid = {
 		has_perk = deacon_of_death_perk
 		has_perk = master_of_puppets_perk
-		var:mana >= var:soul_materialisation_mana_cost
+		var:mana >= soul_materialisation_mana_cost
 	}
 
 	effect = {

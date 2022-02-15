@@ -31,7 +31,7 @@
 		}
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		improve_trait_effect = { TRAIT = intellect }
@@ -86,7 +86,7 @@ improve_beauty_ai_spell_decision = {
 		}
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		improve_trait_effect = { TRAIT = beauty }
@@ -141,7 +141,7 @@ improve_physique_ai_spell_decision = {
 		}
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		improve_trait_effect = { TRAIT = physique }

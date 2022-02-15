@@ -6,7 +6,7 @@
 		has_perk = mass_celerity_perk
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		if = {
@@ -78,7 +78,7 @@ glimpse_the_future_ai_spell_decision = {
 		has_perk = glimpse_the_future_perk
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		if = {
@@ -153,7 +153,7 @@ financial_times_ai_spell_decision = {
 		has_perk = financial_times_perk
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		if = {
@@ -230,7 +230,7 @@ celerity_ai_spell_decision = {
 		has_perk = celerity_perk
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		if = {
@@ -307,7 +307,7 @@ temporal_manipulation_ai_spell_decision = {
 		has_perk = temporal_manipulation_perk
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		if = {

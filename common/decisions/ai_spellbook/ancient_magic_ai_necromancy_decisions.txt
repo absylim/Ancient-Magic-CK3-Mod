@@ -9,7 +9,7 @@
 		has_perk = necromancy_perk
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		deduct_mana_with_tooltip = { VALUE = var:necromancy_spell_cost }
@@ -51,7 +51,7 @@ become_liche_ai_spell_decision = {
 		NOT = { has_trait = undead }
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		deduct_mana_with_tooltip = { VALUE = var:deacon_of_death_spell_cost }
@@ -82,7 +82,7 @@ aura_of_death_ai_spell_decision = {
 		has_perk = aura_of_death_perk
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		if = {

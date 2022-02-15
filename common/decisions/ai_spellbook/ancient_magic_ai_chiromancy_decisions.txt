@@ -15,7 +15,7 @@
 		}
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		trigger_event = ancient_magic_ai_spellbook_events.301
@@ -54,7 +54,7 @@ greater_heal_ai_spell_decision = {
 		}
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		trigger_event = ancient_magic_ai_spellbook_events.302
@@ -92,7 +92,7 @@ full_restoration_ai_spell_decision = {
 		}
 	}
 	
-	ai_check_frequency = 1	
+	ai_check_interval = 1	
 	
 	effect = {
 		trigger_event = ancient_magic_ai_spellbook_events.303
