@@ -1,0 +1,19 @@
+#Author: Donekulda
+#Desc: Every being has some mana affinity which states how their body is affected by mana, 
+#beings with higher mana affinity can store much more mana in their cells can more easily access it
+
+###################
+# Affinity levels:
+###################
+# 0 - 5: mortal (mundane being with near no magical talents: normal humans, animals)
+# 6 - 10: sub-magical (Beings that sometimes have some nutural born magical abbilities: Sorcerers, sub-magical beasts)
+# 10 - 15: magical (Beings born with some megical talents: Elves, Goblins, Megical Beasts)
+# 15 - 20: Loved by mana (High Elves)
+# 20 - 25: Demigod (Being that can control mana just like breating: Ancient Dragons, Angels, Demons and etc.)
+# 25 - 30: Godly (ones body is nearly made out of mana)
+#########################################################################################################################
+#########################################################################################################################
+
+mana_affinity = {
+	value = var:base_mana_affinity
+}
