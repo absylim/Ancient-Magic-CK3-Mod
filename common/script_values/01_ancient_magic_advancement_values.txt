@@ -1,0 +1,51 @@
+﻿mage_level_legacy_4 = 1
+
+mage_level_internal_helper = {
+	value = var:mage_xp
+	divide = 1000
+}
+
+mage_level_internal = {
+	value = mage_level_internal_helper.tri
+}
+
+mage_level = {
+	value = mage_level_internal.inc
+	if = {
+		limit = {
+			exists = dynasty
+			dynasty = { has_dynasty_perk = arcane_legacy_4 }
+		}
+		add = mage_level_legacy_4
+	}
+}
+
+mage_xp_display = {
+	value = mage_level_internal.sum_n.neg
+	multiply = 1000
+	add = var:mage_xp
+}
+
+mage_xp_to_next_level = {
+	value = mage_level_internal.inc
+	multiply = 1000
+}
+
+basic_num_perks = { value = var:basic_perk_mask_0.num_set_bits }
+time_num_perks = { value = var:time_perk_mask_0.num_set_bits }
+life_num_perks = { value = var:life_perk_mask_0.num_set_bits }
+elomancy_num_perks = { value = var:elomancy_perk_mask_0.num_set_bits }
+necromancy_num_perks = { value = var:necromancy_perk_mask_0.num_set_bits }
+biomancy_num_perks = { value = var:biomancy_perk_mask_0.num_set_bits }
+mensomancy_num_perks = { value = var:mensomancy_perk_mask_0.num_set_bits }
+
+num_available_magic_perks = {
+	value = mage_level
+	subtract = basic_num_perks
+	subtract = time_num_perks
+	subtract = life_num_perks
+	subtract = elomancy_num_perks
+	subtract = necromancy_num_perks
+	subtract = biomancy_num_perks
+	subtract = mensomancy_num_perks
+}

@@ -46,7 +46,7 @@ monthly_mana_gen = {
 	}
 
 	events = {
-		AMS_mana_events.001
+		AMS_mana_events.001 # Give 1 month of mana gen
 	}
 
 	on_actions = {
@@ -69,7 +69,7 @@ daily_mana_gen = {
 	}
 
 	events = {
-		AMS_mana_events.004
+		AMS_mana_events.004 # Give 1 day of mana gen
 	}
 
 	on_actions = {
@@ -104,10 +104,31 @@ on_reset_mana_system = {
 			name = mana_gen
 			value = 0
 		}
-		# Hook up to this action's on_actions to register the things your mod needs
-		# to do to update the player's mana and mana gen
+		# Hook up to reset_mana_system's on_actions to register the things
+		# your mod needs to do to update the player's mana and mana gen
 		trigger_event = { on_action = reset_mana_system }
 		trigger_event = { on_action = delayed_mana_clamp }
+	}
+}
+
+reset_mana_system = {
+	on_actions = { ancient_magic_reset_mana_system }
+}
+
+ancient_magic_reset_mana_system = {
+	events = {
+		ancient_magic_aura_update_events.001
+	}
+
+	effect = {
+		change_variable = {
+			name = mana_gen
+			add = ancient_magic_mana_gen
+		}
+		change_variable = {
+			name = max_mana
+			add = ancient_magic_max_mana
+		}
 	}
 }
 

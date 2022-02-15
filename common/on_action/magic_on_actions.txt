@@ -37,7 +37,6 @@ set_up_tri_indices = {
 	}
 }
 
-
 on_death = {
 	on_actions = {
 		reset_spell_drain
@@ -79,6 +78,17 @@ reset_spell_drain = {
 			remove_prev_from_this_aura_spell_targets_effect = { SPELL = beguiling_aura_spell }
 			remove_prev_from_this_aura_spell_targets_effect = { SPELL = enchanting_aura_spell }
 			trigger_event = { on_action = on_reset_mana_system }
+		}
+	}
+}
+
+death_stare_action = {
+	effect = {
+		scope:spell_target = {
+			death = {
+				killer = scope:spell_caster
+				death_reason = death_stare
+			}
 		}
 	}
 }
