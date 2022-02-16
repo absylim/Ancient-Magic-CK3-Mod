@@ -50,6 +50,7 @@ monthly_mana_gen = {
 	}
 
 	on_actions = {
+		dummy_action
 		delay = { days = days_total_in_month }
 		monthly_mana_gen
 	}
@@ -85,55 +86,22 @@ daily_mana_gen = {
 	}
 }
 
-# Fire this action to make updates to the player's mana and mana gen
-# Some on_actions (specifically on_title_gained, among others) don't
-# fire triggered events immediately, they register them to be fired
-# on the next tick (day). If we reset max_mana to 0 and then clamp
-# to max_mana immediately, it will always clamp to 0, because the
-# reset doesn't take place immediately - it takes place the next day.
-# Solution - delay the clamp to the next day as well.
 on_reset_mana_system = {
 	trigger = { is_magus_trigger = yes }
 
-	effect = {
-		set_variable = {
-			name = max_mana
-			value = 0
-		}
-		set_variable = {
-			name = mana_gen
-			value = 0
-		}
-		# Hook up to reset_mana_system's on_actions to register the things
-		# your mod needs to do to update the player's mana and mana gen
-		trigger_event = { on_action = reset_mana_system }
-		trigger_event = { on_action = delayed_mana_clamp }
-	}
-}
-
-reset_mana_system = {
-	on_actions = { ancient_magic_reset_mana_system }
-}
-
-ancient_magic_reset_mana_system = {
 	events = {
 		ancient_magic_aura_update_events.001
 	}
 
 	effect = {
-		change_variable = {
-			name = mana_gen
-			add = ancient_magic_mana_gen
-		}
-		change_variable = {
+		set_variable = {
 			name = max_mana
-			add = ancient_magic_max_mana
+			value = ancient_magic_max_mana
 		}
-	}
-}
-
-delayed_mana_clamp = {
-	effect = {
+		set_variable = {
+			name = mana_gen
+			value = ancient_magic_mana_gen
+		}
 		set_variable = {
 			name = mana
 			value = {
