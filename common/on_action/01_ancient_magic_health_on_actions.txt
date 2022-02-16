@@ -94,7 +94,7 @@ disease_outbreak_pulse = {
 		2 = health.1010		#Smallpox
 		2 = health.1011		#Bubonic plague, won't happen before 1346
 
-		1 = AMHealth.0001	#Mana devoring (factors in weight_multiplier of event)
+		1 = AMHealth.0001	#Mana devouring (factors in weight_multiplier of event)
 		4000 = AMHealth.0005
 	}
 }

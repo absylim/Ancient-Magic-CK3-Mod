@@ -208,7 +208,6 @@ deacon_of_death_perk = {
 		unlock_deacon_of_death_spell = yes
 		gain_mana_gen_perk = { VALUE = deacon_of_death_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = deacon_of_death_perk_max_mana }
-		add_trait_force_tooltip = deacon_of_death
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = deacon_of_death_perk_bit OP = set }
 		change_variable = { name = available_magic_perks subtract = 1 }
 		trigger_event = { on_action = on_reset_mana_system }

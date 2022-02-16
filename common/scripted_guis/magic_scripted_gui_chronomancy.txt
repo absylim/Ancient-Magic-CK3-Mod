@@ -5,7 +5,10 @@ glimpse_the_future_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = glimpse_the_future_spell }
+		OR = {
+			has_enough_mana_trigger = { SPELL = glimpse_the_future_spell }
+			is_target_in_variable_list = { name = glimpse_the_future_spell_targets target = scope:spell_target }
+		}
 	}
 	effect = {
 		if = {
@@ -54,7 +57,10 @@ financial_times_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = financial_times_spell }
+		OR = {
+			has_enough_mana_trigger = { SPELL = financial_times_spell }
+			is_target_in_variable_list = { name = financial_times_spell_targets target = scope:spell_target }
+		}
 	}
 	effect = {
 		if = {
@@ -103,7 +109,10 @@ celerity_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = celerity_spell }
+		OR = {
+			has_enough_mana_trigger = { SPELL = celerity_spell }
+			is_target_in_variable_list = { name = celerity_spell_targets target = scope:spell_target }
+		}
 	}
 	effect = {
 		if = {
@@ -152,7 +161,10 @@ mass_celerity_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = mass_celerity_spell }
+		OR = {
+			has_enough_mana_trigger = { SPELL = mass_celerity_spell }
+			is_target_in_variable_list = { name = mass_celerity_spell_targets target = scope:spell_target }
+		}
 	}
 	effect = {
 		if = {
@@ -214,7 +226,10 @@ slowness_spell = {
 		NOT = { this = scope:spell_target }
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = slowness_spell }
+		OR = {
+			has_enough_mana_trigger = { SPELL = slowness_spell }
+			is_target_in_variable_list = { name = slowness_spell_targets target = scope:spell_target }
+		}
 	}
 	effect = {
 		if = {
@@ -276,7 +291,10 @@ mass_slowness_spell = {
 		NOT = { this = scope:spell_target }
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = mass_slowness_spell }
+		OR = {
+			has_enough_mana_trigger = { SPELL = mass_slowness_spell }
+			is_target_in_variable_list = { name = mass_slowness_spell_targets target = scope:spell_target }
+		}
 	}
 	effect = {
 		if = {
@@ -325,7 +343,10 @@ temporal_manipulation_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = temporal_manipulation_spell }
+		OR = {
+			has_enough_mana_trigger = { SPELL = temporal_manipulation_spell }
+			is_target_in_variable_list = { name = temporal_manipulation_spell_targets target = scope:spell_target }
+		}
 	}
 	effect = {
 		if = {
@@ -374,7 +395,10 @@ haste_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = haste_spell }
+		OR = {
+			has_enough_mana_trigger = { SPELL = haste_spell }
+			is_target_in_variable_list = { name = haste_spell_targets target = scope:spell_target }
+		}
 	}
 	effect = {
 		if = {
@@ -435,7 +459,10 @@ master_of_time_spell = {
 		}
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = master_of_time_spell }
+		OR = {
+			has_enough_mana_trigger = { SPELL = master_of_time_spell }
+			is_target_in_variable_list = { name = master_of_time_spell_targets target = scope:spell_target }
+		}
 	}
 	effect = {
 		if = {

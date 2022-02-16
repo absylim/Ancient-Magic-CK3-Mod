@@ -1,0 +1,421 @@
+﻿## Integer literals
+# NOTE: '_gen_cost' is a misnomer. Positive values increase gen, negative values decrease it
+# It's baked into the UI now, though, so I don't wanna change it at this point
+
+# Perk _gen_costs
+mage_perk_gen_cost = 0
+chronomancy_mage_perk_gen_cost = 2
+glimpse_the_future_perk_gen_cost = 2
+financial_times_perk_gen_cost = 2
+celerity_perk_gen_cost = 2
+mass_celerity_perk_gen_cost = 2
+slowness_perk_gen_cost = 2
+mass_slowness_perk_gen_cost = 2
+temporal_manipulation_perk_gen_cost = 2
+master_of_time_perk_gen_cost = 2
+life_mage_perk_gen_cost = 2
+inward_reflection_perk_gen_cost = 2
+inward_perfection_perk_gen_cost = 2
+heal_perk_gen_cost = 2
+greater_heal_perk_gen_cost = 2
+battlefield_life_mage_perk_gen_cost = 2
+greater_battlefield_life_mage_perk_gen_cost = 2
+purity_of_body_perk_gen_cost = 2
+avatar_of_life_perk_gen_cost = 2
+elemental_mage_perk_gen_cost = 2
+flame_aura_perk_gen_cost = 2
+flaming_weapons_perk_gen_cost = 2
+living_earthworks_perk_gen_cost = 2
+golem_creation_perk_gen_cost = 2
+control_water_perk_gen_cost = 2
+drought_perk_gen_cost = 2
+elemental_warrior_perk_gen_cost = 2
+lord_of_the_elements_perk_gen_cost = 2
+death_mage_perk_gen_cost = 2
+inflict_illness_perk_gen_cost = 2
+plague_lord_perk_gen_cost = 2
+aura_of_death_perk_gen_cost = 2
+necromancy_perk_gen_cost = 2
+drain_life_perk_gen_cost = 2
+death_stare_perk_gen_cost = 2
+blight_perk_gen_cost = 2
+deacon_of_death_perk_gen_cost = 2
+biomancy_mage_perk_gen_cost = 2
+improve_trait_perk_gen_cost = 2
+perfect_trait_perk_gen_cost = 2
+fertility_control_perk_gen_cost = 2
+impregnate_perk_gen_cost = 2
+weaken_trait_perk_gen_cost = 2
+criple_trait_perk_gen_cost = 2
+sculpter_of_flesh_perk_gen_cost = 2
+architect_of_bloodlines_perk_gen_cost = 2
+domination_mage_perk_gen_cost = 2
+entrance_perk_gen_cost = 2
+incite_lust_perk_gen_cost = 2
+incite_obedience_perk_gen_cost = 2
+dominate_perk_gen_cost = 2
+beguiling_aura_perk_gen_cost = 2
+friendship_perk_gen_cost = 2
+enchanting_aura_perk_gen_cost = 2
+master_of_puppets_perk_gen_cost = 2
+
+# Misc _gen_costs
+magic_potential_1_gen_cost = 10
+magic_potential_2_gen_cost = 20
+magic_potential_3_gen_cost = 30
+mana_gen_per_magic_circle = 30
+mana_gen_lifestyle = 100
+mana_gen_legacy_2 = 10
+mana_devouring_1_gen_cost = -150
+mana_devouring_2_gen_cost = -150
+
+# Perk _max_manas
+mage_perk_max_mana = 0
+chronomancy_mage_perk_max_mana = 30
+glimpse_the_future_perk_max_mana = 30
+financial_times_perk_max_mana = 30
+celerity_perk_max_mana = 30
+mass_celerity_perk_max_mana = 30
+slowness_perk_max_mana = 30
+mass_slowness_perk_max_mana = 30
+temporal_manipulation_perk_max_mana = 30
+master_of_time_perk_max_mana = 30
+life_mage_perk_max_mana = 30
+inward_reflection_perk_max_mana = 30
+inward_perfection_perk_max_mana = 30
+heal_perk_max_mana = 30
+greater_heal_perk_max_mana = 30
+battlefield_life_mage_perk_max_mana = 30
+greater_battlefield_life_mage_perk_max_mana = 30
+purity_of_body_perk_max_mana = 30
+avatar_of_life_perk_max_mana = 30
+elemental_mage_perk_max_mana = 30
+flame_aura_perk_max_mana = 30
+flaming_weapons_perk_max_mana = 30
+living_earthworks_perk_max_mana = 30
+golem_creation_perk_max_mana = 30
+control_water_perk_max_mana = 30
+drought_perk_max_mana = 30
+elemental_warrior_perk_max_mana = 30
+lord_of_the_elements_perk_max_mana = 30
+death_mage_perk_max_mana = 30
+inflict_illness_perk_max_mana = 30
+plague_lord_perk_max_mana = 30
+aura_of_death_perk_max_mana = 30
+necromancy_perk_max_mana = 30
+drain_life_perk_max_mana = 30
+death_stare_perk_max_mana = 30
+blight_perk_max_mana = 30
+deacon_of_death_perk_max_mana = 30
+biomancy_mage_perk_max_mana = 30
+improve_trait_perk_max_mana = 30
+perfect_trait_perk_max_mana = 30
+fertility_control_perk_max_mana = 30
+impregnate_perk_max_mana = 30
+weaken_trait_perk_max_mana = 30
+criple_trait_perk_max_mana = 30
+sculpter_of_flesh_perk_max_mana = 30
+architect_of_bloodlines_perk_max_mana = 30
+domination_mage_perk_max_mana = 30
+entrance_perk_max_mana = 30
+incite_lust_perk_max_mana = 30
+incite_obedience_perk_max_mana = 30
+dominate_perk_max_mana = 30
+beguiling_aura_perk_max_mana = 30
+friendship_perk_max_mana = 30
+enchanting_aura_perk_max_mana = 30
+master_of_puppets_perk_max_mana = 30
+
+# Misc _max_manas
+max_mana_legacy_3 = 100
+max_mana_per_perk = 30
+max_mana_per_potency = 100
+
+# MAA-summoning spell amounts
+stone_golems_maa_stack_amount = 20
+lava_golems_maa_stack_amount = 1
+lesser_undead_maa_stack_amount = 200
+
+# No-brainer value in a magic mod.
+# Uses - Is a character even possibly a mage? 'mage_potency > 0' Is the character not a mage? 'mage_potency < 1' How much potential does this mage have? 'mage_potency >= x'
+mage_potency = {
+	value = 0
+	if = { limit = { has_trait = magic_potential_1 } value = 1 }
+	else_if = { limit = { has_trait = magic_potential_2 } value = 2 }
+	else_if = { limit = { has_trait = magic_potential_3 } value = 3 }
+}
+
+# No-brainer value in a magic mod.
+# Uses - Is a character even possibly educated? 'mage_education > 0' Is the character not educated? 'mage_education < 1' How much education does this mage have? 'mage_education >= x'
+mage_education = { # UNCOMMENT WHEN SYSTEM IN PLACE!!!
+	value = 0
+	if = { limit = { has_trait = education_arcane_1 } value = 1 }
+	else_if = { limit = { has_trait = education_arcane_2 } value = 2 }
+	else_if = { limit = { has_trait = education_arcane_3 } value = 3 }
+	else_if = { limit = { has_trait = education_arcane_4 } value = 4 }
+}
+
+ancient_magic_mana_gen = {
+	value = 0
+	add = ancient_magic_mana_gen_gen_only
+	add = ancient_magic_mana_gen_drain_only
+}
+
+ancient_magic_mana_gen_gen_only = {
+	value = 0
+	add = ancient_magic_mana_gen_perks
+	add = ancient_magic_mana_gen_potency
+	add = ancient_magic_mana_gen_circles
+	add = ancient_magic_mana_gen_legacy
+}
+
+ancient_magic_mana_gen_potency = {
+	value = 0
+	if = { limit = { has_trait = magic_potential_1 } add = magic_potential_1_gen_cost }
+	else_if = { limit = { has_trait = magic_potential_2 } add = magic_potential_2_gen_cost }
+	else_if = { limit = { has_trait = magic_potential_3 } add = magic_potential_3_gen_cost }
+}
+
+ancient_magic_mana_gen_circles = {
+	value = magic_circles_owned_by_character
+	multiply = mana_gen_per_magic_circle
+}
+
+magic_circles_owned_by_character = {
+	value = 0
+	every_directly_owned_province = {
+		if = {
+			limit = { has_building = ancient_magic_mana_circle_01 }
+			add = 1
+		}
+		if = {
+			limit = { has_building = ancient_magic_mana_circle_02 }
+			add = 2
+		}
+		if = {
+			limit = { has_building = ancient_magic_mana_circle_03 }
+			add = 3
+		}
+	}
+}
+
+ancient_magic_mana_gen_legacy = {
+	value = 0
+	if = {
+		limit = {
+			exists = dynasty
+			dynasty = { has_dynasty_perk = arcane_legacy_2 }
+		}
+		add = mana_gen_legacy_2
+	}
+}
+
+ancient_magic_mana_gen_drain_only = {
+	add = ancient_magic_mana_drain_auras
+	add = ancient_magic_mana_drain_disease
+}
+
+ancient_magic_mana_drain_auras = {
+	value = 0
+	add = glimpse_the_future_spell_gen_cost
+	add = financial_times_spell_gen_cost
+	add = celerity_spell_gen_cost
+	add = mass_celerity_spell_gen_cost
+	add = slowness_spell_gen_cost
+	add = mass_slowness_spell_gen_cost
+	add = temporal_manipulation_spell_gen_cost
+	add = haste_spell_gen_cost
+	add = master_of_time_spell_gen_cost
+	add = flame_aura_spell_gen_cost
+	add = flaming_weapons_spell_gen_cost
+	add = living_earthworks_spell_gen_cost
+	add = control_water_spell_gen_cost
+	add = drought_spell_gen_cost
+	add = elemental_warrior_spell_gen_cost
+	add = aura_of_death_spell_gen_cost
+	add = blight_spell_gen_cost
+	add = fertility_control_spell_gen_cost
+	add = beguiling_aura_spell_gen_cost
+	add = enchanting_aura_spell_gen_cost
+}
+
+ancient_magic_mana_drain_disease = {
+	value = 0
+	if = {
+		limit = { has_trait = mana_devouring_1 }
+		add = mana_devouring_1_gen_cost
+	}
+	else_if = {
+		limit = { has_trait = mana_devouring_2 }
+		add = mana_devouring_2_gen_cost
+	}
+}
+
+ancient_magic_max_mana = {
+	value = ancient_magic_max_mana_perks
+	add = {
+		value = mage_potency
+		multiply = max_mana_per_potency
+	}
+	if = {
+		limit = {
+			exists = dynasty
+			dynasty = { has_dynasty_perk = arcane_legacy_3 }
+		}
+		add = max_mana_legacy_3
+	}
+}
+
+# Note: This value is a work-around for 'consume life' not giving the 'drained' modifier
+# 	    for the correct number of years. Removing it will break that spell!
+############################################################################################
+spell_caster_mage_level = {
+	value = scope:spell_caster.mage_level
+}
+
+# Note: This value is a work-around for perks firing 'change_mage_perks'
+# 	    more times than they should. Removing it will break everything!
+############################################################################################
+ancient_magic_mana_gen_perks = {
+	value = 0
+	# None tree
+	add = { value = var:basic_perk_mask_0.mage_perk_bit multiply = mage_perk_gen_cost }
+
+	# Time tree
+	add = { value = var:chronomancy_perk_mask_0.chronomancy_mage_perk_bit multiply = chronomancy_mage_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.glimpse_the_future_perk_bit multiply = glimpse_the_future_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.financial_times_perk_bit multiply = financial_times_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.celerity_perk_bit multiply = celerity_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.mass_celerity_perk_bit multiply = mass_celerity_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.slowness_perk_bit multiply = slowness_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.mass_slowness_perk_bit multiply = mass_slowness_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.temporal_manipulation_perk_bit multiply = temporal_manipulation_perk_gen_cost }
+	add = { value = var:chronomancy_perk_mask_0.master_of_time_perk_bit multiply = master_of_time_perk_gen_cost }
+
+	# Life tree
+	add = { value = var:life_perk_mask_0.life_mage_perk_bit multiply = life_mage_perk_gen_cost }
+	add = { value = var:life_perk_mask_0.inward_reflection_perk_bit multiply = inward_reflection_perk_gen_cost }
+	add = { value = var:life_perk_mask_0.inward_perfection_perk_bit multiply = inward_perfection_perk_gen_cost }
+	add = { value = var:life_perk_mask_0.heal_perk_bit multiply = heal_perk_gen_cost }
+	add = { value = var:life_perk_mask_0.greater_heal_perk_bit multiply = greater_heal_perk_gen_cost }
+	add = { value = var:life_perk_mask_0.battlefield_life_mage_perk_bit multiply = battlefield_life_mage_perk_gen_cost }
+	add = { value = var:life_perk_mask_0.greater_battlefield_life_mage_perk_bit multiply = greater_battlefield_life_mage_perk_gen_cost }
+	add = { value = var:life_perk_mask_0.purity_of_body_perk_bit multiply = purity_of_body_perk_gen_cost }
+	add = { value = var:life_perk_mask_0.avatar_of_life_perk_bit multiply = avatar_of_life_perk_gen_cost }
+
+	# Elemental tree
+	add = { value = var:elomancy_perk_mask_0.elemental_mage_perk_bit multiply = elemental_mage_perk_gen_cost }
+	add = { value = var:elomancy_perk_mask_0.flame_aura_perk_bit multiply = flame_aura_perk_gen_cost }
+	add = { value = var:elomancy_perk_mask_0.flaming_weapons_perk_bit multiply = flaming_weapons_perk_gen_cost }
+	add = { value = var:elomancy_perk_mask_0.living_earthworks_perk_bit multiply = living_earthworks_perk_gen_cost }
+	add = { value = var:elomancy_perk_mask_0.golem_creation_perk_bit multiply = golem_creation_perk_gen_cost }
+	add = { value = var:elomancy_perk_mask_0.control_water_perk_bit multiply = control_water_perk_gen_cost }
+	add = { value = var:elomancy_perk_mask_0.drought_perk_bit multiply = drought_perk_gen_cost }
+	add = { value = var:elomancy_perk_mask_0.elemental_warrior_perk_bit multiply = elemental_warrior_perk_gen_cost }
+	add = { value = var:elomancy_perk_mask_0.lord_of_the_elements_perk_bit multiply = lord_of_the_elements_perk_gen_cost }
+
+	# Death tree
+	add = { value = var:necromancy_perk_mask_0.death_mage_perk_bit multiply = death_mage_perk_gen_cost }
+	add = { value = var:necromancy_perk_mask_0.inflict_illness_perk_bit multiply = inflict_illness_perk_gen_cost }
+	add = { value = var:necromancy_perk_mask_0.plague_lord_perk_bit multiply = plague_lord_perk_gen_cost }
+	add = { value = var:necromancy_perk_mask_0.aura_of_death_perk_bit multiply = aura_of_death_perk_gen_cost }
+	add = { value = var:necromancy_perk_mask_0.necromancy_perk_bit multiply = necromancy_perk_gen_cost }
+	add = { value = var:necromancy_perk_mask_0.drain_life_perk_bit multiply = drain_life_perk_gen_cost }
+	add = { value = var:necromancy_perk_mask_0.death_stare_perk_bit multiply = death_stare_perk_gen_cost }
+	add = { value = var:necromancy_perk_mask_0.blight_perk_bit multiply = blight_perk_gen_cost }
+	add = { value = var:necromancy_perk_mask_0.deacon_of_death_perk_bit multiply = deacon_of_death_perk_gen_cost }
+
+	# Biomancy tree
+	add = { value = var:biomancy_perk_mask_0.biomancy_mage_perk_bit multiply = biomancy_mage_perk_gen_cost }
+	add = { value = var:biomancy_perk_mask_0.improve_trait_perk_bit multiply = improve_trait_perk_gen_cost }
+	add = { value = var:biomancy_perk_mask_0.perfect_trait_perk_bit multiply = perfect_trait_perk_gen_cost }
+	add = { value = var:biomancy_perk_mask_0.fertility_control_perk_bit multiply = fertility_control_perk_gen_cost }
+	add = { value = var:biomancy_perk_mask_0.impregnate_perk_bit multiply = impregnate_perk_gen_cost }
+	add = { value = var:biomancy_perk_mask_0.weaken_trait_perk_bit multiply = weaken_trait_perk_gen_cost }
+	add = { value = var:biomancy_perk_mask_0.criple_trait_perk_bit multiply = criple_trait_perk_gen_cost }
+	add = { value = var:biomancy_perk_mask_0.sculpter_of_flesh_perk_bit multiply = sculpter_of_flesh_perk_gen_cost }
+	add = { value = var:biomancy_perk_mask_0.architect_of_bloodlines_perk_bit multiply = architect_of_bloodlines_perk_gen_cost }
+
+	# Domination tree
+	add = { value = var:mensomancy_perk_mask_0.domination_mage_perk_bit multiply = domination_mage_perk_gen_cost }
+	add = { value = var:mensomancy_perk_mask_0.entrance_perk_bit multiply = entrance_perk_gen_cost }
+	add = { value = var:mensomancy_perk_mask_0.incite_lust_perk_bit multiply = incite_lust_perk_gen_cost }
+	add = { value = var:mensomancy_perk_mask_0.incite_obedience_perk_bit multiply = incite_obedience_perk_gen_cost }
+	add = { value = var:mensomancy_perk_mask_0.dominate_perk_bit multiply = dominate_perk_gen_cost }
+	add = { value = var:mensomancy_perk_mask_0.beguiling_aura_perk_bit multiply = beguiling_aura_perk_gen_cost }
+	add = { value = var:mensomancy_perk_mask_0.friendship_perk_bit multiply = friendship_perk_gen_cost }
+	add = { value = var:mensomancy_perk_mask_0.enchanting_aura_perk_bit multiply = enchanting_aura_perk_gen_cost }
+	add = { value = var:mensomancy_perk_mask_0.master_of_puppets_perk_bit multiply = master_of_puppets_perk_gen_cost }
+}
+
+ancient_magic_max_mana_perks = {
+	value = 0
+	# None tree
+	add = { value = var:basic_perk_mask_0.mage_perk_bit multiply = mage_perk_max_mana }
+
+	# Time tree
+	add = { value = var:chronomancy_perk_mask_0.chronomancy_mage_perk_bit multiply = chronomancy_mage_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.glimpse_the_future_perk_bit multiply = glimpse_the_future_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.financial_times_perk_bit multiply = financial_times_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.celerity_perk_bit multiply = celerity_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.mass_celerity_perk_bit multiply = mass_celerity_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.slowness_perk_bit multiply = slowness_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.mass_slowness_perk_bit multiply = mass_slowness_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.temporal_manipulation_perk_bit multiply = temporal_manipulation_perk_max_mana }
+	add = { value = var:chronomancy_perk_mask_0.master_of_time_perk_bit multiply = master_of_time_perk_max_mana }
+
+	# Life tree
+	add = { value = var:life_perk_mask_0.life_mage_perk_bit multiply = life_mage_perk_max_mana }
+	add = { value = var:life_perk_mask_0.inward_reflection_perk_bit multiply = inward_reflection_perk_max_mana }
+	add = { value = var:life_perk_mask_0.inward_perfection_perk_bit multiply = inward_perfection_perk_max_mana }
+	add = { value = var:life_perk_mask_0.heal_perk_bit multiply = heal_perk_max_mana }
+	add = { value = var:life_perk_mask_0.greater_heal_perk_bit multiply = greater_heal_perk_max_mana }
+	add = { value = var:life_perk_mask_0.battlefield_life_mage_perk_bit multiply = battlefield_life_mage_perk_max_mana }
+	add = { value = var:life_perk_mask_0.greater_battlefield_life_mage_perk_bit multiply = greater_battlefield_life_mage_perk_max_mana }
+	add = { value = var:life_perk_mask_0.purity_of_body_perk_bit multiply = purity_of_body_perk_max_mana }
+	add = { value = var:life_perk_mask_0.avatar_of_life_perk_bit multiply = avatar_of_life_perk_max_mana }
+
+	# Elemental tree
+	add = { value = var:elomancy_perk_mask_0.elemental_mage_perk_bit multiply = elemental_mage_perk_max_mana }
+	add = { value = var:elomancy_perk_mask_0.flame_aura_perk_bit multiply = flame_aura_perk_max_mana }
+	add = { value = var:elomancy_perk_mask_0.flaming_weapons_perk_bit multiply = flaming_weapons_perk_max_mana }
+	add = { value = var:elomancy_perk_mask_0.living_earthworks_perk_bit multiply = living_earthworks_perk_max_mana }
+	add = { value = var:elomancy_perk_mask_0.golem_creation_perk_bit multiply = golem_creation_perk_max_mana }
+	add = { value = var:elomancy_perk_mask_0.control_water_perk_bit multiply = control_water_perk_max_mana }
+	add = { value = var:elomancy_perk_mask_0.drought_perk_bit multiply = drought_perk_max_mana }
+	add = { value = var:elomancy_perk_mask_0.elemental_warrior_perk_bit multiply = elemental_warrior_perk_max_mana }
+	add = { value = var:elomancy_perk_mask_0.lord_of_the_elements_perk_bit multiply = lord_of_the_elements_perk_max_mana }
+
+	# Death tree
+	add = { value = var:necromancy_perk_mask_0.death_mage_perk_bit multiply = death_mage_perk_max_mana }
+	add = { value = var:necromancy_perk_mask_0.inflict_illness_perk_bit multiply = inflict_illness_perk_max_mana }
+	add = { value = var:necromancy_perk_mask_0.plague_lord_perk_bit multiply = plague_lord_perk_max_mana }
+	add = { value = var:necromancy_perk_mask_0.aura_of_death_perk_bit multiply = aura_of_death_perk_max_mana }
+	add = { value = var:necromancy_perk_mask_0.necromancy_perk_bit multiply = necromancy_perk_max_mana }
+	add = { value = var:necromancy_perk_mask_0.drain_life_perk_bit multiply = drain_life_perk_max_mana }
+	add = { value = var:necromancy_perk_mask_0.death_stare_perk_bit multiply = death_stare_perk_max_mana }
+	add = { value = var:necromancy_perk_mask_0.blight_perk_bit multiply = blight_perk_max_mana }
+	add = { value = var:necromancy_perk_mask_0.deacon_of_death_perk_bit multiply = deacon_of_death_perk_max_mana }
+
+	# Biomancy tree
+	add = { value = var:biomancy_perk_mask_0.biomancy_mage_perk_bit multiply = biomancy_mage_perk_max_mana }
+	add = { value = var:biomancy_perk_mask_0.improve_trait_perk_bit multiply = improve_trait_perk_max_mana }
+	add = { value = var:biomancy_perk_mask_0.perfect_trait_perk_bit multiply = perfect_trait_perk_max_mana }
+	add = { value = var:biomancy_perk_mask_0.fertility_control_perk_bit multiply = fertility_control_perk_max_mana }
+	add = { value = var:biomancy_perk_mask_0.impregnate_perk_bit multiply = impregnate_perk_max_mana }
+	add = { value = var:biomancy_perk_mask_0.weaken_trait_perk_bit multiply = weaken_trait_perk_max_mana }
+	add = { value = var:biomancy_perk_mask_0.criple_trait_perk_bit multiply = criple_trait_perk_max_mana }
+	add = { value = var:biomancy_perk_mask_0.sculpter_of_flesh_perk_bit multiply = sculpter_of_flesh_perk_max_mana }
+	add = { value = var:biomancy_perk_mask_0.architect_of_bloodlines_perk_bit multiply = architect_of_bloodlines_perk_max_mana }
+
+	# Domination tree
+	add = { value = var:mensomancy_perk_mask_0.domination_mage_perk_bit multiply = domination_mage_perk_max_mana }
+	add = { value = var:mensomancy_perk_mask_0.entrance_perk_bit multiply = entrance_perk_max_mana }
+	add = { value = var:mensomancy_perk_mask_0.incite_lust_perk_bit multiply = incite_lust_perk_max_mana }
+	add = { value = var:mensomancy_perk_mask_0.incite_obedience_perk_bit multiply = incite_obedience_perk_max_mana }
+	add = { value = var:mensomancy_perk_mask_0.dominate_perk_bit multiply = dominate_perk_max_mana }
+	add = { value = var:mensomancy_perk_mask_0.beguiling_aura_perk_bit multiply = beguiling_aura_perk_max_mana }
+	add = { value = var:mensomancy_perk_mask_0.friendship_perk_bit multiply = friendship_perk_max_mana }
+	add = { value = var:mensomancy_perk_mask_0.enchanting_aura_perk_bit multiply = enchanting_aura_perk_max_mana }
+	add = { value = var:mensomancy_perk_mask_0.master_of_puppets_perk_bit multiply = master_of_puppets_perk_max_mana }
+}

@@ -1,11 +1,9 @@
-﻿days_left_in_week = {
-    value = current_day
-    modulo = 7
-    subtract = 7
-    multiply = -1
+﻿days_left_in_month = {
+    value = days_total_in_month
+    subtract = current_day
 }
 
-days_left_in_month = {
+days_total_in_month = {
     value = 31
     if = {
         limit = {
@@ -22,5 +20,53 @@ days_left_in_month = {
         limit = { current_month = 2 }
         subtract = 3
     }
-    subtract = current_day
+}
+
+current_day_in_year = {
+    value = 0
+    if = {
+        limit = { current_month.compare_value > 1 }
+        add = 31
+    }
+    if = {
+        limit = { current_month.compare_value > 2 }
+        add = 28
+    }
+    if = {
+        limit = { current_month.compare_value > 3 }
+        add = 31
+    }
+    if = {
+        limit = { current_month.compare_value > 4 }
+        add = 30
+    }
+    if = {
+        limit = { current_month.compare_value > 5 }
+        add = 31
+    }
+    if = {
+        limit = { current_month.compare_value > 6 }
+        add = 30
+    }
+    if = {
+        limit = { current_month.compare_value > 7 }
+        add = 31
+    }
+    if = {
+        limit = { current_month.compare_value > 8 }
+        add = 31
+    }
+    if = {
+        limit = { current_month.compare_value > 9 }
+        add = 30
+    }
+    if = {
+        limit = { current_month.compare_value > 10 }
+        add = 31
+    }
+    if = {
+        limit = { current_month.compare_value > 11 }
+        add = 30
+    }
+    add = current_day
 }
