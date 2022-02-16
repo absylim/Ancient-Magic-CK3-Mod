@@ -56,7 +56,7 @@
 					is_magus_trigger = yes
 				}
 			}
-			factor = 0
+			multiply = 0
 		}
 	}
 	ai_frequency = 60
