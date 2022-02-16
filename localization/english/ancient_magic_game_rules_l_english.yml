@@ -67,3 +67,10 @@
  setting_lot_ancient_magical_diseases_desc:0 "Magical disease is about as common as the flu"
  setting_hell_ancient_magical_diseases:0 "Hell"
  setting_hell_ancient_magical_diseases_desc:0 "Magical disease is about as common as the common cold"
+
+ # Magic regen frequency
+ rule_magic_gen_freq: "Mana Generation Frequency"
+ setting_am_magic_gen_monthly: "Monthly"
+ setting_am_magic_gen_monthly_desc: "You will receive your monthly mana regeneration amount on the first day of every month."
+ setting_am_magic_gen_daily: "Daily"
+ setting_am_magic_gen_daily_desc: "You will receive mana every day, in an amount based on your monthly mana regeneration amount. This setting may cause game lag if there are many mages receiving their mana every day."

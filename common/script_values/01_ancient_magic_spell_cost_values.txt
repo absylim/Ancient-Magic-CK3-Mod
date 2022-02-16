@@ -25,7 +25,7 @@ chronomancy_spell_discount = {
 	
 	if = {
 		limit = {
-			scope:culture = {
+			culture = {
 				has_cultural_parameter = chronomancy_magic_cost_reduction
 			}
 		}
@@ -40,7 +40,7 @@ chiromancy_spell_discount = {
 	
 	if = {
 		limit = {
-			scope:culture = {
+			culture = {
 				has_cultural_parameter = chiromancy_magic_cost_reduction
 			}
 		}
@@ -55,7 +55,7 @@ necromancy_spell_discount = {
 	
 	if = {
 		limit = {
-			scope:culture = {
+			culture = {
 				has_cultural_parameter = necromancy_magic_cost_reduction
 			}
 		}
@@ -70,7 +70,7 @@ elomancy_spell_discount = {
 	
 	if = {
 		limit = {
-			scope:culture = {
+			culture = {
 				has_cultural_parameter = elomancy_magic_cost_reduction
 			}
 		}
@@ -85,7 +85,7 @@ mensomancy_spell_discount = {
 	
 	if = {
 		limit = {
-			scope:culture = {
+			culture = {
 				has_cultural_parameter = mensomancy_magic_cost_reduction
 			}
 		}
@@ -100,7 +100,7 @@ biomancy_spell_discount = {
 	
 	if = {
 		limit = {
-			scope:culture = {
+			culture = {
 				has_cultural_parameter = biomancy_magic_cost_reduction
 			}
 		}

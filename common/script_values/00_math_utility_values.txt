@@ -373,11 +373,3 @@ squared = {
 	value = this
 	multiply = this
 }
-
-to_the_nth = {
-	value = prev
-	while = {
-		count = this
-		multiply = prev
-	}
-}
