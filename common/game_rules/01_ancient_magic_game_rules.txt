@@ -117,3 +117,11 @@ ancient_magical_diseases = {
 		
 	}
 }
+
+# Magical regen frequency
+magic_gen_freq = {
+	default = am_magic_gen_monthly
+
+	am_magic_gen_monthly = {}
+	am_magic_gen_daily = {}
+}

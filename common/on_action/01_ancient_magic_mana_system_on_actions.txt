@@ -6,36 +6,51 @@
 
 yearly_mana_pulse = {
 	effect = {
-		every_living_character = {
-			limit = { is_magus_trigger = yes }
-			set_variable = {
-				name = mana_gen_months_left
-				value = 12
+		if = {
+			limit = { has_game_rule = am_magic_gen_daily }
+			every_living_character = {
+				limit = { is_magus_trigger = yes }
+				set_variable = {
+					name = mana_gen_days_left
+					value = 365
+				}
+				trigger_event = { on_action = daily_mana_gen }
 			}
-			trigger_event = { on_action = monthly_mana_gen }
-			#set_variable = {
-			#	name = mana_gen_days_left
-			#	value = 365
-			#}
-			#trigger_event = { on_action = daily_mana_gen }
+		}
+		else = {
+			every_living_character = {
+				limit = { is_magus_trigger = yes }
+				set_variable = {
+					name = mana_gen_months_left
+					value = 12
+				}
+				trigger_event = { on_action = monthly_mana_gen }
+			}
 		}
 	}
 }
 
 set_up_remaining_mana_gen_for_year = {
 	effect = {
-		set_variable = {
-			name = mana_gen_months_left
-			value = 12
-			subtract = current_month
+		if = {
+			limit = { has_game_rule = am_magic_gen_daily }
+			set_variable = {
+				name = mana_gen_days_left
+				value = 365
+				subtract = current_day_in_year
+			}
+			trigger_event = { on_action = daily_mana_gen }
 		}
-		trigger_event = { on_action = monthly_mana_gen }
-		#set_variable = {
-		#	name = mana_gen_days_left
-		#	value = 365
-		#	subtract = current_day_in_year
-		#}
-		#trigger_event = { on_action = daily_mana_gen }
+		else = {
+			set_variable = {
+				name = mana_gen_months_left
+				value = {
+					value = 12				
+					subtract = current_month
+				}
+			}
+			trigger_event = { on_action = monthly_mana_gen }
+		}
 	}
 }
 
@@ -47,14 +62,33 @@ monthly_mana_gen = {
 
 	on_actions = {
 		give_monthly_mana
-		delay = { days = days_total_in_month }
-		monthly_mana_gen
+		delay = { days = 28 }
+		delay_mana_gen_till_1st_of_month
 	}
 
 	effect = {
 		change_variable = {
 			name = mana_gen_months_left
 			subtract = 1
+		}
+	}
+}
+
+delay_mana_gen_till_1st_of_month = {
+	trigger = {
+		# run until the second day of the month - first day of the month triggers mana gen
+		NOT = { current_day.compare_value = 2 }
+	}
+
+	on_actions = {
+		delay = { days = 1 }
+		delay_mana_gen_till_1st_of_month
+	}
+
+	effect = {
+		if = {
+			limit = { current_day.compare_value = 1 }
+			trigger_event = { on_action = monthly_mana_gen }
 		}
 	}
 }
