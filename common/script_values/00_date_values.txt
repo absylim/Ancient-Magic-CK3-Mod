@@ -1,28 +1,4 @@
-﻿days_left_in_month = {
-    value = days_total_in_month
-    subtract = current_day
-}
-
-days_total_in_month = {
-    value = 31
-    if = {
-        limit = {
-            OR = {
-                current_month.compare_value = 4
-                current_month.compare_value = 6
-                current_month.compare_value = 9
-                current_month.compare_value = 11
-            }
-        }
-        subtract = 1
-    }
-    else_if = {
-        limit = { current_month.compare_value = 2 }
-        subtract = 3
-    }
-}
-
-current_day_in_year = {
+﻿current_day_in_year = {
     value = 0
     if = {
         limit = { current_month.compare_value > 1 }
