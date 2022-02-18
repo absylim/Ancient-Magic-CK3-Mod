@@ -16,7 +16,6 @@ AM_education_and_talents.001 = {
 AM_education_and_talents.002 = { #Will give every person who has arcane education mana affinity
 	hidden = yes
 	immediate = {
-		give_base_mana_affinity = yes
 		if = {
 			limit = {
 				has_education_arcane_trigger = yes
