@@ -25,7 +25,7 @@ give_base_mana_affinity = {
 			limit = {
 				has_game_rule = PC_magic_level_2
 			}
-			random_list = { # Affinity is given in range of Tier 1
+			random_list = { # Affinity is given in range of Tier 2
 				10 = { change_variable = { name = temp_base_mana_affinity_value value = 10} }
 				20 = { change_variable = { name = temp_base_mana_affinity_value value = 11} }
 				20 = { change_variable = { name = temp_base_mana_affinity_value value = 12} }
@@ -38,7 +38,7 @@ give_base_mana_affinity = {
 			limit = {
 				has_game_rule = PC_magic_level_2
 			}
-			random_list = { # Affinity is given in range of Tier 1
+			random_list = { # Affinity is given in range of Tier 3
 				10 = { change_variable = { name = temp_base_mana_affinity_value value = 15} }
 				20 = { change_variable = { name = temp_base_mana_affinity_value value = 16} }
 				20 = { change_variable = { name = temp_base_mana_affinity_value value = 17} }
@@ -51,7 +51,7 @@ give_base_mana_affinity = {
 			limit = {
 				has_game_rule = PC_magic_level_2
 			}
-			random_list = { # Affinity is given in range of Tier 1
+			random_list = { # Affinity is given in range of Tier 4
 				10 = { change_variable = { name = temp_base_mana_affinity_value value = 20} }
 				20 = { change_variable = { name = temp_base_mana_affinity_value value = 21} }
 				20 = { change_variable = { name = temp_base_mana_affinity_value value = 22} }
@@ -64,7 +64,7 @@ give_base_mana_affinity = {
 			limit = {
 				has_game_rule = PC_magic_level_2
 			}
-			random_list = { # Affinity is given in range of Tier 1
+			random_list = { # Affinity is given in range of Tier 5
 				10 = { change_variable = { name = temp_base_mana_affinity_value value = 25} }
 				20 = { change_variable = { name = temp_base_mana_affinity_value value = 26} }
 				20 = { change_variable = { name = temp_base_mana_affinity_value value = 27} }
