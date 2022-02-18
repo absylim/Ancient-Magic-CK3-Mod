@@ -330,7 +330,7 @@ elemental_warrior_spell = {
 elemental_warrior_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = elemental_mage_perk }
+		has_perk_trigger = { PERK = elemental_warrior_perk }
 	}
 	is_valid = {
 		always = yes
