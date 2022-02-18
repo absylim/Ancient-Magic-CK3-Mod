@@ -1,0 +1,4 @@
+﻿l_english:
+ AM_mana_affinity.001.t: "Mana Affinity"
+ AM_mana_affinity.001.desc: "Your Mana Affinity is [ROOT.ScriptValue('mana_affinity')|0] "
+ AM_mana_affinity.001.ok: "Ok"

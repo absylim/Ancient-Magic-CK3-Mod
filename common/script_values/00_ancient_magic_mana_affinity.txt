@@ -6,7 +6,7 @@
 # Affinity levels:
 ###################
 # 0 - 5: mortal (mundane being with near no magical talents: normal humans, animals)
-# 6 - 10: sub-magical (Beings that sometimes have some nutural born magical abbilities: Sorcerers, sub-magical beasts)
+# 5 - 10: sub-magical (Beings that sometimes have some nutural born magical abbilities: Sorcerers, sub-magical beasts)
 # 10 - 15: magical (Beings born with some megical talents: Elves, Goblins, Megical Beasts)
 # 15 - 20: Loved by mana (High Elves)
 # 20 - 25: Demigod (Being that can control mana just like breating: Ancient Dragons, Angels, Demons and etc.)
@@ -19,7 +19,7 @@ mana_affinity = {
 	
 	if = {
 		limit = {
-			exists = var:base_mana_affinity
+			has_variable = base_mana_affinity
 		}
 		add = var:base_mana_affinity
 	}
@@ -57,50 +57,9 @@ base_mana_affinity_bonus = { #Script value that gives out bonus to base mana aff
 	}
 }
 
-max_body_mana_per_affinity = { value = 200 }
-max_body_mana_peak_mage_level = { value = 25 }
-max_body_mana_rise_quickness = { value = 10 }
-# Value used for difference level
-max_body_difference_of_mage_level_to_peak = { 
-	value = mage_level
-	subtract = max_body_mana_peak_mage_level
-}
 
-max_body_mana = { #(x-b)
+max_body_mana = { #Mana Affinity affects how much can ones body hold mana
 	value = mana_affinity
-	multiply = exponential_calculation
-}
-
-exponential_calculation = {
-	save_temporary_scope_value = {
-		name = temp_num_repeats
-		value = 0
-	}
-	
-	while = { # Taylors Series Algorithm
-		count = 9
-		value = 1
-		add = {
-			value = {
-				value = -1
-				if = { #If so that the max mana isnt lowered after peak level
-					limit = {
-						max_body_difference_of_mage_level_to_peak <= 0
-					}
-					multiply = { # (x-b)^2
-						value = max_body_difference_of_mage_level_to_peak
-						multiply = max_body_difference_of_mage_level_to_peak
-					}
-				}
-				divide = {
-					value = 2
-					multiply = max_body_mana_rise_quickness
-					multiply = max_body_mana_rise_quickness
-				}
-			}
-			multiply = prev
-			divide = temp_num_repeats
-		}
-		change_variable = { name = temp_num_repeats add = 1 }
-	}
+	multiply = 50
+	multiply = mage_level
 }

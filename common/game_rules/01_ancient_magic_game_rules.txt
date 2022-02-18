@@ -5,19 +5,27 @@
 
 	}
 
-	PC_magic_level_0 = {
+	PC_magic_level_0 = { # Mundane
 	
 	}
 	
-	PC_magic_level_1 = {
+	PC_magic_level_1 = { # Sub-magical
 	
 	}
 	
-	PC_magic_level_2 = {
+	PC_magic_level_2 = { # Magical
 
 	}
 	
-	PC_magic_level_3 = {
+	PC_magic_level_3 = { # Loved by mana
+
+	}	
+	
+	PC_magic_level_4 = { # Demigod
+
+	}	
+	
+	PC_magic_level_5 = { # God
 
 	}	
 }
@@ -124,4 +132,9 @@ magic_gen_freq = {
 
 	am_magic_gen_monthly = {}
 	am_magic_gen_daily = {}
+}
+
+ancient_magic_mana_affinity_mechanic = {
+  ancient_magic_mana_affinity_max_mana = {}
+  ancient_magic_mana_affinity_mage_xp = {}
 }
