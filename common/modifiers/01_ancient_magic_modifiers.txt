@@ -1,25 +1,25 @@
 ﻿glimpse_the_future_spell_modifier = {
 	icon = martial_positive
-	cultural_head_fascination_mult = 0.2
+	cultural_head_fascination_mult = 0.05
 	stacking = yes
 }
 
 financial_times_spell_modifier = {
 	icon = martial_positive
-	monthly_income_mult = 0.1
+	monthly_income_mult = 0.02
 	stacking = yes
 }
 
 celerity_spell_modifier = {
 	icon = martial_positive
-	prowess = 2
+	prowess = 1
 	stacking = yes
 }
 
 mass_celerity_spell_modifier = {
 	icon = martial_positive
 	advantage = 1
-	hard_casualty_modifier = -0.1
+	hard_casualty_modifier = -0.02
 	stacking = yes
 }
 
@@ -32,19 +32,19 @@ slowness_spell_modifier = {
 mass_slowness_spell_modifier = {
 	icon = martial_negative
 	advantage = -1
-	hard_casualty_modifier = 0.1
+	hard_casualty_modifier = 0.02
 	stacking = yes
 }
 
 temporal_manipulation_spell_modifier = {
 	icon = martial_positive
-	build_speed = -0.05
+	build_speed = -0.01
 	stacking = yes
 }
 
 haste_spell_modifier = {
 	icon = martial_positive
-	movement_speed = 0.1
+	movement_speed = 0.02
 	stacking = yes
 }
 
@@ -63,14 +63,14 @@ lava_golem_cooldown_modifier = {
 
 flame_aura_spell_modifier = {
 	icon = martial_positive
-	prowess = 2
+	prowess = 1
 	stacking = yes
 }
 
 flaming_weapons_spell_modifier = {
 	icon = martial_positive
 	advantage = 1
-	enemy_hard_casualty_modifier = 0.1
+	enemy_hard_casualty_modifier = 0.02
 	stacking = yes
 }
 
@@ -78,28 +78,28 @@ living_earthworks_spell_modifier = {
 	icon = martial_positive
 	hide_effects = yes # Custom localization (living_earthworks_spell_modifier_desc)
 	stacking = yes
-	fort_level = 0.5
+	fort_level = 0.1
 }
 
 control_water_spell_modifier = {
 	icon = martial_positive
-	naval_movement_speed_mult = 0.1
+	naval_movement_speed_mult = 0.02
 	stacking = yes
 }
 
 drought_spell_modifier = {
 	icon = martial_positive
-	siege_phase_time = -0.1
+	siege_phase_time = -0.02
 	stacking = yes
 }
 
 elemental_warrior_spell_modifier = {
 	icon = martial_positive
-	siege_phase_time = -0.1
-	naval_movement_speed_mult = 0.1
-	fort_level = 0.5
-	enemy_hard_casualty_modifier = 0.1
-	prowess = 2
+	siege_phase_time = -0.02
+	naval_movement_speed_mult = 0.02
+	fort_level = 0.1
+	enemy_hard_casualty_modifier = 0.02
+	prowess = 1
 	stacking = yes
 }
 
@@ -119,13 +119,13 @@ stolen_lifeforce_modifier = {
 
 aura_of_death_spell_modifier = {
 	icon = martial_positive
-	dread_baseline_add = 5
+	dread_baseline_add = 1
 	stacking = yes
 }
 
 blight_spell_modifier = {
 	icon = icon_dead
-	supply_duration = -0.05
+	supply_duration = -0.01
 	stacking = yes
 }
 
@@ -141,13 +141,13 @@ biomantic_infertility_modifier = {
 
 beguiling_aura_spell_modifier = {
 	icon = martial_positive
-	general_opinion = 3
+	general_opinion = 1
 	stacking = yes
 }
 
 enchanting_aura_spell_modifier = {
 	icon = martial_positive
-	hostile_scheme_resistance_mult = 0.05
+	hostile_scheme_resistance_mult = 0.01
 	stacking = yes
 }
 

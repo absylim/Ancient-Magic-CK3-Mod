@@ -10,18 +10,7 @@
 
 		datacontext = "[GetPlayer]"
 
-		background = {
-			texture = "gfx/interface/component_tiles/tile_window_background_no_edge.dds"
-			spriteType = Corneredtiled
-			spriteborder = { 18 0 }
-			margin = { 20 0 }
-			texture_density = 2
-
-			modify_texture = {
-				texture = "gfx/interface/component_overlay/overlay_effect.dds"
-				blend_mode = overlay
-			}
-		}
+		using = Window_Background_No_Edge
 
 		background = {
 			texture = "gfx/interface/component_masks/mask_fade_corner.dds"
@@ -99,11 +88,12 @@
 			hbox = {
 				layoutpolicy_horizontal = expanding
 				layoutpolicy_vertical = expanding
+				spacing = 5
+				margin_top = 10
 
 				vbox = {
 					layoutpolicy_vertical = expanding
-					minimumsize = { 250 -1 }
-					margin_left = -15
+					minimumsize = { 270 -1 }
 
 					spacer = { size = { 0 25 } }
 
@@ -115,6 +105,8 @@
 						enabled = "[GetScriptedGui('toggle_magic_xp_or_focus_xp').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						onclick = "[GetScriptedGui('toggle_magic_xp_or_focus_xp').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 					}
+
+					spacer = { size = { 0 25 } }
 
 					text_multi = {
 						name = "skill_value"
@@ -173,7 +165,8 @@
 							}
 
 							widget = {
-								size = "[PdxGetWidgetScreenSize( PdxGuiWidget.AccessParent.Self )]"
+								allow_outside = yes
+								#size = "[PdxGetWidgetScreenSize( PdxGuiWidget.AccessParent.Self )]"
 								datamodel = "[GetGlobalList('spell_categories_list')]"
 								datacontext = "[GetScriptedGui('perk_select')]"
 
