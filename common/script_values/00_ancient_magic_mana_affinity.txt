@@ -23,9 +23,6 @@ mana_affinity = {
 		}
 		add = var:base_mana_affinity
 	}
-	else = {
-		give_base_mana_affinity = yes
-	}
 	
 }
 
