@@ -8,87 +8,10 @@ on_birth_child = {
 }
 
 on_birth_child_magic = {
-	events = {
-		AM_education_and_talents.006 # Checks if child wasnt born on ley line
-	}
-
-	# arcane_legacy_1: "Improves chances of being born with magic potential"
-	# if the kid doesn't have magic potential already, 10-20% chance to get it
+	# arcane_legacy_1: "Improves chances of being born with slightly better mana affinity"
 	#
-	# arcane_legacy_4: "Improves chances of being born with greater magic potential"
-	# if the kid has magic potential already, 10-20% chance to improve it per tier
-	# this includes if the kid just got it from arcane_legacy_1 giving it to them
-	#
-	# all these if's are sequential, so the trait can keep improving.
-	# example: a kid with no magic parents and a player parent has a 16% chance to
-	# have potential 1, 3.2% to have potential 2, and 0.8% to have potential 3
+	# arcane_legacy_4: "Improves chances of being born with greater mana affinity"
 	effect = {
-		hidden_effect = {
-			if = {
-				limit = {
-					# why did vanilla on_birth_child use scope:child so much? the fact that they
-					# even once used add_trait directly (not scope:child = { add_trait }) means
-					# that they were already in scope of the child. using scope:child would only
-					# change scopes from the child to the child which does nothing but waste time
-					exists = dynasty
-					dynasty = { has_dynasty_perk = arcane_legacy_1 }
-					OR = {
-						scope:mother.dynasty = dynasty
-						scope:real_father.dynasty = dynasty
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_trait = magic_potential
-						}
-					}
-					random = {
-						chance = 10
-						modifier = {
-							add = 10
-							any_parent = { is_ai = no }
-						}
-						add_trait = magic_potential_1
-					}
-				}
-				if = {
-					limit = {
-						# can only have arcane 4 if we have arcane 1, so might as well do this within
-						# the block that only runs if we have arcane 1. putting it outside will only
-						# ever make the game run slightly slower
-						dynasty = { has_dynasty_perk = arcane_legacy_4 }
-					}
-					if = {
-						limit = {
-							has_trait = magic_potential_1
-						}
-						random = {
-							chance = 10
-							modifier = {
-								add = 10
-								any_parent = { is_ai = no }
-							}
-							remove_trait = magic_potential_1
-							add_trait = magic_potential_2
-						}
-					}
-					if = {
-						limit = {
-							has_trait = magic_potential_2
-						}
-						random = {
-							chance = 10
-							modifier = {
-								add = 10
-								any_parent = { is_ai = no }
-							}
-							remove_trait = magic_potential_2
-							add_trait = magic_potential_3
-						}
-					}
-				}
-			}
-		}
+		give_base_mana_affinity = yes
 	}
 }

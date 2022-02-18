@@ -28,16 +28,45 @@ mana_affinity = {
 	}
 	
 }
-max_body_mana_per_affinity = { value = 200 }
-max_body_mana_peak_mage_level = { value = 25 }
-max_body_mana_rise_quickness = { value = -10 }
-max_body_mana_increase_per_mage_level = { 
-	value = 25
+
+base_mana_affinity_bonus = { #Script value that gives out bonus to base mana affinity
+	value = 0
 	
-	multiply = mana_affinity
+	if = { # If dynasty has perk of Powerful Blood
+		limit = {
+			exists = dynasty
+			dynasty = { has_dynasty_perk = arcane_legacy_1 }
+			OR = {
+				scope:mother.dynasty = dynasty
+				scope:real_father.dynasty = dynasty
+			}
+		}
+		add = 1
+	}
+	
+	if = { # If dynasty has perk arcane_legacy_4
+		limit = {
+			exists = dynasty
+			dynasty = { has_dynasty_perk = arcane_legacy_4 }
+			OR = {
+				scope:mother.dynasty = dynasty
+				scope:real_father.dynasty = dynasty
+			}
+		}
+		add = 2
+	}
 }
 
-max_body_mana = {
+max_body_mana_per_affinity = { value = 200 }
+max_body_mana_peak_mage_level = { value = 25 }
+max_body_mana_rise_quickness = { value = 10 }
+# Value used for difference level
+max_body_difference_of_mage_level_to_peak = { 
+	value = mage_level
+	subtract = max_body_mana_peak_mage_level
+}
+
+max_body_mana = { #(x-b)
 	value = mana_affinity
 	multiply = exponential_calculation
 }
@@ -48,24 +77,25 @@ exponential_calculation = {
 		value = 0
 	}
 	
-	while = {
+	while = { # Taylors Series Algorithm
 		count = 9
 		value = 1
 		add = {
 			value = {
 				value = -1
-				multiply = {
-					value = var:mage_level
-					subtract = max_body_mana_peak_mage_level
-					
-					multiply = {
-						value = var:mage_level
-						subtract = max_body_mana_peak_mage_level
+				if = { #If so that the max mana isnt lowered after peak level
+					limit = {
+						max_body_difference_of_mage_level_to_peak <= 0
+					}
+					multiply = { # (x-b)^2
+						value = max_body_difference_of_mage_level_to_peak
+						multiply = max_body_difference_of_mage_level_to_peak
 					}
 				}
 				divide = {
-					value = max_body_mana_rise_quickness
-					multiply = 2
+					value = 2
+					multiply = max_body_mana_rise_quickness
+					multiply = max_body_mana_rise_quickness
 				}
 			}
 			multiply = prev

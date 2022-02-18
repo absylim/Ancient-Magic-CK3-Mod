@@ -1,9 +1,16 @@
-﻿give_base_mana_affinity = {
-	save_temporary_scope_value = {
+﻿#Author: Donekulda
+
+#Script that is mostly called on childs birth
+give_base_mana_affinity = {
+	set_local_variable  = {
 		name = temp_base_mana_affinity_value
 		value = 0
 	}
-	save_temporary_scope_value = {
+	set_local_variable  = {
+		name = temp_mother_base_mana_affinity_value
+		value = 0
+	}
+	set_local_variable  = {
 		name = temp_father_base_mana_affinity_value
 		value = 0
 	}
@@ -20,33 +27,30 @@
 				limit = {
 					has_variable = base_mana_affinity
 				}
-					change_variable = { 
-						name = temp_base_mana_affinity_value 
-						value = {
-							value = base_mana_affinity
-							
-							if = {
-								limit = {
-									exists = var:mage_level
-								}
-								add = {
-									value = var:mage_level
-									divide = {
-										value = mana_affinity
-										multiply = 5
-									}
-									subtract = {
-										value = mana_affinity
-										devide = 5
-									}
-								}
+				change_variable = { 
+					name = temp_mother_base_mana_affinity_value 
+					value = base_mana_affinity
+						
+					if = {
+						limit = {
+							is_magus_trigger = yes
+						}
+						add = {
+							value = mage_level
+							divide = {
+								value = mana_affinity
+								multiply = 5
 							}
-							else = { #if one isnt practicing magic their mana affinity could lower, this is mainly so for those of higher levels
-								subtract = {
-									value = mana_affinity
-									devide = 5
-								}
+							subtract = { # To make it harder to increase on higher levels using mage level and to lower it if the mage level is low
+								value = mana_affinity
+								divide = 5 # use of 5 because the tiers are per five and because mundanes are first 5
 							}
+						}
+					}
+					else = { #if one isnt practicing magic their mana affinity could lower, this is mainly so for those of higher levels
+						subtract = {
+							value = mana_affinity
+							divide = 5
 						}
 					}
 				}
@@ -58,33 +62,100 @@
 				limit = {
 					has_variable = base_mana_affinity
 				}
-					change_variable = { 
-						name = temp_base_mana_affinity_value 
-						value = {
-							value = base_mana_affinity
-							
-							if = {
-								limit = {
-									exists = var:mage_level
-								}
-								add = {
-									value = var:mage_level
-									divide = {
-										value = mana_affinity
-										multiply = 5
-										multiply = 2 # The factor of faster has to be lower as the mother is carrier of the child
-									}
+				change_variable = { 
+					name = temp_father_base_mana_affinity_value 
+					value = base_mana_affinity
+						
+					if = {
+						limit = {
+							is_magus_trigger = yes
+						}
+						add = {
+							value = mage_level
+							divide = {
+								value = mana_affinity
+								multiply = 5
+								multiply = 2 # The factor of father has to be lower as the mother is carrier of the child
+								
+							}
+							subtract = { # To make it harder to increase on higher levels using mage level and to lower it if the mage level is low
+								value = mana_affinity
+								divide = {
+									value = 5 # use of 5 because the tiers are per five and because mundanes are first 5
+									multiply = 2 # as its father so should the effect factor of lowering be lower 
 								}
 							}
+						}
+					}
+					else = { #if one isnt practicing magic their childs mana affinity could lower, this is mainly so for those of higher levels
+						subtract = {
+							value = mana_affinity
+							devide = 5 # use of 5 because the tiers are per five and because mundanes are first 5
 						}
 					}
 				}
 			}
 		}
+		if = {
+			limit = {
+				temp_mother_base_mana_affinity_value > 0
+				temp_father_base_mana_affinity_value > 0
+			}
+			#Duel to determine from whom should the affinity be inherited from	
+			duel = {
+				value = temp_mother_base_mana_affinity_value #mothers mana affinity
+				
+				50 = { #Mothers affinity wins
+					compare_modifier = {
+						value = scope:duel_value
+					}
+					
+					change_variable = { 
+						name = temp_base_mana_affinity_value 
+						value = scope:duel_value
+					}
+					
+					max = 99
+					min = 1
+				}
+				
+				50 = { #Fathers affinity wins
+					compare_modifier = {
+						value = temp_father_base_mana_affinity_value
+					}
+					
+					change_variable = { 
+						name = temp_base_mana_affinity_value 
+						value = temp_father_base_mana_affinity_value
+					}
+				
+					max = 99
+					min = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				temp_mother_base_mana_affinity_value > 0
+			}
+			change_variable = { 
+				name = temp_base_mana_affinity_value 
+				value = temp_mother_base_mana_affinity_value
+			}
+		}
+		else_if = {
+			limit = {
+				temp_father_base_mana_affinity_value > 0
+			}
+			change_variable = { 
+				name = temp_base_mana_affinity_value 
+				value = temp_father_base_mana_affinity_value
+			}
+		}
 	}
 	else = {
 		random_list = { # Affinity given at random if noparents with magical affinity
-			10 = { change_variable = { name = temp_base_mana_affinity_value value = 0} } # 0
+			10 = { change_variable = { name = temp_base_mana_affinity_value value = 0} } # 0 affinity
 			20 = { change_variable = { name = temp_base_mana_affinity_value value = 1} } # 1
 			20 = { change_variable = { name = temp_base_mana_affinity_value value = 2} } # 2
 			20 = { change_variable = { name = temp_base_mana_affinity_value value = 3} } # 3
@@ -94,8 +165,49 @@
 		}
 	}
 	
+	# The effect of ley lines on mana affinity is put into th
+	random_list = { #Gives small chance of increasing/decreasing mana affinity
+		80 = {} #nothing happenes
+		10 = { change_variable = { name = temp_base_mana_affinity_value add = 1} } # Increases by 1
+		10 = { change_variable = { name = temp_base_mana_affinity_value subtract = 1} } # Decreases by 1
+	}
+	
+	# Checks and adds mana affinity bonus if born on ley line or focal point
+	if = {
+		limit = {
+			is_located_on_ley_line = yes
+			temp_base_mana_affinity_value < 10 #So that its not easy after some tier to increase it with ley line
+		}
+		random_list = {
+			75 = {} #Nothing happens
+			15 = { change_variable = { name = temp_base_mana_affinity_value add = 1} }
+			9 = { change_variable = { name = temp_base_mana_affinity_value add = 2} }
+			1 = { change_variable = { name = temp_base_mana_affinity_value add = 3} }
+		}
+	}
+	else_if = {
+		limit = {
+			is_located_on_focal_point = yes
+			temp_base_mana_affinity_value < 15 #So that its not easy after some tier to increase it with focul points
+		}
+		random_list = {
+			50 = {} #Nothing happens
+			30 = { change_variable = { name = temp_base_mana_affinity_value add = 1} }
+			15 = { change_variable = { name = temp_base_mana_affinity_value add = 2} }
+			5 = { change_variable = { name = temp_base_mana_affinity_value add = 3} }
+		}
+	}
+	
+	change_variable = {
+		name = temp_base_mana_affinity_value 
+		add = base_mana_affinity_bonus
+	}
+			
 	set_variable = {
 		name = base_mana_affinity
 		value = temp_base_mana_affinity_value
+		
+		min = 0
+		max = 30
 	}
 }
