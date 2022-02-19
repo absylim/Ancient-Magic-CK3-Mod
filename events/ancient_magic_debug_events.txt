@@ -4,21 +4,10 @@
 
 namespace = ancient_magic_debug
 
-#Get players mana affinity
+#Get players mana affinity information
 ancient_magic_debug.001 = {
 	title = ancient_magic_debug.001.t
 	desc = ancient_magic_debug.001.desc
-
-	
-	option = { #Ok
-		name = ancient_magic_debug.001.ok
-	}
-}
-
-#get players parents mana affinity
-ancient_magic_debug.002 = {
-	title = ancient_magic_debug.002.t
-	desc = ancient_magic_debug.002.desc
 
 	
 	option = { #Ok

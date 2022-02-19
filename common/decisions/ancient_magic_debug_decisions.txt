@@ -28,18 +28,3 @@ debug_regenerate_base_mana_affinity = {
 		give_base_mana_affinity = yes
 	}
 }
-
-debug_check_parents_mana_affinity = {
-	is_shown = {
-		is_ai = no
-		debug_mode = yes
-	}
-	
-	is_valid = {
-		always = yes
-	}
-
-	effect = {
-		trigger_event = ancient_magic_debug.002
-	}
-}
