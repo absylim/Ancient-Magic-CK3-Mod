@@ -63,7 +63,7 @@
 		gain_mana_gen_perk = { VALUE = death_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = death_mage_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = death_mage_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -81,7 +81,7 @@ inflict_illness_perk = {
 		gain_mana_gen_perk = { VALUE = inflict_illness_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = inflict_illness_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = inflict_illness_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -99,7 +99,7 @@ plague_lord_perk = {
 		gain_mana_gen_perk = { VALUE = plague_lord_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = plague_lord_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = plague_lord_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -117,7 +117,7 @@ aura_of_death_perk = {
 		gain_mana_gen_perk = { VALUE = aura_of_death_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = aura_of_death_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = aura_of_death_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -135,7 +135,7 @@ necromancy_perk = {
 		gain_mana_gen_perk = { VALUE = necromancy_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = necromancy_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = necromancy_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -153,7 +153,7 @@ drain_life_perk = {
 		gain_mana_gen_perk = { VALUE = drain_life_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = drain_life_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = drain_life_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -171,7 +171,7 @@ death_stare_perk = {
 		gain_mana_gen_perk = { VALUE = death_stare_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = death_stare_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = death_stare_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -191,7 +191,7 @@ blight_perk = {
 		gain_mana_gen_perk = { VALUE = blight_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = blight_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = blight_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -209,7 +209,7 @@ deacon_of_death_perk = {
 		gain_mana_gen_perk = { VALUE = deacon_of_death_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = deacon_of_death_perk_max_mana }
 		mod_bit = { MASK = necromancy_perk_mask_0 BIT = deacon_of_death_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
