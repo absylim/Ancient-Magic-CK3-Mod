@@ -65,6 +65,10 @@ reset_mana_system_decision = {
 					has_variable = mana_gen
 				}
 			}
+			AND = {
+				is_magus_trigger = yes
+				has_perk_masks_trigger = no
+			}
 		}
 	}
 
@@ -105,38 +109,7 @@ reset_mana_system_decision = {
 						remove_perk = death_magic_8_perk
 						add_perk = blight_perk
 					}
-					set_variable = {
-						name = aura_mask_0
-						value = 0
-					}
-					set_variable = {
-						name = basic_perk_mask_0
-						value = basic_perk_mask_0_maker
-					}
-					set_variable = {
-						name = chronomancy_perk_mask_0
-						value = chronomancy_perk_mask_0_maker
-					}
-					set_variable = {
-						name = life_perk_mask_0
-						value = life_perk_mask_0_maker
-					}
-					set_variable = {
-						name = elomancy_perk_mask_0
-						value = elomancy_perk_mask_0_maker
-					}
-					set_variable = {
-						name = necromancy_perk_mask_0
-						value = necromancy_perk_mask_0_maker
-					}
-					set_variable = {
-						name = biomancy_perk_mask_0
-						value = biomancy_perk_mask_0_maker
-					}
-					set_variable = {
-						name = mensomancy_perk_mask_0
-						value = mensomancy_perk_mask_0_maker
-					}
+					init_perk_masks_effect = yes
 					remove_character_flag = magic_potential_1_mana_added
 					remove_character_flag = magic_potential_2_mana_added
 					remove_character_flag = magic_potential_3_mana_added

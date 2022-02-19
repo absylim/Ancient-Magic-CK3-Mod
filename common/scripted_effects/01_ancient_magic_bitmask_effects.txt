@@ -1,20 +1,14 @@
 ﻿# Valid OPs: flip, set, unset
 mod_bit = {
 	if = {
-		limit = { NOT = {exists = var:$MASK$ } }
+		limit = { NOT = { exists = var:$MASK$ } }
 		set_variable = {
 			name = $MASK$
-			value = 0
+			value = $MASK$_maker
 		}
 	}
 	set_variable = {
 		name = $MASK$
 		value = var:$MASK$.$BIT$_$OP$
 	}
-}
-
-add_perk_from_school_effect = {
-	add_perk = $PERK$
-	mod_bit = { MASK = $SCHOOL$_perk_mask_0 BIT = $PERK$_bit OP = set }
-	trigger_event = { on_action = on_reset_mana_system }
 }

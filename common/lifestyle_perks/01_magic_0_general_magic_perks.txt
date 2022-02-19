@@ -56,6 +56,7 @@
 			value = 0
 		}
 		set_variable = { name = available_magic_perks value = num_available_magic_perks }
+		trigger_event = { on_action = on_reset_mana_system }
 		trigger_event = { on_action = set_up_remaining_mana_gen_for_year }
 	}
 }
