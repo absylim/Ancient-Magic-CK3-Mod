@@ -27,8 +27,12 @@ toggle_magic_advancement_window = {
 		}
 		else = {
 			if = {
-				limit = { NOT = { has_variable = basic_perk_mask_0 } }
+				limit = { has_perk_masks_trigger = no }
 				init_perk_masks_effect = yes
+				set_variable = {
+					name = available_magic_perks
+					value = mage_level
+				}
 			}
 			effect_open_magic_advancement_window = yes
 		}
@@ -123,10 +127,7 @@ perk_select = {
 
 	is_valid = { # aka can_be_selected
 		AND = {
-			OR = {
-				is_magus_trigger = no # workaround to keep non-mages from throwing 62 errors per frame
-				var:available_magic_perks > 0
-			}
+			var:available_magic_perks > 0
 			has_character_modifier = magic_advancement_modifier
 			switch = {
 				trigger = scope:perk
