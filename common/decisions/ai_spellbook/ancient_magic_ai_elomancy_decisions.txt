@@ -3,14 +3,14 @@
 		is_ai = yes
 		is_magus_trigger = yes
 		has_perk = golem_creation_perk
-		var:mana.compare_value >= var:golem_creation_spell_cost.compare_value
+		var:mana.compare_value >= golem_creation_spell_cost.compare_value
 		NOT = { has_character_modifier = golem_cooldown_modifier }
 	}
 	
 	ai_check_interval = 1	
 	
 	effect = {
-		deduct_mana_with_tooltip = { VALUE = var:golem_creation_spell_cost }
+		change_mana = { VALUE = golem_creation_spell_cost.neg }
 		spawn_army = {
 			name = golem_army
 			uses_supply = no
@@ -44,14 +44,14 @@ lava_golem_ai_spell_decision = {
 		is_ai = yes
 		is_magus_trigger = yes
 		has_trait = lord_of_the_elements
-		var:mana.compare_value >= var:lord_of_the_elements_spell_cost.compare_value
+		var:mana.compare_value >= lord_of_the_elements_spell_cost.compare_value
 		NOT = { has_character_modifier = lava_golem_cooldown_modifier }
 	}
 	
 	ai_check_interval = 1	
 	
 	effect = {
-		deduct_mana_with_tooltip = { VALUE = var:lord_of_the_elements_spell_cost }
+		change_mana = { VALUE = lord_of_the_elements_spell_cost.neg }
 		
 		spawn_army = {
 			name = lava_golem_army
@@ -95,7 +95,7 @@ flame_aura_ai_spell_decision = {
 		is_ai = yes
 		is_magus_trigger = yes
 		has_perk = flame_aura_perk
-		var:mana.compare_value >= var:flame_aura_spell_cost.compare_value
+		var:mana.compare_value >= flame_aura_spell_cost.compare_value
 	}
 	
 	ai_check_interval = 1	
@@ -103,13 +103,13 @@ flame_aura_ai_spell_decision = {
 	effect = {
 		if = {
 			limit = {
-				var:mana.compare_value >= var:flame_aura_spell_cost.compare_value
+				var:mana.compare_value >= flame_aura_spell_cost.compare_value
 				NOT = {
 					has_character_modifier = flame_aura_spell_modifier
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:flame_aura_spell_cost }
+			change_mana = { VALUE = flame_aura_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -165,7 +165,7 @@ flaming_weapons_ai_spell_decision = {
 		is_ai = yes
 		is_magus_trigger = yes
 		has_perk = flaming_weapons_perk
-		var:mana.compare_value >= var:flaming_weapons_spell_cost.compare_value
+		var:mana.compare_value >= flaming_weapons_spell_cost.compare_value
 	}
 	
 	ai_check_interval = 1	
@@ -173,13 +173,13 @@ flaming_weapons_ai_spell_decision = {
 	effect = {
 		if = {
 			limit = {
-				var:mana.compare_value >= var:flaming_weapons_spell_cost.compare_value
+				var:mana.compare_value >= flaming_weapons_spell_cost.compare_value
 				NOT = {
 					has_character_modifier = flaming_weapons_spell_modifier
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:flaming_weapons_spell_cost }
+			change_mana = { VALUE = flaming_weapons_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -235,7 +235,7 @@ living_earthworks_ai_spell_decision = {
 		is_ai = yes
 		is_magus_trigger = yes
 		has_perk = living_earthworks_perk
-		var:mana.compare_value >= var:living_earthworks_spell_cost.compare_value
+		var:mana.compare_value >= living_earthworks_spell_cost.compare_value
 	}
 	
 	ai_check_interval = 1	
@@ -243,13 +243,13 @@ living_earthworks_ai_spell_decision = {
 	effect = {
 		if = {
 			limit = {
-				var:mana.compare_value >= var:living_earthworks_spell_cost.compare_value
+				var:mana.compare_value >= living_earthworks_spell_cost.compare_value
 				NOT = {
 					has_character_modifier = living_earthworks_spell_modifier
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:living_earthworks_spell_cost }
+			change_mana = { VALUE = living_earthworks_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -305,7 +305,7 @@ water_control_ai_spell_decision = {
 		is_ai = yes
 		is_magus_trigger = yes
 		has_perk = control_water_perk
-		var:mana.compare_value >= var:control_water_spell_cost.compare_value
+		var:mana.compare_value >= control_water_spell_cost.compare_value
 	}
 	
 	ai_check_interval = 1	
@@ -313,13 +313,13 @@ water_control_ai_spell_decision = {
 	effect = {
 		if = {
 			limit = {
-				var:mana.compare_value >= var:control_water_spell_cost.compare_value
+				var:mana.compare_value >= control_water_spell_cost.compare_value
 				NOT = {
 					has_character_modifier = control_water_spell_modifier
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:control_water_spell_cost }
+			change_mana = { VALUE = control_water_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -375,7 +375,7 @@ cloak_of_elements_ai_spell_decision = {
 		is_ai = yes
 		is_magus_trigger = yes
 		has_perk = elemental_warrior_perk
-		var:mana.compare_value >= var:elemental_warrior_spell_cost.compare_value
+		var:mana.compare_value >= elemental_warrior_spell_cost.compare_value
 	}
 	
 	ai_check_interval = 1	
@@ -388,7 +388,7 @@ cloak_of_elements_ai_spell_decision = {
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:elemental_warrior_spell_cost }
+			change_mana = { VALUE = elemental_warrior_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -30 }
 

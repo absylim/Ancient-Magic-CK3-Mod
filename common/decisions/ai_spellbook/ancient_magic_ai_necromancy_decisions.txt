@@ -2,7 +2,7 @@
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:necromancy_spell_cost.compare_value
+		var:mana.compare_value >= necromancy_spell_cost.compare_value
 		NOT = {
 			has_character_modifier = undead_horde_cooldown_modifier
 		}
@@ -12,7 +12,7 @@
 	ai_check_interval = 1	
 	
 	effect = {
-		deduct_mana_with_tooltip = { VALUE = var:necromancy_spell_cost }
+		change_mana = { VALUE = necromancy_spell_cost.neg }
 		
 		spawn_army = {
 			name = undead_horde
@@ -47,14 +47,14 @@ become_liche_ai_spell_decision = {
 		is_ai = yes
 		is_magus_trigger = yes
 		has_perk = deacon_of_death_perk
-		var:mana.compare_value >= var:deacon_of_death_spell_cost.compare_value
+		var:mana.compare_value >= deacon_of_death_spell_cost.compare_value
 		NOT = { has_trait = undead }
 	}
 	
 	ai_check_interval = 1	
 	
 	effect = {
-		deduct_mana_with_tooltip = { VALUE = var:deacon_of_death_spell_cost }
+		change_mana = { VALUE = deacon_of_death_spell_cost.neg }
 		add_trait = undead
 	}
 	
@@ -78,7 +78,7 @@ aura_of_death_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:aura_of_death_spell_cost.compare_value
+		var:mana.compare_value >= aura_of_death_spell_cost.compare_value
 		has_perk = aura_of_death_perk
 	}
 	
@@ -92,7 +92,7 @@ aura_of_death_ai_spell_decision = {
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:aura_of_death_spell_cost }
+			change_mana = { VALUE = aura_of_death_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -30 }
 
