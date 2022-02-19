@@ -10,7 +10,7 @@ ancient_magic_rituals_events.001 = { #Forge soul
 		}
 		name = ancient_magic_rituals_events.001.a
 		
-		deduct_mana_with_tooltip = { VALUE = soul_materialisation_mana_cost }
+		change_mana = { VALUE = soul_materialisation_mana_cost.neg }
 		
 		duel = {
 			value = mage_level

@@ -2,7 +2,7 @@
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:mass_celerity_spell_cost.compare_value
+		var:mana.compare_value >= mass_celerity_spell_cost.compare_value
 		has_perk = mass_celerity_perk
 	}
 	
@@ -16,7 +16,7 @@
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:mass_celerity_spell_cost }
+			change_mana = { VALUE = mass_celerity_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -74,7 +74,7 @@ glimpse_the_future_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:glimpse_the_future_spell_cost.compare_value
+		var:mana.compare_value >= glimpse_the_future_spell_cost.compare_value
 		has_perk = glimpse_the_future_perk
 	}
 	
@@ -88,7 +88,7 @@ glimpse_the_future_ai_spell_decision = {
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:glimpse_the_future_spell_cost }
+			change_mana = { VALUE = glimpse_the_future_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -149,7 +149,7 @@ financial_times_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:financial_times_spell_cost.compare_value
+		var:mana.compare_value >= financial_times_spell_cost.compare_value
 		has_perk = financial_times_perk
 	}
 	
@@ -163,7 +163,7 @@ financial_times_ai_spell_decision = {
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:financial_times_spell_cost }
+			change_mana = { VALUE = financial_times_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -226,7 +226,7 @@ celerity_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:celerity_spell_cost.compare_value
+		var:mana.compare_value >= celerity_spell_cost.compare_value
 		has_perk = celerity_perk
 	}
 	
@@ -240,7 +240,7 @@ celerity_ai_spell_decision = {
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:celerity_spell_cost }
+			change_mana = { VALUE = celerity_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -303,7 +303,7 @@ temporal_manipulation_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:temporal_manipulation_spell_cost.compare_value
+		var:mana.compare_value >= temporal_manipulation_spell_cost.compare_value
 		has_perk = temporal_manipulation_perk
 	}
 	
@@ -317,7 +317,7 @@ temporal_manipulation_ai_spell_decision = {
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:temporal_manipulation_spell_cost }
+			change_mana = { VALUE = temporal_manipulation_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -30 }
 
