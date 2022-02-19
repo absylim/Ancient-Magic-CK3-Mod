@@ -105,6 +105,10 @@ master_of_puppets = {
 mage = {
 	index = 33302
 
+	inherit_chance = 0
+	birth = 0
+	random_creation = 0
+
 	same_opinion = 20
 
 	ruler_designer_cost = 10
