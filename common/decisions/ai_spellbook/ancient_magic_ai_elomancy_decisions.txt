@@ -3,7 +3,7 @@
 		is_ai = yes
 		is_magus_trigger = yes
 		has_perk = golem_creation_perk
-		var:mana.compare_value >= golem_creation_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = golem_creation_spell_cost }
 		NOT = { has_character_modifier = golem_cooldown_modifier }
 	}
 	
@@ -44,7 +44,7 @@ lava_golem_ai_spell_decision = {
 		is_ai = yes
 		is_magus_trigger = yes
 		has_trait = lord_of_the_elements
-		var:mana.compare_value >= lord_of_the_elements_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = lord_of_the_elements_spell_cost }
 		NOT = { has_character_modifier = lava_golem_cooldown_modifier }
 	}
 	
@@ -95,7 +95,7 @@ flame_aura_ai_spell_decision = {
 		is_ai = yes
 		is_magus_trigger = yes
 		has_perk = flame_aura_perk
-		var:mana.compare_value >= flame_aura_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = flame_aura_spell_cost }
 	}
 	
 	ai_check_interval = 1	
@@ -103,7 +103,7 @@ flame_aura_ai_spell_decision = {
 	effect = {
 		if = {
 			limit = {
-				var:mana.compare_value >= flame_aura_spell_cost.compare_value
+				has_enough_mana_trigger = { SPELL = flame_aura_spell_cost }
 				NOT = {
 					has_character_modifier = flame_aura_spell_modifier
 				}
@@ -165,7 +165,7 @@ flaming_weapons_ai_spell_decision = {
 		is_ai = yes
 		is_magus_trigger = yes
 		has_perk = flaming_weapons_perk
-		var:mana.compare_value >= flaming_weapons_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = flaming_weapons_spell_cost }
 	}
 	
 	ai_check_interval = 1	
@@ -173,7 +173,7 @@ flaming_weapons_ai_spell_decision = {
 	effect = {
 		if = {
 			limit = {
-				var:mana.compare_value >= flaming_weapons_spell_cost.compare_value
+				has_enough_mana_trigger = { SPELL = flaming_weapons_spell_cost }
 				NOT = {
 					has_character_modifier = flaming_weapons_spell_modifier
 				}
@@ -235,7 +235,7 @@ living_earthworks_ai_spell_decision = {
 		is_ai = yes
 		is_magus_trigger = yes
 		has_perk = living_earthworks_perk
-		var:mana.compare_value >= living_earthworks_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = living_earthworks_spell_cost }
 	}
 	
 	ai_check_interval = 1	
@@ -243,7 +243,7 @@ living_earthworks_ai_spell_decision = {
 	effect = {
 		if = {
 			limit = {
-				var:mana.compare_value >= living_earthworks_spell_cost.compare_value
+				has_enough_mana_trigger = { SPELL = living_earthworks_spell_cost }
 				NOT = {
 					has_character_modifier = living_earthworks_spell_modifier
 				}
@@ -305,7 +305,7 @@ water_control_ai_spell_decision = {
 		is_ai = yes
 		is_magus_trigger = yes
 		has_perk = control_water_perk
-		var:mana.compare_value >= control_water_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = control_water_spell_cost }
 	}
 	
 	ai_check_interval = 1	
@@ -313,7 +313,7 @@ water_control_ai_spell_decision = {
 	effect = {
 		if = {
 			limit = {
-				var:mana.compare_value >= control_water_spell_cost.compare_value
+				has_enough_mana_trigger = { SPELL = control_water_spell_cost }
 				NOT = {
 					has_character_modifier = control_water_spell_modifier
 				}
@@ -375,7 +375,7 @@ cloak_of_elements_ai_spell_decision = {
 		is_ai = yes
 		is_magus_trigger = yes
 		has_perk = elemental_warrior_perk
-		var:mana.compare_value >= elemental_warrior_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = elemental_warrior_spell_cost }
 	}
 	
 	ai_check_interval = 1	
