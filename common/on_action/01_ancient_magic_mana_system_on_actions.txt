@@ -61,52 +61,30 @@ monthly_mana_gen = {
 	}
 
 	on_actions = {
-		give_monthly_mana
-		delay = { days = 28 }
-		delay_mana_gen_till_1st_of_month
-	}
-
-	effect = {
-		change_variable = {
-			name = mana_gen_months_left
-			subtract = 1
-		}
-	}
-}
-
-delay_mana_gen_till_1st_of_month = {
-	trigger = {
-		# run until the second day of the month - first day of the month triggers mana gen
-		NOT = { current_day.compare_value = 2 }
-	}
-
-	on_actions = {
 		delay = { days = 1 }
-		delay_mana_gen_till_1st_of_month
+		monthly_mana_gen
 	}
 
 	effect = {
 		if = {
 			limit = { current_day.compare_value = 1 }
-			trigger_event = { on_action = monthly_mana_gen }
-		}
-	}
-}
+			# the effect clamps to 0 < mana < max_mana
+			change_mana = { VALUE = var:mana_gen }
 
-give_monthly_mana = {
-	effect = {
-		# the effect clamps to 0 < mana < max_mana
-		change_mana = { VALUE = var:mana_gen }
-
-		if = { #Infinite mana trait
-			limit = { has_trait = infinite_mana }
-			set_variable = {
-				name = max_mana
-				value = 999999
+			if = { #Infinite mana trait
+				limit = { has_trait = infinite_mana }
+				set_variable = {
+					name = max_mana
+					value = 999999
+				}
+				set_variable = {
+					name = mana
+					value = var:max_mana
+				}
 			}
-			set_variable = {
-				name = mana
-				value = var:max_mana
+			change_variable = {
+				name = mana_gen_months_left
+				subtract = 1
 			}
 		}
 	}
@@ -119,20 +97,10 @@ daily_mana_gen = {
 	}
 
 	on_actions = {
-		give_daily_mana
 		delay = { days = 1 }
 		daily_mana_gen
 	}
 
-	effect = {
-		change_variable = {
-			name = mana_gen_days_left
-			subtract = 1
-		}
-	}
-}
-
-give_daily_mana = {
 	effect = {
 		# the effect clamps to 0 < mana < max_mana
 		save_temporary_scope_value_as = {
@@ -155,6 +123,10 @@ give_daily_mana = {
 				name = mana
 				value = var:max_mana
 			}
+		}
+		change_variable = {
+			name = mana_gen_days_left
+			subtract = 1
 		}
 	}
 }
