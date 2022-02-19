@@ -6,24 +6,22 @@ ancient_magic_rituals_events.001 = { #Forge soul
 		
 	option = {
 		trigger = {
-			exists = var:mage_level
-			var:mana >= var:soul_materialisation_mana_cost
+			var:mana >= soul_materialisation_mana_cost
 		}
 		name = ancient_magic_rituals_events.001.a
 		
-		change_mana = { VALUE = var:soul_materialisation_mana_cost }
+		deduct_mana_with_tooltip = { VALUE = soul_materialisation_mana_cost }
 		
 		duel = {
-			value = var:mage_level
+			value = mage_level
 			
 			50 = { #Success
 				desc = ancient_magic_rituals_events.001.a.success
 				compare_modifier = {
 					value = scope:duel_value
-					subtract = 10
-					multiplier = 5
+					multiplier = 1.5
 				}
-				max = 99
+				min = -49
 				
 				trigger_event = ancient_magic_rituals_events.002
 			}
@@ -32,11 +30,20 @@ ancient_magic_rituals_events.001 = { #Forge soul
 				desc = ancient_magic_rituals_events.001.a.failure
 				compare_modifier = {
 					value = scope:duel_value
-					subtract = 10
-					multiplier = -5
+					multiplier = {
+						if = {
+							limit = {
+								scope:duel_value > 10
+							}
+							value = -1.5
+						}
+						else = {
+							value = 500
+						}
+					}
 				}
 				
-				min = 1
+				min = -49
 				
 				trigger_event = ancient_magic_rituals_events.003
 			}
