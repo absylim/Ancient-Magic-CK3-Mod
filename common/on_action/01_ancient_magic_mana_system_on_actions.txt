@@ -10,7 +10,6 @@ yearly_mana_pulse = {
 			limit = { has_game_rule = am_magic_gen_daily }
 			every_living_character = {
 				limit = { is_magus_trigger = yes }
-				if = { limit = { has_perk_masks_trigger = no } init_perk_masks_effect = yes }
 				set_variable = {
 					name = mana_gen_days_left
 					value = 365
@@ -21,7 +20,6 @@ yearly_mana_pulse = {
 		else = {
 			every_living_character = {
 				limit = { is_magus_trigger = yes }
-				if = { limit = { has_perk_masks_trigger = no } init_perk_masks_effect = yes }
 				set_variable = {
 					name = mana_gen_months_left
 					value = 12
