@@ -1,8 +1,5 @@
 ﻿is_magus_trigger = {
-	OR = {
-		has_trait = mage
-		any_secret = { secret_type = secret_mage }
-	}
+	has_perk = mage_perk
 }
 
 is_magic_aura_trigger = {
