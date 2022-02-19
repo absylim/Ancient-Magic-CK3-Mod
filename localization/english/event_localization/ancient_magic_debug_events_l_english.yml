@@ -1,0 +1,7 @@
+﻿l_english:
+ ancient_magic_debug.001.t: "Mana Affinity"
+ ancient_magic_debug.001.desc: "Your Mana Affinity is [ROOT.ScriptValue('mana_affinity')|0] "
+ ancient_magic_debug.001.ok: "Ok"
+ 
+ ancient_magic_debug.002.t: "Parents Mana Affinity"
+ ancient_magic_debug.002.desc: "Mothers Mana Affinity is [ROOT.ScriptValue('mother_base_affinity')|0] and fathers Mana Affinity is [ROOT.ScriptValue('father_base_affinity')|0]"
