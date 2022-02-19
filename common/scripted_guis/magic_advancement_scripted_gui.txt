@@ -194,61 +194,61 @@ perk_select = {
 	effect = {
 		switch = {
 			trigger = scope:perk
-			flag:mage_perk = { add_perk_from_school_effect = { SCHOOL = none PERK = mage_perk } }
-			flag:chronomancy_mage_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = chronomancy_mage_perk } }
-			flag:glimpse_the_future_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = glimpse_the_future_perk } }
-			flag:financial_times_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = financial_times_perk } }
-			flag:celerity_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = celerity_perk } }
-			flag:mass_celerity_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = mass_celerity_perk } }
-			flag:slowness_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = slowness_perk } }
-			flag:mass_slowness_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = mass_slowness_perk } }
-			flag:temporal_manipulation_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = temporal_manipulation_perk } }
-			flag:master_of_time_perk = { add_perk_from_school_effect = { SCHOOL = chronomancy PERK = master_of_time_perk } }
-			flag:life_mage_perk = { add_perk_from_school_effect = { SCHOOL = life PERK = life_mage_perk } }
-			flag:inward_reflection_perk = { add_perk_from_school_effect = { SCHOOL = life PERK = inward_reflection_perk } }
-			flag:inward_perfection_perk = { add_perk_from_school_effect = { SCHOOL = life PERK = inward_perfection_perk } }
-			flag:heal_perk = { add_perk_from_school_effect = { SCHOOL = life PERK = heal_perk } }
-			flag:greater_heal_perk = { add_perk_from_school_effect = { SCHOOL = life PERK = greater_heal_perk } }
-			flag:battlefield_life_mage_perk = { add_perk_from_school_effect = { SCHOOL = life PERK = battlefield_life_mage_perk } }
-			flag:greater_battlefield_life_mage_perk = { add_perk_from_school_effect = { SCHOOL = life PERK = greater_battlefield_life_mage_perk } }
-			flag:purity_of_body_perk = { add_perk_from_school_effect = { SCHOOL = life PERK = purity_of_body_perk } }
-			flag:avatar_of_life_perk = { add_perk_from_school_effect = { SCHOOL = life PERK = avatar_of_life_perk } }
-			flag:elemental_mage_perk = { add_perk_from_school_effect = { SCHOOL = elomancy PERK = elemental_mage_perk } }
-			flag:flame_aura_perk = { add_perk_from_school_effect = { SCHOOL = elomancy PERK = flame_aura_perk } }
-			flag:flaming_weapons_perk = { add_perk_from_school_effect = { SCHOOL = elomancy PERK = flaming_weapons_perk } }
-			flag:living_earthworks_perk = { add_perk_from_school_effect = { SCHOOL = elomancy PERK = living_earthworks_perk } }
-			flag:golem_creation_perk = { add_perk_from_school_effect = { SCHOOL = elomancy PERK = golem_creation_perk } }
-			flag:control_water_perk = { add_perk_from_school_effect = { SCHOOL = elomancy PERK = control_water_perk } }
-			flag:drought_perk = { add_perk_from_school_effect = { SCHOOL = elomancy PERK = drought_perk } }
-			flag:elemental_warrior_perk = { add_perk_from_school_effect = { SCHOOL = elomancy PERK = elemental_warrior_perk } }
-			flag:lord_of_the_elements_perk = { add_perk_from_school_effect = { SCHOOL = elomancy PERK = lord_of_the_elements_perk } }
-			flag:death_mage_perk = { add_perk_from_school_effect = { SCHOOL = necromancy PERK = death_mage_perk } }
-			flag:inflict_illness_perk = { add_perk_from_school_effect = { SCHOOL = necromancy PERK = inflict_illness_perk } }
-			flag:plague_lord_perk = { add_perk_from_school_effect = { SCHOOL = necromancy PERK = plague_lord_perk } }
-			flag:aura_of_death_perk = { add_perk_from_school_effect = { SCHOOL = necromancy PERK = aura_of_death_perk } }
-			flag:necromancy_perk = { add_perk_from_school_effect = { SCHOOL = necromancy PERK = necromancy_perk } }
-			flag:drain_life_perk = { add_perk_from_school_effect = { SCHOOL = necromancy PERK = drain_life_perk } }
-			flag:death_stare_perk = { add_perk_from_school_effect = { SCHOOL = necromancy PERK = death_stare_perk } }
-			flag:blight_perk = { add_perk_from_school_effect = { SCHOOL = necromancy PERK = blight_perk } }
-			flag:deacon_of_death_perk = { add_perk_from_school_effect = { SCHOOL = necromancy PERK = deacon_of_death_perk } }
-			flag:biomancy_mage_perk = { add_perk_from_school_effect = { SCHOOL = biomancy PERK = biomancy_mage_perk } }
-			flag:improve_trait_perk = { add_perk_from_school_effect = { SCHOOL = biomancy PERK = improve_trait_perk } }
-			flag:perfect_trait_perk = { add_perk_from_school_effect = { SCHOOL = biomancy PERK = perfect_trait_perk } }
-			flag:fertility_control_perk = { add_perk_from_school_effect = { SCHOOL = biomancy PERK = fertility_control_perk } }
-			flag:impregnate_perk = { add_perk_from_school_effect = { SCHOOL = biomancy PERK = impregnate_perk } }
-			flag:weaken_trait_perk = { add_perk_from_school_effect = { SCHOOL = biomancy PERK = weaken_trait_perk } }
-			flag:criple_trait_perk = { add_perk_from_school_effect = { SCHOOL = biomancy PERK = criple_trait_perk } }
-			flag:sculpter_of_flesh_perk = { add_perk_from_school_effect = { SCHOOL = biomancy PERK = sculpter_of_flesh_perk } }
-			flag:architect_of_bloodlines_perk = { add_perk_from_school_effect = { SCHOOL = biomancy PERK = architect_of_bloodlines_perk } }
-			flag:domination_mage_perk = { add_perk_from_school_effect = { SCHOOL = mensomancy PERK = domination_mage_perk } }
-			flag:entrance_perk = { add_perk_from_school_effect = { SCHOOL = mensomancy PERK = entrance_perk } }
-			flag:incite_lust_perk = { add_perk_from_school_effect = { SCHOOL = mensomancy PERK = incite_lust_perk } }
-			flag:incite_obedience_perk = { add_perk_from_school_effect = { SCHOOL = mensomancy PERK = incite_obedience_perk } }
-			flag:dominate_perk = { add_perk_from_school_effect = { SCHOOL = mensomancy PERK = dominate_perk } }
-			flag:beguiling_aura_perk = { add_perk_from_school_effect = { SCHOOL = mensomancy PERK = beguiling_aura_perk } }
-			flag:friendship_perk = { add_perk_from_school_effect = { SCHOOL = mensomancy PERK = friendship_perk } }
-			flag:enchanting_aura_perk = { add_perk_from_school_effect = { SCHOOL = mensomancy PERK = enchanting_aura_perk } }
-			flag:master_of_puppets_perk = { add_perk_from_school_effect = { SCHOOL = mensomancy PERK = master_of_puppets_perk } }
+			flag:mage_perk = { add_perk = mage_perk }
+			flag:chronomancy_mage_perk = { add_perk = chronomancy_mage_perk }
+			flag:glimpse_the_future_perk = { add_perk = glimpse_the_future_perk }
+			flag:financial_times_perk = { add_perk = financial_times_perk }
+			flag:celerity_perk = { add_perk = celerity_perk }
+			flag:mass_celerity_perk = { add_perk = mass_celerity_perk }
+			flag:slowness_perk = { add_perk = slowness_perk }
+			flag:mass_slowness_perk = { add_perk = mass_slowness_perk }
+			flag:temporal_manipulation_perk = { add_perk = temporal_manipulation_perk }
+			flag:master_of_time_perk = { add_perk = master_of_time_perk }
+			flag:life_mage_perk = { add_perk = life_mage_perk }
+			flag:inward_reflection_perk = { add_perk = inward_reflection_perk }
+			flag:inward_perfection_perk = { add_perk = inward_perfection_perk }
+			flag:heal_perk = { add_perk = heal_perk }
+			flag:greater_heal_perk = { add_perk = greater_heal_perk }
+			flag:battlefield_life_mage_perk = { add_perk = battlefield_life_mage_perk }
+			flag:greater_battlefield_life_mage_perk = { add_perk = greater_battlefield_life_mage_perk }
+			flag:purity_of_body_perk = { add_perk = purity_of_body_perk }
+			flag:avatar_of_life_perk = { add_perk = avatar_of_life_perk }
+			flag:elemental_mage_perk = { add_perk = elemental_mage_perk }
+			flag:flame_aura_perk = { add_perk = flame_aura_perk }
+			flag:flaming_weapons_perk = { add_perk = flaming_weapons_perk }
+			flag:living_earthworks_perk = { add_perk = living_earthworks_perk }
+			flag:golem_creation_perk = { add_perk = golem_creation_perk }
+			flag:control_water_perk = { add_perk = control_water_perk }
+			flag:drought_perk = { add_perk = drought_perk }
+			flag:elemental_warrior_perk = { add_perk = elemental_warrior_perk }
+			flag:lord_of_the_elements_perk = { add_perk = lord_of_the_elements_perk }
+			flag:death_mage_perk = { add_perk = death_mage_perk }
+			flag:inflict_illness_perk = { add_perk = inflict_illness_perk }
+			flag:plague_lord_perk = { add_perk = plague_lord_perk }
+			flag:aura_of_death_perk = { add_perk = aura_of_death_perk }
+			flag:necromancy_perk = { add_perk = necromancy_perk }
+			flag:drain_life_perk = { add_perk = drain_life_perk }
+			flag:death_stare_perk = { add_perk = death_stare_perk }
+			flag:blight_perk = { add_perk = blight_perk }
+			flag:deacon_of_death_perk = { add_perk = deacon_of_death_perk }
+			flag:biomancy_mage_perk = { add_perk = biomancy_mage_perk }
+			flag:improve_trait_perk = { add_perk = improve_trait_perk }
+			flag:perfect_trait_perk = { add_perk = perfect_trait_perk }
+			flag:fertility_control_perk = { add_perk = fertility_control_perk }
+			flag:impregnate_perk = { add_perk = impregnate_perk }
+			flag:weaken_trait_perk = { add_perk = weaken_trait_perk }
+			flag:criple_trait_perk = { add_perk = criple_trait_perk }
+			flag:sculpter_of_flesh_perk = { add_perk = sculpter_of_flesh_perk }
+			flag:architect_of_bloodlines_perk = { add_perk = architect_of_bloodlines_perk }
+			flag:domination_mage_perk = { add_perk = domination_mage_perk }
+			flag:entrance_perk = { add_perk = entrance_perk }
+			flag:incite_lust_perk = { add_perk = incite_lust_perk }
+			flag:incite_obedience_perk = { add_perk = incite_obedience_perk }
+			flag:dominate_perk = { add_perk = dominate_perk }
+			flag:beguiling_aura_perk = { add_perk = beguiling_aura_perk }
+			flag:friendship_perk = { add_perk = friendship_perk }
+			flag:enchanting_aura_perk = { add_perk = enchanting_aura_perk }
+			flag:master_of_puppets_perk = { add_perk = master_of_puppets_perk }
 		}
 	}
 }
