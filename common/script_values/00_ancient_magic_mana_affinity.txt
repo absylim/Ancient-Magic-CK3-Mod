@@ -54,6 +54,80 @@ base_mana_affinity_bonus = { #Script value that gives out bonus to base mana aff
 	}
 }
 
+mother_base_affinity = {
+	value = 0
+	if = {
+		limit = {
+			always = no # we don't know what we want the formula to look like, yet, so for now we just want to make sure the effect works
+						# once we know what we want the formula to be, we can add it back in
+			exists = mother
+			mother = { is_alive = yes has_variable = base_mana_affinity }
+		}
+		
+		if = {
+			limit = { mother = { is_magus_trigger = yes } } # scope change works because we're in a limit, which is a trigger block
+			add = {
+				value = mother.mage_level
+				divide = {
+					value = mother.mana_affinity
+					multiply = 5
+				}
+				subtract = { # To make it harder to increase on higher levels using mage level and to lower it if the mage level is low
+					value = mother.mana_affinity
+					divide = 5 # use of 5 because the tiers are per five and because mundanes are first 5
+				}
+			}
+		}
+		else = { #if one isnt practicing magic their mana affinity could lower, this is mainly so for those of higher levels
+			subtract = {
+				value = mother.mana_affinity
+				divide = 5
+			}
+		}
+	}
+	# remove this once we figure out what the formula should be, or are actually testing *just* the formula
+	#value = mother.mana_affinity # will break if the character has no mother, but this is just a temporary thing while we test the effect
+}
+
+father_base_affinity = {
+	value = 0
+	if = {
+		limit = {
+			always = no # we don't know what we want the formula to look like, yet, so for now we just want to make sure the effect works
+						# once we know what we want the formula to be, we can add it back in
+			exists = father
+			father = { is_alive = yes has_variable = base_mana_affinity }
+		}
+		
+		if = {
+			limit = { father = { is_magus_trigger = yes } } # scope change works because we're in a limit, which is a trigger block
+			add = {
+				value = father.mage_level
+				divide = {
+					value = father.mana_affinity
+					multiply = 5
+				}
+				subtract = { # To make it harder to increase on higher levels using mage level and to lower it if the mage level is low
+					value = father.mana_affinity
+					divide = {
+						value = 5 # use of 5 because the tiers are per five and because mundanes are first 5
+						multiply = 2 # as its father so should the effect factor of lowering be lower 
+					}
+				}
+			}
+		}
+		else = { #if one isnt practicing magic their mana affinity could lower, this is mainly so for those of higher levels
+			subtract = {
+				value = father.mana_affinity
+				divide = 5
+			}
+		}
+	}
+	
+	# remove this once we figure out what the formula should be, or are actually testing *just* the formula
+	#value = father.mana_affinity # will break if the character has no father, but this is just a temporary thing while we test the effect
+}
+
 
 max_body_mana = { #Mana Affinity affects how much can ones body hold mana
 	value = mana_affinity

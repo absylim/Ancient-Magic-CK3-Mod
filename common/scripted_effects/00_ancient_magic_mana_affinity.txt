@@ -12,7 +12,7 @@ give_base_mana_affinity = {
 			is_ai = no
 			NOT = { has_game_rule = PC_magic_level_0 }
 		}
-		add_trait = magic_potential_2
+		
 		#Mundane is Tier 0
 		if = { # Tier 1 (sub-magical)
 			limit = {
@@ -42,7 +42,7 @@ give_base_mana_affinity = {
 		}
 		else_if = { # Tier 3 (Loved by mana)
 			limit = {
-				has_game_rule = PC_magic_level_2
+				has_game_rule = PC_magic_level_3
 			}
 			random_list = { # Affinity is given in range of Tier 3
 				10 = { change_local_variable = { name = temp_base_mana_affinity_value add = 15 } }
@@ -55,7 +55,7 @@ give_base_mana_affinity = {
 		}
 		else_if = { # Tier 4 (Demigod)
 			limit = {
-				has_game_rule = PC_magic_level_2
+				has_game_rule = PC_magic_level_4
 			}
 			random_list = { # Affinity is given in range of Tier 4
 				10 = { change_local_variable = { name = temp_base_mana_affinity_value add = 20 } }
@@ -68,7 +68,7 @@ give_base_mana_affinity = {
 		}
 		else_if = { # Tier 5 (God)
 			limit = {
-				has_game_rule = PC_magic_level_2
+				has_game_rule = PC_magic_level_5
 			}
 			random_list = { # Affinity is given in range of Tier 5
 				10 = { change_local_variable = { name = temp_base_mana_affinity_value add = 25 } }
@@ -85,14 +85,6 @@ give_base_mana_affinity = {
 		limit = {
 			NOT = { has_variable = base_mana_affinity }
 		}
-		set_local_variable  = {
-			name = temp_mother_base_mana_affinity_value
-			value = 0
-		}
-		set_local_variable  = {
-			name = temp_father_base_mana_affinity_value
-			value = 0
-		}
 		if = { #Checks if mana affinity should be inherited
 			limit = {
 				OR = {
@@ -106,89 +98,14 @@ give_base_mana_affinity = {
 					}
 				}
 			}
-			
-			mother = {
-				if = {
-					limit = {
-						has_variable = base_mana_affinity
-					}
-					change_local_variable = { 
-						name = temp_mother_base_mana_affinity_value 
-						add = base_mana_affinity
-							
-						if = {
-							limit = {
-								is_magus_trigger = yes
-							}
-							add = {
-								value = mage_level
-								divide = {
-									value = mana_affinity
-									multiply = 5
-								}
-								subtract = { # To make it harder to increase on higher levels using mage level and to lower it if the mage level is low
-									value = mana_affinity
-									divide = 5 # use of 5 because the tiers are per five and because mundanes are first 5
-								}
-							}
-						}
-						else = { #if one isnt practicing magic their mana affinity could lower, this is mainly so for those of higher levels
-							subtract = {
-								value = mana_affinity
-								divide = 5
-							}
-						}
-					}
-				}
-			}
-			
-			real_father = {
-				if = {
-					limit = {
-						has_variable = base_mana_affinity
-					}
-					change_local_variable = { 
-						name = temp_father_base_mana_affinity_value 
-						add = base_mana_affinity
-							
-						if = {
-							limit = {
-								is_magus_trigger = yes
-							}
-							add = {
-								value = mage_level
-								divide = {
-									value = mana_affinity
-									multiply = 5
-									multiply = 2 # The factor of father has to be lower as the mother is carrier of the child
-									
-								}
-								subtract = { # To make it harder to increase on higher levels using mage level and to lower it if the mage level is low
-									value = mana_affinity
-									divide = {
-										value = 5 # use of 5 because the tiers are per five and because mundanes are first 5
-										multiply = 2 # as its father so should the effect factor of lowering be lower 
-									}
-								}
-							}
-						}
-						else = { #if one isnt practicing magic their childs mana affinity could lower, this is mainly so for those of higher levels
-							subtract = {
-								value = mana_affinity
-								devide = 5 # use of 5 because the tiers are per five and because mundanes are first 5
-							}
-						}
-					}
-				}
-			}
-			if = {
+			if = { #Checks if Fathers and mothers affinity is set
 				limit = {
-					temp_mother_base_mana_affinity_value > 0
-					temp_father_base_mana_affinity_value > 0
+					mother_base_affinity > 0
+					father_base_affinity > 0
 				}
 				#Duel to determine from whom should the affinity be inherited from	
 				duel = {
-					value = temp_mother_base_mana_affinity_value #mothers mana affinity
+					value = mother_base_affinity #mothers mana affinity
 					
 					50 = { #Mothers affinity wins
 						compare_modifier = {
@@ -206,12 +123,12 @@ give_base_mana_affinity = {
 					
 					50 = { #Fathers affinity wins
 						compare_modifier = {
-							value = temp_father_base_mana_affinity_value
+							value = father_base_affinity
 						}
 						
 						change_local_variable = { 
 							name = temp_base_mana_affinity_value 
-							add = temp_father_base_mana_affinity_value
+							add = father_base_affinity
 						}
 					
 						max = 99
@@ -221,20 +138,20 @@ give_base_mana_affinity = {
 			}
 			else_if = {
 				limit = {
-					temp_mother_base_mana_affinity_value > 0
+					mother_base_affinity > 0
 				}
 				change_local_variable = { 
 					name = temp_base_mana_affinity_value 
-					add = temp_mother_base_mana_affinity_value
+					add = mother_base_affinity
 				}
 			}
 			else_if = {
 				limit = {
-					temp_father_base_mana_affinity_value > 0
+					father_base_affinity > 0
 				}
 				change_local_variable = { 
 					name = temp_base_mana_affinity_value 
-					add = temp_father_base_mana_affinity_value
+					add = father_base_affinity
 				}
 			}
 		}
@@ -251,12 +168,12 @@ give_base_mana_affinity = {
 		}
 		
 		random_list = { #Gives small chance of increasing/decreasing mana affinity
-			80 = {} #nothing happenes
+			80 = {} #nothing happens
 			10 = { change_local_variable = { name = temp_base_mana_affinity_value add = 1 } } # Increases by 1
 			10 = { change_local_variable = { name = temp_base_mana_affinity_value subtract = 1 } } # Decreases by 1
 		}
 	}
-		
+	
 	# Checks and adds mana affinity bonus if born on ley line or focal point
 	if = {
 		limit = {
@@ -273,7 +190,7 @@ give_base_mana_affinity = {
 	else_if = {
 		limit = {
 			is_located_on_focal_point = yes
-			temp_base_mana_affinity_value < 15 #So that its not easy after some tier to increase it with focul points
+			temp_base_mana_affinity_value < 15 #So that its not easy after some tier to increase it with focal points
 		}
 		random_list = {
 			50 = {} #Nothing happens
@@ -287,12 +204,13 @@ give_base_mana_affinity = {
 		name = temp_base_mana_affinity_value 
 		add = base_mana_affinity_bonus
 	}
-			
+	
 	set_variable = {
 		name = base_mana_affinity
-		value = temp_base_mana_affinity_value
-		
-		min = 0
-		max = 30
+		value = {
+			value = local_var:temp_base_mana_affinity_value
+			min = 0
+			max = 30
+		}
 	}
 }
