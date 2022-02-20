@@ -30,12 +30,15 @@ mage_ritual = {
 }
 
 minor_health_issues = {
+    alias = { minor_health_issue }
 }
 
 serious_health_issues = {
+    alias = { serious_health_issue }
 }
 
-worst_health_issues = {
+critical_health_issues = {
+    alias = { critical_health_issue }
 }
 
 chronomancy = {
