@@ -138,13 +138,20 @@ start_aura_effect = {
 
 update_aura_effect = {
 	if = {
-		limit = { var:$MASK$.$SPELL$_aura_bit.compare_value = 1 }
-		every_in_list = {
-			variable = $SPELL$_targets
-			remove_all_character_modifier_instances = $SPELL$_modifier
-			while = {
-				count = prev.mage_level
-				add_character_modifier = { modifier = $SPELL$_modifier }
+		limit = {
+			has_variable = $MASK$
+		}
+		if = {
+			limit = { 
+				var:$MASK$.$SPELL$_aura_bit.compare_value = 1 
+			}
+			every_in_list = {
+				variable = $SPELL$_targets
+				remove_all_character_modifier_instances = $SPELL$_modifier
+				while = {
+					count = prev.mage_level
+					add_character_modifier = { modifier = $SPELL$_modifier }
+				}
 			}
 		}
 	}
