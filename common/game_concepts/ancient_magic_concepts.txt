@@ -43,37 +43,37 @@ critical_health_issues = {
 
 chronomancy = {
 	texture = "gfx/magic/chronomancy_magic.dds"
-    alias = { chronomancy_magic chronomancy_mage time_magic time_mage skip_mage chronomancer chronomancy_i }
+    alias = { chronomancer chronomancy_i }
 }
 
 chiromancy = {
 	texture = "gfx/magic/life_magic.dds"
-    alias = { healing_magic healer_mage chiromancer white_mage chiromancy_i }
+    alias = { chiromancer chiromancy_i }
 }
 
 elomancy = {
 	texture = "gfx/magic/elomancy_magic.dds"
-    alias = { elomancy_i battle_magic elomancer battle_mage elementalist war_mage elementalism }
+    alias = { elomancer elomancy_i }
 }
 
 necromancy = {
 	texture = "gfx/magic/necromancy_magic.dds"
-    alias = { necromancy_i death_magic necromancer death_mage pale_mage black_mage }
+    alias = { necromancer necromancy_i }
 }
 
 biomancy = {
 	texture = "gfx/magic/biomancy_magic.dds"
-    alias = { biomancy_i nature_magic druid_mage nature_mage biomancer  }
+    alias = { biomancer biomancy_i }
 }
 
 mensomancy = {
 	texture = "gfx/magic/mensomancy_magic.dds"
-    alias = { mensomancy_i psychomancy psychomancer mensomancer mentalism mentalist }
+    alias = { mensomancer mensomancy_i }
 }
 
 school_of_magic = {
 	texture = "gfx/magic/maintab_magic.dds"
-    alias = { school_of_magic_i magic_school magical_school magic_discipline magical_discipline }
+    alias = { school_of_magic_i magic_school magic_discipline }
 }
 
 ## Men At Arms
