@@ -145,6 +145,16 @@ mage = {
 	}
 }
 
+infinite_mana = {
+	index = 33303
+
+	inherit_chance = 0
+	birth = 0
+	random_creation = 0
+
+	ruler_designer_cost = 9001
+}
+
 undead = {
 	index = 9007
 	immortal = yes
