@@ -1,4 +1,15 @@
-﻿change_mana_with_tooltip = {
+﻿change_mana = {
+	change_variable = {
+		name = mana
+		add = $VALUE$
+	}
+	set_variable = {
+		name = mana
+		value = var:mana.clamp_to_max_mana
+	}
+}
+
+change_mana_with_tooltip = {
 	custom_description = {
 		text = change_mana
 		value = $VALUE$

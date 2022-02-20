@@ -373,3 +373,9 @@ squared = {
 	value = this
 	multiply = this
 }
+
+clamp_to_max_mana = {
+	value = this
+	max = var:max_mana
+	min = 0
+}
