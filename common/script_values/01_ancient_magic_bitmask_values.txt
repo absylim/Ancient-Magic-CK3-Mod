@@ -369,6 +369,30 @@ enchanting_aura_spell_aura_bit_unset = { value = unset19 }
 ## Setter Helpers
 # You are able to use these directly, but it's much more efficient
 # if you recall var:<spell_school>_perk_mask instead!
+aura_mask_0_maker = {
+	value = 0
+	if = { limit = { has_variable_list = glimpse_the_future_spell_targets } add = glimpse_the_future_spell_aura_bit_set }
+	if = { limit = { has_variable_list = financial_times_spell_targets } add = financial_times_spell_aura_bit_set }
+	if = { limit = { has_variable_list = celerity_spell_targets } add = celerity_spell_aura_bit_set }
+	if = { limit = { has_variable_list = mass_celerity_spell_targets } add = mass_celerity_spell_aura_bit_set }
+	if = { limit = { has_variable_list = slowness_spell_targets } add = slowness_spell_aura_bit_set }
+	if = { limit = { has_variable_list = mass_slowness_spell_targets } add = mass_slowness_spell_aura_bit_set }
+	if = { limit = { has_variable_list = temporal_manipulation_spell_targets } add = temporal_manipulation_spell_aura_bit_set }
+	if = { limit = { has_variable_list = haste_spell_targets } add = haste_spell_aura_bit_set }
+	if = { limit = { has_variable_list = master_of_time_spell_targets } add = master_of_time_spell_aura_bit_set }
+	if = { limit = { has_variable_list = flame_aura_spell_targets } add = flame_aura_spell_aura_bit_set }
+	if = { limit = { has_variable_list = flaming_weapons_spell_targets } add = flaming_weapons_spell_aura_bit_set }
+	if = { limit = { has_variable_list = living_earthworks_spell_targets } add = living_earthworks_spell_aura_bit_set }
+	if = { limit = { has_variable_list = control_water_spell_targets } add = control_water_spell_aura_bit_set }
+	if = { limit = { has_variable_list = drought_spell_targets } add = drought_spell_aura_bit_set }
+	if = { limit = { has_variable_list = elemental_warrior_spell_targets } add = elemental_warrior_spell_aura_bit_set }
+	if = { limit = { has_variable_list = aura_of_death_spell_targets } add = aura_of_death_spell_aura_bit_set }
+	if = { limit = { has_variable_list = blight_spell_targets } add = blight_spell_aura_bit_set }
+	if = { limit = { has_variable_list = fertility_control_spell_targets } add = fertility_control_spell_aura_bit_set }
+	if = { limit = { has_variable_list = beguiling_aura_spell_targets } add = beguiling_aura_spell_aura_bit_set }
+	if = { limit = { has_variable_list = enchanting_aura_spell_targets } add = enchanting_aura_spell_aura_bit_set }
+}
+
 basic_perk_mask_0_maker = {
 	value = 0
 	if = { limit = { has_perk = mage_perk } add = set.makebit00 }
