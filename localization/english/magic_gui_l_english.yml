@@ -104,14 +104,14 @@
  avatar_of_life_spell_desc: "The most advanced application of [chiromancy|E], this spell uses pure magical power to replace organs and blood, annihilate infectious invaders, and even target diseases the body doesn't recognize as diseases. Effectively heals the target of any single affliction."
 
  # Elomancy
- flame_aura_spell_desc: "$lorem_ipsum$"
- flaming_weapons_spell_desc: "$lorem_ipsum$"
- living_earthworks_spell_desc: "$lorem_ipsum$"
- golem_creation_spell_desc: "$lorem_ipsum$"
- control_water_spell_desc: "$lorem_ipsum$"
- drought_spell_desc: "$lorem_ipsum$"
- elemental_warrior_spell_desc: "$lorem_ipsum$"
- lord_of_the_elements_spell_desc: "$lorem_ipsum$"
+ flame_aura_spell_desc: "By weaving elemental energy into the air around them, an [elomancer|E] is able to make it incredibly uncomfortable, even painful, to be too close to them. In battle, an enemy will often be so distracted by their body's reaction to the environment that they will be unable to effectively duel the mage."
+ flaming_weapons_spell_desc: "Similar in nature to [flame_aura_spell|E], this spell will infuse energy not into the environment, but into certain objects within that environment. Though the energy required to make the weapons of an entire army burst into flame would be impossible for most mages - not to mention harmful to their armory - even a moderate increase in the temperature of a weapon will allow it to cut through armor and skin more easily."
+ living_earthworks_spell_desc: "Utilizing this spell, an [elomancer|E] is able to cause the ground itself to serve as extra defense against invading armies, by opening pits, raising walls, or even expanding parts of the earth with such force that pieces are sent flying like shrapnel. Most armies would be fool to lay siege to a castle under the protection of this spell, though its power is severely limited by the skill of the mage."
+ golem_creation_spell_desc: "Infusing an autonomous will into a construct is practically an art form, but that is what this spell attempts to do. The fact that those works of art can then be told to rip a castle to the ground is a bonus that many [elomancer|E]#E s#! find worth the cost in mana and environmental damage."
+ control_water_spell_desc: "This spell controls large bodies of water, causing depressions in front of ships and pushing them forward, as if they were always flowing downward. The amount of control this requires, in order to not damage the entire fleet of ships, means that less-experienced mages will see very little benefit to this spell. That is, unless they don't care about losing half their army to the briny deep."
+ drought_spell_desc: "All living things need water to survive, and this spell takes advantage of that by taking the water away. The effects of watching your water dry up can cause anyone to panic, and less access to water damages immune systems of the living as well as the integrity of their food stores. Most effective when used in sieges, as destroying large swathes of a countryside, by removing the water from growing plants, is too damaging to the environment."
+ elemental_warrior_spell_desc: "A combination of the five other [Concept('elomancy','Elomantic')|E] auras, this spell is truly the height of the Elomancy [school_of_magic|E]. The amount of energy required to maintain all of the auras in conjunction with each other is immense, but nearly so much as it would be to maintain them all individually. The nature of the spell even allows the mage to channel it at the same time as all the other auras... if they have the mana."
+ lord_of_the_elements_spell_desc: "A more powerful version of [golem_creation_spell|E], this spell creates much larger golems that are much more effective at tearing down walls. However, both their size and the fact that their bodies are comprised of semi-liquid magma means that they are not agile, making them mostly ineffective against regular military units, except as a deterrent."
 
  # Necromancy
  inflict_illness_spell_desc: "This basic [necromancy|E] spell acts upon its subject's immune system, diminishing it in ways which leave the target vulnerable to all manner of illnesses which they would normally be able to fight off. Makes the target [GetTrait('ill').GetName(GetNullCharacter)]."
