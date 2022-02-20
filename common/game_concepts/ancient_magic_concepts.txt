@@ -73,7 +73,7 @@ mensomancy = {
 
 school_of_magic = {
 	texture = "gfx/magic/maintab_magic.dds"
-    alias = { school_of_magic_i magic_school magic_discipline }
+    alias = { school_of_magic_i }
 }
 
 ## Men At Arms

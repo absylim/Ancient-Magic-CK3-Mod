@@ -66,8 +66,6 @@
  game_concept_school_of_magic: "School of Magic"
  game_concept_school_of_magic_i: "School of Magic"
  game_concept_school_of_magic_desc: "The six traditional schools of magic are [chronomancy|E], [chiromancy|E], [elomancy|E], [necromancy|E], [biomancy|E], and [mensomancy|E]. Though it is said that there are other ways a practitioner may learn to harness magical power, the six magic schools and their traditions have stood the test of time as the most efficient and practical means of understanding and manipulating [mana|E].\n\nWhen a [GetTrait('mage').GetName( GetNullCharacter ) |LVl] speaks about a school of magic, they are not referring to a physical place. What they are referring to is a structured mental framework or state which a mage may enter to facilitate a particular form of spell casting."
- game_concept_magic_school: "Magic School"
- game_concept_magic_discipline: "Magic Discipline"
 
  game_concept_stone_golems: "Stone Golems"
  game_concept_stone_golems_desc: "Stone golems are tireless soldiers which do not require rest, are strong enough to dismember a man with their bare hands, and follow their creator's instructions without hesitation."
