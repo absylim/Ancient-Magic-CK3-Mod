@@ -7,11 +7,11 @@
  game_concept_worst_health_issues_desc: "The worst health issues are those illnesses and injuries which [chiromancer|E]#E s#! are able to heal, but the challenge of doing so requires a great deal of [mana|E] and a true mastery of the healing arts. The following traits are considered to be the worst health issues:\n\n[GetTrait('wounded_3').GetName( GetNullCharacter ) |LV],  [GetTrait('one_eyed').GetName( GetNullCharacter ) |LV], [GetTrait('one_legged').GetName( GetNullCharacter ) |LV], [GetTrait('disfigured').GetName( GetNullCharacter ) |LV], [GetTrait('scarred').GetName( GetNullCharacter ) |LV], [GetTrait('eunuch').GetName( GetNullCharacter ) |LV], [GetTrait('blind').GetName( GetNullCharacter ) |LV], and [GetTrait('incapable').GetName( GetNullCharacter ) |LV].\n\nDue to the complexity and power of the spells involved in healing these traits, removing them takes a toll on the target's body, preventing them from receiving such sophisticated healing again for five years after the spell has been cast on them."
  game_concept_mage_level: "Mage Level"
  game_concept_mage_level_desc: "The level of a spell caster is a somewhat arbitrary means of categorizing and describing the capabilities of a [GetTrait('mage').GetName( GetNullCharacter ) |LVl]. The more powerful the mage, the higher their level may be said to be. In general, the higher a spell caster's mage level, the more effective their spells will be.\n\nThe rate at which a spell caster's mage level increases is dependent on the [magic_potential|E] inherent in the blood of that individual. More potent spell casters will gain mage levels more quickly than those with less natural aptitude."
- game_concept_mage_talent: "Magic Talent"
 
  game_concept_magic_potential: "Magic Potential"
  game_concept_magic_potential_desc: "For some, the ability to work magic comes to them nearly as naturally as breathing, while for others, casting even the simplest of workings is impossible. The magic potential of a character is a measure of the innate talent a character has for manipulating arcane forces. It is a congenital trait which is often passed down through a house for generations.\n\nHowever, on its own, magic potential has little effect. Even the most naturally gifted characters aren't able to perform more than the most minute of parlor tricks without training as a [GetTrait('mage').GetName( GetNullCharacter ) |LV].\n\n#IThe levels of magic potential are as follows:#!\n[GetTrait('magic_potential_1').GetName( GetNullCharacter ) |LV]\n[GetTrait('magic_potential_2').GetName( GetNullCharacter ) |LV]\n[GetTrait('magic_potential_3').GetName( GetNullCharacter ) |LV]"
  game_concept_mage_potency: "Magic Potency"
+ game_concept_magic_skill: "Magic Skill"
 
  game_concept_mana: "Mana"
  game_concept_mana_i:0 "@aura_icon_active!"
@@ -26,14 +26,6 @@
  game_concept_mana_drain: "Mana Drain"
  game_concept_mana_drain_desc: "Some spells require the [GetTrait('mage').GetName( GetNullCharacter ) |LV] which casts them to dedicate a portion of the magic they receive each month to sustaining them, and if the mage should not have enough mana to do so, they will end."
  game_concept_mana_draw: "Mana Draw"
-
- game_concept_magic_skill: "Magic Skill"
- game_concept_magical_talent: "Magical Talent"
- game_concept_magic_talent_desc: "For some, the ability to work magic comes to them nearly as naturally as breathing, while for others, casting even the simplest of workings is impossible. The magic potential of a character is a measure of the innate talent a character has for manipulating arcane forces. It is a congenital trait which is often passed down through a house for generations.\n\nHowever, on its own, magic potential has little effect. Even the most naturally gifted characters aren't able to perform more than the most minute of parlor tricks without training as a [GetTrait('mage').GetName( GetNullCharacter ) |LV].\n\n#IThe levels of magic potential are as follows:#!\n[GetTrait('magic_potential_1').GetName( GetNullCharacter ) |LV]\n[GetTrait('magic_potential_2').GetName( GetNullCharacter ) |LV]\n[GetTrait('magic_potential_3').GetName( GetNullCharacter ) |LV]"
- game_concept_magical_skill: "Magical Skill"
-
- game_concept_skill_in_a_magic_school: "Skill In A Magic School"
- game_concept_talent_in_a_magic_school: "Talent In A Magic School"
 
  game_concept_chronomancy: "Chronomancy"
  game_concept_chronomancy_i: "@chronomancy_icon!"

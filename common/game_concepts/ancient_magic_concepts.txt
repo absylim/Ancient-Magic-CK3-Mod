@@ -1,9 +1,8 @@
 ﻿mage_level = {
-    alias = { mage_talent }
 }
 
 magic_potential = {
-    alias = { mage_potency }
+    alias = { mage_potency magic_skill }
 }
 
 mana = {
@@ -18,10 +17,6 @@ mana_cost = {
 
 mana_drain = {
     alias = { mana_draw }
-}
-
-magic_talent = {
-    alias = { magic_skill skill_in_a_magic_school talent_in_a_magic_school }
 }
 
 mage_spell = {
