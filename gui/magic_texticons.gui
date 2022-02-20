@@ -97,7 +97,7 @@ texticon = {
 }
 
 texticon = {
-	icon = icon_life_category
+	icon = icon_chiromancy_category
 	iconsize = {
 		texture = "gfx/magic/life_magic.dds"
 		size = { 80 80 }
