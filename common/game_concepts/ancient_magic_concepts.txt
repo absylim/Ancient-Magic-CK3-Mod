@@ -7,16 +7,20 @@ magic_potential = {
 
 mana = {
 	texture = "gfx/interface/icons/icon_active_aura.dds"
-    alias = { magical_power mana_i }
+	alias = { mana_i }
 }
 
 mana_cost = {
 	texture = "gfx/interface/icons/icon_inactive_aura.dds"
-    alias = { spell_cost mana_cost_i }
+	alias = { spell_cost mana_cost_i }
+}
+
+mana_gen = {
+	alias = { mana_gen_i }
 }
 
 mana_drain = {
-    alias = { mana_draw }
+	alias = { mana_draw mana_drain_i }
 }
 
 mage_spell = {

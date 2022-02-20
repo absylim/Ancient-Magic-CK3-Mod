@@ -25,11 +25,16 @@
  game_concept_magical_power: "Magic Power"
 
  game_concept_mana_cost: "Mana Cost"
- game_concept_mana_cost_i: "@icon_mana_cost!"
+ game_concept_mana_cost_i: "@aura_icon_inactive!"
  game_concept_mana_cost_desc: "The mana cost of a spell is the amount of [mana|E] which is required to cast or dispel a given spell. In general, weaker spells require less mana and [magic_skill|E] to cast, while stronger spells require more."
  game_concept_spell_cost: "Spell Cost"
 
+ game_concept_mana_gen: "Mana Generation"
+ game_concept_mana_gen_i: "@drain_icon_active!"
+ game_concept_mana_gen_desc: "A [mage|E] can only hold so much magical potential within their body. Once it has been spent (for example, while casting a spell) the mage must then wait for the mana stores within their body to replenish. The higher a mage's [magic_potential|E], the faster their mana regenerates. Their [mage_level|E] also plays an indirect part in increasing the amount of mana they generate."
+
  game_concept_mana_drain: "Mana Drain"
+ game_concept_mana_drain_i: "@drain_icon_inactive!"
  game_concept_mana_drain_desc: "Some spells require the [GetTrait('mage').GetName( GetNullCharacter ) |LV] which casts them to dedicate a portion of the magic they receive each month to sustaining them, and if the mage should not have enough mana to do so, they will end."
  game_concept_mana_draw: "Mana Draw"
 
