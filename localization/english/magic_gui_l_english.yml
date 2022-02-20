@@ -27,7 +27,7 @@
  # error catching
  dummy_spell_name: ""
 
- # None
+ # Basic
  spark_spell_name: "Practice Spark"
  # Chronomancy
  glimpse_the_future_spell_name: "Glimpse the Future"
@@ -118,10 +118,10 @@
  plague_lord_spell_desc: "A more concentrated form of [inflict_illness_spell|E], the practioner is able to engineer a truly virulent and deadly plague. This plague has very high lethality, and is able to spread from one victim to another, killing droves. Gives the target the [GetTrait('bubonic_plague').GetName(GetNullCharacter)]."
  aura_of_death_spell_desc: "[necromancy|E] is a dangerous [school_of_magic|E]. Living things can feel this at a visceral level. Among the simplest of all aura spells, the necromancer's 'aura of death' doesn't do anything particularly flashy. All a practioner needs to do in order to cast this spell is to place themselves in the state of mind required to cast a necromancy spell. This voluntary madness, and the energies associated with it, produce a pervasive sense of unease in anyone near the spell caster."
  necromancy_spell_desc: "This spell is the quintessential [necromancy|E] ritual. In order to cast the spell, the necromancer must extend their madness out into the world, pressing it upon the bodies of the deceased, and then exerting their will, denying death as a certainty so completely that reality shifts, molding itself to the madness of the caster.\n\nTo achieve this obscene ritual, even the most powerful of [GetTrait('mage').GetName( GetNullCharacter ) |LVl]s require a number of physical spell mnemonics, usually in the form of a ritual dagger, which has been placed in the funeral pyres of hundreds of the recently deceased, and often, a number of assitants to help with various elements of the ritual."
- drain_life_spell_desc: "This infamous spell is among the most evil of spells known in any [school_of_magic|E]. It draws on the corrosive, destructive, and hungry nature of [necromancy|E], using that nature to drain the life-force of the spell's target and feed it back into its caster. If the caster exerts more will, they may even drain the target so quickly that the victim expires immediately, though this approach disperses the victim's life-force so rapdily that the caster is unable to consume it."
- death_stare_spell_desc: "$lorem_ipsum$"
- blight_spell_desc: "$lorem_ipsum$"
- deacon_of_death_spell_desc: "$lorem_ipsum$"
+ drain_life_spell_desc: "This infamous spell is among the most evil of spells known in any [school_of_magic|E]. It draws on the corrosive, destructive, and hungry nature of [necromancy|E], using that nature to drain the life force of the spell's target and feed it back into its caster. If the caster exerts more will, they may even drain the target so quickly that the victim expires immediately, though this approach disperses the victim's life-force so rapdily that the caster is unable to consume it."
+ death_stare_spell_desc: "This, more powerful, version of [drain_life_spell|E] will drain the life force of a victim completely and instantly. The life energy is ripped from the victim so quickly and forcefully that it's impossible for the caster to utilize it. There are rumors that some less-scrupulous mages will rip the energy out, just to let a waiting entity feed on it, but such rumors are hard to verify."
+ blight_spell_desc: "By creating a wave of destructive energy around a target, the [necromancer|E] is able to forcibly decay non-living matter in an area around them. This results in the spoiling of food in most cases, but in rare cases with mages of exceptional power, the energy is powerful enough that the target's clothes or armor have also been known to decay."
+ deacon_of_death_spell_desc: "The ultimate goal of [necromancy|E], this spell will kill the target, and then render their dead body susceptible to the [necromancer|E]'s will. Unfortunately, the spell will not work on corpses, as the soul must be trapped within the body before it can disperse. Though this means the spell does not truly revive the dead, the results are powerful enough that most necromancers will forgive the distinction."
 
  # Biomancy
  rewrite_beauty_spell_desc: "$lorem_ipsum$"
