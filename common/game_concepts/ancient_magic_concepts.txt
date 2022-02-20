@@ -2,7 +2,7 @@
 }
 
 magic_potential = {
-    alias = { mage_potency magic_skill }
+	alias = { mage_potency magic_skill }
 }
 
 mana = {
@@ -30,70 +30,70 @@ mage_ritual = {
 }
 
 minor_health_issues = {
-    alias = { minor_health_issue }
+	alias = { minor_health_issue }
 }
 
 serious_health_issues = {
-    alias = { serious_health_issue }
+	alias = { serious_health_issue }
 }
 
 critical_health_issues = {
-    alias = { critical_health_issue }
+	alias = { critical_health_issue }
 }
 
 chronomancy = {
 	texture = "gfx/magic/chronomancy_magic.dds"
-    alias = { chronomancer chronomancy_i }
+	alias = { chronomancer chronomancy_i }
 }
 
 chiromancy = {
 	texture = "gfx/magic/life_magic.dds"
-    alias = { chiromancer chiromancy_i }
+	alias = { chiromancer chiromancy_i }
 }
 
 elomancy = {
 	texture = "gfx/magic/elomancy_magic.dds"
-    alias = { elomancer elomancy_i }
+	alias = { elomancer elomancy_i }
 }
 
 necromancy = {
 	texture = "gfx/magic/necromancy_magic.dds"
-    alias = { necromancer necromancy_i }
+	alias = { necromancer necromancy_i }
 }
 
 biomancy = {
 	texture = "gfx/magic/biomancy_magic.dds"
-    alias = { biomancer biomancy_i }
+	alias = { biomancer biomancy_i }
 }
 
 mensomancy = {
 	texture = "gfx/magic/mensomancy_magic.dds"
-    alias = { mensomancer mensomancy_i }
+	alias = { mensomancer mensomancy_i }
 }
 
 school_of_magic = {
 	texture = "gfx/magic/maintab_magic.dds"
-    alias = { school_of_magic_i }
+	alias = { school_of_magic_i }
 }
 
 ## Men At Arms
 stone_golems = {
 	texture = "gfx/interface/icons/regimenttypes/stone_golems.dds"
-    alias = { stone_golem }
+	alias = { stone_golem }
 }
 
 lava_golems = {
 	texture = "gfx/interface/icons/regimenttypes/lava_golems.dds"
-    alias = { lava_golem }
+	alias = { lava_golem }
 }
 
 undead = {
 	texture = "gfx/interface/icons/regimenttypes/lesser_undead.dds"
-    alias = { lesser_undead greater_undead }
+	alias = { lesser_undead greater_undead }
 }
 
 magocracy = {
-    alias = { magocracies magocratic magocratic_government }
+	alias = { magocracies magocratic magocratic_government }
 }
 
 city_of_magic = {
@@ -107,7 +107,7 @@ ley_line = {
 
 focal_point = {
 	texture = "gfx/interface/icons/modifiers/focal_point.dds"
-    alias = { focal_points }
+	alias = { focal_points }
 }
 
 ## Spell descriptions
