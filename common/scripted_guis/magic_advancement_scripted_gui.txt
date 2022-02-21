@@ -29,6 +29,10 @@ toggle_magic_advancement_window = {
 			if = {
 				limit = { has_perk_masks_trigger = no }
 				init_perk_masks_effect = yes
+				if = {
+					limit = { NOT = { has_variable = mage_xp } }
+					set_variable = { name = mage_xp value = 0 }
+				}
 				set_variable = {
 					name = available_magic_perks
 					value = mage_level
