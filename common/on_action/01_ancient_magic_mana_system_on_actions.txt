@@ -45,7 +45,8 @@ set_up_remaining_mana_gen_for_year = {
 			set_variable = {
 				name = mana_gen_months_left
 				value = {
-					value = 12				
+					value = 13 # yearly_mana_pulse starts genning mana on jan 2nd
+								# so we need to gen for next january as well				
 					subtract = current_month
 				}
 			}

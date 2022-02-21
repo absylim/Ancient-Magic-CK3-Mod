@@ -152,6 +152,43 @@ reset_mana_system_decision = {
 					kill_aura = { SPELL = beguiling_aura_spell }
 					kill_aura = { SPELL = enchanting_aura_spell }
 					trigger_event = { on_action = on_reset_mana_system }
+					if = {
+						limit = { has_game_rule = am_magic_gen_daily }
+						save_temporary_scope_value_as = {
+							name = days_left
+							value = {
+								value = 365
+								subtract = current_day_in_year
+							}
+						}
+						if = {
+							limit = { NOT = { has_variable = mana_gen_days_left } }
+							set_variable = { name = mana_gen_days_left value = scope:days_left }
+							trigger_event = { on_action = daily_mana_gen }
+						}
+						else_if = {
+							limit = { NOT = { var:mana_gen_days_left = scope:days_left } }
+							set_variable = { name = mana_gen_days_left value = scope:days_left }
+						}
+					}
+					else = {
+						save_temporary_scope_value_as = {
+							name = months_left
+							value = {
+								value = 13 # see 01_ancient_magic_mana_system_on_actions.txt:line 48
+								subtract = current_month
+							}
+						}
+						if = {
+							limit = { NOT = { has_variable = mana_gen_months_left } }
+							set_variable = { name = mana_gen_months_left value = scope:months_left }
+							trigger_event = { on_action = monthly_mana_gen }
+						}
+						else_if = {
+							limit = { NOT = { var:mana_gen_months_left = scope:months_left } }
+							set_variable = { name = mana_gen_months_left value = scope:months_left }
+						}
+					}
 				}
 			}
 			clear_global_variable_list = time_perk_list
