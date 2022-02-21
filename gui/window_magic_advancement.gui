@@ -165,16 +165,6 @@
 							}
 
 							widget = {
-								name = "Lines"
-								size = { 100% 100% }
-
-								background = {
-									texture = "gfx/interface/window_magic_advancement/advancement_lines.dds"
-									spriteType = Corneredstretched
-								}
-							}
-
-							widget = {
 								allow_outside = yes
 								#size = "[PdxGetWidgetScreenSize( PdxGuiWidget.AccessParent.Self )]"
 								datamodel = "[GetGlobalList('spell_categories_list')]"
@@ -196,9 +186,18 @@
 										}
 
 										background = {
+											texture = "gfx/interface/window_magic_advancement/magic_advancement_lines.dds"
+											framesize = { 360 360 }
+											frame = "[FixedPointToInt(EmptyScope.ScriptValue(Concatenate(Scope.GetFlagName,'_bg_frame')))]"
+											alpha = 0.7
+										}
+
+										background = {
+											visible = "[GetScriptedGui('magic_advancement_tree_completed').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('tree',MakeScopeFlag(Scope.GetFlagName)).End)]"
 											texture = "gfx/interface/window_magic_advancement/magic_advancement_schools_bg.dds"
 											framesize = { 540 540 }
 											frame = "[FixedPointToInt(EmptyScope.ScriptValue(Concatenate(Scope.GetFlagName,'_bg_frame')))]"
+											alpha = 0.7
 										}
 
 										item = {
@@ -351,7 +350,7 @@
 				text_single = {
 					name = "skill_value"
 					parentanchor = vcenter
-					text = "[Scope.ScriptValue('life_num_perks')|0]"
+					text = "[Scope.ScriptValue('chiromancy_num_perks')|0]"
 					default_format = "#high"
 					using = Font_Size_Medium
 					align = nobaseline

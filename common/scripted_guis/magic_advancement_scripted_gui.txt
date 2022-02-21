@@ -60,6 +60,22 @@ toggle_magic_xp_or_focus_xp = {
 	}
 }
 
+magic_advancement_tree_completed = {
+	scope = character
+	is_valid = {
+		switch = {
+			trigger = scope:tree
+			flag:basic = { basic_num_perks.compare_value = 1 }
+			flag:chronomancy = { chronomancy_num_perks.compare_value = 9 }
+			flag:chiromancy = { chiromancy_num_perks.compare_value = 9 }
+			flag:elomancy = { elomancy_num_perks.compare_value = 9 }
+			flag:necromancy = { necromancy_num_perks.compare_value = 9 }
+			flag:biomancy = { biomancy_num_perks.compare_value = 9 }
+			flag:mensomancy = { mensomancy_num_perks.compare_value = 9 }
+		}
+	}
+}
+
 perk_select = {
 	# aka has_been_selected - yes this is kind of backwards with is_valid
 	# but it makes more sense, is_valid is if a button is valid to click
