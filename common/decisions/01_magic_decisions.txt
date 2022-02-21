@@ -57,6 +57,10 @@ reset_mana_system_decision = {
 			has_character_modifier = blight_modifier
 			has_character_modifier = beguiling_aura_modifier
 			has_character_modifier = enchanting_aura_modifier
+			has_global_variable_list = time_perk_list
+			has_global_variable_list = time_spells_list
+			has_global_variable_list = life_perk_list
+			has_global_variable_list = life_spells_list
 			AND = {
 				is_magus_trigger = no
 				OR = {
@@ -298,6 +302,10 @@ reset_mana_system_decision = {
 					trigger_event = { on_action = on_reset_mana_system }
 				}
 			}
+			clear_global_variable_list = time_perk_list
+			clear_global_variable_list = time_spells_list
+			clear_global_variable_list = life_perk_list
+			clear_global_variable_list = life_spells_list
 			set_up_spells = yes
 			trigger_event = { on_action = set_up_tri_indices }
 		}
