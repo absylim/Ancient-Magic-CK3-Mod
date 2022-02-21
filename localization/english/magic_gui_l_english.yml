@@ -124,12 +124,12 @@
  deacon_of_death_spell_desc: "The ultimate goal of [necromancy|E], this spell will kill the target, and then render their dead body susceptible to the [necromancer|E]'s will. Unfortunately, the spell will not work on corpses, as the soul must be trapped within the body before it can disperse. Though this means the spell does not truly revive the dead, the results are powerful enough that most necromancers will forgive the distinction."
 
  # Biomancy
- rewrite_beauty_spell_desc: "$lorem_ipsum$"
- rewrite_physique_spell_desc: "$lorem_ipsum$"
- rewrite_intellect_spell_desc: "$lorem_ipsum$"
- sculpter_of_flesh_spell_desc: "$lorem_ipsum$"
- fertility_control_spell_desc: "$lorem_ipsum$"
- impregnate_spell_desc: "$lorem_ipsum$"
+ rewrite_beauty_spell_desc: "The primary use of [biomancy|E], and the original purpose for its development, is this spell, which molds bone, flesh, metabolic processes, and the body's natural storage locations for fatty tissue, such that the resulting body is aesthetically pleasing... or displeasing... to onlookers. While ultimately a product of personal taste, there are enough relatively-universally accepted criteria for beauty for this spell to function as intended."
+ rewrite_physique_spell_desc: "Every young warrior's dream, this spell allows the mage to instantly create (or destroy, if they feel like it) masses of muscle tissue in the target's body, connecting them to the relevant bones and allowing them to utilize the extra muscle mass as if they had gained it by way of weight training. If you ever see a muscle-y mage, you can make the safe assumption that they have cast this spell on themselves."
+ rewrite_intellect_spell_desc: "Though one would think this spell would belong to the [mensomancy|E] [school_of_magic|E], it actually involves directly sculpting the neural pathways of the brain to facilitate the drawing of logical connections between concepts, which causes the subject to consider more of their knowledge useful in any given situation, instead of erroneously dismissing things as irrelevant. Or, if the mage is feeling mean, it does the opposite."
+ sculpter_of_flesh_spell_desc: "A catch-all term for a number of separate spell constructs, this spell allows the user to sculpt the flesh, bone, musculature, and other organs of the target in ways that the Rewrite spells don't. While the myriad methods and effects of this spell can differ wildly, [biomancer|E]#E s#! have classified them all under this single spell name, simply for ease of reference and use."
+ fertility_control_spell_desc: "The favorite spell of many a promiscuous young mage, this spell either suppresses or enhances the reproductive systems of the caster, effectively ensuring that any... [Concept('extramarital_sex','fornicative endeavors')|E]... the mage may engage in, will have the result they desire, be it a child of their line, a bastard, or no child at all."
+ impregnate_spell_desc: "This rather invasive and, most would say, horrifying use of [biomancy|E] allows the mage to generate a pregnancy, skipping the fun part and going straight to the unpleasant part. If the mage is a woman, the spell causes the pregnancy in herself, using essence from the targeted man. If the mage is a man, the spell forcibly impregnates the target woman with his essence. If the mage is of the same gender as the target, the spell fails due to biological limitations."
 
  # Mensomancy
  entrance_spell_desc: "$lorem_ipsum$"
