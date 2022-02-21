@@ -111,7 +111,7 @@ mage = {
 
 	same_opinion = 20
 
-	ruler_designer_cost = 10
+	show_in_ruler_designer = no
 
 	ai_boldness = very_low_positive_ai_value
 	ai_rationality = high_positive_ai_value
