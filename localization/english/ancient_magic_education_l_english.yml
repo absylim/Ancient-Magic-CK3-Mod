@@ -1,17 +1,21 @@
 ﻿l_english:
  #traits
  trait_education_arcane_1: "Magic Student"
- trait_education_arcane_1_desc: "[ROOT.Char.GetFirstNameNoTooltip] attended [ROOT.Char.GetHerHis] lessons, though that's about all that can be said. [ROOT.Char.GetHerHis|U] attempts to recall their studies are laughable, often surpassed by even the most inexperienced of apprentices."
+ trait_education_arcane_1_desc: "This character attended their lessons, though that's about all that can be said. Their attempts to recall their studies are laughable, often surpassed by even the most inexperienced of apprentices."
+ trait_education_arcane_1_character_desc: "[ROOT.Char.GetFirstNameNoTooltip] attended [ROOT.Char.GetHerHis] lessons, though that's about all that can be said. [ROOT.Char.GetHerHis|U] attempts to recall their studies are laughable, often surpassed by even the most inexperienced of apprentices."
  trait_education_arcane_2: "Magic Journeyman"
- trait_education_arcane_2_desc: "[ROOT.Char.GetFirstNameNoTooltip] is a mediocre arcane historian. Though [ROOT.Char.GetSheHe] attended lessons on magical history and theory, [ROOT.Char.GetSheHe] may have gotten less out of them than other students."
+ trait_education_arcane_2_desc: "This character is a mediocre arcane historian. Though they attended lessons on magical history and theory, they may have gotten less out of them than other students."
+ trait_education_arcane_2_character_desc: "[ROOT.Char.GetFirstNameNoTooltip] is a mediocre arcane historian. Though [ROOT.Char.GetSheHe] attended lessons on magical history and theory, [ROOT.Char.GetSheHe] may have gotten less out of them than other students."
  trait_education_arcane_3: "Magic Expert"
- trait_education_arcane_3_desc: "[ROOT.Char.GetFirstNameNoTooltip] is a well respected expert on magical theory, capable of holding their own against most magical historians... if society permits."
+ trait_education_arcane_3_desc: "This character is a well respected expert on magical theory, capable of holding their own against most magical historians... if society permits."
+ trait_education_arcane_3_character_desc: "[ROOT.Char.GetFirstNameNoTooltip] is a well respected expert on magical theory, capable of holding their own against most magical historians... if society permits."
  trait_education_arcane_4: "Magical Theorist"
- trait_education_arcane_4_desc: "[ROOT.Char.GetFirstNameNoTooltip] is one of the foremost experts on magic in the world. [ROOT.Char.GetSheHe|U] is a prodigy in the theory of spell casting, and could become one of the greatest practitioners."
+ trait_education_arcane_4_desc: "This character is one of the foremost experts on magic in the world. They are a prodigy in the theory of spell casting, and could become one of the greatest practitioners."
+ trait_education_arcane_4_character_desc: "[ROOT.Char.GetFirstNameNoTooltip] is one of the foremost experts on magic in the world. [ROOT.Char.GetSheHe|U] is a prodigy in the theory of spell casting, and could become one of the greatest practitioners."
 
  #education
  education_arcane: "Arcane Education" 
  education_arcane_desc: "The study of the arcane arts, and the path to immortality and supreme power."
  education_arcane_effect_desc: "Choosing this [education_focus|E] will also have the following effects:"
- education_arcane_tt.affinity: "\n\n#P [ROOT.Char.Custom('ChildhoodPersonalityTrait')] children often do well with a Learning Education.#!"
- education_arcane_tt.disaffinity: "\n\n#N [ROOT.Char.Custom('ChildhoodPersonalityTrait')] children might struggle with a Learning Education.#!"
+ education_arcane_tt.affinity: "\n\n#P [ROOT.Char.Custom('ChildhoodPersonalityTrait')] children often do well with an Arcane Education.#!"
+ education_arcane_tt.disaffinity: "\n\n#N [ROOT.Char.Custom('ChildhoodPersonalityTrait')] children might struggle with an Arcane Education.#!"

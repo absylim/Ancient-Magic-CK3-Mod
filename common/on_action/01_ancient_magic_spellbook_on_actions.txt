@@ -1,13 +1,9 @@
-﻿namespace = ancient_magic_aura_update_events
-
-ancient_magic_aura_update_events.001 = {
-	hidden = yes
-
+﻿update_all_auras_for_character = {
 	trigger = {
 		has_any_spell_aura_targets_trigger = yes
 	}
 
-	immediate = {
+	effect = {
 		update_aura_effect = { MASK = aura_mask_0 SPELL = glimpse_the_future_spell }
 		update_aura_effect = { MASK = aura_mask_0 SPELL = financial_times_spell }
 		update_aura_effect = { MASK = aura_mask_0 SPELL = celerity_spell }

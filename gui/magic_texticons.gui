@@ -97,7 +97,7 @@ texticon = {
 }
 
 texticon = {
-	icon = icon_life_category
+	icon = icon_chiromancy_category
 	iconsize = {
 		texture = "gfx/magic/life_magic.dds"
 		size = { 80 80 }
@@ -139,14 +139,4 @@ texticon = {
 		size = { 80 80 }
 		fontsize = 16
 	}
-}
-
-texticon = {
-    icon = icon_mana_cost
-    iconsize = {
-        texture = "gfx/interface/icons/icon_inactive_aura.dds"
-        size = { 25 25 }
-        offset = { 0 6 }
-        fontsize = 16
-    }
 }

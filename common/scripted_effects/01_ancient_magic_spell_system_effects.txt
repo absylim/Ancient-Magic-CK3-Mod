@@ -1,4 +1,53 @@
-﻿set_up_spells = {
+﻿# For effects dealing with the setup and maintenance of the spell system
+
+start_aura_effect = {
+	save_temporary_scope_value_as = { name = spell_cost value = $SPELL$_cost }
+	add_to_variable_list = { name = $SPELL$_targets target = scope:spell_target }
+	scope:spell_target = { add_character_modifier = $SPELL$_modifier }
+	display_aura_times = { VALUE = mage_level }
+	change_mana_with_tooltip = { VALUE = $SPELL$_cost.neg }
+	change_mana_gen_tooltip = { VALUE = $SPELL$_gen_cost_individual.neg }
+	change_mage_xp = { VALUE = $SPELL$_cost.abs }
+	mod_bit = { MASK = aura_mask_0 BIT = $SPELL$_aura_bit OP = set }
+	trigger_event = { on_action = on_reset_mana_system }
+}
+
+update_aura_effect = {
+	if = {
+		limit = { var:$MASK$.$SPELL$_aura_bit.compare_value = set }
+		every_in_list = {
+			variable = $SPELL$_targets
+			remove_all_character_modifier_instances = $SPELL$_modifier
+			while = {
+				count = prev.mage_level
+				add_character_modifier = { modifier = $SPELL$_modifier }
+			}
+		}
+	}
+}
+
+stop_aura_effect = {
+	remove_list_variable = { name = $SPELL$_targets target = scope:spell_target }
+	scope:spell_target = { remove_all_character_modifier_instances = $SPELL$_modifier }
+	change_mana_gen_tooltip = { VALUE = $SPELL$_gen_cost_individual.abs }
+	if = {
+		limit = { NOT = { has_variable_list = $SPELL$_targets } }
+		mod_bit = { MASK = aura_mask_0 BIT = $SPELL$_aura_bit OP = unset }
+	}
+	trigger_event = { on_action = on_reset_mana_system }
+}
+
+remove_prev_from_this_aura_spell_targets_effect = {
+	if = {
+		limit = {
+			has_spell_aura_targets_trigger = { SPELL = $SPELL$ }
+			is_target_in_variable_list = { name = $SPELL$_targets target = prev }
+		}
+		remove_list_variable = { name = $SPELL$_targets target = prev }
+	}
+}
+
+set_up_spells = {
 	# Spell Categories
 	clear_global_variable_list = spell_categories_list
 	add_to_global_variable_list = { name = spell_categories_list target = flag:basic }

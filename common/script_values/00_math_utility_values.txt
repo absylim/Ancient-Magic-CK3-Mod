@@ -337,7 +337,7 @@ num_set_bits = {
 abs = {
 	value = this
 	if = {
-		limit = { this < 0 }
+		limit = { this.compare_value < 0 }
 		multiply = -1
 	}
 }
@@ -345,7 +345,7 @@ abs = {
 neg = {
 	value = this
 	if = {
-		limit = { this > 0 }
+		limit = { this.compare_value > 0 }
 		multiply = -1
 	}
 }
@@ -372,4 +372,10 @@ tri = {
 squared = {
 	value = this
 	multiply = this
+}
+
+clamp_to_max_mana = {
+	value = this
+	max = var:max_mana
+	min = 0
 }

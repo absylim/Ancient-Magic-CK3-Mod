@@ -27,7 +27,7 @@
  # error catching
  dummy_spell_name: ""
 
- # None
+ # Basic
  spark_spell_name: "Practice Spark"
  # Chronomancy
  glimpse_the_future_spell_name: "Glimpse the Future"
@@ -104,32 +104,32 @@
  avatar_of_life_spell_desc: "The most advanced application of [chiromancy|E], this spell uses pure magical power to replace organs and blood, annihilate infectious invaders, and even target diseases the body doesn't recognize as diseases. Effectively heals the target of any single affliction."
 
  # Elomancy
- flame_aura_spell_desc: "$lorem_ipsum$"
- flaming_weapons_spell_desc: "$lorem_ipsum$"
- living_earthworks_spell_desc: "$lorem_ipsum$"
- golem_creation_spell_desc: "$lorem_ipsum$"
- control_water_spell_desc: "$lorem_ipsum$"
- drought_spell_desc: "$lorem_ipsum$"
- elemental_warrior_spell_desc: "$lorem_ipsum$"
- lord_of_the_elements_spell_desc: "$lorem_ipsum$"
+ flame_aura_spell_desc: "By weaving elemental energy into the air around them, an [elomancer|E] is able to make it incredibly uncomfortable, even painful, to be too close to them. In battle, an enemy will often be so distracted by their body's reaction to the environment that they will be unable to effectively duel the mage."
+ flaming_weapons_spell_desc: "Similar in nature to [flame_aura_spell|E], this spell will infuse energy not into the environment, but into certain objects within that environment. Though the energy required to make the weapons of an entire army burst into flame would be impossible for most mages - not to mention harmful to their armory - even a moderate increase in the temperature of a weapon will allow it to cut through armor and skin more easily."
+ living_earthworks_spell_desc: "Utilizing this spell, an [elomancer|E] is able to cause the ground itself to serve as extra defense against invading armies, by opening pits, raising walls, or even expanding parts of the earth with such force that pieces are sent flying like shrapnel. Most armies would be fool to lay siege to a castle under the protection of this spell, though its power is severely limited by the skill of the mage."
+ golem_creation_spell_desc: "Infusing an autonomous will into a construct is practically an art form, but that is what this spell attempts to do. The fact that those works of art can then be told to rip a castle to the ground is a bonus that many [elomancer|E]#E s#! find worth the cost in mana and environmental damage."
+ control_water_spell_desc: "This spell controls large bodies of water, causing depressions in front of ships and pushing them forward, as if they were always flowing downward. The amount of control this requires, in order to not damage the entire fleet of ships, means that less-experienced mages will see very little benefit to this spell. That is, unless they don't care about losing half their army to the briny deep."
+ drought_spell_desc: "All living things need water to survive, and this spell takes advantage of that by taking the water away. The effects of watching your water dry up can cause anyone to panic, and less access to water damages immune systems of the living as well as the integrity of their food stores. Most effective when used in sieges, as destroying large swathes of a countryside, by removing the water from growing plants, is too damaging to the environment."
+ elemental_warrior_spell_desc: "A combination of the five other [Concept('elomancy','Elomantic')|E] auras, this spell is truly the height of the Elomancy [school_of_magic|E]. The amount of energy required to maintain all of the auras in conjunction with each other is immense, but nearly so much as it would be to maintain them all individually. The nature of the spell even allows the mage to channel it at the same time as all the other auras... if they have the mana."
+ lord_of_the_elements_spell_desc: "A more powerful version of [golem_creation_spell|E], this spell creates much larger golems that are much more effective at tearing down walls. However, both their size and the fact that their bodies are comprised of semi-liquid magma means that they are not agile, making them mostly ineffective against regular military units, except as a deterrent."
 
  # Necromancy
  inflict_illness_spell_desc: "This basic [necromancy|E] spell acts upon its subject's immune system, diminishing it in ways which leave the target vulnerable to all manner of illnesses which they would normally be able to fight off. Makes the target [GetTrait('ill').GetName(GetNullCharacter)]."
  plague_lord_spell_desc: "A more concentrated form of [inflict_illness_spell|E], the practioner is able to engineer a truly virulent and deadly plague. This plague has very high lethality, and is able to spread from one victim to another, killing droves. Gives the target the [GetTrait('bubonic_plague').GetName(GetNullCharacter)]."
  aura_of_death_spell_desc: "[necromancy|E] is a dangerous [school_of_magic|E]. Living things can feel this at a visceral level. Among the simplest of all aura spells, the necromancer's 'aura of death' doesn't do anything particularly flashy. All a practioner needs to do in order to cast this spell is to place themselves in the state of mind required to cast a necromancy spell. This voluntary madness, and the energies associated with it, produce a pervasive sense of unease in anyone near the spell caster."
  necromancy_spell_desc: "This spell is the quintessential [necromancy|E] ritual. In order to cast the spell, the necromancer must extend their madness out into the world, pressing it upon the bodies of the deceased, and then exerting their will, denying death as a certainty so completely that reality shifts, molding itself to the madness of the caster.\n\nTo achieve this obscene ritual, even the most powerful of [GetTrait('mage').GetName( GetNullCharacter ) |LVl]s require a number of physical spell mnemonics, usually in the form of a ritual dagger, which has been placed in the funeral pyres of hundreds of the recently deceased, and often, a number of assitants to help with various elements of the ritual."
- drain_life_spell_desc: "This infamous spell is among the most evil of spells known in any [school_of_magic|E]. It draws on the corrosive, destructive, and hungry nature of [necromancy|E], using that nature to drain the life-force of the spell's target and feed it back into its caster. If the caster exerts more will, they may even drain the target so quickly that the victim expires immediately, though this approach disperses the victim's life-force so rapdily that the caster is unable to consume it."
- death_stare_spell_desc: "$lorem_ipsum$"
- blight_spell_desc: "$lorem_ipsum$"
- deacon_of_death_spell_desc: "$lorem_ipsum$"
+ drain_life_spell_desc: "This infamous spell is among the most evil of spells known in any [school_of_magic|E]. It draws on the corrosive, destructive, and hungry nature of [necromancy|E], using that nature to drain the life force of the spell's target and feed it back into its caster. If the caster exerts more will, they may even drain the target so quickly that the victim expires immediately, though this approach disperses the victim's life-force so rapdily that the caster is unable to consume it."
+ death_stare_spell_desc: "This, more powerful, version of [drain_life_spell|E] will drain the life force of a victim completely and instantly. The life energy is ripped from the victim so quickly and forcefully that it's impossible for the caster to utilize it. There are rumors that some less-scrupulous mages will rip the energy out, just to let a waiting entity feed on it, but such rumors are hard to verify."
+ blight_spell_desc: "By creating a wave of destructive energy around a target, the [necromancer|E] is able to forcibly decay non-living matter in an area around them. This results in the spoiling of food in most cases, but in rare cases with mages of exceptional power, the energy is powerful enough that the target's clothes or armor have also been known to decay."
+ deacon_of_death_spell_desc: "The ultimate goal of [necromancy|E], this spell will kill the target, and then render their dead body susceptible to the [necromancer|E]'s will. Unfortunately, the spell will not work on corpses, as the soul must be trapped within the body before it can disperse. Though this means the spell does not truly revive the dead, the results are powerful enough that most necromancers will forgive the distinction."
 
  # Biomancy
- rewrite_beauty_spell_desc: "$lorem_ipsum$"
- rewrite_physique_spell_desc: "$lorem_ipsum$"
- rewrite_intellect_spell_desc: "$lorem_ipsum$"
- sculpter_of_flesh_spell_desc: "$lorem_ipsum$"
- fertility_control_spell_desc: "$lorem_ipsum$"
- impregnate_spell_desc: "$lorem_ipsum$"
+ rewrite_beauty_spell_desc: "The primary use of [biomancy|E], and the original purpose for its development, is this spell, which molds bone, flesh, metabolic processes, and the body's natural storage locations for fatty tissue, such that the resulting body is aesthetically pleasing... or displeasing... to onlookers. While ultimately a product of personal taste, there are enough relatively-universally accepted criteria for beauty for this spell to function as intended."
+ rewrite_physique_spell_desc: "Every young warrior's dream, this spell allows the mage to instantly create (or destroy, if they feel like it) masses of muscle tissue in the target's body, connecting them to the relevant bones and allowing them to utilize the extra muscle mass as if they had gained it by way of weight training. If you ever see a muscle-y mage, you can make the safe assumption that they have cast this spell on themselves."
+ rewrite_intellect_spell_desc: "Though one would think this spell would belong to the [mensomancy|E] [school_of_magic|E], it actually involves directly sculpting the neural pathways of the brain to facilitate the drawing of logical connections between concepts, which causes the subject to consider more of their knowledge useful in any given situation, instead of erroneously dismissing things as irrelevant. Or, if the mage is feeling mean, it does the opposite."
+ sculpter_of_flesh_spell_desc: "A catch-all term for a number of separate spell constructs, this spell allows the user to sculpt the flesh, bone, musculature, and other organs of the target in ways that the Rewrite spells don't. While the myriad methods and effects of this spell can differ wildly, [biomancer|E]#E s#! have classified them all under this single spell name, simply for ease of reference and use."
+ fertility_control_spell_desc: "The favorite spell of many a promiscuous young mage, this spell either suppresses or enhances the reproductive systems of the caster, effectively ensuring that any... [Concept('extramarital_sex','fornicative endeavors')|E]... the mage may engage in, will have the result they desire, be it a child of their line, a bastard, or no child at all."
+ impregnate_spell_desc: "This rather invasive and, most would say, horrifying use of [biomancy|E] allows the mage to generate a pregnancy, skipping the fun part and going straight to the unpleasant part. If the mage is a woman, the spell causes the pregnancy in herself, using essence from the targeted man. If the mage is a man, the spell forcibly impregnates the target woman with his essence. If the mage is of the same gender as the target, the spell fails due to biological limitations."
 
  # Mensomancy
  entrance_spell_desc: "$lorem_ipsum$"

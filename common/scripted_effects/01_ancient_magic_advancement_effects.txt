@@ -1,0 +1,10 @@
+﻿effect_open_magic_advancement_window = {
+	set_variable = {
+		name = window_magic_advancement_view
+		value = yes
+	}
+}
+
+effect_close_magic_advancement_window = {
+	remove_variable = window_magic_advancement_view
+}
