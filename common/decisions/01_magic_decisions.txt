@@ -334,19 +334,19 @@ forge_material_soul_decision = {
 	ai_will_do = {
 		base = 40
 		modifier = {
-			var:mage_level >= 10
+			mage_level >= 10
 			add = 10
 		}
 		modifier = {
-			var:mage_level >= 15
+			mage_level >= 15
 			add = 10
 		}
 		modifier = {
-			var:mage_level >= 20
+			mage_level >= 20
 			add = 10
 		}
 		modifier = {
-			var:mage_level >= 25
+			mage_level >= 25
 			add = 10
 		}
 		modifier = {
