@@ -165,6 +165,16 @@
 							}
 
 							widget = {
+								name = "Lines"
+								size = { 100% 100% }
+
+								background = {
+									texture = "gfx/interface/window_magic_advancement/advancement_lines.dds"
+									spriteType = Corneredstretched
+								}
+							}
+
+							widget = {
 								allow_outside = yes
 								#size = "[PdxGetWidgetScreenSize( PdxGuiWidget.AccessParent.Self )]"
 								datamodel = "[GetGlobalList('spell_categories_list')]"
