@@ -37,6 +37,20 @@ stop_aura_effect = {
 	trigger_event = { on_action = on_reset_mana_system }
 }
 
+# Does not reset the mana system, because it is used in the debug decision, which
+# sequentially kills all auras. If you use this, reset the mana system yourself.
+kill_aura = {
+	if = {
+		limit = { has_variable_list = $SPELL$_targets }
+		every_in_list = {
+			variable = $SPELL$_targets
+			remove_all_character_modifier_instances = $SPELL$_modifier
+		}
+		clear_variable_list = $SPELL$_targets
+		mod_bit = { MASK = aura_mask_0 BIT = $SPELL$_aura_bit OP = unset }
+	}
+}
+
 remove_prev_from_this_aura_spell_targets_effect = {
 	if = {
 		limit = {

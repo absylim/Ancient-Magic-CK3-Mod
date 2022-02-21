@@ -132,173 +132,25 @@ reset_mana_system_decision = {
 					remove_character_flag = ancient_magic_arcana_focus_mana_added
 					remove_character_flag = arcane_legacy_2_mana_added
 					remove_character_flag = arcane_legacy_3_mana_added
-					clear_variable_list = glimpse_the_future_spell_targets
-					clear_variable_list = financial_times_spell_targets
-					clear_variable_list = celerity_spell_targets
-					clear_variable_list = mass_celerity_spell_targets
-					clear_variable_list = slowness_spell_targets
-					clear_variable_list = mass_slowness_spell_targets
-					clear_variable_list = temporal_manipulation_spell_targets
-					clear_variable_list = haste_spell_targets
-					clear_variable_list = master_of_time_spell_targets
-					clear_variable_list = flame_aura_spell_targets
-					clear_variable_list = flaming_weapons_spell_targets
-					clear_variable_list = living_earthworks_spell_targets
-					clear_variable_list = control_water_spell_targets
-					clear_variable_list = drought_spell_targets
-					clear_variable_list = elemental_warrior_spell_targets
-					clear_variable_list = aura_of_death_spell_targets
-					clear_variable_list = blight_spell_targets
-					clear_variable_list = beguiling_aura_spell_targets
-					clear_variable_list = enchanting_aura_spell_targets
-					if = {
-						limit = { has_character_modifier = glimpse_the_future_spell_modifier }
-						remove_all_character_modifier_instances = glimpse_the_future_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = financial_times_spell_modifier }
-						remove_all_character_modifier_instances = financial_times_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = celerity_spell_modifier }
-						remove_all_character_modifier_instances = celerity_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = mass_celerity_spell_modifier }
-						remove_all_character_modifier_instances = mass_celerity_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = slowness_spell_modifier }
-						remove_all_character_modifier_instances = slowness_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = mass_slowness_spell_modifier }
-						remove_all_character_modifier_instances = mass_slowness_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = temporal_manipulation_spell_modifier }
-						remove_all_character_modifier_instances = temporal_manipulation_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = haste_spell_modifier }
-						remove_all_character_modifier_instances = haste_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = flame_aura_spell_modifier }
-						remove_all_character_modifier_instances = flame_aura_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = flaming_weapons_spell_modifier }
-						remove_all_character_modifier_instances = flaming_weapons_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = living_earthworks_spell_modifier }
-						remove_all_character_modifier_instances = living_earthworks_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = control_water_spell_modifier }
-						remove_all_character_modifier_instances = control_water_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = drought_spell_modifier }
-						remove_all_character_modifier_instances = drought_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = elemental_warrior_spell_modifier }
-						remove_all_character_modifier_instances = elemental_warrior_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = aura_of_death_spell_modifier }
-						remove_all_character_modifier_instances = aura_of_death_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = blight_spell_modifier }
-						remove_all_character_modifier_instances = blight_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = beguiling_aura_spell_modifier }
-						remove_all_character_modifier_instances = beguiling_aura_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = enchanting_aura_spell_modifier }
-						remove_all_character_modifier_instances = enchanting_aura_spell_modifier
-					}
-					if = {
-						limit = { has_character_modifier = finacial_times_modifier }
-						remove_all_character_modifier_instances = finacial_times_modifier
-					}
-					if = {
-						limit = { has_character_modifier = glimpse_the_future_modifier }
-						remove_all_character_modifier_instances = glimpse_the_future_modifier
-					}
-					if = {
-						limit = { has_character_modifier = financial_times_modifier }
-						remove_all_character_modifier_instances = financial_times_modifier
-					}
-					if = {
-						limit = { has_character_modifier = celerity_modifier }
-						remove_all_character_modifier_instances = celerity_modifier
-					}
-					if = {
-						limit = { has_character_modifier = mass_celerity_modifier }
-						remove_all_character_modifier_instances = mass_celerity_modifier
-					}
-					if = {
-						limit = { has_character_modifier = slowness_modifier }
-						remove_all_character_modifier_instances = slowness_modifier
-					}
-					if = {
-						limit = { has_character_modifier = mass_slowness_modifier }
-						remove_all_character_modifier_instances = mass_slowness_modifier
-					}
-					if = {
-						limit = { has_character_modifier = temporal_manipulation_modifier }
-						remove_all_character_modifier_instances = temporal_manipulation_modifier
-					}
-					if = {
-						limit = { has_character_modifier = haste_modifier }
-						remove_all_character_modifier_instances = haste_modifier
-					}
-					if = {
-						limit = { has_character_modifier = flame_aura_modifier }
-						remove_all_character_modifier_instances = flame_aura_modifier
-					}
-					if = {
-						limit = { has_character_modifier = flaming_weapons_modifier }
-						remove_all_character_modifier_instances = flaming_weapons_modifier
-					}
-					if = {
-						limit = { has_character_modifier = living_earthworks_modifier }
-						remove_all_character_modifier_instances = living_earthworks_modifier
-					}
-					if = {
-						limit = { has_character_modifier = control_water_modifier }
-						remove_all_character_modifier_instances = control_water_modifier
-					}
-					if = {
-						limit = { has_character_modifier = drought_modifier }
-						remove_all_character_modifier_instances = drought_modifier
-					}
-					if = {
-						limit = { has_character_modifier = elemental_warrior_modifier }
-						remove_all_character_modifier_instances = elemental_warrior_modifier
-					}
-					if = {
-						limit = { has_character_modifier = aura_of_death_modifier }
-						remove_all_character_modifier_instances = aura_of_death_modifier
-					}
-					if = {
-						limit = { has_character_modifier = blight_modifier }
-						remove_all_character_modifier_instances = blight_modifier
-					}
-					if = {
-						limit = { has_character_modifier = beguiling_aura_modifier }
-						remove_all_character_modifier_instances = beguiling_aura_modifier
-					}
-					if = {
-						limit = { has_character_modifier = enchanting_aura_modifier }
-						remove_all_character_modifier_instances = enchanting_aura_modifier
-					}
+					kill_aura = { SPELL = glimpse_the_future_spell }
+					kill_aura = { SPELL = financial_times_spell }
+					kill_aura = { SPELL = celerity_spell }
+					kill_aura = { SPELL = mass_celerity_spell }
+					kill_aura = { SPELL = slowness_spell }
+					kill_aura = { SPELL = mass_slowness_spell }
+					kill_aura = { SPELL = temporal_manipulation_spell }
+					kill_aura = { SPELL = haste_spell }
+					kill_aura = { SPELL = master_of_time_spell }
+					kill_aura = { SPELL = flame_aura_spell }
+					kill_aura = { SPELL = flaming_weapons_spell }
+					kill_aura = { SPELL = living_earthworks_spell }
+					kill_aura = { SPELL = control_water_spell }
+					kill_aura = { SPELL = drought_spell }
+					kill_aura = { SPELL = elemental_warrior_spell }
+					kill_aura = { SPELL = aura_of_death_spell }
+					kill_aura = { SPELL = blight_spell }
+					kill_aura = { SPELL = beguiling_aura_spell }
+					kill_aura = { SPELL = enchanting_aura_spell }
 					trigger_event = { on_action = on_reset_mana_system }
 				}
 			}
