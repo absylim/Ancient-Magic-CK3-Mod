@@ -109,6 +109,14 @@ reset_mana_system_decision = {
 						remove_perk = death_magic_8_perk
 						add_perk = blight_perk
 					}
+					if = {
+						limit = { has_variable = life_perk_mask_0 }
+						set_variable = {
+							name = chiromancy_perk_mask_0
+							value = var:life_perk_mask_0
+						}
+						remove_variable = life_perk_mask_0
+					}
 					init_perk_masks_effect = yes
 					remove_character_flag = magic_potential_1_mana_added
 					remove_character_flag = magic_potential_2_mana_added

@@ -11,15 +11,15 @@
 		flag:mass_slowness_perk = { var:chronomancy_perk_mask_0.$PERK$_bit.compare_value = set }
 		flag:temporal_manipulation_perk = { var:chronomancy_perk_mask_0.$PERK$_bit.compare_value = set }
 		flag:master_of_time_perk = { var:chronomancy_perk_mask_0.$PERK$_bit.compare_value = set }
-		flag:life_mage_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
-		flag:inward_reflection_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
-		flag:inward_perfection_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
-		flag:heal_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
-		flag:greater_heal_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
-		flag:battlefield_life_mage_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
-		flag:greater_battlefield_life_mage_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
-		flag:purity_of_body_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
-		flag:avatar_of_life_perk = { var:life_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:life_mage_perk = { var:chiromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:inward_reflection_perk = { var:chiromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:inward_perfection_perk = { var:chiromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:heal_perk = { var:chiromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:greater_heal_perk = { var:chiromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:battlefield_life_mage_perk = { var:chiromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:greater_battlefield_life_mage_perk = { var:chiromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:purity_of_body_perk = { var:chiromancy_perk_mask_0.$PERK$_bit.compare_value = set }
+		flag:avatar_of_life_perk = { var:chiromancy_perk_mask_0.$PERK$_bit.compare_value = set }
 		flag:elemental_mage_perk = { var:elomancy_perk_mask_0.$PERK$_bit.compare_value = set }
 		flag:flame_aura_perk = { var:elomancy_perk_mask_0.$PERK$_bit.compare_value = set }
 		flag:flaming_weapons_perk = { var:elomancy_perk_mask_0.$PERK$_bit.compare_value = set }
@@ -72,7 +72,7 @@ has_perk_masks_trigger = {
 	has_variable = aura_mask_0
 	has_variable = basic_perk_mask_0
 	has_variable = chronomancy_perk_mask_0
-	has_variable = life_perk_mask_0
+	has_variable = chiromancy_perk_mask_0
 	has_variable = elomancy_perk_mask_0
 	has_variable = necromancy_perk_mask_0
 	has_variable = biomancy_perk_mask_0
