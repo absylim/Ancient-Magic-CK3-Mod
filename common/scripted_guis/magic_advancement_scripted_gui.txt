@@ -35,7 +35,7 @@ toggle_magic_advancement_window = {
 				}
 				set_variable = {
 					name = available_magic_perks
-					value = mage_level
+					value = num_available_magic_perks
 				}
 			}
 			effect_open_magic_advancement_window = yes
