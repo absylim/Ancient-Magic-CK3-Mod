@@ -1,0 +1,9 @@
+﻿ancient_magic_lesson_chain = {
+	trigger = {
+		exists = this
+		OR = {
+			mage_potency > 0
+			mage_education > 0
+		}
+	}
+}

@@ -79,6 +79,15 @@ texticon = {
 }
 
 texticon = {
+	icon = icon_magic_perk_available
+	iconsize = {
+		texture = "gfx/interface/window_magic_advancement/magic_advancement_perk_available_2.dds"
+		size = { 20 20 }
+		fontsize = 16
+	}
+}
+
+texticon = {
 	icon = icon_basic_category
 	iconsize = {
 		texture = "gfx/magic/maintab_spellbook.dds"

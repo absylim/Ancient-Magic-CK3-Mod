@@ -98,6 +98,7 @@
 					spacer = { size = { 0 25 } }
 
 					button_standard = {
+						name = "magic_advancement_toggle_study_button"
 						size = { 200 50 }
 						text = "MAGIC_ADVANCEMENT_TOGGLE_STUDY"
 						clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"

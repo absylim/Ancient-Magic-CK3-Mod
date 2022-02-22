@@ -239,6 +239,7 @@
 					expand = {}
 
 					button_tertiary_magic = {
+						name = "cast_spell_button"
 						text = "CAST_SPELL"
 						enabled = "[And(GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End),GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End))]"
 						tooltip = "[GetScriptedGui(GetVariableSystem.Get('current_spell_selected')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell_target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).AddScope('selected_spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).End)]"
