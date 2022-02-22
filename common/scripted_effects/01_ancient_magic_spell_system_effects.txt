@@ -222,6 +222,9 @@ set_up_spells = {
 
 	# Spells that allow you to modify a target's traits (not necessary if the spell does not _has_list)
 	clear_global_variable_list = modify_trait_spells
+	add_to_global_variable_list = { name = modify_trait_spells target = flag:heal_spell }
+	add_to_global_variable_list = { name = modify_trait_spells target = flag:greater_heal_spell }
+	add_to_global_variable_list = { name = modify_trait_spells target = flag:avatar_of_life_spell }
 	add_to_global_variable_list = { name = modify_trait_spells target = flag:rewrite_beauty_spell }
 	add_to_global_variable_list = { name = modify_trait_spells target = flag:rewrite_physique_spell }
 	add_to_global_variable_list = { name = modify_trait_spells target = flag:rewrite_intellect_spell }
