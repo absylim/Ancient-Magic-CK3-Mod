@@ -1,0 +1,233 @@
+﻿ancient_magic_advancement_lesson = {
+	chain = ancient_magic_lesson_chain
+	delay = 0
+	start_automatically = no
+
+	ancient_magic_advancement_lesson_step_1 = {
+		text = "ancient_magic_advancement_lesson_desc"
+		header_info = "lesson_step_1_of_4"
+		animation = center
+
+		highlight_widget = "magic_advancement_button"
+
+		gui_transition = {
+			button_id = "read_later"
+			button_text = "tutorial_lesson_button_read_later"
+			target = lesson_abort
+		}
+
+		gui_transition = {
+			button_id = "skip"
+			button_text = "tutorial_lesson_button_skip"
+			target = lesson_finish
+		}
+
+		trigger_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_next"
+			target = ancient_magic_advancement_lesson_step_2
+			trigger = {
+				custom_tooltip = {
+					text = "open_magic_advancement_view"
+					has_variable = window_magic_advancement_view
+				}
+			}
+		}
+	}
+
+	ancient_magic_advancement_lesson_step_2 = {
+		text = "ancient_magic_advancement_lesson_2_desc"
+		header_info = "lesson_step_2_of_4"
+		animation = left
+
+		gui_transition = {
+			button_id = "read_later"
+			button_text = "tutorial_lesson_button_read_later"
+			target = lesson_abort
+		}
+
+		gui_transition = { #Back button
+			button_id = "back"
+			button_text = "tutorial_lesson_button_back"
+			target = ancient_magic_advancement_lesson_step_1
+		}
+
+		gui_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_complete"
+			target = ancient_magic_advancement_lesson_step_3
+		}
+	}
+
+	ancient_magic_advancement_lesson_step_3 = {
+		text = "ancient_magic_advancement_lesson_3_desc"
+		header_info = "lesson_step_3_of_4"
+		animation = center
+
+		highlight_widget = "magic_advancement_toggle_study_button"
+
+		gui_transition = {
+			button_id = "read_later"
+			button_text = "tutorial_lesson_button_read_later"
+			target = lesson_abort
+		}
+
+		gui_transition = { #Back button
+			button_id = "back"
+			button_text = "tutorial_lesson_button_back"
+			target = ancient_magic_advancement_lesson_step_2
+		}
+
+		trigger_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_complete"
+			target = ancient_magic_advancement_lesson_step_4
+			trigger = {
+				custom_tooltip = {
+					text = "click_begin_studying_magic"
+					has_character_modifier = magic_advancement_modifier
+				}
+			}
+		}
+	}
+
+	ancient_magic_advancement_lesson_step_4 = {
+		text = "ancient_magic_advancement_lesson_4_desc"
+		header_info = "lesson_step_4_of_4"
+		animation = left
+
+		gui_transition = {
+			button_id = "read_later"
+			button_text = "tutorial_lesson_button_read_later"
+			target = lesson_abort
+		}
+
+		gui_transition = { #Back button
+			button_id = "back"
+			button_text = "tutorial_lesson_button_back"
+			target = ancient_magic_advancement_lesson_step_3
+		}
+
+		gui_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_complete"
+			target = lesson_finish
+		}
+	}
+}
+
+ancient_magic_spellbook_lesson = {
+	chain = ancient_magic_lesson_chain
+	delay = 0
+	start_automatically = no
+
+	ancient_magic_spellbook_lesson_step_1 = {
+		text = "ancient_magic_spellbook_lesson_desc"
+		header_info = "lesson_step_1_of_4"
+		animation = center
+
+		highlight_widget = "spellbook_button"
+
+		gui_transition = {
+			button_id = "read_later"
+			button_text = "tutorial_lesson_button_read_later"
+			target = lesson_abort
+		}
+
+		gui_transition = {
+			button_id = "skip"
+			button_text = "tutorial_lesson_button_skip"
+			target = lesson_finish
+		}
+
+		trigger_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_next"
+			target = ancient_magic_spellbook_lesson_step_2
+			trigger = {
+				custom_tooltip = {
+					text = "click_spellbook_button"
+					has_variable = window_magic_view
+				}
+			}
+		}
+	}
+
+	ancient_magic_spellbook_lesson_step_2 = {
+		text = "ancient_magic_spellbook_lesson_2_desc"
+		header_info = "lesson_step_2_of_4"
+		animation = left
+
+		highlight_widget = "spell_categories_scrollarea"
+
+		gui_transition = {
+			button_id = "read_later"
+			button_text = "tutorial_lesson_button_read_later"
+			target = lesson_abort
+		}
+
+		gui_transition = { #Back button
+			button_id = "back"
+			button_text = "tutorial_lesson_button_back"
+			target = ancient_magic_spellbook_lesson_step_1
+		}
+
+		gui_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_complete"
+			target = ancient_magic_spellbook_lesson_step_3
+		}
+	}
+
+	ancient_magic_spellbook_lesson_step_3 = {
+		text = "ancient_magic_spellbook_lesson_3_desc"
+		header_info = "lesson_step_3_of_4"
+		animation = left
+
+		highlight_widget = "get_all_spells"
+
+		gui_transition = {
+			button_id = "read_later"
+			button_text = "tutorial_lesson_button_read_later"
+			target = lesson_abort
+		}
+
+		gui_transition = { #Back button
+			button_id = "back"
+			button_text = "tutorial_lesson_button_back"
+			target = ancient_magic_spellbook_lesson_step_2
+		}
+
+		gui_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_complete"
+			target = ancient_magic_spellbook_lesson_step_4
+		}
+	}
+
+	ancient_magic_spellbook_lesson_step_4 = {
+		text = "ancient_magic_spellbook_lesson_4_desc"
+		header_info = "lesson_step_4_of_4"
+		animation = left
+
+		highlight_widget = "cast_spell_button"
+
+		gui_transition = {
+			button_id = "read_later"
+			button_text = "tutorial_lesson_button_read_later"
+			target = lesson_abort
+		}
+
+		gui_transition = { #Back button
+			button_id = "back"
+			button_text = "tutorial_lesson_button_back"
+			target = ancient_magic_spellbook_lesson_step_3
+		}
+
+		gui_transition = {
+			button_id = "next"
+			button_text = "tutorial_lesson_button_complete"
+			target = lesson_finish
+		}
+	}
+}

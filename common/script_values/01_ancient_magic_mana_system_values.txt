@@ -156,9 +156,14 @@ mage_education = { # UNCOMMENT WHEN SYSTEM IN PLACE!!!
 }
 
 ancient_magic_mana_gen = {
-	value = 0
-	add = ancient_magic_mana_gen_gen_only
-	add = ancient_magic_mana_gen_drain_only
+	if = {
+		limit = { has_trait = infinite_mana }
+		value = 999999
+	}
+	else = {
+		value = ancient_magic_mana_gen_gen_only
+		add = ancient_magic_mana_gen_drain_only
+	}
 }
 
 ancient_magic_mana_gen_gen_only = {
@@ -252,17 +257,23 @@ ancient_magic_mana_drain_disease = {
 }
 
 ancient_magic_max_mana = {
-	value = ancient_magic_max_mana_perks
-	add = {
-		value = mage_potency
-		multiply = max_mana_per_potency
-	}
 	if = {
-		limit = {
-			exists = dynasty
-			dynasty = { has_dynasty_perk = arcane_legacy_3 }
+		limit = { has_trait = infinite_mana }
+		value = 999999
+	}
+	else = {
+		value = ancient_magic_max_mana_perks
+		add = {
+			value = mage_potency
+			multiply = max_mana_per_potency
 		}
-		add = max_mana_legacy_3
+		if = {
+			limit = {
+				exists = dynasty
+				dynasty = { has_dynasty_perk = arcane_legacy_3 }
+			}
+			add = max_mana_legacy_3
+		}
 	}
 }
 
@@ -293,15 +304,15 @@ ancient_magic_mana_gen_perks = {
 	add = { value = var:chronomancy_perk_mask_0.master_of_time_perk_bit multiply = master_of_time_perk_gen_cost }
 
 	# Life tree
-	add = { value = var:life_perk_mask_0.life_mage_perk_bit multiply = life_mage_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.inward_reflection_perk_bit multiply = inward_reflection_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.inward_perfection_perk_bit multiply = inward_perfection_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.heal_perk_bit multiply = heal_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.greater_heal_perk_bit multiply = greater_heal_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.battlefield_life_mage_perk_bit multiply = battlefield_life_mage_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.greater_battlefield_life_mage_perk_bit multiply = greater_battlefield_life_mage_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.purity_of_body_perk_bit multiply = purity_of_body_perk_gen_cost }
-	add = { value = var:life_perk_mask_0.avatar_of_life_perk_bit multiply = avatar_of_life_perk_gen_cost }
+	add = { value = var:chiromancy_perk_mask_0.life_mage_perk_bit multiply = life_mage_perk_gen_cost }
+	add = { value = var:chiromancy_perk_mask_0.inward_reflection_perk_bit multiply = inward_reflection_perk_gen_cost }
+	add = { value = var:chiromancy_perk_mask_0.inward_perfection_perk_bit multiply = inward_perfection_perk_gen_cost }
+	add = { value = var:chiromancy_perk_mask_0.heal_perk_bit multiply = heal_perk_gen_cost }
+	add = { value = var:chiromancy_perk_mask_0.greater_heal_perk_bit multiply = greater_heal_perk_gen_cost }
+	add = { value = var:chiromancy_perk_mask_0.battlefield_life_mage_perk_bit multiply = battlefield_life_mage_perk_gen_cost }
+	add = { value = var:chiromancy_perk_mask_0.greater_battlefield_life_mage_perk_bit multiply = greater_battlefield_life_mage_perk_gen_cost }
+	add = { value = var:chiromancy_perk_mask_0.purity_of_body_perk_bit multiply = purity_of_body_perk_gen_cost }
+	add = { value = var:chiromancy_perk_mask_0.avatar_of_life_perk_bit multiply = avatar_of_life_perk_gen_cost }
 
 	# Elemental tree
 	add = { value = var:elomancy_perk_mask_0.elemental_mage_perk_bit multiply = elemental_mage_perk_gen_cost }
@@ -365,15 +376,15 @@ ancient_magic_max_mana_perks = {
 	add = { value = var:chronomancy_perk_mask_0.master_of_time_perk_bit multiply = master_of_time_perk_max_mana }
 
 	# Life tree
-	add = { value = var:life_perk_mask_0.life_mage_perk_bit multiply = life_mage_perk_max_mana }
-	add = { value = var:life_perk_mask_0.inward_reflection_perk_bit multiply = inward_reflection_perk_max_mana }
-	add = { value = var:life_perk_mask_0.inward_perfection_perk_bit multiply = inward_perfection_perk_max_mana }
-	add = { value = var:life_perk_mask_0.heal_perk_bit multiply = heal_perk_max_mana }
-	add = { value = var:life_perk_mask_0.greater_heal_perk_bit multiply = greater_heal_perk_max_mana }
-	add = { value = var:life_perk_mask_0.battlefield_life_mage_perk_bit multiply = battlefield_life_mage_perk_max_mana }
-	add = { value = var:life_perk_mask_0.greater_battlefield_life_mage_perk_bit multiply = greater_battlefield_life_mage_perk_max_mana }
-	add = { value = var:life_perk_mask_0.purity_of_body_perk_bit multiply = purity_of_body_perk_max_mana }
-	add = { value = var:life_perk_mask_0.avatar_of_life_perk_bit multiply = avatar_of_life_perk_max_mana }
+	add = { value = var:chiromancy_perk_mask_0.life_mage_perk_bit multiply = life_mage_perk_max_mana }
+	add = { value = var:chiromancy_perk_mask_0.inward_reflection_perk_bit multiply = inward_reflection_perk_max_mana }
+	add = { value = var:chiromancy_perk_mask_0.inward_perfection_perk_bit multiply = inward_perfection_perk_max_mana }
+	add = { value = var:chiromancy_perk_mask_0.heal_perk_bit multiply = heal_perk_max_mana }
+	add = { value = var:chiromancy_perk_mask_0.greater_heal_perk_bit multiply = greater_heal_perk_max_mana }
+	add = { value = var:chiromancy_perk_mask_0.battlefield_life_mage_perk_bit multiply = battlefield_life_mage_perk_max_mana }
+	add = { value = var:chiromancy_perk_mask_0.greater_battlefield_life_mage_perk_bit multiply = greater_battlefield_life_mage_perk_max_mana }
+	add = { value = var:chiromancy_perk_mask_0.purity_of_body_perk_bit multiply = purity_of_body_perk_max_mana }
+	add = { value = var:chiromancy_perk_mask_0.avatar_of_life_perk_bit multiply = avatar_of_life_perk_max_mana }
 
 	# Elemental tree
 	add = { value = var:elomancy_perk_mask_0.elemental_mage_perk_bit multiply = elemental_mage_perk_max_mana }

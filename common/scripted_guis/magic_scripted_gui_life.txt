@@ -8,7 +8,10 @@ heal_spell = {
 		has_enough_mana_trigger = { SPELL = heal_spell }
 	}
 	effect = {
-		scope:spell_target = { remove_single_minor_illness_effect = yes }
+		every_in_list = {
+			variable = selected_list_options
+			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
+		}
 		change_mana_with_tooltip = { VALUE = heal_spell_cost.neg }
 		change_mage_xp = { VALUE = heal_spell_cost.abs }
 	}
@@ -27,7 +30,7 @@ heal_spell_spellbook = {
 heal_spell_has_properties = {
 	scope = character
 	is_shown = {
-		always = no
+		always = yes
 	}
 	is_valid = {
 		always = no
@@ -37,10 +40,10 @@ heal_spell_has_properties = {
 heal_spell_has_list = {
 	scope = character
 	is_shown = {
-		always = no
+		always = yes
 	}
 	is_valid = {
-		always = no
+		var:post_spell_actor = { has_trait_trigger = { FLAG = scope:list_option } }
 	}
 }
 
@@ -58,7 +61,10 @@ greater_heal_spell = {
 		has_enough_mana_trigger = { SPELL = greater_heal_spell }
 	}
 	effect = {
-		scope:spell_target = { remove_single_greater_or_minor_illness_effect = yes }
+		every_in_list = {
+			variable = selected_list_options
+			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
+		}
 		change_mana_with_tooltip = { VALUE = greater_heal_spell_cost.neg }
 		change_mage_xp = { VALUE = greater_heal_spell_cost.abs }
 	}
@@ -77,7 +83,7 @@ greater_heal_spell_spellbook = {
 greater_heal_spell_has_properties = {
 	scope = character
 	is_shown = {
-		always = no
+		always = yes
 	}
 	is_valid = {
 		always = no
@@ -87,10 +93,10 @@ greater_heal_spell_has_properties = {
 greater_heal_spell_has_list = {
 	scope = character
 	is_shown = {
-		always = no
+		always = yes
 	}
 	is_valid = {
-		always = no
+		var:post_spell_actor = { has_trait_trigger = { FLAG = scope:list_option } }
 	}
 }
 
@@ -112,11 +118,14 @@ avatar_of_life_spell = {
 		}
 	}
 	effect = {
-		scope:spell_target = {
-			remove_any_single_illness_effect = yes
-			add_character_modifier = {
-				modifier = full_restoration_modifier
-				years = 5
+		every_in_list = {
+			variable = selected_list_options
+			scope:spell_target = {
+				add_or_remove_trait_effect = { FLAG = prev }
+				add_character_modifier = {
+					modifier = full_restoration_modifier
+					years = 5
+				}
 			}
 		}
 		change_mana_with_tooltip = { VALUE = avatar_of_life_spell_cost.neg }
@@ -137,7 +146,7 @@ avatar_of_life_spell_spellbook = {
 avatar_of_life_spell_has_properties = {
 	scope = character
 	is_shown = {
-		always = no
+		always = yes
 	}
 	is_valid = {
 		always = no
@@ -147,9 +156,9 @@ avatar_of_life_spell_has_properties = {
 avatar_of_life_spell_has_list = {
 	scope = character
 	is_shown = {
-		always = no
+		always = yes
 	}
 	is_valid = {
-		always = no
+		var:post_spell_actor = { has_trait_trigger = { FLAG = scope:list_option } }
 	}
 }

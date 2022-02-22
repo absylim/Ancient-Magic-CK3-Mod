@@ -98,6 +98,7 @@
 					spacer = { size = { 0 25 } }
 
 					button_standard = {
+						name = "magic_advancement_toggle_study_button"
 						size = { 200 50 }
 						text = "MAGIC_ADVANCEMENT_TOGGLE_STUDY"
 						clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
@@ -186,9 +187,18 @@
 										}
 
 										background = {
+											texture = "gfx/interface/window_magic_advancement/magic_advancement_lines.dds"
+											framesize = { 360 360 }
+											frame = "[FixedPointToInt(EmptyScope.ScriptValue(Concatenate(Scope.GetFlagName,'_bg_frame')))]"
+											alpha = 0.7
+										}
+
+										background = {
+											visible = "[GetScriptedGui('magic_advancement_tree_completed').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('tree',MakeScopeFlag(Scope.GetFlagName)).End)]"
 											texture = "gfx/interface/window_magic_advancement/magic_advancement_schools_bg.dds"
 											framesize = { 540 540 }
 											frame = "[FixedPointToInt(EmptyScope.ScriptValue(Concatenate(Scope.GetFlagName,'_bg_frame')))]"
+											alpha = 0.7
 										}
 
 										item = {
@@ -217,10 +227,30 @@
 													parentanchor = center|hcenter
 													size = "[PdxGetWidgetScreenSize( PdxGuiWidget.AccessParent.Self )]"
 													visible = "[And(Not(ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)), ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End))]"
-													texture = "gfx/interface/window_magic_advancement/magic_advancement_perk_available.dds"
+													texture = "gfx/interface/window_magic_advancement/magic_advancement_perk_available_2.dds"
 													onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)]"
 
 													using = tooltip_se
+													
+													state = {
+														trigger_on_create = yes
+
+														name = max_glow
+														next = min_glow
+														duration = 1
+														using = Animation_Curve_Default
+
+														alpha = 1.0
+													}
+
+													state = {
+														name = min_glow
+														next = max_glow
+														duration = 1
+														using = Animation_Curve_Default
+
+														alpha = 0.5
+													}
 
 													tooltipwidget = {
 														using = magic_perk_tooltip_selection
@@ -341,7 +371,7 @@
 				text_single = {
 					name = "skill_value"
 					parentanchor = vcenter
-					text = "[Scope.ScriptValue('life_num_perks')|0]"
+					text = "[Scope.ScriptValue('chiromancy_num_perks')|0]"
 					default_format = "#high"
 					using = Font_Size_Medium
 					align = nobaseline

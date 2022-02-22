@@ -29,9 +29,13 @@ toggle_magic_advancement_window = {
 			if = {
 				limit = { has_perk_masks_trigger = no }
 				init_perk_masks_effect = yes
+				if = {
+					limit = { NOT = { has_variable = mage_xp } }
+					set_variable = { name = mage_xp value = 0 }
+				}
 				set_variable = {
 					name = available_magic_perks
-					value = mage_level
+					value = num_available_magic_perks
 				}
 			}
 			effect_open_magic_advancement_window = yes
@@ -56,6 +60,22 @@ toggle_magic_xp_or_focus_xp = {
 			name = magic_advancement_cooldown
 			value = yes
 			days = 1825
+		}
+	}
+}
+
+magic_advancement_tree_completed = {
+	scope = character
+	is_valid = {
+		switch = {
+			trigger = scope:tree
+			flag:basic = { basic_num_perks.compare_value = 1 }
+			flag:chronomancy = { chronomancy_num_perks.compare_value = 9 }
+			flag:chiromancy = { chiromancy_num_perks.compare_value = 9 }
+			flag:elomancy = { elomancy_num_perks.compare_value = 9 }
+			flag:necromancy = { necromancy_num_perks.compare_value = 9 }
+			flag:biomancy = { biomancy_num_perks.compare_value = 9 }
+			flag:mensomancy = { mensomancy_num_perks.compare_value = 9 }
 		}
 	}
 }

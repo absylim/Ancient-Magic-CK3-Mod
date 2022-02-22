@@ -18,6 +18,9 @@
 		}
 		set_post_spell_actor = yes
 		effect_get_all_possible_candidates = yes
+		effect_get_all_minor_illnesses = yes
+		effect_get_all_major_or_below_illnesses = yes
+		effect_get_all_critical_or_below_illnesses = yes
 		effect_get_all_rewrite_beauty_traits = yes
 		effect_get_all_rewrite_physique_traits = yes
 		effect_get_all_rewrite_intellect_traits = yes
@@ -118,6 +121,199 @@ display_aura_times = {
 	custom_description_no_bullet = {
 		text = display_aura_times_loc
 		value = $VALUE$
+	}
+}
+
+effect_get_all_minor_illnesses = {
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:infirm
+	}
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:wounded_1
+	}
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:lovers_pox
+	}
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:early_great_pox
+	}
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:ill
+	}
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:sickly
+	}
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:smallpox
+	}
+}
+
+effect_get_all_major_or_below_illnesses = {
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:typhus
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:consumption
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:gout_ridden
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:maimed
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:wounded_2
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:leper
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:great_pox
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:pneumonic
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:infirm
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:wounded_1
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:lovers_pox
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:early_great_pox
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:ill
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:sickly
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:smallpox
+	}
+}
+
+effect_get_all_critical_or_below_illnesses = {
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:incapable
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:blind
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:eunuch
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:scarred
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:one_legged
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:one_eyed
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:wounded_3
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:cancer
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:bubonic_plague
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:typhus
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:consumption
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:gout_ridden
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:maimed
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:wounded_2
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:leper
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:great_pox
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:pneumonic
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:infirm
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:wounded_1
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:lovers_pox
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:early_great_pox
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:ill
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:sickly
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:smallpox
 	}
 }
 

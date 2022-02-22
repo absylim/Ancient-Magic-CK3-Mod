@@ -14,9 +14,9 @@
  SPELL_PARAMETERS: "Spell Properties"
 
  ## Spell Categories
- None_category: "Basic"
- time_category: "Chronomancy"
- life_category: "Chiromancy"
+ basic_category: "Basic"
+ chronomancy_category: "Chronomancy"
+ chiromancy_category: "Chiromancy"
  elomancy_category: "Elomancy"
  necromancy_category: "Necromancy"
  biomancy_category: "Biomancy"
@@ -132,16 +132,16 @@
  impregnate_spell_desc: "This rather invasive and, most would say, horrifying use of [biomancy|E] allows the mage to generate a pregnancy, skipping the fun part and going straight to the unpleasant part. If the mage is a woman, the spell causes the pregnancy in herself, using essence from the targeted man. If the mage is a man, the spell forcibly impregnates the target woman with his essence. If the mage is of the same gender as the target, the spell fails due to biological limitations."
 
  # Mensomancy
- entrance_spell_desc: "$lorem_ipsum$"
- incite_lust_spell_desc: "$lorem_ipsum$"
- incite_obedience_spell_desc: "$lorem_ipsum$"
- dominate_spell_desc: "$lorem_ipsum$"
- beguiling_aura_spell_desc: "$lorem_ipsum$"
- friendship_spell_desc: "$lorem_ipsum$"
- rivalry_spell_desc: "$lorem_ipsum$"
- enchanting_aura_spell_desc: "$lorem_ipsum$"
- sculpt_mind_spell_desc: "$lorem_ipsum$"
- master_of_puppets_spell_desc: "$lorem_ipsum$"
+ entrance_spell_desc: "You steer the target's thoughts toward appreciation. They perceive you in a positive light, though the suggestion does fade over time."
+ incite_lust_spell_desc: "The target of this spell becomes so infatuated with you, so enamored, so full of overwhelming desire that they can't get enough of you. That's what you wanted, isn't it? But… what do they really want? For you, it doesn't matter. You just want THEM. NOW."
+ incite_obedience_spell_desc: "You offer a suggestion to the target, making them more likely to agree to your requests and suggestions. They don't have to obey… it's just a suggestion… a really strong magical suggestion."
+ dominate_spell_desc: "Your mind, your will, presses itself against the will of the target. Though you don't control them directly, they are very likely to follow your next command."
+ beguiling_aura_spell_desc: "There's just something about you… it could be that cloud of magical pheromones that follows you wherever you go, because people tend to view you more positively."
+ friendship_spell_desc: "The target of this spell becomes your friend. Isn't that nice? They'll hang out with you, have relaxing conversations. How did you two become friends? Bonding over an exciting hunt or interesting conversation at a feast? Nope: magic."
+ rivalry_spell_desc: "You know what you need? A good rival! Someone to really test your mettle against. With this spell, you can get one, too! The target of this spell inexplicably gains the overwhelming urge to best you in everything."
+ enchanting_aura_spell_desc: "A knife, in the back? They couldn't possibly. While maintaining this spell, agents who seek to do you harm through hostile schemes tend to… change their mind at the last moment or make mistakes that allow them to get caught."
+ sculpt_mind_spell_desc: "No, no, no. That's not how they should behave at all. You remove the parts of the target's personality that you find unseemly and give them traits you find more desirable, or perhaps controllable. But are they still truly themselves after this?"
+ master_of_puppets_spell_desc: "You enforce your will on another, giving you the ability to convince them to do almost anything you ask. How can they resist you? Other people are just tools for you to use, after all. Aren't they?"
 
  #Rewrite Beauty list
  beauty_none_list_name: "None"
@@ -270,7 +270,33 @@
  # Fertility Control list
  inc_fertility_list_name: "Fertility"
  dec_fertility_list_name: "Infertility"
- 
+
+ # Disease list
+ incapable_list_name: "$trait_incapable$"
+ blind_list_name: "$trait_blind$"
+ eunuch_list_name: "$trait_eunuch$"
+ scarred_list_name: "$trait_scarred$"
+ one_legged_list_name: "$trait_one_legged$"
+ one_eyed_list_name: "$trait_one_eyed$"
+ wounded_3_list_name: "$trait_wounded_3$"
+ cancer_list_name: "$trait_cancer$"
+ bubonic_plague_list_name: "$trait_bubonic_plague$"
+ typhus_list_name: "$trait_typhus$"
+ consumption_list_name: "$trait_consumption$"
+ gout_ridden_list_name: "$trait_gout_ridden$"
+ maimed_list_name: "$trait_maimed$"
+ wounded_2_list_name: "$trait_wounded_2$"
+ leper_list_name: "$trait_leper$"
+ great_pox_list_name: "$trait_great_pox$"
+ pneumonic_list_name: "$trait_pneumonic$"
+ infirm_list_name: "$trait_infirm$"
+ wounded_1_list_name: "$trait_wounded_1$"
+ lovers_pox_list_name: "$trait_lovers_pox$"
+ early_great_pox_list_name: "$trait_early_great_pox$"
+ ill_list_name: "$trait_ill$"
+ sickly_list_name: "$trait_sickly$"
+ smallpox_list_name: "$trait_smallpox$"
+
  # Custom loc
  MAGIC_GUI_AURA_TIMES: "$VALUE|0$ times"
  lorem_ipsum: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis nunc bibendum, semper metus rhoncus, pretium nisl. Quisque cursus aliquam lacus. Nullam purus erat, laoreet a turpis id, placerat ornare nunc."

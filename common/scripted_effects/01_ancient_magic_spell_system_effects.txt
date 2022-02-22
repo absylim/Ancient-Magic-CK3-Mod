@@ -37,6 +37,20 @@ stop_aura_effect = {
 	trigger_event = { on_action = on_reset_mana_system }
 }
 
+# Does not reset the mana system, because it is used in the debug decision, which
+# sequentially kills all auras. If you use this, reset the mana system yourself.
+kill_aura = {
+	if = {
+		limit = { has_variable_list = $SPELL$_targets }
+		every_in_list = {
+			variable = $SPELL$_targets
+			remove_all_character_modifier_instances = $SPELL$_modifier
+		}
+		clear_variable_list = $SPELL$_targets
+		mod_bit = { MASK = aura_mask_0 BIT = $SPELL$_aura_bit OP = unset }
+	}
+}
+
 remove_prev_from_this_aura_spell_targets_effect = {
 	if = {
 		limit = {
@@ -52,7 +66,7 @@ set_up_spells = {
 	clear_global_variable_list = spell_categories_list
 	add_to_global_variable_list = { name = spell_categories_list target = flag:basic }
 	add_to_global_variable_list = { name = spell_categories_list target = flag:chronomancy }
-	add_to_global_variable_list = { name = spell_categories_list target = flag:life }
+	add_to_global_variable_list = { name = spell_categories_list target = flag:chiromancy }
 	add_to_global_variable_list = { name = spell_categories_list target = flag:elomancy }
 	add_to_global_variable_list = { name = spell_categories_list target = flag:necromancy }
 	add_to_global_variable_list = { name = spell_categories_list target = flag:biomancy }
@@ -75,10 +89,10 @@ set_up_spells = {
 	add_to_global_variable_list = { name = chronomancy_spells_list target = flag:master_of_time_spell }
 
 	# Life
-	clear_global_variable_list = life_spells_list
-	add_to_global_variable_list = { name = life_spells_list target = flag:heal_spell }
-	add_to_global_variable_list = { name = life_spells_list target = flag:greater_heal_spell }
-	add_to_global_variable_list = { name = life_spells_list target = flag:avatar_of_life_spell }
+	clear_global_variable_list = chiromancy_spells_list
+	add_to_global_variable_list = { name = chiromancy_spells_list target = flag:heal_spell }
+	add_to_global_variable_list = { name = chiromancy_spells_list target = flag:greater_heal_spell }
+	add_to_global_variable_list = { name = chiromancy_spells_list target = flag:avatar_of_life_spell }
 
 	# Elomancy
 	clear_global_variable_list = elomancy_spells_list
@@ -142,16 +156,16 @@ set_up_spells = {
 	add_to_global_variable_list = { name = chronomancy_perk_list target = flag:master_of_time_perk }
 
 	# Life
-	clear_global_variable_list = life_perk_list
-	add_to_global_variable_list = { name = life_perk_list target = flag:life_mage_perk }
-	add_to_global_variable_list = { name = life_perk_list target = flag:inward_reflection_perk }
-	add_to_global_variable_list = { name = life_perk_list target = flag:inward_perfection_perk }
-	add_to_global_variable_list = { name = life_perk_list target = flag:heal_perk }
-	add_to_global_variable_list = { name = life_perk_list target = flag:greater_heal_perk }
-	add_to_global_variable_list = { name = life_perk_list target = flag:battlefield_life_mage_perk }
-	add_to_global_variable_list = { name = life_perk_list target = flag:greater_battlefield_life_mage_perk }
-	add_to_global_variable_list = { name = life_perk_list target = flag:purity_of_body_perk }
-	add_to_global_variable_list = { name = life_perk_list target = flag:avatar_of_life_perk }
+	clear_global_variable_list = chiromancy_perk_list
+	add_to_global_variable_list = { name = chiromancy_perk_list target = flag:life_mage_perk }
+	add_to_global_variable_list = { name = chiromancy_perk_list target = flag:inward_reflection_perk }
+	add_to_global_variable_list = { name = chiromancy_perk_list target = flag:inward_perfection_perk }
+	add_to_global_variable_list = { name = chiromancy_perk_list target = flag:heal_perk }
+	add_to_global_variable_list = { name = chiromancy_perk_list target = flag:greater_heal_perk }
+	add_to_global_variable_list = { name = chiromancy_perk_list target = flag:battlefield_life_mage_perk }
+	add_to_global_variable_list = { name = chiromancy_perk_list target = flag:greater_battlefield_life_mage_perk }
+	add_to_global_variable_list = { name = chiromancy_perk_list target = flag:purity_of_body_perk }
+	add_to_global_variable_list = { name = chiromancy_perk_list target = flag:avatar_of_life_perk }
 
 	# Elomancy
 	clear_global_variable_list = elomancy_perk_list
@@ -208,6 +222,9 @@ set_up_spells = {
 
 	# Spells that allow you to modify a target's traits (not necessary if the spell does not _has_list)
 	clear_global_variable_list = modify_trait_spells
+	add_to_global_variable_list = { name = modify_trait_spells target = flag:heal_spell }
+	add_to_global_variable_list = { name = modify_trait_spells target = flag:greater_heal_spell }
+	add_to_global_variable_list = { name = modify_trait_spells target = flag:avatar_of_life_spell }
 	add_to_global_variable_list = { name = modify_trait_spells target = flag:rewrite_beauty_spell }
 	add_to_global_variable_list = { name = modify_trait_spells target = flag:rewrite_physique_spell }
 	add_to_global_variable_list = { name = modify_trait_spells target = flag:rewrite_intellect_spell }

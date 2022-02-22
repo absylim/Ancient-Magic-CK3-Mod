@@ -136,28 +136,55 @@ clear_list_options = {
 increase_times_repeated = {
 	is_valid = {
 		save_temporary_scope_value_as = {
-			name = potential_repeat_spell
-			value = var:repeat_spell.inc
-		}
-		save_temporary_scope_value_as = {
-			name = total_cost
+			name = max_repeats
 			value = {
-				value = scope:potential_repeat_spell
-				multiply = scope:spell_cost
+				value = var:mana
+				divide = scope:spell_cost
+				floor = yes
 			}
 		}
 		AND = {
 			OR = {
 				NOT = { is_magic_aura_trigger = { SPELL = scope:spell } }
-				scope:potential_repeat_spell <= mage_level
+				scope:max_repeats.compare_value <= mage_level.compare_value
 			}
-			scope:total_cost.compare_value < var:mana.compare_value
+			var:repeat_spell.compare_value < scope:max_repeats.compare_value
 		}
 	}
 	effect = {
 		change_variable = {
 			name = repeat_spell
 			add = 1
+		}
+	}
+}
+
+increase_times_repeated_max = {
+	is_valid = {
+		save_temporary_scope_value_as = {
+			name = max_repeats
+			value = {
+				value = var:mana
+				divide = scope:spell_cost
+				floor = yes
+			}
+		}
+		AND = {
+			OR = {
+				NOT = { is_magic_aura_trigger = { SPELL = scope:spell } }
+				scope:max_repeats.compare_value <= mage_level.compare_value
+			}
+			var:repeat_spell.compare_value < scope:max_repeats.compare_value
+		}
+	}
+	effect = {
+		set_variable = {
+			name = repeat_spell
+			value = {
+				value = var:mana
+				divide = scope:spell_cost
+				floor = yes
+			}
 		}
 	}
 }
@@ -170,6 +197,18 @@ decrease_times_repeated = {
 		change_variable = {
 			name = repeat_spell
 			add = -1
+		}
+	}
+}
+
+decrease_times_repeated_max = {
+	is_valid = {
+		var:repeat_spell > 1
+	}
+	effect = {
+		set_variable = {
+			name = repeat_spell
+			value = 1
 		}
 	}
 }

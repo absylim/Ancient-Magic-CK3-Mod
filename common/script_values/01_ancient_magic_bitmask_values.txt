@@ -411,7 +411,7 @@ chronomancy_perk_mask_0_maker = {
 	if = { limit = { has_perk = master_of_time_perk } add = set.makebit08 }
 }
 
-life_perk_mask_0_maker = {
+chiromancy_perk_mask_0_maker = {
 	value = 0
 	if = { limit = { has_perk = life_mage_perk } add = set.makebit00 }
 	if = { limit = { has_perk = inward_reflection_perk } add = set.makebit01 }
