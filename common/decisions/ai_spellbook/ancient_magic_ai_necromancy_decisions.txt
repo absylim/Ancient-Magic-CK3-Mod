@@ -127,7 +127,7 @@ aura_of_death_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -138,7 +138,7 @@ aura_of_death_ai_spell_decision = {
 		modifier = {
 			add = 50
 			has_character_modifier = aura_of_death_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }

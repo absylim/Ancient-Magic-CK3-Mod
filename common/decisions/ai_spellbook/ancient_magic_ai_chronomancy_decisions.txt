@@ -54,7 +54,7 @@
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -65,7 +65,7 @@
 		modifier = {
 			add = 50
 			has_character_modifier = mass_celerity_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }
@@ -127,7 +127,7 @@ glimpse_the_future_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -139,7 +139,7 @@ glimpse_the_future_ai_spell_decision = {
 			add = 50
 			AND = {
 				has_character_modifier = glimpse_the_future_spell_modifier
-				var:mana_gen <= 0
+				ancient_magic_max_mana <= 0
 			}
 		}
 	}
@@ -206,7 +206,7 @@ financial_times_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -217,7 +217,7 @@ financial_times_ai_spell_decision = {
 		modifier = {
 			add = 50
 			has_character_modifier = financial_times_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }
@@ -283,7 +283,7 @@ celerity_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -294,7 +294,7 @@ celerity_ai_spell_decision = {
 		modifier = {
 			add = 50
 			has_character_modifier = celerity_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }
@@ -356,7 +356,7 @@ temporal_manipulation_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -367,7 +367,7 @@ temporal_manipulation_ai_spell_decision = {
 		modifier = {
 			add = 50
 			has_character_modifier = temporal_manipulation_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }

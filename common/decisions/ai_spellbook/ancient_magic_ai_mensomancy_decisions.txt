@@ -54,7 +54,7 @@
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -65,7 +65,7 @@
 		modifier = {
 			add = 50
 			has_character_modifier = beguiling_aura_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }
@@ -127,7 +127,7 @@ enchanting_aura_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -139,7 +139,7 @@ enchanting_aura_ai_spell_decision = {
 			add = 50
 			AND = {
 				has_character_modifier = enchanting_aura_spell_modifier
-				var:mana_gen <= 0
+				ancient_magic_max_mana <= 0
 			}
 		}
 	}

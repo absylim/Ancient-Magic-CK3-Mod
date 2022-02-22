@@ -144,7 +144,7 @@ flame_aura_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -155,7 +155,7 @@ flame_aura_ai_spell_decision = {
 		modifier = {
 			add = 50
 			has_character_modifier = flame_aura_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }
@@ -214,7 +214,7 @@ flaming_weapons_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -225,7 +225,7 @@ flaming_weapons_ai_spell_decision = {
 		modifier = {
 			add = 50
 			has_character_modifier = flaming_weapons_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }
@@ -284,7 +284,7 @@ living_earthworks_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -295,7 +295,7 @@ living_earthworks_ai_spell_decision = {
 		modifier = {
 			add = 50
 			has_character_modifier = living_earthworks_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }
@@ -354,7 +354,7 @@ water_control_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -365,7 +365,7 @@ water_control_ai_spell_decision = {
 		modifier = {
 			add = 50
 			has_character_modifier = control_water_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }
@@ -423,7 +423,7 @@ cloak_of_elements_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 30
+			ancient_magic_max_mana < 30
 		}
 		
 		modifier = {
@@ -434,7 +434,7 @@ cloak_of_elements_ai_spell_decision = {
 		modifier = {
 			add = 50
 			has_character_modifier = elemental_warrior_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }
