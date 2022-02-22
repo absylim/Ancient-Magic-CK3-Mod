@@ -419,6 +419,24 @@
 				visible = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_has_properties')).IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 
 				button = {
+					texture = "gfx/magic/icons/window_back_max.dds"
+
+					modify_texture = {
+						texture = "gfx/interface/colors/colors_textured.dds"
+						blend_mode = add
+						framesize = { 96 96 }
+
+						block "master_color_frame" {
+							frame = 1
+						}
+					}
+
+					size = { 50 50 }
+					onclick = "[GetScriptedGui('decrease_times_repeated_max').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					enabled = "[GetScriptedGui('decrease_times_repeated_max').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				}
+
+				button = {
 					texture = "gfx/magic/icons/window_back.dds"
 
 					modify_texture = {
@@ -459,6 +477,24 @@
 					size = { 50 50 }
 					onclick = "[GetScriptedGui('increase_times_repeated').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).AddScope('spell_cost',MakeScopeValue(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost')))).End)]"
 					enabled = "[GetScriptedGui('increase_times_repeated').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).AddScope('spell_cost',MakeScopeValue(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost')))).End)]"
+				}
+
+				button = {
+					texture = "gfx/magic/icons/window_forward_max.dds"
+
+					modify_texture = {
+						texture = "gfx/interface/colors/colors_textured.dds"
+						blend_mode = add
+						framesize = { 96 96 }
+
+						block "master_color_frame" {
+							frame = 1
+						}
+					}
+
+					size = { 50 50 }
+					onclick = "[GetScriptedGui('increase_times_repeated_max').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).AddScope('spell_cost',MakeScopeValue(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost')))).End)]"
+					enabled = "[GetScriptedGui('increase_times_repeated_max').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('spell',MakeScopeFlag(GetVariableSystem.Get('current_spell_selected'))).AddScope('spell_cost',MakeScopeValue(GetPlayer.MakeScope.ScriptValue(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_cost')))).End)]"
 				}
 			}
 
