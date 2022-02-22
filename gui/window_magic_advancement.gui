@@ -226,10 +226,30 @@
 													parentanchor = center|hcenter
 													size = "[PdxGetWidgetScreenSize( PdxGuiWidget.AccessParent.Self )]"
 													visible = "[And(Not(ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)), ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End))]"
-													texture = "gfx/interface/window_magic_advancement/magic_advancement_perk_available.dds"
+													texture = "gfx/interface/window_magic_advancement/magic_advancement_perk_available_2.dds"
 													onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)]"
 
 													using = tooltip_se
+													
+													state = {
+														trigger_on_create = yes
+
+														name = max_glow
+														next = min_glow
+														duration = 1
+														using = Animation_Curve_Default
+
+														alpha = 1.0
+													}
+
+													state = {
+														name = min_glow
+														next = max_glow
+														duration = 1
+														using = Animation_Curve_Default
+
+														alpha = 0.5
+													}
 
 													tooltipwidget = {
 														using = magic_perk_tooltip_selection
