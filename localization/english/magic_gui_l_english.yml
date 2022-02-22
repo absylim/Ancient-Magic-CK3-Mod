@@ -14,9 +14,9 @@
  SPELL_PARAMETERS: "Spell Properties"
 
  ## Spell Categories
- None_category: "Basic"
- time_category: "Chronomancy"
- life_category: "Chiromancy"
+ basic_category: "Basic"
+ chronomancy_category: "Chronomancy"
+ chiromancy_category: "Chiromancy"
  elomancy_category: "Elomancy"
  necromancy_category: "Necromancy"
  biomancy_category: "Biomancy"
