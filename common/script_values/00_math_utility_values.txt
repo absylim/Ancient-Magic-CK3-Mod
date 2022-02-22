@@ -376,6 +376,6 @@ squared = {
 
 clamp_to_max_mana = {
 	value = this
-	max = root.var:max_mana
+	max = ancient_magic_max_mana
 	min = 0
 }

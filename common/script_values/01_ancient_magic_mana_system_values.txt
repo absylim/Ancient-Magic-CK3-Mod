@@ -156,9 +156,14 @@ mage_education = { # UNCOMMENT WHEN SYSTEM IN PLACE!!!
 }
 
 ancient_magic_mana_gen = {
-	value = 0
-	add = ancient_magic_mana_gen_gen_only
-	add = ancient_magic_mana_gen_drain_only
+	if = {
+		limit = { has_trait = infinite_mana }
+		value = 999999
+	}
+	else = {
+		value = ancient_magic_mana_gen_gen_only
+		add = ancient_magic_mana_gen_drain_only
+	}
 }
 
 ancient_magic_mana_gen_gen_only = {
@@ -252,17 +257,23 @@ ancient_magic_mana_drain_disease = {
 }
 
 ancient_magic_max_mana = {
-	value = ancient_magic_max_mana_perks
-	add = {
-		value = mage_potency
-		multiply = max_mana_per_potency
-	}
 	if = {
-		limit = {
-			exists = dynasty
-			dynasty = { has_dynasty_perk = arcane_legacy_3 }
+		limit = { has_trait = infinite_mana }
+		value = 999999
+	}
+	else = {
+		value = ancient_magic_max_mana_perks
+		add = {
+			value = mage_potency
+			multiply = max_mana_per_potency
 		}
-		add = max_mana_legacy_3
+		if = {
+			limit = {
+				exists = dynasty
+				dynasty = { has_dynasty_perk = arcane_legacy_3 }
+			}
+			add = max_mana_legacy_3
+		}
 	}
 }
 

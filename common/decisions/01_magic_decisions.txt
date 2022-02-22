@@ -63,16 +63,14 @@ reset_mana_system_decision = {
 			has_global_variable_list = life_spells_list
 			AND = {
 				is_magus_trigger = no
-				OR = {
-					has_variable = mana
-					has_variable = max_mana
-					has_variable = mana_gen
-				}
+				has_variable = mana
 			}
 			AND = {
 				is_magus_trigger = yes
 				has_perk_masks_trigger = no
 			}
+			has_variable = mana_gen
+			has_variable = max_mana
 		}
 	}
 
@@ -83,11 +81,7 @@ reset_mana_system_decision = {
 			if = {
 				limit = {
 					is_magus_trigger = no
-					OR = {
-						has_variable = mana
-						has_variable = max_mana
-						has_variable = mana_gen
-					}
+					has_variable = mana
 				}
 				give_mage_secret_or_trait_effect = yes
 			}
@@ -187,6 +181,8 @@ reset_mana_system_decision = {
 					}
 				}
 			}
+			remove_variable = mana_gen
+			remove_variable = max_mana
 			clear_global_variable_list = time_perk_list
 			clear_global_variable_list = time_spells_list
 			clear_global_variable_list = life_perk_list
@@ -213,8 +209,6 @@ reset_mana_system_ai_decision = {
 				is_magus_trigger = no
 				OR = {
 					has_variable = mana
-					has_variable = max_mana
-					has_variable = mana_gen
 					has_trait = mage
 				}
 			}
@@ -222,6 +216,8 @@ reset_mana_system_ai_decision = {
 				is_magus_trigger = yes
 				has_perk_masks_trigger = no
 			}
+			has_variable = mana_gen
+			has_variable = max_mana
 		}
 	}
 
@@ -239,11 +235,7 @@ reset_mana_system_ai_decision = {
 			if = {
 				limit = {
 					is_magus_trigger = no
-					OR = {
-						has_variable = mana
-						has_variable = max_mana
-						has_variable = mana_gen
-					}
+					has_variable = mana
 				}
 				give_mage_secret_or_trait_effect = yes
 			}
@@ -333,6 +325,8 @@ reset_mana_system_ai_decision = {
 					}
 				}
 			}
+			remove_variable = mana_gen
+			remove_variable = max_mana
 		}
 	}
 
