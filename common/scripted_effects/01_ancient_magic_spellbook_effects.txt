@@ -158,6 +158,10 @@ effect_get_all_minor_illnesses = {
 effect_get_all_major_or_below_illnesses = {
 	add_to_variable_list = {
 		name = greater_heal_spell_list
+		target = flag:scarred
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
 		target = flag:typhus
 	}
 	add_to_variable_list = {
@@ -233,7 +237,7 @@ effect_get_all_critical_or_below_illnesses = {
 	}
 	add_to_variable_list = {
 		name = avatar_of_life_spell_list
-		target = flag:scarred
+		target = flag:disfigured
 	}
 	add_to_variable_list = {
 		name = avatar_of_life_spell_list
@@ -254,6 +258,10 @@ effect_get_all_critical_or_below_illnesses = {
 	add_to_variable_list = {
 		name = avatar_of_life_spell_list
 		target = flag:bubonic_plague
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:scarred
 	}
 	add_to_variable_list = {
 		name = avatar_of_life_spell_list

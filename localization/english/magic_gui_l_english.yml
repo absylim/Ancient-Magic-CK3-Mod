@@ -276,6 +276,7 @@
  blind_list_name: "$trait_blind$"
  eunuch_list_name: "$trait_eunuch$"
  scarred_list_name: "$trait_scarred$"
+ disfigured_list_name: "$trait_disfigured$"
  one_legged_list_name: "$trait_one_legged$"
  one_eyed_list_name: "$trait_one_eyed$"
  wounded_3_list_name: "$trait_wounded_3$"
