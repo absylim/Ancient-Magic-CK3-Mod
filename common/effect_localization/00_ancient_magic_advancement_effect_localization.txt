@@ -1,0 +1,9 @@
+﻿toggle_magic_on_unavailable_five_years = {
+    GLOBAL = toggle_magic_on_unavailable_five_years
+    FIRST = toggle_magic_on_unavailable_five_years
+}
+
+toggle_magic_off_unavailable_five_years = {
+    GLOBAL = toggle_magic_off_unavailable_five_years
+    FIRST = toggle_magic_off_unavailable_five_years
+}

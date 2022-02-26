@@ -99,27 +99,26 @@
 
 					button_standard = {
 						name = "magic_advancement_toggle_study_button"
+						visible = "[GetScriptedGui('toggle_magic_xp_on').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						size = { 200 50 }
-						text = "MAGIC_ADVANCEMENT_TOGGLE_STUDY"
+						text = "MAGIC_ADVANCEMENT_TOGGLE_STUDY_ON"
 						clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
-						tooltip = "[GetScriptedGui('toggle_magic_xp_or_focus_xp').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-						enabled = "[GetScriptedGui('toggle_magic_xp_or_focus_xp').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-						onclick = "[GetScriptedGui('toggle_magic_xp_or_focus_xp').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						tooltip = "[GetScriptedGui('toggle_magic_xp_on').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						enabled = "[GetScriptedGui('toggle_magic_xp_on').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						onclick = "[GetScriptedGui('toggle_magic_xp_on').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					}
+
+					button_standard = {
+						visible = "[GetScriptedGui('toggle_magic_xp_off').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						size = { 200 50 }
+						text = "MAGIC_ADVANCEMENT_TOGGLE_STUDY_OFF"
+						clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
+						tooltip = "[GetScriptedGui('toggle_magic_xp_off').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						enabled = "[GetScriptedGui('toggle_magic_xp_off').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+						onclick = "[GetScriptedGui('toggle_magic_xp_off').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 					}
 
 					spacer = { size = { 0 25 } }
-
-					text_multi = {
-						name = "skill_value"
-						size = { 270 110 }
-						margin_top = 10
-						text = "MAGIC_ADVANCEMENT_FOCUS_PRECLUSION_DESC"
-						default_format = "#high"
-						using = Font_Size_Medium
-						align = center
-					}
-
-					spacer = { size = { 0 10 } }
 
 					text_single = {
 						maximumsize = { 270 -1 }

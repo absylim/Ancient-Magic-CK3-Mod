@@ -43,23 +43,50 @@ toggle_magic_advancement_window = {
 	}
 }
 
-toggle_magic_xp_or_focus_xp = {
+toggle_magic_xp_on = {
 	scope = character
+	is_shown = {
+		NOT = { has_character_modifier = magic_advancement_modifier }
+	}
 	is_valid = {
-		NOT = { has_variable = magic_advancement_cooldown }
+		custom_description = {
+			text = can_toggle_magic_once_every_five_years
+			NOT = { has_variable = magic_advancement_cooldown }
+		}
 	}
 	effect = {
-		if = {
-			limit = { has_character_modifier = magic_advancement_modifier }
-			remove_character_modifier = magic_advancement_modifier
+		add_character_modifier = magic_advancement_modifier
+		custom_description = {
+			text = toggle_magic_off_unavailable_five_years
+			set_variable = {
+				name = magic_advancement_cooldown
+				value = yes
+				days = 1825
+			}
 		}
-		else = {
-			add_character_modifier = magic_advancement_modifier
+	}
+}
+
+toggle_magic_xp_off = {
+	scope = character
+	is_shown = {
+		has_character_modifier = magic_advancement_modifier
+	}
+	is_valid = {
+		custom_description = {
+			text = can_toggle_magic_once_every_five_years
+			NOT = { has_variable = magic_advancement_cooldown }
 		}
-		set_variable = {
-			name = magic_advancement_cooldown
-			value = yes
-			days = 1825
+	}
+	effect = {
+		remove_character_modifier = magic_advancement_modifier
+		custom_description = {
+			text = toggle_magic_on_unavailable_five_years
+			set_variable = {
+				name = magic_advancement_cooldown
+				value = yes
+				days = 1825
+			}
 		}
 	}
 }
