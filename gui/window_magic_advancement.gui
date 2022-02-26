@@ -217,21 +217,22 @@
 
 												# perk unavailable
 												magic_perk_icon = {
-													visible = "[And(Not(ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)), Not(ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)))]"
+													visible = "[And(Not(Character.HasPerk( Perk.Self )), Not(ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)))]"
 													blockoverride "texture" {
 														texture = "gfx/interface/window_magic_advancement/magic_advancement_perk_unavailable.dds"
 													}
 												}
+
 												# perk available, not obtained
 												button_normal = {
 													parentanchor = center|hcenter
 													size = "[PdxGetWidgetScreenSize( PdxGuiWidget.AccessParent.Self )]"
-													visible = "[And(Not(ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)), ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End))]"
+													visible = "[And(Not(Character.HasPerk( Perk.Self )), ScriptedGui.IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End))]"
 													texture = "gfx/interface/window_magic_advancement/magic_advancement_perk_available_2.dds"
 													onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)]"
 
 													using = tooltip_se
-													
+
 													state = {
 														trigger_on_create = yes
 
@@ -261,9 +262,10 @@
 														text = "CHOOSE_PERK_UNLOCK_TEXT"
 													}
 												}
+
 												# perk obtained
 												magic_perk_icon = {
-													visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag(Scope.GetFlagName)).End)]"
+													visible = "[Character.HasPerk( Perk.Self )]"
 													blockoverride "texture" {
 														texture = "gfx/interface/window_magic_advancement/magic_advancement_perk_obtained.dds"
 													}
