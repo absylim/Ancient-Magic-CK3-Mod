@@ -4,7 +4,6 @@
  MAGIC_ADVANCEMENT_HEADER: "Magical Studies"
  MAGIC_ADVANCEMENT_TOGGLE_STUDY_ON: "Begin Studying Magic"
  MAGIC_ADVANCEMENT_TOGGLE_STUDY_OFF: "Stop Studying Magic"
- MAGIC_ADVANCEMENT_FOCUS_PRECLUSION_DESC: "You can choose to study magic, or one of the lifestyle focuses. Choosing to study magic will stop your lifestyle focus experience gain."
  MAGIC_ADVANCEMENT_AVAILABLE_PERKS: "Available Perks: [GetPlayer.MakeScope.Var('available_magic_perks').GetValue|V0]"
 
  ## SGUI
