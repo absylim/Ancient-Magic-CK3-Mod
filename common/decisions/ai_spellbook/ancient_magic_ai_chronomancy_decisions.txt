@@ -2,7 +2,7 @@
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		has_enough_mana_trigger = { SPELL = mass_celerity_spell_cost }
+		has_enough_mana_trigger = { SPELL = mass_celerity_spell }
 		has_perk = mass_celerity_perk
 	}
 	
@@ -74,7 +74,7 @@ glimpse_the_future_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		has_enough_mana_trigger = { SPELL = glimpse_the_future_spell_cost }
+		has_enough_mana_trigger = { SPELL = glimpse_the_future_spell }
 		has_perk = glimpse_the_future_perk
 	}
 	
@@ -149,7 +149,7 @@ financial_times_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		has_enough_mana_trigger = { SPELL = financial_times_spell_cost }
+		has_enough_mana_trigger = { SPELL = financial_times_spell }
 		has_perk = financial_times_perk
 	}
 	
@@ -226,7 +226,7 @@ celerity_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		has_enough_mana_trigger = { SPELL = celerity_spell_cost }
+		has_enough_mana_trigger = { SPELL = celerity_spell }
 		has_perk = celerity_perk
 	}
 	
@@ -303,7 +303,7 @@ temporal_manipulation_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		has_enough_mana_trigger = { SPELL = temporal_manipulation_spell_cost }
+		has_enough_mana_trigger = { SPELL = temporal_manipulation_spell }
 		has_perk = temporal_manipulation_perk
 	}
 	
