@@ -31,7 +31,7 @@
 
  game_concept_mana_gen: "Mana Generation"
  game_concept_mana_gen_i: "@drain_icon_active!"
- game_concept_mana_gen_desc: "A [mage|E] can only hold so much magical potential within their body. Once it has been spent (for example, while casting a spell) the mage must then wait for the mana stores within their body to replenish. The higher a mage's [magic_potential|E], the faster their mana regenerates. Their [mage_level|E] also plays an indirect part in increasing the amount of mana they generate."
+ game_concept_mana_gen_desc: "A mage can only hold so much magical potential within their body. Once it has been spent (for example, while casting a spell) the mage must then wait for the mana stores within their body to replenish. The higher a mage's [magic_potential|E], the faster their mana regenerates. Their [mage_level|E] also plays an indirect part in increasing the amount of mana they generate."
 
  game_concept_mana_drain: "Mana Drain"
  game_concept_mana_drain_i: "@drain_icon_inactive!"
