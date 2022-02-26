@@ -20,7 +20,7 @@ inflict_illness_spell = {
 inflict_illness_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = inflict_illness_perk }
+		has_perk = inflict_illness_perk
 	}
 	is_valid = {
 		always = yes
@@ -68,7 +68,7 @@ plague_lord_spell = {
 plague_lord_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = plague_lord_perk }
+		has_perk = plague_lord_perk
 	}
 	is_valid = {
 		always = yes
@@ -117,7 +117,7 @@ aura_of_death_spell = {
 aura_of_death_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = aura_of_death_perk }
+		has_perk = aura_of_death_perk
 	}
 	is_valid = {
 		always = yes
@@ -178,7 +178,7 @@ necromancy_spell = {
 necromancy_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = necromancy_perk }
+		has_perk = necromancy_perk
 	}
 	is_valid = {
 		always = yes
@@ -244,7 +244,7 @@ drain_life_spell = {
 drain_life_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = drain_life_perk }
+		has_perk = drain_life_perk
 	}
 	is_valid = {
 		always = yes
@@ -303,7 +303,7 @@ death_stare_spell = {
 death_stare_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = death_stare_perk }
+		has_perk = death_stare_perk
 	}
 	is_valid = {
 		always = yes
@@ -365,7 +365,7 @@ blight_spell = {
 blight_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = blight_perk }
+		has_perk = blight_perk
 	}
 	is_valid = {
 		always = yes
@@ -416,7 +416,7 @@ deacon_of_death_spell = {
 deacon_of_death_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = deacon_of_death_perk }
+		has_perk = deacon_of_death_perk
 	}
 	is_valid = {
 		always = yes

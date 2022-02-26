@@ -21,7 +21,7 @@ flame_aura_spell = {
 flame_aura_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = flame_aura_perk }
+		has_perk = flame_aura_perk
 	}
 	is_valid = {
 		always = yes
@@ -70,7 +70,7 @@ flaming_weapons_spell = {
 flaming_weapons_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = flaming_weapons_perk }
+		has_perk = flaming_weapons_perk
 	}
 	is_valid = {
 		always = yes
@@ -119,7 +119,7 @@ living_earthworks_spell = {
 living_earthworks_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = living_earthworks_perk }
+		has_perk = living_earthworks_perk
 	}
 	is_valid = {
 		always = yes
@@ -183,7 +183,7 @@ golem_creation_spell = {
 golem_creation_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = golem_creation_perk }
+		has_perk = golem_creation_perk
 	}
 	is_valid = {
 		always = yes
@@ -232,7 +232,7 @@ control_water_spell = {
 control_water_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = control_water_perk }
+		has_perk = control_water_perk
 	}
 	is_valid = {
 		always = yes
@@ -281,7 +281,7 @@ drought_spell = {
 drought_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = drought_perk }
+		has_perk = drought_perk
 	}
 	is_valid = {
 		always = yes
@@ -330,7 +330,7 @@ elemental_warrior_spell = {
 elemental_warrior_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = elemental_warrior_perk }
+		has_perk = elemental_warrior_perk
 	}
 	is_valid = {
 		always = yes
@@ -394,7 +394,7 @@ lord_of_the_elements_spell = {
 lord_of_the_elements_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = lord_of_the_elements_perk }
+		has_perk = lord_of_the_elements_perk
 	}
 	is_valid = {
 		always = yes

@@ -32,7 +32,7 @@ entrance_spell = {
 entrance_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = entrance_perk }
+		has_perk = entrance_perk
 	}
 	is_valid = {
 		always = yes
@@ -80,7 +80,7 @@ incite_lust_spell = {
 incite_lust_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = incite_lust_perk }
+		has_perk = incite_lust_perk
 	}
 	is_valid = {
 		always = yes
@@ -134,7 +134,7 @@ incite_obedience_spell = {
 incite_obedience_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = incite_obedience_perk }
+		has_perk = incite_obedience_perk
 	}
 	is_valid = {
 		always = yes
@@ -189,7 +189,7 @@ dominate_spell = {
 dominate_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = dominate_perk }
+		has_perk = dominate_perk
 	}
 	is_valid = {
 		always = yes
@@ -238,7 +238,7 @@ beguiling_aura_spell = { # aura of majesty
 beguiling_aura_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = beguiling_aura_perk }
+		has_perk = beguiling_aura_perk
 	}
 	is_valid = {
 		always = yes
@@ -286,7 +286,7 @@ friendship_spell = {
 friendship_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = friendship_perk }
+		has_perk = friendship_perk
 	}
 	is_valid = {
 		always = yes
@@ -334,7 +334,7 @@ rivalry_spell = {
 rivalry_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = friendship_perk }
+		has_perk = friendship_perk
 	}
 	is_valid = {
 		always = yes
@@ -383,7 +383,7 @@ enchanting_aura_spell = { # aura of truth
 enchanting_aura_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = enchanting_aura_perk }
+		has_perk = enchanting_aura_perk
 	}
 	is_valid = {
 		always = yes
@@ -434,7 +434,7 @@ sculpt_mind_spell = {
 sculpt_mind_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = master_of_puppets_perk }
+		has_perk = master_of_puppets_perk
 	}
 	is_valid = {
 		always = yes
@@ -488,7 +488,7 @@ master_of_puppets_spell = {
 master_of_puppets_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = master_of_puppets_perk }
+		has_perk = master_of_puppets_perk
 	}
 	is_valid = {
 		always = yes

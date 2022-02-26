@@ -24,7 +24,7 @@ glimpse_the_future_spell = {
 glimpse_the_future_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = glimpse_the_future_perk }
+		has_perk = glimpse_the_future_perk
 	}
 	is_valid = {
 		always = yes
@@ -76,7 +76,7 @@ financial_times_spell = {
 financial_times_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = financial_times_perk }
+		has_perk = financial_times_perk
 	}
 	is_valid = {
 		always = yes
@@ -128,7 +128,7 @@ celerity_spell = {
 celerity_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = celerity_perk }
+		has_perk = celerity_perk
 	}
 	is_valid = {
 		always = yes
@@ -180,7 +180,7 @@ mass_celerity_spell = {
 mass_celerity_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = mass_celerity_perk }
+		has_perk = mass_celerity_perk
 	}
 	is_valid = {
 		always = yes
@@ -245,7 +245,7 @@ slowness_spell = {
 slowness_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = slowness_perk }
+		has_perk = slowness_perk
 	}
 	is_valid = {
 		always = yes
@@ -310,7 +310,7 @@ mass_slowness_spell = {
 mass_slowness_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = mass_slowness_perk }
+		has_perk = mass_slowness_perk
 	}
 	is_valid = {
 		always = yes
@@ -362,7 +362,7 @@ temporal_manipulation_spell = {
 temporal_manipulation_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = temporal_manipulation_perk }
+		has_perk = temporal_manipulation_perk
 	}
 	is_valid = {
 		always = yes
@@ -414,7 +414,7 @@ haste_spell = {
 haste_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = temporal_manipulation_perk }
+		has_perk = temporal_manipulation_perk
 	}
 	is_valid = {
 		always = yes
@@ -490,7 +490,7 @@ master_of_time_spell = {
 master_of_time_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = master_of_time_perk }
+		has_perk = master_of_time_perk
 	}
 	is_valid = {
 		always = yes

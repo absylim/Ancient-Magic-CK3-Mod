@@ -34,7 +34,7 @@ spark_spell = {
 spark_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = mage_perk }
+		has_perk = mage_perk
 	}
 	is_valid = {
 		always = yes
