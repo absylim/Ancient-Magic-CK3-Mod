@@ -6,7 +6,7 @@ start_aura_effect = {
 	scope:spell_target = { add_character_modifier = $SPELL$_modifier }
 	display_aura_times = { VALUE = mage_level }
 	change_mana_with_tooltip = { VALUE = $SPELL$_cost.neg }
-	change_mana_gen_tooltip = { VALUE = $SPELL$_gen_cost_individual.neg }
+	change_mana_gen_tooltip = { VALUE = $SPELL$_gen_cost_individual }
 	change_mage_xp = { VALUE = $SPELL$_cost.abs }
 	mod_bit = { MASK = aura_mask_0 BIT = $SPELL$_aura_bit OP = set }
 	trigger_event = { on_action = on_reset_mana_system }

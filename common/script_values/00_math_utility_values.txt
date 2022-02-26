@@ -344,10 +344,7 @@ abs = {
 
 neg = {
 	value = this
-	if = {
-		limit = { this.compare_value > 0 }
-		multiply = -1
-	}
+	multiply = -1
 }
 
 sum_n = {
