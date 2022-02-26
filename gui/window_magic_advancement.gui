@@ -122,7 +122,7 @@
 
 					text_single = {
 						maximumsize = { 270 -1 }
-						visible = "[GetScriptedGui('perk_select').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('perk',MakeScopeFlag('mage_perk')).End)]"
+						visible = "[Character.HasPerk( GetPerk('mage_perk').Self )]"
 						name = "num_available_magic_perks"
 						text = "MAGIC_ADVANCEMENT_AVAILABLE_PERKS"
 						default_format = "#high"
