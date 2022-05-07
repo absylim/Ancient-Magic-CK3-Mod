@@ -222,7 +222,7 @@ beguiling_aura_spell = { # aura of majesty
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = beguiling_aura_spell }
+		can_cast_aura_trigger = { SPELL = beguiling_aura_spell }
 	}
 	effect = {
 		if = {
@@ -231,6 +231,7 @@ beguiling_aura_spell = { # aura of majesty
 		}
 		else = {
 			start_aura_effect = { SPELL = beguiling_aura_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = beguiling_aura_spell }
 		}
 	}
 }
@@ -367,7 +368,7 @@ enchanting_aura_spell = { # aura of truth
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = enchanting_aura_spell }
+		can_cast_aura_trigger = { SPELL = enchanting_aura_spell }
 	}
 	effect = {
 		if = {
@@ -376,6 +377,7 @@ enchanting_aura_spell = { # aura of truth
 		}
 		else = {
 			start_aura_effect = { SPELL = enchanting_aura_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = enchanting_aura_spell }
 		}
 	}
 }

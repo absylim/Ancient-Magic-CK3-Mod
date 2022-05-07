@@ -5,7 +5,7 @@ flame_aura_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = flame_aura_spell }
+		can_cast_aura_trigger = { SPELL = flame_aura_spell }
 	}
 	effect = {
 		if = {
@@ -14,6 +14,7 @@ flame_aura_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = flame_aura_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = flame_aura_spell }
 		}
 	}
 }
@@ -54,7 +55,7 @@ flaming_weapons_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = flaming_weapons_spell }
+		can_cast_aura_trigger = { SPELL = flaming_weapons_spell }
 	}
 	effect = {
 		if = {
@@ -63,6 +64,7 @@ flaming_weapons_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = flaming_weapons_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = flaming_weapons_spell }
 		}
 	}
 }
@@ -103,7 +105,7 @@ living_earthworks_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = living_earthworks_spell }
+		can_cast_aura_trigger = { SPELL = living_earthworks_spell }
 	}
 	effect = {
 		if = {
@@ -112,6 +114,7 @@ living_earthworks_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = living_earthworks_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = living_earthworks_spell }
 		}
 	}
 }
@@ -216,7 +219,7 @@ control_water_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = control_water_spell }
+		can_cast_aura_trigger = { SPELL = control_water_spell }
 	}
 	effect = {
 		if = {
@@ -225,6 +228,7 @@ control_water_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = control_water_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = control_water_spell }
 		}
 	}
 }
@@ -265,7 +269,7 @@ drought_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = drought_spell }
+		can_cast_aura_trigger = { SPELL = drought_spell }
 	}
 	effect = {
 		if = {
@@ -274,6 +278,7 @@ drought_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = drought_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = drought_spell }
 		}
 	}
 }
@@ -314,7 +319,7 @@ elemental_warrior_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = elemental_warrior_spell }
+		can_cast_aura_trigger = { SPELL = elemental_warrior_spell }
 	}
 	effect = {
 		if = {
@@ -323,6 +328,7 @@ elemental_warrior_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = elemental_warrior_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = elemental_warrior_spell }
 		}
 	}
 }

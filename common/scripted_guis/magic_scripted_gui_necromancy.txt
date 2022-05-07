@@ -101,7 +101,7 @@ aura_of_death_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = aura_of_death_spell }
+		can_cast_aura_trigger = { SPELL = aura_of_death_spell }
 	}
 	effect = {
 		if = {
@@ -110,6 +110,7 @@ aura_of_death_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = aura_of_death_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = aura_of_death_spell }
 		}
 	}
 }
@@ -349,7 +350,7 @@ blight_spell = {
 		NOT = { this = scope:spell_target }
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = blight_spell }
+		can_cast_aura_trigger = { SPELL = blight_spell }
 	}
 	effect = {
 		if = {
@@ -358,6 +359,7 @@ blight_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = blight_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = blight_spell }
 		}
 	}
 }
