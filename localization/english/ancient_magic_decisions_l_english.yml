@@ -1,9 +1,10 @@
 ﻿l_english:
  #major
  forge_material_soul_decision: "Forge Material Soul"
- forge_material_soul_decision_tooltip: "With the use of [mana|E] you can materilise your soul into this realm."
- forge_material_soul_decision_desc: "To reach true immortality one needs to forge ones soul, so that one can trancend ones mortal coil!"
- forge_material_soul_decision_confirm: "Lets Forge my Soul"
+ forge_material_soul_decision_tooltip: "With the use of [mana|E] you can materialize your soul in this realm."
+ forge_material_soul_decision_desc: "Bodily immortality is one thing, but the brain can only handle so much. Stuff hundreds of years of knowledge into one mind, and you simply run out of room. To reach true immortality, one needs to reforge their soul into a limitless receptable of knowledge, so that one can truly transcend one's mortal coil!"
+ forge_material_soul_decision_confirm: "Let's forge my soul"
+ MAGIC_DEMENTIA_IMMUNITY: "If successful, provides immunity to [GetTrait('mage_dementia').GetName( GetNullCharacter )]"
 
  #intrigue menu
  open_spellbook_decision: "Open Spellbook"

@@ -353,7 +353,8 @@ forge_material_soul_decision = {
 	}
 
 	effect = {
-		trigger_event = ancient_magic_rituals_events.001
+		magic_dementia_immunity_effect = yes
+		hidden_effect = { trigger_event = ancient_magic_rituals_events.001 }
 	}
 
 	ai_check_interval = 50
