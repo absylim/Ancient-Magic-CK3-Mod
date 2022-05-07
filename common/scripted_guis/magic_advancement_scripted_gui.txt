@@ -33,6 +33,14 @@ toggle_magic_advancement_window = {
 					limit = { NOT = { has_variable = mage_xp } }
 					set_variable = { name = mage_xp value = 0 }
 				}
+				if = { # never did i think that paradox giving out free perks would annoy me...
+					limit = { is_magus_trigger = no }
+					hidden_effect = {
+						set_variable = { name = mage_xp value = mage_xp_from_perks }
+						remove_all_mage_perks_effect = yes
+						init_perk_masks_to_zero_effect = yes
+					}
+				}
 				set_variable = {
 					name = available_magic_perks
 					value = num_available_magic_perks

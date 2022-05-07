@@ -47,3 +47,14 @@ init_perk_masks_effect = {
 		value = mensomancy_perk_mask_0_maker
 	}
 }
+
+init_perk_masks_to_zero_effect = {
+	set_variable = { name = aura_mask_0 value = 0 }
+	set_variable = { name = basic_perk_mask_0 value = 0 }
+	set_variable = { name = chronomancy_perk_mask_0 value = 0 }
+	set_variable = { name = chiromancy_perk_mask_0 value = 0 }
+	set_variable = { name = elomancy_perk_mask_0 value = 0 }
+	set_variable = { name = necromancy_perk_mask_0 value = 0 }
+	set_variable = { name = biomancy_perk_mask_0 value = 0 }
+	set_variable = { name = mensomancy_perk_mask_0 value = 0 }
+}
