@@ -1,0 +1,5 @@
+﻿magic_dementia_immunity_effect = {
+	custom_description_no_bullet = {
+		text = magic_dementia_immunity
+	}
+}

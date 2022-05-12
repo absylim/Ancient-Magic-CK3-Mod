@@ -33,3 +33,6 @@
  trait_mana_devouring_2: "Body Devouring"
  trait_mana_devouring_2_desc: "[ROOT.Char.GetNameNoTooltip] has an advanced mana devouring disease. Because [ROOT.Char.GetSheHe] no longer has enough [mana|El] to manage the illness, it has begun to consume [ROOT.Char.GetHerHis] body."
  trait_mana_devouring_2_character_desc: "This character has an advanced mana devouring disease. Because they no longer have enough [mana|El] to manage the illness, it has begun to consume their body."
+ trait_mage_dementia: "Magical Dementia"
+ trait_mage_dementia_desc: "The human mind can only handle 200-300 years worth of memories. This character has lived so long, their mind has begun overwriting their previous existence with new memories."
+ trait_mage_dementia_character_desc: "The human mind can only handle 200-300 years worth of memories. [ROOT.Char.GetNameNoTooltip] has lived so long, [ROOT.Char.GetHerHis] mind has begun overwriting their previous existence with new memories."

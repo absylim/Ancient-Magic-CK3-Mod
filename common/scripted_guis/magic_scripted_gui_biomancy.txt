@@ -30,8 +30,8 @@ rewrite_beauty_spell_spellbook = {
 	scope = character
 	is_shown = {
 		OR = {
-			has_perk_trigger = { PERK = improve_trait_perk }
-			has_perk_trigger = { PERK = weaken_trait_perk }
+			has_perk = improve_trait_perk
+			has_perk = weaken_trait_perk
 		}
 	}
 	is_valid = {
@@ -103,8 +103,8 @@ rewrite_physique_spell_spellbook = {
 	scope = character
 	is_shown = {
 		OR = {
-			has_perk_trigger = { PERK = improve_trait_perk }
-			has_perk_trigger = { PERK = weaken_trait_perk }
+			has_perk = improve_trait_perk
+			has_perk = weaken_trait_perk
 		}
 	}
 	is_valid = {
@@ -176,8 +176,8 @@ rewrite_intellect_spell_spellbook = {
 	scope = character
 	is_shown = {
 		OR = {
-			has_perk_trigger = { PERK = improve_trait_perk }
-			has_perk_trigger = { PERK = weaken_trait_perk }
+			has_perk = improve_trait_perk
+			has_perk = weaken_trait_perk
 		}
 	}
 	is_valid = {
@@ -242,7 +242,7 @@ sculpter_of_flesh_spell = {
 sculpter_of_flesh_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = sculpter_of_flesh_perk }
+		has_perk = sculpter_of_flesh_perk
 	}
 	is_valid = {
 		always = yes
@@ -276,7 +276,17 @@ fertility_control_spell = {
 	}
 	is_valid = {
 		has_made_selection_trigger = yes
-		has_enough_mana_trigger = { SPELL = fertility_control_spell }
+		OR = {
+			has_enough_mana_trigger = { SPELL = fertility_control_spell }
+			AND = {
+				is_target_in_variable_list = { name = selected_list_options target = inc_fertility }
+				scope:spell_target = { has_character_modifier = biomantic_fertility_modifier }
+			}
+			AND = {
+				is_target_in_variable_list = { name = selected_list_options target = dec_fertility }
+				scope:spell_target = { has_character_modifier = biomantic_infertility_modifier }
+			}
+		}
 	}
 	effect = {
 		every_in_list = {
@@ -302,11 +312,7 @@ fertility_control_spell = {
 					if = {
 						limit = { NOT = { scope:spell_target = { has_character_modifier = biomantic_infertility_modifier } } }
 						scope:spell_target = { add_character_modifier = biomantic_infertility_modifier }
-						prev = {
-							change_mana_with_tooltip = { VALUE = fertility_control_spell_cost.neg }
-							change_mana_gen_tooltip = { VALUE = fertility_control_spell_gen_cost_individual.neg }
-							change_mage_xp = { VALUE = fertility_control_spell_cost.abs }
-						}
+						prev = { pay_aura_cost_and_get_xp_effect = { SPELL = fertility_control_spell_cost } }
 					}
 					else = {
 						scope:spell_target = { remove_all_character_modifier_instances = biomantic_infertility_modifier }
@@ -321,7 +327,7 @@ fertility_control_spell = {
 fertility_control_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = fertility_control_perk }
+		has_perk = fertility_control_perk
 	}
 	is_valid = {
 		always = yes
@@ -380,7 +386,7 @@ impregnate_spell = {
 impregnate_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = impregnate_perk }
+		has_perk = impregnate_perk
 	}
 	is_valid = {
 		always = yes

@@ -51,13 +51,6 @@ is_adding_personality_trait_trigger = {
 	}
 }
 
-has_enough_mana_trigger = {
-	custom_description = {
-		text = "has_enough_mana_trigger"
-		var:mana.compare_value >= $SPELL$_cost.abs
-	}
-}
-
 will_target_have_trait_trigger = {
 	scope:spell_target = {
 		custom_description = {
@@ -70,7 +63,7 @@ will_target_have_trait_trigger = {
 personality_traits_under_limit_trigger = {
 	custom_description = {
 		text = "personality_traits_under_limit_trigger"
-		num_target_personality_traits.compare_value < personality_trait_limit
+		number_of_personality_traits.compare_value < personality_trait_limit
 	}
 }
 

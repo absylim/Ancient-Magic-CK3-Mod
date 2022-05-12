@@ -1,0 +1,4 @@
+﻿can_toggle_magic_once_every_five_years = {
+    GLOBAL = can_toggle_magic_once_every_five_years
+    FIRST = can_toggle_magic_once_every_five_years
+}
