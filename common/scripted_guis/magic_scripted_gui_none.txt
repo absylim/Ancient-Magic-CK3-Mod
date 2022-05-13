@@ -22,7 +22,7 @@ spark_spell = {
 				value = spark_spell_cost.abs
 				multiply = var:repeat_spell
 				multiply = {
-					value = mage_level.div2
+					value = mage_level.rshift02
 					min = 1
 				}
 			}
