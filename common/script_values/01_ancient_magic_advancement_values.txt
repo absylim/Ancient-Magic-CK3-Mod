@@ -31,19 +31,34 @@ mage_xp_to_next_level = {
 	multiply = 1000
 }
 
+mage_xp_from_perks = {
+	value = total_mage_perks.sum_n
+	multiply = 1000
+}
+
 basic_num_perks = { value = var:basic_perk_mask_0.num_set_bits }
 chronomancy_num_perks = { value = var:chronomancy_perk_mask_0.num_set_bits }
-life_num_perks = { value = var:life_perk_mask_0.num_set_bits }
+chiromancy_num_perks = { value = var:chiromancy_perk_mask_0.num_set_bits }
 elomancy_num_perks = { value = var:elomancy_perk_mask_0.num_set_bits }
 necromancy_num_perks = { value = var:necromancy_perk_mask_0.num_set_bits }
 biomancy_num_perks = { value = var:biomancy_perk_mask_0.num_set_bits }
 mensomancy_num_perks = { value = var:mensomancy_perk_mask_0.num_set_bits }
 
+total_mage_perks = {
+	value = basic_num_perks
+	add = chronomancy_num_perks
+	add = chiromancy_num_perks
+	add = elomancy_num_perks
+	add = necromancy_num_perks
+	add = biomancy_num_perks
+	add = mensomancy_num_perks
+}
+
 num_available_magic_perks = {
 	value = mage_level
 	subtract = basic_num_perks
 	subtract = chronomancy_num_perks
-	subtract = life_num_perks
+	subtract = chiromancy_num_perks
 	subtract = elomancy_num_perks
 	subtract = necromancy_num_perks
 	subtract = biomancy_num_perks

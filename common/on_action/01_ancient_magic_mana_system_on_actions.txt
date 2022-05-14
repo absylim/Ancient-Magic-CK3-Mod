@@ -45,7 +45,8 @@ set_up_remaining_mana_gen_for_year = {
 			set_variable = {
 				name = mana_gen_months_left
 				value = {
-					value = 12				
+					value = 13 # yearly_mana_pulse starts genning mana on jan 2nd
+								# so we need to gen for next january as well				
 					subtract = current_month
 				}
 			}
@@ -61,52 +62,17 @@ monthly_mana_gen = {
 	}
 
 	on_actions = {
-		give_monthly_mana
-		delay = { days = 28 }
-		delay_mana_gen_till_1st_of_month
-	}
-
-	effect = {
-		change_variable = {
-			name = mana_gen_months_left
-			subtract = 1
-		}
-	}
-}
-
-delay_mana_gen_till_1st_of_month = {
-	trigger = {
-		# run until the second day of the month - first day of the month triggers mana gen
-		NOT = { current_day.compare_value = 2 }
-	}
-
-	on_actions = {
 		delay = { days = 1 }
-		delay_mana_gen_till_1st_of_month
+		monthly_mana_gen
 	}
 
 	effect = {
 		if = {
 			limit = { current_day.compare_value = 1 }
-			trigger_event = { on_action = monthly_mana_gen }
-		}
-	}
-}
-
-give_monthly_mana = {
-	effect = {
-		# the effect clamps to 0 < mana < max_mana
-		change_mana = { VALUE = var:mana_gen }
-
-		if = { #Infinite mana trait
-			limit = { has_trait = infinite_mana }
-			set_variable = {
-				name = max_mana
-				value = 999999
-			}
-			set_variable = {
-				name = mana
-				value = var:max_mana
+			change_mana = { VALUE = ancient_magic_mana_gen }
+			change_variable = {
+				name = mana_gen_months_left
+				subtract = 1
 			}
 		}
 	}
@@ -119,12 +85,20 @@ daily_mana_gen = {
 	}
 
 	on_actions = {
-		give_daily_mana
 		delay = { days = 1 }
 		daily_mana_gen
 	}
 
 	effect = {
+		save_temporary_scope_value_as = {
+			name = daily_gen
+			value = {
+				value = ancient_magic_mana_gen
+				multiply = 12
+				divide = 365
+			}
+		}
+		change_mana = { VALUE = scope:daily_gen }
 		change_variable = {
 			name = mana_gen_days_left
 			subtract = 1
@@ -132,56 +106,17 @@ daily_mana_gen = {
 	}
 }
 
-give_daily_mana = {
-	effect = {
-		# the effect clamps to 0 < mana < max_mana
-		save_temporary_scope_value_as = {
-			name = daily_gen
-			value = {
-				value = var:mana_gen
-				multiply = 12
-				divide = 365
-			}
-		}
-		change_mana = { VALUE = scope:daily_gen }
-
-		if = { #Infinite mana trait
-			limit = { has_trait = infinite_mana }
-			set_variable = {
-				name = max_mana
-				value = 999999
-			}
-			set_variable = {
-				name = mana
-				value = var:max_mana
-			}
-		}
-	}
-}
-
 on_reset_mana_system = {
 	trigger = { is_magus_trigger = yes }
 
-	events = {
-		ancient_magic_aura_update_events.001
+	on_actions = {
+		update_all_auras_for_character
 	}
 
 	effect = {
 		set_variable = {
-			name = max_mana
-			value = ancient_magic_max_mana
-		}
-		set_variable = {
-			name = mana_gen
-			value = ancient_magic_mana_gen
-		}
-		set_variable = {
 			name = mana
-			value = {
-				value = var:mana
-				max = var:max_mana
-				min = 0
-			}
+			value = var:mana.clamp_to_max_mana
 		}
 	}
 }

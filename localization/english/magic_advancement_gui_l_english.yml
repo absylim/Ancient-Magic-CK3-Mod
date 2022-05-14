@@ -2,6 +2,11 @@
  ## GUI
  MAGIC_ADVANCEMENT_BUTTON: "Open Magical Studies"
  MAGIC_ADVANCEMENT_HEADER: "Magical Studies"
- MAGIC_ADVANCEMENT_TOGGLE_STUDY: "Begin Studying Magic"
- MAGIC_ADVANCEMENT_FOCUS_PRECLUSION_DESC: "You can choose to study magic, or one of the lifestyle focuses. Choosing to study magic will stop your lifestyle focus experience gain."
+ MAGIC_ADVANCEMENT_TOGGLE_STUDY_ON: "Begin Studying Magic"
+ MAGIC_ADVANCEMENT_TOGGLE_STUDY_OFF: "Stop Studying Magic"
  MAGIC_ADVANCEMENT_AVAILABLE_PERKS: "Available Perks: [GetPlayer.MakeScope.Var('available_magic_perks').GetValue|V0]"
+
+ ## SGUI
+ NOT_can_toggle_magic_once_every_five_years: "#X You can only start or stop studying magic once every 5 years#!"
+ toggle_magic_on_unavailable_five_years: "You will not be able to start studying magic for 5 years"
+ toggle_magic_off_unavailable_five_years: "You will not be able to stop studying magic for 5 years"

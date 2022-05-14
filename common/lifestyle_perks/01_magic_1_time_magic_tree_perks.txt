@@ -63,6 +63,7 @@
 		gain_mana_gen_perk = { VALUE = chronomancy_mage_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = chronomancy_mage_perk_max_mana }
 		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = chronomancy_mage_perk_bit OP = set }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -129,7 +130,7 @@ glimpse_the_future_perk = {
 		gain_mana_gen_perk = { VALUE = glimpse_the_future_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = glimpse_the_future_perk_max_mana }
 		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = glimpse_the_future_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -196,7 +197,7 @@ financial_times_perk = {
 		gain_mana_gen_perk = { VALUE = financial_times_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = financial_times_perk_max_mana }
 		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = financial_times_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -263,7 +264,7 @@ celerity_perk = {
 		gain_mana_gen_perk = { VALUE = celerity_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = celerity_perk_max_mana }
 		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = celerity_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -330,7 +331,7 @@ mass_celerity_perk = {
 		gain_mana_gen_perk = { VALUE = mass_celerity_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = mass_celerity_perk_max_mana }
 		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = mass_celerity_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -397,7 +398,7 @@ slowness_perk = {
 		gain_mana_gen_perk = { VALUE = slowness_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = slowness_perk_max_mana }
 		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = slowness_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -464,7 +465,7 @@ mass_slowness_perk = {
 		gain_mana_gen_perk = { VALUE = mass_slowness_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = mass_slowness_perk_max_mana }
 		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = mass_slowness_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -534,7 +535,7 @@ temporal_manipulation_perk = {
 		gain_mana_gen_perk = { VALUE = temporal_manipulation_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = temporal_manipulation_perk_max_mana }
 		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = temporal_manipulation_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }
@@ -601,7 +602,7 @@ master_of_time_perk = {
 		gain_mana_gen_perk = { VALUE = master_of_time_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = master_of_time_perk_max_mana }
 		mod_bit = { MASK = chronomancy_perk_mask_0 BIT = master_of_time_perk_bit OP = set }
-		change_variable = { name = available_magic_perks subtract = 1 }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
 		trigger_event = { on_action = on_reset_mana_system }
 	}
 }

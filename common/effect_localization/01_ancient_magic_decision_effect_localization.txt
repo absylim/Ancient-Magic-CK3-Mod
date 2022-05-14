@@ -1,0 +1,3 @@
+﻿magic_dementia_immunity = {
+    global = MAGIC_DEMENTIA_IMMUNITY
+}

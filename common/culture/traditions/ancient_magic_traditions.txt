@@ -67,24 +67,31 @@
 		value = 100
 		if = {
 			limit = {
-				has_trait = ambitious
+				scope:character = {
+					has_trait = ambitious
+					is_magus_trigger = yes
+				}
 			}
 			multiply = 1.5
 		}
 		if = {
-			limit = {
-				has_trait = zealous
-				faith = {
-					has_doctrine_parameter = witchcraft_illegal
+			limit = {	
+				scope:character = {
+					has_trait = zealous
+					faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
 				}
 			}
 			multiply = 0.1
 		}
 		if = {
 			limit = {
-				has_trait = zealous
-				faith = {
-					has_doctrine_parameter = witchcraft_shunned
+				scope:character = {
+					has_trait = zealous
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
 				}
 			}
 			multiply = 0.5
@@ -165,25 +172,31 @@ tradition_mythology_egypt = {
 		value = 100
 		if = {
 			limit = {
-				has_trait = ambitious
-				is_magus_trigger = yes
+				scope:character = {
+					has_trait = ambitious
+					is_magus_trigger = yes
+				}
 			}
 			multiply = 1.5
 		}
 		if = {
-			limit = {
-				has_trait = zealous
-				faith = {
-					has_doctrine_parameter = witchcraft_illegal
+			limit = {	
+				scope:character = {
+					has_trait = zealous
+					faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
 				}
 			}
 			multiply = 0.1
 		}
 		if = {
 			limit = {
-				has_trait = zealous
-				faith = {
-					has_doctrine_parameter = witchcraft_shunned
+				scope:character = {
+					has_trait = zealous
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
 				}
 			}
 			multiply = 0.5
@@ -261,25 +274,31 @@ tradition_mythology_greek = {
 		value = 100
 		if = {
 			limit = {
-				has_trait = ambitious
-				is_magus_trigger = yes
+				scope:character = {
+					has_trait = ambitious
+					is_magus_trigger = yes
+				}
 			}
 			multiply = 1.5
 		}
 		if = {
-			limit = {
-				has_trait = zealous
-				faith = {
-					has_doctrine_parameter = witchcraft_illegal
+			limit = {	
+				scope:character = {
+					has_trait = zealous
+					faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
 				}
 			}
 			multiply = 0.1
 		}
 		if = {
 			limit = {
-				has_trait = zealous
-				faith = {
-					has_doctrine_parameter = witchcraft_shunned
+				scope:character = {
+					has_trait = zealous
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
 				}
 			}
 			multiply = 0.5
@@ -363,25 +382,31 @@ tradition_mythology_roman = {
 		value = 100
 		if = {
 			limit = {
-				has_trait = ambitious
-				is_magus_trigger = yes
+				scope:character = {
+					has_trait = ambitious
+					is_magus_trigger = yes
+				}
 			}
 			multiply = 1.5
 		}
 		if = {
-			limit = {
-				has_trait = zealous
-				faith = {
-					has_doctrine_parameter = witchcraft_illegal
+			limit = {	
+				scope:character = {
+					has_trait = zealous
+					faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
 				}
 			}
 			multiply = 0.1
 		}
 		if = {
 			limit = {
-				has_trait = zealous
-				faith = {
-					has_doctrine_parameter = witchcraft_shunned
+				scope:character = {
+					has_trait = zealous
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
 				}
 			}
 			multiply = 0.5
@@ -470,25 +495,31 @@ tradition_mythology_india = {
 		value = 100
 		if = {
 			limit = {
-				has_trait = ambitious
-				is_magus_trigger = yes
+				scope:character = {
+					has_trait = ambitious
+					is_magus_trigger = yes
+				}
 			}
 			multiply = 1.5
 		}
 		if = {
-			limit = {
-				has_trait = zealous
-				faith = {
-					has_doctrine_parameter = witchcraft_illegal
+			limit = {	
+				scope:character = {
+					has_trait = zealous
+					faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
 				}
 			}
 			multiply = 0.1
 		}
 		if = {
 			limit = {
-				has_trait = zealous
-				faith = {
-					has_doctrine_parameter = witchcraft_shunned
+				scope:character = {
+					has_trait = zealous
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
 				}
 			}
 			multiply = 0.5
@@ -562,25 +593,31 @@ tradition_mythology_norse = {
 		value = 100
 		if = {
 			limit = {
-				has_trait = ambitious
-				is_magus_trigger = yes
+				scope:character = {
+					has_trait = ambitious
+					is_magus_trigger = yes
+				}
 			}
 			multiply = 1.5
 		}
 		if = {
-			limit = {
-				has_trait = zealous
-				faith = {
-					has_doctrine_parameter = witchcraft_illegal
+			limit = {	
+				scope:character = {
+					has_trait = zealous
+					faith = {
+						has_doctrine_parameter = witchcraft_illegal
+					}
 				}
 			}
 			multiply = 0.1
 		}
 		if = {
 			limit = {
-				has_trait = zealous
-				faith = {
-					has_doctrine_parameter = witchcraft_shunned
+				scope:character = {
+					has_trait = zealous
+					faith = {
+						has_doctrine_parameter = witchcraft_shunned
+					}
 				}
 			}
 			multiply = 0.5

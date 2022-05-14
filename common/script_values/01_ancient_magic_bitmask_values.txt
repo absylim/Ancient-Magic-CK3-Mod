@@ -369,85 +369,109 @@ enchanting_aura_spell_aura_bit_unset = { value = unset19 }
 ## Setter Helpers
 # You are able to use these directly, but it's much more efficient
 # if you recall var:<spell_school>_perk_mask instead!
+aura_mask_0_maker = {
+	value = 0
+	if = { limit = { has_variable_list = glimpse_the_future_spell_targets } add = glimpse_the_future_spell_aura_bit_set }
+	if = { limit = { has_variable_list = financial_times_spell_targets } add = financial_times_spell_aura_bit_set }
+	if = { limit = { has_variable_list = celerity_spell_targets } add = celerity_spell_aura_bit_set }
+	if = { limit = { has_variable_list = mass_celerity_spell_targets } add = mass_celerity_spell_aura_bit_set }
+	if = { limit = { has_variable_list = slowness_spell_targets } add = slowness_spell_aura_bit_set }
+	if = { limit = { has_variable_list = mass_slowness_spell_targets } add = mass_slowness_spell_aura_bit_set }
+	if = { limit = { has_variable_list = temporal_manipulation_spell_targets } add = temporal_manipulation_spell_aura_bit_set }
+	if = { limit = { has_variable_list = haste_spell_targets } add = haste_spell_aura_bit_set }
+	if = { limit = { has_variable_list = master_of_time_spell_targets } add = master_of_time_spell_aura_bit_set }
+	if = { limit = { has_variable_list = flame_aura_spell_targets } add = flame_aura_spell_aura_bit_set }
+	if = { limit = { has_variable_list = flaming_weapons_spell_targets } add = flaming_weapons_spell_aura_bit_set }
+	if = { limit = { has_variable_list = living_earthworks_spell_targets } add = living_earthworks_spell_aura_bit_set }
+	if = { limit = { has_variable_list = control_water_spell_targets } add = control_water_spell_aura_bit_set }
+	if = { limit = { has_variable_list = drought_spell_targets } add = drought_spell_aura_bit_set }
+	if = { limit = { has_variable_list = elemental_warrior_spell_targets } add = elemental_warrior_spell_aura_bit_set }
+	if = { limit = { has_variable_list = aura_of_death_spell_targets } add = aura_of_death_spell_aura_bit_set }
+	if = { limit = { has_variable_list = blight_spell_targets } add = blight_spell_aura_bit_set }
+	if = { limit = { has_variable_list = fertility_control_spell_targets } add = fertility_control_spell_aura_bit_set }
+	if = { limit = { has_variable_list = beguiling_aura_spell_targets } add = beguiling_aura_spell_aura_bit_set }
+	if = { limit = { has_variable_list = enchanting_aura_spell_targets } add = enchanting_aura_spell_aura_bit_set }
+}
+
 basic_perk_mask_0_maker = {
 	value = 0
-	if = { limit = { has_perk = mage_perk } add = set.makebit00 }
+	if = { limit = { has_perk = mage_perk } add = 1 } # set.makebit00
 }
 
 chronomancy_perk_mask_0_maker = {
 	value = 0
-	if = { limit = { has_perk = chronomancy_mage_perk } add = set.makebit00 }
-	if = { limit = { has_perk = glimpse_the_future_perk } add = set.makebit01 }
-	if = { limit = { has_perk = financial_times_perk } add = set.makebit02 }
-	if = { limit = { has_perk = celerity_perk } add = set.makebit03 }
-	if = { limit = { has_perk = mass_celerity_perk } add = set.makebit04 }
-	if = { limit = { has_perk = slowness_perk } add = set.makebit05 }
-	if = { limit = { has_perk = mass_slowness_perk } add = set.makebit06 }
-	if = { limit = { has_perk = temporal_manipulation_perk } add = set.makebit07 }
-	if = { limit = { has_perk = master_of_time_perk } add = set.makebit08 }
+	if = { limit = { has_perk = chronomancy_mage_perk } add = 1 } # set.makebit00
+	if = { limit = { has_perk = glimpse_the_future_perk } add = 2 } # set.makebit01
+	if = { limit = { has_perk = financial_times_perk } add = 4 } # set.makebit02
+	if = { limit = { has_perk = celerity_perk } add = 8 } # set.makebit03
+	if = { limit = { has_perk = mass_celerity_perk } add = 16 } # set.makebit04
+	if = { limit = { has_perk = slowness_perk } add = 32 } # set.makebit05
+	if = { limit = { has_perk = mass_slowness_perk } add = 64 } # set.makebit06
+	if = { limit = { has_perk = temporal_manipulation_perk } add = 128 } # set.makebit07
+	if = { limit = { has_perk = master_of_time_perk } add = 256 } # set.makebit08
 }
 
-life_perk_mask_0_maker = {
+chiromancy_perk_mask_0_maker = {
 	value = 0
-	if = { limit = { has_perk = life_mage_perk } add = set.makebit00 }
-	if = { limit = { has_perk = inward_reflection_perk } add = set.makebit01 }
-	if = { limit = { has_perk = inward_perfection_perk } add = set.makebit02 }
-	if = { limit = { has_perk = heal_perk } add = set.makebit03 }
-	if = { limit = { has_perk = greater_heal_perk } add = set.makebit04 }
-	if = { limit = { has_perk = battlefield_life_mage_perk } add = set.makebit05 }
-	if = { limit = { has_perk = greater_battlefield_life_mage_perk } add = set.makebit06 }
-	if = { limit = { has_perk = purity_of_body_perk } add = set.makebit07 }
-	if = { limit = { has_perk = avatar_of_life_perk } add = set.makebit08 }
+	if = { limit = { has_perk = life_mage_perk } add = 1 } # set.makebit00
+	if = { limit = { has_perk = inward_reflection_perk } add = 2 } # set.makebit01
+	if = { limit = { has_perk = inward_perfection_perk } add = 4 } # set.makebit02
+	if = { limit = { has_perk = heal_perk } add = 8 } # set.makebit03
+	if = { limit = { has_perk = greater_heal_perk } add = 16 } # set.makebit04
+	if = { limit = { has_perk = battlefield_life_mage_perk } add = 32 } # set.makebit05
+	if = { limit = { has_perk = greater_battlefield_life_mage_perk } add = 64 } # set.makebit06
+	if = { limit = { has_perk = purity_of_body_perk } add = 128 } # set.makebit07
+	if = { limit = { has_perk = avatar_of_life_perk } add = 256 } # set.makebit08
 }
 
 elomancy_perk_mask_0_maker = {
 	value = 0
-	if = { limit = { has_perk = elemental_mage_perk } add = set.makebit00 }
-	if = { limit = { has_perk = flame_aura_perk } add = set.makebit01 }
-	if = { limit = { has_perk = flaming_weapons_perk } add = set.makebit02 }
-	if = { limit = { has_perk = living_earthworks_perk } add = set.makebit03 }
-	if = { limit = { has_perk = golem_creation_perk } add = set.makebit04 }
-	if = { limit = { has_perk = control_water_perk } add = set.makebit05 }
-	if = { limit = { has_perk = drought_perk } add = set.makebit06 }
-	if = { limit = { has_perk = elemental_warrior_perk } add = set.makebit07 }
-	if = { limit = { has_perk = lord_of_the_elements_perk } add = set.makebit08 }
+	if = { limit = { has_perk = elemental_mage_perk } add = 1 } # set.makebit00
+	if = { limit = { has_perk = flame_aura_perk } add = 2 } # set.makebit01
+	if = { limit = { has_perk = flaming_weapons_perk } add = 4 } # set.makebit02
+	if = { limit = { has_perk = living_earthworks_perk } add = 8 } # set.makebit03
+	if = { limit = { has_perk = golem_creation_perk } add = 16 } # set.makebit04
+	if = { limit = { has_perk = control_water_perk } add = 32 } # set.makebit05
+	if = { limit = { has_perk = drought_perk } add = 64 } # set.makebit06
+	if = { limit = { has_perk = elemental_warrior_perk } add = 128 } # set.makebit07
+	if = { limit = { has_perk = lord_of_the_elements_perk } add = 256 } # set.makebit08
 }
 
 necromancy_perk_mask_0_maker = {
 	value = 0
-	if = { limit = { has_perk = death_mage_perk } add = set.makebit00 }
-	if = { limit = { has_perk = inflict_illness_perk } add = set.makebit01 }
-	if = { limit = { has_perk = plague_lord_perk } add = set.makebit02 }
-	if = { limit = { has_perk = aura_of_death_perk } add = set.makebit03 }
-	if = { limit = { has_perk = necromancy_perk } add = set.makebit04 }
-	if = { limit = { has_perk = drain_life_perk } add = set.makebit05 }
-	if = { limit = { has_perk = death_stare_perk } add = set.makebit06 }
-	if = { limit = { has_perk = blight_perk } add = set.makebit07 }
-	if = { limit = { has_perk = deacon_of_death_perk } add = set.makebit08 }
+	if = { limit = { has_perk = death_mage_perk } add = 1 } # set.makebit00
+	if = { limit = { has_perk = inflict_illness_perk } add = 2 } # set.makebit01
+	if = { limit = { has_perk = plague_lord_perk } add = 4 } # set.makebit02
+	if = { limit = { has_perk = aura_of_death_perk } add = 8 } # set.makebit03
+	if = { limit = { has_perk = necromancy_perk } add = 16 } # set.makebit04
+	if = { limit = { has_perk = drain_life_perk } add = 32 } # set.makebit05
+	if = { limit = { has_perk = death_stare_perk } add = 64 } # set.makebit06
+	if = { limit = { has_perk = blight_perk } add = 128 } # set.makebit07
+	if = { limit = { has_perk = deacon_of_death_perk } add = 256 } # set.makebit08
 }
 
 biomancy_perk_mask_0_maker = {
 	value = 0
-	if = { limit = { has_perk = biomancy_mage_perk } add = set.makebit00 }
-	if = { limit = { has_perk = improve_trait_perk } add = set.makebit01 }
-	if = { limit = { has_perk = perfect_trait_perk } add = set.makebit02 }
-	if = { limit = { has_perk = fertility_control_perk } add = set.makebit03 }
-	if = { limit = { has_perk = impregnate_perk } add = set.makebit04 }
-	if = { limit = { has_perk = weaken_trait_perk } add = set.makebit05 }
-	if = { limit = { has_perk = criple_trait_perk } add = set.makebit06 }
-	if = { limit = { has_perk = sculpter_of_flesh_perk } add = set.makebit07 }
-	if = { limit = { has_perk = architect_of_bloodlines_perk } add = set.makebit08 }
+	if = { limit = { has_perk = biomancy_mage_perk } add = 1 } # set.makebit00
+	if = { limit = { has_perk = improve_trait_perk } add = 2 } # set.makebit01
+	if = { limit = { has_perk = perfect_trait_perk } add = 4 } # set.makebit02
+	if = { limit = { has_perk = fertility_control_perk } add = 8 } # set.makebit03
+	if = { limit = { has_perk = impregnate_perk } add = 16 } # set.makebit04
+	if = { limit = { has_perk = weaken_trait_perk } add = 32 } # set.makebit05
+	if = { limit = { has_perk = criple_trait_perk } add = 64 } # set.makebit06
+	if = { limit = { has_perk = sculpter_of_flesh_perk } add = 128 } # set.makebit07
+	if = { limit = { has_perk = architect_of_bloodlines_perk } add = 256 } # set.makebit08
 }
 
 mensomancy_perk_mask_0_maker = {
 	value = 0
-	if = { limit = { has_perk = domination_mage_perk } add = set.makebit00 }
-	if = { limit = { has_perk = entrance_perk } add = set.makebit01 }
-	if = { limit = { has_perk = incite_lust_perk } add = set.makebit02 }
-	if = { limit = { has_perk = incite_obedience_perk } add = set.makebit03 }
-	if = { limit = { has_perk = dominate_perk } add = set.makebit04 }
-	if = { limit = { has_perk = beguiling_aura_perk } add = set.makebit05 }
-	if = { limit = { has_perk = friendship_perk } add = set.makebit06 }
-	if = { limit = { has_perk = enchanting_aura_perk } add = set.makebit07 }
-	if = { limit = { has_perk = master_of_puppets_perk } add = set.makebit08 }
+	if = { limit = { has_perk = domination_mage_perk } add = 1 } # set.makebit00
+	if = { limit = { has_perk = entrance_perk } add = 2 } # set.makebit01
+	if = { limit = { has_perk = incite_lust_perk } add = 4 } # set.makebit02
+	if = { limit = { has_perk = incite_obedience_perk } add = 8 } # set.makebit03
+	if = { limit = { has_perk = dominate_perk } add = 16 } # set.makebit04
+	if = { limit = { has_perk = beguiling_aura_perk } add = 32 } # set.makebit05
+	if = { limit = { has_perk = friendship_perk } add = 64 } # set.makebit06
+	if = { limit = { has_perk = enchanting_aura_perk } add = 128 } # set.makebit07
+	if = { limit = { has_perk = master_of_puppets_perk } add = 256 } # set.makebit08
 }

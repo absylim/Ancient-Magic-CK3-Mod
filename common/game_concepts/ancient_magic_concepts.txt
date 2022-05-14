@@ -1,27 +1,26 @@
 ﻿mage_level = {
-    alias = { mage_talent }
 }
 
 magic_potential = {
-    alias = { mage_potency }
+	alias = { mage_potency magic_skill }
 }
 
 mana = {
 	texture = "gfx/interface/icons/icon_active_aura.dds"
-    alias = { magical_power mana_i }
+	alias = { mana_i }
 }
 
 mana_cost = {
 	texture = "gfx/interface/icons/icon_inactive_aura.dds"
-    alias = { spell_cost mana_cost_i }
+	alias = { spell_cost mana_cost_i }
+}
+
+mana_gen = {
+	alias = { mana_gen_i }
 }
 
 mana_drain = {
-    alias = { mana_draw }
-}
-
-magic_talent = {
-    alias = { magic_skill skill_in_a_magic_school talent_in_a_magic_school }
+	alias = { mana_draw mana_drain_i }
 }
 
 mage_spell = {
@@ -35,67 +34,70 @@ mage_ritual = {
 }
 
 minor_health_issues = {
+	alias = { minor_health_issue }
 }
 
 serious_health_issues = {
+	alias = { serious_health_issue }
 }
 
-worst_health_issues = {
+critical_health_issues = {
+	alias = { critical_health_issue }
 }
 
 chronomancy = {
 	texture = "gfx/magic/chronomancy_magic.dds"
-    alias = { chronomancy_magic chronomancy_mage time_magic time_mage skip_mage chronomancer chronomancy_i }
+	alias = { chronomancer chronomancy_i }
 }
 
 chiromancy = {
 	texture = "gfx/magic/life_magic.dds"
-    alias = { healing_magic healer_mage chiromancer white_mage chiromancy_i }
+	alias = { chiromancer chiromancy_i }
 }
 
 elomancy = {
 	texture = "gfx/magic/elomancy_magic.dds"
-    alias = { elomancy_i battle_magic elomancer battle_mage elementalist war_mage elementalism }
+	alias = { elomancer elomancy_i }
 }
 
 necromancy = {
 	texture = "gfx/magic/necromancy_magic.dds"
-    alias = { necromancy_i death_magic necromancer death_mage pale_mage black_mage }
+	alias = { necromancer necromancy_i }
 }
 
 biomancy = {
 	texture = "gfx/magic/biomancy_magic.dds"
-    alias = { biomancy_i nature_magic druid_mage nature_mage biomancer  }
+	alias = { biomancer biomancy_i }
 }
 
 mensomancy = {
 	texture = "gfx/magic/mensomancy_magic.dds"
-    alias = { mensomancy_i psychomancy psychomancer mensomancer mentalism mentalist }
+	alias = { mensomancer mensomancy_i }
 }
 
 school_of_magic = {
 	texture = "gfx/magic/maintab_magic.dds"
-    alias = { school_of_magic_i magic_school magical_school magic_discipline magical_discipline }
+	alias = { school_of_magic_i }
 }
 
 ## Men At Arms
 stone_golems = {
 	texture = "gfx/interface/icons/regimenttypes/stone_golems.dds"
-    alias = { stone_golem }
+	alias = { stone_golem }
 }
 
 lava_golems = {
 	texture = "gfx/interface/icons/regimenttypes/lava_golems.dds"
-    alias = { lava_golem }
+	alias = { lava_golem }
 }
 
 undead = {
 	texture = "gfx/interface/icons/regimenttypes/lesser_undead.dds"
-    alias = { lesser_undead greater_undead }
+	alias = { lesser_undead greater_undead }
 }
 
 magocracy = {
-    alias = { magocracies magocratic magocratic_government }
+	alias = { magocracies magocratic magocratic_government }
 }
 
 city_of_magic = {
@@ -109,7 +111,7 @@ ley_line = {
 
 focal_point = {
 	texture = "gfx/interface/icons/modifiers/focal_point.dds"
-    alias = { focal_points }
+	alias = { focal_points }
 }
 
 ## Spell descriptions

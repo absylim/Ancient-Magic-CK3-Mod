@@ -52,10 +52,30 @@ reset_spell_drain = {
 	}
 
 	effect = {
+		kill_aura = { SPELL = glimpse_the_future_spell }
+		kill_aura = { SPELL = financial_times_spell }
+		kill_aura = { SPELL = celerity_spell }
+		kill_aura = { SPELL = mass_celerity_spell }
+		kill_aura = { SPELL = slowness_spell }
+		kill_aura = { SPELL = mass_slowness_spell }
+		kill_aura = { SPELL = temporal_manipulation_spell }
+		kill_aura = { SPELL = haste_spell }
+		kill_aura = { SPELL = master_of_time_spell }
+		kill_aura = { SPELL = flame_aura_spell }
+		kill_aura = { SPELL = flaming_weapons_spell }
+		kill_aura = { SPELL = living_earthworks_spell }
+		kill_aura = { SPELL = control_water_spell }
+		kill_aura = { SPELL = drought_spell }
+		kill_aura = { SPELL = elemental_warrior_spell }
+		kill_aura = { SPELL = aura_of_death_spell }
+		kill_aura = { SPELL = blight_spell }
+		kill_aura = { SPELL = beguiling_aura_spell }
+		kill_aura = { SPELL = enchanting_aura_spell }
 		every_living_character = {
 			limit = {
-				NOT = { this = prev } # If this is the dying character, we don't care about their mana gen
+				is_magus_trigger = yes
 				has_any_spell_aura_targets_trigger = yes
+				NOT = { this = prev } # If this is the dying character, we don't care about their mana gen
 			}
 			remove_prev_from_this_aura_spell_targets_effect = { SPELL = glimpse_the_future_spell }
 			remove_prev_from_this_aura_spell_targets_effect = { SPELL = financial_times_spell }

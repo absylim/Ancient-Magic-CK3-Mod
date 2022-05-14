@@ -45,6 +45,7 @@
 		awaken_magical_potential = yes
 		unlock_spark_spell = yes
 		give_mage_secret_or_trait_effect = yes
+		if = { limit = { has_perk_masks_trigger = no } init_perk_masks_effect = yes }
 		mod_bit = { MASK = basic_perk_mask_0 BIT = mage_perk_bit OP = set }
 		set_variable = {
 			name = mana
@@ -54,10 +55,8 @@
 			name = mage_xp
 			value = 0
 		}
-		set_variable = {
-			name = available_magic_perks
-			value = 0
-		}
-		trigger_event = { on_action = { set_up_remaining_mana_gen_for_year } }
+		set_variable = { name = available_magic_perks value = num_available_magic_perks }
+		trigger_event = { on_action = on_reset_mana_system }
+		trigger_event = { on_action = set_up_remaining_mana_gen_for_year }
 	}
 }

@@ -1,0 +1,13 @@
+﻿can_cast_aura_trigger = {
+    OR = {
+        is_target_in_variable_list = { name = $SPELL$_targets target = scope:spell_target }
+        has_enough_mana_trigger = { SPELL = $SPELL$ }
+    }
+}
+
+has_enough_mana_trigger = {
+	custom_description = {
+		text = "has_enough_mana_trigger"
+		var:mana.compare_value >= $SPELL$_cost.abs
+	}
+}

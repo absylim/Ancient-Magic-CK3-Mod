@@ -79,6 +79,15 @@ texticon = {
 }
 
 texticon = {
+	icon = icon_magic_perk_available
+	iconsize = {
+		texture = "gfx/interface/window_magic_advancement/magic_advancement_perk_available_2.dds"
+		size = { 20 20 }
+		fontsize = 16
+	}
+}
+
+texticon = {
 	icon = icon_basic_category
 	iconsize = {
 		texture = "gfx/magic/maintab_spellbook.dds"
@@ -97,7 +106,7 @@ texticon = {
 }
 
 texticon = {
-	icon = icon_life_category
+	icon = icon_chiromancy_category
 	iconsize = {
 		texture = "gfx/magic/life_magic.dds"
 		size = { 80 80 }
@@ -139,14 +148,4 @@ texticon = {
 		size = { 80 80 }
 		fontsize = 16
 	}
-}
-
-texticon = {
-    icon = icon_mana_cost
-    iconsize = {
-        texture = "gfx/interface/icons/icon_inactive_aura.dds"
-        size = { 25 25 }
-        offset = { 0 6 }
-        fontsize = 16
-    }
 }

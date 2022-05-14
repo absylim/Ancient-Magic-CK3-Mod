@@ -5,10 +5,7 @@ glimpse_the_future_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		OR = {
-			has_enough_mana_trigger = { SPELL = glimpse_the_future_spell }
-			is_target_in_variable_list = { name = glimpse_the_future_spell_targets target = scope:spell_target }
-		}
+		can_cast_aura_trigger = { SPELL = glimpse_the_future_spell }
 	}
 	effect = {
 		if = {
@@ -17,6 +14,7 @@ glimpse_the_future_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = glimpse_the_future_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = glimpse_the_future_spell }
 		}
 	}
 }
@@ -24,7 +22,7 @@ glimpse_the_future_spell = {
 glimpse_the_future_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = glimpse_the_future_perk }
+		has_perk = glimpse_the_future_perk
 	}
 	is_valid = {
 		always = yes
@@ -57,10 +55,7 @@ financial_times_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		OR = {
-			has_enough_mana_trigger = { SPELL = financial_times_spell }
-			is_target_in_variable_list = { name = financial_times_spell_targets target = scope:spell_target }
-		}
+		can_cast_aura_trigger = { SPELL = financial_times_spell }
 	}
 	effect = {
 		if = {
@@ -69,6 +64,7 @@ financial_times_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = financial_times_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = financial_times_spell }
 		}
 	}
 }
@@ -76,7 +72,7 @@ financial_times_spell = {
 financial_times_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = financial_times_perk }
+		has_perk = financial_times_perk
 	}
 	is_valid = {
 		always = yes
@@ -109,10 +105,7 @@ celerity_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		OR = {
-			has_enough_mana_trigger = { SPELL = celerity_spell }
-			is_target_in_variable_list = { name = celerity_spell_targets target = scope:spell_target }
-		}
+		can_cast_aura_trigger = { SPELL = celerity_spell }
 	}
 	effect = {
 		if = {
@@ -121,6 +114,7 @@ celerity_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = celerity_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = celerity_spell }
 		}
 	}
 }
@@ -128,7 +122,7 @@ celerity_spell = {
 celerity_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = celerity_perk }
+		has_perk = celerity_perk
 	}
 	is_valid = {
 		always = yes
@@ -161,10 +155,7 @@ mass_celerity_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		OR = {
-			has_enough_mana_trigger = { SPELL = mass_celerity_spell }
-			is_target_in_variable_list = { name = mass_celerity_spell_targets target = scope:spell_target }
-		}
+		can_cast_aura_trigger = { SPELL = mass_celerity_spell }
 	}
 	effect = {
 		if = {
@@ -173,6 +164,7 @@ mass_celerity_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = mass_celerity_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = mass_celerity_spell }
 		}
 	}
 }
@@ -180,7 +172,7 @@ mass_celerity_spell = {
 mass_celerity_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = mass_celerity_perk }
+		has_perk = mass_celerity_perk
 	}
 	is_valid = {
 		always = yes
@@ -226,10 +218,7 @@ slowness_spell = {
 		NOT = { this = scope:spell_target }
 	}
 	is_valid = {
-		OR = {
-			has_enough_mana_trigger = { SPELL = slowness_spell }
-			is_target_in_variable_list = { name = slowness_spell_targets target = scope:spell_target }
-		}
+		can_cast_aura_trigger = { SPELL = slowness_spell }
 	}
 	effect = {
 		if = {
@@ -238,6 +227,7 @@ slowness_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = slowness_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = slowness_spell }
 		}
 	}
 }
@@ -245,7 +235,7 @@ slowness_spell = {
 slowness_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = slowness_perk }
+		has_perk = slowness_perk
 	}
 	is_valid = {
 		always = yes
@@ -291,10 +281,7 @@ mass_slowness_spell = {
 		NOT = { this = scope:spell_target }
 	}
 	is_valid = {
-		OR = {
-			has_enough_mana_trigger = { SPELL = mass_slowness_spell }
-			is_target_in_variable_list = { name = mass_slowness_spell_targets target = scope:spell_target }
-		}
+		can_cast_aura_trigger = { SPELL = mass_slowness_spell }
 	}
 	effect = {
 		if = {
@@ -303,6 +290,7 @@ mass_slowness_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = mass_slowness_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = mass_slowness_spell }
 		}
 	}
 }
@@ -310,7 +298,7 @@ mass_slowness_spell = {
 mass_slowness_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = mass_slowness_perk }
+		has_perk = mass_slowness_perk
 	}
 	is_valid = {
 		always = yes
@@ -343,10 +331,7 @@ temporal_manipulation_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		OR = {
-			has_enough_mana_trigger = { SPELL = temporal_manipulation_spell }
-			is_target_in_variable_list = { name = temporal_manipulation_spell_targets target = scope:spell_target }
-		}
+		can_cast_aura_trigger = { SPELL = temporal_manipulation_spell }
 	}
 	effect = {
 		if = {
@@ -355,6 +340,7 @@ temporal_manipulation_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = temporal_manipulation_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = temporal_manipulation_spell }
 		}
 	}
 }
@@ -362,7 +348,7 @@ temporal_manipulation_spell = {
 temporal_manipulation_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = temporal_manipulation_perk }
+		has_perk = temporal_manipulation_perk
 	}
 	is_valid = {
 		always = yes
@@ -395,10 +381,7 @@ haste_spell = {
 		this = scope:spell_target
 	}
 	is_valid = {
-		OR = {
-			has_enough_mana_trigger = { SPELL = haste_spell }
-			is_target_in_variable_list = { name = haste_spell_targets target = scope:spell_target }
-		}
+		can_cast_aura_trigger = { SPELL = haste_spell }
 	}
 	effect = {
 		if = {
@@ -407,6 +390,7 @@ haste_spell = {
 		}
 		else = {
 			start_aura_effect = { SPELL = haste_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = haste_spell }
 		}
 	}
 }
@@ -414,7 +398,7 @@ haste_spell = {
 haste_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = temporal_manipulation_perk }
+		has_perk = temporal_manipulation_perk
 	}
 	is_valid = {
 		always = yes
@@ -459,10 +443,7 @@ master_of_time_spell = {
 		}
 	}
 	is_valid = {
-		OR = {
-			has_enough_mana_trigger = { SPELL = master_of_time_spell }
-			is_target_in_variable_list = { name = master_of_time_spell_targets target = scope:spell_target }
-		}
+		can_cast_aura_trigger = { SPELL = master_of_time_spell }
 	}
 	effect = {
 		if = {
@@ -479,9 +460,7 @@ master_of_time_spell = {
 			save_temporary_scope_value_as = { name = spell_cost value = master_of_time_spell_cost }
 			add_to_variable_list = { name = master_of_time_spell_targets target = scope:spell_target }
 			scope:spell_target = { add_trait = immortal }
-			change_mana_with_tooltip = { VALUE = master_of_time_spell_cost.neg }
-			change_mana_gen_tooltip = { VALUE = master_of_time_spell_gen_cost_individual.neg }
-			change_mage_xp = { VALUE = master_of_time_spell_cost.abs }
+			pay_aura_cost_and_get_xp_effect = { SPELL = master_of_time_spell }
 			mod_bit = { MASK = aura_mask_0 BIT = master_of_time_spell_aura_bit OP = set }
 		}
 	}
@@ -490,7 +469,7 @@ master_of_time_spell = {
 master_of_time_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = master_of_time_perk }
+		has_perk = master_of_time_perk
 	}
 	is_valid = {
 		always = yes

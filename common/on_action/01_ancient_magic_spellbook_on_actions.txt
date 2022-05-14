@@ -1,0 +1,27 @@
+﻿update_all_auras_for_character = {
+	trigger = {
+		has_any_spell_aura_targets_trigger = yes
+	}
+
+	effect = {
+		update_aura_effect = { SPELL = glimpse_the_future_spell }
+		update_aura_effect = { SPELL = financial_times_spell }
+		update_aura_effect = { SPELL = celerity_spell }
+		update_aura_effect = { SPELL = mass_celerity_spell }
+		update_aura_effect = { SPELL = slowness_spell }
+		update_aura_effect = { SPELL = mass_slowness_spell }
+		update_aura_effect = { SPELL = temporal_manipulation_spell }
+		update_aura_effect = { SPELL = haste_spell }
+		update_aura_effect = { SPELL = flame_aura_spell }
+		update_aura_effect = { SPELL = flaming_weapons_spell }
+		update_aura_effect = { SPELL = living_earthworks_spell }
+		update_aura_effect = { SPELL = control_water_spell }
+		update_aura_effect = { SPELL = drought_spell }
+		update_aura_effect = { SPELL = elemental_warrior_spell }
+		update_aura_effect = { SPELL = aura_of_death_spell }
+		update_aura_effect = { SPELL = blight_spell }
+		update_aura_effect = { SPELL = beguiling_aura_spell }
+		update_aura_effect = { SPELL = enchanting_aura_spell }
+		update_aura_effect = { SPELL = glimpse_the_future_spell }
+	}
+}

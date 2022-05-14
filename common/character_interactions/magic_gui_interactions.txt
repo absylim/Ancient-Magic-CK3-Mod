@@ -17,8 +17,7 @@
 		scope:actor = {
 			AND = {
 				exists = var:mana
-				exists = var:max_mana
-				var:mana.compare_value = var:max_mana.compare_value
+				var:mana.compare_value = ancient_magic_max_mana
 			}
 		}
 	}

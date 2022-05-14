@@ -1,4 +1,4 @@
-﻿monthly_ancient_magic_lifestyle_xp_gain_mult = {
+﻿monthly_arcane_lifestyle_xp_gain_mult = {
 	decimals = 0
 	percent = yes
 }

@@ -6,19 +6,46 @@ ancient_magic_rituals_events.001 = { #Forge soul
 		
 	option = {
 		trigger = {
-			var:mana >= var:soul_materialisation_mana_cost
-			exists = mage_level
+			var:mana >= soul_materialisation_mana_cost
 		}
 		name = ancient_magic_rituals_events.001.a
 		
-		change_mana = { VALUE = var:soul_materialisation_mana_cost }
+		change_mana = { VALUE = soul_materialisation_mana_cost.neg }
 		
-		random_list = {
-			50 = {
-				modifier = {add = {value = mage_level subtract = 15}} # mage level 15 is minimum for tipping to succcess
+		duel = {
+			value = mage_level
+			
+			50 = { #Success
+				desc = ancient_magic_rituals_events.001.a.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.5
+				}
+				min = -49
+				
+				trigger_event = ancient_magic_rituals_events.002
 			}
-			50 = {
-				modifier = {add = {value = 15 subtract = mage_level}}
+			
+			50 = { #Failure
+				desc = ancient_magic_rituals_events.001.a.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = {
+						if = {
+							limit = {
+								scope:duel_value > 10
+							}
+							value = -1.5
+						}
+						else = {
+							value = 500
+						}
+					}
+				}
+				
+				min = -49
+				
+				trigger_event = ancient_magic_rituals_events.003
 			}
 		}
 		

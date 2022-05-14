@@ -2,7 +2,7 @@
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:mass_celerity_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = mass_celerity_spell }
 		has_perk = mass_celerity_perk
 	}
 	
@@ -16,7 +16,7 @@
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:mass_celerity_spell_cost }
+			change_mana = { VALUE = mass_celerity_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -54,7 +54,7 @@
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -65,7 +65,7 @@
 		modifier = {
 			add = 50
 			has_character_modifier = mass_celerity_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }
@@ -74,7 +74,7 @@ glimpse_the_future_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:glimpse_the_future_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = glimpse_the_future_spell }
 		has_perk = glimpse_the_future_perk
 	}
 	
@@ -88,7 +88,7 @@ glimpse_the_future_ai_spell_decision = {
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:glimpse_the_future_spell_cost }
+			change_mana = { VALUE = glimpse_the_future_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -127,7 +127,7 @@ glimpse_the_future_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -139,7 +139,7 @@ glimpse_the_future_ai_spell_decision = {
 			add = 50
 			AND = {
 				has_character_modifier = glimpse_the_future_spell_modifier
-				var:mana_gen <= 0
+				ancient_magic_max_mana <= 0
 			}
 		}
 	}
@@ -149,7 +149,7 @@ financial_times_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:financial_times_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = financial_times_spell }
 		has_perk = financial_times_perk
 	}
 	
@@ -163,7 +163,7 @@ financial_times_ai_spell_decision = {
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:financial_times_spell_cost }
+			change_mana = { VALUE = financial_times_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -206,7 +206,7 @@ financial_times_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -217,7 +217,7 @@ financial_times_ai_spell_decision = {
 		modifier = {
 			add = 50
 			has_character_modifier = financial_times_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }
@@ -226,7 +226,7 @@ celerity_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:celerity_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = celerity_spell }
 		has_perk = celerity_perk
 	}
 	
@@ -240,7 +240,7 @@ celerity_ai_spell_decision = {
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:celerity_spell_cost }
+			change_mana = { VALUE = celerity_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -283,7 +283,7 @@ celerity_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -294,7 +294,7 @@ celerity_ai_spell_decision = {
 		modifier = {
 			add = 50
 			has_character_modifier = celerity_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }
@@ -303,7 +303,7 @@ temporal_manipulation_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:temporal_manipulation_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = temporal_manipulation_spell }
 		has_perk = temporal_manipulation_perk
 	}
 	
@@ -317,7 +317,7 @@ temporal_manipulation_ai_spell_decision = {
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:temporal_manipulation_spell_cost }
+			change_mana = { VALUE = temporal_manipulation_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -30 }
 
@@ -356,7 +356,7 @@ temporal_manipulation_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -367,7 +367,7 @@ temporal_manipulation_ai_spell_decision = {
 		modifier = {
 			add = 50
 			has_character_modifier = temporal_manipulation_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }

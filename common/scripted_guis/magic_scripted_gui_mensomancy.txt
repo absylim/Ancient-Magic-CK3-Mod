@@ -32,7 +32,7 @@ entrance_spell = {
 entrance_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = entrance_perk }
+		has_perk = entrance_perk
 	}
 	is_valid = {
 		always = yes
@@ -80,7 +80,7 @@ incite_lust_spell = {
 incite_lust_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = incite_lust_perk }
+		has_perk = incite_lust_perk
 	}
 	is_valid = {
 		always = yes
@@ -134,7 +134,7 @@ incite_obedience_spell = {
 incite_obedience_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = incite_obedience_perk }
+		has_perk = incite_obedience_perk
 	}
 	is_valid = {
 		always = yes
@@ -189,7 +189,7 @@ dominate_spell = {
 dominate_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = dominate_perk }
+		has_perk = dominate_perk
 	}
 	is_valid = {
 		always = yes
@@ -222,7 +222,7 @@ beguiling_aura_spell = { # aura of majesty
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = beguiling_aura_spell }
+		can_cast_aura_trigger = { SPELL = beguiling_aura_spell }
 	}
 	effect = {
 		if = {
@@ -231,6 +231,7 @@ beguiling_aura_spell = { # aura of majesty
 		}
 		else = {
 			start_aura_effect = { SPELL = beguiling_aura_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = beguiling_aura_spell }
 		}
 	}
 }
@@ -238,7 +239,7 @@ beguiling_aura_spell = { # aura of majesty
 beguiling_aura_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = beguiling_aura_perk }
+		has_perk = beguiling_aura_perk
 	}
 	is_valid = {
 		always = yes
@@ -286,7 +287,7 @@ friendship_spell = {
 friendship_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = friendship_perk }
+		has_perk = friendship_perk
 	}
 	is_valid = {
 		always = yes
@@ -334,7 +335,7 @@ rivalry_spell = {
 rivalry_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = friendship_perk }
+		has_perk = friendship_perk
 	}
 	is_valid = {
 		always = yes
@@ -367,7 +368,7 @@ enchanting_aura_spell = { # aura of truth
 		this = scope:spell_target
 	}
 	is_valid = {
-		has_enough_mana_trigger = { SPELL = enchanting_aura_spell }
+		can_cast_aura_trigger = { SPELL = enchanting_aura_spell }
 	}
 	effect = {
 		if = {
@@ -376,6 +377,7 @@ enchanting_aura_spell = { # aura of truth
 		}
 		else = {
 			start_aura_effect = { SPELL = enchanting_aura_spell }
+			pay_aura_cost_and_get_xp_effect = { SPELL = enchanting_aura_spell }
 		}
 	}
 }
@@ -383,7 +385,7 @@ enchanting_aura_spell = { # aura of truth
 enchanting_aura_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = enchanting_aura_perk }
+		has_perk = enchanting_aura_perk
 	}
 	is_valid = {
 		always = yes
@@ -434,7 +436,7 @@ sculpt_mind_spell = {
 sculpt_mind_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = master_of_puppets_perk }
+		has_perk = master_of_puppets_perk
 	}
 	is_valid = {
 		always = yes
@@ -488,7 +490,7 @@ master_of_puppets_spell = {
 master_of_puppets_spell_spellbook = {
 	scope = character
 	is_shown = {
-		has_perk_trigger = { PERK = master_of_puppets_perk }
+		has_perk = master_of_puppets_perk
 	}
 	is_valid = {
 		always = yes

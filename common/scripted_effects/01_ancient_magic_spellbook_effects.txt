@@ -1,0 +1,861 @@
+﻿effect_open_magic_window = {
+	scope:actor = {
+		set_variable = {
+			name = repeat_spell
+			value = 1
+		}
+		set_variable = {
+			name = spell_target
+			value = scope:recipient
+		}
+		set_variable = {
+			name = list_option
+			value = flag:none
+		}
+		set_variable = {
+			name = army_stacks
+			value = mage_level
+		}
+		set_post_spell_actor = yes
+		effect_get_all_possible_candidates = yes
+		effect_get_all_minor_illnesses = yes
+		effect_get_all_major_or_below_illnesses = yes
+		effect_get_all_critical_or_below_illnesses = yes
+		effect_get_all_rewrite_beauty_traits = yes
+		effect_get_all_rewrite_physique_traits = yes
+		effect_get_all_rewrite_intellect_traits = yes
+		effect_get_all_sculpt_flesh_traits = yes
+		effect_get_all_sculpt_mind_traits = yes
+		effect_get_all_fertility_control_options = yes
+		set_variable = {
+			name = window_magic_view
+			value = 1
+		}
+	}
+}
+
+effect_close_magic_window = {
+	remove_variable = window_magic_view
+	remove_variable = repeat_spell
+	remove_variable = spell_target
+	remove_variable = army_stacks
+	unset_post_spell_actor = yes
+	clear_variable_list = spell_candidates
+	clear_variable_list = rewrite_beauty_spell_list
+	clear_variable_list = rewrite_physique_spell_list
+	clear_variable_list = rewrite_intellect_spell_list
+	clear_variable_list = sculpter_of_flesh_spell_list
+	clear_variable_list = sculpt_mind_spell_list
+	clear_variable_list = fertility_control_spell_list
+	if = {
+		limit = { has_variable_list = selected_list_options }
+		clear_variable_list = selected_list_options
+	}
+}
+
+effect_get_all_possible_candidates = {
+	add_to_variable_list = {
+		name = spell_candidates
+		target = scope:actor
+	}
+	every_independent_ruler = {
+		limit = { in_diplomatic_range = scope:actor character_is_realm_neighbor = scope:actor }
+		save_scope_as = add_ruler
+		scope:actor = {
+			add_to_variable_list = {
+				name = spell_candidates
+				target = scope:add_ruler
+			}
+		}
+	}
+	if = {
+		limit = { is_independent_ruler = no }
+		liege = {
+			every_vassal = {
+				limit = { NOT = { this = scope:actor } }
+				save_scope_as = add_vassal
+				scope:actor = {
+					add_to_variable_list = {
+						name = spell_candidates
+						target = scope:add_vassal
+					}
+				}
+			}
+		}
+	}
+	every_vassal = {
+		save_scope_as = add_vassal
+		scope:actor = {
+			add_to_variable_list = {
+				name = spell_candidates
+				target = scope:add_vassal
+			}
+		}
+	}
+	every_courtier = {
+		save_scope_as = add_courtier
+		scope:actor = {
+			add_to_variable_list = {
+				name = spell_candidates
+				target = scope:add_courtier
+			}
+		}
+	}
+	if = {
+		limit = { scope:actor = { has_variable = slowness_target } }
+		add_to_variable_list = {
+			name = spell_candidates
+			target = scope:actor.var:slowness_target
+		}
+	}
+	if = {
+		limit = { scope:actor = { has_variable = mass_slowness_target } }
+		add_to_variable_list = {
+			name = spell_candidates
+			target = scope:actor.var:mass_slowness_target
+		}
+	}
+}
+
+display_aura_times = {
+	custom_description_no_bullet = {
+		text = display_aura_times_loc
+		value = $VALUE$
+	}
+}
+
+effect_get_all_minor_illnesses = {
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:infirm
+	}
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:wounded_1
+	}
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:lovers_pox
+	}
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:early_great_pox
+	}
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:ill
+	}
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:sickly
+	}
+	add_to_variable_list = {
+		name = heal_spell_list
+		target = flag:smallpox
+	}
+}
+
+effect_get_all_major_or_below_illnesses = {
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:scarred
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:typhus
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:consumption
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:gout_ridden
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:maimed
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:wounded_2
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:leper
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:great_pox
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:pneumonic
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:infirm
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:wounded_1
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:lovers_pox
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:early_great_pox
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:ill
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:sickly
+	}
+	add_to_variable_list = {
+		name = greater_heal_spell_list
+		target = flag:smallpox
+	}
+}
+
+effect_get_all_critical_or_below_illnesses = {
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:incapable
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:blind
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:eunuch
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:disfigured
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:one_legged
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:one_eyed
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:wounded_3
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:cancer
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:bubonic_plague
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:scarred
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:typhus
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:consumption
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:gout_ridden
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:maimed
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:wounded_2
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:leper
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:great_pox
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:pneumonic
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:infirm
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:wounded_1
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:lovers_pox
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:early_great_pox
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:ill
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:sickly
+	}
+	add_to_variable_list = {
+		name = avatar_of_life_spell_list
+		target = flag:smallpox
+	}
+}
+
+effect_get_all_rewrite_beauty_traits = {
+	if = {
+		limit = { is_itpp_installed_trigger = yes }
+		add_to_variable_list = {
+			name = rewrite_beauty_spell_list
+			target = flag:beauty_good_5
+		}
+		add_to_variable_list = {
+			name = rewrite_beauty_spell_list
+			target = flag:beauty_good_4
+		}
+	}
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_good_3
+	}
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_good_2
+	}
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_good_1
+	}
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_none
+	}
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_bad_1
+	}
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_bad_2
+	}
+	add_to_variable_list = {
+		name = rewrite_beauty_spell_list
+		target = flag:beauty_bad_3
+	}
+	if = {
+		limit = { is_itpp_installed_trigger = yes }
+		add_to_variable_list = {
+			name = rewrite_beauty_spell_list
+			target = flag:beauty_bad_4
+		}
+		add_to_variable_list = {
+			name = rewrite_beauty_spell_list
+			target = flag:beauty_bad_5
+		}
+	}
+}
+
+effect_get_all_rewrite_physique_traits = {
+	if = {
+		limit = { is_itpp_installed_trigger = yes }
+		add_to_variable_list = {
+			name = rewrite_physique_spell_list
+			target = flag:physique_good_5
+		}
+		add_to_variable_list = {
+			name = rewrite_physique_spell_list
+			target = flag:physique_good_4
+		}
+	}
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_good_3
+	}
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_good_2
+	}
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_good_1
+	}
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_none
+	}
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_bad_1
+	}
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_bad_2
+	}
+	add_to_variable_list = {
+		name = rewrite_physique_spell_list
+		target = flag:physique_bad_3
+	}
+	if = {
+		limit = { is_itpp_installed_trigger = yes }
+		add_to_variable_list = {
+			name = rewrite_physique_spell_list
+			target = flag:physique_bad_4
+		}
+		add_to_variable_list = {
+			name = rewrite_physique_spell_list
+			target = flag:physique_bad_5
+		}
+	}
+}
+
+effect_get_all_rewrite_intellect_traits = {
+	if = {
+		limit = { is_itpp_installed_trigger = yes }
+		add_to_variable_list = {
+			name = rewrite_intellect_spell_list
+			target = flag:intellect_good_5
+		}
+		add_to_variable_list = {
+			name = rewrite_intellect_spell_list
+			target = flag:intellect_good_4
+		}
+	}
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_good_3
+	}
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_good_2
+	}
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_good_1
+	}
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_none
+	}
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_bad_1
+	}
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_bad_2
+	}
+	add_to_variable_list = {
+		name = rewrite_intellect_spell_list
+		target = flag:intellect_bad_3
+	}
+	if = {
+		limit = { is_itpp_installed_trigger = yes }
+		add_to_variable_list = {
+			name = rewrite_intellect_spell_list
+			target = flag:intellect_bad_4
+		}
+		add_to_variable_list = {
+			name = rewrite_intellect_spell_list
+			target = flag:intellect_bad_5
+		}
+	}
+}
+
+effect_get_all_sculpt_flesh_traits = {
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:fecund
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:infertile
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:strong
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:weak
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:spindly
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:giant
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:dwarf
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:albino
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:clubfooted
+	}
+	if = {
+		limit = { is_pih_installed_trigger = yes }
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:surefooted
+		}
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:hunchbacked
+	}
+	if = {
+		limit = { is_pih_installed_trigger = yes }
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:regal_bearing
+		}
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:lisping
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:scaly
+	}
+	if = {
+		limit = { is_pih_installed_trigger = yes }
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:glowing
+		}
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:wheezing
+	}
+	if = {
+		limit = { is_pih_installed_trigger = yes }
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:hardy_lung
+		}
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:bleeder
+	}
+	if = {
+		limit = { is_pih_installed_trigger = yes }
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:pt_balanced_humors
+		}
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:nearsighted
+		}
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:hawkeyed
+		}
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:deaf
+		}
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:keen-eared
+		}
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:permanent_scowl
+		}
+		add_to_variable_list = {
+			name = sculpter_of_flesh_spell_list
+			target = flag:friendly_face
+		}
+	}
+}
+
+effect_get_all_sculpt_mind_traits = {
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:lustful
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:chaste
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:gluttonous
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:temperate
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:greedy
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:generous
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:lazy
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:diligent
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:wrathful
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:calm
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:impatient
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:patient
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:arrogant
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:humble
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:deceitful
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:honest
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:craven
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:brave
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:shy
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:gregarious
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:ambitious
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:content
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:arbitrary
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:just
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:cynical
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:zealous
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:paranoid
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:trusting
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:callous
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:sadistic
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:compassionate
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:vengeful
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:forgiving
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:fickle
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:stubborn
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:shrewd
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:dull
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:stuttering
+	}
+	if = {
+		limit = { is_pih_installed_trigger = yes }
+		add_to_variable_list = {
+			name = sculpt_mind_spell_list
+			target = flag:silver_tongued
+		}
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:depressed_genetic
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:possessed_genetic
+	}
+	add_to_variable_list = {
+		name = sculpt_mind_spell_list
+		target = flag:lunatic_genetic
+	}
+	if = {
+		limit = { is_pih_installed_trigger = yes }
+		add_to_variable_list = {
+			name = sculpt_mind_spell_list
+			target = flag:dyslexic
+		}
+		add_to_variable_list = {
+			name = sculpt_mind_spell_list
+			target = flag:hyperlexic
+		}
+		add_to_variable_list = {
+			name = sculpt_mind_spell_list
+			target = flag:dyscalculic
+		}
+		add_to_variable_list = {
+			name = sculpt_mind_spell_list
+			target = flag:hypercalculic
+		}
+	}
+}
+
+effect_get_all_fertility_control_options = {
+	add_to_variable_list = {
+		name = fertility_control_spell_list
+		target = flag:inc_fertility
+	}
+	add_to_variable_list = {
+		name = fertility_control_spell_list
+		target = flag:dec_fertility
+	}
+}
+
+set_post_spell_actor = {
+	if = {
+		limit = {
+			OR = {
+				NOT = { has_global_variable_list = post_spell_actors }
+				NOT = { any_in_global_list = { variable = post_spell_actors count > 0 number_of_traits = 0 } }
+			}
+		}
+		create_post_spell_actor = yes
+	}
+	random_in_global_list = {
+		variable = post_spell_actors
+		limit = { number_of_traits = 0 }
+		save_temporary_scope_as = post_spell_actor
+	}
+	set_variable = { name = post_spell_actor value = scope:post_spell_actor }
+	if = {
+		limit = { exists = var:post_spell_actor }
+		var:post_spell_actor = { copy_traits = scope:recipient }
+	}
+}
+
+create_post_spell_actor = {
+	create_character = {
+		age = 18
+		gender = scope:recipient
+		random_traits = no
+		location = scope:recipient.capital_province
+		faith = scope:recipient.faith
+		culture = scope:recipient.culture
+		dynasty = none
+		martial = 0
+		diplomacy = 0
+		intrigue = 0
+		stewardship = 0
+		learning = 0
+		save_scope_as = new_post_spell_actor
+		after_creation = {
+			death = natural
+			make_unprunable = yes
+			clear_traits = yes
+			add_to_global_variable_list = {
+				name = post_spell_actors
+				target = this
+			}
+		}
+	}
+}
+
+unset_post_spell_actor = {
+	var:post_spell_actor = { clear_traits = yes }
+	remove_variable = post_spell_actor
+}

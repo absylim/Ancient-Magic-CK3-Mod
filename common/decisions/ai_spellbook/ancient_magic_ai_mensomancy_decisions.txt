@@ -2,7 +2,7 @@
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:beguiling_aura_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = beguiling_aura_spell }
 		has_perk = beguiling_aura_perk
 	}
 	
@@ -16,7 +16,7 @@
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:beguiling_aura_spell_cost }
+			change_mana = { VALUE = beguiling_aura_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -15 }
 
@@ -54,7 +54,7 @@
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -65,7 +65,7 @@
 		modifier = {
 			add = 50
 			has_character_modifier = beguiling_aura_spell_modifier
-			var:mana_gen <= 0
+			ancient_magic_max_mana <= 0
 		}
 	}
 }
@@ -74,7 +74,7 @@ enchanting_aura_ai_spell_decision = {
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
-		var:mana.compare_value >= var:enchanting_aura_spell_cost.compare_value
+		has_enough_mana_trigger = { SPELL = enchanting_aura_spell }
 		has_perk = enchanting_aura_perk
 	}
 	
@@ -88,7 +88,7 @@ enchanting_aura_ai_spell_decision = {
 				}
 			}
 
-			deduct_mana_with_tooltip = { VALUE = var:enchanting_aura_spell_cost }
+			change_mana = { VALUE = enchanting_aura_spell_cost.neg }
 
 			change_mana_gen = { VALUE = -30 }
 
@@ -127,7 +127,7 @@ enchanting_aura_ai_spell_decision = {
 			
 		modifier = {
 			factor = 0
-			var:mana_gen < 15
+			ancient_magic_max_mana < 15
 		}
 		
 		modifier = {
@@ -139,7 +139,7 @@ enchanting_aura_ai_spell_decision = {
 			add = 50
 			AND = {
 				has_character_modifier = enchanting_aura_spell_modifier
-				var:mana_gen <= 0
+				ancient_magic_max_mana <= 0
 			}
 		}
 	}

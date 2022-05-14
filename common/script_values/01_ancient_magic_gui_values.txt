@@ -4,8 +4,8 @@ basic_bg_pos_y = { value = 0 multiply = 1080 }
 chronomancy_bg_pos_x = { value = -0.2 multiply = 1920 }
 chronomancy_bg_pos_y = { value = -0.15 multiply = 1080 }
 
-life_bg_pos_x = { value = 0.0 multiply = 1920 }
-life_bg_pos_y = { value = -0.3 multiply = 1080 }
+chiromancy_bg_pos_x = { value = 0.0 multiply = 1920 }
+chiromancy_bg_pos_y = { value = -0.3 multiply = 1080 }
 
 elomancy_bg_pos_x = { value = 0.2 multiply = 1920 }
 elomancy_bg_pos_y = { value = 0.15 multiply = 1080 }
@@ -21,7 +21,7 @@ mensomancy_bg_pos_y = { value = -0.15 multiply = 1080 }
 
 basic_bg_frame = 1
 chronomancy_bg_frame = 2
-life_bg_frame = 3
+chiromancy_bg_frame = 3
 elomancy_bg_frame = 4
 necromancy_bg_frame = 5
 biomancy_bg_frame = 6
