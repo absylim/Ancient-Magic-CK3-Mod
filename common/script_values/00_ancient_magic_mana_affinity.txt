@@ -58,7 +58,6 @@ mana_affinity = {
 		add = {
 			value = dragonic_bloodline_affinity_boost
 			desc = MANA_AFFINITY_DRAGONIC_BLOODLINE
-			format = "BASE_VALUE_FORMAT"
 		}
 	}
 	else_if = {
@@ -66,9 +65,8 @@ mana_affinity = {
 			has_trait = antler_bloodline
 		}
 		add = {
-			value = antler_bloodlie_affinity_boost
+			value = antler_bloodline_affinity_boost
 			desc = MANA_AFFINITY_ANTLER_BLOODLINE
-			format = "BASE_VALUE_FORMAT"
 		}
 	}
 	else_if = {
@@ -78,11 +76,10 @@ mana_affinity = {
 		add = {
 			value = giant_bloodline_affinity_boost
 			desc = MANA_AFFINITY_GIANT_BLOODLINE
-			format = "BASE_VALUE_FORMAT"
 		}
 	}
 
-¨	#infused blood
+	#infused blood
 	if = {
 		limit = {
 			has_trait = infused_magical_blood_compatible
@@ -90,7 +87,6 @@ mana_affinity = {
 		add = {
 			value = 3
 			desc = MANA_AFFINITY_INFUSED_BLOOD
-			format = "BASE_VALUE_FORMAT"
 		}
 	}
 	else_if = {
@@ -100,7 +96,6 @@ mana_affinity = {
 		add = {
 			value = 1
 			desc = MANA_AFFINITY_INFUSED_BLOOD
-			format = "BASE_VALUE_FORMAT"
 		}
 	}
 }
