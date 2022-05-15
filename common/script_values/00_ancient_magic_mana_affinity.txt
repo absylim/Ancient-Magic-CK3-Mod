@@ -17,13 +17,20 @@
 mana_affinity = {
 	value = 0
 	
-	if = {
-		limit = {
-			has_variable = base_mana_affinity
+	add = {
+		if = { # Checks if the character has base value varibale if not give 0
+			limit = {
+				has_variable = base_mana_affinity
+			}
+			value = var:base_mana_affinity
 		}
-		add = var:base_mana_affinity
+		else = {
+			value = 0
+		}
+		desc = MANA_AFFINITY_BASE
+		format = "BASE_VALUE_FORMAT"
 	}
-	
+
 }
 
 base_mana_affinity_bonus = { #Script value that gives out bonus to base mana affinity

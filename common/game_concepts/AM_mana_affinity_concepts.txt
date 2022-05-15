@@ -1,0 +1,4 @@
+﻿mana_affinity = {
+	texture = "gfx/interface/icons/icon_mana_affinity.dds"
+	alias = { mana_affinity_i }
+}
