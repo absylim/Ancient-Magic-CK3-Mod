@@ -6,13 +6,20 @@
 # Affinity levels:
 ###################
 # 0 - 5: mortal (mundane being with near no magical talents: normal humans, animals)
+mundane_mana_affinity_level = 5
 # 5 - 10: sub-magical (Beings that sometimes have some nutural born magical abbilities: Sorcerers, sub-magical beasts)
+sub_magical_mana_affinity_level = 10
 # 10 - 15: magical (Beings born with some megical talents: Elves, Goblins, Megical Beasts)
+magical_mana_affinity_level = 15
 # 15 - 20: Loved by mana (High Elves)
+loved_mana_affinity_level = 20
 # 20 - 25: Demigod (Being that can control mana just like breating: Ancient Dragons, Angels, Demons and etc.)
+demigod_mana_affinity_level = 25
 # 25 - 30: Godly (ones body is nearly made out of mana)
+god_mana_affinity_level = 30
 #########################################################################################################################
 #########################################################################################################################
+
 
 mana_affinity = {
 	value = 0

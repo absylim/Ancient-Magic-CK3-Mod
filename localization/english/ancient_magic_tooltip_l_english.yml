@@ -1,3 +1,3 @@
 ﻿l_english:
  #Mana affinity
- MANA_AFFINITY_TOOLTIP:0 "#T [mana_affinity|E]: #V [CharacterWindow.GetCharacter.MakeScope.ScriptValue('mana_affinity')] #!#!\n[CharacterWindow.GetCharacter.MakeScope.GetScriptValueDesc('mana_affinity')]"
+ MANA_AFFINITY_TOOLTIP:0 "#T [mana_affinity|E]: #V [CharacterWindow.GetCharacter.MakeScope.ScriptValue('mana_affinity')] #!#weak #italic ([CharacterWindow.GetCharacter.Custom('mana_affinity_level')]) #!#!#!\n[CharacterWindow.GetCharacter.MakeScope.GetScriptValueDesc('mana_affinity')]"
