@@ -1,3 +1,7 @@
 ﻿l_english:
  #Mana affinity
  MANA_AFFINITY_BASE:0 "Base"
+ MANA_AFFINITY_DRAGONIC_BLOODLINE:0 "[GetTrait('dragonic_bloodline').GetName( GetNullCharacter ) |LV]"
+ MANA_AFFINITY_GIANT_BLOODLINE:0 "[GetTrait('giant_bloodline').GetName( GetNullCharacter ) |LV]"
+ MANA_AFFINITY_ANTLER_BLOODLINE:0 "[GetTrait('antler_bloodline').GetName( GetNullCharacter ) |LV]"
+ MANA_AFFINITY_INFUSED_BLOOD: "Infused Blood"

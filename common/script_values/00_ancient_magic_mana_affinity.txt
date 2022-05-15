@@ -20,6 +20,18 @@ god_mana_affinity_level = 30
 #########################################################################################################################
 #########################################################################################################################
 
+###########################
+# Affinity from Bloodlines
+###########################
+#Dragonic Bloodline -> Dragons - Descendants of ancient dragons use magic for their survival and growth
+dragonic_bloodline_affinity_boost = 7
+#Giant Bloodline -> Giants - Creatures that use mana for growth of their muscles and bodies
+giant_bloodline_affinity_boost = 2
+#Antler Bloodline -> Antlers - Mystical Deers which use mana for their defence
+antler_bloodline_affinity_boost = 4
+
+#########################################################################################################################
+#########################################################################################################################
 
 mana_affinity = {
 	value = 0
@@ -37,7 +49,60 @@ mana_affinity = {
 		desc = MANA_AFFINITY_BASE
 		format = "BASE_VALUE_FORMAT"
 	}
+	
+	#Bloodlines
+	if = {
+		limit = {
+			has_trait = dragonic_bloodline
+		}
+		add = {
+			value = dragonic_bloodline_affinity_boost
+			desc = MANA_AFFINITY_DRAGONIC_BLOODLINE
+			format = "BASE_VALUE_FORMAT"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = antler_bloodline
+		}
+		add = {
+			value = antler_bloodlie_affinity_boost
+			desc = MANA_AFFINITY_ANTLER_BLOODLINE
+			format = "BASE_VALUE_FORMAT"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = giant_bloodline
+		}
+		add = {
+			value = giant_bloodline_affinity_boost
+			desc = MANA_AFFINITY_GIANT_BLOODLINE
+			format = "BASE_VALUE_FORMAT"
+		}
+	}
 
+¨	#infused blood
+	if = {
+		limit = {
+			has_trait = infused_magical_blood_compatible
+		}
+		add = {
+			value = 3
+			desc = MANA_AFFINITY_INFUSED_BLOOD
+			format = "BASE_VALUE_FORMAT"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = infused_magical_blood_incompatible
+		}
+		add = {
+			value = 1
+			desc = MANA_AFFINITY_INFUSED_BLOOD
+			format = "BASE_VALUE_FORMAT"
+		}
+	}
 }
 
 base_mana_affinity_bonus = { #Script value that gives out bonus to base mana affinity

@@ -36,3 +36,20 @@
  trait_mage_dementia: "Magical Dementia"
  trait_mage_dementia_desc: "The human mind can only handle 200-300 years worth of memories. This character has lived so long, their mind has begun overwriting their previous existence with new memories."
  trait_mage_dementia_character_desc: "The human mind can only handle 200-300 years worth of memories. [ROOT.Char.GetNameNoTooltip] has lived so long, [ROOT.Char.GetHerHis] mind has begun overwriting their previous existence with new memories."
+
+ #bloodlines
+ trait_dragonic_bloodline: "Dragonic Bloodline"
+ trait_dragonic_bloodline_desc: "Blood of Dragons flows throu veins of this character. This character is stronger, healtier and much more attuned to mana, but also more arrogant and greedier."
+ trait_dragonic_bloodline_character_desc: "Blood of Dragons flows throu veins of [ROOT.GetCharacter.GetFirstNameNoTooltip]. [ROOT.GetCharacter.GetSheHe] is stronger, healtier and much more attuned to mana, but also more arrogant and greedier."
+ trait_antler_bloodline: "Antler Bloodline"
+ trait_antler_bloodline_desc: "Blood of Mystical Deer flows throu veins of this character. This character is more agile, healtier, better looking and more attuned to mana, but also more sociable, compasionate and also timid."
+ trait_antler_bloodline_character_desc: "Blood of Mystical Deer flows throu veins of [ROOT.GetCharacter.GetFirstNameNoTooltip]. [ROOT.GetCharacter.GetSheHe] is more agile, healtier, better looking and more attuned to mana, but also more sociable, compasionate and also timid."
+ trait_giant_bloodline: "Blood of Giants"
+ trait_giant_bloodline_desc: "Blood of Giants flows throu veins of this character. This character is much stronger, healtier and more attuned to mana, but also much more inmpatient and irrational."
+ trait_giant_bloodline_character_desc: "Blood of Giants flows throu veins of [ROOT.GetCharacter.GetFirstNameNoTooltip]. [ROOT.GetCharacter.GetSheHe] is much stronger, healtier and more attuned to mana, but also much more inmpatient and irrational."
+ trait_infused_magical_blood_compatible: "Infused Magical Blood"
+ trait_infused_magical_blood_compatible_desc: "This character infused into [ROOT.GetCharacter.GetHerselfHimself] blood of someone with higher magical aptitude to compensate for [ROOT.GetCharacter.GetHerHis] lower innate mana affinity. Fortunatly [ROOT.GetCharacter.GetSheHe] was lucky that his blood is compatible with the infused."
+ trait_infused_magical_blood_incompatible: "Infused Magical Blood"
+ trait_infused_magical_blood_incompatible_desc: "This character infused into [ROOT.GetCharacter.GetHerselfHimself] blood of someone with higher magical aptitude to compensate for [ROOT.GetCharacter.GetHerHis] lower innate mana affinity. Unfortunatly [ROOT.GetCharacter.GetSheHe] was unlucky that his blood is incompatible with the infused."
+
+ 
