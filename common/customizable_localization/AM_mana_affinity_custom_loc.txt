@@ -3,43 +3,43 @@
 
 	text = {
 		localization_key = mana_affinity_level_mundane
-		trigger = { mana_affinity < mundane_mana_affinity_level }
+		trigger = { mana_affinity <= mundane_mana_affinity_level }
 	}
 
 	text = {
 		localization_key = mana_affinity_level_sub_magical
 		trigger = {
-			mana_affinity >= mundane_mana_affinity_level
-			mana_affinity < sub_magical_mana_affinity_level
+			mana_affinity > mundane_mana_affinity_level
+			mana_affinity <= sub_magical_mana_affinity_level
 		}
 	}
 
 	text = {
 		localization_key = mana_affinity_level_magical
 		trigger = {
-			mana_affinity >= sub_magical_mana_affinity_level
-			mana_affinity < magical_mana_affinity_level
+			mana_affinity > sub_magical_mana_affinity_level
+			mana_affinity <= magical_mana_affinity_level
 		}
 	}
 
 	text = {
 		localization_key = mana_affinity_level_loved
 		trigger = {
-			mana_affinity >= magical_mana_affinity_level
-			mana_affinity < loved_mana_affinity_level
+			mana_affinity > magical_mana_affinity_level
+			mana_affinity <= loved_mana_affinity_level
 		}
 	}
 
 	text = {
 		localization_key = mana_affinity_level_demigod
 		trigger = {
-			mana_affinity >= magical_mana_affinity_level
-			mana_affinity < demigod_mana_affinity_level
+			mana_affinity > magical_mana_affinity_level
+			mana_affinity <= demigod_mana_affinity_level
 		}
 	}
 
 	text = {
 		localization_key = mana_affinity_level_god
-		trigger = { mana_affinity >= demigod_mana_affinity_level }
+		trigger = { mana_affinity > demigod_mana_affinity_level }
 	}
 }
