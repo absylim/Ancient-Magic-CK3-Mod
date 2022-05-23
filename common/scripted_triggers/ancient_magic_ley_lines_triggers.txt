@@ -17,13 +17,23 @@ is_capital_on_ley_line = {
 }
 
 is_located_on_ley_line = {
-	location = {
-		has_province_modifier = ley_line_modifier
+	if = {
+		limit = {
+			exists = location
+		}
+		location = {
+			has_province_modifier = ley_line_modifier
+		}
 	}
 }
 
 is_located_on_focal_point = {
-	location = {
-		has_province_modifier = focal_point_modifier
+	if = {
+		limit = {
+			exists = location
+		}
+		location = {
+			has_province_modifier = focal_point_modifier
+		}
 	}
 }

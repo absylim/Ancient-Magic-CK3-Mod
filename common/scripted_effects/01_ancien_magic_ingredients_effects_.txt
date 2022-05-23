@@ -200,7 +200,10 @@ create_ingredient_mana_blood_effect = {
 				}
 				add_artifact_modifier = ingredient_mana_blood_demigod_rank_affinity_modifier
 			}
-			else = {
+			else_if = {
+				limit = {
+					scope:blood_mana_affinity > demigod_mana_affinity_level
+				}
 				add_artifact_modifier = ingredient_mana_blood_god_rank_affinity_modifier
 			}
 			
