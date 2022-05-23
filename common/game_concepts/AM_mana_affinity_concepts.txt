@@ -2,3 +2,8 @@
 	texture = "gfx/interface/icons/icon_mana_affinity.dds"
 	alias = { mana_affinity_i }
 }
+
+magical_bloodline = {
+	texture = "gfx/interface/icons/icon_blood.dds"
+	alias = { magical_bloodline_i }
+}

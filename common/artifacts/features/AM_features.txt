@@ -1,0 +1,41 @@
+﻿#Author: Donekulda
+#################################################################
+###############            Mana Affinity          ###############
+#################################################################
+#Mana Blood Ranks
+
+	mana_blood_mundane_rank = {
+		group = mana_blood
+		trigger = { artifact_feature_mana_blood_mundane_trigger = yes }
+		weight = 1
+	}
+	
+	mana_blood_sub_magical_rank = {
+		group = mana_blood
+		trigger = { artifact_feature_mana_blood_sub_magical_trigger = yes }
+		weight = 1
+	}
+	
+	mana_blood_magical_rank = {
+		group = mana_blood
+		trigger = { artifact_feature_mana_blood_magical_trigger = yes }
+		weight = 1
+	}
+	
+	mana_blood_loved_rank = {
+		group = mana_blood
+		trigger = { artifact_feature_mana_blood_loved_trigger = yes }
+		weight = 1
+	}
+	
+	mana_blood_demigod_rank = {
+		group = mana_blood
+		trigger = { artifact_feature_mana_blood_demigod_trigger = yes }
+		weight = 1
+	}
+	
+	mana_blood_god_rank = {
+		group = mana_blood
+		trigger = { artifact_feature_mana_blood_god_trigger = yes }
+		weight = 1
+	}

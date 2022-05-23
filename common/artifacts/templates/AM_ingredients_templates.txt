@@ -1,0 +1,11 @@
+﻿#Autor: Donekulda
+#In this file are only ingredients used for different events
+#All ingredients must have can_equip = {always = no}
+
+mana_blood_template = { #Blood of an individual with mana affinity, this blood is collected from characters
+	can_equip = {
+		always = no
+	}
+	
+	unique = yes
+}

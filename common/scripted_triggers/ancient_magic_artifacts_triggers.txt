@@ -1,0 +1,29 @@
+﻿#Mana Blood Ranks
+artifact_feature_mana_blood_mundane_trigger = {
+	var:mana_affinity.compare_value <= mundane_mana_affinity_level
+}	
+
+artifact_feature_mana_blood_sub_magical_trigger = {
+	var:mana_affinity.compare_value <= sub_magical_mana_affinity_level
+	var:mana_affinity.compare_value > mundane_mana_affinity_level
+}	
+
+artifact_feature_mana_blood_magical_trigger = {
+	var:mana_affinity.compare_value <= magical_mana_affinity_level
+	var:mana_affinity.compare_value > sub_magical_mana_affinity_level
+}	
+
+artifact_feature_mana_blood_loved_trigger = {
+	var:mana_affinity.compare_value <= loved_mana_affinity_level
+	var:mana_affinity.compare_value > magical_mana_affinity_level
+}	
+
+artifact_feature_mana_blood_demigod_trigger = {
+	var:mana_affinity.compare_value <= demigod_mana_affinity_level
+	var:mana_affinity.compare_value > loved_mana_affinity_level
+}	
+
+artifact_feature_mana_blood_god_trigger = {
+	var:mana_affinity.compare_value <= god_mana_affinity_level
+	var:mana_affinity.compare_value > demigod_mana_affinity_level
+}	

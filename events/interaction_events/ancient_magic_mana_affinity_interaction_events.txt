@@ -1,0 +1,290 @@
+﻿#Author: Donekulda
+#Event for mana affinity character interaction
+namespace = mana_affinity_interaction
+
+# Extract blood: Accepted
+mana_affinity_interaction.0001 = {
+	type = letter_event
+	opening = {
+		desc = mana_affinity_interaction.0001.opening
+	}
+	desc = mana_affinity_interaction.0001.desc
+	sender = scope:recipient
+
+	immediate = {
+		show_as_tooltip = { ask_for_mana_blood_interaction_effect = yes }
+		scope:recipient = {
+			add_opinion = {
+				modifier = asked_for_my_blood_opinion
+				target = root
+				opinion = -10
+			}
+		}
+		scope:actor = {
+			add_opinion = {
+				modifier = gave_me_their_blood_opinion
+				target = scope:recipient
+				opinion = 20
+			}
+		}
+	}
+	
+	option = {
+		name = mana_affinity_interaction.0001.a
+	}
+}
+
+# Extract blood: Refused
+mana_affinity_interaction.0002 = {
+	type = letter_event
+	opening = {
+		desc = mana_affinity_interaction.0001.opening
+	}
+	desc = {
+		desc = mana_affinity_interaction.0100.desc
+	}
+	sender = {
+		character = scope:recipient
+		animation = dismissal
+	}
+
+	immediate = {
+		scope:recipient = {
+			add_opinion = {
+				modifier = asked_for_my_blood_opinion
+				target = root
+				opinion = -10
+			}
+		}
+	}
+	
+	#Nothing to do
+	option = {
+		name = mana_affinity_interaction.0100.a
+
+		hidden_effect = {
+			add_opinion = {
+				target = scope:recipient
+				modifier = refused_to_give_blood_opinion
+			}
+		}
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = 1
+				ai_zeal = -0.5
+			}
+		}
+	}
+
+	#Use a Hook to force it through
+	option = {
+		name = mana_affinity_interaction.0100.b
+		trigger = {
+			has_usable_hook = scope:recipient
+		}
+		use_hook = scope:recipient
+
+		ask_for_mana_blood_interaction_effect = yes
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_rationality = 1
+				ai_greed = 0.75
+			}
+		}
+	}
+}
+
+# Extract blood: Accepted under HOOK or prison
+mana_affinity_interaction.0101 = {
+	type = letter_event
+	opening = {
+		desc = char_interaction.0070.opening
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = root.house.house_head
+					scope:actor = root.house.house_head
+				}
+				desc = mana_affinity_interaction.0101.desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = liege
+					root.liege = scope:actor
+				}
+				desc = mana_affinity_interaction.0101.desc.liege
+			}
+			desc = mana_affinity_interaction.0101.desc.nochoice
+		}
+	}
+		
+	sender = scope:actor
+
+	option = {
+		name = mana_affinity_interaction.0101.a
+	}
+}
+
+######################################
+# Extract blood: Accept On Condition
+# Gold Condition
+mana_affinity_interaction.0102 = {
+	type = letter_event
+	
+	opening = {
+		desc = mana_affinity_interaction.0001.opening
+	}
+	desc = mana_affinity_interaction.0102.desc
+	sender = scope:recipient
+
+	#Accept
+	option = {
+		name = mana_affinity_interaction.0102.a
+		pay_short_term_gold = {
+			target = scope:recipient
+			gold = demand_conversion_bribe_size
+		}
+		
+		ask_for_mana_blood_interaction_effect = yes
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = -1
+				ai_zeal = 0.5
+			}
+			modifier = {
+				factor = 0.2
+				gold <= 0
+			}
+		}
+	}
+
+	#Refuse
+	option = {
+		name = mana_affinity_interaction.0102.b
+		
+		hidden_effect = {
+			add_opinion = {
+				target = scope:recipient
+				modifier = refused_to_give_blood_opinion
+				years = 5
+			}
+		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 100
+				gold < demand_conversion_bribe_size
+			}
+		}
+	}
+
+	#Use a Hook to force it through
+	option = {
+		name = mana_affinity_interaction.0102.c
+		trigger = {
+			has_strong_usable_hook = scope:recipient
+		}
+		use_hook = scope:recipient
+		
+		ask_for_mana_blood_interaction_effect = yes
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_rationality = 1
+			}
+		}
+	}
+	
+}
+
+# Hook Condition
+mana_affinity_interaction.0103 = {
+	type = letter_event
+	opening = {
+		desc = mana_affinity_interaction.0001.opening
+	}
+	desc = mana_affinity_interaction.0103.desc
+	sender = scope:recipient
+
+	immediate = {
+		scope:recipient = {
+			add_opinion = {
+				modifier = asked_for_my_blood_opinion
+				target = root
+				years = 5
+			}
+		}
+	}
+
+	#Accept
+	option = {
+		name = mana_affinity_interaction.0103.a
+		scope:recipient = {
+			if = { # Check that they don't already have a hook on root
+				limit = {
+					NOT = {
+						has_hook_of_type = {
+							target = root
+							type = favor_hook
+						}
+					}
+				}
+				add_hook = {
+					target = root
+					type = favor_hook
+				}
+			}
+		}
+		ask_for_mana_blood_interaction_effect = yes
+
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#Refuse
+	option = {
+		name = mana_affinity_interaction.0103.b
+		
+		hidden_effect = {
+			add_opinion = {
+				target = scope:recipient
+				modifier = refused_to_give_blood_opinion
+				years = 5
+			}
+		}
+
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	#Use a Hook to force it through
+	option = {
+		name = mana_affinity_interaction.0103.c
+		trigger = {
+			has_strong_usable_hook = scope:recipient
+		}
+		use_hook = scope:recipient
+		ask_for_mana_blood_interaction_effect = yes
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_rationality = 1
+			}
+		}
+	}
+}
+######################################

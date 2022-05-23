@@ -11,3 +11,38 @@
  GLOBAL_SPELL_TARGET_EFFECT: "Is targeted by a spell"
  FIRST_SPELL_TARGET_EFFECT: "You are targeted by a spell"
  THIRD_SPELL_TARGET_EFFECT: "[ROOT.Char.GetNameOrMe|U] is targeted by a spell"
+ 
+ #Mana Blood Extraction
+ ask_for_mana_blood_interaction: "Ask for Blood"
+ ask_for_mana_blood_interaction_desc: "Ask [recipient.GetFirstName|U] to give you their blood."
+ ask_for_mana_blood_decline_notification: "[recipient.GetShortUINameNoTooltip] Refused Blood Extraction"
+ SEND_GIFT_PROPOSAL: "Blood extraction"
+ ASK_FOR_BLOOD_RECIPIENTS_FAITH_WITCH_CRIME: "[recipient.GetShortUIName|U]'s [faith|E] has witchcraft [doctrine|E] criminal: $VALUE|=+0$"
+ ASK_FOR_BLOOD_RECIPIENTS_FAITH_WITCH_CRIME_IS_ZEALOUS: "[recipient.GetShortUIName|U]'s [faith|E] has witchcraft [doctrine|E] criminal and is [GetTrait('zealous').GetName( GetPlayer )|l]: $VALUE|=+0$"
+ ASK_FOR_BLOOD_DIFFERENCE_OF_BASE_MANA_AFFINITY: "Difference of innate [mana_affinity|E]: $VALUE|=+0$"
+ ASK_FOR_BLOOD_ADD_BLOODLINE: "Include [magical_bloodline|E]: $VALUE|=+0$"
+ INCLUDE_MAGICAL_BLOODLINE: "Include [magical_bloodline|E]"
+ NO_MAGICAL_BLOODLINE: "Character has no [magical_bloodline|E]"
+ 
+ mana_affinity_interaction.0101.desc: "As your House Head, I have decided that you must give up part of your blood. I am afraid you have no choice in this matter."
+ mana_affinity_interaction.0101.desc.liege: "As your liege, i demand that you give up part of your blood for the interest of your betters."
+ mana_affinity_interaction.0101.desc.nochoice: "As you have no other choice then to give up your blood, im gonna take it now."
+ mana_affinity_interaction.0101.a:0 "I suppose I must."
+ 
+ mana_affinity_interaction.0001.opening: "[recipient.Custom2('AppropriateGreeting', ROOT.Char)]"
+ mana_affinity_interaction.0001.desc:0 "I have decided to accept your request for my blood."
+ mana_affinity_interaction.0001.a:0 "You have my gratitude!"
+ 
+ mana_affinity_interaction.0002.desc:0 "My blood is too precious to be given to the likes of you!"
+ mana_affinity_interaction.0002.a:0 "I only wished to do this the easy way."
+ mana_affinity_interaction.0002.b:0 "Oh, I think you will give me exactly what I want you to."
+
+ mana_affinity_interaction.0102.desc:0 "I would gladly offer you part of my blood, but the sheer cost of recuperation and unability to perform my job perfectly...\n\nIf you were to help pay for these troubles, I am more than willing to give you part of my blood."
+ mana_affinity_interaction.0102.a:0 "You shall have it."
+ mana_affinity_interaction.0102.b:0 "I will not pay for your tained blood!"
+ mana_affinity_interaction.0102.c:0 "You will do this for something far more valuable than gold."
+
+ mana_affinity_interaction.0103.desc:0 "I see why you would want my blood, but I hope you understand what a probalematic path it is to give up considerable ammount of ones blood.\n\nPerhaps if you promised to support me in whatever way I need, the time and complications spent on recuperating would be smaller."
+ mana_affinity_interaction.0103.a:0 You shall have it.
+ mana_affinity_interaction.0103.b:0 "I will not bargain for your tained blood!"
+ mana_affinity_interaction.0103.c:0 "You have other debts to repay me, first."

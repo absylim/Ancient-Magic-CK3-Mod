@@ -50,7 +50,41 @@ mana_affinity = {
 		format = "BASE_VALUE_FORMAT"
 	}
 	
-	#Bloodlines
+	if = { #If one has Magical Bloodline add according affinity boost
+		limit = {
+			has_magical_bloodline = yes
+		}
+		add = {
+			value = mana_affinity_bloodline_boost
+		}
+	}
+
+	#infused blood
+	if = {
+		limit = {
+			has_trait = infused_magical_blood_compatible
+		}
+		add = {
+			value = 3
+			desc = MANA_AFFINITY_INFUSED_BLOOD
+			format = "FORMAT_MANA_AFFINITY_BOOST" #Custom format for mana affinity
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = infused_magical_blood_incompatible
+		}
+		add = {
+			value = 1
+			desc = MANA_AFFINITY_INFUSED_BLOOD
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+}
+
+mana_affinity_bloodline_boost = { #Bonus added to mana affinity thanks to ones Bloodline
+	value = 0
+	
 	if = {
 		limit = {
 			has_trait = dragonic_bloodline
@@ -78,28 +112,6 @@ mana_affinity = {
 		add = {
 			value = giant_bloodline_affinity_boost
 			desc = MANA_AFFINITY_GIANT_BLOODLINE
-			format = "FORMAT_MANA_AFFINITY_BOOST"
-		}
-	}
-
-	#infused blood
-	if = {
-		limit = {
-			has_trait = infused_magical_blood_compatible
-		}
-		add = {
-			value = 3
-			desc = MANA_AFFINITY_INFUSED_BLOOD
-			format = "FORMAT_MANA_AFFINITY_BOOST"
-		}
-	}
-	else_if = {
-		limit = {
-			has_trait = infused_magical_blood_incompatible
-		}
-		add = {
-			value = 1
-			desc = MANA_AFFINITY_INFUSED_BLOOD
 			format = "FORMAT_MANA_AFFINITY_BOOST"
 		}
 	}
@@ -133,7 +145,7 @@ base_mana_affinity_bonus = { #Script value that gives out bonus to base mana aff
 	}
 }
 
-mother_base_affinity = {
+mother_base_affinity = { #Script Value used in calculation of ones base mana affinity
 	value = 0
 	if = {
 		limit = {
@@ -207,9 +219,88 @@ father_base_affinity = {
 	#value = father.mana_affinity # will break if the character has no father, but this is just a temporary thing while we test the effect
 }
 
-
 max_body_mana = { #Mana Affinity affects how much can ones body hold mana
 	value = mana_affinity
 	multiply = 50
 	multiply = mage_level
+}
+
+ask_for_blood_likelihood_calculation = { #Used for character interaction to get ones blood
+	value = 100
+	add = ask_for_blood_mana_affinity_difference
+	
+	if = {
+		limit = {
+			opinion = {
+				target = scope:actor
+				value < medium_negative_opinion
+			}
+		}
+		add = -50
+	}
+	else_if = {
+		limit = {
+			opinion = {
+				target = scope:actor
+				value < neutral_opinion
+			}
+		}
+		add = -25
+	}
+	else_if = {
+		limit = {
+			opinion = {
+				target = scope:actor
+				value >= medium_positive_opinion
+			}
+		}
+		add = 50
+	}
+	else_if = {
+		limit = {
+			opinion = {
+				target = scope:actor
+				value > neutral_opinion
+			}
+		}
+		add = 25
+	}
+	
+	if = {
+		limit = {
+			scope:actor = {
+				faith  ={
+					has_doctrine = doctrine_witchcraft_crime
+				}
+				has_trait = zealous
+			}
+		}
+		add = -50
+	}
+	else_if = {
+		limit = {
+			scope:actor = {
+				faith  ={
+					has_doctrine = doctrine_witchcraft_crime
+				}
+			}
+		}
+		add = -25
+	}
+	
+	if = {
+		limit = {
+			scope:actor = {
+				has_magical_bloodline = yes
+			}
+			add = -50
+		}
+	}
+}
+
+ask_for_blood_mana_affinity_difference = {
+	value = 0
+	add = scope:actor.mana_affinity
+	subtract = mana_affinity
+	multiply = 5
 }

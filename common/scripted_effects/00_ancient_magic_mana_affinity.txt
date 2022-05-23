@@ -214,3 +214,16 @@ give_base_mana_affinity = {
 		}
 	}
 }
+
+ask_for_mana_blood_interaction_effect = {
+	if = {
+		limit = {
+			NOT = { exists = scope:bloodline }
+		}
+		save_scope_value_as = {
+			name = bloodline
+			value = no
+		}
+	}
+	create_ingredient_mana_blood_effect = { OWNER = scope:actor ORIGIN = scope:recipient DECAY = no ALLOW_BLOODLINE = scope:bloodline }
+}

@@ -1,0 +1,212 @@
+#Autor: Donekulda
+#Ingredients - Artifacts effects
+
+get_mana_blood_detailed_description_effect = {
+	$ORIGIN$ = { save_scope_as = origin }
+	
+	#If the character from whom the blood is extracted has bloodline, 
+	#then this bloodline is also added into the extracted blood if its permitted
+	if = { 
+		limit = {
+			AND = {
+				scope:origin = {
+					has_magical_bloodline = yes
+				}
+				scope:allow_bloodline = yes
+			}
+		}
+		
+		switch = {
+		  trigger = has_trait
+		  draconic_bloodline = { set_variable = { name = bloodline_var value = flag:draconic_bloodline } }
+		  antler_bloodline = { set_variable = { name = bloodline_var value = flag:antler_bloodline } }
+		  giant_bloodline = { set_variable = { name = bloodline_var value = flag:giant_bloodline } }
+		  fallback = { set_variable = bloodline_var value = flag:none }
+		}
+	
+		save_scope_value_as = {
+			name = bloodline
+			value = var:bloodline_var
+		}
+	}
+		
+	#Add mana affinity to extracted blood
+	save_scope_value_as = {
+		name = blood_mana_affinity
+		value = { 
+			value = 0
+			add = scope:origin.var:base_mana_affinity
+			
+			#will boost the mana affinity of the blood
+			add = { value = scope:origin.mana_affinity_bloodline_boost }
+		}
+		
+	}
+	
+	save_scope_value_as = {
+		name = quality
+		value = {
+			if = {
+				limit = {
+					scope:blood_mana_affinity <= mundane_mana_affinity_level
+				}
+				add = 15
+				
+			}
+			else_if = {
+				limit = {
+					AND = {
+						scope:blood_mana_affinity > mundane_mana_affinity_level
+						scope:blood_mana_affinity <= sub_magical_mana_affinity_level
+					}
+				}
+				add = 50
+			}
+			else_if = {
+				limit = {
+					AND = {
+						scope:blood_mana_affinity > sub_magical_mana_affinity_level
+						scope:blood_mana_affinity <= magical_mana_affinity_level
+					}
+				}
+				add = 75
+			}
+			else_if = {
+				limit = {
+					AND = {
+						scope:blood_mana_affinity > magical_mana_affinity_level
+						scope:blood_mana_affinity <= loved_mana_affinity_level
+					}
+				}
+				add = 100
+			}
+			else_if = {
+				limit = {
+					AND = {
+						scope:blood_mana_affinity > loved_mana_affinity_level
+						scope:blood_mana_affinity <= demigod_mana_affinity_level
+					}
+				}
+				add = 150
+			}
+			else = {
+				add = 200
+			}
+		}
+	}
+}
+
+create_ingredient_mana_blood_effect = {
+	$OWNER$ = { save_scope_as = owner }
+	$ORIGIN$ = { save_scope_as = origin }
+	save_scope_value_as = {
+		name = decay
+		value = $DECAY$
+	}
+	save_scope_value_as = {
+		name = allow_bloodline
+		value = $ALLOW_BLOODLINE$
+	}
+	
+	get_mana_blood_detailed_description_effect = { ORIGIN = $ORIGIN$ }
+	
+	hidden_effect_new_artifact = {
+		scope:owner = {
+			if = {
+				limit = { exists = scope:bloodline }
+				create_artifact = {
+					name = placeholder
+					creator = scope:origin
+					description = placeholder
+					template = mana_blood_template
+					modifier = artifact_placeholder_modifier
+					visuals = mana_blood
+					type = ingredient
+					save_scope_as = newly_created_artifact
+					quality = scope:quality
+					wealth = scope:quality
+					decaying = scope:decay
+				}
+			}
+			else  = {
+				create_artifact = {
+					name = placeholder
+					creator = scope:origin
+					description = placeholder
+					template = mana_blood_template
+					visuals = mana_blood
+					type = ingredient
+					modifier = artifact_placeholder_modifier
+					save_scope_as = newly_created_artifact
+					quality = scope:quality
+					wealth = scope:quality
+					decaying = scope:decay
+				}
+			} 
+		}
+		
+		scope:newly_created_artifact = {
+			set_artifact_name = mana_blood_ingredient_name
+			set_artifact_description = mana_blood_ingredient_desc
+			
+			set_variable = {  #Give the blood its mana affinity
+				name = mana_affinity
+				value = scope:blood_mana_affinity
+			}
+			
+			if = { #Add to extracted blood, its bloodline 
+				limit = {
+					exists = scope:bloodline
+				}
+				set_variable = {
+					name = bloodline
+					value = scope:bloodline
+				}
+			}
+			
+			if = { #Based on mana affinity rank give according modifier
+				limit = {
+					AND = {
+						scope:blood_mana_affinity > mundane_mana_affinity_level
+						scope:blood_mana_affinity <= sub_magical_mana_affinity_level
+					}
+				}
+				add_artifact_modifier = ingredient_mana_blood_sub_magical_rank_affinity_modifier
+			}
+			else_if = {
+				limit = {
+					AND = {
+						scope:blood_mana_affinity > sub_magical_mana_affinity_level
+						scope:blood_mana_affinity <= magical_mana_affinity_level
+					}
+				}
+				add_artifact_modifier = ingredient_mana_blood_magical_rank_affinity_modifier
+			}
+			else_if = {
+				limit = {
+					AND = {
+						scope:blood_mana_affinity > magical_mana_affinity_level
+						scope:blood_mana_affinity <= loved_mana_affinity_level
+					}
+				}
+				add_artifact_modifier = ingredient_mana_blood_loved_rank_affinity_modifier
+			}
+			else_if = {
+				limit = {
+					AND = {
+						scope:blood_mana_affinity > loved_mana_affinity_level
+						scope:blood_mana_affinity <= demigod_mana_affinity_level
+					}
+				}
+				add_artifact_modifier = ingredient_mana_blood_demigod_rank_affinity_modifier
+			}
+			else = {
+				add_artifact_modifier = ingredient_mana_blood_god_rank_affinity_modifier
+			}
+			
+			remove_artifact_modifier = artifact_placeholder_modifier
+			
+			set_artifact_feature_group = mana_blood
+		}
+	}
+}

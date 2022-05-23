@@ -1,0 +1,7 @@
+﻿l_english:
+#Ingredients
+ artifact_type_ingredient: "Ingredients"
+ artifact_ingredient: "Ingredient"
+ mana_blood_ingredient_name: "Blood of [origin.GetFullName]"    
+ mana_blood_ingredient_desc: "Blood extracted from [origin.GetFullName]. This bloods [mana_affinity|E] is [SCOPE.GetValue('blood_mana_affinity')] [mana_affinity_i]"
+ 
