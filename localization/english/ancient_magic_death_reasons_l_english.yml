@@ -3,3 +3,4 @@
  death_mana_devouring_1: "died from [GetTrait('mana_devouring_1').GetName( CHARACTER.Self )]"
  death_mana_devouring_2: "died from [GetTrait('mana_devouring_2').GetName( CHARACTER.Self )]"
  death_botched_soul_forging: "Died during Soul Forging"
+ death_incompatible_infused_blood: "died from badly infused blood"
