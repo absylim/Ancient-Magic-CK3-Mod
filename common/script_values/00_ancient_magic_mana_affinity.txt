@@ -33,6 +33,17 @@ antler_bloodline_affinity_boost = 4
 #########################################################################################################################
 #########################################################################################################################
 
+###########################
+# Mana Blood Compatibility
+###########################
+terrible_mana_blood_compatibility_level = 0
+average_mana_blood_compatibility_level = 25
+good_mana_blood_compatibility_level = 50
+excellent_mana_blood_compatibility_level = 75
+
+#########################################################################################################################
+#########################################################################################################################
+
 mana_affinity = {
 	value = 0
 	
@@ -303,4 +314,28 @@ ask_for_blood_mana_affinity_difference = {
 	add = scope:actor.mana_affinity
 	subtract = mana_affinity
 	multiply = 5
+}
+
+mana_blood_compatibility_with_owner = { #Compatibility of the blood with owner, the higher the higher chance of successful infusion of the blood into oneself
+	value = 15
+	if = {
+		limit = {
+			scope:creator.is_close_family_of = owner
+		}
+		add = 50
+	}
+	if = {
+	
+		limit = {
+			scope:creator.is_extended_family_of = owner
+		}
+		add = 25
+	}
+	
+	subtract = {
+		value = var:mana_affinity
+		subtract = scope:owner.var:base_mana_affinity
+		multiply = 5
+		min = 0 #Do not increase the compatibility if bloods mana affinity is lower then then owners
+	}
 }

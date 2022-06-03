@@ -216,7 +216,7 @@ give_base_mana_affinity = {
 }
 
 ask_for_mana_blood_interaction_effect = {
-	if = {
+	if = { #If the scope wasnt set, create this one as a precaution to prohibid crash of script
 		limit = {
 			NOT = { exists = scope:bloodline }
 		}

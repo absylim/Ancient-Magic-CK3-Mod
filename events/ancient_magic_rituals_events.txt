@@ -12,43 +12,28 @@ ancient_magic_rituals_events.001 = { #Forge soul
 		
 		change_mana = { VALUE = soul_materialisation_mana_cost.neg }
 		
-		duel = {
-			value = mage_level
-			
-			50 = { #Success
+		random_list = {# mage level 15 is minimum for tipping to succcess
+			50 = { #Succes
 				desc = ancient_magic_rituals_events.001.a.success
-				compare_modifier = {
-					value = scope:duel_value
-					multiplier = 1.5
-				}
-				min = -49
-				
-				trigger_event = ancient_magic_rituals_events.002
-			}
-			
-			50 = { #Failure
-				desc = ancient_magic_rituals_events.001.a.failure
-				compare_modifier = {
-					value = scope:duel_value
-					multiplier = {
-						if = {
-							limit = {
-								scope:duel_value > 10
-							}
-							value = -1.5
-						}
-						else = {
-							value = 500
-						}
+				modifier = {
+					add = {
+						value = mage_level 
+						subtract = 15
 					}
 				}
-				
-				min = -49
-				
+				trigger_event = ancient_magic_rituals_events.002
+			} 
+			50 = { #Failure
+				desc = ancient_magic_rituals_events.001.a.failure
+				modifier = {
+					add = {
+						value = 15 
+						subtract = mage_level
+					}
+				}
 				trigger_event = ancient_magic_rituals_events.003
 			}
 		}
-		
 	}
 	
 	option = { #Give up
@@ -81,6 +66,160 @@ ancient_magic_rituals_events.003 = { #Failure (death)
 		
 		death = {
 			death_reason = death_botched_soul_forging
+		}
+	}
+}
+
+ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
+	title = ancient_magic_rituals_events.005.t
+	desc = ancient_magic_rituals_events.005.desc
+	
+	immediate = {
+		if = { #Create two separate option lists, one for ai and second for human, as human can think for himself and can samrtly choose
+			limit = {
+				is_ai = no
+			}
+			ordered_in_list = {
+				list = mana_blood_in_inventory_close_family
+				order_by = mana_blood_compatibility_with_owner
+				position = 0
+				save_scope_as = option_0
+			}
+			ordered_in_list = {
+				list = mana_blood_in_inventory_close_family
+				order_by = mana_blood_compatibility_with_owner
+				position = 1
+				save_scope_as = option_1
+			}
+			ordered_in_list = {
+				list = mana_blood_in_inventory_close_family
+				order_by = mana_blood_compatibility_with_owner
+				position = 2
+				save_scope_as = option_2
+			}
+			ordered_in_list = {
+				list = mana_blood_in_inventory_close_family
+				order_by = mana_blood_compatibility_with_owner
+				position = 3
+				save_scope_as = option_3
+			}
+			ordered_in_list = {
+				list = mana_blood_in_inventory_close_family
+				order_by = mana_blood_compatibility_with_owner
+				position = 4
+				save_scope_as = option_4
+			}
+			ordered_in_list = {
+				list = mana_blood_in_inventory_close_family
+				order_by = mana_blood_compatibility_with_owner
+				position = 5
+				save_scope_as = option_5
+			}
+			ordered_in_list = {
+				list = mana_blood_in_inventory_close_family
+				order_by = mana_blood_compatibility_with_owner
+				position = 6
+				save_scope_as = option_6
+			}
+			ordered_in_list = {
+				list = mana_blood_in_inventory_close_family
+				order_by = mana_blood_compatibility_with_owner
+				position = 7
+				save_scope_as = option_7
+			}
+		}
+		else = {
+			ordered_in_list = {
+				list = mana_blood_in_inventory_close_family
+				order_by = mana_blood_compatibility_with_owner
+				position = 0
+				save_scope_as = option_0
+			}
+			ordered_in_list = {
+				list = mana_blood_in_inventory_close_family
+				order_by = var:mana_affinity
+				position = 1
+				save_scope_as = option_1
+			}
+		}
+	}
+	
+	#Options for character inventory only made for first 8 as the probabily that player has more then 8 of extracted blood is very low
+	option = { #Safest option as its option with highest compatibility
+		name = ancient_magic_rituals_events.0005.a
+		trigger = {
+			exists = scope:option_0
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 100
+				has_trait = craven
+			}
+		}
+	}
+	
+	option = { #For ai this option has the greatest mana potential gain but doesnt have to have the greatest compatibility
+		name = ancient_magic_rituals_events.0005.b
+		trigger = {
+			exists = scope:option_1
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 100
+				has_trait = ambitious
+			}
+		}
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.0005.c
+		trigger = {
+			exists = scope:option_2
+		}
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.0005.d
+		trigger = {
+			exists = scope:option_3
+		}
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.0005.e
+		trigger = {
+			exists = scope:option_4
+		}
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.0005.f
+		trigger = {
+			exists = scope:option_5
+		}
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.0005.g
+		trigger = {
+			exists = scope:option_6
+		}
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.0005.h
+		trigger = {
+			exists = scope:option_7
+		}
+	}
+	
+	#exit = 
+	option = {
+		name = ancient_magic_rituals_events.0005.exit
+		trigger = {
+			is_ai = no
 		}
 	}
 }

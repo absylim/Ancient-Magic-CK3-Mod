@@ -5,6 +5,10 @@
  forge_material_soul_decision_desc: "Bodily immortality is one thing, but the brain can only handle so much. Stuff hundreds of years of knowledge into one mind, and you simply run out of room. To reach true immortality, one needs to reforge their soul into a limitless receptable of knowledge, so that one can truly transcend one's mortal coil!"
  forge_material_soul_decision_confirm: "Let's forge my soul"
  MAGIC_DEMENTIA_IMMUNITY: "If successful, provides immunity to [GetTrait('mage_dementia').GetName( GetNullCharacter )]"
+ implant_magical_blood_decision: "Implant Blood"
+ implant_magical_blood_decision_tooltip: "I have some blood in my inventory, that could be used to boost my own body."
+ implant_magical_blood_decision_desc: "With the extracted blood i got, i could go boyond my base innate mana affinity potential."
+ implant_magical_blood_decision_confirm: "Lets begin"
 
  #intrigue menu
  open_spellbook_decision: "Open Spellbook"
