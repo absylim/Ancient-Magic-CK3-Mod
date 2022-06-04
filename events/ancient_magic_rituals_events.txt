@@ -70,86 +70,211 @@ ancient_magic_rituals_events.003 = { #Failure (death)
 	}
 }
 
+###############################
+#### Implant magical Blood ####
+###############################
+
 ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
+	type = character_event
 	title = ancient_magic_rituals_events.005.t
 	desc = ancient_magic_rituals_events.005.desc
+	theme = medicine
+	
+	left_portrait = {
+		character = scope:infusion_target
+		animation = personality_rational
+	}
 	
 	immediate = {
+		ROOT = { save_scope_as = infusion_target }
 		if = { #Create two separate option lists, one for ai and second for human, as human can think for himself and can samrtly choose
 			limit = {
 				is_ai = no
 			}
-			ordered_in_list = {
-				list = mana_blood_in_inventory_close_family
-				order_by = mana_blood_compatibility_with_owner
+			
+			ordered_mana_blood_in_inventory = { # Blood with highest compatibility
+				limit = {
+					creator = {
+						is_close_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
 				position = 0
 				save_scope_as = option_0
+				save_scope_value_as = {
+					name = option_0_compatibility
+					value = mana_blood_compatibility
+				}
 			}
-			ordered_in_list = {
-				list = mana_blood_in_inventory_close_family
-				order_by = mana_blood_compatibility_with_owner
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_close_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
 				position = 1
 				save_scope_as = option_1
+				save_scope_value_as = {
+					name = option_1_compatibility
+					value = mana_blood_compatibility
+				}
 			}
-			ordered_in_list = {
-				list = mana_blood_in_inventory_close_family
-				order_by = mana_blood_compatibility_with_owner
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_close_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
 				position = 2
 				save_scope_as = option_2
+				save_scope_value_as = {
+					name = option_2_compatibility
+					value = mana_blood_compatibility
+				}
 			}
-			ordered_in_list = {
-				list = mana_blood_in_inventory_close_family
-				order_by = mana_blood_compatibility_with_owner
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_close_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
 				position = 3
 				save_scope_as = option_3
+				save_scope_value_as = {
+					name = option_3_compatibility
+					value = mana_blood_compatibility
+				}
 			}
-			ordered_in_list = {
-				list = mana_blood_in_inventory_close_family
-				order_by = mana_blood_compatibility_with_owner
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_close_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
 				position = 4
 				save_scope_as = option_4
+				save_scope_value_as = {
+					name = option_4_compatibility
+					value = mana_blood_compatibility
+				}
 			}
-			ordered_in_list = {
-				list = mana_blood_in_inventory_close_family
-				order_by = mana_blood_compatibility_with_owner
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_close_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
 				position = 5
 				save_scope_as = option_5
+				save_scope_value_as = {
+					name = option_5_compatibility
+					value = mana_blood_compatibility
+				}
 			}
-			ordered_in_list = {
-				list = mana_blood_in_inventory_close_family
-				order_by = mana_blood_compatibility_with_owner
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_close_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
 				position = 6
 				save_scope_as = option_6
+				save_scope_value_as = {
+					name = option_6_compatibility
+					value = mana_blood_compatibility
+				}
 			}
-			ordered_in_list = {
-				list = mana_blood_in_inventory_close_family
-				order_by = mana_blood_compatibility_with_owner
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_close_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
 				position = 7
 				save_scope_as = option_7
+				save_scope_value_as = {
+					name = option_7_compatibility
+					value = mana_blood_compatibility
+				}
 			}
 		}
 		else = {
-			ordered_in_list = {
-				list = mana_blood_in_inventory_close_family
-				order_by = mana_blood_compatibility_with_owner
+			ordered_mana_blood_in_inventory = { # Blood with highest compatibility
+				limit = {
+					creator = {
+						is_close_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
 				position = 0
 				save_scope_as = option_0
+				save_scope_value_as = {
+					name = option_0_compatibility
+					value = mana_blood_compatibility
+				}
 			}
-			ordered_in_list = {
-				list = mana_blood_in_inventory_close_family
+			ordered_mana_blood_in_inventory = { #Blood with highest mana affinity
+				limit = {
+					creator = {
+						is_close_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
 				order_by = var:mana_affinity
-				position = 1
+				position = 0
 				save_scope_as = option_1
+				save_scope_value_as = {
+					name = option_1_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+		}
+		
+		
+			
+		if = {
+			limit = {
+				exists = option_1
+			}
+			save_scope_value_as = {
+				name = option_1_compatibility
+				value = 25
 			}
 		}
 	}
 	
 	#Options for character inventory only made for first 8 as the probabily that player has more then 8 of extracted blood is very low
 	option = { #Safest option as its option with highest compatibility
-		name = ancient_magic_rituals_events.0005.a
+		name = ancient_magic_rituals_events.005.a
 		trigger = {
 			exists = scope:option_0
 		}
+		
+		hidden_effect = {
+			scope:option_0 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_0_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+		
 		ai_chance = {
 			base = 50
 			modifier = {
@@ -160,10 +285,24 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 	}
 	
 	option = { #For ai this option has the greatest mana potential gain but doesnt have to have the greatest compatibility
-		name = ancient_magic_rituals_events.0005.b
+		name = ancient_magic_rituals_events.005.b
 		trigger = {
 			exists = scope:option_1
+			OR = {
+				NOT = { scope:option_1 = scope:option_0 } #Makes sure that it wont appear
+				is_ai = yes
+			}
 		}
+		
+		hidden_effect = {
+			scope:option_1 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_1_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+		
 		ai_chance = {
 			base = 50
 			modifier = {
@@ -174,52 +313,1220 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 	}
 	
 	option = {
-		name = ancient_magic_rituals_events.0005.c
 		trigger = {
 			exists = scope:option_2
+			NOT = { scope:option_2 = scope:option_1 } #Makes sure that it wont appear
 		}
+		name = ancient_magic_rituals_events.005.c
+		
+		hidden_effect = {
+			scope:option_2 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_2_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
 	}
 	
 	option = {
-		name = ancient_magic_rituals_events.0005.d
 		trigger = {
 			exists = scope:option_3
+			NOT = { scope:option_3 = scope:option_2 } #Makes sure that it wont appear
 		}
+		name = ancient_magic_rituals_events.005.d
+		
+		hidden_effect = {
+			scope:option_3 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_3_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
 	}
 	
 	option = {
-		name = ancient_magic_rituals_events.0005.e
+		name = ancient_magic_rituals_events.005.e
 		trigger = {
 			exists = scope:option_4
+			NOT = { scope:option_4 = scope:option_3 } #Makes sure that it wont appear
 		}
+		
+		hidden_effect = {
+			scope:option_4 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_4_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
 	}
 	
 	option = {
-		name = ancient_magic_rituals_events.0005.f
+		name = ancient_magic_rituals_events.005.f
 		trigger = {
 			exists = scope:option_5
+			NOT = { scope:option_5 = scope:option_4 } #Makes sure that it wont appear
 		}
+		
+		hidden_effect = {
+			scope:option_5 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_5_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
 	}
 	
 	option = {
-		name = ancient_magic_rituals_events.0005.g
+		name = ancient_magic_rituals_events.005.g
 		trigger = {
 			exists = scope:option_6
+			NOT = { scope:option_6 = scope:option_5 } #Makes sure that it wont appear
 		}
+		
+		hidden_effect = {
+			scope:option_6 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_6_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
 	}
 	
 	option = {
-		name = ancient_magic_rituals_events.0005.h
+		name = ancient_magic_rituals_events.005.h
 		trigger = {
 			exists = scope:option_7
+			NOT = { scope:option_7 = scope:option_6 } #Makes sure that it wont appear
 		}
+		
+		hidden_effect = {
+			scope:option_7 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_7_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
 	}
 	
 	#exit = 
 	option = {
-		name = ancient_magic_rituals_events.0005.exit
+		name = ancient_magic_rituals_events.005.exit
 		trigger = {
 			is_ai = no
 		}
+	}
+}
+
+ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritves
+	type = character_event
+	title = ancient_magic_rituals_events.006.t
+	desc = ancient_magic_rituals_events.006.desc
+	theme = medicine
+	
+	left_portrait = {
+		character = scope:infusion_target
+		animation = personality_rational
+	}
+	
+	immediate = {
+		ROOT = { save_scope_as = infusion_target }
+		if = { #Create two separate option lists, one for ai and second for human, as human can think for himself and can samrtly choose
+			limit = {
+				is_ai = no
+			}
+			
+			ordered_mana_blood_in_inventory = { # Blood with highest compatibility
+				limit = {
+					creator = {
+						is_extended_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 0
+				save_scope_as = option_0
+				save_scope_value_as = {
+					name = option_0_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_extended_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 1
+				save_scope_as = option_1
+				save_scope_value_as = {
+					name = option_1_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_extended_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 2
+				save_scope_as = option_2
+				save_scope_value_as = {
+					name = option_2_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_extended_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 3
+				save_scope_as = option_3
+				save_scope_value_as = {
+					name = option_3_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_extended_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 4
+				save_scope_as = option_4
+				save_scope_value_as = {
+					name = option_4_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_extended_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 5
+				save_scope_as = option_5
+				save_scope_value_as = {
+					name = option_5_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_extended_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 6
+				save_scope_as = option_6
+				save_scope_value_as = {
+					name = option_6_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						is_extended_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 7
+				save_scope_as = option_7
+				save_scope_value_as = {
+					name = option_7_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+		}
+		else = {
+			ordered_mana_blood_in_inventory = { # Blood with highest compatibility
+				limit = {
+					creator = {
+						is_extended_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 0
+				save_scope_as = option_0
+				save_scope_value_as = {
+					name = option_0_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = { #Blood with highest mana affinity
+				limit = {
+					creator = {
+						is_extended_family_of = scope:infusion_target
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = var:mana_affinity
+				position = 0
+				save_scope_as = option_1
+				save_scope_value_as = {
+					name = option_1_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+		}
+		
+		
+			
+		if = {
+			limit = {
+				exists = option_1
+			}
+			save_scope_value_as = {
+				name = option_1_compatibility
+				value = 25
+			}
+		}
+	}
+	
+	#Options for character inventory only made for first 8 as the probabily that player has more then 8 of extracted blood is very low
+	option = { #Safest option as its option with highest compatibility
+		name = ancient_magic_rituals_events.005.a
+		trigger = {
+			exists = scope:option_0
+		}
+		
+		hidden_effect = {
+			scope:option_0 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_0_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 100
+				has_trait = craven
+			}
+		}
+	}
+	
+	option = { #For ai this option has the greatest mana potential gain but doesnt have to have the greatest compatibility
+		name = ancient_magic_rituals_events.005.b
+		trigger = {
+			exists = scope:option_1
+			OR = {
+				NOT = { scope:option_1 = scope:option_0 } #Makes sure that it wont appear
+				is_ai = yes
+			}
+		}
+		
+		hidden_effect = {
+			scope:option_1 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_1_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 100
+				has_trait = ambitious
+			}
+		}
+	}
+	
+	option = {
+		trigger = {
+			exists = scope:option_2
+			NOT = { scope:option_2 = scope:option_1 } #Makes sure that it wont appear
+		}
+		name = ancient_magic_rituals_events.005.c
+		
+		hidden_effect = {
+			scope:option_2 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_2_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+	}
+	
+	option = {
+		trigger = {
+			exists = scope:option_3
+			NOT = { scope:option_3 = scope:option_2 } #Makes sure that it wont appear
+		}
+		name = ancient_magic_rituals_events.005.d
+		
+		hidden_effect = {
+			scope:option_3 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_3_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.005.e
+		trigger = {
+			exists = scope:option_4
+			NOT = { scope:option_4 = scope:option_3 } #Makes sure that it wont appear
+		}
+		
+		hidden_effect = {
+			scope:option_4 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_4_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.005.f
+		trigger = {
+			exists = scope:option_5
+			NOT = { scope:option_5 = scope:option_4 } #Makes sure that it wont appear
+		}
+		
+		hidden_effect = {
+			scope:option_5 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_5_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.005.g
+		trigger = {
+			exists = scope:option_6
+			NOT = { scope:option_6 = scope:option_5 } #Makes sure that it wont appear
+		}
+		
+		hidden_effect = {
+			scope:option_6 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_6_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.005.h
+		trigger = {
+			exists = scope:option_7
+			NOT = { scope:option_7 = scope:option_6 } #Makes sure that it wont appear
+		}
+		
+		hidden_effect = {
+			scope:option_7 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_7_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+	}
+	
+	#exit = 
+	option = {
+		name = ancient_magic_rituals_events.005.exit
+		trigger = {
+			is_ai = no
+		}
+	}
+}
+
+ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritves
+	type = character_event
+	title = ancient_magic_rituals_events.007.t
+	desc = ancient_magic_rituals_events.007.desc
+	theme = medicine
+	
+	left_portrait = {
+		character = scope:infusion_target
+		animation = personality_rational
+	}
+	
+	immediate = {
+		ROOT = { save_scope_as = infusion_target }
+		if = { #Create two separate option lists, one for ai and second for human, as human can think for himself and can samrtly choose
+			limit = {
+				is_ai = no
+			}
+			
+			ordered_mana_blood_in_inventory = { # Blood with highest compatibility
+				limit = {
+					creator = {
+						NOT = {
+							is_close_family_of = scope:infusion_target
+							is_extended_family_of = scope:infusion_target
+						}
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 0
+				save_scope_as = option_0
+				save_scope_value_as = {
+					name = option_0_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						NOT = {
+							is_close_family_of = scope:infusion_target
+							is_extended_family_of = scope:infusion_target
+						}
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 1
+				save_scope_as = option_1
+				save_scope_value_as = {
+					name = option_1_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						NOT = {
+							is_close_family_of = scope:infusion_target
+							is_extended_family_of = scope:infusion_target
+						}
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 2
+				save_scope_as = option_2
+				save_scope_value_as = {
+					name = option_2_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						NOT = {
+							is_close_family_of = scope:infusion_target
+							is_extended_family_of = scope:infusion_target
+						}
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 3
+				save_scope_as = option_3
+				save_scope_value_as = {
+					name = option_3_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						NOT = {
+							is_close_family_of = scope:infusion_target
+							is_extended_family_of = scope:infusion_target
+						}
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 4
+				save_scope_as = option_4
+				save_scope_value_as = {
+					name = option_4_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						NOT = {
+							is_close_family_of = scope:infusion_target
+							is_extended_family_of = scope:infusion_target
+						}
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 5
+				save_scope_as = option_5
+				save_scope_value_as = {
+					name = option_5_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						NOT = {
+							is_close_family_of = scope:infusion_target
+							is_extended_family_of = scope:infusion_target
+						}
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 6
+				save_scope_as = option_6
+				save_scope_value_as = {
+					name = option_6_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = {
+				limit = {
+					creator = {
+						NOT = {
+							is_close_family_of = scope:infusion_target
+							is_extended_family_of = scope:infusion_target
+						}
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 7
+				save_scope_as = option_7
+				save_scope_value_as = {
+					name = option_7_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+		}
+		else = {
+			ordered_mana_blood_in_inventory = { # Blood with highest compatibility
+				limit = {
+					creator = {
+						NOT = {
+							is_close_family_of = scope:infusion_target
+							is_extended_family_of = scope:infusion_target
+						}
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = mana_blood_compatibility
+				position = 0
+				save_scope_as = option_0
+				save_scope_value_as = {
+					name = option_0_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+			ordered_mana_blood_in_inventory = { #Blood with highest mana affinity
+				limit = {
+					creator = {
+						NOT = {
+							is_close_family_of = scope:infusion_target
+							is_extended_family_of = scope:infusion_target
+						}
+					}
+					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+				}
+				order_by = var:mana_affinity
+				position = 0
+				save_scope_as = option_1
+				save_scope_value_as = {
+					name = option_1_compatibility
+					value = mana_blood_compatibility
+				}
+			}
+		}
+		
+		
+			
+		if = {
+			limit = {
+				exists = option_1
+			}
+			save_scope_value_as = {
+				name = option_1_compatibility
+				value = 25
+			}
+		}
+	}
+	
+	#Options for character inventory only made for first 8 as the probabily that player has more then 8 of extracted blood is very low
+	option = { #Safest option as its option with highest compatibility
+		name = ancient_magic_rituals_events.005.a
+		trigger = {
+			exists = scope:option_0
+		}
+		
+		hidden_effect = {
+			scope:option_0 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_0_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 100
+				has_trait = craven
+			}
+		}
+	}
+	
+	option = { #For ai this option has the greatest mana potential gain but doesnt have to have the greatest compatibility
+		name = ancient_magic_rituals_events.005.b
+		trigger = {
+			exists = scope:option_1
+			OR = {
+				NOT = { scope:option_1 = scope:option_0 } #Makes sure that it wont appear
+				is_ai = yes
+			}
+		}
+		
+		hidden_effect = {
+			scope:option_1 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_1_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 100
+				has_trait = ambitious
+			}
+		}
+	}
+	
+	option = {
+		trigger = {
+			exists = scope:option_2
+			NOT = { scope:option_2 = scope:option_1 } #Makes sure that it wont appear
+		}
+		name = ancient_magic_rituals_events.005.c
+		
+		hidden_effect = {
+			scope:option_2 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_2_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+	}
+	
+	option = {
+		trigger = {
+			exists = scope:option_3
+			NOT = { scope:option_3 = scope:option_2 } #Makes sure that it wont appear
+		}
+		name = ancient_magic_rituals_events.005.d
+		
+		hidden_effect = {
+			scope:option_3 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_3_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.005.e
+		trigger = {
+			exists = scope:option_4
+			NOT = { scope:option_4 = scope:option_3 } #Makes sure that it wont appear
+		}
+		
+		hidden_effect = {
+			scope:option_4 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_4_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.005.f
+		trigger = {
+			exists = scope:option_5
+			NOT = { scope:option_5 = scope:option_4 } #Makes sure that it wont appear
+		}
+		
+		hidden_effect = {
+			scope:option_5 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_5_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.005.g
+		trigger = {
+			exists = scope:option_6
+			NOT = { scope:option_6 = scope:option_5 } #Makes sure that it wont appear
+		}
+		
+		hidden_effect = {
+			scope:option_6 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_6_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.005.h
+		trigger = {
+			exists = scope:option_7
+			NOT = { scope:option_7 = scope:option_6 } #Makes sure that it wont appear
+		}
+		
+		hidden_effect = {
+			scope:option_7 = { save_scope_as = chosen_blood }
+			save_scope_value_as = {
+				name = chosen_blood_compatibility
+				value = scope:option_7_compatibility
+			}
+			trigger_event = ancient_magic_rituals_events.008
+		} 
+	}
+	
+	#exit = 
+	option = {
+		name = ancient_magic_rituals_events.005.exit
+		trigger = {
+			is_ai = no
+		}
+	}
+}
+
+ancient_magic_rituals_events.008 = { # Who implant the blood
+	type = character_event
+	title = ancient_magic_rituals_events.008.t
+	theme = healthcare
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:infusion_target = {
+						court_physician_available_trigger = yes
+					}
+				}
+				desc = ancient_magic_rituals_events.008.desc_doctor
+			}
+			desc = ancient_magic_rituals_events.008.desc
+		}
+	}
+	
+	left_portrait = {
+		character = scope:infusion_target
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:physician
+		animation = idle
+	}
+	
+	immediate = {
+		save_court_physician_as_effect = { SCOPE_NAME = physician }
+		save_scope_value_as = {
+			name = chosen_blood_mana_affinity
+			value = scope:chosen_blood.var:mana_affinity
+		}
+	}
+	
+	option = { #Self
+		name = ancient_magic_rituals_events.008.a
+		
+		destroy_artifact = scope:chosen_blood
+		
+		random_list = {
+			30 = { #Success
+				desc = ancient_magic_rituals_events.008.succcess
+				modifier = { #increase chances by having extrancted ones own blood
+					add = 10
+					has_character_modifier = drained_of_blood_modifier
+				}
+				modifier = {
+					add = {
+						value = learning
+						subtract = good_skill_level
+					}
+				}
+				modifier = { #Blood compatibility
+					add = scope:chosen_blood_compatibility
+					subtract = average_mana_blood_compatibility_level
+				}
+				modifier = {
+					add = 5
+					has_trait = physician_1
+				}
+				modifier = {
+					add = 10
+					has_trait = physician_2
+				}
+				modifier = {
+					add = 15
+					has_trait = physician_3
+				}
+				modifier = {
+					add = 2
+					has_perk = biomancy_mage_perk
+				}
+				modifier = {
+					add = 30
+					has_perk = architect_of_bloodlines_perk
+				}
+				trigger_event = ancient_magic_rituals_events.009
+			}
+			50 = {
+				desc = ancient_magic_rituals_events.008.failure
+				modifier = { #Blood compatibility
+					add = average_mana_blood_compatibility_level
+					subtract = scope:chosen_blood_compatibility
+				}
+				modifier = {
+					add = {
+						value = good_skill_level
+						subtract = learning
+					}
+				}
+				modifier = { #Strong and healthy body is much more likely to reject foreign blood
+					add = 20
+					has_trait = whole_of_body
+				}
+				trigger_event = ancient_magic_rituals_events.011
+			}
+			20 = { #Death - higher chance as one can botch it if he does it on himself
+				modifier = { #if compatibility lower then 0
+					add = {
+						value = scope:chosen_blood_compatibility
+						multiply = 0.1
+					}
+					scope:chosen_blood_compatibility < 0
+				}
+				death = {
+					death_reason = death_botched_blood_transfusion
+				}
+			}
+		}
+	}
+	
+	option = { #Physician
+		name = ancient_magic_rituals_events.008.b
+		trigger = {
+			scope:infusion_target = {
+				court_physician_available_trigger = yes
+			}
+		}
+		
+		destroy_artifact = scope:chosen_blood
+		
+		random_list = {
+			35 = { #Success
+				desc = ancient_magic_rituals_events.008.succcess
+				modifier = { #increase chances by having extrancted ones own blood
+					add = 10
+					has_character_modifier = drained_of_blood_modifier
+				}
+				modifier = {
+					add = {
+						value = scope:physician.learning
+						subtract = average_skill_level
+					}
+				}
+				modifier = { #Blood compatibility
+					add = scope:chosen_blood_compatibility
+					subtract = average_mana_blood_compatibility_level
+				}
+				modifier = {
+					add = 5
+					scope:physician = {
+						has_trait = physician_1
+					}
+				}
+				modifier = {
+					add = 10
+					scope:physician = {
+						has_trait = physician_2
+					}
+				}
+				modifier = {
+					add = 15
+					scope:physician = {
+						has_trait = physician_3
+					}
+				}
+				modifier = {
+					add = 2
+					scope:physician = {
+						has_perk = biomancy_mage_perk
+					}
+				}
+				modifier = {
+					add = 30
+					scope:physician = {
+						has_perk = architect_of_bloodlines_perk
+					}
+				}
+				trigger_event = ancient_magic_rituals_events.010
+			}
+			55 = {
+				desc = ancient_magic_rituals_events.008.failure
+				modifier = { #Blood compatibility
+					add = average_mana_blood_compatibility_level
+					subtract = scope:chosen_blood_compatibility
+				}
+				modifier = {
+					add = {
+						value = average_skill_level
+						subtract = scope:physician.learning
+					}
+				}
+				modifier = { #Strong and healthy body is much more likely to reject foreign blood
+					add = 20
+					has_trait = whole_of_body
+				}
+				trigger_event = ancient_magic_rituals_events.012
+			}
+			10 = { #Death - higher chance as one can botch it if he does it on himself
+				modifier = { #if compatibility lower then 0
+					add = {
+						value = scope:chosen_blood_compatibility
+						multiply = 0.1
+					}
+					scope:chosen_blood_compatibility < 0
+				}
+				death = {
+					death_reason = death_botched_blood_transfusion
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.005.exit
+	}
+}
+
+ancient_magic_rituals_events.009 = { #Successful transfusion - Self
+	type = character_event
+	title = ancient_magic_rituals_events.009.t
+	theme = healthcare
+	desc = ancient_magic_rituals_events.009.desc
+	
+	immediate = {
+		scope:infusion_target = {
+			add_trait = infused_magical_blood_compatible
+			set_variable = { # mana affinity given by the infused blood
+				name = infused_blood_mana_affinity
+				value = { 
+					value = scope:chosen_blood_mana_affinity
+					subtract = var:base_mana_affinity #gets rid of existing mana affinity
+					multiply = 0.75
+					min = 0
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:chosen_blood.var:bloodline
+			}
+			random_list = {
+				20 = { add_magical_bloodline_effect = {TARGET = scope:infusion_target TYPE = scope:chosen_blood.var:bloodline} }
+				80 = {} #Nothing happens
+			}
+		}
+	}
+	
+	left_portrait = {
+		character = scope:infusion_target
+		animation = personality_rational
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.009.a
+	}
+}
+
+ancient_magic_rituals_events.010 = { #Successful transfusion - Physician
+	type = character_event
+	title = ancient_magic_rituals_events.009.t
+	theme = healthcare
+	desc = ancient_magic_rituals_events.010.desc
+	
+	immediate = {
+		scope:infusion_target = {
+			add_trait = infused_magical_blood_compatible
+			set_variable = { # mana affinity given by the infused blood
+				name = infused_blood_mana_affinity
+				value = { 
+					value = scope:chosen_blood_mana_affinity
+					subtract = var:base_mana_affinity #gets rid of existing mana affinity
+					multiply = 0.75
+					min = 0
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:chosen_blood.var:bloodline
+			}
+			random_list = {
+				20 = { add_magical_bloodline_effect = {TARGET = scope:infusion_target TYPE = scope:chosen_blood.var:bloodline} }
+				80 = {} #Nothing happens
+			}
+		}
+	}
+	
+	left_portrait = {
+		character = scope:infusion_target
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:physician
+		animation = personality_content
+	}
+	
+	option = { #Give the physician bonus
+		name = ancient_magic_rituals_events.010.a
+		skill = stewardship
+		show_as_unavailable = {
+			short_term_gold < medium_gold_value
+		}
+		pay_short_term_gold = { 
+			target = scope:physician
+			gold = {
+				value = medium_gold_value
+				multiply = 1
+			}
+		}
+		scope:physician = {
+			add_opinion = {
+				modifier = grateful_opinion
+				target = scope:infusion_target
+				opinion = 35
+			}
+		}
+	}
+	option = {
+		name = ancient_magic_rituals_events.009.a
+	}
+}
+
+ancient_magic_rituals_events.011 = { #Unsuccessful transfusion - Self
+	type = character_event
+	title = ancient_magic_rituals_events.011.t
+	theme = healthcare
+	desc = ancient_magic_rituals_events.011.desc
+	
+	immediate = {
+		scope:infusion_target = {
+			add_trait = infused_magical_blood_incompatible
+			set_variable = { # mana affinity given by the infused blood
+				name = infused_blood_mana_affinity
+				value = { 
+					value = scope:chosen_blood_mana_affinity
+					subtract = var:base_mana_affinity #gets rid of existing mana affinity
+					multiply = 0.25
+					min = 0
+				}
+			}
+		}
+	}
+	
+	left_portrait = {
+		character = scope:infusion_target
+		animation = sadness
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.011.a
+	}
+}
+
+ancient_magic_rituals_events.012 = { #Unuccessful transfusion - Physician
+	type = character_event
+	title = ancient_magic_rituals_events.011.t
+	theme = healthcare
+	desc = ancient_magic_rituals_events.012.desc
+	
+	immediate = {
+		scope:infusion_target = {
+			add_trait = infused_magical_blood_incompatible
+			set_variable = { # mana affinity given by the infused blood
+				name = infused_blood_mana_affinity
+				value = { 
+					value = scope:chosen_blood_mana_affinity
+					subtract = var:base_mana_affinity #gets rid of existing mana affinity
+					multiply = 0.25
+					min = 0
+				}
+			}
+		}
+	}
+	
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = {
+		character = scope:physician
+		animation = worry
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.012.a
 	}
 }

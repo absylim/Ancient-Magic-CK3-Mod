@@ -63,7 +63,7 @@ mana_affinity = {
 	
 	if = { #If one has Magical Bloodline add according affinity boost
 		limit = {
-			has_magical_bloodline = yes
+			has_magical_bloodline_trigger = yes
 		}
 		add = {
 			value = mana_affinity_bloodline_boost
@@ -73,22 +73,15 @@ mana_affinity = {
 	#infused blood
 	if = {
 		limit = {
-			has_trait = infused_magical_blood_compatible
+			OR = {
+				has_trait = infused_magical_blood_compatible
+			has_trait = infused_magical_blood_incompatible
+			}
 		}
 		add = {
-			value = 3
+			value = var:infused_blood_mana_affinity
 			desc = MANA_AFFINITY_INFUSED_BLOOD
 			format = "FORMAT_MANA_AFFINITY_BOOST" #Custom format for mana affinity
-		}
-	}
-	else_if = {
-		limit = {
-			has_trait = infused_magical_blood_incompatible
-		}
-		add = {
-			value = 1
-			desc = MANA_AFFINITY_INFUSED_BLOOD
-			format = "FORMAT_MANA_AFFINITY_BOOST"
 		}
 	}
 }
@@ -302,10 +295,10 @@ ask_for_blood_likelihood_calculation = { #Used for character interaction to get 
 	if = {
 		limit = {
 			scope:actor = {
-				has_magical_bloodline = yes
+				has_magical_bloodline_trigger = yes
 			}
-			add = -50
 		}
+		add = -50
 	}
 }
 
@@ -316,26 +309,48 @@ ask_for_blood_mana_affinity_difference = {
 	multiply = 5
 }
 
-mana_blood_compatibility_with_owner = { #Compatibility of the blood with owner, the higher the higher chance of successful infusion of the blood into oneself
+mana_blood_compatibility = { #Compatibility of the blood with owner, the higher the higher chance of successful infusion of the blood into oneself
 	value = 15
 	if = {
 		limit = {
-			scope:creator.is_close_family_of = owner
+			creator = { is_close_family_of = scope:infusion_target }
 		}
 		add = 50
 	}
-	if = {
 	
+	if = {
 		limit = {
-			scope:creator.is_extended_family_of = owner
+			creator = { is_extended_family_of = scope:infusion_target }
 		}
 		add = 25
 	}
 	
-	subtract = {
-		value = var:mana_affinity
-		subtract = scope:owner.var:base_mana_affinity
-		multiply = 5
-		min = 0 #Do not increase the compatibility if bloods mana affinity is lower then then owners
+	if = {
+		limit = {
+			exists = var:bloodline
+			has_magical_bloodline_trigger = no
+		}
+		subtract = 50
 	}
+	else_if = { #Same bloodline
+		limit = {
+			exists = var:bloodline
+			has_magical_bloodline_of_type_trigger = { TARGET = scope:infusion_target TYPE = var:bloodline}
+		}
+		add = 15
+	}
+	else_if = {
+		limit = {
+			exists = var:bloodline
+			has_magical_bloodline_trigger = yes
+		}
+		subtract = 500
+	}
+	
+	subtract = {
+        value = var:mana_affinity
+        subtract = scope:infusion_target.var:base_mana_affinity
+        multiply = 5
+        min = 0 #Do not increase the compatibility if bloods mana affinity is lower then then owners
+    }
 }

@@ -34,3 +34,8 @@ death_incompatible_infused_blood = {
 	priority = 9 # Lower than old age
 	icon = "death_murder.dds"
 }
+
+death_botched_blood_transfusion = {
+	public_knowledge = yes
+	icon = "death_unknown.dds"
+}

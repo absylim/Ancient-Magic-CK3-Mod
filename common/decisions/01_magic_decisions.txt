@@ -94,13 +94,17 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 		
 		# Close family
 		item = {
-			value = AM_implant_magical_blood_option
+			value = AM_implant_magical_blood_option_close_family
 			is_shown = {
-				always = yes
+				any_mana_blood_in_inventory = {
+					creator = {
+						is_close_family_of = ROOT
+					}
+				}
 			}
-			current_description = AM_implant_magical_blood_option_desc
-			localization = AM_implant_magical_blood_option
-			icon = "gfx/interface/icons/terrain_types/oasis.dds"
+			current_description = AM_implant_magical_blood_option_close_family_tooltip
+			localization = AM_implant_magical_blood_option_close_family
+			icon = "gfx/interface/icons/event_types/type_family.dds"
 
 			ai_chance = {
 				value = 100
@@ -109,13 +113,17 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 		
 		# Extended family
 		item = {
-			value = AM_implant_magical_blood_option
+			value = AM_implant_magical_blood_option_extended_family
 			is_shown = {
-				always = yes
+				any_mana_blood_in_inventory = {
+					creator = {
+						is_extended_family_of = ROOT
+					}
+				}
 			}
-			current_description = AM_implant_magical_blood_option_desc
-			localization = AM_implant_magical_blood_option
-			icon = "gfx/interface/icons/terrain_types/oasis.dds"
+			current_description = AM_implant_magical_blood_option_extended_family_tooltip
+			localization = AM_implant_magical_blood_option_extended_family
+			icon = "gfx/interface/icons/event_types/type_family.dds"
 
 			ai_chance = {
 				value = 50
@@ -124,13 +132,20 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 		
 		# others
 		item = {
-			value = AM_implant_magical_blood_option
+			value = AM_implant_magical_blood_option_others
 			is_shown = {
-				always = yes
+				any_mana_blood_in_inventory = {
+					creator = {
+						NOT = {
+							is_extended_family_of = ROOT
+							is_close_family_of = ROOT
+						}
+					}
+				}
 			}
-			current_description = AM_implant_magical_blood_option_desc
-			localization = AM_implant_magical_blood_option
-			icon = "gfx/interface/icons/terrain_types/oasis.dds"
+			current_description = AM_implant_magical_blood_option_others_tooltip
+			localization = AM_implant_magical_blood_option_others
+			icon = "gfx/interface/icons/artifact/mana_blood.dds"
 
 			ai_chance = {
 				value = 20
@@ -143,7 +158,18 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 	}
 	
 	effect = {
-		add_trait = infused_magical_blood_compatible
+		if = {
+			limit = { scope:AM_implant_magical_blood_option_close_family = yes }
+			trigger_event = ancient_magic_rituals_events.005
+		}
+		else_if = {
+			limit = { scope:AM_implant_magical_blood_option_extended_family = yes }
+			trigger_event = ancient_magic_rituals_events.006
+		}
+		else_if = {
+			limit = { scope:AM_implant_magical_blood_option_others = yes }
+			trigger_event = ancient_magic_rituals_events.007
+		}
 	}
 	
 	ai_will_do = {

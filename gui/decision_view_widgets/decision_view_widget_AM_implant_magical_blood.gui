@@ -8,7 +8,7 @@ vbox = {
 
 	margin_top = 10
 	spacing = 10
-
+;
 	text_label_center = {
 		text = "AM_implant_magical_blood_choose_type"
 	}
@@ -18,8 +18,8 @@ vbox = {
 		layoutpolicy_vertical = expanding		
 
 		scrollbox = {
-			layoutpolicy_horizontal = expanding
-			layoutpolicy_vertical = expanding
+			size = { 300 90 }
+			layoutpolicy_vertical = expanding	
 
 			blockoverride "scrollbox_content" {
 				vbox = {
@@ -40,8 +40,8 @@ vbox = {
 types AM_implant_magical_bloods
 {
 	type AM_implant_magical_blood = button_standard {
-		size = { 450 100 }
-		margin = { 10 10 }
+		size = { 270 60 }
+		margin = { 5 10 }
 
 		onclick = "[DecisionViewWidgetOptionList.OnSelect(Entry.Self)]"
 		enabled = "[Entry.IsEnabled]"
@@ -56,7 +56,7 @@ types AM_implant_magical_bloods
 
 			icon = {
 				name = "AM_implant_magical_blood_icon"
-				size = { 45 99 }
+				size = { 45 45 }
 				texture = "[Entry.GetIcon]"
 			}
 

@@ -1,7 +1,8 @@
 ﻿#Author: Donekulda
 #For each added bloodline there must be added into mana_affinity_bloodline_boost in script_values/00_ancient_magic_mana_affinity.txt its follow-up code 
-#the same goes for adding this bloodline into trigger has_magical_bloodline in scripted_triggers/ancient_magic_health_triggers.txt 
+#the same goes for adding this bloodline into trigger has_magical_bloodline_trigger and has_magical_bloodline_of_type_trigger in scripted_triggers/ancient_magic_health_triggers.txt 
 #and into get_mana_blood_detailed_description_effect in scipted_effects/01_ancient_magic_ingredients_effects.txt
+#and lasty added into add_magical_bloodline_effect in scipted_effects/00_ancient_magic_mana_affinity_effects.txt
 dragonic_bloodline = {
 	Index = 9200
 	

@@ -10,9 +10,9 @@ get_mana_blood_detailed_description_effect = {
 		limit = {
 			AND = {
 				scope:origin = {
-					has_magical_bloodline = yes
+					has_magical_bloodline_trigger = yes
 				}
-				scope:allow_bloodline = yes
+				var:allow_bloodline = yes
 			}
 		}
 		
@@ -99,11 +99,11 @@ get_mana_blood_detailed_description_effect = {
 create_ingredient_mana_blood_effect = {
 	$OWNER$ = { save_scope_as = owner }
 	$ORIGIN$ = { save_scope_as = origin }
-	save_scope_value_as = {
+	set_variable = {
 		name = decay
 		value = $DECAY$
 	}
-	save_scope_value_as = {
+	set_variable = {
 		name = allow_bloodline
 		value = $ALLOW_BLOODLINE$
 	}
@@ -125,7 +125,7 @@ create_ingredient_mana_blood_effect = {
 					save_scope_as = newly_created_artifact
 					quality = scope:quality
 					wealth = scope:quality
-					decaying = scope:decay
+					decaying = var:decay
 				}
 			}
 			else  = {
@@ -140,7 +140,7 @@ create_ingredient_mana_blood_effect = {
 					save_scope_as = newly_created_artifact
 					quality = scope:quality
 					wealth = scope:quality
-					decaying = scope:decay
+					decaying = var:decay
 				}
 			} 
 		}

@@ -9,6 +9,13 @@
  implant_magical_blood_decision_tooltip: "I have some blood in my inventory, that could be used to boost my own body."
  implant_magical_blood_decision_desc: "With the extracted blood i got, i could go boyond my base innate mana affinity potential."
  implant_magical_blood_decision_confirm: "Lets begin"
+ AM_implant_magical_blood_choose_type: "Choose type of Blood"
+ AM_implant_magical_blood_option_close_family: "Blood of [close_family|E]"
+ AM_implant_magical_blood_option_close_family_tooltip: "Magical blood extracted from [close_family_members|E]. #S High Compatibility #!"
+ AM_implant_magical_blood_option_extended_family: "Blood of [extended_family|E]"
+ AM_implant_magical_blood_option_extended_family_tooltip: "Magical blood extracted from [extended_family_members|E]. #S Medium Compatibility #!"
+ AM_implant_magical_blood_option_others: "Blood of others"
+ AM_implant_magical_blood_option_others_tooltip: "Magical Blood extracted from people which arent closely geneticaly related. #S Low Compatibility #!"
 
  #intrigue menu
  open_spellbook_decision: "Open Spellbook"

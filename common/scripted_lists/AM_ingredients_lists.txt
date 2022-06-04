@@ -1,21 +1,16 @@
-mana_blood_in_inventory = {
+﻿mana_blood_in_inventory = {
 	base = character_artifact
 	conditions = {
 		has_artifact_feature_group = mana_blood
 	}
 }
 
-mana_blood_in_inventory_close_family = { #Blood of close family members - High compatibility
-	base = mana_blood_in_inventory
-	conditions = {
-		scope:creator.is_close_family_of = owner
-	}
-}
-
 mana_blood_in_inventory_extended_family = { #Blood of close family members - Medium compatibility
 	base = mana_blood_in_inventory
 	conditions = {
-		scope:creator.is_extended_family_of = owner
+		creator = {
+			is_extended_family_of = prev.owner
+		}
 	}
 }
 
@@ -23,8 +18,10 @@ mana_blood_in_inventory_others = {  #Blood of non-family members or very distant
 	base = mana_blood_in_inventory
 	conditions = {
 		NOT = {
-			scope:creator.is_close_family_of = owner
-			scope:creator.is_extended_family_of = owner
+			creator = {
+				is_close_family_of = prev.owner
+				is_extended_family_of = prev.owner
+			}
 		}
 	}
 }

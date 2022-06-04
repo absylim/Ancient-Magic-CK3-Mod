@@ -83,10 +83,39 @@ has_treatable_magical_disease_trigger = {
 #    Mana affinity   #
 ######################
 
-has_magical_bloodline = {
+has_magical_bloodline_trigger = {
 	OR = {
 		has_trait = dragonic_bloodline
 		has_trait = antler_bloodline
 		has_trait = giant_bloodline
+	}
+}
+
+has_magical_bloodline_of_type_trigger = {
+	$TARGET$ = { save_temporary_scope_as = bloodline_target }
+	save_temporary_scope_value_as = {
+		name = bloodline_type 
+		value = $TYPE$
+	}
+	
+	OR = {
+		AND = {
+			scope:bloodline_target = {
+				has_trait = dragonic_bloodline
+			}
+			scope:bloodline_type = flag:dragonic_bloodline
+		}
+		AND = {
+			scope:bloodline_target = {
+				has_trait = antler_bloodline
+			}
+			scope:bloodline_type = flag:antler_bloodline
+		}
+		AND = {
+			scope:bloodline_target = {
+				has_trait = giant_bloodline
+			}
+			scope:bloodline_type = flag:giant_bloodline
+		}
 	}
 }

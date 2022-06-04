@@ -1,4 +1,4 @@
-﻿mana_affinity_level = {
+﻿mana_affinity_level = { #Localisation levels for mana affinity
 	type = character
 
 	text = {
@@ -44,40 +44,330 @@
 	}
 }
 
-mana_blood_compatibility_owner_level = {
+mana_blood_compatibility_level = { #Localization levels for mana blood compatibility with target
 	type = artifact
 
 	text = {
 		localization_key = skill_level_terrible
-		trigger = { mana_blood_compatibility_with_owner < terrible_mana_blood_compatibility_level }
+		trigger = { mana_blood_compatibility < terrible_mana_blood_compatibility_level }
 	}
 
 	text = {
 		localization_key = skill_level_poor
 		trigger = {
-			mana_blood_compatibility_with_owner >= terrible_mana_blood_compatibility_level
-			mana_blood_compatibility_with_owner < average_mana_blood_compatibility_level
+			mana_blood_compatibility >= terrible_mana_blood_compatibility_level
+			mana_blood_compatibility < average_mana_blood_compatibility_level
 		}
 	}
 
 	text = {
 		localization_key = skill_level_average
 		trigger = {
-			mana_blood_compatibility_with_owner >= average_mana_blood_compatibility_level
-			mana_blood_compatibility_with_owner < good_mana_blood_compatibility_level
+			mana_blood_compatibility >= average_mana_blood_compatibility_level
+			mana_blood_compatibility < good_mana_blood_compatibility_level
 		}
 	}
 
 	text = {
 		localization_key = skill_level_good
 		trigger = {
-			mana_blood_compatibility_with_owner >= good_mana_blood_compatibility_level
-			mana_blood_compatibility_with_owner < excellent_mana_blood_compatibility_level
+			mana_blood_compatibility >= good_mana_blood_compatibility_level
+			mana_blood_compatibility < excellent_mana_blood_compatibility_level
 		}
 	}
 
 	text = {
 		localization_key = skill_level_excellent
-		trigger = { mana_blood_compatibility_with_owner >= excellent_mana_blood_compatibility_level }
+		trigger = { mana_blood_compatibility >= excellent_mana_blood_compatibility_level }
+	}
+}
+
+#For each option 0-8
+mana_blood_compatibility_level_option_0 = {
+	type = character
+	text = {
+		localization_key = skill_level_terrible
+		trigger = { scope:option_0_compatibility < terrible_mana_blood_compatibility_level }
+	}
+
+	text = {
+		localization_key = skill_level_poor
+		trigger = {
+			scope:option_0_compatibility >= terrible_mana_blood_compatibility_level
+			scope:option_0_compatibility < average_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_average
+		trigger = {
+			scope:option_0_compatibility >= average_mana_blood_compatibility_level
+			scope:option_0_compatibility < good_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_good
+		trigger = {
+			scope:option_0_compatibility >= good_mana_blood_compatibility_level
+			scope:option_0_compatibility < excellent_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_excellent
+		trigger = { scope:option_0_compatibility >= excellent_mana_blood_compatibility_level }
+	}
+}
+mana_blood_compatibility_level_option_1 = {
+	type = character
+	text = {
+		localization_key = skill_level_terrible
+		trigger = { scope:option_1_compatibility < terrible_mana_blood_compatibility_level }
+	}
+
+	text = {
+		localization_key = skill_level_poor
+		trigger = {
+			scope:option_1_compatibility >= terrible_mana_blood_compatibility_level
+			scope:option_1_compatibility < average_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_average
+		trigger = {
+			scope:option_1_compatibility >= average_mana_blood_compatibility_level
+			scope:option_1_compatibility < good_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_good
+		trigger = {
+			scope:option_1_compatibility >= good_mana_blood_compatibility_level
+			scope:option_1_compatibility < excellent_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_excellent
+		trigger = { scope:option_1_compatibility >= excellent_mana_blood_compatibility_level }
+	}
+}
+mana_blood_compatibility_level_option_2 = {
+	type = character
+	text = {
+		localization_key = skill_level_terrible
+		trigger = { scope:option_2_compatibility < terrible_mana_blood_compatibility_level }
+	}
+
+	text = {
+		localization_key = skill_level_poor
+		trigger = {
+			scope:option_2_compatibility >= terrible_mana_blood_compatibility_level
+			scope:option_2_compatibility < average_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_average
+		trigger = {
+			scope:option_2_compatibility >= average_mana_blood_compatibility_level
+			scope:option_2_compatibility < good_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_good
+		trigger = {
+			scope:option_2_compatibility >= good_mana_blood_compatibility_level
+			scope:option_2_compatibility < excellent_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_excellent
+		trigger = { scope:option_2_compatibility >= excellent_mana_blood_compatibility_level }
+	}
+}
+mana_blood_compatibility_level_option_3 = {
+	type = character
+	text = {
+		localization_key = skill_level_terrible
+		trigger = { scope:option_3_compatibility < terrible_mana_blood_compatibility_level }
+	}
+
+	text = {
+		localization_key = skill_level_poor
+		trigger = {
+			scope:option_3_compatibility >= terrible_mana_blood_compatibility_level
+			scope:option_3_compatibility < average_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_average
+		trigger = {
+			scope:option_3_compatibility >= average_mana_blood_compatibility_level
+			scope:option_3_compatibility < good_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_good
+		trigger = {
+			scope:option_3_compatibility >= good_mana_blood_compatibility_level
+			scope:option_3_compatibility < excellent_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_excellent
+		trigger = { scope:option_3_compatibility >= excellent_mana_blood_compatibility_level }
+	}
+}
+mana_blood_compatibility_level_option_4 = {
+	type = character
+	text = {
+		localization_key = skill_level_terrible
+		trigger = { scope:option_4_compatibility < terrible_mana_blood_compatibility_level }
+	}
+
+	text = {
+		localization_key = skill_level_poor
+		trigger = {
+			scope:option_4_compatibility >= terrible_mana_blood_compatibility_level
+			scope:option_4_compatibility < average_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_average
+		trigger = {
+			scope:option_4_compatibility >= average_mana_blood_compatibility_level
+			scope:option_4_compatibility < good_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_good
+		trigger = {
+			scope:option_4_compatibility >= good_mana_blood_compatibility_level
+			scope:option_4_compatibility < excellent_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_excellent
+		trigger = { scope:option_4_compatibility >= excellent_mana_blood_compatibility_level }
+	}
+}
+mana_blood_compatibility_level_option_5 = {
+	type = character
+	text = {
+		localization_key = skill_level_terrible
+		trigger = { scope:option_5_compatibility < terrible_mana_blood_compatibility_level }
+	}
+
+	text = {
+		localization_key = skill_level_poor
+		trigger = {
+			scope:option_5_compatibility >= terrible_mana_blood_compatibility_level
+			scope:option_5_compatibility < average_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_average
+		trigger = {
+			scope:option_5_compatibility >= average_mana_blood_compatibility_level
+			scope:option_5_compatibility < good_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_good
+		trigger = {
+			scope:option_5_compatibility >= good_mana_blood_compatibility_level
+			scope:option_5_compatibility < excellent_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_excellent
+		trigger = { scope:option_5_compatibility >= excellent_mana_blood_compatibility_level }
+	}
+}
+mana_blood_compatibility_level_option_6 = {
+	type = character
+	text = {
+		localization_key = skill_level_terrible
+		trigger = { scope:option_6_compatibility < terrible_mana_blood_compatibility_level }
+	}
+
+	text = {
+		localization_key = skill_level_poor
+		trigger = {
+			scope:option_6_compatibility >= terrible_mana_blood_compatibility_level
+			scope:option_6_compatibility < average_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_average
+		trigger = {
+			scope:option_6_compatibility >= average_mana_blood_compatibility_level
+			scope:option_6_compatibility < good_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_good
+		trigger = {
+			scope:option_6_compatibility >= good_mana_blood_compatibility_level
+			scope:option_6_compatibility < excellent_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_excellent
+		trigger = { scope:option_6_compatibility >= excellent_mana_blood_compatibility_level }
+	}
+}
+mana_blood_compatibility_level_option_7 = {
+	type = character
+	text = {
+		localization_key = skill_level_terrible
+		trigger = { scope:option_7_compatibility < terrible_mana_blood_compatibility_level }
+	}
+
+	text = {
+		localization_key = skill_level_poor
+		trigger = {
+			scope:option_7_compatibility >= terrible_mana_blood_compatibility_level
+			scope:option_7_compatibility < average_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_average
+		trigger = {
+			scope:option_7_compatibility >= average_mana_blood_compatibility_level
+			scope:option_7_compatibility < good_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_good
+		trigger = {
+			scope:option_7_compatibility >= good_mana_blood_compatibility_level
+			scope:option_7_compatibility < excellent_mana_blood_compatibility_level
+		}
+	}
+
+	text = {
+		localization_key = skill_level_excellent
+		trigger = { scope:option_7_compatibility >= excellent_mana_blood_compatibility_level }
 	}
 }

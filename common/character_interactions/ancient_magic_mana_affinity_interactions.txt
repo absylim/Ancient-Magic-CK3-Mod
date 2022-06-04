@@ -71,6 +71,7 @@ ask_for_mana_blood_interaction = { #Personal Interaction with character to ask f
 				has_treatable_disease_trigger = yes
 				has_std_trigger = yes
 			}
+			is_adult = yes
 		}
 	}
 
@@ -96,10 +97,10 @@ ask_for_mana_blood_interaction = { #Personal Interaction with character to ask f
 	# Include bloodline
 	send_option = {
 		is_valid = {
-			scope:actor = {
+			scope:recipient = {
 				custom_tooltip = {
 					text = NO_MAGICAL_BLOODLINE
-					has_magical_bloodline = yes
+					has_magical_bloodline_trigger = yes
 				}
 			}
 		}
@@ -107,7 +108,7 @@ ask_for_mana_blood_interaction = { #Personal Interaction with character to ask f
 		localization = INCLUDE_MAGICAL_BLOODLINE
 	}
 	should_use_extra_icon = {
-		scope:actor = { has_magical_bloodline = yes }
+		scope:actor = { has_magical_bloodline_trigger = yes }
 	}
 	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
 	send_options_exclusive = no
