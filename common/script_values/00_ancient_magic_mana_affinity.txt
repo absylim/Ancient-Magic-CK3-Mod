@@ -75,7 +75,7 @@ mana_affinity = {
 		limit = {
 			OR = {
 				has_trait = infused_magical_blood_compatible
-			has_trait = infused_magical_blood_incompatible
+				has_trait = infused_magical_blood_incompatible
 			}
 		}
 		add = {
@@ -327,29 +327,45 @@ mana_blood_compatibility = { #Compatibility of the blood with owner, the higher 
 	
 	if = {
 		limit = {
-			exists = var:bloodline
-			has_magical_bloodline_trigger = no
+			has_variable  = bloodline
+			NOT = { var:bloodline = flag:none }
+			scope:infusion_target = {
+				has_magical_bloodline_trigger = no
+			}
 		}
 		subtract = 50
 	}
 	else_if = { #Same bloodline
 		limit = {
-			exists = var:bloodline
-			has_magical_bloodline_of_type_trigger = { TARGET = scope:infusion_target TYPE = var:bloodline}
+			has_variable  = bloodline
+			NOT = { var:bloodline = flag:none }
+			has_magical_bloodline_of_type_trigger = { TARGET = scope:infusion_target TYPE = var:bloodline }
 		}
 		add = 15
 	}
 	else_if = {
 		limit = {
-			exists = var:bloodline
-			has_magical_bloodline_trigger = yes
+			has_variable  = bloodline
+			NOT = { var:bloodline = flag:none }
+			scope:infusion_target = {
+				has_magical_bloodline_trigger = yes
+			}
 		}
 		subtract = 500
 	}
 	
 	subtract = {
         value = var:mana_affinity
-        subtract = scope:infusion_target.var:base_mana_affinity
+        subtract = {
+			value = scope:infusion_target.var:base_mana_affinity
+			
+			if = {
+				limit = {
+					has_variable = bloodline
+				}
+				add = scope:infusion_target.mana_affinity_bloodline_boost
+			}
+		}
         multiply = 5
         min = 0 #Do not increase the compatibility if bloods mana affinity is lower then then owners
     }

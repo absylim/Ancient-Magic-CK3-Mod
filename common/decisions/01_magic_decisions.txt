@@ -84,6 +84,10 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 	
 	is_shown = {
 		has_some_blood_in_artifact_inventory_trigger = yes
+		NOT = {
+			has_trait = infused_magical_blood_compatible
+			has_trait = infused_magical_blood_incompatible
+		}
 	}
 	
 	desc = implant_magical_blood_decision_desc
@@ -100,6 +104,7 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 					creator = {
 						is_close_family_of = ROOT
 					}
+					var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
 				}
 			}
 			current_description = AM_implant_magical_blood_option_close_family_tooltip
@@ -119,6 +124,7 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 					creator = {
 						is_extended_family_of = ROOT
 					}
+					var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
 				}
 			}
 			current_description = AM_implant_magical_blood_option_extended_family_tooltip
@@ -141,6 +147,7 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 							is_close_family_of = ROOT
 						}
 					}
+					var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
 				}
 			}
 			current_description = AM_implant_magical_blood_option_others_tooltip

@@ -229,20 +229,14 @@ ask_for_mana_blood_interaction_effect = {
 }
 
 add_magical_bloodline_effect = {
-	$TARGET$ = { save_temporary_scope_as = bloodline_target }
-	save_temporary_scope_value_as = {
-		name = bloodline_type 
-		value = $TYPE$
-	}
-	
-	scope:bloodline_target = {
+	$TARGET$ = {
 		if = {
 			limit = {
 				has_magical_bloodline_trigger = no
 			}
 			switch = {
-			  trigger = scope:bloodline_type
-			  flag:draconic_bloodline = { add_trait = draconic_bloodline }
+			  trigger = $TYPE$
+			  flag:dragonic_bloodline = { add_trait = dragonic_bloodline }
 			  flag:antler_bloodline = { add_trait = antler_bloodline }
 			  flag:giant_bloodline = { add_trait = giant_bloodline }
 			}

@@ -92,30 +92,10 @@ has_magical_bloodline_trigger = {
 }
 
 has_magical_bloodline_of_type_trigger = {
-	$TARGET$ = { save_temporary_scope_as = bloodline_target }
-	save_temporary_scope_value_as = {
-		name = bloodline_type 
-		value = $TYPE$
-	}
-	
-	OR = {
-		AND = {
-			scope:bloodline_target = {
-				has_trait = dragonic_bloodline
-			}
-			scope:bloodline_type = flag:dragonic_bloodline
-		}
-		AND = {
-			scope:bloodline_target = {
-				has_trait = antler_bloodline
-			}
-			scope:bloodline_type = flag:antler_bloodline
-		}
-		AND = {
-			scope:bloodline_target = {
-				has_trait = giant_bloodline
-			}
-			scope:bloodline_type = flag:giant_bloodline
-		}
+	switch = {
+		trigger = $TYPE$
+		flag:dragonic_bloodline = { $TARGET$ = { has_trait = dragonic_bloodline } }
+		flag:antler_bloodline = { $TARGET$ = { has_trait = antler_bloodline } }
+		flag:giant_bloodline = { $TARGET$ = { has_trait = giant_bloodline } }
 	}
 }

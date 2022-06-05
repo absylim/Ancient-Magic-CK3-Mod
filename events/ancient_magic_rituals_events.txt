@@ -1190,7 +1190,6 @@ ancient_magic_rituals_events.008 = { # Who implant the blood
 		name = ancient_magic_rituals_events.008.a
 		
 		destroy_artifact = scope:chosen_blood
-		
 		random_list = {
 			30 = { #Success
 				desc = ancient_magic_rituals_events.008.succcess
@@ -1381,11 +1380,13 @@ ancient_magic_rituals_events.009 = { #Successful transfusion - Self
 		}
 		if = {
 			limit = {
-				exists = scope:chosen_blood.var:bloodline
+				scope:chosen_blood = {
+					has_variable = bloodline
+				}
 			}
 			random_list = {
-				20 = { add_magical_bloodline_effect = {TARGET = scope:infusion_target TYPE = scope:chosen_blood.var:bloodline} }
-				80 = {} #Nothing happens
+				30 = { add_magical_bloodline_effect = {TARGET = scope:infusion_target TYPE = scope:chosen_blood.var:bloodline} }
+				70 = {} #Nothing happens
 			}
 		}
 	}
@@ -1421,11 +1422,13 @@ ancient_magic_rituals_events.010 = { #Successful transfusion - Physician
 		}
 		if = {
 			limit = {
-				exists = scope:chosen_blood.var:bloodline
+				scope:chosen_blood = {
+					has_variable = bloodline
+				}
 			}
 			random_list = {
-				20 = { add_magical_bloodline_effect = {TARGET = scope:infusion_target TYPE = scope:chosen_blood.var:bloodline} }
-				80 = {} #Nothing happens
+				30 = { add_magical_bloodline_effect = {TARGET = scope:infusion_target TYPE = scope:chosen_blood.var:bloodline} }
+				70 = {} #Nothing happens
 			}
 		}
 	}
@@ -1484,6 +1487,17 @@ ancient_magic_rituals_events.011 = { #Unsuccessful transfusion - Self
 				}
 			}
 		}
+		if = {
+			limit = {
+				scope:chosen_blood = {
+					has_variable = bloodline
+				}
+			}
+			random_list = { #The fact that its incompatible doesnt mean there isnt any chance to get the bloodline, but the probability is much lower
+				5 = { add_magical_bloodline_effect = {TARGET = scope:infusion_target TYPE = scope:chosen_blood.var:bloodline} }
+				95 = {} #Nothing happens
+			}
+		}
 	}
 	
 	left_portrait = {
@@ -1513,6 +1527,17 @@ ancient_magic_rituals_events.012 = { #Unuccessful transfusion - Physician
 					multiply = 0.25
 					min = 0
 				}
+			}
+		}
+		if = {
+			limit = {
+				scope:chosen_blood = {
+					has_variable = bloodline
+				}
+			}
+			random_list = { #The fact that its incompatible doesnt mean there isnt any chance to get the bloodline, but the probability is much lower
+				5 = { add_magical_bloodline_effect = {TARGET = scope:infusion_target TYPE = scope:chosen_blood.var:bloodline} }
+				95 = {} #Nothing happens
 			}
 		}
 	}
