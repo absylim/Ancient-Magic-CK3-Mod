@@ -188,7 +188,7 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 	}
 }
 
-am_convert_holding_to_metropolis_decision = {
+am_convert_holding_to_city_of_magic_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
 	major = yes
 	ai_check_interval = 0
@@ -213,7 +213,7 @@ am_convert_holding_to_metropolis_decision = {
 			}
 			trigger_else = {
 				custom_description = {
-					text = "has_am_magical_city_barony_selected"
+					text = "has_am_city_of_magic_barony_selected"
 					always = no
 				}
 			}
@@ -239,7 +239,7 @@ am_convert_holding_to_metropolis_decision = {
 			text = "has_am_eligble_barony_in_county"
 			any_held_county = {
 				any_in_de_jure_hierarchy = {
-					am_barony_is_valid_for_metropolis_trigger = { CHARACTER = scope:ruler }
+					am_barony_is_valid_for_city_of_magic_trigger = { CHARACTER = scope:ruler }
 				}
 			}
 		}
@@ -270,7 +270,7 @@ am_convert_holding_to_metropolis_decision = {
 			}
 		}
 		
-		# custom_tooltip = cow_convert_holding_to_metropolis_decision_effect_message
+		# custom_tooltip = am_convert_holding_to_city_of_magic_decision_effect_message
 	}
 	
 	ai_potential = {
@@ -282,7 +282,7 @@ am_convert_holding_to_metropolis_decision = {
 	}
 }
 
-am_ai_convert_holding_to_metropolis_decision = {
+am_ai_convert_holding_to_city_of_magic_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
 	
 	ai_check_interval = 120
@@ -320,18 +320,14 @@ am_ai_convert_holding_to_metropolis_decision = {
 		NOT = { has_government = tribal_government }
 		capital_province = {
 			has_ongoing_construction = no
-			NOT = { has_holding_type = cow_metropolis_holding }
-			custom_description = {
-				text = barony_is_not_hist_cow_metropolis_trigger_custom
-				barony_is_valid_for_cow_metropolis_trigger = no
-			}
+			NOT = { has_holding_type = city_of_magic_holding }
 		}
-		NOT = { has_character_flag = flag_ai_cow_found_metropolis } # AI ONLY - SO NO NEED FOR DESC
+		NOT = { has_character_flag = flag_ai_am_found_city_of_magic } # AI ONLY - SO NO NEED FOR DESC
 	}
 
 	cost = {
 		gold = {
-			value = 4000
+			value = 3000
 		}
 		prestige = monumental_prestige_value
 	}
@@ -339,16 +335,16 @@ am_ai_convert_holding_to_metropolis_decision = {
 	effect = {
 		save_scope_as = founder
 		
-		add_character_flag = flag_ai_cow_found_metropolis
+		add_character_flag = flag_ai_am_found_city_of_magic
 		
-		trigger_event = cow_decisions.3003
+		trigger_event = ancient_magic_debug.303
 		
 		every_player = {
 			limit = {
 				NOT = { this = root }
 				is_within_diplo_range = { CHARACTER = root }
 			}
-			trigger_event = cow_decisions.3002
+			trigger_event = ancient_magic_debug.302
 		}
 
 	}

@@ -18,11 +18,11 @@
  AM_implant_magical_blood_option_others: "Blood of others"
  AM_implant_magical_blood_option_others_tooltip: "Magical Blood extracted from people which arent closely geneticaly related. #S Low Compatibility #!"
  
- am_convert_holding_to_metropolis_decision:0 "Convert Holding to City of Magic"
- am_convert_holding_to_metropolis_decision_tooltip:0 "The existing holding(s) will be replaced with a [city_of_magic|E] holding"
- am_convert_holding_to_metropolis_decision_desc:0 "#F Architects and engineers have been congregating within my realm as of late. Many are sought after as master builders, but to prove their skills, they want great projects to work on.#!"
- am_convert_holding_to_metropolis_decision_confirm:0 "Convert Holding"
- am_convert_holding_to_metropolis_decision_effect_message:1 "Placeholder\n$EFFECT_LIST_BULLET$"
+ am_convert_holding_to_city_of_magic_decision:0 "Convert Holding to City of Magic"
+ am_convert_holding_to_city_of_magic_decision_tooltip:0 "The existing holding(s) will be replaced with a [city_of_magic|E] holding"
+ am_convert_holding_to_city_of_magic_decision_desc:0 "#F Architects and engineers have been congregating within my realm as of late. Many are sought after as master builders, but to prove their skills, they want great projects to work on.#!"
+ am_convert_holding_to_city_of_magic_decision_confirm:0 "Convert Holding"
+ am_convert_holding_to_city_of_magic_decision_effect_message:1 "Placeholder\n$EFFECT_LIST_BULLET$"
  I_HAVE_AM_ELIGBLE_BARONIES_COUNTY:1 "You have a [barony|E] with a [castle|E], [city|E] or [temple|E] that can be converted to [city_of_magic|E]\n$EFFECT_LIST_BULLET$Only holdings in the [counties|E] you personally are the [holder|E] of are eligible\n$EFFECT_LIST_BULLET$Holdings with active constructions are #bold not#! eligible\n$EFFECT_LIST_BULLET$Despite what the Select Holding window may tell you, you #bold can#! in fact select a [county_capital|E]\n$EFFECT_LIST_BULLET$If you convert a [temple|E], you may have to wait until your [realm_priest|E] relinquishes the [city_of_magic|E] automatically"
  NOT_I_HAVE_AM_METROPOLIS_BARONY_SELECTED:1 "You have #bold not#! selected a Barony"
 
@@ -36,12 +36,15 @@
  AM_SELECT_HOLDING_NO_TITLES:0 "No available Holdings"
  AM_SELECT_HOLDING_TOOLTIP:0 "#T [Select_CString( DecisionViewWidgetCreateHolyOrder.HasValidBaronies, '$COW_SELECT_HOLDING_TITLE$', '$COW_SELECT_HOLDING_NO_TITLES$' )] #!"
  AM_SELECT_HOLDING_CONFIRM:0 "Select"
+ 
+ no_built_am_city_of_magic:0 "The province does not have a [city_of_magic|E]"
+ no_am_city_of_magic_holding:0 "The province does not already have a [city_of_magic|E] holding"
   
- am_ai_convert_holding_to_metropolis_decision:0 "Found City of Magic (AI)"
- am_ai_convert_holding_to_metropolis_decision_desc:0 "Architects ,engineers and mages have been congregating within my realm as of late. Many are sought after as master builders, enchanters, and to prove their skills, they have agreed to help us expand our capital into a proper Magical City."
- am_ai_convert_holding_to_metropolis_decision_tooltip:1 "The existing capital holding will be replaced with a [city_of_magic|E] holding"
- am_ai_convert_holding_to_metropolis_decision_confirm:1 "Lay the foundation!"
- am_ai_convert_holding_to_metropolis_decision_custom:0 "In a fitting Barony"
+ am_ai_convert_holding_to_city_of_magic_decision:0 "Found City of Magic (AI)"
+ am_ai_convert_holding_to_city_of_magic_decision_desc:0 "Architects ,engineers and mages have been congregating within my realm as of late. Many are sought after as master builders, enchanters, and to prove their skills, they have agreed to help us expand our capital into a proper Magical City."
+ am_ai_convert_holding_to_city_of_magic_decision_tooltip:1 "The existing capital holding will be replaced with a [city_of_magic|E] holding"
+ am_ai_convert_holding_to_city_of_magic_decision_confirm:1 "Lay the foundation!"
+ am_ai_convert_holding_to_city_of_magic_decision_custom:0 "In a fitting Barony"
  
  #intrigue menu
  open_spellbook_decision: "Open Spellbook"

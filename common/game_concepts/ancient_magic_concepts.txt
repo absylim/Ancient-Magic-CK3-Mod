@@ -96,10 +96,6 @@ undead = {
 	alias = { lesser_undead greater_undead }
 }
 
-magocracy = {
-	alias = { magocracies magocratic magocratic_government }
-}
-
 city_of_magic = {
 }
 
