@@ -187,3 +187,236 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 		}
 	}
 }
+
+am_convert_holding_to_metropolis_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	major = yes
+	ai_check_interval = 0
+
+	is_shown = {
+		is_landed = yes
+		is_magus_trigger = yes
+	}
+
+	widget = {
+		# Name of the widget to use. Must be at the path <decision_view_widgets>/<widget_name>.gui
+		gui = decision_view_widget_AM_convert_to_city_of_magic
+		# Some widgets require a custom controller (see below). Default: default
+		controller = create_holy_order
+		barony_valid = {
+			trigger_if = {
+				limit = { exists = this }
+				OR = {
+					building_magical_low_requirement = yes
+					building_magical_high_requirement = yes
+				}
+			}
+			trigger_else = {
+				custom_description = {
+					text = "has_am_magical_city_barony_selected"
+					always = no
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	is_valid = {
+		custom_description = {
+			text = "am_is_king_or_emperor"
+			highest_held_title_tier >= tier_kingdom
+		}
+		culture = {
+			has_innovation = innovation_city_planning
+		}
+		is_at_war = no
+		NOT = { has_government = tribal_government }
+		custom_description = {
+			text = "has_am_eligble_barony_in_county"
+			any_held_county = {
+				any_in_de_jure_hierarchy = {
+					am_barony_is_valid_for_metropolis_trigger = { CHARACTER = scope:ruler }
+				}
+			}
+		}
+	}
+
+	cost = {
+		gold = {
+			value = 5000
+		}
+	}
+
+	effect = {
+		scope:barony.title_province = {
+			hidden_effect = {
+				am_refound_set_holding_lvl_flag_effect = yes
+				am_set_building_lvl_flag_effect = yes
+			}
+			set_holding_type = city_of_magic_holding
+			hidden_effect = {
+				if = {
+					limit = { am_barony_variable_holding_level_trigger = yes }
+					am_refound_add_holding_level_effect = yes
+				}
+				if = {
+					limit = { am_barony_variable_building_level_trigger = yes }
+					am_add_building_lvl_effect = yes
+				}
+			}
+		}
+		
+		# custom_tooltip = cow_convert_holding_to_metropolis_decision_effect_message
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+am_ai_convert_holding_to_metropolis_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	
+	ai_check_interval = 120
+
+	is_shown = {
+		is_landed = yes
+		is_magus_trigger = yes
+		is_ai = yes # AI ONLY
+		capital_province = {
+			NOT = { has_holding_type = city_of_magic_holding }
+		}
+		highest_held_title_tier = tier_empire
+		NOT = { has_character_flag = flag_ai_am_found_city_of_magic }
+		NOT = {
+			faith = {
+				has_doctrine_parameter = witchcraft_illegal
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_ruler = yes
+		is_available_adult = yes
+	}
+
+	is_valid = {
+		highest_held_title_tier = tier_empire
+		culture = {
+			has_innovation = innovation_city_planning
+		}
+		prestige_level >= 4
+		gold >= 4000
+		is_at_war = no
+		is_ai = yes # AI ONLY
+		NOT = { has_government = tribal_government }
+		capital_province = {
+			has_ongoing_construction = no
+			NOT = { has_holding_type = cow_metropolis_holding }
+			custom_description = {
+				text = barony_is_not_hist_cow_metropolis_trigger_custom
+				barony_is_valid_for_cow_metropolis_trigger = no
+			}
+		}
+		NOT = { has_character_flag = flag_ai_cow_found_metropolis } # AI ONLY - SO NO NEED FOR DESC
+	}
+
+	cost = {
+		gold = {
+			value = 4000
+		}
+		prestige = monumental_prestige_value
+	}
+
+	effect = {
+		save_scope_as = founder
+		
+		add_character_flag = flag_ai_cow_found_metropolis
+		
+		trigger_event = cow_decisions.3003
+		
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = cow_decisions.3002
+		}
+
+	}
+	
+	ai_potential = {
+		is_adult = yes
+		is_independent_ruler = yes
+		highest_held_title_tier = tier_empire
+	}
+
+	ai_will_do = {
+		base = 100
+		modifier = {
+			factor = 2
+			AND = {
+				is_magus_trigger = yes
+				faith = {
+					has_doctrine_parameter = witchcraft_accepted
+				}
+			}
+		}
+		# implicit `factor = 1` if mage and witchcraft_shunned
+		modifier = {
+			factor = 0.5
+			AND = {
+				is_magus_trigger = yes
+				faith = {
+					has_doctrine_parameter = witchcraft_illegal
+				}
+			}
+		}
+		# implicit `factor = 1` if not mage and witchcraft_accepted
+		modifier = {
+			factor = 0.5
+			AND = {
+				NOT = { is_magus_trigger = yes }
+				faith = {
+					has_doctrine_parameter = witchcraft_shunned
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				NOT = { is_magus_trigger = yes }
+				faith = {
+					has_doctrine_parameter = witchcraft_illegal
+				}
+			}
+	}
+		# implicit `factor = 1` if theocracy_government and witchcraft_accepted
+		modifier = {
+			factor = 0.5
+			AND = {
+				has_government = theocracy_government
+				faith = {
+					has_doctrine_parameter = witchcraft_shunned
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				has_government = theocracy_government
+				faith = {
+					has_doctrine_parameter = witchcraft_illegal
+				}
+			}
+		}
+	}
+}
