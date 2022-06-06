@@ -4,7 +4,7 @@
 	is_shown = {
 		#is_magus_trigger = yes #As this is decision for debug
 		is_ai = no
-		debug_mode = yes
+		debug_only = yes
 	}
 	
 	is_valid = {
@@ -21,7 +21,7 @@ debug_regenerate_base_mana_affinity = {
 	
 	is_shown = {
 		is_ai = no
-		debug_mode = yes
+		debug_only = yes
 	}
 	
 	is_valid = {

@@ -34,7 +34,7 @@
 
  AM_SELECT_HOLDING_TITLE:1 "Select Holding"
  AM_SELECT_HOLDING_NO_TITLES:0 "No available Holdings"
- AM_SELECT_HOLDING_TOOLTIP:0 "#T [Select_CString( DecisionViewWidgetCreateHolyOrder.HasValidBaronies, '$COW_SELECT_HOLDING_TITLE$', '$COW_SELECT_HOLDING_NO_TITLES$' )] #!"
+ AM_SELECT_HOLDING_TOOLTIP:0 "#T [Select_CString( DecisionViewWidgetCreateHolyOrder.HasValidBaronies, '$AM_SELECT_HOLDING_TITLE$', '$AM_SELECT_HOLDING_NO_TITLES$' )] #!"
  AM_SELECT_HOLDING_CONFIRM:0 "Select"
  
  no_built_am_city_of_magic:0 "The province does not have a [city_of_magic|E]"

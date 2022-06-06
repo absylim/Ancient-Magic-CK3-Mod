@@ -1,12 +1,6 @@
 ﻿l_english:
  trait_immortal: "Immortal"
  trait_immortal_desc: "This character is an immortal."
- trait_magic_potential_1: "Minor Magic Potential"
- trait_magic_potential_1_desc: "This character has limited magical talent."
- trait_magic_potential_2: "Moderate Magic Potential"
- trait_magic_potential_2_desc: "This character has moderate magical talent."
- trait_magic_potential_3: "Great Magic Potential"
- trait_magic_potential_3_desc: "This character has great magical talent."
  trait_master_of_time: "Master of Time"
  trait_master_of_time_desc: "This character has mastered time itself, and can grant immortality."
  trait_avatar_of_life: "Avatar of Life"

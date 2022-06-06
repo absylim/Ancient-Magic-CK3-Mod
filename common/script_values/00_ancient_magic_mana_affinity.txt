@@ -84,6 +84,7 @@ mana_affinity = {
 			format = "FORMAT_MANA_AFFINITY_BOOST" #Custom format for mana affinity
 		}
 	}
+	round = yes
 }
 
 mana_affinity_bloodline_boost = { #Bonus added to mana affinity thanks to ones Bloodline

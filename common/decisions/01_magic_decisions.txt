@@ -188,6 +188,7 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 	}
 }
 
+#Inspired by COW
 am_convert_holding_to_city_of_magic_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
 	major = yes
@@ -196,6 +197,7 @@ am_convert_holding_to_city_of_magic_decision = {
 	is_shown = {
 		is_landed = yes
 		is_magus_trigger = yes
+		is_ai = no
 	}
 
 	widget = {
@@ -206,10 +208,7 @@ am_convert_holding_to_city_of_magic_decision = {
 		barony_valid = {
 			trigger_if = {
 				limit = { exists = this }
-				OR = {
-					building_magical_low_requirement = yes
-					building_magical_high_requirement = yes
-				}
+				am_barony_is_valid_for_city_of_magic_trigger = { CHARACTER = scope:ruler }
 			}
 			trigger_else = {
 				custom_description = {
@@ -247,7 +246,7 @@ am_convert_holding_to_city_of_magic_decision = {
 
 	cost = {
 		gold = {
-			value = 5000
+			value = 6000
 		}
 	}
 
@@ -314,13 +313,17 @@ am_ai_convert_holding_to_city_of_magic_decision = {
 			has_innovation = innovation_city_planning
 		}
 		prestige_level >= 4
-		gold >= 4000
+		gold >= 3500
 		is_at_war = no
 		is_ai = yes # AI ONLY
 		NOT = { has_government = tribal_government }
 		capital_province = {
 			has_ongoing_construction = no
 			NOT = { has_holding_type = city_of_magic_holding }
+			OR = { 
+				has_province_modifier = ley_line_modifier 
+				has_province_modifier = focal_point_modifier 
+			}	
 		}
 		NOT = { has_character_flag = flag_ai_am_found_city_of_magic } # AI ONLY - SO NO NEED FOR DESC
 	}

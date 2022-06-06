@@ -40,7 +40,7 @@ barony_is_hist_vanilla_am_university_trigger = {
 	}
 }
 
-am_barony_is_valid_for_metropolis_trigger = {
+am_barony_is_valid_for_city_of_magic_trigger = {
 	title_province = {
 		OR = {
 			NOT = { has_holding_type = city_of_magic_holding }
@@ -49,6 +49,10 @@ am_barony_is_valid_for_metropolis_trigger = {
 			has_holding_type = church_holding
 		}
 		has_ongoing_construction = no
+		OR = {
+			has_province_modifier = ley_line_modifier
+			has_province_modifier = focal_point_modifier
+		}
 	}
 	trigger_if = {
 		limit = {

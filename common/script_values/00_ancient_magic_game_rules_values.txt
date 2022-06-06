@@ -1,0 +1,126 @@
+﻿#Author: Donekulda
+#Desc: Script values gotten based on set game rules
+
+AI_game_rule_high_mana_affinity_chance = {
+	value = 0
+	
+	if = {
+		limit = {
+			has_game_rule = NPC_magic_chance_0001
+		}
+		add = 1
+	}
+	else_if = {
+		limit = {
+			has_game_rule = NPC_magic_chance_001
+		}
+		add = 10
+	}
+	else_if = {
+		limit = {
+			has_game_rule = NPC_magic_chance_01
+		}
+		add = 100
+	}
+	else_if = {
+		limit = {
+			has_game_rule = NPC_magic_chance_05
+		}
+		add = 500
+	}
+	else_if = {
+		limit = {
+			has_game_rule = NPC_magic_chance_1
+		}
+		add = 1000
+	}
+}
+
+AI_game_rule_not_high_mana_affinity_chance = {
+	value = 1000
+	subtract = AI_game_rule_high_mana_affinity_chance
+}
+
+AI_game_rule_magic_level = {
+	value = 0
+	
+	if = {
+		limit = {
+			has_game_rule = NPC_magic_level_1
+		}
+		add = 5
+	}
+	else_if = {
+		limit = {
+			has_game_rule = NPC_magic_level_2
+		}
+		add = 10
+	}
+	else_if = {
+		limit = {
+			has_game_rule = NPC_magic_level_3
+		}
+		add = 15
+	}
+	else_if = {
+		limit = {
+			has_game_rule = NPC_magic_level_4
+		}
+		add = 20
+	}
+	else_if = {
+		limit = {
+			has_game_rule = NPC_magic_level_5
+		}
+		add = 25
+	}
+	else_if = {
+		limit = {
+			has_game_rule = NPC_magic_level_random
+		}
+		add = { value = { integer_range = { min = 0 max = 25 } } }
+	}
+	round = yes
+}
+
+PLAYER_game_rule_mana_affinity_level = {
+	value = 0
+	
+	if = {
+		limit = {
+			has_game_rule = PC_magic_level_1
+		}
+		add = 5
+	}
+	else_if = {
+		limit = {
+			has_game_rule = PC_magic_level_2
+		}
+		add = 10
+	}
+	else_if = {
+		limit = {
+			has_game_rule = PC_magic_level_3
+		}
+		add = 15
+	}
+	else_if = {
+		limit = {
+			has_game_rule = PC_magic_level_4
+		}
+		add = 20
+	}
+	else_if = {
+		limit = {
+			has_game_rule = PC_magic_level_5
+		}
+		add = 25
+	}
+	else_if = {
+		limit = {
+			has_game_rule = PC_magic_level_random
+		}
+		add = { value = { integer_range = { min = 0 max = 25 } } }
+	}
+	round = yes
+}

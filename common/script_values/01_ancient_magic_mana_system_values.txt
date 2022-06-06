@@ -60,9 +60,6 @@ enchanting_aura_perk_gen_cost = 2
 master_of_puppets_perk_gen_cost = 2
 
 # Misc _gen_costs
-magic_potential_1_gen_cost = 10
-magic_potential_2_gen_cost = 20
-magic_potential_3_gen_cost = 30
 mana_gen_per_magic_circle = 30
 mana_gen_lifestyle = 100
 mana_gen_legacy_2 = 10
@@ -139,10 +136,8 @@ lesser_undead_maa_stack_amount = 200
 # No-brainer value in a magic mod.
 # Uses - Is a character even possibly a mage? 'mage_potency > 0' Is the character not a mage? 'mage_potency < 1' How much potential does this mage have? 'mage_potency >= x'
 mage_potency = {
-	value = 0
-	if = { limit = { has_trait = magic_potential_1 } value = 1 }
-	else_if = { limit = { has_trait = magic_potential_2 } value = 2 }
-	else_if = { limit = { has_trait = magic_potential_3 } value = 3 }
+	value = mana_affinity
+	multiply = 0.2
 }
 
 # No-brainer value in a magic mod.
@@ -175,10 +170,8 @@ ancient_magic_mana_gen_gen_only = {
 }
 
 ancient_magic_mana_gen_potency = {
-	value = 0
-	if = { limit = { has_trait = magic_potential_1 } add = magic_potential_1_gen_cost }
-	else_if = { limit = { has_trait = magic_potential_2 } add = magic_potential_2_gen_cost }
-	else_if = { limit = { has_trait = magic_potential_3 } add = magic_potential_3_gen_cost }
+	value = mana_affinity
+	multiply = 2
 }
 
 ancient_magic_mana_gen_circles = {

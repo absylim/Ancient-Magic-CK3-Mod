@@ -14,11 +14,6 @@
  game_concept_mage_level: "Mage Level"
  game_concept_mage_level_desc: "The level of a spell caster is a somewhat arbitrary means of categorizing and describing the capabilities of a [GetTrait('mage').GetName( GetNullCharacter ) |LVl]. The more powerful the mage, the higher their level may be said to be. In general, the higher a spell caster's mage level, the more effective their spells will be.\n\nThe rate at which a spell caster's mage level increases is dependent on the [magic_potential|E] inherent in the blood of that individual. More potent spell casters will gain mage levels more quickly than those with less natural aptitude."
 
- game_concept_magic_potential: "Magic Potential"
- game_concept_magic_potential_desc: "For some, the ability to work magic comes to them nearly as naturally as breathing, while for others, casting even the simplest of workings is impossible. The magic potential of a character is a measure of the innate talent a character has for manipulating arcane forces. It is a congenital trait which is often passed down through a house for generations.\n\nHowever, on its own, magic potential has little effect. Even the most naturally gifted characters aren't able to perform more than the most minute of parlor tricks without training as a [GetTrait('mage').GetName( GetNullCharacter ) |LV].\n\n#IThe levels of magic potential are as follows:#!\n[GetTrait('magic_potential_1').GetName( GetNullCharacter ) |LV]\n[GetTrait('magic_potential_2').GetName( GetNullCharacter ) |LV]\n[GetTrait('magic_potential_3').GetName( GetNullCharacter ) |LV]"
- game_concept_mage_potency: "Magic Potency"
- game_concept_magic_skill: "Magic Skill"
-
  game_concept_mana: "Mana"
  game_concept_mana_i: "@aura_icon_active!"
  game_concept_mana_desc: "Mana is a fundamental force in the universe. It is a raw expression of 'potential' which may be used by a skilled magical practitioner to bend the laws of reality to their will.\n\nWhenever a mage casts a spell, they are channeling this 'potential' into an outcome of their own choosing, expending their mana reserves in the process. The more powerful an effect a [GetTrait('mage').GetName( GetNullCharacter ) |LVl] wishes to bring about, the more mana that effect requires."
@@ -226,6 +221,9 @@
  game_concept_mana_affinity: "Mana Affinity"
  game_concept_mana_affinity_i: "@icon_mana_affinity!"
  game_concept_mana_affinity_desc: "For some, the ability to work magic comes to them nearly as naturally as breathing, while for others, casting even the simplest of workings is impossible. The mana affinity of a character is a measure of the innate talent a character has for manipulating arcane forces. It is a congenital trait which is often passed down through a house for generations.\n\nHowever, on its own, mana affinity has little effect. Even the most naturally gifted characters aren't able to perform more than the most minute of parlor tricks without training as a [GetTrait('mage').GetName( GetNullCharacter ) |LV]."
+ game_concept_magic_potential: "Magic Potential"
+ game_concept_mage_potency: "Magic Potency"
+ game_concept_magic_skill: "Magic Skill"
  game_concept_magical_bloodline: "Bloodline"
  game_concept_magical_bloodline_i: "@icon_blood"
  game_concept_magical_bloodline_desc: "Bloodline are Runic Codes which affect their host on cellural level, most of the time gives them higher strenght, better mana affinity and other physical features. But also they can affect to some extent their Hosts personality!"

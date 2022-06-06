@@ -3,6 +3,7 @@
 ancient_magic_rituals_events.001 = { #Forge soul
 	title = ancient_magic_rituals_events.001.t
 	desc = ancient_magic_rituals_events.001.desc
+	theme = learning_scholarship_focus
 		
 	option = {
 		trigger = {
@@ -47,6 +48,7 @@ ancient_magic_rituals_events.001 = { #Forge soul
 ancient_magic_rituals_events.002 = { #Succesfull soul forging
 	title = ancient_magic_rituals_events.002.t
 	desc = ancient_magic_rituals_events.002.desc
+	theme = learning_scholarship_focus
 	
 	immediate = {
 		add_character_flag = materilised_soul
@@ -60,6 +62,7 @@ ancient_magic_rituals_events.002 = { #Succesfull soul forging
 ancient_magic_rituals_events.003 = { #Failure (death)
 	title = ancient_magic_rituals_events.003.t
 	desc = ancient_magic_rituals_events.003.desc
+	theme = death
 	
 	option = {
 		name = ancient_magic_rituals_events.003.a
@@ -1189,74 +1192,81 @@ ancient_magic_rituals_events.008 = { # Who implant the blood
 	option = { #Self
 		name = ancient_magic_rituals_events.008.a
 		
-		destroy_artifact = scope:chosen_blood
-		random_list = {
-			30 = { #Success
-				desc = ancient_magic_rituals_events.008.succcess
-				modifier = { #increase chances by having extrancted ones own blood
-					add = 10
-					has_character_modifier = drained_of_blood_modifier
-				}
-				modifier = {
-					add = {
-						value = learning
-						subtract = good_skill_level
+		effect = {
+			destroy_artifact = scope:chosen_blood
+			
+			random_list = {
+				30 = { #Success
+					desc = ancient_magic_rituals_events.008.succcess
+					modifier = { #increase chances by having extrancted ones own blood
+						add = 10
+						has_character_modifier = drained_of_blood_modifier
 					}
-				}
-				modifier = { #Blood compatibility
-					add = scope:chosen_blood_compatibility
-					subtract = average_mana_blood_compatibility_level
-				}
-				modifier = {
-					add = 5
-					has_trait = physician_1
-				}
-				modifier = {
-					add = 10
-					has_trait = physician_2
-				}
-				modifier = {
-					add = 15
-					has_trait = physician_3
-				}
-				modifier = {
-					add = 2
-					has_perk = biomancy_mage_perk
-				}
-				modifier = {
-					add = 30
-					has_perk = architect_of_bloodlines_perk
-				}
-				trigger_event = ancient_magic_rituals_events.009
-			}
-			50 = {
-				desc = ancient_magic_rituals_events.008.failure
-				modifier = { #Blood compatibility
-					add = average_mana_blood_compatibility_level
-					subtract = scope:chosen_blood_compatibility
-				}
-				modifier = {
-					add = {
-						value = good_skill_level
-						subtract = learning
+					modifier = {
+						add = {
+							value = learning
+							subtract = good_skill_level
+						}
 					}
-				}
-				modifier = { #Strong and healthy body is much more likely to reject foreign blood
-					add = 20
-					has_trait = whole_of_body
-				}
-				trigger_event = ancient_magic_rituals_events.011
-			}
-			20 = { #Death - higher chance as one can botch it if he does it on himself
-				modifier = { #if compatibility lower then 0
-					add = {
-						value = scope:chosen_blood_compatibility
-						multiply = 0.1
+					modifier = { #Blood compatibility
+						add = = {
+							value = scope:chosen_blood_compatibility
+							subtract = average_mana_blood_compatibility_level
+						}
 					}
-					scope:chosen_blood_compatibility < 0
+					modifier = {
+						add = 5
+						has_trait = physician_1
+					}
+					modifier = {
+						add = 10
+						has_trait = physician_2
+					}
+					modifier = {
+						add = 15
+						has_trait = physician_3
+					}
+					modifier = {
+						add = 2
+						has_perk = biomancy_mage_perk
+					}
+					modifier = {
+						add = 30
+						has_perk = architect_of_bloodlines_perk
+					}
+					trigger_event = ancient_magic_rituals_events.009
 				}
-				death = {
-					death_reason = death_botched_blood_transfusion
+				50 = {
+					desc = ancient_magic_rituals_events.008.failure
+					modifier = { #Blood compatibility
+						add = { 
+							value = average_mana_blood_compatibility_level
+							subtract = scope:chosen_blood_compatibility
+						}
+					}
+					modifier = {
+						add = {
+							value = good_skill_level
+							subtract = learning
+						}
+					}
+					modifier = { #Strong and healthy body is much more likely to reject foreign blood
+						add = 20
+						has_trait = whole_of_body
+					}
+					trigger_event = ancient_magic_rituals_events.011
+				}
+				20 = { #Death - higher chance as one can botch it if he does it on himself
+					modifier = { #if compatibility lower then 0
+						add = {
+							value = scope:chosen_blood_compatibility
+							multiply = 0.1
+						}
+						scope:chosen_blood_compatibility < 0
+					}
+					death = {
+						death_reason = death_botched_blood_transfusion
+					}
 				}
 			}
 		}
@@ -1270,85 +1280,91 @@ ancient_magic_rituals_events.008 = { # Who implant the blood
 			}
 		}
 		
-		destroy_artifact = scope:chosen_blood
-		
-		random_list = {
-			35 = { #Success
-				desc = ancient_magic_rituals_events.008.succcess
-				modifier = { #increase chances by having extrancted ones own blood
-					add = 10
-					has_character_modifier = drained_of_blood_modifier
-				}
-				modifier = {
-					add = {
-						value = scope:physician.learning
-						subtract = average_skill_level
+		effect = {
+			destroy_artifact = scope:chosen_blood
+			
+			random_list = {
+				35 = { #Success
+					desc = ancient_magic_rituals_events.008.succcess
+					modifier = { #increase chances by having extrancted ones own blood
+						add = 10
+						has_character_modifier = drained_of_blood_modifier
 					}
-				}
-				modifier = { #Blood compatibility
-					add = scope:chosen_blood_compatibility
-					subtract = average_mana_blood_compatibility_level
-				}
-				modifier = {
-					add = 5
-					scope:physician = {
-						has_trait = physician_1
+					modifier = {
+						add = {
+							value = scope:physician.learning
+							subtract = average_skill_level
+						}
 					}
-				}
-				modifier = {
-					add = 10
-					scope:physician = {
-						has_trait = physician_2
+					modifier = { #Blood compatibility
+						add = {
+							value = scope:chosen_blood_compatibility
+							subtract = average_mana_blood_compatibility_level
+						}
 					}
-				}
-				modifier = {
-					add = 15
-					scope:physician = {
-						has_trait = physician_3
+					modifier = {
+						add = 5
+						scope:physician = {
+							has_trait = physician_1
+						}
 					}
-				}
-				modifier = {
-					add = 2
-					scope:physician = {
-						has_perk = biomancy_mage_perk
+					modifier = {
+						add = 10
+						scope:physician = {
+							has_trait = physician_2
+						}
 					}
-				}
-				modifier = {
-					add = 30
-					scope:physician = {
-						has_perk = architect_of_bloodlines_perk
+					modifier = {
+						add = 15
+						scope:physician = {
+							has_trait = physician_3
+						}
 					}
-				}
-				trigger_event = ancient_magic_rituals_events.010
-			}
-			55 = {
-				desc = ancient_magic_rituals_events.008.failure
-				modifier = { #Blood compatibility
-					add = average_mana_blood_compatibility_level
-					subtract = scope:chosen_blood_compatibility
-				}
-				modifier = {
-					add = {
-						value = average_skill_level
-						subtract = scope:physician.learning
+					modifier = {
+						add = 2
+						scope:physician = {
+							has_perk = biomancy_mage_perk
+						}
 					}
-				}
-				modifier = { #Strong and healthy body is much more likely to reject foreign blood
-					add = 20
-					has_trait = whole_of_body
-				}
-				trigger_event = ancient_magic_rituals_events.012
-			}
-			10 = { #Death - higher chance as one can botch it if he does it on himself
-				modifier = { #if compatibility lower then 0
-					add = {
-						value = scope:chosen_blood_compatibility
-						multiply = 0.1
+					modifier = {
+						add = 30
+						scope:physician = {
+							has_perk = architect_of_bloodlines_perk
+						}
 					}
-					scope:chosen_blood_compatibility < 0
+					trigger_event = ancient_magic_rituals_events.010
 				}
-				death = {
-					death_reason = death_botched_blood_transfusion
+				55 = {
+					desc = ancient_magic_rituals_events.008.failure
+					modifier = { #Blood compatibility
+						add = {
+							value = average_mana_blood_compatibility_level
+							subtract = scope:chosen_blood_compatibility
+						}
+					}
+					modifier = {
+						add = {
+							value = average_skill_level
+							subtract = scope:physician.learning
+						}
+					}
+					modifier = { #Strong and healthy body is much more likely to reject foreign blood
+						add = 20
+						has_trait = whole_of_body
+					}
+					trigger_event = ancient_magic_rituals_events.012
+				}
+				10 = { #Death - higher chance as one can botch it if he does it on himself
+					modifier = { #if compatibility lower then 0
+						add = {
+							value = scope:chosen_blood_compatibility
+							multiply = 0.1
+						}
+						scope:chosen_blood_compatibility < 0
+					}
+					death = {
+						death_reason = death_botched_blood_transfusion
+					}
 				}
 			}
 		}
@@ -1445,21 +1461,25 @@ ancient_magic_rituals_events.010 = { #Successful transfusion - Physician
 	option = { #Give the physician bonus
 		name = ancient_magic_rituals_events.010.a
 		skill = stewardship
+		
 		show_as_unavailable = {
 			short_term_gold < medium_gold_value
 		}
-		pay_short_term_gold = { 
-			target = scope:physician
-			gold = {
-				value = medium_gold_value
-				multiply = 1
+		
+		effect = {
+			pay_short_term_gold = { 
+				target = scope:physician
+				gold = {
+					value = medium_gold_value
+					multiply = 1
+				}
 			}
-		}
-		scope:physician = {
-			add_opinion = {
-				modifier = grateful_opinion
-				target = scope:infusion_target
-				opinion = 35
+			scope:physician = {
+				add_opinion = {
+					modifier = grateful_opinion
+					target = scope:infusion_target
+					opinion = 35
+				}
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-mana_affinity_ask_for_blood_default_modifier = {
+﻿mana_affinity_ask_for_blood_default_modifier = {
 	opinion_modifier = {
 		opinion_target = scope:actor
 		who = scope:recipient
