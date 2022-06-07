@@ -18,6 +18,11 @@
  AM_implant_magical_blood_option_others: "Blood of others"
  AM_implant_magical_blood_option_others_tooltip: "Magical Blood extracted from people which arent closely geneticaly related. #S Low Compatibility #!"
  
+ extract_magical_blood_decision: "Extract Blood"
+ extract_magical_blood_decision_tooltip: "Extracting some of my blood could prove usefull"
+ extract_magical_blood_decision_desc: "I could extract some of my blood for future use."
+ extract_magical_blood_decision_confirm: "Let's begin"
+ 
  am_convert_holding_to_city_of_magic_decision:0 "Convert Holding to City of Magic"
  am_convert_holding_to_city_of_magic_decision_tooltip:0 "The existing holding(s) will be replaced with a [city_of_magic|E] holding"
  am_convert_holding_to_city_of_magic_decision_desc:0 "#F Architects and engineers have been congregating within my realm as of late. Many are sought after as master builders, but to prove their skills, they want great projects to work on.#!"

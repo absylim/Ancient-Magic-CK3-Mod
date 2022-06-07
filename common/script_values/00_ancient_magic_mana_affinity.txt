@@ -154,12 +154,10 @@ mother_base_affinity = { #Script Value used in calculation of ones base mana aff
 	value = 0
 	if = {
 		limit = {
-			always = no # we don't know what we want the formula to look like, yet, so for now we just want to make sure the effect works
-						# once we know what we want the formula to be, we can add it back in
 			exists = mother
 			mother = { is_alive = yes has_variable = base_mana_affinity }
 		}
-		
+		add = mother.mana_affinity
 		if = {
 			limit = { mother = { is_magus_trigger = yes } } # scope change works because we're in a limit, which is a trigger block
 			add = {
@@ -181,20 +179,16 @@ mother_base_affinity = { #Script Value used in calculation of ones base mana aff
 			}
 		}
 	}
-	# remove this once we figure out what the formula should be, or are actually testing *just* the formula
-	#value = mother.mana_affinity # will break if the character has no mother, but this is just a temporary thing while we test the effect
 }
 
 father_base_affinity = {
 	value = 0
 	if = {
 		limit = {
-			always = no # we don't know what we want the formula to look like, yet, so for now we just want to make sure the effect works
-						# once we know what we want the formula to be, we can add it back in
 			exists = father
 			father = { is_alive = yes has_variable = base_mana_affinity }
 		}
-		
+		add = father.mana_affinity
 		if = {
 			limit = { father = { is_magus_trigger = yes } } # scope change works because we're in a limit, which is a trigger block
 			add = {
@@ -219,9 +213,6 @@ father_base_affinity = {
 			}
 		}
 	}
-	
-	# remove this once we figure out what the formula should be, or are actually testing *just* the formula
-	#value = father.mana_affinity # will break if the character has no father, but this is just a temporary thing while we test the effect
 }
 
 max_body_mana = { #Mana Affinity affects how much can ones body hold mana
@@ -370,4 +361,15 @@ mana_blood_compatibility = { #Compatibility of the blood with owner, the higher 
         multiply = 5
         min = 0 #Do not increase the compatibility if bloods mana affinity is lower then then owners
     }
+}
+
+ammount_of_my_blood_in_inventory = {
+	value = 0
+	
+	every_mana_blood_in_inventory = {
+		limit = {
+			creator = ROOT
+		}
+		add = 1
+	}
 }

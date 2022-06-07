@@ -74,6 +74,86 @@ ancient_magic_rituals_events.003 = { #Failure (death)
 }
 
 ###############################
+#### Extrsct magical Blood ####
+###############################
+
+ancient_magic_rituals_events.004 = { #Extract managical blood - decision
+	type = character_event
+	title = ancient_magic_rituals_events.004.t
+	desc = ancient_magic_rituals_events.004.desc
+	theme = medicine
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				var:base_mana_affinity.compare_value < magical_mana_affinity_level
+			}
+			save_scope_value_as = {
+				name = blood_decay
+				value = yes
+			}
+		}
+		else = {
+			save_scope_value_as = {
+				name = blood_decay
+				value = no
+			}
+		}
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.004.with_bloodline
+		
+		trigger = {
+			has_magical_bloodline_trigger = yes
+		}
+		
+		add_character_modifier = {
+			modifier = drained_of_blood_modifier
+			months = 6
+		}
+		create_ingredient_mana_blood_effect = { OWNER = ROOT ORIGIN = ROOT DECAY = scope:blood_decay ALLOW_BLOODLINE = yes }
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.004.without_bloodline
+		
+		trigger = {
+			has_magical_bloodline_trigger = yes
+		}
+		
+		add_character_modifier = {
+			modifier = drained_of_blood_modifier
+			months = 6
+		}
+		create_ingredient_mana_blood_effect = { OWNER = ROOT ORIGIN = ROOT DECAY = scope:blood_decay ALLOW_BLOODLINE = no }
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.004.no_bloodline
+		
+		trigger = {
+			has_magical_bloodline_trigger = no
+		}
+		
+		add_character_modifier = {
+			modifier = drained_of_blood_modifier
+			months = 6
+		}
+		create_ingredient_mana_blood_effect = { OWNER = ROOT ORIGIN = ROOT DECAY = scope:blood_decay ALLOW_BLOODLINE = no }
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.005.exit
+	}
+}
+
+###############################
 #### Implant magical Blood ####
 ###############################
 
@@ -97,6 +177,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 			
 			ordered_mana_blood_in_inventory = { # Blood with highest compatibility
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
@@ -112,6 +193,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
@@ -127,6 +209,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
@@ -142,6 +225,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
@@ -157,6 +241,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
@@ -172,6 +257,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
@@ -187,6 +273,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
@@ -202,6 +289,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
@@ -219,6 +307,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 		else = {
 			ordered_mana_blood_in_inventory = { # Blood with highest compatibility
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
@@ -234,6 +323,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 			}
 			ordered_mana_blood_in_inventory = { #Blood with highest mana affinity
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
@@ -446,6 +536,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 			
 			ordered_mana_blood_in_inventory = { # Blood with highest compatibility
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
@@ -461,6 +552,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
@@ -476,6 +568,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
@@ -491,6 +584,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
@@ -506,6 +600,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
@@ -521,6 +616,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
@@ -536,6 +632,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
@@ -551,6 +648,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
@@ -568,6 +666,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 		else = {
 			ordered_mana_blood_in_inventory = { # Blood with highest compatibility
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
@@ -583,6 +682,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = { #Blood with highest mana affinity
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
@@ -795,6 +895,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 			
 			ordered_mana_blood_in_inventory = { # Blood with highest compatibility
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						NOT = {
 							is_close_family_of = scope:infusion_target
@@ -813,6 +914,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						NOT = {
 							is_close_family_of = scope:infusion_target
@@ -831,6 +933,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						NOT = {
 							is_close_family_of = scope:infusion_target
@@ -849,6 +952,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						NOT = {
 							is_close_family_of = scope:infusion_target
@@ -867,6 +971,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						NOT = {
 							is_close_family_of = scope:infusion_target
@@ -885,6 +990,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						NOT = {
 							is_close_family_of = scope:infusion_target
@@ -903,6 +1009,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						NOT = {
 							is_close_family_of = scope:infusion_target
@@ -921,6 +1028,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = {
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						NOT = {
 							is_close_family_of = scope:infusion_target
@@ -941,6 +1049,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 		else = {
 			ordered_mana_blood_in_inventory = { # Blood with highest compatibility
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						NOT = {
 							is_close_family_of = scope:infusion_target
@@ -959,6 +1068,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 			}
 			ordered_mana_blood_in_inventory = { #Blood with highest mana affinity
 				limit = {
+					NOT = { creator = scope:infusion_target }
 					creator = {
 						NOT = {
 							is_close_family_of = scope:infusion_target
@@ -1192,84 +1302,83 @@ ancient_magic_rituals_events.008 = { # Who implant the blood
 	option = { #Self
 		name = ancient_magic_rituals_events.008.a
 		
-		effect = {
-			destroy_artifact = scope:chosen_blood
-			
-			random_list = {
-				30 = { #Success
-					desc = ancient_magic_rituals_events.008.succcess
-					modifier = { #increase chances by having extrancted ones own blood
-						add = 10
-						has_character_modifier = drained_of_blood_modifier
-					}
-					modifier = {
-						add = {
-							value = learning
-							subtract = good_skill_level
-						}
-					}
-					modifier = { #Blood compatibility
-						add = = {
-							value = scope:chosen_blood_compatibility
-							subtract = average_mana_blood_compatibility_level
-						}
-					}
-					modifier = {
-						add = 5
-						has_trait = physician_1
-					}
-					modifier = {
-						add = 10
-						has_trait = physician_2
-					}
-					modifier = {
-						add = 15
-						has_trait = physician_3
-					}
-					modifier = {
-						add = 2
-						has_perk = biomancy_mage_perk
-					}
-					modifier = {
-						add = 30
-						has_perk = architect_of_bloodlines_perk
-					}
-					trigger_event = ancient_magic_rituals_events.009
+		destroy_artifact = scope:chosen_blood
+		
+		random_list = {
+			30 = { #Success
+				desc = ancient_magic_rituals_events.008.succcess
+				modifier = { #increase chances by having extrancted ones own blood
+					add = 10
+					has_character_modifier = drained_of_blood_modifier
 				}
-				50 = {
-					desc = ancient_magic_rituals_events.008.failure
-					modifier = { #Blood compatibility
-						add = { 
-							value = average_mana_blood_compatibility_level
-							subtract = scope:chosen_blood_compatibility
-						}
+				modifier = {
+					add = {
+						value = learning
+						subtract = good_skill_level
 					}
-					modifier = {
-						add = {
-							value = good_skill_level
-							subtract = learning
-						}
-					}
-					modifier = { #Strong and healthy body is much more likely to reject foreign blood
-						add = 20
-						has_trait = whole_of_body
-					}
-					trigger_event = ancient_magic_rituals_events.011
 				}
-				20 = { #Death - higher chance as one can botch it if he does it on himself
-					modifier = { #if compatibility lower then 0
-						add = {
-							value = scope:chosen_blood_compatibility
-							multiply = 0.1
-						}
-						scope:chosen_blood_compatibility < 0
+				modifier = { #Blood compatibility
+					add = = {
+						value = scope:chosen_blood_compatibility
+						subtract = average_mana_blood_compatibility_level
 					}
-					death = {
-						death_reason = death_botched_blood_transfusion
+				}
+				modifier = {
+					add = 5
+					has_trait = physician_1
+				}
+				modifier = {
+					add = 10
+					has_trait = physician_2
+				}
+				modifier = {
+					add = 15
+					has_trait = physician_3
+				}
+				modifier = {
+					add = 2
+					has_perk = biomancy_mage_perk
+				}
+				modifier = {
+					add = 30
+					has_perk = architect_of_bloodlines_perk
+				}
+				trigger_event = ancient_magic_rituals_events.009
+			}
+			50 = {
+				desc = ancient_magic_rituals_events.008.failure
+				modifier = { #Blood compatibility
+					add = { 
+						value = average_mana_blood_compatibility_level
+						subtract = scope:chosen_blood_compatibility
 					}
+				}
+				modifier = {
+					add = {
+						value = good_skill_level
+						subtract = learning
+					}
+				}
+				modifier = { #Strong and healthy body is much more likely to reject foreign blood
+					add = 20
+					has_trait = whole_of_body
+				}
+				trigger_event = ancient_magic_rituals_events.011
+			}
+			20 = { #Death - higher chance as one can botch it if he does it on himself
+				modifier = { #if compatibility lower then 0
+					add = {
+						value = scope:chosen_blood_compatibility
+						multiply = 0.1
+					}
+					scope:chosen_blood_compatibility < 0
+				}
+				death = {
+					death_reason = death_botched_blood_transfusion
 				}
 			}
 		}
+		
 	}
 	
 	option = { #Physician
@@ -1280,94 +1389,93 @@ ancient_magic_rituals_events.008 = { # Who implant the blood
 			}
 		}
 		
-		effect = {
-			destroy_artifact = scope:chosen_blood
-			
-			random_list = {
-				35 = { #Success
-					desc = ancient_magic_rituals_events.008.succcess
-					modifier = { #increase chances by having extrancted ones own blood
-						add = 10
-						has_character_modifier = drained_of_blood_modifier
-					}
-					modifier = {
-						add = {
-							value = scope:physician.learning
-							subtract = average_skill_level
-						}
-					}
-					modifier = { #Blood compatibility
-						add = {
-							value = scope:chosen_blood_compatibility
-							subtract = average_mana_blood_compatibility_level
-						}
-					}
-					modifier = {
-						add = 5
-						scope:physician = {
-							has_trait = physician_1
-						}
-					}
-					modifier = {
-						add = 10
-						scope:physician = {
-							has_trait = physician_2
-						}
-					}
-					modifier = {
-						add = 15
-						scope:physician = {
-							has_trait = physician_3
-						}
-					}
-					modifier = {
-						add = 2
-						scope:physician = {
-							has_perk = biomancy_mage_perk
-						}
-					}
-					modifier = {
-						add = 30
-						scope:physician = {
-							has_perk = architect_of_bloodlines_perk
-						}
-					}
-					trigger_event = ancient_magic_rituals_events.010
+		destroy_artifact = scope:chosen_blood
+		
+		random_list = {
+			35 = { #Success
+				desc = ancient_magic_rituals_events.008.succcess
+				modifier = { #increase chances by having extrancted ones own blood
+					add = 10
+					has_character_modifier = drained_of_blood_modifier
 				}
-				55 = {
-					desc = ancient_magic_rituals_events.008.failure
-					modifier = { #Blood compatibility
-						add = {
-							value = average_mana_blood_compatibility_level
-							subtract = scope:chosen_blood_compatibility
-						}
+				modifier = {
+					add = {
+						value = scope:physician.learning
+						subtract = average_skill_level
 					}
-					modifier = {
-						add = {
-							value = average_skill_level
-							subtract = scope:physician.learning
-						}
-					}
-					modifier = { #Strong and healthy body is much more likely to reject foreign blood
-						add = 20
-						has_trait = whole_of_body
-					}
-					trigger_event = ancient_magic_rituals_events.012
 				}
-				10 = { #Death - higher chance as one can botch it if he does it on himself
-					modifier = { #if compatibility lower then 0
-						add = {
-							value = scope:chosen_blood_compatibility
-							multiply = 0.1
-						}
-						scope:chosen_blood_compatibility < 0
+				modifier = { #Blood compatibility
+					add = {
+						value = scope:chosen_blood_compatibility
+						subtract = average_mana_blood_compatibility_level
 					}
-					death = {
-						death_reason = death_botched_blood_transfusion
+				}
+				modifier = {
+					add = 5
+					scope:physician = {
+						has_trait = physician_1
 					}
+				}
+				modifier = {
+					add = 10
+					scope:physician = {
+						has_trait = physician_2
+					}
+				}
+				modifier = {
+					add = 15
+					scope:physician = {
+						has_trait = physician_3
+					}
+				}
+				modifier = {
+					add = 2
+					scope:physician = {
+						has_perk = biomancy_mage_perk
+					}
+				}
+				modifier = {
+					add = 30
+					scope:physician = {
+						has_perk = architect_of_bloodlines_perk
+					}
+				}
+				trigger_event = ancient_magic_rituals_events.010
+			}
+			55 = {
+				desc = ancient_magic_rituals_events.008.failure
+				modifier = { #Blood compatibility
+					add = {
+						value = average_mana_blood_compatibility_level
+						subtract = scope:chosen_blood_compatibility
+					}
+				}
+				modifier = {
+					add = {
+						value = average_skill_level
+						subtract = scope:physician.learning
+					}
+				}
+				modifier = { #Strong and healthy body is much more likely to reject foreign blood
+					add = 20
+					has_trait = whole_of_body
+				}
+				trigger_event = ancient_magic_rituals_events.012
+			}
+			10 = { #Death - higher chance as one can botch it if he does it on himself
+				modifier = { #if compatibility lower then 0
+					add = {
+						value = scope:chosen_blood_compatibility
+						multiply = 0.1
+					}
+					scope:chosen_blood_compatibility < 0
+				}
+				death = {
+					death_reason = death_botched_blood_transfusion
 				}
 			}
 		}
+		
 	}
 	
 	option = {
@@ -1466,20 +1574,18 @@ ancient_magic_rituals_events.010 = { #Successful transfusion - Physician
 			short_term_gold < medium_gold_value
 		}
 		
-		effect = {
-			pay_short_term_gold = { 
-				target = scope:physician
-				gold = {
-					value = medium_gold_value
-					multiply = 1
-				}
+		pay_short_term_gold = { 
+			target = scope:physician
+			gold = {
+				value = medium_gold_value
+				multiply = 1
 			}
-			scope:physician = {
-				add_opinion = {
-					modifier = grateful_opinion
-					target = scope:infusion_target
-					opinion = 35
-				}
+		}
+		scope:physician = {
+			add_opinion = {
+				modifier = grateful_opinion
+				target = scope:infusion_target
+				opinion = 35
 			}
 		}
 	}

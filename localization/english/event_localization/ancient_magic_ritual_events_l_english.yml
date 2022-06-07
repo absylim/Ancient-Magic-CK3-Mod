@@ -12,6 +12,13 @@
  ancient_magic_rituals_events.003.desc: "You dont know if its just your luck or if you could have done just little bit more of preparation, but its already too late during the forging you lost concentration even if it was just a little, it got quickly out of hand and it tear your conciousness apart."
  ancient_magic_rituals_events.003.a: "Still so much to do..."
 
+#Extracting magical blood from oneself
+ ancient_magic_rituals_events.004.t: "Extract Blood"
+ ancient_magic_rituals_events.004.desc: "Now it's time to extract the blood from my self, but i must be carefull as it will also weaken me!"
+ ancient_magic_rituals_events.004.with_bloodline: "Extract blood with [magical_bloodline|E]"
+ ancient_magic_rituals_events.004.without_bloodline: "Extract blood without [magical_bloodline|E]"
+ ancient_magic_rituals_events.004.no_bloodline: "Extract blood"
+
 #Implanting magical blood into onself
  ancient_magic_rituals_events.005.t: "Implant magical blood - Close Relatives"
  ancient_magic_rituals_events.005.desc: "You may choose from one of the bloods in your inventory which are taken from your [close_family_members|E]"

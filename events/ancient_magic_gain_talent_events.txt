@@ -7,19 +7,16 @@ ancient_magic_gain_talent_events.001 = {
 	
 	option = {
 		name = ancient_magic_gain_talent_events.001.a
-		add_trait = magic_potential_1
 		add_character_flag = ancient_magic_potential_chosen
 	}
 	
 	option = {
 		name = ancient_magic_gain_talent_events.001.b
-		add_trait = magic_potential_2
 		add_character_flag = ancient_magic_potential_chosen
 	}
 	
 	option = {
 		name = ancient_magic_gain_talent_events.001.c
-		add_trait = magic_potential_3
 		add_character_flag = ancient_magic_potential_chosen
 	}
 	

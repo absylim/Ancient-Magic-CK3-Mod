@@ -138,6 +138,13 @@ lesser_undead_maa_stack_amount = 200
 mage_potency = {
 	value = mana_affinity
 	multiply = 0.2
+	
+	if = {#if you extracted blood from yourself, you get weakened physicaly and also magicaly
+		limit = {
+			has_character_modifier = drained_of_blood_modifier
+		}
+		divide = 2
+	}
 }
 
 # No-brainer value in a magic mod.
@@ -172,6 +179,12 @@ ancient_magic_mana_gen_gen_only = {
 ancient_magic_mana_gen_potency = {
 	value = mana_affinity
 	multiply = 2
+	if = {
+		limit = {
+			has_character_modifier = drained_of_blood_modifier
+		}
+		divide = 2
+	}
 }
 
 ancient_magic_mana_gen_circles = {

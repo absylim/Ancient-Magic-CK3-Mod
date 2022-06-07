@@ -101,6 +101,7 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 			value = AM_implant_magical_blood_option_close_family
 			is_shown = {
 				any_mana_blood_in_inventory = {
+					NOT = { creator = ROOT }
 					creator = {
 						is_close_family_of = ROOT
 					}
@@ -121,6 +122,7 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 			value = AM_implant_magical_blood_option_extended_family
 			is_shown = {
 				any_mana_blood_in_inventory = {
+					NOT = { creator = ROOT }
 					creator = {
 						is_extended_family_of = ROOT
 					}
@@ -141,6 +143,7 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 			value = AM_implant_magical_blood_option_others
 			is_shown = {
 				any_mana_blood_in_inventory = {
+					NOT = { creator = ROOT }
 					creator = {
 						NOT = {
 							is_extended_family_of = ROOT
@@ -185,6 +188,32 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 			has_trait = ambitious
 			add = 100
 		}
+	}
+}
+
+extract_magical_blood_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
+	major = no
+	
+	is_shown = {
+		always = yes
+		is_ai = no
+	}
+	
+	desc = extract_magical_blood_decision_desc
+	
+	effect = {
+		trigger_event = ancient_magic_rituals_events.004
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+		NOT = { has_character_modifier = drained_of_blood_modifier }
+	}
+	
+	ai_potential = {
+		always = no
 	}
 }
 

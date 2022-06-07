@@ -279,7 +279,26 @@ ask_for_mana_blood_interaction_effect = {
 			value = no
 		}
 	}
-	create_ingredient_mana_blood_effect = { OWNER = scope:actor ORIGIN = scope:recipient DECAY = no ALLOW_BLOODLINE = scope:bloodline }
+	
+	if = {
+		limit = {
+			scope:recipient = {
+				var:base_mana_affinity.compare_value < magical_mana_affinity_level
+			}
+		}
+		save_scope_value_as = {
+			name = blood_decay
+			value = yes
+		}
+	}
+	else = {
+		save_scope_value_as = {
+			name = blood_decay
+			value = no
+		}
+	}
+	
+	create_ingredient_mana_blood_effect = { OWNER = scope:actor ORIGIN = scope:recipient DECAY = scope:blood_decay ALLOW_BLOODLINE = scope:bloodline }
 }
 
 add_magical_bloodline_effect = {
