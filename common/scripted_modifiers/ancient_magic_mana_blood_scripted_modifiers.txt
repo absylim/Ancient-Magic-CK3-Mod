@@ -38,13 +38,13 @@
 		}
 	}
 	
-	#modifier = { #If recipients mana affinity is higher then yours then lower acceptence
-	#	desc = ASK_FOR_BLOOD_DIFFERENCE_OF_BASE_MANA_AFFINITY
-	#	add = -5
-	#	multiply = {
-	#		value = 0
-	#		add = scope:recipient.var:base_mana_affinity
-	#		subtract = scope:actor.var:base_mana_affinity
-	#	}
-	#}
+	modifier = { #If recipients mana affinity is higher then yours then lower acceptence
+		desc = ASK_FOR_BLOOD_DIFFERENCE_OF_BASE_MANA_AFFINITY
+		add = -5
+		multiply = {
+			value = 0
+			add = scope:recipient.var:base_mana_affinity
+			subtract = scope:actor.var:base_mana_affinity
+		}
+	}
 }

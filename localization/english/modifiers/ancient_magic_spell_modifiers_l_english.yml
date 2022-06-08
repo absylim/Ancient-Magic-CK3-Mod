@@ -35,3 +35,5 @@
 
  # Magic Advancement
  magic_advancement_modifier: "Studying Magic"
+ 
+ ASK_FOR_MARRIAGE_BASE_MANA_AFFINITY: "Difference of innate [mana_affinity|E]: $VALUE|=+0$"

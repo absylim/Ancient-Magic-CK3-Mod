@@ -18,7 +18,7 @@
 
 			change_mana = { VALUE = beguiling_aura_spell_cost.neg }
 
-			change_mana_gen = { VALUE = -15 }
+			change_mana_gen_tooltip = { VALUE = -15 }
 
 			while = {
 				count = mage_level
@@ -34,7 +34,7 @@
 					has_character_modifier = beguiling_aura_spell_modifier
 				}
 			}
-			change_mana_gen = { VALUE = 15 }
+			change_mana_gen_tooltip = { VALUE = 15 }
 
 			while = {
 				count = 100
@@ -90,7 +90,7 @@ enchanting_aura_ai_spell_decision = {
 
 			change_mana = { VALUE = enchanting_aura_spell_cost.neg }
 
-			change_mana_gen = { VALUE = -30 }
+			change_mana_gen_tooltip = { VALUE = -30 }
 
 			while = {
 				count = mage_level
@@ -107,7 +107,7 @@ enchanting_aura_ai_spell_decision = {
 				}
 			}
 
-			change_mana_gen = { VALUE = 15 }
+			change_mana_gen_tooltip = { VALUE = 15 }
 
 			while = {
 				count = 100

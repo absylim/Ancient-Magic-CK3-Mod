@@ -94,7 +94,7 @@ aura_of_death_ai_spell_decision = {
 
 			change_mana = { VALUE = aura_of_death_spell_cost.neg }
 
-			change_mana_gen = { VALUE = -30 }
+			change_mana_gen_tooltip = { VALUE = -30 }
 
 			while = {
 				count = mage_level
@@ -111,7 +111,7 @@ aura_of_death_ai_spell_decision = {
 				}
 			}
 
-			change_mana_gen = { VALUE = 30 }
+			change_mana_gen_tooltip = { VALUE = 30 }
 
 			while = {
 				count = 100
