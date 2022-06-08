@@ -336,10 +336,10 @@ tradition_mythology_roman = {
 	
 	character_modifier = { #City state builders
 		city_of_magic_holding_build_gold_cost = -0.2
-		city_of_magic_holding_holding_gold_cost = -0.15
+		city_of_magic_holding_holding_build_gold_cost = -0.15
 		city_of_magic_holding_holding_build_speed = -0.15
 		city_holding_build_gold_cost = -0.25
-		city_holding_holding_gold_cost = -0.025
+		city_holding_holding_build_gold_cost = -0.025
 		city_holding_holding_build_speed = -0.25
 	}
 	
@@ -437,7 +437,7 @@ tradition_mythology_india = {
 	}
 	
 	character_modifier = { #City state builders
-		city_of_magic_holding_holding_gold_cost = -0.1
+		city_of_magic_holding_holding_build_gold_cost = -0.1
 		city_of_magic_holding_holding_build_speed = -0.05
 		farmlands_development_growth_factor = 0.3
 		farmlands_construction_gold_cost = -0.2
@@ -551,7 +551,7 @@ tradition_mythology_norse = {
 	
 	character_modifier = {
 		city_of_magic_holding_build_gold_cost = -0.1
-		city_of_magic_holding_holding_gold_cost = -0.05
+		city_of_magic_holding_holding_build_gold_cost = -0.05
 	}
 	
 	cost = {
