@@ -22,9 +22,9 @@
 		weight = 1
 	}
 	
-	mana_blood_loved_rank = {
+	mana_blood_transcendent_rank = {
 		group = mana_blood
-		trigger = { artifact_feature_mana_blood_loved_trigger = yes }
+		trigger = { artifact_feature_mana_blood_transcendent_trigger = yes }
 		weight = 1
 	}
 	

@@ -8,7 +8,7 @@
  
  implant_magical_blood_decision: "Implant Blood"
  implant_magical_blood_decision_tooltip: "I have some blood in my inventory, that could be used to boost my own body."
- implant_magical_blood_decision_desc: "With the extracted blood i got, i could go boyond my base innate mana affinity potential."
+ implant_magical_blood_decision_desc: "With the extracted blood i got, I could go beyond my base innate [mana_affinity|E] potential."
  implant_magical_blood_decision_confirm: "Lets begin"
  AM_implant_magical_blood_choose_type: "Choose type of Blood"
  AM_implant_magical_blood_option_close_family: "Blood of [close_family|E]"
@@ -16,10 +16,10 @@
  AM_implant_magical_blood_option_extended_family: "Blood of [extended_family|E]"
  AM_implant_magical_blood_option_extended_family_tooltip: "Magical blood extracted from [extended_family_members|E]. #S Medium Compatibility #!"
  AM_implant_magical_blood_option_others: "Blood of others"
- AM_implant_magical_blood_option_others_tooltip: "Magical Blood extracted from people which arent closely geneticaly related. #S Low Compatibility #!"
+ AM_implant_magical_blood_option_others_tooltip: "Magical blood extracted from people who aren't closely genetically related. #S Low compatibility #!"
  
  extract_magical_blood_decision: "Extract Blood"
- extract_magical_blood_decision_tooltip: "Extracting some of my blood could prove usefull"
+ extract_magical_blood_decision_tooltip: "Extracting some of my blood could prove useful"
  extract_magical_blood_decision_desc: "I could extract some of my blood for future use."
  extract_magical_blood_decision_confirm: "Let's begin"
  
@@ -46,7 +46,7 @@
  no_am_city_of_magic_holding:0 "The province does not already have a [city_of_magic|E] holding"
   
  am_ai_convert_holding_to_city_of_magic_decision:0 "Found City of Magic (AI)"
- am_ai_convert_holding_to_city_of_magic_decision_desc:0 "Architects ,engineers and mages have been congregating within my realm as of late. Many are sought after as master builders, enchanters, and to prove their skills, they have agreed to help us expand our capital into a proper Magical City."
+ am_ai_convert_holding_to_city_of_magic_decision_desc:0 "Architects, engineers and mages have been congregating within my realm as of late. Many are sought after as master builders, enchanters, and to prove their skills, they have agreed to help us expand our capital into a proper [city_of_magic|E]."
  am_ai_convert_holding_to_city_of_magic_decision_tooltip:1 "The existing capital holding will be replaced with a [city_of_magic|E] holding"
  am_ai_convert_holding_to_city_of_magic_decision_confirm:1 "Lay the foundation!"
  am_ai_convert_holding_to_city_of_magic_decision_custom:0 "In a fitting Barony"

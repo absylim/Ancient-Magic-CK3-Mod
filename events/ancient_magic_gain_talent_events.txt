@@ -31,15 +31,8 @@ ancient_magic_gain_talent_events.002 = {
 	type = empty
 	immediate = {
 		every_living_character = {
-			trigger_event = ancient_magic_gain_talent_events.003
+			give_base_mana_affinity_game_start_effect = yes
 		}
-	}
-}
-
-ancient_magic_gain_talent_events.003 = {
-	hidden = yes
-	immediate = {
-		give_base_mana_affinity_game_start_effect = yes
 	}
 }
 
@@ -61,14 +54,7 @@ ancient_magic_gain_talent_events.004 = { #Give children mana affinity based on p
 				}
 				is_ai = yes
 			}
-			trigger_event = ancient_magic_gain_talent_events.005
+			give_base_mana_affinity = yes
 		}
-	}
-}
-
-ancient_magic_gain_talent_events.005 = {
-	hidden = yes
-	immediate = {
-		give_base_mana_affinity = yes
 	}
 }

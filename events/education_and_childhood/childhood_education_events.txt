@@ -19,7 +19,7 @@ childhood_education.0004 = {
 		desc = childhood_education.0004.opening
 		first_valid = {
 			triggered_desc = {
-				trigger= {
+				trigger = {
 					has_character_flag = matching_education
 				}
 				desc = childhood_education.0004.desc1
@@ -97,7 +97,7 @@ childhood_education.0004 = {
 			limit = {
 				OR = {
 					has_education_arcane_trigger = yes
-					is_magus_trigger = yes
+					has_character_modifier = magic_advancement_modifier
 					learning >= high_skill_rating
 				}
 				scope:ward = {
@@ -176,7 +176,7 @@ childhood_education.0004 = {
 			limit = {
 				OR = {
 					has_education_arcane_trigger = yes
-					is_magus_trigger = yes
+					has_character_modifier = magic_advancement_modifier
 					learning >= high_skill_rating
 				}
 				scope:ward = {

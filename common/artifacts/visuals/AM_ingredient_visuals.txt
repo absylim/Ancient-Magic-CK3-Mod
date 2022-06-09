@@ -74,16 +74,16 @@ mana_blood = {
 		trigger = {
 			AND = {
 				scope:blood_mana_affinity > magical_mana_affinity_level
-				scope:blood_mana_affinity <= loved_mana_affinity_level
+				scope:blood_mana_affinity <= transcendent_affinity_level
 			}
 		}
-		reference = "mana_blood_loved.dds"
+		reference = "mana_blood_transcendent.dds"
 	}
 	
 	icon = {
 		trigger = {
 			AND = {
-				scope:blood_mana_affinity > loved_mana_affinity_level
+				scope:blood_mana_affinity > transcendent_affinity_level
 				scope:blood_mana_affinity <= demigod_mana_affinity_level
 			}
 		}

@@ -21,7 +21,7 @@
 
 #Implanting magical blood into onself
  ancient_magic_rituals_events.005.t: "Implant magical blood - Close Relatives"
- ancient_magic_rituals_events.005.desc: "You may choose from one of the bloods in your inventory which are taken from your [close_family_members|E]"
+ ancient_magic_rituals_events.005.desc: "You may choose one from among the vials of blood in your inventory which were taken from your [close_family_members|E]"
  ancient_magic_rituals_events.005.exit: "I will think about it..."
  ancient_magic_rituals_events.005.a: "[option_0.GetName] - [option_0.MakeScope.Var('mana_affinity').GetValue][mana_affinity_i]- compatibility: [SCOPE.Custom('mana_blood_compatibility_level_option_0')|U] #S ([SCOPE.GetValue('option_0_compatibility')|0]) #!"
  ancient_magic_rituals_events.005.b: "[option_1.GetName] - [option_1.MakeScope.Var('mana_affinity').GetValue][mana_affinity_i]- compatibility: [SCOPE.Custom('mana_blood_compatibility_level_option_1')|U] #S ([SCOPE.GetValue('option_1_compatibility')|0]) #!"
@@ -33,29 +33,29 @@
  ancient_magic_rituals_events.005.h: "[option_7.GetName] - [option_7.MakeScope.Var('mana_affinity').GetValue][mana_affinity_i]- compatibility: [SCOPE.Custom('mana_blood_compatibility_level_option_7')|U] #S ([SCOPE.GetValue('option_7_compatibility')|0]) #!"
  
  ancient_magic_rituals_events.006.t: "Implant magical blood - Extended Relatives"
- ancient_magic_rituals_events.006.desc: "You may choose from one of the bloods in your inventory which are taken from your [extended_family_members|E]"
+ ancient_magic_rituals_events.006.desc: "You may choose one from among the vials of blood in your inventory which were taken from your [extended_family_members|E]"
  
  ancient_magic_rituals_events.007.t: "Implant magical blood - Non Related"
- ancient_magic_rituals_events.007.desc: "You may choose from one of the bloods in your inventory which are taken from people who are not closely related to you."
+ ancient_magic_rituals_events.007.desc: "You may choose one from among the vials of blood in your inventory which were taken from people who are not closely related to you."
 
  ancient_magic_rituals_events.008.t: "Implant magical blood - Injector"
- ancient_magic_rituals_events.008.desc: "The only one who can perform this operation succesfully seem only to be my esteemed self."
- ancient_magic_rituals_events.008.desc_doctor: "Now the question stand to whom should i leave this responsibility. To my esteemed self or to my court physician?"
+ ancient_magic_rituals_events.008.desc: "I seem to be the only one capable of performing this operation successfully."
+ ancient_magic_rituals_events.008.desc_doctor: "Now, the question remains: Who shall perform the operation? Should my court physician do it, or shall I do it, myself?"
  ancient_magic_rituals_events.008.a: "I shall get to work"
  ancient_magic_rituals_events.008.b: "I leave my esteemed self in your hands [physician.GetNameRegnal]"
- ancient_magic_rituals_events.008.succcess: "Succesful transfusion"
- ancient_magic_rituals_events.008.failure: "Unsuccesful transfusion"
+ ancient_magic_rituals_events.008.succcess: "Successful transfusion"
+ ancient_magic_rituals_events.008.failure: "Unsuccessful transfusion"
  
  ancient_magic_rituals_events.009.t: "Implant magical blood - Success"
- ancient_magic_rituals_events.009.desc: "The transfusion was a great success, i must say im truly the greates."
+ ancient_magic_rituals_events.009.desc: "The transfusion was a resounding success! I must say, my physician acquitted themself quite well."
  ancient_magic_rituals_events.009.a: "Time to get back to my duties"
  
  ancient_magic_rituals_events.010.desc: "The transfusion was a great success, i must say my physician isnt half bad."
  ancient_magic_rituals_events.010.a: "Here you have for your good job"
  
  ancient_magic_rituals_events.011.t: "Implant magical blood - Failure"
- ancient_magic_rituals_events.011.desc: "The transfusion was a great failure, atleast i didnt die."
- ancient_magic_rituals_events.011.a: "This will need solution"
+ ancient_magic_rituals_events.011.desc: "The transfusion was a great failure, but at least I am still alive."
+ ancient_magic_rituals_events.011.a: "I will have to try again, eventually."
  
- ancient_magic_rituals_events.012.desc: "Physician: \"Im trully sorry my lord, its probbably \" \nThe Transfusion was unsuccesful, atleast it wasnt total failure and you didnt die."
- ancient_magic_rituals_events.012.a: "Get him out of my sight."
+ ancient_magic_rituals_events.012.desc: "[physician.GetFirstNameNoTooltip] wrings [physician.GetHerHis] hands. "I am truly sorry, my lord," \n[physician.GetSheHe] says. "The transfusion was unsuccessful. However, I did manage to replace your original blood, so you will not die from the operation.""
+ ancient_magic_rituals_events.012.a: "Get [physician.GetHerHim] out of my sight."

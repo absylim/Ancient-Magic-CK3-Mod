@@ -66,7 +66,7 @@ get_mana_blood_detailed_description_effect = {
 				limit = {
 					AND = {
 						scope:blood_mana_affinity > magical_mana_affinity_level
-						scope:blood_mana_affinity <= loved_mana_affinity_level
+						scope:blood_mana_affinity <= transcendent_affinity_level
 					}
 				}
 				add = 100
@@ -74,7 +74,7 @@ get_mana_blood_detailed_description_effect = {
 			else_if = {
 				limit = {
 					AND = {
-						scope:blood_mana_affinity > loved_mana_affinity_level
+						scope:blood_mana_affinity > transcendent_affinity_level
 						scope:blood_mana_affinity <= demigod_mana_affinity_level
 					}
 				}
@@ -179,7 +179,7 @@ create_ingredient_mana_blood_effect = {
 				limit = {
 					AND = {
 						scope:blood_mana_affinity > magical_mana_affinity_level
-						scope:blood_mana_affinity <= loved_mana_affinity_level
+						scope:blood_mana_affinity <= transcendent_affinity_level
 					}
 				}
 				add_artifact_modifier = ingredient_mana_blood_loved_rank_affinity_modifier
@@ -187,7 +187,7 @@ create_ingredient_mana_blood_effect = {
 			else_if = {
 				limit = {
 					AND = {
-						scope:blood_mana_affinity > loved_mana_affinity_level
+						scope:blood_mana_affinity > transcendent_affinity_level
 						scope:blood_mana_affinity <= demigod_mana_affinity_level
 					}
 				}

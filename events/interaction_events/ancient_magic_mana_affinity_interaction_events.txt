@@ -203,7 +203,6 @@ mana_affinity_interaction.0102 = {
 			}
 		}
 	}
-	
 }
 
 # Hook Condition
@@ -287,4 +286,3 @@ mana_affinity_interaction.0103 = {
 		}
 	}
 }
-######################################

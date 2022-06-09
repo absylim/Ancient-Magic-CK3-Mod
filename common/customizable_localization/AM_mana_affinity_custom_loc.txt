@@ -23,10 +23,10 @@
 	}
 
 	text = {
-		localization_key = mana_affinity_level_loved
+		localization_key = mana_affinity_level_transcendent
 		trigger = {
 			mana_affinity > magical_mana_affinity_level
-			mana_affinity <= loved_mana_affinity_level
+			mana_affinity <= transcendent_affinity_level
 		}
 	}
 

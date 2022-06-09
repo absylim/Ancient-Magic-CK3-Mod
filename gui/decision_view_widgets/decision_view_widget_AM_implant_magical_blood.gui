@@ -8,7 +8,7 @@ vbox = {
 
 	margin_top = 10
 	spacing = 10
-;
+
 	text_label_center = {
 		text = "AM_implant_magical_blood_choose_type"
 	}

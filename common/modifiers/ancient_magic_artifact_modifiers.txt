@@ -7,7 +7,7 @@ ingredient_mana_blood_magical_rank_affinity_modifier = {
 	monthly_dynasty_prestige = 0.025
 }
 
-ingredient_mana_blood_loved_rank_affinity_modifier = {
+ingredient_mana_blood_transcendent_rank_affinity_modifier = {
 	monthly_prestige = 0.075
 	monthly_dynasty_prestige = 0.05
 }

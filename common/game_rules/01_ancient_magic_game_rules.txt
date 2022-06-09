@@ -15,7 +15,7 @@
 
 	}
 	
-	PC_magic_level_3 = { # Loved by mana
+	PC_magic_level_3 = { # Transcendent
 
 	}	
 	

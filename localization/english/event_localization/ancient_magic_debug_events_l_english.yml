@@ -1,6 +1,6 @@
 ﻿l_english:
  ancient_magic_debug.001.t: "Mana Affinity Info"
- ancient_magic_debug.001.desc: "Your Mana Affinity is [ROOT.ScriptValue('mana_affinity')|0] \nMothers Mana Affinity is [ROOT.ScriptValue('mother_base_affinity')|0] and Fathers Mana Affinity is [ROOT.ScriptValue('father_base_affinity')|0]"
+ ancient_magic_debug.001.desc: "Your Mana Affinity is [ROOT.ScriptValue('mana_affinity')|0] \nMother's Mana Affinity is [ROOT.ScriptValue('mother_base_affinity')|0] and Father's Mana Affinity is [ROOT.ScriptValue('father_base_affinity')|0]"
  ancient_magic_debug.001.ok: "Ok"
 
  ancient_magic_debug.302.t:0 "City of Magic"
@@ -8,7 +8,7 @@
  ancient_magic_debug.302.a:1 "May their progress benefit us all!"
  
  ancient_magic_debug.303.t:0 "City of Magic"
- ancient_magic_debug.303.desc_first:0 "A new age of greatness is upon us! I have met with a steady stream of builders ,architects and mages, and the plans for a magnificent city are taking form.\n\n"
+ ancient_magic_debug.303.desc_first:0 "A new age of greatness is upon us! I have met with a steady stream of builders, architects and mages, and the plans for a magnificent city are taking form.\n\n"
  ancient_magic_debug.303.desc:0 "The build master informs me that the first bricks for the City of Magic are ready to be laid!"
  ancient_magic_debug.303.b_generic_metropolis:0 "I will turn it into a City of Magic!"
  ancient_magic_debug.303.fallback:0 "I will found... no City of Magic today."

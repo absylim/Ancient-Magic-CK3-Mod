@@ -24,7 +24,7 @@ dragonic_bloodline = {
 	prowess = 5
 	
 	diplomacy = -2
-	stewardship = 2
+	stewardship = 3
 	martial = 1
 	intrigue = -2
 	learning = 1
@@ -82,14 +82,16 @@ antler_bloodline = {
 	fertility = -0.1
 	prowess = 4
 	
-	diplomacy = 2
-	intrigue = 1
-	martial = -2
+	diplomacy = 1 #thanks to good looks but lowered because of being shy
+	intrigue = 2
+	martial = -3
 	learning = 1
 	
 	ai_compassion = medium_positive_ai_value
+	ai_zeal = very_low_negative_ai_value
 	ai_boldness = low_negative_ai_value
 	ai_sociability = medium_negative_ai_value
+	ai_vengefulness = very_low_negative_ai_value
 	
 	compatibility = {
 		compassionate = @pos_compat_medium
