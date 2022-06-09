@@ -42,7 +42,7 @@
  ancient_magic_rituals_events.008.desc: "I seem to be the only one capable of performing this operation successfully."
  ancient_magic_rituals_events.008.desc_doctor: "Now, the question remains: Who shall perform the operation? Should my court physician do it, or shall I do it, myself?"
  ancient_magic_rituals_events.008.a: "I shall get to work"
- ancient_magic_rituals_events.008.b: "I leave my esteemed self in your hands [physician.GetNameRegnal]"
+ ancient_magic_rituals_events.008.b: "I am in your hands, [physician.GetNameRegnal]"
  ancient_magic_rituals_events.008.succcess: "Successful transfusion"
  ancient_magic_rituals_events.008.failure: "Unsuccessful transfusion"
  
@@ -51,7 +51,7 @@
  ancient_magic_rituals_events.009.a: "Time to get back to my duties"
  
  ancient_magic_rituals_events.010.desc: "The transfusion was a great success, i must say my physician isnt half bad."
- ancient_magic_rituals_events.010.a: "Here you have for your good job"
+ ancient_magic_rituals_events.010.a: "Excellent work! You shall be rewarded..."
  
  ancient_magic_rituals_events.011.t: "Implant magical blood - Failure"
  ancient_magic_rituals_events.011.desc: "The transfusion was a great failure, but at least I am still alive."
