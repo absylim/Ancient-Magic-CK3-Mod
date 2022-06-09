@@ -1,0 +1,90 @@
+﻿####################
+### Debug Events ###
+####################
+
+namespace = ancient_magic_debug
+
+#Get players mana affinity information
+ancient_magic_debug.001 = {
+	title = ancient_magic_debug.001.t
+	desc = ancient_magic_debug.001.desc
+
+	
+	option = { #Ok
+		name = ancient_magic_debug.001.ok
+	}
+}
+
+#AI  convert holding into city of magic
+ancient_magic_debug.302 = {
+	type = character_event
+	title = ancient_magic_debug.302.t
+	desc = ancient_magic_debug.302.desc
+	left_portrait = {
+		character = scope:founder
+		animation = personality_rational
+	}
+	theme = learning
+
+	option = {
+		name = ancient_magic_debug.302.a
+	}
+}
+
+ancient_magic_debug.303 = {
+	type = character_event
+	title = ancient_magic_debug.303.t
+	desc = {
+		desc = ancient_magic_debug.303.desc_first
+		first_valid = {
+			desc = ancient_magic_debug.303.desc
+		}
+	}
+	theme = learning
+	left_portrait = {
+		character = scope:founder
+		animation = personality_rational
+	}
+	
+	option = {
+		trigger = {
+			capital_province = {
+				OR = {
+					has_holding_type = castle_holding
+					has_holding_type = city_holding
+					has_holding_type = church_holding
+					NOT = { has_holding_type = city_of_magic_holding }
+				}
+				has_ongoing_construction = no
+			}
+		}
+		capital_province = {
+			am_refound_set_holding_lvl_flag_effect = yes
+			am_set_building_lvl_flag_effect = yes
+			set_holding_type = city_of_magic_holding
+			if = {
+				limit = { am_barony_variable_holding_level_trigger = yes }
+				am_refound_add_holding_level_effect = yes
+			}
+			if = {
+				limit = { am_barony_variable_holding_level_trigger = yes }
+				am_add_building_lvl_effect = yes
+			}
+		}
+		name = ancient_magic_debug.303.b_city_of_magic
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { # fallback in case development somehow tumbles
+		trigger = { always = no }
+		fallback = yes
+		remove_character_flag = flag_ai_am_found_city_of_magic
+		name = ancient_magic_debug.303.fallback
+		custom_tooltip = ancient_magic_debug.303.fallback.tt
+		ai_chance = {
+			base = 1
+		}
+	}
+}

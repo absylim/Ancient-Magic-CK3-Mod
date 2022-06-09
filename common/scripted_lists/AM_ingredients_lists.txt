@@ -1,0 +1,6 @@
+﻿mana_blood_in_inventory = {
+	base = character_artifact
+	conditions = {
+		has_artifact_feature_group = mana_blood
+	}
+}

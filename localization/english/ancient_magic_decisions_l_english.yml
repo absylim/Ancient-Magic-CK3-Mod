@@ -5,7 +5,52 @@
  forge_material_soul_decision_desc: "Bodily immortality is one thing, but the brain can only handle so much. Stuff hundreds of years of knowledge into one mind, and you simply run out of room. To reach true immortality, one needs to reforge their soul into a limitless receptable of knowledge, so that one can truly transcend one's mortal coil!"
  forge_material_soul_decision_confirm: "Let's forge my soul"
  MAGIC_DEMENTIA_IMMUNITY: "If successful, provides immunity to [GetTrait('mage_dementia').GetName( GetNullCharacter )]"
+ 
+ implant_magical_blood_decision: "Implant Blood"
+ implant_magical_blood_decision_tooltip: "I have some blood in my inventory, that could be used to boost my own body."
+ implant_magical_blood_decision_desc: "With the extracted blood i got, I could go beyond my base innate [mana_affinity|E] potential."
+ implant_magical_blood_decision_confirm: "Lets begin"
+ AM_implant_magical_blood_choose_type: "Choose type of Blood"
+ AM_implant_magical_blood_option_close_family: "Blood of [close_family|E]"
+ AM_implant_magical_blood_option_close_family_tooltip: "Magical blood extracted from [close_family_members|E]. #S High Compatibility #!"
+ AM_implant_magical_blood_option_extended_family: "Blood of [extended_family|E]"
+ AM_implant_magical_blood_option_extended_family_tooltip: "Magical blood extracted from [extended_family_members|E]. #S Medium Compatibility #!"
+ AM_implant_magical_blood_option_others: "Blood of others"
+ AM_implant_magical_blood_option_others_tooltip: "Magical blood extracted from people who aren't closely genetically related. #S Low compatibility #!"
+ 
+ extract_magical_blood_decision: "Extract Blood"
+ extract_magical_blood_decision_tooltip: "Extracting some of my blood could prove useful"
+ extract_magical_blood_decision_desc: "I could extract some of my blood for future use."
+ extract_magical_blood_decision_confirm: "Let's begin"
+ 
+ am_convert_holding_to_city_of_magic_decision:0 "Convert Holding to City of Magic"
+ am_convert_holding_to_city_of_magic_decision_tooltip:0 "The existing holding(s) will be replaced with a [city_of_magic|E] holding"
+ am_convert_holding_to_city_of_magic_decision_desc:0 "#F Architects and engineers have been congregating within my realm as of late. Many are sought after as master builders, but to prove their skills, they want great projects to work on.#!"
+ am_convert_holding_to_city_of_magic_decision_confirm:0 "Convert Holding"
+ am_convert_holding_to_city_of_magic_decision_effect_message:1 "Placeholder\n$EFFECT_LIST_BULLET$"
+ I_HAVE_AM_ELIGBLE_BARONIES_COUNTY:1 "You have a [barony|E] with a [castle|E], [city|E] or [temple|E] that can be converted to [city_of_magic|E]\n$EFFECT_LIST_BULLET$Only holdings in the [counties|E] you personally are the [holder|E] of are eligible\n$EFFECT_LIST_BULLET$Holdings with active constructions are #bold not#! eligible\n$EFFECT_LIST_BULLET$Despite what the Select Holding window may tell you, you #bold can#! in fact select a [county_capital|E]\n$EFFECT_LIST_BULLET$If you convert a [temple|E], you may have to wait until your [realm_priest|E] relinquishes the [city_of_magic|E] automatically"
+ NOT_I_HAVE_AM_METROPOLIS_BARONY_SELECTED:1 "You have #bold not#! selected a Barony"
 
+ AM_CONVERT_HOLDING_DECISION_NAME_LABEL:0 "Name:"
+ AM_CONVERT_HOLDING_DECISION_CAPITAL_LABEL:0 "Holding:"
+ REVOKE_AM_CONVERT_HOLDING_DECISION_BARONY_LABEL:0 "County:"
+ AM_CONVERT_HOLDING_DECISION_CHANGE_CAPITAL:1 "Change Holding"
+ AM_CONVERT_HOLDING_DECISION_SELECT_CAPITAL:1 "Select Holding"
+
+ AM_SELECT_HOLDING_TITLE:1 "Select Holding"
+ AM_SELECT_HOLDING_NO_TITLES:0 "No available Holdings"
+ AM_SELECT_HOLDING_TOOLTIP:0 "#T [Select_CString( DecisionViewWidgetCreateHolyOrder.HasValidBaronies, '$AM_SELECT_HOLDING_TITLE$', '$AM_SELECT_HOLDING_NO_TITLES$' )] #!"
+ AM_SELECT_HOLDING_CONFIRM:0 "Select"
+ 
+ no_built_am_city_of_magic:0 "The province does not have a [city_of_magic|E]"
+ no_am_city_of_magic_holding:0 "The province does not already have a [city_of_magic|E] holding"
+  
+ am_ai_convert_holding_to_city_of_magic_decision:0 "Found City of Magic (AI)"
+ am_ai_convert_holding_to_city_of_magic_decision_desc:0 "Architects, engineers and mages have been congregating within my realm as of late. Many are sought after as master builders, enchanters, and to prove their skills, they have agreed to help us expand our capital into a proper [city_of_magic|E]."
+ am_ai_convert_holding_to_city_of_magic_decision_tooltip:1 "The existing capital holding will be replaced with a [city_of_magic|E] holding"
+ am_ai_convert_holding_to_city_of_magic_decision_confirm:1 "Lay the foundation!"
+ am_ai_convert_holding_to_city_of_magic_decision_custom:0 "In a fitting Barony"
+ 
  #intrigue menu
  open_spellbook_decision: "Open Spellbook"
  open_spellbook_decision_tooltip: "[ROOT.GetCharacter.GetFirstNameNoTooltip] casts a spell on [ROOT.GetCharacter.GetHerselfHimself]."

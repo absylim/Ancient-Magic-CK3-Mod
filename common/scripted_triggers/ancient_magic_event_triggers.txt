@@ -67,9 +67,5 @@ has_critical_illness_trigger = {
 }
 
 has_magical_potential = {
-	OR = {
-		has_trait = magic_potential_1
-		has_trait = magic_potential_2
-		has_trait = magic_potential_3
-	}
+	mana_affinity > 0
 }

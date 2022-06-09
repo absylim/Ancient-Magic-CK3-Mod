@@ -1,0 +1,50 @@
+﻿mana_affinity_ask_for_blood_default_modifier = {
+	opinion_modifier = {
+		opinion_target = scope:actor
+		who = scope:recipient
+		multiplier = 1
+	}
+
+	modifier = {
+		desc = SCHEME_WEAK_HOOK_USED
+		add = 50
+		scope:hook = yes
+	}
+	
+	modifier = {
+		desc = ASK_FOR_BLOOD_ADD_BLOODLINE
+		add = -25
+		scope:bloodline = yes
+	}
+	
+	modifier = {
+		desc = ASK_FOR_BLOOD_RECIPIENTS_FAITH_WITCH_CRIME
+		add = -25
+		scope:recipient = {
+			faith = {
+				has_doctrine = doctrine_witchcraft_crime
+			}
+		}
+	}
+	
+	modifier = {
+		desc = ASK_FOR_BLOOD_RECIPIENTS_FAITH_WITCH_CRIME_IS_ZEALOUS
+		add = -50
+		scope:recipient = {
+			faith = {
+				has_doctrine = doctrine_witchcraft_crime
+			}
+			has_trait = zealous
+		}
+	}
+	
+	modifier = { #If recipients mana affinity is higher then yours then lower acceptence
+		desc = ASK_FOR_BLOOD_DIFFERENCE_OF_BASE_MANA_AFFINITY
+		add = -5
+		multiply = {
+			value = 0
+			add = scope:recipient.var:base_mana_affinity
+			subtract = scope:actor.var:base_mana_affinity
+		}
+	}
+}

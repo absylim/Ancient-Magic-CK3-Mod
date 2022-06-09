@@ -1,4 +1,8 @@
-﻿texticon = {
+﻿#####################################
+#########    Mana Icons    ##########
+#####################################
+
+texticon = {
     icon = aura_icon_active
     iconsize = {
         texture = "gfx/interface/icons/icon_active_aura.dds"
@@ -38,6 +42,10 @@ texticon = {
     }
 }
 
+#####################################
+######   Special Units Icons   ######
+#####################################
+
 texticon = {
     icon = maa_stone_golems
     iconsize = {
@@ -67,6 +75,10 @@ texticon = {
         fontsize = 16
     }
 }
+
+#####################################
+########   Spellbook Icons   ########
+#####################################
 
 texticon = {
     icon = xp_icon
@@ -146,6 +158,30 @@ texticon = {
 	iconsize = {
 		texture = "gfx/magic/mensomancy_magic.dds"
 		size = { 80 80 }
+		fontsize = 16
+	}
+}
+
+#####################################
+######   Mana Affinity Icons   ######
+#####################################
+
+texticon = {
+	icon = icon_mana_affinity
+	iconsize = {
+		texture = "gfx/interface/icons/icon_mana_affinity.dds"
+		size = { 25 25 }
+        offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = icon_blood
+	iconsize = {
+		texture = "gfx/interface/icons/icon_blood.dds"
+		size = { 25 25 }
+        offset = { 0 6 }
 		fontsize = 16
 	}
 }

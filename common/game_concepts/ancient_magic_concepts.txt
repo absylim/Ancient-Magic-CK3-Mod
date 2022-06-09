@@ -1,10 +1,6 @@
 ﻿mage_level = {
 }
 
-magic_potential = {
-	alias = { mage_potency magic_skill }
-}
-
 mana = {
 	texture = "gfx/interface/icons/icon_active_aura.dds"
 	alias = { mana_i }
@@ -94,10 +90,6 @@ lava_golems = {
 undead = {
 	texture = "gfx/interface/icons/regimenttypes/lesser_undead.dds"
 	alias = { lesser_undead greater_undead }
-}
-
-magocracy = {
-	alias = { magocracies magocratic magocratic_government }
 }
 
 city_of_magic = {

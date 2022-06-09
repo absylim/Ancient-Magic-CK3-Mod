@@ -1,0 +1,6 @@
+﻿#dummy inventory as ingredients are unequipeable
+ingredient = {
+	type = "ingredient"
+	category = inventory
+	icon = ingredient
+}

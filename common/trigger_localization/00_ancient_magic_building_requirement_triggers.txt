@@ -1,0 +1,66 @@
+﻿am_holy_site_duplicate_trigger = {
+	global = AM_HOLY_SITE_BUILDING_DUPLICATE
+}
+
+barony_is_hist_vanilla_am_university_trigger = {
+	global = IS_VANILLA_UNIVERSITY_PROVINCE
+}
+
+has_am_city_of_magic_barony_selected = {
+	first_not = NOT_I_HAVE_AM_CITY_OF_MAGIC_BARONY_SELECTED
+}
+
+has_am_eligble_barony_in_county = {
+	first = I_HAVE_AM_ELIGBLE_BARONIES_COUNTY
+}
+
+has_am_correct_city_of_magic_second_stage_trigger = {
+	first = I_HAVE_CORRECT_CITY_OF_MAGIC_2ND_STAGE_IN_PROVINCE
+}
+
+has_am_correct_city_of_magic_fourth_stage_trigger = {
+	first = I_HAVE_CORRECT_CITY_OF_MAGIC_4TH_STAGE_IN_PROVINCE
+}
+
+am_does_not_hold_too_many_city_of_magices_1_max_trigger = {
+	first = I_HAVE_TOO_MANY_AM_CITY_OF_MAGICES_1_MAX
+}
+
+am_does_not_hold_too_many_city_of_magices_3_max_trigger = {
+	first = I_HAVE_TOO_MANY_AM_CITY_OF_MAGICES_3_MAX
+}
+
+am_does_not_hold_too_many_city_of_magices_5_max_trigger = {
+	first = I_HAVE_TOO_MANY_AM_CITY_OF_MAGICES_5_MAX
+}
+
+am_city_of_magic_buildings_disabled_trigger = {
+	first = AM_CITY_OF_MAGIC_BUILDINGS_ARE_DISABLED
+}
+
+am_holder_is_lunatic_or_possessed_trigger = {
+	first = HOLDER_IS_LUNATIC_OR_POSSESSED_AM
+}
+
+am_is_king_or_emperor = {
+	global = AM_I_MUST_BE_KING_OR_EMPEROR
+	global_not = AM_I_AM_NOT_KING_OR_EMPEROR
+	first = AM_I_MUST_BE_KING_OR_EMPEROR
+	first_not = AM_I_AM_NOT_KING_OR_EMPEROR
+}
+
+am_city_of_magic_civic_divine_right = {
+	first = COUNTY_MUST_HAVE_DEVELOPMENT_OR_DIVINE_RIGHT
+}
+
+am_city_of_magic_military_machicolations = {
+	first = COUNTY_MUST_HAVE_DEVELOPMENT_OR_MACHICOLATIONS
+}
+
+am_city_of_magic_civic_renaissance = {
+	first = COUNTY_MUST_HAVE_DEVELOPMENT_OR_RENAISSANCE
+}
+
+am_city_of_magic_civic_cranes = {
+	first = COUNTY_MUST_HAVE_DEVELOPMENT_OR_CRANES
+}

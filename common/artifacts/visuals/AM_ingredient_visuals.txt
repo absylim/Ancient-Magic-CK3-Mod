@@ -1,0 +1,102 @@
+﻿#Author: Donekulda
+#Visuals for ingredients
+mana_blood = {
+	icon = "mana_blood.dds"
+	
+	icon = { #Visuals change based on the rank of Mana Affinity
+		trigger = {
+			OR = {
+				scope:blood_mana_affinity <= mundane_mana_affinity_level
+				#scope:artifact.creator = {
+				#	set_local_variable = {
+				#		name = blood_mana_affinity
+				#		value = {
+				#			value = 0 
+				#			add = var:base_mana_affinity
+				#			add = mana_affinity_bloodline_boost
+				#		}
+				#	}
+				#	
+				#	local_var:blood_mana_affinity.compare_value  <= mundane_mana_affinity_level
+				#}
+			}
+		}
+		reference = "mana_blood.dds"
+	}
+	
+	icon = {
+		trigger = {
+			AND = {
+				scope:blood_mana_affinity > mundane_mana_affinity_level
+				scope:blood_mana_affinity <= sub_magical_mana_affinity_level
+			}
+			#scope:artifact.creator = {
+			#	set_local_variable = {
+			#		name = blood_mana_affinity
+			#		value = {
+			#			value = 0 
+			#			add = var:base_mana_affinity
+			#			add = mana_affinity_bloodline_boost
+			#		}
+			#	}
+			#	
+			#	local_var:blood_mana_affinity.compare_value  > mundane_mana_affinity_level
+			#	local_var:blood_mana_affinity.compare_value  <= sub_magical_mana_affinity_level
+			#}
+		}
+		reference = "mana_blood_sub_magical.dds"
+	}
+	
+	icon = {
+		trigger = {
+			AND = {
+				scope:blood_mana_affinity > sub_magical_mana_affinity_level
+				scope:blood_mana_affinity <= magical_mana_affinity_level
+			}
+			#scope:artifact.creator = {
+			#	set_local_variable = {
+			#		name = blood_mana_affinity
+			#		value = {
+			#			value = 0 
+			#			add = var:base_mana_affinity
+			#			add = mana_affinity_bloodline_boost
+			#		}
+			#	}
+			#	
+			#	local_var:blood_mana_affinity.compare_value > sub_magical_mana_affinity_level
+			#	local_var:blood_mana_affinity.compare_value  <= magical_mana_affinity_level
+			#}
+		}
+		reference = "mana_blood_magical.dds"
+	}
+	
+	icon = {
+		trigger = {
+			AND = {
+				scope:blood_mana_affinity > magical_mana_affinity_level
+				scope:blood_mana_affinity <= transcendent_affinity_level
+			}
+		}
+		reference = "mana_blood_transcendent.dds"
+	}
+	
+	icon = {
+		trigger = {
+			AND = {
+				scope:blood_mana_affinity > transcendent_affinity_level
+				scope:blood_mana_affinity <= demigod_mana_affinity_level
+			}
+		}
+		reference = "mana_blood_demigod.dds"
+	}
+	
+	icon = {
+		trigger = {
+			AND = {
+				scope:blood_mana_affinity > demigod_mana_affinity_level
+				scope:blood_mana_affinity <= god_mana_affinity_level
+			}
+		}
+		reference = "mana_blood_god.dds"
+	}
+}

@@ -36,8 +36,10 @@ set_up_remaining_mana_gen_for_year = {
 			limit = { has_game_rule = am_magic_gen_daily }
 			set_variable = {
 				name = mana_gen_days_left
-				value = 365
-				subtract = current_day_in_year
+				value = {
+					value = 365
+					subtract = current_day_in_year
+				}
 			}
 			trigger_event = { on_action = daily_mana_gen }
 		}

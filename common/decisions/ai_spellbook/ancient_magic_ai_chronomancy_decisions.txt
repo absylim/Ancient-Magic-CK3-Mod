@@ -18,7 +18,7 @@
 
 			change_mana = { VALUE = mass_celerity_spell_cost.neg }
 
-			change_mana_gen = { VALUE = -15 }
+			change_mana_gen_tooltip = { VALUE = -15 }
 
 			while = {
 				count = mage_level
@@ -34,7 +34,7 @@
 					has_character_modifier = mass_celerity_spell_modifier
 				}
 			}
-			change_mana_gen = { VALUE = 15 }
+			change_mana_gen_tooltip = { VALUE = 15 }
 
 			while = {
 				count = 100
@@ -90,7 +90,7 @@ glimpse_the_future_ai_spell_decision = {
 
 			change_mana = { VALUE = glimpse_the_future_spell_cost.neg }
 
-			change_mana_gen = { VALUE = -15 }
+			change_mana_gen_tooltip = { VALUE = -15 }
 
 			while = {
 				count = mage_level
@@ -107,7 +107,7 @@ glimpse_the_future_ai_spell_decision = {
 				}
 			}
 
-			change_mana_gen = { VALUE = 15 }
+			change_mana_gen_tooltip = { VALUE = 15 }
 
 			while = {
 				count = 100
@@ -165,7 +165,7 @@ financial_times_ai_spell_decision = {
 
 			change_mana = { VALUE = financial_times_spell_cost.neg }
 
-			change_mana_gen = { VALUE = -15 }
+			change_mana_gen_tooltip = { VALUE = -15 }
 
 			while = {
 				count = mage_level
@@ -182,7 +182,7 @@ financial_times_ai_spell_decision = {
 				}
 			}
 
-			change_mana_gen = { VALUE = 15 }
+			change_mana_gen_tooltip = { VALUE = 15 }
 
 			while = {
 				count = 100
@@ -242,7 +242,7 @@ celerity_ai_spell_decision = {
 
 			change_mana = { VALUE = celerity_spell_cost.neg }
 
-			change_mana_gen = { VALUE = -15 }
+			change_mana_gen_tooltip = { VALUE = -15 }
 
 			while = {
 				count = mage_level
@@ -259,7 +259,7 @@ celerity_ai_spell_decision = {
 				}
 			}
 
-			change_mana_gen = { VALUE = 15 }
+			change_mana_gen_tooltip = { VALUE = 15 }
 
 			while = {
 				count = 100
@@ -319,7 +319,7 @@ temporal_manipulation_ai_spell_decision = {
 
 			change_mana = { VALUE = temporal_manipulation_spell_cost.neg }
 
-			change_mana_gen = { VALUE = -30 }
+			change_mana_gen_tooltip = { VALUE = -30 }
 
 			while = {
 				count = mage_level
@@ -336,7 +336,7 @@ temporal_manipulation_ai_spell_decision = {
 				}
 			}
 
-			change_mana_gen = { VALUE = 30 }
+			change_mana_gen_tooltip = { VALUE = 30 }
 
 			while = {
 				count = 100

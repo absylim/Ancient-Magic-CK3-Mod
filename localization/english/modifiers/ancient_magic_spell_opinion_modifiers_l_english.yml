@@ -14,3 +14,7 @@
  cursed_me_spell_active: "Cursed me!"
  blessed_me_spell: "Blessed me"
  blessed_me_spell_active: "Blessed me"
+
+ refused_to_give_blood_opinion: "Refused to give blood"
+ asked_for_my_blood_opinion: "Asked for my blood"
+ gave_me_their_blood_opinion: "Gave me their blood"

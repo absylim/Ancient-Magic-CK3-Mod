@@ -12,7 +12,7 @@
  MANA_EXPENSES_NAME: "Monthly Drain"
  MANA_GENERATION_NAME: "Total Monthly Change:"
  mana_breakdown_gen_perks: "[GetTrait('mage').GetName(GetPlayer)] [perks|E]"
- mana_breakdown_gen_potency: "[magic_potential|E]"
+ mana_breakdown_gen_potency: "[mana_affinity|E]"
  mana_breakdown_gen_circles: "$building_type_ancient_magic_mana_circle_01$s"
  mana_breakdown_gen_lifestyle: "[GetFocus('magic_mana_focus').GetName]"
  mana_breakdown_gen_legacy: "[GetDynastyPerk('arcane_legacy_2').GetName]"

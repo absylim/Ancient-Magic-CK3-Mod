@@ -1,31 +1,42 @@
 ﻿PC_magic_level = {
 	default = PC_magic_level_0
 
-	PC_magic_level_decision = {
+	#PC_magic_level_decision = {}
+
+	PC_magic_level_0 = { # Mundane
+	
+	}
+	
+	PC_magic_level_1 = { # Sub-magical
+	
+	}
+	
+	PC_magic_level_2 = { # Magical
 
 	}
-
-	PC_magic_level_0 = {
 	
-	}
-	
-	PC_magic_level_1 = {
-	
-	}
-	
-	PC_magic_level_2 = {
-
-	}
-	
-	PC_magic_level_3 = {
+	PC_magic_level_3 = { # Transcendent
 
 	}	
+	
+	PC_magic_level_4 = { # Demigod
+
+	}	
+	
+	PC_magic_level_5 = { # God
+
+	}	
+	
+	PC_magic_level_random = {} # Random
 }
 
-NPC_magic_chance = {
+NPC_magic_chance = { # Percantage of NPC that will have 
 	default = NPC_magic_chance_001
 	NPC_magic_chance_0 = {
 
+	}
+	NPC_magic_chance_0001 = {
+	
 	}
 	
 	NPC_magic_chance_001 = {
@@ -45,11 +56,15 @@ NPC_magic_chance = {
 	}
 }
 
-NPC_magic_level = {
+NPC_magic_level = { #How high is highest game start mana affinity
 	default = NPC_magic_level_random
 
 	NPC_magic_level_random = {
 
+	}
+	
+	NPC_magic_level_0 = {
+	
 	}
 	
 	NPC_magic_level_1 = {
@@ -61,6 +76,14 @@ NPC_magic_level = {
 	}
 	
 	NPC_magic_level_3 = {
+
+	}	
+	
+	NPC_magic_level_4 = {
+
+	}
+	
+	NPC_magic_level_5 = {
 
 	}	
 }
@@ -124,4 +147,9 @@ magic_gen_freq = {
 
 	am_magic_gen_monthly = {}
 	am_magic_gen_daily = {}
+}
+
+ancient_magic_mana_affinity_mechanic = {
+  ancient_magic_mana_affinity_max_mana = {}
+  ancient_magic_mana_affinity_mage_xp = {}
 }

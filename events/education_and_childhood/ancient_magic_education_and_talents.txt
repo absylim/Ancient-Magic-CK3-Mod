@@ -13,30 +13,21 @@ AM_education_and_talents.001 = {
 }
 
 
-AM_education_and_talents.002 = { #Will give every person who has arcane education magical potential
+AM_education_and_talents.002 = { #Will give every person who has arcane education mana affinity
 	hidden = yes
 	immediate = {
-		if = {
+		if = { #Checks if given mana affinity isnt lower or equal to 1, if yes give bit higher 
 			limit = {
 				AND = {
 					has_education_arcane_trigger = yes
-					NOR = {
-						has_trait = magic_potential_1 
-						has_trait = magic_potential_2 
-						has_trait = magic_potential_3 
-					}
+					has_variable = base_mana_affinity
+					var:base_mana_affinity <= 1
 				}
 			}
 			random_list = {
-				70 = {
-					add_trait = magic_potential_1
-				}
-				25 = {
-					add_trait = magic_potential_2
-				}
-				5 = {
-					add_trait = magic_potential_3
-				}
+				60 = { change_variable = { name = base_mana_affinity add = 1} }
+				30 = { change_variable = { name = base_mana_affinity add = 2} }
+				10 = { change_variable = { name = base_mana_affinity add = 3} }
 			}
 		}
 	}
@@ -46,143 +37,4 @@ AM_education_and_talents.002 = { #Will give every person who has arcane educatio
 ########################  Ley Lines Effects  ########################
 #####################################################################
 
-AM_education_and_talents.006 = { # Call on birth for check around ley line effects on child
-	hidden = yes
-	trigger = {
-		OR = {
-			is_located_on_ley_line = yes
-			is_located_on_focal_point = yes
-		}
-	}
-	immediate = {
-		if = { # Upgrade talent
-			limit = {
-				has_magical_potential = yes
-			}
-			if = {
-				limit = {
-					is_located_on_ley_line = yes
-				}
-				trigger_event =	AM_education_and_talents.008 
-			}
-			else_if = {
-				limit = {
-					is_located_on_focal_point = yes
-				}
-				trigger_event =	AM_education_and_talents.009 
-			}
-		}
-		else = { # Give talent
-			trigger_event =	AM_education_and_talents.007
-		}
-	}
-}
-
-AM_education_and_talents.007 = { # Give magical potential based on location
-	hidden = yes
-	immediate = {
-		if = {
-			limit = {
-				is_located_on_ley_line = yes
-			}
-			random_list = {
-				75 = {} #Nothing happens
-				15 = {
-					add_trait = magic_potential_1
-				}
-				9 = {
-					add_trait = magic_potential_2
-				}
-				1 = {
-					add_trait = magic_potential_3
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				is_located_on_focal_point = yes
-			}
-			random_list = {
-				50 = {} #Nothing happens
-				30 = {
-					add_trait = magic_potential_1
-				}
-				15 = {
-					add_trait = magic_potential_2
-				}
-				5 = {
-					add_trait = magic_potential_3
-				}
-			}
-		}
-	}
-}
-
-AM_education_and_talents.008 = { # Upgrade talent on ley line
-	hidden = yes
-	immediate = {
-		if = {
-			limit = {
-				has_trait = magic_potential_1
-			}
-			random_list = {
-				85 = {} #Nothing happens
-				10 = {
-					remove_trait = magic_potential_1
-					add_trait = magic_potential_2
-				}
-				5 = {
-					remove_trait = magic_potential_1
-					add_trait = magic_potential_3
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				has_trait = magic_potential_2
-			}
-			random_list = {
-				90 = {} #Nothing happens
-				10 = {
-					remove_trait = magic_potential_2
-					add_trait = magic_potential_3
-				}
-			}
-		}
-	}
-}
-
-AM_education_and_talents.009 = { # Upgrade talent on focal point
-	hidden = yes
-	immediate = {
-		if = {
-			limit = {
-				has_trait = magic_potential_1
-			}
-			random_list = {
-				65 = { add_gold = 50 } #Nothing happens
-				25 = {
-					remove_trait = magic_potential_1
-					add_trait = magic_potential_2
-				}
-				10 = {
-					remove_trait = magic_potential_1
-					add_trait = magic_potential_3
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				has_trait = magic_potential_2
-			}
-			add_gold = 1000
-			random_list = {
-				75 = {} #Nothing happens
-				25 = {
-					remove_trait = magic_potential_2
-					add_trait = magic_potential_3
-				}
-			}
-		}
-	}
-}
+#None for now

@@ -1,0 +1,7 @@
+﻿l_english:
+#Mana blood
+ ingredient_mana_blood_sub_magical_rank_affinity_modifier: "Blood of Semi-Magical being"
+ ingredient_mana_blood_magical_rank_affinity_modifier: "Blood of Magical being"
+ ingredient_mana_blood_transcendent_rank_affinity_modifier: "Blood of Transcendent being"
+ ingredient_mana_blood_demigod_rank_affinity_modifier: "Blood of Demigod being"
+ ingredient_mana_blood_god_rank_affinity_modifier: "Blood of God being"

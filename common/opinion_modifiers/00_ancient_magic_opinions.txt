@@ -59,3 +59,18 @@ cursed_me_spell_active = {
 blessed_me_spell_active = {
 	opinion = 20
 }
+
+refused_to_give_blood_opinion = {
+	opinion = -15
+	years = 5
+}
+
+asked_for_my_blood_opinion = {
+	opinion = -15 
+	years = 5
+}
+
+gave_me_their_blood_opinion = {
+	opinion = 25
+	years = 5
+}

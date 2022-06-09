@@ -6,8 +6,56 @@
  ancient_magic_rituals_events.001.a.success: "Succesful ritual"
  ancient_magic_rituals_events.001.a.failure: "Failure"
  ancient_magic_rituals_events.002.t: "Success!"
- ancient_magic_rituals_events.002.desc: "Goddess of Fortune smiled on me today, the ritaul was a great success! From this day on im nolonger fully bound by this mortal shell!"
+ ancient_magic_rituals_events.002.desc: "Goddess of Fortune smiled on me today, the ritual was a great success! From this day on im nolonger fully bound by this mortal shell!"
  ancient_magic_rituals_events.002.a: "Life Ethernal?"
  ancient_magic_rituals_events.003.t: "What have i gone wrong?!"
  ancient_magic_rituals_events.003.desc: "You dont know if its just your luck or if you could have done just little bit more of preparation, but its already too late during the forging you lost concentration even if it was just a little, it got quickly out of hand and it tear your conciousness apart."
  ancient_magic_rituals_events.003.a: "Still so much to do..."
+
+#Extracting magical blood from oneself
+ ancient_magic_rituals_events.004.t: "Extract Blood"
+ ancient_magic_rituals_events.004.desc: "Now it's time to extract the blood from my self, but i must be carefull as it will also weaken me!"
+ ancient_magic_rituals_events.004.with_bloodline: "Extract blood with [magical_bloodline|E]"
+ ancient_magic_rituals_events.004.without_bloodline: "Extract blood without [magical_bloodline|E]"
+ ancient_magic_rituals_events.004.no_bloodline: "Extract blood"
+
+#Implanting magical blood into onself
+ ancient_magic_rituals_events.005.t: "Implant magical blood - Close Relatives"
+ ancient_magic_rituals_events.005.desc: "You may choose one from among the vials of blood in your inventory which were taken from your [close_family_members|E]"
+ ancient_magic_rituals_events.005.exit: "I will think about it..."
+ ancient_magic_rituals_events.005.a: "[option_0.GetName] - [option_0.MakeScope.Var('mana_affinity').GetValue][mana_affinity_i]- compatibility: [SCOPE.Custom('mana_blood_compatibility_level_option_0')|U] #S ([SCOPE.GetValue('option_0_compatibility')|0]) #!"
+ ancient_magic_rituals_events.005.b: "[option_1.GetName] - [option_1.MakeScope.Var('mana_affinity').GetValue][mana_affinity_i]- compatibility: [SCOPE.Custom('mana_blood_compatibility_level_option_1')|U] #S ([SCOPE.GetValue('option_1_compatibility')|0]) #!"
+ ancient_magic_rituals_events.005.c: "[option_2.GetName] - [option_2.MakeScope.Var('mana_affinity').GetValue][mana_affinity_i]- compatibility: [SCOPE.Custom('mana_blood_compatibility_level_option_2')|U] #S ([SCOPE.GetValue('option_2_compatibility')|0]) #!"
+ ancient_magic_rituals_events.005.d: "[option_3.GetName] - [option_3.MakeScope.Var('mana_affinity').GetValue][mana_affinity_i]- compatibility: [SCOPE.Custom('mana_blood_compatibility_level_option_3')|U] #S ([SCOPE.GetValue('option_3_compatibility')|0]) #!"
+ ancient_magic_rituals_events.005.e: "[option_4.GetName] - [option_4.MakeScope.Var('mana_affinity').GetValue][mana_affinity_i]- compatibility: [SCOPE.Custom('mana_blood_compatibility_level_option_4')|U] #S ([SCOPE.GetValue('option_4_compatibility')|0]) #!"
+ ancient_magic_rituals_events.005.f: "[option_5.GetName] - [option_5.MakeScope.Var('mana_affinity').GetValue][mana_affinity_i]- compatibility: [SCOPE.Custom('mana_blood_compatibility_level_option_5')|U] #S ([SCOPE.GetValue('option_5_compatibility')|0]) #!"
+ ancient_magic_rituals_events.005.g: "[option_6.GetName] - [option_6.MakeScope.Var('mana_affinity').GetValue][mana_affinity_i]- compatibility: [SCOPE.Custom('mana_blood_compatibility_level_option_6')|U] #S ([SCOPE.GetValue('option_6_compatibility')|0]) #!"
+ ancient_magic_rituals_events.005.h: "[option_7.GetName] - [option_7.MakeScope.Var('mana_affinity').GetValue][mana_affinity_i]- compatibility: [SCOPE.Custom('mana_blood_compatibility_level_option_7')|U] #S ([SCOPE.GetValue('option_7_compatibility')|0]) #!"
+ 
+ ancient_magic_rituals_events.006.t: "Implant magical blood - Extended Relatives"
+ ancient_magic_rituals_events.006.desc: "You may choose one from among the vials of blood in your inventory which were taken from your [extended_family_members|E]"
+ 
+ ancient_magic_rituals_events.007.t: "Implant magical blood - Non Related"
+ ancient_magic_rituals_events.007.desc: "You may choose one from among the vials of blood in your inventory which were taken from people who are not closely related to you."
+
+ ancient_magic_rituals_events.008.t: "Implant magical blood - Injector"
+ ancient_magic_rituals_events.008.desc: "I seem to be the only one capable of performing this operation successfully."
+ ancient_magic_rituals_events.008.desc_doctor: "Now, the question remains: Who shall perform the operation? Should my court physician do it, or shall I do it, myself?"
+ ancient_magic_rituals_events.008.a: "I shall get to work"
+ ancient_magic_rituals_events.008.b: "I am in your hands, [physician.GetNameRegnal]"
+ ancient_magic_rituals_events.008.succcess: "Successful transfusion"
+ ancient_magic_rituals_events.008.failure: "Unsuccessful transfusion"
+ 
+ ancient_magic_rituals_events.009.t: "Implant magical blood - Success"
+ ancient_magic_rituals_events.009.desc: "The transfusion was a resounding success! I must say, my physician acquitted themself quite well."
+ ancient_magic_rituals_events.009.a: "Time to get back to my duties"
+ 
+ ancient_magic_rituals_events.010.desc: "The transfusion was a great success, i must say my physician isnt half bad."
+ ancient_magic_rituals_events.010.a: "Excellent work! You shall be rewarded..."
+ 
+ ancient_magic_rituals_events.011.t: "Implant magical blood - Failure"
+ ancient_magic_rituals_events.011.desc: "The transfusion was a great failure, but at least I am still alive."
+ ancient_magic_rituals_events.011.a: "I will have to try again, eventually."
+ 
+ ancient_magic_rituals_events.012.desc: "[physician.GetFirstNameNoTooltip] wrings [physician.GetHerHis] hands. "I am truly sorry, my lord," \n[physician.GetSheHe] says. "The transfusion was unsuccessful. However, I did manage to replace your original blood, so you will not die from the operation.""
+ ancient_magic_rituals_events.012.a: "Get [physician.GetHerHim] out of my sight."

@@ -25,3 +25,17 @@ death_botched_soul_forging = {
 	public_knowledge = yes
 	icon = "death_unknown.dds"
 }
+
+death_incompatible_infused_blood = {
+	natural = yes
+	natural_death_trigger = {
+		has_trait = infused_magical_blood_incompatible
+	}
+	priority = 9 # Lower than old age
+	icon = "death_murder.dds"
+}
+
+death_botched_blood_transfusion = {
+	public_knowledge = yes
+	icon = "death_unknown.dds"
+}

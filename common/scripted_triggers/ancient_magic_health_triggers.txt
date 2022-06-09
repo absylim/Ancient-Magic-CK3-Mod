@@ -78,3 +78,24 @@ has_treatable_magical_disease_trigger = {
 	}
 }
 
+
+######################
+#    Mana affinity   #
+######################
+
+has_magical_bloodline_trigger = {
+	OR = {
+		has_trait = dragonic_bloodline
+		has_trait = antler_bloodline
+		has_trait = giant_bloodline
+	}
+}
+
+has_magical_bloodline_of_type_trigger = {
+	switch = {
+		trigger = $TYPE$
+		flag:dragonic_bloodline = { $TARGET$ = { has_trait = dragonic_bloodline } }
+		flag:antler_bloodline = { $TARGET$ = { has_trait = antler_bloodline } }
+		flag:giant_bloodline = { $TARGET$ = { has_trait = giant_bloodline } }
+	}
+}

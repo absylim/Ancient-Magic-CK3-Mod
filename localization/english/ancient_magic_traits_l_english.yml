@@ -1,12 +1,6 @@
 ﻿l_english:
  trait_immortal: "Immortal"
  trait_immortal_desc: "This character is an immortal."
- trait_magic_potential_1: "Minor Magic Potential"
- trait_magic_potential_1_desc: "This character has limited magical talent."
- trait_magic_potential_2: "Moderate Magic Potential"
- trait_magic_potential_2_desc: "This character has moderate magical talent."
- trait_magic_potential_3: "Great Magic Potential"
- trait_magic_potential_3_desc: "This character has great magical talent."
  trait_master_of_time: "Master of Time"
  trait_master_of_time_desc: "This character has mastered time itself, and can grant immortality."
  trait_avatar_of_life: "Avatar of Life"
@@ -36,3 +30,20 @@
  trait_mage_dementia: "Magical Dementia"
  trait_mage_dementia_desc: "The human mind can only handle 200-300 years worth of memories. This character has lived so long, their mind has begun overwriting their previous existence with new memories."
  trait_mage_dementia_character_desc: "The human mind can only handle 200-300 years worth of memories. [ROOT.Char.GetNameNoTooltip] has lived so long, [ROOT.Char.GetHerHis] mind has begun overwriting their previous existence with new memories."
+
+ #bloodlines
+ trait_dragonic_bloodline: "Dragonic Bloodline"
+ trait_dragonic_bloodline_desc: "The blood of dragons flows through the veins of this character. This character is stronger, healthier and much more attuned to mana, but they are also greedier and more arrogant."
+ trait_dragonic_bloodline_character_desc: "The blood of dragons flows through the veins of [ROOT.GetCharacter.GetFirstNameNoTooltip]. [ROOT.GetCharacter.GetSheHe|U] is stronger, healthier and much more attuned to mana, but [ROOT.GetCharacter.GetSheHe] is also greedier and more arrogant."
+ trait_antler_bloodline: "Antler Bloodline"
+ trait_antler_bloodline_desc: "The blood of a mystical deer flows through the veins of this character. This character is more agile, healthier, better looking and more attuned to mana, but they are also more compassionate, timid and bit craven."
+ trait_antler_bloodline_character_desc: "The blood of a mystical deer flows through the veins of [ROOT.GetCharacter.GetFirstNameNoTooltip]. [ROOT.GetCharacter.GetSheHe|U] is more agile, healthier, better looking and more attuned to mana, but [ROOT.GetCharacter.GetSheHe] is also more compassionate, timid and bit craven."
+ trait_giant_bloodline: "Blood of Giants"
+ trait_giant_bloodline_desc: "The blood of giants flows through the veins of this character. This character is much stronger, healthier and more attuned to mana, but they are also irrational and more impatient."
+ trait_giant_bloodline_character_desc: "The blood of giants flows through the veins of [ROOT.GetCharacter.GetFirstNameNoTooltip]. [ROOT.GetCharacter.GetSheHe|U] is much stronger, healthier and more attuned to mana, but [ROOT.GetCharacter.GetSheHe] is also irrational and more impatient."
+ trait_infused_magical_blood_compatible: "Infused Magical Blood"
+ trait_infused_magical_blood_compatible_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has infused the blood of someone with higher magical aptitude into [ROOT.GetCharacter.GetHerselfHimself], in order to compensate for [ROOT.GetCharacter.GetHerHis] lower innate mana affinity. Fortunately, [ROOT.GetCharacter.GetSheHe] was lucky that [ROOT.GetCharacter.GetHerHis] blood was compatible with the blood [ROOT.GetCharacter.GetSheHe] infused."
+ trait_infused_magical_blood_incompatible: "Infused Magical Blood"
+ trait_infused_magical_blood_incompatible_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has infused the blood of someone with higher magical aptitude into [ROOT.GetCharacter.GetHerselfHimself], in order to compensate for [ROOT.GetCharacter.GetHerHis] lower innate mana affinity. Unfortunately, the blood that [ROOT.GetCharacter.GetSheHe] infused was not compatible with [ROOT.GetCharacter.GetHerHis] own."
+
+ 

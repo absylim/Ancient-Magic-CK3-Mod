@@ -1,0 +1,4 @@
+﻿l_english:
+ artifact_ingredient: "Ingredient"
+ artifact_slot_ingredient: "$artifact_ingredient$"
+ ingredient: "Ingredient"

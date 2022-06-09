@@ -166,3 +166,12 @@ magic_advancement_modifier = {
 	earn_mage_xp_effect = yes
 	monthly_lifestyle_xp_gain_mult = -10.0
 }
+
+###############################################
+###########		Mana affinity		###########
+###############################################
+
+drained_of_blood_modifier = { #Character modifier added when he was drained of blood
+	icon = health_negative
+	health = -1
+}
