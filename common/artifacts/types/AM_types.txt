@@ -4,7 +4,7 @@
 
 #Ingredients
 ingredient = {
-	slot = miscellaneous #Ingredients arent equiped, but this is used here to prevent errors
+	slot = ingredient #Ingredients arent equiped, but this is used here to prevent errors
 	optional_features = { mana_blood }
 	can_reforge = no
 }
