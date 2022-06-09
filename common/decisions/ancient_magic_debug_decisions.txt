@@ -1,6 +1,6 @@
 ﻿debug_check_mana_affinity = { #Decision used as tooltip
 	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
-	
+	ai_check_interval = 0
 	is_shown = {
 		#is_magus_trigger = yes #As this is decision for debug
 		is_ai = no
@@ -18,6 +18,7 @@
 
 debug_regenerate_base_mana_affinity = {
 	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	ai_check_interval = 0
 	
 	is_shown = {
 		is_ai = no
