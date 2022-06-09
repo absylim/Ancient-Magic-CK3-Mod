@@ -43,6 +43,6 @@
  mana_affinity_interaction.0102.c:0 "You will do this for something far more valuable than gold."
 
  mana_affinity_interaction.0103.desc:0 "I see why you would want my blood, but I hope you understand what a problematic path it is to give up considerable amount of one's blood.\n\nPerhaps if you promised to support me in whatever way I need, the time and complications spent on recuperation would be smaller."
- mana_affinity_interaction.0103.a:0 You shall have it.
+ mana_affinity_interaction.0103.a:0 "You shall have it."
  mana_affinity_interaction.0103.b:0 "I will not bargain for your tainted blood!"
  mana_affinity_interaction.0103.c:0 "You have other debts to repay me, first."
