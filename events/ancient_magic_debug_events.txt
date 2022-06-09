@@ -63,11 +63,11 @@ ancient_magic_debug.303 = {
 			am_set_building_lvl_flag_effect = yes
 			set_holding_type = city_of_magic_holding
 			if = {
-				limit = { barony_variable_holding_level_trigger = yes }
+				limit = { am_barony_variable_holding_level_trigger = yes }
 				am_refound_add_holding_level_effect = yes
 			}
 			if = {
-				limit = { barony_variable_building_level_trigger = yes }
+				limit = { am_barony_variable_holding_level_trigger = yes }
 				am_add_building_lvl_effect = yes
 			}
 		}
