@@ -8,35 +8,6 @@
 #	}
 #}
 
-texticon = {
-	icon = investiture_icon
-	iconsize = {
-		texture = "gfx/interface/icons/icon_investiture.dds"
-		size = { 25 25 }
-		offset = { 0 6 }
-		fontsize = 16
-	}
-}
-
-texticon = {
-    icon = icon_check
-    iconsize = {
-        texture = "gfx/interface/icons/symbols/icon_check.dds"
-        size = { 25 25 }
-        offset = { 0 6 }
-        fontsize = 16
-    }
-}
-texticon = {
-    icon = icon_green_check
-    iconsize = {
-        texture = "gfx/interface/buttons/artifact_equip.dds"
-        size = { 25 25 }
-        offset = { 0 6 }
-        fontsize = 16
-    }
-}
-
 texticon = { #lightning rune
     icon = icon_world_rune_1
     iconsize = {
