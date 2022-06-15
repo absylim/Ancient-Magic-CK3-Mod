@@ -1,0 +1,161 @@
+﻿am_interesting_courtier_selection_score = {
+	value = 10
+	if = {
+		limit = {
+			OR = {
+				has_trait = education_diplomacy_4
+				has_trait = education_martial_4
+				has_trait = education_stewardship_4
+				has_trait = education_intrigue_4
+				has_trait = education_learning_4
+				has_trait = education_arcane_4
+			}
+		}
+		add = 5
+	}
+	
+	add = mage_level
+	
+	if = {
+		limit = {
+			has_trait = ambitious
+		}
+		multiply = 1.25
+	}
+	
+	if = {
+		limit = {
+			has_trait = schemer
+		}
+		multiply = 1.25
+	}
+	
+	if = {
+		limit = {
+			has_trait = scholar
+		}
+		multiply = 1.25
+	}
+	
+	if = {
+		limit = {
+			has_trait = greedy
+		}
+		multiply = 1.25
+	}
+	
+	if = {
+		limit = {
+			has_trait = zealous
+		}
+		multiply = 1.25
+	}
+	
+	if = {
+		limit = {
+			has_trait = mystic_1
+		}
+		multiply = 1.1
+	}
+	else_if = {
+		limit = {
+			has_trait = mystic_2
+		}
+		multiply = 1.15
+	}
+	else_if = {
+		limit = {
+			has_trait = mystic_3
+		}
+		multiply = 1.25
+	}
+	
+	if = {
+		limit = {
+			has_trait = fickle
+		}
+		multiply = 1.15
+	}
+	
+	if = {
+		limit = {
+			has_trait = brave
+		}
+		multiply = 1.1
+	}
+	
+	if = {
+		limit = {
+			has_trait = drunkard
+		}
+		multiply = 1.1
+	}
+	
+	if = {
+		limit = {
+			has_trait = infirm
+		}
+		multiply = 0.5
+	}
+	
+	if = {
+		limit = {
+			OR = {
+				has_trait = lunatic_genetic
+				has_trait = lunatic_1
+			}
+		}
+		multiply = 1.2
+	}
+	
+	if = {
+		limit = {
+			OR = {
+				has_trait = possessed_1
+				has_trait = possessed_genetic
+			}
+		}
+		multiply = 1.1
+	}
+	
+	if = {
+		limit = {
+			has_trait = ill
+		}
+		multiply = 0.75
+	}
+	
+	if = {
+		limit = {
+			has_trait = pneumonic
+		}
+		multiply = 0.6
+	}
+	
+	if = {
+		limit = {
+			has_trait = great_pox
+		}
+		multiply = 0.5
+	}
+	
+	if = {
+		limit = {
+			has_trait = early_great_pox
+		}
+		multiply = 0.65
+	}
+	
+	if = {
+		limit = {
+			has_trait = incapable
+		}
+		multiply = 0.5
+	}
+	
+	add = {
+		value = learning
+		add = intrigue
+		divide = 3
+	}
+}

@@ -181,30 +181,40 @@ drained_of_blood_modifier = { #Character modifier added when he was drained of b
 ###################################################################
 
 cheap_laboratory = {
-	icon = science_flask
+	icon = science_flask_positive
 	monthly_character_prestige = 0.01
+	cultural_head_fascination_mult = 0.05
 }
 
 normal_laboratory = {
-	icon = science_flask
+	icon = science_flask_positive
 	monthly_character_prestige = 0.05
+	cultural_head_fascination_mult = 0.15
 	learning = 1
 }
 
 good_laboratory = {
-	icon = science_flask
+	icon = science_flask_positive
 	monthly_character_prestige = 0.08
+	cultural_head_fascination_mult = 0.25
 	learning = 1
 }
 
 great_laboratory = {
-	icon = science_flask
+	icon = science_flask_positive
 	monthly_character_prestige = 0.1
+	cultural_head_fascination_mult = 0.4
 	learning = 2
 }
 
 best_laboratory = { #Perfect Laboratory, very rare/expensive.
-	icon = science_flask
+	icon = science_flask_positive
 	monthly_character_prestige = 0.1
+	cultural_head_fascination_mult = 0.55
 	learning = 3
+}
+
+ignored_populace_laboratory = {
+	icon = science_flask_negative
+	general_opinion = -30
 }

@@ -18,6 +18,26 @@ activity_build_laboratory = {
 				name = laboratory_level 
 				value = 0
 			}
+			set_variable = {
+				name = laboratory_glass_level 
+				value = 0
+			}
+			set_variable = {
+				name = laboratory_crucible_level 
+				value = 0
+			}
+			set_variable = {
+				name = laboratory_iron_tools_level 
+				value = 0
+			}
+			set_variable = {
+				name = laboratory_books_level 
+				value = 0
+			}
+			set_variable = {
+				name = laboratory_spellcircles_level 
+				value = 0
+			}
 		
 			#To trigger the event to choose lab location
 			trigger_event = ancient_magic_alchemy.001
