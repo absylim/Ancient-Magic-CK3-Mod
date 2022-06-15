@@ -22,6 +22,7 @@ dragonic_bloodline = {
 	health = 1.5
 	fertility = -0.30
 	prowess = 5
+	no_prowess_loss_from_age = yes
 	
 	diplomacy = -2
 	stewardship = 3
