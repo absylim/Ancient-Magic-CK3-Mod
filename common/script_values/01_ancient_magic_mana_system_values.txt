@@ -60,7 +60,7 @@ enchanting_aura_perk_gen_cost = 2
 master_of_puppets_perk_gen_cost = 2
 
 # Misc _gen_costs
-mana_gen_per_magic_circle = 30
+mana_gen_per_magic_circle = 5
 mana_gen_lifestyle = 100
 mana_gen_legacy_2 = 10
 mana_devouring_1_gen_cost = -150
@@ -127,6 +127,7 @@ master_of_puppets_perk_max_mana = 30
 max_mana_legacy_3 = 100
 max_mana_per_perk = 30
 max_mana_per_potency = 100
+max_mana_per_magic_circle = 150
 
 # MAA-summoning spell amounts
 stone_golems_maa_stack_amount = 20
@@ -190,6 +191,11 @@ ancient_magic_mana_gen_potency = {
 ancient_magic_mana_gen_circles = {
 	value = magic_circles_owned_by_character
 	multiply = mana_gen_per_magic_circle
+}
+
+ancient_magic_max_mana_circles = {
+	value = magic_circles_owned_by_character
+	multiply = max_mana_per_magic_circle
 }
 
 magic_circles_owned_by_character = {
