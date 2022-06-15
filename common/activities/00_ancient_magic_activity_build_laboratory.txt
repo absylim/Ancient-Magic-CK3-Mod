@@ -1,0 +1,32 @@
+﻿# Build Laboratory
+activity_build_laboratory = {
+	solo = yes
+	color = { 0.1093, 0.1304, 0.1419 1 }
+	valid = {
+		activity_owner = {
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+	}
+	on_activate = {
+		activity_owner = {
+			set_variable = {
+				name = laboratory_level 
+				value = 0
+			}
+		
+			#To trigger the event to choose lab location
+			trigger_event = ancient_magic_alchemy.001
+		}
+	}
+	on_complete = {
+	}
+	on_invalidated = {
+		complete_activity = yes
+		#Notifications will be triggered thought the inspiration
+	}
+}

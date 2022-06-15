@@ -19,6 +19,9 @@
 #parameters
  culture_parameter_magical_traits_renown: "Magicals gain bit of [dynasty_prestige_i][dynasty_prestige|E]"
  culture_parameter_magical_traits_opinion_boost: "Megical gain [culture|E] [opinion|E] boost"
+ culture_parameter_arcane_education_prestige: "Arcane line of [education_traits|E] gives bit of [prestige_i][prestige|E]"
+ culture_parameter_magic_crafting_renown: "Magic crafting focused [traits|E] give bit of [dynasty_prestige_i][dynasty_prestige|E]"
+ culture_parameter_magic_crafting_prestige: "Magic crafting focused [traits|E] give bit of [prestige_i][prestige|E]"
  culture_parameter_chiromancy_magic_cost_reduction: "[mage_spells|E] of [chiromancy|E] [school_of_magic|E] have lower [mana_cost_i][mana_cost|E]"
  culture_parameter_necromancy_magic_cost_reduction: "[mage_spells|E] of [necromancy|E] [school_of_magic|E] have lower [mana_cost_i][mana_cost|E]"
  culture_parameter_chronomancy_magic_cost_reduction: "[mage_spells|E] of [chronomancy|E] [school_of_magic|E] have lower [mana_cost_i][mana_cost|E]"

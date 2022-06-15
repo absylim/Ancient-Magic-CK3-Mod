@@ -175,3 +175,36 @@ drained_of_blood_modifier = { #Character modifier added when he was drained of b
 	icon = health_negative
 	health = -1
 }
+
+###################################################################
+###########		Alchemy and Magic items crafting		###########
+###################################################################
+
+cheap_laboratory = {
+	icon = science_flask
+	monthly_character_prestige = 0.01
+}
+
+normal_laboratory = {
+	icon = science_flask
+	monthly_character_prestige = 0.05
+	learning = 1
+}
+
+good_laboratory = {
+	icon = science_flask
+	monthly_character_prestige = 0.08
+	learning = 1
+}
+
+great_laboratory = {
+	icon = science_flask
+	monthly_character_prestige = 0.1
+	learning = 2
+}
+
+best_laboratory = { #Perfect Laboratory, very rare/expensive.
+	icon = science_flask
+	monthly_character_prestige = 0.1
+	learning = 3
+}

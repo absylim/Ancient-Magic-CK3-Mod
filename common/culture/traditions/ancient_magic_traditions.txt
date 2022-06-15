@@ -15,6 +15,9 @@
 	
 	parameters = {
 		magical_traits_renown = yes
+		arcane_education_prestige = yes
+		magic_crafting_renown = yes
+		magic_crafting_prestige = yes
 		magical_traits_opinion_boost = yes
 	}
 
@@ -115,6 +118,7 @@ tradition_mythology_egypt = {
 	
 	parameters = {
 		magical_traits_renown = yes
+		arcane_education_prestige = yes
 		magical_traits_opinion_boost = yes
 		chiromancy_magic_cost_reduction = yes
 		necromancy_magic_cost_reduction = yes
@@ -219,6 +223,7 @@ tradition_mythology_greek = {
 	
 	parameters = {
 		magical_traits_renown = yes
+		arcane_education_prestige = yes
 		magical_traits_opinion_boost = yes
 		elomancy_magic_cost_reduction = yes # Gods
 		chiromancy_magic_cost_reduction = yes # healing
@@ -326,6 +331,7 @@ tradition_mythology_roman = {
 	
 	parameters = {
 		magical_traits_renown = yes
+		arcane_education_prestige = yes
 		magical_traits_opinion_boost = yes
 		elomancy_magic_cost_reduction = yes # Gods
 		chiromancy_magic_cost_reduction = yes

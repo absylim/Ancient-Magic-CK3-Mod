@@ -1,0 +1,257 @@
+namespace = ancient_magic_alchemy
+
+##############################
+#####	Build Laboratory #####
+##############################
+
+ancient_magic_alchemy.0001 = { #Location of the lab
+	title = ancient_magic_alchemy.0001.t
+	desc = ancient_magic_alchemy.0001.desc
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #In my Castle, hidden away
+		name = ancient_magic_alchemy.0001.a 
+		custom_tooltip = {
+			text = hidden_lab_tooltip
+			add_character_flag = hidden_lab
+		}
+		hidden_effect = {
+			change_variable = { name = laboratory_level add = 2 }
+			trigger_event = { id = ancient_magic_alchemy.0002 days = 30 }
+		}
+	}
+	option = { #In an accessible place
+		name = ancient_magic_alchemy.0001.b
+		custom_tooltip = {
+			text = accessible_lab_tooltip
+		}
+		hidden_effect = {
+			change_variable = { name = laboratory_level add = 5 }
+			trigger_event = { id = ancient_magic_alchemy.0002 days = 30 }
+		}
+	}
+	option = { #On an island or other very remote place
+		name = ancient_magic_alchemy.0001.c
+		trigger = {
+			OR = {
+				intrigue = 15
+				trait = paranoid
+			}
+			capital_province = {
+				is_coastal = yes
+			}
+		}
+		custom_tooltip = {
+			text = very_hidden_lab_tooltip
+			add_character_flag = very_hidden_lab
+		}
+		hidden_effect = {
+			change_variable = { name = laboratory_level add = 3 }
+			trigger_event = { id = ancient_magic_alchemy.0002 days = 30 }
+		}
+	}
+	option = { #On an island or other very remote place
+		name = ancient_magic_alchemy.0001.D
+		trigger = {
+			OR = {
+				intrigue = 15
+				trait = paranoid
+			}
+			capital_province = {
+				is_coastal = no
+			}
+		}
+		custom_tooltip = {
+			text = very_hidden_lab_tooltip
+			add_character_flag = very_hidden_lab
+		}
+		hidden_effect = {
+			change_variable = { name = laboratory_level add = 3 }
+			trigger_event = { id = ancient_magic_alchemy.0002 days = 30 }
+		}
+	}
+}
+
+ancient_magic_alchemy.0002 = { #What kind of laboratory should be build
+	title = ancient_magic_alchemy.0002.t
+	desc = ancient_magic_alchemy.0002.desc
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #Cheap Setup
+		name = ancient_magic_alchemy.0002.a #
+		custom_tooltip = {
+			text = cheap_laboratory_setup
+		}
+		hidden_effect = {
+			change_variable = { name = laboratory_level add = 1 }
+			set_variable = { name = lab_ambition value = 1 }
+			random_list = {
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_glass } }
+					trigger_event = { id = MNM.1103 days = 60 }
+				}
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_crucibles } }
+					trigger_event = { id = MNM.1104 days = 60 }
+				}
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_tools } }
+					trigger_event = { id = MNM.1105 days = 60 }
+				}
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_books } }
+					trigger_event = { id = MNM.1106 days = 60 }
+				}
+			}
+			random_list = { #Accidents
+				25 = { } #Nothing Happens
+				25 = { trigger_event = { id = MNM.1113 days = 30 } }
+				25 = { trigger_event = { id = MNM.1114 days = 30 } }
+				25 = { trigger_event = { id = MNM.1115 days = 30 } }
+			}
+		}
+	}
+	option = { #Efficient Setup
+		name = ancient_magic_alchemy.0002.b #
+		gold = 20
+		custom_tooltip = {
+			text = efficient_laboratory_setup
+		}
+		hidden_effect = {
+			change_variable = { name = laboratory_level add = 3 }
+			set_variable = { name = lab_ambition value = 2 }
+			random_list = {
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_glass } }
+					trigger_event = { id = MNM.1103 days = 30 }
+				}
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_crucibles } }
+					trigger_event = { id = MNM.1104 days = 30 }
+				}
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_tools } }
+					trigger_event = { id = MNM.1105 days = 30 }
+				}
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_books } }
+					trigger_event = { id = MNM.1106 days = 30 }
+				}
+			}
+			random_list = { #Accidents
+				25 = { } #Nothing Happens
+				25 = { trigger_event = { id = MNM.1113 days = 45 } }
+				25 = { trigger_event = { id = MNM.1114 days = 45 } }
+				25 = { trigger_event = { id = MNM.1115 days = 45 } }
+			}
+		}
+	}
+	option = { #Large Setup
+		name = ancient_magic_alchemy.0002.c #State of the Art.
+		trigger = {
+			OR = {
+				learning = 15
+				AND = { #Both master and apprentice have acceptable learning
+					learning = 12
+					any_courtier_or_vassal = {
+						has_minor_title = title_hermetics_apprentice
+						learning = 12
+					}
+				}
+			}
+		}
+		wealth = -35
+		custom_tooltip = {
+			text = large_laboratory_setup
+		}
+		hidden_effect = {
+			change_variable = { name = laboratory_level add = 5 }
+			set_variable = { name = lab_ambition value = 3 }
+			random_list = {
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_glass } }
+					trigger_event = { id = MNM.1103 days = 30 }
+				}
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_crucibles } }
+					trigger_event = { id = MNM.1104 days = 30 }
+				}
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_tools } }
+					trigger_event = { id = MNM.1105 days = 30 }
+				}
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_books } }
+					trigger_event = { id = MNM.1106 days = 30 }
+				}
+			}
+			random_list = { #Accidents
+				25 = { } #Nothing Happens
+				25 = { trigger_event = { id = MNM.1113 days = 45 } }
+				25 = { trigger_event = { id = MNM.1114 days = 45 } }
+				25 = { trigger_event = { id = MNM.1115 days = 45 } }
+			}
+		}
+	}
+	option = { #Extravagant Setup
+		name = ancient_magic_alchemy.0002.d #Experimental setup
+		trigger = {
+			OR = {
+				learning = 25
+				AND = { #Both have good learning
+					learning = 15
+					any_courtier_or_vassal = {
+						has_minor_title = title_hermetics_apprentice
+						learning = 15
+					}
+				}
+			}
+		}
+		wealth = -50
+		custom_tooltip = {
+			text = extravagant_laboratory_setup
+		}
+		hidden_effect = {
+			change_variable = { name = laboratory_level add = 8 }
+			set_variable = { name = lab_ambition value = 4 }
+			random_list = {
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_glass } }
+					trigger_event = { id = MNM.1103 days = 30 }
+				}
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_crucibles } }
+					trigger_event = { id = MNM.1104 days = 30 }
+				}
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_tools } }
+					trigger_event = { id = MNM.1105 days = 30 }
+				}
+				25 = {
+					trigger = { NOT = { has_character_flag = decided_on_books } }
+					trigger_event = { id = MNM.1106 days = 30 }
+				}
+			}
+			random_list = { #Accidents
+				25 = { } #Nothing Happens
+				25 = { trigger_event = { id = MNM.1113 days = 45 } }
+				25 = { trigger_event = { id = MNM.1114 days = 45 } }
+				25 = { trigger_event = { id = MNM.1115 days = 45 } }
+			}
+		}
+	}
+
+}
+
+#What kind of equipment do we need?
+#Variant 1 - Flasks, Alembics, test tubes, etc

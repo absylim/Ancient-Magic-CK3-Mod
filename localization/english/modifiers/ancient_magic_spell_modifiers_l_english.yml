@@ -37,3 +37,10 @@
  magic_advancement_modifier: "Studying Magic"
  
  ASK_FOR_MARRIAGE_BASE_MANA_AFFINITY: "Difference of innate [mana_affinity|E]: $VALUE|=+0$"
+ 
+ #Alchemy and magic crafting
+ cheap_laboratory_modifier: "Simple Laboratory"
+ normal_laboratory_modifier: "Laboratory"
+ good_laboratory_modifier: "Impressive Laboratory"
+ great_laboratory_modifier: "State of the Art Laboratory"
+ best_laboratory_modifier: "Famous Laboratory"

@@ -1,0 +1,35 @@
+﻿build_laboratory_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_golden_age.dds"
+
+	desc = build_laboratory_decision_desc
+	
+	major = no
+	sort_order = 1
+	
+	ai_check_interval = 6
+	
+	is_shown = {
+		is_magus_trigger = yes
+		NOT = { has_character_flag = magical_alchemy_lab }
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+	
+	effect = {
+		spawn_activity = {
+			owner = ROOT
+			type = activity_build_laboratory
+		}
+	}	
+	
+	cost = {
+		gold = 100
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

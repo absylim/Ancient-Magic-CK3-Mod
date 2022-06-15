@@ -17,3 +17,5 @@
  LOSE_MANA_EFFECT:0 "Loses Mana $VALUE|V0$"
 #interactions
  interaction_category_uncategorized: "Magic"
+ 
+ activity_build_laboratory: "Build Laboratory"

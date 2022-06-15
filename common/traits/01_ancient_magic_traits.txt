@@ -247,6 +247,179 @@ mage_dementia = {
 	ai_boldness = 50
 }
 
+################################################
+############### PROFESSIONS ####################
+################################################
+
+magic_crafting_1 = {
+	learning = 1
+	
+	culture_modifier = {
+		parameter = magic_crafting_renown
+
+		monthly_dynasty_prestige = 0.01
+	}
+
+	culture_modifier = {
+		parameter = magic_crafting_prestige
+
+		monthly_prestige = 0.1
+	}
+	
+	ruler_designer_cost = 25
+	
+	random_creation = 0
+	birth = 0
+	
+	physical = no
+	health_trait = no
+	fame = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_magic_crafting_1_desc
+			}
+			desc = trait_magic_crafting_1_character_desc
+		}
+	}
+	
+	group = magic_crafting
+	level = 1
+}
+
+magic_crafting_2 = {
+	learning = 2
+	stewardship = 1
+	
+	culture_modifier = {
+		parameter = magic_crafting_renown
+
+		monthly_dynasty_prestige = 0.15
+	}
+
+	culture_modifier = {
+		parameter = magic_crafting_prestige
+
+		monthly_prestige = 0.5
+	}
+	
+	ruler_designer_cost = 50
+	
+	random_creation = 0
+	birth = 0
+	
+	physical = no
+	health_trait = no
+	fame = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_magic_crafting_2_desc
+			}
+			desc = trait_magic_crafting_2_character_desc
+		}
+	}
+	
+	group = magic_crafting
+	level = 2
+}
+
+magic_crafting_3 = {
+	learning = 3
+	stewardship = 2
+
+	monthly_dynasty_prestige = 0.5
+		
+	culture_modifier = {
+		parameter = magic_crafting_renown
+
+		monthly_dynasty_prestige = 1
+	}
+
+	culture_modifier = {
+		parameter = magic_crafting_prestige
+
+		monthly_prestige = 1.5
+	}
+	
+	ruler_designer_cost = 100
+	
+	random_creation = 0
+	birth = 0
+	
+	physical = no
+	health_trait = no
+	fame = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_magic_crafting_3_desc
+			}
+			desc = trait_magic_crafting_3_character_desc
+		}
+	}
+	
+	group = magic_crafting
+	level = 3
+}
+
+magic_crafting_4 = {
+	learning = 6
+	stewardship = 4
+	
+	monthly_dynasty_prestige = 2
+	monthly_prestige = 3
+		
+	culture_modifier = {
+		parameter = magic_crafting_renown
+
+		monthly_dynasty_prestige = 2.5
+	}
+
+	culture_modifier = {
+		parameter = magic_crafting_prestige
+
+		monthly_prestige = 7.5
+	}
+	
+	shown_in_ruler_designer = no
+	ruler_designer_cost = 350
+	
+	random_creation = 0
+	birth = 0
+	
+	physical = no
+	health_trait = no
+	fame = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_magic_crafting_4_desc
+			}
+			desc = trait_magic_crafting_4_character_desc
+		}
+	}
+	
+	group = magic_crafting
+	level = 4
+}
+
 ##############################################
 ############## EDUCATIONS ####################
 ##############################################
@@ -259,6 +432,12 @@ education_arcane_1 = {
 	education = yes
 
 	ruler_designer_cost = 0
+
+	culture_modifier = {
+		parameter = arcane_education_prestige
+
+		monthly_prestige = 0.05
+	}
 
 	desc = {
 		first_valid = {
@@ -284,6 +463,12 @@ education_arcane_2 = {
 
 	ruler_designer_cost = 20
 
+	culture_modifier = {
+		parameter = arcane_education_prestige
+
+		monthly_prestige = 0.15
+	}
+
 	desc = {
 		first_valid = {
 			triggered_desc = {
@@ -308,6 +493,12 @@ education_arcane_3 = {
 
 	ruler_designer_cost = 40
 
+	culture_modifier = {
+		parameter = arcane_education_prestige
+
+		monthly_prestige = 0.25
+	}
+
 	desc = {
 		first_valid = {
 			triggered_desc = {
@@ -331,6 +522,12 @@ education_arcane_4 = {
 	education = yes
 
 	ruler_designer_cost = 80
+
+	culture_modifier = {
+		parameter = arcane_education_prestige
+
+		monthly_prestige = 0.4
+	}
 
 	desc = {
 		first_valid = {
