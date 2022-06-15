@@ -169,7 +169,7 @@ am_no_hof_unreformed_or_tribal_witchcraft_decision = { # Call Convocation to est
 				}
 			}
 			else = {
-				trigger_event = am_religious_special.2021
+				trigger_event = am_religious_special.2011
 				show_as_tooltip = {
 					custom_tooltip = am_convocation_witchcraft_accepted_custom_desc
 				}
@@ -184,7 +184,7 @@ am_no_hof_unreformed_or_tribal_witchcraft_decision = { # Call Convocation to est
 				}
 			}
 			else = {
-				trigger_event = am_religious_special.2041
+				trigger_event = am_religious_special.2011
 				show_as_tooltip = {
 					custom_tooltip = am_convocation_witchcraft_crime_custom_desc
 				}
