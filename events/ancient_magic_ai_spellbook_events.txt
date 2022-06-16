@@ -16,6 +16,10 @@ ancient_magic_ai_spellbook_events.301 = { #Minor Restoration - Decision interwin
 		}
 		change_mana = { VALUE = -50 }
 		remove_trait = sickly
+		
+		ai_chance = {
+			base = 25
+		}
 	}
 	
 	option = { #ill
@@ -26,6 +30,10 @@ ancient_magic_ai_spellbook_events.301 = { #Minor Restoration - Decision interwin
 		}
 		change_mana = { VALUE = -50 }
 		remove_trait = ill
+		
+		ai_chance = {
+			base = 50
+		}
 	}
 	
 	option = { #early_great_pox
@@ -62,6 +70,10 @@ ancient_magic_ai_spellbook_events.301 = { #Minor Restoration - Decision interwin
 		}
 		change_mana = { VALUE = -50 }
 		remove_trait = lovers_pox
+		
+		ai_chance = {
+			base = 50
+		}
 	}
 	
 	option = { #wounded_1
@@ -72,6 +84,10 @@ ancient_magic_ai_spellbook_events.301 = { #Minor Restoration - Decision interwin
 		}
 		change_mana = { VALUE = -50 }
 		remove_trait = wounded_1
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #infirm
@@ -82,10 +98,18 @@ ancient_magic_ai_spellbook_events.301 = { #Minor Restoration - Decision interwin
 		}
 		change_mana = { VALUE = -50 }
 		remove_trait = infirm
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #exit
 		name = ancient_magic_ai_spellbook_events_back
+		
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 
@@ -114,6 +138,10 @@ ancient_magic_ai_spellbook_events.302 = { #Major Restoration - Decision interwin
 		}
 		change_mana = { VALUE = -100 }
 		remove_trait = pneumonic
+		
+		ai_chance = {
+			base = 50
+		}
 	}
 	
 	option = { #cancer
@@ -137,6 +165,10 @@ ancient_magic_ai_spellbook_events.302 = { #Major Restoration - Decision interwin
 		}
 		change_mana = { VALUE = -100 }
 		remove_trait = leper
+		
+		ai_chance = {
+			base = 50
+		}
 	}
 	
 	option = { #maimed
@@ -147,6 +179,10 @@ ancient_magic_ai_spellbook_events.302 = { #Major Restoration - Decision interwin
 		}
 		change_mana = { VALUE = -100 }
 		remove_trait = maimed
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #wounded_2
@@ -157,6 +193,10 @@ ancient_magic_ai_spellbook_events.302 = { #Major Restoration - Decision interwin
 		}
 		change_mana = { VALUE = -100 }
 		remove_trait = wounded_2
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #gout_ridden
@@ -167,6 +207,10 @@ ancient_magic_ai_spellbook_events.302 = { #Major Restoration - Decision interwin
 		}
 		change_mana = { VALUE = -100 }
 		remove_trait = gout_ridden
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #consumption
@@ -177,6 +221,10 @@ ancient_magic_ai_spellbook_events.302 = { #Major Restoration - Decision interwin
 		}
 		change_mana = { VALUE = -100 }
 		remove_trait = consumption
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #typhus
@@ -187,6 +235,10 @@ ancient_magic_ai_spellbook_events.302 = { #Major Restoration - Decision interwin
 		}
 		change_mana = { VALUE = -100 }
 		remove_trait = typhus
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #bubonic_plague
@@ -203,9 +255,12 @@ ancient_magic_ai_spellbook_events.302 = { #Major Restoration - Decision interwin
 		}
 	}
 	
-	option = { #go back
+	option = { #exit
 		name = ancient_magic_ai_spellbook_events_back
-		trigger_event = ancient_magic_ai_spellbook_events.001
+		
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 
@@ -221,6 +276,10 @@ ancient_magic_ai_spellbook_events.303 = { #Full Restoration - Decision interwine
 		}
 		change_mana = { VALUE = -200 }
 		remove_trait = incapable
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #wounded_3
@@ -245,6 +304,10 @@ ancient_magic_ai_spellbook_events.303 = { #Full Restoration - Decision interwine
 		}
 		change_mana = { VALUE = -225 }
 		remove_trait = one_eyed
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #one_legged
@@ -255,6 +318,10 @@ ancient_magic_ai_spellbook_events.303 = { #Full Restoration - Decision interwine
 		}
 		change_mana = { VALUE = -250 }
 		remove_trait = one_legged
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #disfigured
@@ -265,6 +332,10 @@ ancient_magic_ai_spellbook_events.303 = { #Full Restoration - Decision interwine
 		}
 		change_mana = { VALUE = -225 }
 		remove_trait = disfigured
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #scarred
@@ -275,6 +346,10 @@ ancient_magic_ai_spellbook_events.303 = { #Full Restoration - Decision interwine
 		}
 		change_mana = { VALUE = -200 }
 		remove_trait = scarred
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #eunuch
@@ -285,6 +360,10 @@ ancient_magic_ai_spellbook_events.303 = { #Full Restoration - Decision interwine
 		}
 		change_mana = { VALUE = -250 }
 		remove_trait = eunuch
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #blind
@@ -295,19 +374,17 @@ ancient_magic_ai_spellbook_events.303 = { #Full Restoration - Decision interwine
 		}
 		change_mana = { VALUE = -200 }
 		remove_trait = blind
+		
+		ai_chance = {
+			base = 10
+		}
 	}
 	
 	option = { #go back
 		name = ancient_magic_ai_spellbook_events_back
-		trigger_event = ancient_magic_ai_spellbook_events.001
+		
+		ai_chance = {
+			base = 0
+		}
 	}
 }
-
-#elemental spells
-
-
-#death spells
-
-#Biomancy spells
-
-#mensomancy
