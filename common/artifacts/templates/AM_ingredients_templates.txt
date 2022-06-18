@@ -9,3 +9,19 @@ mana_blood_template = { #Blood of an individual with mana affinity, this blood i
 	
 	unique = yes
 }
+
+material_template = {
+	can_equip = {
+		always = no
+	}
+	
+	unique = no
+}
+
+herb_template = {
+	can_equip = {
+		always = no
+	}
+	
+	unique = no
+}

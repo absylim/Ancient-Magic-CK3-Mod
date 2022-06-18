@@ -1,7 +1,7 @@
 # Required controller: decision_option_list_controller
 
 vbox = {
-	name = "decision_view_widget_am_implant_magical_blood"
+	name = "decision_view_widget_am_use_laboratory"
 	layoutpolicy_horizontal = expanding
 	layoutpolicy_vertical = expanding
 	ignoreinvisible = yes
@@ -10,7 +10,7 @@ vbox = {
 	spacing = 10
 
 	text_label_center = {
-		text = "AM_implant_magical_blood_choose_type"
+		text = "USE_LABORATORY_DECISION_SELECT_ACTION_TITLE"
 	}
 
 	hbox = {
@@ -18,8 +18,8 @@ vbox = {
 		layoutpolicy_vertical = expanding		
 
 		scrollbox = {
-			size = { 300 90 }
-			layoutpolicy_vertical = expanding	
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
 
 			blockoverride "scrollbox_content" {
 				vbox = {
@@ -27,7 +27,7 @@ vbox = {
 					spacing = 6
 
 					item = {
-						AM_implant_magical_blood = {}
+						PerformLaboratoryActiontItem = {}
 					}
 				}
 			}
@@ -37,46 +37,43 @@ vbox = {
 	}
 }
 
-types AM_implant_magical_bloods
+types PerformLaboratoryActionTypes
 {
-	type AM_implant_magical_blood = button_standard {
-		size = { 270 60 }
-		margin = { 5 10 }
+	type PerformLaboratoryActiontItem = button_standard {
+		size = { 500 60 }
+		margin = { 10 10 }
 
 		onclick = "[DecisionViewWidgetOptionList.OnSelect(Entry.Self)]"
 		enabled = "[Entry.IsEnabled]"
 		tooltip = "[Entry.GetTooltip]"
-		down = "[Entry.IsSelected]"
+		down = "[Entry.IsSelected]"		
 
 		hbox = {
 			layoutpolicy_horizontal = expanding
 			layoutpolicy_vertical = expanding
 			spacing = 10
-			margin_left = 10
+			margin = { 5 0 }
 
 			icon = {
-				name = "AM_implant_magical_blood_icon"
-				size = { 45 45 }
+				name = "choice_icon"
+				size = { 50 50 }
 				texture = "[Entry.GetIcon]"
+				framesize = { 238 240 }
+				frame = 1
 			}
 
 			vbox = {
-				name = "AM_implant_magical_blood_info"
-
-				layoutpolicy_vertical = expanding
-				margin_left = 5
-				margin_bottom = 5
+				name = "choice_info"
 
 				text_single = {
-					name = "AM_implant_magical_blood_type"
+					name = "choice_type"
 					text = "[Entry.GetName]"
+					align = nobaseline|left
 					max_width = 250
-					align = left
 				}
 			}
 
-			expand = {}
+			expand = {}	
 		}
 	}
 }
-

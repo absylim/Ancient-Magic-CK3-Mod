@@ -23,7 +23,7 @@ education_arcane = {
 	}
 
 	is_default = {
-		has_trait = magic_potential
+		mana_affinity > 0
 	}
 
 	is_good_for = {

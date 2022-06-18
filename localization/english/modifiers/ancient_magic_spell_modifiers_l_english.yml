@@ -44,3 +44,8 @@
  good_laboratory_modifier: "Impressive Laboratory"
  great_laboratory_modifier: "State of the Art Laboratory"
  best_laboratory_modifier: "Famous Laboratory"
+ cheap_laboratory: "Simple Laboratory"
+ normal_laboratory: "Laboratory"
+ good_laboratory: "Impressive Laboratory"
+ great_laboratory: "State of the Art Laboratory"
+ best_laboratory: "Famous Laboratory"

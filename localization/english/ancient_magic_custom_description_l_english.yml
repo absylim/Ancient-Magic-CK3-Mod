@@ -2,3 +2,4 @@
  witchcraft_illegal_name: "Witchraft is Criminal"
  witchcraft_not_illegal: "Witchraft isn't Illegal"
  tier_greater_or_equal: "Tier is Greater or Equal to Dutchy"
+ change_base_mana_affinity: "Change base [mana_affinity|E] by [mana_affinity_i]$VALUE|=+1$"

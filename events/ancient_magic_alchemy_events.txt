@@ -1570,3 +1570,69 @@ ancient_magic_alchemy.0016 = {
 		#}
 	}
 }
+
+
+#############################
+#####	Use laboratory	#####
+#############################
+
+#### Perform Experiments ####
+ancient_magic_alchemy.0100 = { #Who is gonna perform the experiments
+	title = ancient_magic_alchemy.0100.t
+	desc = ancient_magic_alchemy.0100.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #I will perform the experiment
+		name = ancient_magic_alchemy.0100.self
+		
+		capital_province = {
+			spawn_activity = {
+				owner = ROOT
+				type = activity_perform_experiments
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0100.exit
+		trigger = {
+			is_ai = no
+		}
+	}
+}
+
+ancient_magic_alchemy.0101 = { #What kind of experiments should be performed
+	title = ancient_magic_alchemy.0101.t
+	desc = ancient_magic_alchemy.0101.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #Combine materials
+		name = ancient_magic_alchemy.0101.a
+	}
+	
+	option = { #Experiment with impirinting spells on items
+		name = ancient_magic_alchemy.0101.b
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0100.exit
+		trigger = {
+			is_ai = no
+		}
+	}
+}

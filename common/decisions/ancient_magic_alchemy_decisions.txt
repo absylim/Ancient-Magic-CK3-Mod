@@ -1,0 +1,306 @@
+﻿build_laboratory_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_golden_age.dds"
+
+	desc = build_laboratory_decision_desc
+	
+	major = no
+	sort_order = 1
+	
+	ai_check_interval = 6
+	
+	is_shown = {
+		is_magus_trigger = yes
+		NOT = { has_character_flag = built_magical_laboratory }
+		NOT = { has_character_flag = building_magical_laboratory }
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+	
+	effect = {
+		capital_province = {
+			spawn_activity = {
+				owner = ROOT
+				type = activity_build_laboratory
+			}
+		}
+	}	
+	
+	cost = {
+		gold = 100
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = {
+				value = mage_level
+				multiply = 2
+			}
+		}
+		modifier = {
+			add = learning
+		}
+		modifier = {
+			culture = {
+				parameter = magic_crafting_prestige
+			}
+			multiply = 2
+		}
+		modifier = {
+			AND = {
+				faith = {
+					has_doctrine_parameter = witchcraft_illegal
+				}
+			}
+			multiply = 0.5
+		}
+		modifier = {
+			AND = {
+				faith = {
+					has_doctrine_parameter = witchcraft_shunned
+				}
+			}
+			multiply = 0.75
+		}
+		modifier = {
+			AND = {
+				has_trait = zealous
+				faith = {
+					has_doctrine_parameter = witchcraft_illegal
+				}
+			}
+			multiply = 0.05
+		}
+		modifier = {
+			AND = {
+				has_trait = zealous
+				faith = {
+					has_doctrine_parameter = witchcraft_shunned
+				}
+			}
+			multiply = 0.25
+		}
+	}
+}
+
+use_laboratory_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_golden_age.dds"
+
+	desc = use_laboratory_decision_desc
+	
+	major = no
+	sort_order = 1
+	
+	ai_check_interval = 6
+	
+	is_shown = {
+		has_character_flag = built_magical_laboratory
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+	
+	widget = {
+    	gui = decision_view_widget_am_use_laboratory
+		controller = decision_option_list_controller
+    	
+		decision_has_second_step = yes
+		decision_custom_widget_container = "custom_widgets_container_step_two"
+		decision_to_second_step_button = "USE_LABORATORY_DECISION_NEXT_STEP_BUTTON" 
+
+
+		# Personal Artifacts are always valid to commission
+		item = {
+			value = perform_experiments
+			current_description = {
+				desc = use_laboratory_decision_option_perform_experiments_desc
+			}
+			localization  = {
+				desc = use_laboratory_decision_option_perform_experiments
+			}
+			icon = "gfx/interface/icons/artifact/alchemy.dds"
+
+			ai_chance = {
+				value = 10
+			}
+		}
+
+
+		# Personal Artifacts are always valid to commission
+		item = {
+			value = perform_alchemy
+			is_shown = {
+				any_ingredient_in_inventory = {
+					OR = {
+						AND = {
+							artifact_type = ingredient
+							NOT = { has_artifact_feature_group = mana_blood }
+						}
+						artifact_type = magical_material
+					}
+				}
+			}
+			
+			current_description = {
+				desc = use_laboratory_decision_option_perform_alchemy_desc
+			}
+			localization  = {
+				desc = use_laboratory_decision_option_perform_alchemy
+			}
+			icon = "gfx/interface/icons/artifact/alchemy.dds"
+
+			ai_chance = {
+				value = 10
+			}
+		}
+
+
+		# Personal Artifacts are always valid to commission
+		item = {
+			value = forge_magical_ring
+			is_shown = {
+				any_ingredient_in_inventory = {
+					OR = {
+						artifact_type = magical_material
+					}
+				}
+			}
+				
+			current_description = {
+				desc = use_laboratory_decision_option_forge_magical_ring_desc
+			}
+			localization  = {
+				desc = use_laboratory_decision_option_forge_magical_ring
+			}
+			icon = "gfx/interface/icons/artifact/magic_ring.dds"
+
+			ai_chance = {
+				value = 10
+			}
+		}
+
+
+		# Personal Artifacts are always valid to commission
+		item = {
+			value = forge_magical_necklace
+			is_shown = {
+				any_ingredient_in_inventory = {
+					OR = {
+						artifact_type = magical_material
+					}
+				}
+			}
+			current_description = {
+				desc = use_laboratory_decision_option_perform_forge_magical_necklace_desc
+			}
+			localization  = {
+				desc = use_laboratory_decision_option_perform_forge_magical_necklace
+			}
+			icon = "gfx/interface/icons/artifact/magical_necklace.dds"
+
+			ai_chance = {
+				value = 10
+			}
+		}
+
+		# Personal Artifacts are always valid to commission
+		item = {
+			value = forge_magical_armor
+			is_shown = {
+				any_ingredient_in_inventory = {
+					OR = {
+						artifact_type = magical_material
+					}
+				}
+			}
+			current_description = {
+				desc = use_laboratory_decision_option_perform_forge_magical_armor_desc
+			}
+			localization  = {
+				desc = use_laboratory_decision_option_perform_forge_armor_necklace
+			}
+			icon = "gfx/interface/icons/artifact/forge_magical_armor.dds"
+
+			ai_chance = {
+				value = 10
+			}
+		}
+	}
+	
+	effect = {
+		# Explanatory Tooltips
+		custom_tooltip = use_laboratory_decision_effect
+		
+		hidden_effect = {
+			if {
+				limit = { scope:perform_experiments = yes }
+				trigger_event = ancient_magic_alchemy.0100
+			}
+			else_if = {
+				limit = { scope:perform_alchemy = yes }
+			
+			}
+			else_if = {
+				limit = { scope:forge_magical_ring = yes }
+			
+			}
+			else_if = {
+				limit = { scope:forge_magical_necklace = yes }
+			
+			}
+			else_if = {
+				limit = { scope:forge_magical_armor = yes }
+			
+			}
+		}
+	}
+	
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = {
+				value = mage_level
+				multiply = 2
+			}
+		}
+		modifier = {
+			add = learning
+		}
+		modifier = {
+			culture = {
+				parameter = magic_crafting_prestige
+			}
+			multiply = 2
+		}
+		modifier = {
+			OR = {
+				has_trait = magic_crafting_1
+			}
+			add = 25
+		}
+		modifier = {
+			OR = {
+				has_trait = magic_crafting_2
+			}
+			add = 50
+		}
+		modifier = {
+			OR = {
+				has_trait = magic_crafting_3
+			}
+			add = 75
+		}
+		modifier = {
+			OR = {
+				has_trait = magic_crafting_4
+			}
+			add = 100
+		}
+	}
+
+}

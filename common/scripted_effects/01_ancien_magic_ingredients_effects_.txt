@@ -206,3 +206,170 @@ create_ingredient_mana_blood_effect = {
 		}
 	}
 }
+
+create_ingredient_compressed_mana = {
+	$OWNER$ = { save_scope_as = owner }
+	
+	if = {
+		limit = {
+			any_ingredient_in_inventory = {
+				limit = {
+					has_artifact_feature_group = compressed_mana
+				}
+				count >= mana_drops_needed_for_vial.dec
+			}
+		}
+		
+		save_temporary_scope_value_as = {
+			name = mana_vial
+			value = set
+		}
+		
+		set_local_variable = {
+			name = number_of_drops
+			value = mana_drops_needed_for_vial.dec
+		}
+		
+		while = { #destroy the rest of mana drops
+			limit = {
+				local_var:number_of_drops.compare_value > 0
+			}
+			random_ingredient_in_inventory = {
+				limit = {
+					has_artifact_feature_group = compressed_mana
+					has_artifact_feature = mana_drop
+				}
+				artifact_owner = {destroy_artifact = prev}
+			}
+			change_local_variable = {
+				name = number_of_drops
+				subtract = 1
+			}
+		}
+	}
+	else = {
+		save_temporary_scope_value_as = {
+			name = mana_vial
+			value = unset
+		}
+	}
+	
+	save_scope_value_as = {
+		name = quality
+		value = {
+			value = 50
+			if = {
+				limit = { scope:mana_vial = set }
+				add = 150
+			}
+		}
+	}
+	
+	
+	hidden_effect_new_artifact = {
+		scope:owner = {
+			if = {
+				limit = { scope:mana_vial = set }
+				
+				create_artifact = {
+					name = placeholder
+					creator = scope:owner
+					description = placeholder
+					template = mana_blood_template
+					modifier = artifact_placeholder_modifier
+					visuals = mana_vial
+					type = ingredient
+					save_scope_as = newly_created_artifact
+					quality = scope:quality
+					wealth = scope:quality
+					decaying = no #ores dont decay
+				}
+			}
+			else = {
+				create_artifact = {
+					name = placeholder
+					creator = scope:owner
+					description = placeholder
+					template = mana_blood_template
+					modifier = artifact_placeholder_modifier
+					visuals = mana_drop
+					type = ingredient
+					save_scope_as = newly_created_artifact
+					quality = scope:quality
+					wealth = scope:quality
+					decaying = no #ores dont decay
+				}
+				
+			}
+		}
+		
+		scope:newly_created_artifact = {
+			if = {
+				limit = {scope:mana_vial = set}
+				set_artifact_name = mana_vial_ingredient_name
+				set_artifact_description = mana_vial_ingredient_desc
+				set_variable = {
+					name = compressed_mana_type
+					value = flag:mana_vial
+				}
+			}
+			else = {
+				set_artifact_name = mana_drop_ingredient_name
+				set_artifact_description = mana_drop_ingredient_desc
+				set_variable = {
+					name = compressed_mana_type
+					value = flag:mana_drop
+				}
+			}
+				
+			remove_artifact_modifier = artifact_placeholder_modifier
+			
+			set_artifact_feature_group = compressed_mana
+		}
+	}
+}
+
+create_ingredient_ore = {
+	$OWNER$ = { save_scope_as = owner }
+	
+	save_scope_value_as = {
+		name = quality
+		value = {
+			value = 0
+			
+			switch = {
+				trigger = $TYPE$
+				mythril = { add = 100 }
+				fallback = { add = 15 }
+			}
+		}
+	}
+	
+	hidden_effect_new_artifact = {
+		scope:owner = {
+			create_artifact = {
+				name = placeholder
+				creator = scope:owner
+				description = placeholder
+				template = mana_blood_template
+				modifier = artifact_placeholder_modifier
+				visuals = $TYPE$_ore
+				type = ingredient
+				save_scope_as = newly_created_artifact
+				quality = scope:quality
+				wealth = scope:quality
+				decaying = no #ores dont decay
+			}
+		}
+		
+		scope:newly_created_artifact = {
+			set_artifact_name = $TYPE$_ore_ingredient_name
+			
+			set_artifact_description = $TYPE$_ore_ingredient_desc
+				
+			remove_artifact_modifier = artifact_placeholder_modifier
+			
+			set_artifact_feature_group = ores
+		}
+	}
+}

@@ -23,8 +23,8 @@
  extract_magical_blood_decision_desc: "I could extract some of my blood for future use."
  extract_magical_blood_decision_confirm: "Let's begin"
  
- am_convert_holding_to_city_of_magic_decision:0 "Convert Holding to City of Magic"
- am_convert_holding_to_city_of_magic_decision_tooltip:0 "The existing holding(s) will be replaced with a [city_of_magic|E] holding"
+ am_convert_holding_to_city_of_magic_decision: "Convert Holding to City of Magic"
+ am_convert_holding_to_city_of_magic_decision_tooltip: "The existing holding(s) will be replaced with a [city_of_magic|E] holding"
  am_convert_holding_to_city_of_magic_decision_desc:0 "#F Architects and engineers have been congregating within my realm as of late. Many are sought after as master builders, but to prove their skills, they want great projects to work on.#!"
  am_convert_holding_to_city_of_magic_decision_confirm:0 "Convert Holding"
  am_convert_holding_to_city_of_magic_decision_effect_message:1 "Placeholder\n$EFFECT_LIST_BULLET$"
@@ -84,3 +84,16 @@
  reset_mana_system_decision_desc: "Recalculates the maximum mana and mana regen for every character in the game. Useful after updating the game."
  reset_mana_system_decision_effect_tooltip: "Reset all characters' mana systems"
  reset_mana_system_decision_confirm: "Reset!"
+ 
+ #Alchemy
+ build_laboratory_decision: "Build Laboratory"
+ build_laboratory_decision_tooltip: "Building laboratory for my experiments, could prove very useful."
+ build_laboratory_decision_desc: "I'm in dire need of place where i could perform my experiments, that could lead me to much better understanding of arcane knowledge. And for such task i need to build my own laboratory, that would allow me to perform my arcane experiments on special materials!"
+ build_laboratory_decision_confirm: "Let's begin the project!"
+ 
+ use_laboratory_decision: "Use the Laboratory"
+ use_laboratory_decision_desc: "With my flly functional laboratory i could start performing experiments, or i could use it forge some magical equipment."
+ use_laboratory_decision_effect: "You or your chosen forger/alchemist will perform chosen [project|E], over a period of time. This project can be performing experiments and possibly gaining new knowledge or forging magical item with special properties."
+ use_laboratory_decision_tooltip: "It would be shame to not use my fully functional laboratory"
+ use_laboratory_decision_confirm: "Let's choose project"
+ USE_LABORATORY_DECISION_NEXT_STEP_BUTTON: "Let's get started"

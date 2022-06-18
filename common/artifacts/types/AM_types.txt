@@ -4,7 +4,13 @@
 
 #Ingredients
 ingredient = {
-	slot = ingredient #Ingredients arent equiped, but this is used here to prevent errors
-	optional_features = { mana_blood }
+	slot = ingredient
+	optional_features = { mana_blood herbs compressed_mana }
+	can_reforge = no
+}
+
+magical_material = {
+	slot = ingredient
+	optional_features = { ores wood special_metals }
 	can_reforge = no
 }

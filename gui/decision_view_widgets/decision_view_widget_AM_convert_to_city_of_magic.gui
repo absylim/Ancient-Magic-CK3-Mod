@@ -2,7 +2,7 @@
 # Required controller: create_holy_order
 
 flowcontainer = {
-	name = "decision_view_widget_AM_convert_to_city_of_magic"
+	name = "decision_view_widget_am_convert_to_city_of_magic"
 	direction = vertical
 	minimumsize = { 514 -1 }
 	maximumsize = { 514 -1 }

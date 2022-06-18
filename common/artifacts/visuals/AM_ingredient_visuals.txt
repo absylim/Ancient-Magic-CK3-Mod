@@ -100,3 +100,17 @@ mana_blood = {
 		reference = "mana_blood_god.dds"
 	}
 }
+
+#ores
+mythril_ore = {
+	icon = "ingredients/ores/mythril_ore.dds"
+}
+
+#materials
+mana_drop = {
+	icon = "ingredients/materials/mana_drop.dds"
+}
+
+mana_vial = {
+	icon = "ingredients/materials/mana_vial.dds"
+}

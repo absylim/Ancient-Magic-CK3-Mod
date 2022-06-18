@@ -4,3 +4,12 @@
 #################################################################
 
 mana_blood = {} #Color of blood based on rank of mana affinity
+compressed_mana = {}
+
+#################################################################
+#########           Alchemy and Magical items           #########
+#################################################################
+herbs = {} #Herb
+ores = {}
+special_metals = {}
+wood = {}

@@ -11,8 +11,7 @@ activity_build_laboratory = {
 	on_spawn = {
 		invite_character_to_activity = activity_owner
 		accept_invitation_for_character = activity_owner
-	}
-	on_activate = {
+		
 		activity_owner = {
 			set_variable = {
 				name = laboratory_level 
@@ -38,15 +37,21 @@ activity_build_laboratory = {
 				name = laboratory_spellcircles_level 
 				value = 0
 			}
-		
+		}
+	}
+	on_activate = {
+		activity_owner = {
+			add_character_flag = building_magical_laboratory
+			
 			#To trigger the event to choose lab location
 			trigger_event = ancient_magic_alchemy.001
 		}
 	}
 	on_complete = {
+		remove_character_flag = building_magical_laboratory
 	}
 	on_invalidated = {
 		complete_activity = yes
-		#Notifications will be triggered thought the inspiration
+		remove_character_flag = building_magical_laboratory
 	}
 }
