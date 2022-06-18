@@ -9,7 +9,7 @@
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential
+					mana_affinity > 0
 					has_trait = education_arcane
 				}
 			}

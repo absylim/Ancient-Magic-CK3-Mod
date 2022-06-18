@@ -128,9 +128,9 @@ should_show_breakdown_for_flag = {
 			flag:friendship_perk = { has_perk = friendship_perk }
 			flag:enchanting_aura_perk = { has_perk = enchanting_aura_perk }
 			flag:master_of_puppets_perk = { has_perk = master_of_puppets_perk }
-			flag:magic_potential_1 = { has_trait = magic_potential_1 }
-			flag:magic_potential_2 = { has_trait = magic_potential_2 }
-			flag:magic_potential_3 = { has_trait = magic_potential_3 }
+			flag:magic_potential_1 = { mana_affinity > 0 }
+			flag:magic_potential_2 = { mana_affinity > 0 }
+			flag:magic_potential_3 = { mana_affinity > 0 }
 			flag:glimpse_the_future_spell = { has_spell_aura_targets_trigger = { SPELL = glimpse_the_future_spell } }
 			flag:financial_times_spell = { has_spell_aura_targets_trigger = { SPELL = financial_times_spell } }
 			flag:celerity_spell = { has_spell_aura_targets_trigger = { SPELL = celerity_spell } }

@@ -180,7 +180,7 @@ education_points_equals_education_rank = {
 has_arcane_education_affinity_childhood_trait_trigger = {
 	OR = {
 		has_trait = intellect_good
-		has_trait = magic_potential
+		mana_affinity > 0
 		has_trait = curious
 		has_trait = pensive
 	}
@@ -199,7 +199,7 @@ had_arcane_education_affinity_childhood_trait_trigger = {
 		var:childhood_trait_type = flag:curious
 		
 		has_trait = intellect_good
-		has_trait = magic_potential
+		mana_affinity > 0
 	}
 }
 

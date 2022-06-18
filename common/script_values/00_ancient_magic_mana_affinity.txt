@@ -17,6 +17,8 @@ transcendent_affinity_level = 20
 demigod_mana_affinity_level = 25
 # 25 - 30: Godly (ones body is nearly made out of mana)
 god_mana_affinity_level = 30
+
+highest_ammount_of_mana_affinity = god_mana_affinity_level
 #########################################################################################################################
 #########################################################################################################################
 
@@ -40,6 +42,17 @@ terrible_mana_blood_compatibility_level = 0
 average_mana_blood_compatibility_level = 25
 good_mana_blood_compatibility_level = 50
 excellent_mana_blood_compatibility_level = 75
+
+# Mana blood sublimation
+magical_blood_infusion_cooldown = 15 #Years it will take until the infused mana blood sublimates
+magical_blood_infusion_cooldown_incompatble = {
+	value = magical_blood_infusion_cooldown
+	add = 5
+}
+magical_blood_sublimation_base_mana_affinity_boost = {
+	value = var:infused_blood_mana_affinity
+	divide = 2
+}
 
 #########################################################################################################################
 #########################################################################################################################
@@ -85,6 +98,7 @@ mana_affinity = {
 		}
 	}
 	round = yes
+	max = highest_ammount_of_mana_affinity
 }
 
 mana_affinity_bloodline_boost = { #Bonus added to mana affinity thanks to ones Bloodline

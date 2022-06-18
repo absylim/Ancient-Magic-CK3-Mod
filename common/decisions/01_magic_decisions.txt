@@ -9,7 +9,7 @@
 		has_game_rule = PC_magic_level_decision
 		NOT = {
 			has_character_flag = ancient_magic_potential_chosen
-			has_trait = magic_potential	
+			mana_affinity > 0	
 		}
 	}
 	
@@ -93,7 +93,7 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 	desc = implant_magical_blood_decision_desc
 
 	widget = {
-		gui = decision_view_widget_AM_implant_magical_blood
+		gui = decision_view_widget_am_implant_magical_blood
 		controller = decision_option_list_controller
 		
 		# Close family
@@ -101,11 +101,17 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 			value = AM_implant_magical_blood_option_close_family
 			is_shown = {
 				any_mana_blood_in_inventory = {
+					exists = creator
 					NOT = { creator = ROOT }
 					creator = {
 						is_close_family_of = ROOT
 					}
-					var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
+					if = {
+						limit = {
+							has_variable = mana_affinity
+						}
+						var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
+					}
 				}
 			}
 			current_description = AM_implant_magical_blood_option_close_family_tooltip
@@ -122,11 +128,17 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 			value = AM_implant_magical_blood_option_extended_family
 			is_shown = {
 				any_mana_blood_in_inventory = {
+					exists = creator
 					NOT = { creator = ROOT }
 					creator = {
 						is_extended_family_of = ROOT
 					}
-					var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
+					if = {
+						limit = {
+							has_variable = mana_affinity
+						}
+						var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
+					}
 				}
 			}
 			current_description = AM_implant_magical_blood_option_extended_family_tooltip
@@ -143,6 +155,7 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 			value = AM_implant_magical_blood_option_others
 			is_shown = {
 				any_mana_blood_in_inventory = {
+					exists = creator
 					NOT = { creator = ROOT }
 					creator = {
 						NOT = {
@@ -150,7 +163,12 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 							is_close_family_of = ROOT
 						}
 					}
-					var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
+					if = {
+						limit = {
+							has_variable = mana_affinity
+						}
+						var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
+					}
 				}
 			}
 			current_description = AM_implant_magical_blood_option_others_tooltip
@@ -231,7 +249,7 @@ am_convert_holding_to_city_of_magic_decision = {
 
 	widget = {
 		# Name of the widget to use. Must be at the path <decision_view_widgets>/<widget_name>.gui
-		gui = decision_view_widget_AM_convert_to_city_of_magic
+		gui = decision_view_widget_am_convert_to_city_of_magic
 		# Some widgets require a custom controller (see below). Default: default
 		controller = create_holy_order
 		barony_valid = {

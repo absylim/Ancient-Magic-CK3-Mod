@@ -4,3 +4,10 @@
 		has_artifact_feature_group = mana_blood
 	}
 }
+
+ingredient_in_inventory = {
+	base = character_artifact
+	conditions = {
+		artifact_slot_type = ingredient
+	}
+}

@@ -11,7 +11,7 @@
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential
+					mana_affinity > 0
 					has_trait = education_arcane
 				}
 			}
@@ -81,7 +81,7 @@ glimpse_the_future_perk = {
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential
+					mana_affinity > 0
 					has_trait = education_arcane
 				}
 			}
@@ -148,7 +148,7 @@ financial_times_perk = {
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential
+					mana_affinity > 0
 					has_trait = education_arcane
 				}
 			}
@@ -215,7 +215,7 @@ celerity_perk = {
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential
+					mana_affinity > 0
 					has_trait = education_arcane
 				}
 			}
@@ -282,7 +282,7 @@ mass_celerity_perk = {
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential
+					mana_affinity > 0
 					has_trait = education_arcane
 				}
 			}
@@ -349,7 +349,7 @@ slowness_perk = {
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential
+					mana_affinity > 0
 					has_trait = education_arcane
 				}
 			}
@@ -416,7 +416,7 @@ mass_slowness_perk = {
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential
+					mana_affinity > 0
 					has_trait = education_arcane
 				}
 			}
@@ -485,7 +485,7 @@ temporal_manipulation_perk = {
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential
+					mana_affinity > 0
 					has_trait = education_arcane
 				}
 			}
@@ -553,7 +553,7 @@ master_of_time_perk = {
 		if = {
 			limit = {
 				OR = {
-					has_trait = magic_potential
+					mana_affinity > 0
 					has_trait = education_arcane
 				}
 			}

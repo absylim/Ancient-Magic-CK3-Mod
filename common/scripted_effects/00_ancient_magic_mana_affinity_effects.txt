@@ -316,3 +316,15 @@ add_magical_bloodline_effect = {
 		}
 	}
 }
+
+change_base_mana_affinity = {
+	custom_description = {
+		text = change_base_mana_affinity
+		value = $VALUE$
+		change_variable = {
+			name = base_mana_affinity
+			add = $VALUE$
+			max = highest_ammount_of_mana_affinity
+		}
+	}
+}

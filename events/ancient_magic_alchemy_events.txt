@@ -1,4 +1,4 @@
-namespace = ancient_magic_alchemy
+﻿namespace = ancient_magic_alchemy
 
 ##############################
 #####	Build Laboratory #####
@@ -25,6 +25,15 @@ ancient_magic_alchemy.0001 = { #Location of the lab
 			change_variable = { name = laboratory_level add = 2 }
 			trigger_event = { id = ancient_magic_alchemy.0002 days = 30 }
 		}
+		
+		ai_chance = {
+			base = 10
+			
+			modifier = {
+				has_trait = paranoid
+				add = 50
+			}
+		}
 	}
 	option = { #In an accessible place
 		name = ancient_magic_alchemy.0001.b
@@ -34,6 +43,20 @@ ancient_magic_alchemy.0001 = { #Location of the lab
 		hidden_effect = {
 			change_variable = { name = laboratory_level add = 5 }
 			trigger_event = { id = ancient_magic_alchemy.0002 days = 30 }
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = learning
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 50
+			}
+			modifier = {
+				has_trait = brave
+				add = 25
+			}
 		}
 	}
 	option = { #On an island or other very remote place
@@ -55,6 +78,21 @@ ancient_magic_alchemy.0001 = { #Location of the lab
 			change_variable = { name = laboratory_level add = 3 }
 			trigger_event = { id = ancient_magic_alchemy.0002 days = 30 }
 		}
+		
+		ai_chance = {
+			base = 10
+			
+			modifier = {
+				has_trait = paranoid
+				add = 50
+			}
+			modifier = {
+				add = { 
+					value = learning
+					divide = 2
+				}
+			}
+		}
 	}
 	option = { #On an island or other very remote place
 		name = ancient_magic_alchemy.0001.D
@@ -74,6 +112,21 @@ ancient_magic_alchemy.0001 = { #Location of the lab
 		hidden_effect = {
 			change_variable = { name = laboratory_level add = 3 }
 			trigger_event = { id = ancient_magic_alchemy.0002 days = 30 }
+		}
+		
+		ai_chance = {
+			base = 10
+			
+			modifier = {
+				has_trait = paranoid
+				add = 50
+			}
+			modifier = {
+				add = { 
+					value = learning
+					divide = 2
+				}
+			}
 		}
 	}
 }
@@ -125,6 +178,14 @@ ancient_magic_alchemy.0002 = { #What kind of laboratory should be build
 				25 = { trigger_event = { id = ancient_magic_alchemy.0015 days = 45 } }
 			}
 		}
+		
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_trait = greedy
+				add = 100
+			}
+		}
 	}
 	option = { #Efficient Setup
 		name = ancient_magic_alchemy.0002.b
@@ -161,6 +222,36 @@ ancient_magic_alchemy.0002 = { #What kind of laboratory should be build
 				25 = { } #Nothing Happens
 				25 = { trigger_event = { id = ancient_magic_alchemy.0014 days = 45 } }
 				25 = { trigger_event = { id = ancient_magic_alchemy.0015 days = 45 } }
+			}
+		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = { 
+					value = learning
+					multiply = 2
+				}
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 150
+			}
+			modifier = {
+				has_trait = mystic_1
+				add = 25
+			}
+			modifier = {
+				has_trait = mystic_2
+				add = 50
+			}
+			modifier = {
+				has_trait = mystic_3
+				add = 75
+			}
+			modifier = {
+				has_trait = greedy
+				subtract = 50
 			}
 		}
 	}
@@ -206,6 +297,35 @@ ancient_magic_alchemy.0002 = { #What kind of laboratory should be build
 				25 = { trigger_event = { id = ancient_magic_alchemy.0015 days = 45 } }
 			}
 		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = { 
+					value = learning
+					multiply = 2.5
+				}
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 200
+			}
+			modifier = {
+				has_trait = mystic_1
+				add = 25
+			}
+			modifier = {
+				has_trait = mystic_2
+				add = 50
+			}
+			modifier = {
+				has_trait = mystic_3
+				add = 75
+			}
+			modifier = {
+				has_trait = greedy
+				subtract = 100
+			}
+		}
 	}
 	option = { #Extravagant Setup
 		name = ancient_magic_alchemy.0002.d #Experimental setup
@@ -247,6 +367,36 @@ ancient_magic_alchemy.0002 = { #What kind of laboratory should be build
 				25 = { } #Nothing Happens
 				25 = { trigger_event = { id = ancient_magic_alchemy.0014 days = 45 } }
 				25 = { trigger_event = { id = ancient_magic_alchemy.0015 days = 45 } }
+			}
+		}
+		
+		ai_chance = {
+			base = 25
+			modifier = {
+				add = { 
+					value = learning
+					multiply = 3
+				}
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 250
+			}
+			modifier = {
+				has_trait = mystic_1
+				add = 25
+			}
+			modifier = {
+				has_trait = mystic_2
+				add = 50
+			}
+			modifier = {
+				has_trait = mystic_3
+				add = 75
+			}
+			modifier = {
+				has_trait = greedy
+				subtract = 150
 			}
 		}
 	}
@@ -315,6 +465,14 @@ ancient_magic_alchemy.0003 = {
 				trigger_event = { id = ancient_magic_alchemy.0008 days = 60 }
 			}
 		}
+	
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_trait = greedy
+				add = 50
+			}
+		}
 	}
 	option = {
 		name = ancient_magic_alchemy.0003.b
@@ -355,6 +513,33 @@ ancient_magic_alchemy.0003 = {
 			}
 			else = {
 				trigger_event = { id = ancient_magic_alchemy.0008 days = 60 }
+			}
+		}
+	
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = learning
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 250
+			}
+			modifier = {
+				has_trait = mystic_1
+				add = 25
+			}
+			modifier = {
+				has_trait = mystic_2
+				add = 50
+			}
+			modifier = {
+				has_trait = mystic_3
+				add = 75
+			}
+			modifier = {
+				has_trait = greedy
+				subtract = 200
 			}
 		}
 	}
@@ -419,9 +604,17 @@ ancient_magic_alchemy.0004 = {
 				trigger_event = { id = ancient_magic_alchemy.0008 days = 60 }
 			}
 		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_trait = greedy
+				add = 50
+			}
+		}
 	}
 	option = {
-		name = ancient_magic_alchemy.0004.a #
+		name = ancient_magic_alchemy.0004.b
 		remove_short_term_gold = 20
 		custom_tooltip = {
 			text = fancy_laboratory_crucibles_tooltip
@@ -459,6 +652,33 @@ ancient_magic_alchemy.0004 = {
 			}
 			else = {
 				trigger_event = { id = ancient_magic_alchemy.0008 days = 60 }
+			}
+		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = learning
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 250
+			}
+			modifier = {
+				has_trait = mystic_1
+				add = 25
+			}
+			modifier = {
+				has_trait = mystic_2
+				add = 50
+			}
+			modifier = {
+				has_trait = mystic_3
+				add = 75
+			}
+			modifier = {
+				has_trait = greedy
+				subtract = 200
 			}
 		}
 	}
@@ -522,6 +742,14 @@ ancient_magic_alchemy.0005 = {
 				trigger_event = { id = ancient_magic_alchemy.0008 days = 60 }
 			}
 		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_trait = greedy
+				add = 50
+			}
+		}
 	}
 	option = {
 		name = ancient_magic_alchemy.0005.b
@@ -562,6 +790,33 @@ ancient_magic_alchemy.0005 = {
 			}
 			else = {
 				trigger_event = { id = ancient_magic_alchemy.0008 days = 60 }
+			}
+		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = learning
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 250
+			}
+			modifier = {
+				has_trait = mystic_1
+				add = 25
+			}
+			modifier = {
+				has_trait = mystic_2
+				add = 50
+			}
+			modifier = {
+				has_trait = mystic_3
+				add = 75
+			}
+			modifier = {
+				has_trait = greedy
+				subtract = 200
 			}
 		}
 	}
@@ -625,6 +880,14 @@ ancient_magic_alchemy.0006 = {
 				trigger_event = { id = ancient_magic_alchemy.0008 days = 60 }
 			}
 		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_trait = greedy
+				add = 50
+			}
+		}
 	}
 	option = {
 		name = ancient_magic_alchemy.0006.b
@@ -665,6 +928,33 @@ ancient_magic_alchemy.0006 = {
 			}
 			else = {
 				trigger_event = { id = ancient_magic_alchemy.0008 days = 60 }
+			}
+		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = learning
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 250
+			}
+			modifier = {
+				has_trait = mystic_1
+				add = 25
+			}
+			modifier = {
+				has_trait = mystic_2
+				add = 50
+			}
+			modifier = {
+				has_trait = mystic_3
+				add = 75
+			}
+			modifier = {
+				has_trait = greedy
+				subtract = 200
 			}
 		}
 	}
@@ -728,6 +1018,14 @@ ancient_magic_alchemy.0007 = {
 				trigger_event = { id = ancient_magic_alchemy.0008 days = 60 }
 			}
 		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_trait = greedy
+				add = 50
+			}
+		}
 	}
 	option = {
 		name = ancient_magic_alchemy.0007.b
@@ -775,6 +1073,33 @@ ancient_magic_alchemy.0007 = {
 			}
 			else = {
 				trigger_event = { id = ancient_magic_alchemy.0008 days = 60 }
+			}
+		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = learning
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 250
+			}
+			modifier = {
+				has_trait = mystic_1
+				add = 25
+			}
+			modifier = {
+				has_trait = mystic_2
+				add = 50
+			}
+			modifier = {
+				has_trait = mystic_3
+				add = 75
+			}
+			modifier = {
+				has_trait = greedy
+				subtract = 200
 			}
 		}
 	}
@@ -853,6 +1178,17 @@ ancient_magic_alchemy.0009 = {
 		add_character_modifier = {
 			modifier = cheap_laboratory
 		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
 	}
 }
 
@@ -872,6 +1208,17 @@ ancient_magic_alchemy.0010 = {
 		name = ancient_magic_alchemy.0010.a
 		add_character_modifier = {
 			modifier = normal_laboratory
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
 		}
 	}
 }
@@ -893,6 +1240,17 @@ ancient_magic_alchemy.0011 = {
 		add_character_modifier = {
 			modifier = good_laboratory
 		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
 	}
 }
 
@@ -913,6 +1271,17 @@ ancient_magic_alchemy.0012 = {
 		add_character_modifier = {
 			modifier = great_laboratory
 		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
 	}
 }
 
@@ -932,6 +1301,17 @@ ancient_magic_alchemy.0013 = {
 		name = ancient_magic_alchemy.0013.a
 		add_character_modifier = {
 			modifier = best_laboratory
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
 		}
 	}
 }
@@ -979,6 +1359,14 @@ ancient_magic_alchemy.0014 = {
 				}
 			}
 		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_trait = greedy
+				add = 50
+			}
+		}
 	}
 	option = {
 		name = ancient_magic_alchemy.0014.b
@@ -1000,13 +1388,43 @@ ancient_magic_alchemy.0014 = {
 				}
 			}
 		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = learning
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 250
+			}
+			modifier = {
+				has_trait = mystic_1
+				add = 25
+			}
+			modifier = {
+				has_trait = mystic_2
+				add = 50
+			}
+			modifier = {
+				has_trait = mystic_3
+				add = 75
+			}
+			modifier = {
+				has_trait = greedy
+				subtract = 200
+			}
+		}
 	}
 
 	after = {
-		#destroy ingredients
+		#destroy random ingredient
 		if = {
 			limit = {
-				has_any_ingredient = yes
+				any_ingredient_in_inventory = {}
+			}
+			random_ingredient_in_inventory = {
+				ROOT = {destroy_artifact = prev}
 			}
 		}
 	}
@@ -1033,12 +1451,45 @@ ancient_magic_alchemy.0015 = {
 			change_variable = { name = laboratory_level subtract = 2 }
 		}
 		
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_trait = greedy
+				add = 50
+			}
+		}
 	}
 	option = {
 		name = ancient_magic_alchemy.0015.b
 		add_character_modifier = {
 			modifier = ignored_populace_laboratory
 			years = 5
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = learning
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 250
+			}
+			modifier = {
+				has_trait = mystic_1
+				add = 25
+			}
+			modifier = {
+				has_trait = mystic_2
+				add = 50
+			}
+			modifier = {
+				has_trait = mystic_3
+				add = 75
+			}
+			modifier = {
+				has_trait = greedy
+				add = 50
+			}
 		}
 	}
 }
@@ -1060,6 +1511,14 @@ ancient_magic_alchemy.0016 = {
 		hidden_effect = {
 			change_variable = { name = laboratory_level subtract = 1 }
 		}
+		
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_trait = greedy
+				add = 50
+			}
+		}
 	}
 	option = {
 		name = ancient_magic_alchemy.0016.b
@@ -1067,21 +1526,47 @@ ancient_magic_alchemy.0016 = {
 		hidden_effect = {
 			change_variable = { name = laboratory_level add = 1 }
 		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = learning
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 250
+			}
+			modifier = {
+				has_trait = mystic_1
+				add = 25
+			}
+			modifier = {
+				has_trait = mystic_2
+				add = 50
+			}
+			modifier = {
+				has_trait = mystic_3
+				add = 75
+			}
+			modifier = {
+				has_trait = greedy
+				subtract = 100
+			}
+		}
 	}
 
 	after = {
 		#destroy ingredients
-		if = {
-			limit = {
-				OR = {
-					has_a_herb_ingredient_trigger = yes
-					has_an_animal_part_ingredient_trigger = yes
-				}
-			}
-			custom_tooltip = {
-				text = random_ingredients_are_destroyed_tooltip
-				destroy_random_herb_or_animal_part_ingredients_effect = yes
-			}
-		}
+		#if = {
+		#	limit = {
+		#		OR = {
+		#			has_a_herb_ingredient_trigger = yes
+		#			has_an_animal_part_ingredient_trigger = yes
+		#		}
+		#	}
+		#	custom_tooltip = {
+		#		text = random_ingredients_are_destroyed_tooltip
+		#		destroy_random_herb_or_animal_part_ingredients_effect = yes
+		#	}
+		#}
 	}
 }
