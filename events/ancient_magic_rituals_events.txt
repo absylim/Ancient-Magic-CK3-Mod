@@ -1264,7 +1264,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 	}
 }
 
-ancient_magic_rituals_events.008 = { # Who implant the blood
+ancient_magic_rituals_events.008 = { # Who implants the blood
 	type = character_event
 	title = ancient_magic_rituals_events.008.t
 	theme = healthcare
@@ -1290,6 +1290,11 @@ ancient_magic_rituals_events.008 = { # Who implant the blood
 		character = scope:physician
 		animation = idle
 	}
+	
+	#artifact = {
+	#	target = scope:chosen_blood
+	#	position = lower_center_portrait
+	#}
 	
 	immediate = {
 		save_court_physician_as_effect = { SCOPE_NAME = physician }
@@ -1318,7 +1323,7 @@ ancient_magic_rituals_events.008 = { # Who implant the blood
 					}
 				}
 				modifier = { #Blood compatibility
-					add = = {
+					add = {
 						value = scope:chosen_blood_compatibility
 						subtract = average_mana_blood_compatibility_level
 					}
@@ -1343,7 +1348,10 @@ ancient_magic_rituals_events.008 = { # Who implant the blood
 					add = 30
 					has_perk = architect_of_bloodlines_perk
 				}
-				trigger_event = ancient_magic_rituals_events.009
+				trigger_event = { 
+					id = ancient_magic_rituals_events.009
+					days = 1
+				}
 			}
 			50 = {
 				desc = ancient_magic_rituals_events.008.failure
@@ -1363,7 +1371,10 @@ ancient_magic_rituals_events.008 = { # Who implant the blood
 					add = 20
 					has_trait = whole_of_body
 				}
-				trigger_event = ancient_magic_rituals_events.011
+				trigger_event = {
+					id = ancient_magic_rituals_events.011
+					days = 1
+				}
 			}
 			20 = { #Death - higher chance as one can botch it if he does it on himself
 				modifier = { #if compatibility lower then 0
@@ -1440,7 +1451,10 @@ ancient_magic_rituals_events.008 = { # Who implant the blood
 						has_perk = architect_of_bloodlines_perk
 					}
 				}
-				trigger_event = ancient_magic_rituals_events.010
+				trigger_event = { 
+					id = ancient_magic_rituals_events.010
+					days = 1
+				}
 			}
 			55 = {
 				desc = ancient_magic_rituals_events.008.failure
@@ -1460,7 +1474,10 @@ ancient_magic_rituals_events.008 = { # Who implant the blood
 					add = 20
 					has_trait = whole_of_body
 				}
-				trigger_event = ancient_magic_rituals_events.012
+				trigger_event = { 
+					id = ancient_magic_rituals_events.012
+					days = 1
+				}
 			}
 			10 = { #Death - higher chance as one can botch it if he does it on himself
 				modifier = { #if compatibility lower then 0
@@ -1500,6 +1517,11 @@ ancient_magic_rituals_events.009 = { #Successful transfusion - Self
 					multiply = 0.75
 					min = 0
 				}
+			}
+			
+			add_character_flag = {
+				flag = infused_magical_blood_cooldown
+				years = magical_blood_infusion_cooldown
 			}
 		}
 		if = {
@@ -1542,6 +1564,11 @@ ancient_magic_rituals_events.010 = { #Successful transfusion - Physician
 					multiply = 0.75
 					min = 0
 				}
+			}
+			
+			add_character_flag = {
+				flag = infused_magical_blood_cooldown
+				years = magical_blood_infusion_cooldown
 			}
 		}
 		if = {
@@ -1612,6 +1639,11 @@ ancient_magic_rituals_events.011 = { #Unsuccessful transfusion - Self
 					min = 0
 				}
 			}
+			
+			add_character_flag = {
+				flag = infused_magical_blood_cooldown
+				years = magical_blood_infusion_cooldown_incompatble
+			}
 		}
 		if = {
 			limit = {
@@ -1654,6 +1686,11 @@ ancient_magic_rituals_events.012 = { #Unuccessful transfusion - Physician
 					min = 0
 				}
 			}
+			
+			add_character_flag = {
+				flag = infused_magical_blood_cooldown
+				years = magical_blood_infusion_cooldown_incompatble
+			}
 		}
 		if = {
 			limit = {
@@ -1679,5 +1716,36 @@ ancient_magic_rituals_events.012 = { #Unuccessful transfusion - Physician
 	
 	option = {
 		name = ancient_magic_rituals_events.012.a
+	}
+}
+
+ancient_magic_rituals_events.015 = { #Infused blood sublimates and boost base mana affinity
+	type = character_event
+	title = ancient_magic_rituals_events.015.t
+	theme = healthcare
+	desc = ancient_magic_rituals_events.015.desc
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	immediate = {
+		change_base_mana_affinity = { VALUE = magical_blood_sublimation_base_mana_affinity_boost }
+		remove_trait = infused_magical_blood_compatible
+		remove_trait = infused_magical_blood_incompatible
+	}
+	
+	option = {
+		name = ancient_magic_rituals_events.015.a
+		trigger = {
+			mana_affinity < highest_ammount_of_mana_affinity
+		}
+	}
+	option = {
+		name = ancient_magic_rituals_events.015.b
+		trigger = {
+			mana_affinity >= highest_ammount_of_mana_affinity
+		}
 	}
 }

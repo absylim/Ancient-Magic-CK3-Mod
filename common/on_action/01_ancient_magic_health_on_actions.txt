@@ -6,6 +6,7 @@ yearly_health_pulse = { #Fired from the birthday pulse
 		#disease_outbreak_pulse # moved to a 5-year pulse in yearly_on_actions.txt
 		delay = { days = { 10 30 } }
 		wounded_recovery_pulse	
+		sublimate_infused_blood
 	}
 	random_events = {
 		1000 = 0
@@ -135,5 +136,20 @@ commit_suicide = {
 	events = { #How will you do it?
 		health.6001 #Other
 		health.6200 #Incapable
+	}
+}
+
+#sublimate Infused magical blood
+sublimate_infused_blood = {
+	trigger = {
+		NOT = { has_character_flag = infused_magical_blood_cooldown }
+		OR = {
+			has_trait = infused_magical_blood_compatible
+			has_trait = infused_magical_blood_incompatible
+		}
+	}
+	random_events = {
+		75 = 0
+		25 = ancient_magic_rituals_events.015
 	}
 }
