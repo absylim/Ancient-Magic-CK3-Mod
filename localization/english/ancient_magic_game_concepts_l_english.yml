@@ -108,6 +108,8 @@
  # None
  game_concept_spark_spell: "$spark_spell_name$"
  game_concept_spark_spell_desc: "$spark_spell_desc$\n\n#P +50%#! [mage_level|E] experience: @xp_icon! / [mage_level|E]"
+ game_concept_compress_mana_spell: "$compress_mana_spell_name$"
+ game_concept_compress_mana_spell_desc: "$compress_mana_spell_desc$\n\n#P +25%#! [mage_level|E] experience: @xp_icon! / [mage_level|E]"
 
  # Chronomancy
  game_concept_glimpse_the_future_spell: "$glimpse_the_future_spell_name$"

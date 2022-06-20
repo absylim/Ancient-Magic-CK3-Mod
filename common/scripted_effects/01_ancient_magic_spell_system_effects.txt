@@ -78,6 +78,7 @@ set_up_spells = {
 	#Basic
 	clear_global_variable_list = basic_spells_list
 	add_to_global_variable_list = { name = basic_spells_list target = flag:spark_spell }
+	add_to_global_variable_list = { name = basic_spells_list target = flag:compress_mana_spell }
 
 	#Chronomancy
 	clear_global_variable_list = chronomancy_spells_list

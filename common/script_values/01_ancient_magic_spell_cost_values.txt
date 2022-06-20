@@ -120,6 +120,11 @@ spark_spell_cost = {
 	value = 10
 }
 
+compress_mana_spell_cost = {
+	value = 800
+}
+mana_drops_needed_for_vial = 12
+
 #Chronomancy
 glimpse_the_future_spell_cost = { 
 	value = 100

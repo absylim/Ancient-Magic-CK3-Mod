@@ -1594,7 +1594,7 @@ ancient_magic_alchemy.0100 = { #Who is gonna perform the experiments
 		capital_province = {
 			spawn_activity = {
 				owner = ROOT
-				type = activity_perform_experiments
+				type = activity_alchemy_experiments
 			}
 		}
 		ai_chance = {
@@ -1633,6 +1633,155 @@ ancient_magic_alchemy.0101 = { #What kind of experiments should be performed
 		name = ancient_magic_alchemy.0100.exit
 		trigger = {
 			is_ai = no
+		}
+	}
+}
+
+ancient_magic_alchemy.0102 = { #Combine materials - investment
+	title = ancient_magic_alchemy.0102.t
+	desc = ancient_magic_alchemy.0102.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #efficient investment
+		name = ancient_magic_alchemy.0102.d
+		remove_short_term_gold = 100
+		trigger = {
+			stewardship > 15
+		}
+	}
+	
+	option = { #bare minimum
+		name = ancient_magic_alchemy.0102.a
+		remove_short_term_gold = 35
+	}
+	
+	option = { #medium investment
+		name = ancient_magic_alchemy.0102.b
+		remove_short_term_gold = 75
+	}
+	
+	option = { #great investment
+		name = ancient_magic_alchemy.0102.c
+		remove_short_term_gold = 150
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0100.exit
+		trigger = {
+			is_ai = no
+		}
+	}
+}
+
+## Combine materials ##
+# New metal/ore found
+ancient_magic_alchemy.0110 = { #Choose new metal/ore event
+	type = character_event
+	hidden = yes
+	
+	immediate = {
+		random_list = {
+			1 = { 
+				trigger = { NOT = {  } }
+				trigger_event = ancient_magic_alchemy.0111 
+			}
+			1 = { #fallback event
+				trigger_event = ancient_magic_alchemy.0500 
+			}
+		}
+	}
+}
+# New metal/ore found
+ancient_magic_alchemy.0111 = { #mythril
+	title = ancient_magic_alchemy.0111.t
+	desc = ancient_magic_alchemy.0111.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	immediate = {
+		change_mage_xp = { VALUE = 500 }
+ 		add_learning_lifestyle_xp = minor_lifestyle_experience
+	}
+	
+	option = { 
+		name = ancient_magic_alchemy.0111.a
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
+	}
+}
+
+# Alloy
+ancient_magic_alchemy.0200 = {
+	title = ancient_magic_alchemy.0200.t
+	desc = ancient_magic_alchemy.0200.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	immediate = {
+		change_mage_xp = { VALUE = 500 }
+ 		add_learning_lifestyle_xp = medium_lifestyle_experience
+	}
+	
+	option = { 
+		name = ancient_magic_alchemy.0200.a
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
+	}
+}
+
+# Fail - nothing found
+ancient_magic_alchemy.0500 = {
+	title = ancient_magic_alchemy.0500.t
+	desc = ancient_magic_alchemy.0500.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = sadness
+	}
+	
+	immediate = {
+ 		add_learning_lifestyle_xp = medium_lifestyle_experience
+	}
+	
+	option = { 
+		name = ancient_magic_alchemy.0500.a
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
 		}
 	}
 }

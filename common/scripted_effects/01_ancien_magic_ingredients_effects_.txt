@@ -212,11 +212,14 @@ create_ingredient_compressed_mana = {
 	
 	if = {
 		limit = {
-			any_ingredient_in_inventory = {
-				limit = {
-					has_artifact_feature_group = compressed_mana
+			scope:owner = {
+				any_ingredient_in_inventory = {
+					limit = {
+						has_artifact_feature_group = compressed_mana
+						has_artifact_feature = mana_drop
+					}
+					count >= mana_drops_needed_for_vial.dec
 				}
-				count >= mana_drops_needed_for_vial.dec
 			}
 		}
 		
@@ -234,12 +237,14 @@ create_ingredient_compressed_mana = {
 			limit = {
 				local_var:number_of_drops.compare_value > 0
 			}
-			random_ingredient_in_inventory = {
-				limit = {
-					has_artifact_feature_group = compressed_mana
-					has_artifact_feature = mana_drop
+			scope:owner = {
+				random_ingredient_in_inventory = {
+					limit = {
+						has_artifact_feature_group = compressed_mana
+						has_artifact_feature = mana_drop
+					}
+					artifact_owner = {destroy_artifact = prev}
 				}
-				artifact_owner = {destroy_artifact = prev}
 			}
 			change_local_variable = {
 				name = number_of_drops

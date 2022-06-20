@@ -109,6 +109,7 @@ focal_point = {
 ## Spell descriptions
 # None
 spark_spell = {}
+compress_mana_spell = {}
 
 # Chronomancy
 glimpse_the_future_spell = {}

@@ -29,6 +29,8 @@
 
  # Basic
  spark_spell_name: "Practice Spark"
+ compress_mana_spell_name: "Compress [mana|E]"
+ 
  # Chronomancy
  glimpse_the_future_spell_name: "Glimpse the Future"
  financial_times_spell_name: "Financial Times"
@@ -86,7 +88,8 @@
 
  #Basic
  spark_spell_desc: "This spell is the first spell a mage learns. By practicing channelling mana, the mage can gain spellcasting experience. The more skilled a mage is, the more experience they can gain from the same amount of mana."
-
+ compress_mana_spell_desc: "This spell allows mage to higly compress mana into one drop of mana which is used in alchemy and mage craftic."
+ 
  #Chronomancy
  glimpse_the_future_spell_desc: "This spell allows the user brief insights into the future of their culture, allowing them to view new innovations and technologies. Gives a bonus to [cultural_fascination|E] research speed."
  financial_times_spell_desc: "A more directed application of future sight, this spell allows the user to see specific events, such as resource abundances or shortages, well in advance, allowing them to gain a market advantage. Gives a bonus to monthly [income|E]."

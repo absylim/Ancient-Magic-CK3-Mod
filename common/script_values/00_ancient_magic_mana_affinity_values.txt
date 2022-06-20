@@ -54,8 +54,6 @@ magical_blood_sublimation_base_mana_affinity_boost = {
 	divide = 2
 }
 
-mana_drops_needed_for_vial = 12
-
 #########################################################################################################################
 #########################################################################################################################
 
@@ -385,17 +383,6 @@ ammount_of_my_blood_in_inventory = {
 	every_mana_blood_in_inventory = {
 		limit = {
 			creator = ROOT
-		}
-		add = 1
-	}
-}
-
-amount_of_mana_drops_in_inventory = {
-	value = 0
-	
-	every_ingredient_in_inventory = {
-		limit = {
-			has_artifact_feature_group = compressed_mana
 		}
 		add = 1
 	}

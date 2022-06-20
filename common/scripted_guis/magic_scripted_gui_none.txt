@@ -60,3 +60,68 @@ spark_spell_has_list = {
 		always = no
 	}
 }
+
+#Basic
+compress_mana_spell = {
+	scope = character
+	is_shown = {
+		this = scope:spell_target
+	}
+	is_valid = {
+		has_enough_mana_trigger = { SPELL = compress_mana_spell }
+	}
+	effect = {
+		save_temporary_scope_value_as = {
+			name = spell_cost
+			value = {
+				value = compress_mana_spell_cost.abs
+				multiply = var:repeat_spell
+			}
+		}
+		change_mana_with_tooltip = { VALUE = scope:spell_cost.neg }
+		save_temporary_scope_value_as = {
+			name = spell_cost
+			value = {
+				value = compress_mana_spell_cost.abs
+				multiply = var:repeat_spell
+				multiply = {
+					value = mage_level.rshift02
+					min = 1
+				}
+				divide = 2
+			}
+		}
+		create_ingredient_compressed_mana = { OWNER = this }
+		change_mage_xp = { VALUE = scope:spell_cost }
+	}
+}
+
+compress_mana_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = mage_perk
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+compress_mana_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = yes
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+compress_mana_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}

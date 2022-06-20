@@ -4,4 +4,7 @@
  artifact_ingredient: "Ingredient"
  mana_blood_ingredient_name: "Blood of [origin.GetFullNameRegnal]"    
  mana_blood_ingredient_desc: "Blood extracted from [origin.GetFullNameRegnal]. This blood's [mana_affinity|E] is [SCOPE.GetValue('blood_mana_affinity')] [mana_affinity_i]"
- 
+ mana_vial_ingredient_name: "Mana Vial"
+ mana_vial_ingredient_desc: "Higly compressed mana in large amount stored in vial."
+ mana_drop_ingredient_name: "Mana Drop"
+ mana_drop_ingredient_desc: "Higly compressed mana drop, from multiple mana drops its possible to create mana vial."
