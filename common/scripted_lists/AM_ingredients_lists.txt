@@ -11,3 +11,10 @@ ingredient_in_inventory = {
 		artifact_slot_type = ingredient
 	}
 }
+
+owned_alchemy_book = {
+	base = owned_story
+	conditions = {
+		story_type = alchemy_knowledge_book
+	}
+}

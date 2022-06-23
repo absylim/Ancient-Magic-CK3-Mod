@@ -1,0 +1,21 @@
+﻿#Author: Donekulda
+#Desc: This is story cycle thats used as way to keep the researched knowladge inheritable
+
+alchemy_knowledge_book = {
+	on_setup = {
+	}
+
+	on_end = {
+	}
+
+	on_owner_death = {
+		if = { #If it would be also inheritable for primary_heir then this code would have to be create more complicatedly, as it could lead to the fact that players gained knowlage would be overwritten by gained knowladge
+			limit = { exists = story_owner.player_heir }
+			make_story_owner = story_owner.player_heir
+		}
+		else = {
+			debug_log = "Died without inheritor"
+			end_story = yes
+		}
+	}
+}

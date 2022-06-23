@@ -1,4 +1,91 @@
-﻿am_interesting_courtier_selection_score = {
+﻿#Author: Donekulda
+#Desc: Script values of alchemy recipies, laboratory costs and etc
+
+mana_drops_needed_for_vial = 12
+
+#Build cost of laboratory
+cheap_laboratory_build_cost = 100
+efficient_laboratory_build_cost = 200
+large_laboratory_build_cost = 350
+extravagant_laboratory_build_cost = 450
+
+#Upgrade costs of lab equipment
+laboratory_glass_level_1_cost = 20
+laboratory_glass_level_2_cost = 50
+laboratory_glass_level_3_cost = 100
+laboratory_glass_level_4_cost = 200
+
+laboratory_crucibles_level_1_cost = laboratory_glass_level_1_cost
+laboratory_crucibles_level_2_cost = laboratory_glass_level_2_cost
+laboratory_crucibles_level_3_cost = laboratory_glass_level_3_cost
+laboratory_crucibles_level_4_cost = laboratory_glass_level_4_cost
+
+laboratory_iron_tools_level_1_cost = laboratory_glass_level_1_cost
+laboratory_iron_tools_level_2_cost = laboratory_glass_level_2_cost
+laboratory_iron_tools_level_3_cost = laboratory_glass_level_3_cost
+laboratory_iron_tools_level_4_cost = laboratory_glass_level_4_cost
+
+laboratory_books_level_1_cost = laboratory_glass_level_1_cost
+laboratory_books_level_2_cost = laboratory_glass_level_2_cost
+laboratory_books_level_3_cost = laboratory_glass_level_3_cost
+laboratory_books_level_4_cost = laboratory_glass_level_4_cost
+
+laboratory_spellcircles_level_1_cost = { value = laboratory_glass_level_1_cost multiply = 2 }
+laboratory_spellcircles_level_2_cost = { value = laboratory_glass_level_2_cost multiply = 2 }
+laboratory_spellcircles_level_3_cost = { value = laboratory_glass_level_3_cost multiply = 2 }
+laboratory_spellcircles_level_4_cost = { value = laboratory_glass_level_4_cost multiply = 2 }
+
+laboratory_level = {
+	value = 0
+	
+	add = laboratory_glass_level
+	add = laboratory_crucible_level
+	add = laboratory_iron_tools_level
+	add = laboratory_books_level
+	add = laboratory_spellcircles_level
+}
+
+laboratory_glass_level = {
+	value = 0
+	if = { 
+		limit = { has_variable = laboratory_glass_level }
+		add = var:laboratory_glass_level
+	}
+}
+
+laboratory_crucible_level = {
+	value = 0
+	if = { 
+		limit = { has_variable = laboratory_crucible_level }
+		add = var:laboratory_crucible_level
+	}
+}
+
+laboratory_iron_tools_level = {
+	value = 0
+	if = { 
+		limit = { has_variable = laboratory_iron_tools_level }
+		add = var:laboratory_iron_tools_level
+	}
+}
+
+laboratory_books_level = {
+	value = 0
+	if = { 
+		limit = { has_variable = laboratory_books_level }
+		add = var:laboratory_books_level
+	}
+}
+
+laboratory_spellcircles_level = {
+	value = 0
+	if = { 
+		limit = { has_variable = laboratory_spellcircles_level }
+		add = var:laboratory_spellcircles_level
+	}
+}
+
+am_interesting_courtier_selection_score = {
 	value = 10
 	if = {
 		limit = {

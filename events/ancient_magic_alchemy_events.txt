@@ -144,6 +144,7 @@ ancient_magic_alchemy.0002 = { #What kind of laboratory should be build
 	
 	option = { #Cheap Setup
 		name = ancient_magic_alchemy.0002.a #
+		remove_short_term_gold = cheap_laboratory_build_cost
 		custom_tooltip = {
 			text = cheap_laboratory_setup
 		}
@@ -189,7 +190,7 @@ ancient_magic_alchemy.0002 = { #What kind of laboratory should be build
 	}
 	option = { #Efficient Setup
 		name = ancient_magic_alchemy.0002.b
-		remove_short_term_gold = 20
+		remove_short_term_gold = efficient_laboratory_build_cost
 		custom_tooltip = {
 			text = efficient_laboratory_setup
 		}
@@ -262,7 +263,7 @@ ancient_magic_alchemy.0002 = { #What kind of laboratory should be build
 				learning = 15
 			}
 		}
-		remove_short_term_gold = 35
+		remove_short_term_gold = large_laboratory_build_cost
 		custom_tooltip = {
 			text = large_laboratory_setup
 		}
@@ -334,7 +335,7 @@ ancient_magic_alchemy.0002 = { #What kind of laboratory should be build
 				learning = 25
 			}
 		}
-		remove_short_term_gold = 50
+		remove_short_term_gold = extravagant_laboratory_build_cost
 		custom_tooltip = {
 			text = extravagant_laboratory_setup
 		}
@@ -1571,6 +1572,564 @@ ancient_magic_alchemy.0016 = {
 	}
 }
 
+#############################
+####  Upgrade laboratory ####
+#############################
+
+#Variant 1 - Flasks, Alembics, test tubes, etc
+ancient_magic_alchemy.0050 = {
+	title = ancient_magic_alchemy.0050.t
+	desc = ancient_magic_alchemy.0050.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #Basic
+		name = ancient_magic_alchemy.0050.a
+		
+		custom_tooltip = {
+			text = non_fancy_laboratory_glass_tooltip
+		}
+		
+		show_as_unavailable = { #Its useless to make the character to pay for something that he owns
+			laboratory_glass_level >= 1
+		}
+		
+		remove_short_term_gold = laboratory_glass_level_1_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_glass_level value = 1 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Intermidiate
+		name = ancient_magic_alchemy.0050.b
+		
+		custom_tooltip = {
+			text = fancy_laboratory_glass_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_glass_level >= 2
+		}
+		
+		remove_short_term_gold = laboratory_glass_level_2_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_glass_level value = 2 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Master
+		name = ancient_magic_alchemy.0050.c
+		
+		custom_tooltip = {
+			text = rare_laboratory_glass_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_glass_level >= 3
+			mage_level > 10
+		}
+		
+		remove_short_term_gold = laboratory_glass_level_3_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_glass_level value = 3 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Grandmaster level
+		name = ancient_magic_alchemy.0050.d
+		
+		custom_tooltip = {
+			text = magical_laboratory_glass_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_glass_level >= 4
+			mage_level > 15
+		}
+		
+		remove_short_term_gold = laboratory_glass_level_4_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_glass_level value = 4 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0050.exit
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+#Variant 2 - Crucibles
+ancient_magic_alchemy.0052 = {
+	title = ancient_magic_alchemy.0052.t
+	desc = ancient_magic_alchemy.0052.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #Basic
+		name = ancient_magic_alchemy.0052.a
+		
+		custom_tooltip = {
+			text = non_fancy_laboratory_crucibles_tooltip
+		}
+		
+		show_as_unavailable = { #Its useless to make the character to pay for something that he owns
+			laboratory_crucible_level >= 1
+		}
+		
+		remove_short_term_gold = laboratory_crucibles_level_1_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_crucible_level value = 1 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Intermidiate
+		name = ancient_magic_alchemy.0052.b
+		
+		custom_tooltip = {
+			text = fancy_laboratory_crucibles_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_crucible_level >= 2
+		}
+		
+		remove_short_term_gold = laboratory_crucibles_level_2_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_crucible_level value = 2 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Master
+		name = ancient_magic_alchemy.0052.c
+		
+		custom_tooltip = {
+			text = rare_laboratory_crucibles_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_crucible_level >= 3
+			mage_level > 10
+		}
+		
+		remove_short_term_gold = laboratory_crucibles_level_3_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_crucible_level value = 3 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Grandmaster level
+		name = ancient_magic_alchemy.0052.d
+		
+		custom_tooltip = {
+			text = magical_laboratory_crucibles_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_crucible_level >= 4
+			mage_level > 20
+		}
+		
+		remove_short_term_gold = laboratory_crucibles_level_4_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_crucible_level value = 4 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0050.exit
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+#Variant 3 - Iron Tools
+ancient_magic_alchemy.0054 = {
+	title = ancient_magic_alchemy.0054.t
+	desc = ancient_magic_alchemy.0054.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #Basic
+		name = ancient_magic_alchemy.0054.a
+		
+		custom_tooltip = {
+			text = non_fancy_laboratory_tools_tooltip
+		}
+		
+		show_as_unavailable = { #Its useless to make the character to pay for something that he owns
+			laboratory_iron_tools_level >= 1
+		}
+		
+		remove_short_term_gold = laboratory_iron_tools_level_1_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_iron_tools_level value = 1 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Intermidiate
+		name = ancient_magic_alchemy.0054.b
+		
+		custom_tooltip = {
+			text = fancy_laboratory_tools_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_iron_tools_level >= 2
+		}
+		
+		remove_short_term_gold = laboratory_iron_tools_level_2_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_iron_tools_level value = 2 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Master
+		name = ancient_magic_alchemy.0054.c
+		
+		custom_tooltip = {
+			text = rare_laboratory_tools_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_iron_tools_level >= 3
+			mage_level > 10
+		}
+		
+		remove_short_term_gold = laboratory_iron_tools_level_3_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_iron_tools_level value = 3 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Grandmaster level
+		name = ancient_magic_alchemy.0054.d
+		
+		custom_tooltip = {
+			text = magical_laboratory_tools_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_iron_tools_level >= 4
+			mage_level > 15
+		}
+		
+		remove_short_term_gold = laboratory_iron_tools_level_4_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_iron_tools_level value = 4 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0050.exit
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+#Variant 4 - Books
+ancient_magic_alchemy.0056 = {
+	title = ancient_magic_alchemy.0056.t
+	desc = ancient_magic_alchemy.0056.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #Basic
+		name = ancient_magic_alchemy.0056.a
+		
+		custom_tooltip = {
+			text = non_fancy_laboratory_books_tooltip
+		}
+		
+		show_as_unavailable = { #Its useless to make the character to pay for something that he owns
+			laboratory_books_level >= 1
+		}
+		
+		remove_short_term_gold = laboratory_books_level_1_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_books_level value = 1 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Intermidiate
+		name = ancient_magic_alchemy.0056.b
+		
+		custom_tooltip = {
+			text = fancy_laboratory_books_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_books_level >= 2
+		}
+		
+		remove_short_term_gold = laboratory_books_level_2_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_books_level value = 2 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Master
+		name = ancient_magic_alchemy.0056.c
+		
+		custom_tooltip = {
+			text = rare_laboratory_books_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_books_level >= 3
+			mage_level > 15
+		}
+		
+		remove_short_term_gold = laboratory_books_level_3_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_books_level value = 3 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Grandmaster level
+		name = ancient_magic_alchemy.0056.d
+		
+		custom_tooltip = {
+			text = magical_laboratory_books_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_books_level >= 4
+			mage_level > 20
+		}
+		
+		remove_short_term_gold = laboratory_books_level_4_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_books_level value = 4 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0050.exit
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+#Variant 5 - Spellcircles
+ancient_magic_alchemy.0058 = {
+	title = ancient_magic_alchemy.0058.t
+	desc = ancient_magic_alchemy.0058.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #Basic
+		name = ancient_magic_alchemy.0058.a
+		
+		custom_tooltip = {
+			text = non_fancy_laboratory_spellcircles_tooltip
+		}
+		
+		show_as_unavailable = { #Its useless to make the character to pay for something that he owns
+			laboratory_spellcircles_level >= 1
+		}
+		
+		remove_short_term_gold = laboratory_spellcircles_level_1_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_spellcircles_level value = 1 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Intermidiate
+		name = ancient_magic_alchemy.0058.b
+		
+		custom_tooltip = {
+			text = fancy_laboratory_spellcircles_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_spellcircles_level >= 2
+			mage_level > 10
+		}
+		
+		remove_short_term_gold = laboratory_spellcircles_level_2_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_spellcircles_level value = 2 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Master
+		name = ancient_magic_alchemy.0058.c
+		
+		custom_tooltip = {
+			text = rare_laboratory_spellcircles_tooltip
+		}
+		
+		show_as_unavailable = {
+			laboratory_spellcircles_level >= 3
+			mage_level > 20
+		}
+		
+		remove_short_term_gold = laboratory_spellcircles_level_3_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_spellcircles_level value = 3 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #Grandmaster level
+		name = ancient_magic_alchemy.0058.d
+		
+		custom_tooltip = {
+			text = magical_laboratory_spellcircles_tooltip
+		}
+		
+		trigger = { #Dont know what to write here
+			always = no
+		}
+		
+		show_as_unavailable = {
+			laboratory_spellcircles_level >= 4
+			mage_level > 25
+		}
+		
+		remove_short_term_gold = laboratory_spellcircles_level_4_cost
+		
+		hidden_effect = {
+			set_variable = { name = laboratory_spellcircles_level value = 4 }
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0050.exit
+		ai_chance = {
+			base = 1
+		}
+	}
+}
 
 #############################
 #####	Use laboratory	#####
@@ -1603,7 +2162,7 @@ ancient_magic_alchemy.0100 = { #Who is gonna perform the experiments
 	}
 	
 	option = { #exit
-		name = ancient_magic_alchemy.0100.exit
+		name = ancient_magic_alchemy.0050.exit
 		trigger = {
 			is_ai = no
 		}
@@ -1630,7 +2189,7 @@ ancient_magic_alchemy.0101 = { #What kind of experiments should be performed
 	}
 	
 	option = { #exit
-		name = ancient_magic_alchemy.0100.exit
+		name = ancient_magic_alchemy.0050.exit
 		trigger = {
 			is_ai = no
 		}
@@ -1688,7 +2247,9 @@ ancient_magic_alchemy.0110 = { #Choose new metal/ore event
 	immediate = {
 		random_list = {
 			1 = { 
-				trigger = { NOT = {  } }
+				trigger = { 
+					NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = ores target = flag:mythril	} }	} 
+				}
 				trigger_event = ancient_magic_alchemy.0111 
 			}
 			1 = { #fallback event
@@ -1712,6 +2273,13 @@ ancient_magic_alchemy.0111 = { #mythril
 	immediate = {
 		change_mage_xp = { VALUE = 500 }
  		add_learning_lifestyle_xp = minor_lifestyle_experience
+		
+		random_owned_alchemy_book = { 
+			add_to_variable_list = {
+				name = ores
+				target = flag:mythril
+			}
+		}
 	}
 	
 	option = { 

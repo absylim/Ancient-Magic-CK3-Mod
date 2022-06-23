@@ -33,3 +33,9 @@ has_some_blood_in_artifact_inventory_trigger = {
 		NOT = { creator = root }
 	}
 }	
+
+has_alchemy_book = {
+	any_owned_story = {
+		story_type = alchemy_knowledge_book
+	}
+}
