@@ -532,11 +532,11 @@
 			icon = conversos
 			religious_head = k_papal_state
 			
-			holy_site = rome
-			holy_site = cordoba
 			holy_site = jerusalem
-			holy_site = alexandria
-			holy_site = sinai
+			holy_site = rome
+			holy_site = santiago
+			holy_site = toledo
+			holy_site = cordoba
 
 			# Tenets
 			doctrine = tenet_communion
