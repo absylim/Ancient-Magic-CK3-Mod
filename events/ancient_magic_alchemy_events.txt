@@ -252,7 +252,7 @@ ancient_magic_alchemy.0002 = { #What kind of laboratory should be build
 			}
 			modifier = {
 				has_trait = greedy
-				subtract = 50
+				add = { subtract = 50 }
 			}
 		}
 	}
@@ -324,7 +324,7 @@ ancient_magic_alchemy.0002 = { #What kind of laboratory should be build
 			}
 			modifier = {
 				has_trait = greedy
-				subtract = 100
+				add = { subtract = 100 }
 			}
 		}
 	}
@@ -397,7 +397,7 @@ ancient_magic_alchemy.0002 = { #What kind of laboratory should be build
 			}
 			modifier = {
 				has_trait = greedy
-				subtract = 150
+				add = { subtract = 150 }
 			}
 		}
 	}
@@ -540,7 +540,7 @@ ancient_magic_alchemy.0003 = {
 			}
 			modifier = {
 				has_trait = greedy
-				subtract = 200
+				add = { subtract = 200 }
 			}
 		}
 	}
@@ -679,7 +679,7 @@ ancient_magic_alchemy.0004 = {
 			}
 			modifier = {
 				has_trait = greedy
-				subtract = 200
+				add = { subtract = 200 }
 			}
 		}
 	}
@@ -817,7 +817,7 @@ ancient_magic_alchemy.0005 = {
 			}
 			modifier = {
 				has_trait = greedy
-				subtract = 200
+				add = { subtract = 200 }
 			}
 		}
 	}
@@ -955,7 +955,7 @@ ancient_magic_alchemy.0006 = {
 			}
 			modifier = {
 				has_trait = greedy
-				subtract = 200
+				add = { subtract = 200 }
 			}
 		}
 	}
@@ -1100,7 +1100,7 @@ ancient_magic_alchemy.0007 = {
 			}
 			modifier = {
 				has_trait = greedy
-				subtract = 200
+				add = { subtract = 200 }
 			}
 		}
 	}
@@ -1413,7 +1413,7 @@ ancient_magic_alchemy.0014 = {
 			}
 			modifier = {
 				has_trait = greedy
-				subtract = 200
+				add = { subtract = 200 }
 			}
 		}
 	}
@@ -1550,7 +1550,7 @@ ancient_magic_alchemy.0016 = {
 			}
 			modifier = {
 				has_trait = greedy
-				subtract = 100
+				add = { subtract = 100 }
 			}
 		}
 	}
@@ -1591,12 +1591,12 @@ ancient_magic_alchemy.0050 = {
 	option = { #Basic
 		name = ancient_magic_alchemy.0050.a
 		
-		custom_tooltip = {
-			text = non_fancy_laboratory_glass_tooltip
-		}
-		
 		show_as_unavailable = { #Its useless to make the character to pay for something that he owns
 			laboratory_glass_level >= 1
+		}
+		
+		custom_tooltip = {
+			text = non_fancy_laboratory_glass_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_glass_level_1_cost
@@ -1613,12 +1613,12 @@ ancient_magic_alchemy.0050 = {
 	option = { #Intermidiate
 		name = ancient_magic_alchemy.0050.b
 		
-		custom_tooltip = {
-			text = fancy_laboratory_glass_tooltip
-		}
-		
 		show_as_unavailable = {
 			laboratory_glass_level >= 2
+		}
+		
+		custom_tooltip = {
+			text = fancy_laboratory_glass_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_glass_level_2_cost
@@ -1635,13 +1635,13 @@ ancient_magic_alchemy.0050 = {
 	option = { #Master
 		name = ancient_magic_alchemy.0050.c
 		
-		custom_tooltip = {
-			text = rare_laboratory_glass_tooltip
-		}
-		
 		show_as_unavailable = {
 			laboratory_glass_level >= 3
-			mage_level > 10
+			mage_level < 10
+		}
+		
+		custom_tooltip = {
+			text = rare_laboratory_glass_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_glass_level_3_cost
@@ -1664,7 +1664,7 @@ ancient_magic_alchemy.0050 = {
 		
 		show_as_unavailable = {
 			laboratory_glass_level >= 4
-			mage_level > 15
+			mage_level < 15
 		}
 		
 		remove_short_term_gold = laboratory_glass_level_4_cost
@@ -1921,12 +1921,12 @@ ancient_magic_alchemy.0056 = {
 	option = { #Basic
 		name = ancient_magic_alchemy.0056.a
 		
-		custom_tooltip = {
-			text = non_fancy_laboratory_books_tooltip
-		}
-		
 		show_as_unavailable = { #Its useless to make the character to pay for something that he owns
 			laboratory_books_level >= 1
+		}
+		
+		custom_tooltip = {
+			text = non_fancy_laboratory_books_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_books_level_1_cost
@@ -1943,12 +1943,12 @@ ancient_magic_alchemy.0056 = {
 	option = { #Intermidiate
 		name = ancient_magic_alchemy.0056.b
 		
-		custom_tooltip = {
-			text = fancy_laboratory_books_tooltip
-		}
-		
 		show_as_unavailable = {
 			laboratory_books_level >= 2
+		}
+		
+		custom_tooltip = {
+			text = fancy_laboratory_books_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_books_level_2_cost
@@ -1965,13 +1965,13 @@ ancient_magic_alchemy.0056 = {
 	option = { #Master
 		name = ancient_magic_alchemy.0056.c
 		
-		custom_tooltip = {
-			text = rare_laboratory_books_tooltip
-		}
-		
 		show_as_unavailable = {
 			laboratory_books_level >= 3
-			mage_level > 15
+			mage_level < 15
+		}
+		
+		custom_tooltip = {
+			text = rare_laboratory_books_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_books_level_3_cost
@@ -1988,13 +1988,13 @@ ancient_magic_alchemy.0056 = {
 	option = { #Grandmaster level
 		name = ancient_magic_alchemy.0056.d
 		
-		custom_tooltip = {
-			text = magical_laboratory_books_tooltip
-		}
-		
 		show_as_unavailable = {
 			laboratory_books_level >= 4
-			mage_level > 20
+			mage_level < 20
+		}
+		
+		custom_tooltip = {
+			text = magical_laboratory_books_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_books_level_4_cost
@@ -2031,12 +2031,12 @@ ancient_magic_alchemy.0058 = {
 	option = { #Basic
 		name = ancient_magic_alchemy.0058.a
 		
-		custom_tooltip = {
-			text = non_fancy_laboratory_spellcircles_tooltip
-		}
-		
 		show_as_unavailable = { #Its useless to make the character to pay for something that he owns
 			laboratory_spellcircles_level >= 1
+		}
+		
+		custom_tooltip = {
+			text = non_fancy_laboratory_spellcircles_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_spellcircles_level_1_cost
@@ -2053,13 +2053,13 @@ ancient_magic_alchemy.0058 = {
 	option = { #Intermidiate
 		name = ancient_magic_alchemy.0058.b
 		
-		custom_tooltip = {
-			text = fancy_laboratory_spellcircles_tooltip
-		}
-		
 		show_as_unavailable = {
 			laboratory_spellcircles_level >= 2
-			mage_level > 10
+			mage_level < 10
+		}
+		
+		custom_tooltip = {
+			text = fancy_laboratory_spellcircles_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_spellcircles_level_2_cost
@@ -2076,13 +2076,13 @@ ancient_magic_alchemy.0058 = {
 	option = { #Master
 		name = ancient_magic_alchemy.0058.c
 		
-		custom_tooltip = {
-			text = rare_laboratory_spellcircles_tooltip
-		}
-		
 		show_as_unavailable = {
 			laboratory_spellcircles_level >= 3
-			mage_level > 20
+			mage_level < 20
+		}
+		
+		custom_tooltip = {
+			text = rare_laboratory_spellcircles_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_spellcircles_level_3_cost
@@ -2099,17 +2099,17 @@ ancient_magic_alchemy.0058 = {
 	option = { #Grandmaster level
 		name = ancient_magic_alchemy.0058.d
 		
-		custom_tooltip = {
-			text = magical_laboratory_spellcircles_tooltip
-		}
-		
 		trigger = { #Dont know what to write here
 			always = no
 		}
 		
 		show_as_unavailable = {
 			laboratory_spellcircles_level >= 4
-			mage_level > 25
+			mage_level < 25
+		}
+		
+		custom_tooltip = {
+			text = magical_laboratory_spellcircles_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_spellcircles_level_4_cost
