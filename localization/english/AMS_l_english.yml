@@ -19,3 +19,4 @@
  interaction_category_uncategorized: "Magic"
  
  activity_build_laboratory: "Build Laboratory"
+ activity_build_laboratory_name: "$activity_build_laboratory$"

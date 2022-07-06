@@ -1816,7 +1816,8 @@ ancient_magic_alchemy.0054 = {
 		}
 		
 		show_as_unavailable = { #Its useless to make the character to pay for something that he owns
-			laboratory_iron_tools_level >= 1
+			#laboratory_iron_tools_level >= 1
+			always = yes
 		}
 		
 		remove_short_term_gold = laboratory_iron_tools_level_1_cost

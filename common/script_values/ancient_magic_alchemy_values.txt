@@ -35,6 +35,13 @@ laboratory_spellcircles_level_2_cost = { value = laboratory_glass_level_2_cost m
 laboratory_spellcircles_level_3_cost = { value = laboratory_glass_level_3_cost multiply = 2 }
 laboratory_spellcircles_level_4_cost = { value = laboratory_glass_level_4_cost multiply = 2 }
 
+laboratory_glass_level_max = 4
+laboratory_crucible_level_max = 4
+laboratory_iron_tools_level_max = 4
+laboratory_books_level_max = 4
+laboratory_spellcircles_level_max = 3
+
+
 laboratory_level = {
 	value = 0
 	
@@ -51,6 +58,7 @@ laboratory_glass_level = {
 		limit = { has_variable = laboratory_glass_level }
 		add = var:laboratory_glass_level
 	}
+	max = laboratory_glass_level_max
 }
 
 laboratory_crucible_level = {
@@ -59,6 +67,7 @@ laboratory_crucible_level = {
 		limit = { has_variable = laboratory_crucible_level }
 		add = var:laboratory_crucible_level
 	}
+	max = laboratory_crucible_level_max
 }
 
 laboratory_iron_tools_level = {
@@ -67,6 +76,7 @@ laboratory_iron_tools_level = {
 		limit = { has_variable = laboratory_iron_tools_level }
 		add = var:laboratory_iron_tools_level
 	}
+	max = laboratory_iron_tools_level_max
 }
 
 laboratory_books_level = {
@@ -75,6 +85,7 @@ laboratory_books_level = {
 		limit = { has_variable = laboratory_books_level }
 		add = var:laboratory_books_level
 	}
+	max = laboratory_books_level_max
 }
 
 laboratory_spellcircles_level = {
@@ -83,6 +94,7 @@ laboratory_spellcircles_level = {
 		limit = { has_variable = laboratory_spellcircles_level }
 		add = var:laboratory_spellcircles_level
 	}
+	max = laboratory_spellcircles_level_max
 }
 
 am_interesting_courtier_selection_score = {
