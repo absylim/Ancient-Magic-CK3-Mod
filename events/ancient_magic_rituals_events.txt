@@ -1318,7 +1318,7 @@ ancient_magic_rituals_events.008 = { # Who implant the blood
 					}
 				}
 				modifier = { #Blood compatibility
-					add = = {
+					add = {
 						value = scope:chosen_blood_compatibility
 						subtract = average_mana_blood_compatibility_level
 					}
