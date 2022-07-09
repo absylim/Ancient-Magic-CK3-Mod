@@ -8,3 +8,13 @@
  mana_vial_ingredient_desc: "Higly compressed mana in large amount stored in vial."
  mana_drop_ingredient_name: "Mana Drop"
  mana_drop_ingredient_desc: "Higly compressed mana drop, from multiple mana drops its possible to create mana vial."
+ 
+ #Ores
+ mythril_ore_ingredient_name: "Mythril"
+ mythril_ore_ingredient_desc: "Magical metal that is know for it's great strenght, resistance to magical elements and mana conductivity."
+ 
+ #Metals and steels
+ carbon_steel_metal_ingredient_name: "Carbon Steel"
+ carbon_steel_metal_ingredient_desc: "Special metal made mainly from iron and low concentration of carbon, great conductor of mana among non-magical metals."
+ 
+ #Woods

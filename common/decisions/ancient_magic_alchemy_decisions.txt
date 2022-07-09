@@ -394,7 +394,12 @@ use_laboratory_decision = {
 			
 			if = {
 				limit = { scope:perform_experiments = yes }
-				trigger_event = ancient_magic_alchemy.0100
+				capital_province = {
+					spawn_activity = {
+						owner = ROOT
+						type = activity_alchemy_experiments
+					}
+				}
 			}
 			else_if = {
 				limit = { scope:perform_alchemy = yes }

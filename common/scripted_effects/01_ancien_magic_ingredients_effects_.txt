@@ -374,7 +374,164 @@ create_ingredient_ore = {
 				
 			remove_artifact_modifier = artifact_placeholder_modifier
 			
+			set_variable = {
+				name = ore_type
+				value = flag:$TYPE$
+			}
+			
 			set_artifact_feature_group = ores
+		}
+	}
+}
+
+create_ingredient_metal = {
+	$OWNER$ = { save_scope_as = owner }
+	
+	save_scope_value_as = {
+		name = quality
+		value = {
+			value = 0
+			
+			switch = {
+				trigger = $TYPE$
+				carbon_steel = { add = 50 }
+				fallback = { add = 15 }
+			}
+		}
+	}
+	
+	hidden_effect_new_artifact = {
+		scope:owner = {
+			create_artifact = {
+				name = placeholder
+				creator = scope:owner
+				description = placeholder
+				template = mana_blood_template
+				modifier = artifact_placeholder_modifier
+				visuals = $TYPE$_metal
+				type = ingredient
+				save_scope_as = newly_created_artifact
+				quality = scope:quality
+				wealth = scope:quality
+				decaying = no #metals dont decay
+			}
+		}
+		
+		scope:newly_created_artifact = {
+			set_artifact_name = $TYPE$_metal_ingredient_name
+			
+			set_artifact_description = $TYPE$_metal_ingredient_desc
+				
+			remove_artifact_modifier = artifact_placeholder_modifier
+			
+			set_variable = {
+				name = metal_type
+				value = flag:$TYPE$
+			}
+			
+			set_artifact_feature_group = special_metals
+		}
+	}
+}
+
+create_ingredient_wood = {
+	$OWNER$ = { save_scope_as = owner }
+	
+	save_scope_value_as = {
+		name = quality
+		value = {
+			value = 0
+			
+			switch = {
+				trigger = $TYPE$
+				magical_oak = { add = 25 }
+				fallback = { add = 15 }
+			}
+		}
+	}
+	
+	hidden_effect_new_artifact = {
+		scope:owner = {
+			create_artifact = {
+				name = placeholder
+				creator = scope:owner
+				description = placeholder
+				template = mana_blood_template
+				modifier = artifact_placeholder_modifier
+				visuals = $TYPE$_wood
+				type = ingredient
+				save_scope_as = newly_created_artifact
+				quality = scope:quality
+				wealth = scope:quality
+				decaying = yes
+			}
+		}
+		
+		scope:newly_created_artifact = {
+			set_artifact_name = $TYPE$_wood_ingredient_name
+			
+			set_artifact_description = $TYPE$_wood_ingredient_desc
+				
+			remove_artifact_modifier = artifact_placeholder_modifier
+			
+			set_variable = {
+				name = wood_type
+				value = flag:$TYPE$
+			}
+			
+			set_artifact_feature_group = wood
+		}
+	}
+}
+
+create_ingredient_herb = {
+	$OWNER$ = { save_scope_as = owner }
+	
+	save_scope_value_as = {
+		name = quality
+		value = {
+			value = 0
+			
+			switch = {
+				trigger = $TYPE$
+				moonshade = { add = 25 }
+				bloodbane = { add = 25 }
+				aqualum = { add = 25 }
+				fallback = { add = 15 }
+			}
+		}
+	}
+	
+	hidden_effect_new_artifact = {
+		scope:owner = {
+			create_artifact = {
+				name = placeholder
+				creator = scope:owner
+				description = placeholder
+				template = mana_blood_template
+				modifier = artifact_placeholder_modifier
+				visuals = $TYPE$_herb
+				type = ingredient
+				save_scope_as = newly_created_artifact
+				quality = scope:quality
+				wealth = scope:quality
+				decaying = yes
+			}
+		}
+		
+		scope:newly_created_artifact = {
+			set_artifact_name = $TYPE$_herb_ingredient_name
+			
+			set_artifact_description = $TYPE$_herb_ingredient_desc
+				
+			remove_artifact_modifier = artifact_placeholder_modifier
+			
+			set_variable = {
+				name = herb_type
+				value = flag:$TYPE$
+			}
+			
+			set_artifact_feature_group = herbs
 		}
 	}
 }

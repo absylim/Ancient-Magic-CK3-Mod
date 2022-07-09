@@ -70,8 +70,33 @@
 
 	mythril_ore = {
 		group = ores
+		trigger = {
+			trigger_if = { 
+				limit = { has_variable = var:ore_type }
+				var:ore_type = flag:mythril
+			}
+		}
+		weight = 1
 	}
 	
-	magical_wood = {
+	magical_oak_wood = {
 		group = wood
+		trigger = {
+			trigger_if = { 
+				limit = { has_variable = var:wood_type }
+				var:ore_type = flag:magical_oak
+			}
+		}
+		weight = 1
+	}
+	
+	carbon_steel = {
+		group = special_metals
+		trigger = {
+			trigger_if = { 
+				limit = { has_variable = var:metal_type }
+				var:ore_type = flag:carbon_steel
+			}
+		}
+		weight = 1
 	}

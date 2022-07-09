@@ -138,3 +138,37 @@
  fancy_laboratory_spellcircles_tooltip: "[THIS.Char.GetFullName] will ensure the success of [THIS.Char.GetHerHis] future experiments by assembling more intricate spellcircles that will ensure stable environment."
  rare_laboratory_spellcircles_tooltip: ""
  magical_laboratory_spellcircles_tooltip: ""
+ 
+ ancient_magic_alchemy.0100.t: "Alchemy Experiments - who will perform them"
+ 
+ ancient_magic_alchemy.0107.t: "Artifact Enchantment Experiment - What to enchant"
+ ancient_magic_alchemy.0107.desc: "Enchanting artifact is not an easy task, and the more so when you dont even know how to enchant, i should choose for what kind of artifact from my inventory i want to enchant first. But i need to choose carefully as even finished product could be turned into useless one."
+ ancient_magic_alchemy.0107.weapon: "Experiment on weapon"
+ ancient_magic_alchemy.0107.armor: "Experiment on armor"
+ ancient_magic_alchemy.0107.necklace: "Experiment on necklace"
+ ancient_magic_alchemy.0107.trinket: "Experiment on some trinket"
+ ancient_magic_alchemy.0107.buy: "I will buy some trinket from market"
+ 
+ ancient_magic_alchemy.0110.t: "Artifact Enchantment Experiment - Choosing weapon"
+ ancient_magic_alchemy.0110.desc: "I should choose what weapon from my inventory i'm ready to 'sacrifice' for my experiment."
+ ancient_magic_alchemy.0110.only: "Not many to choose from"
+ ancient_magic_alchemy.0110.best: "Best weapon i have - [first_artifact.GetName]"
+ ancient_magic_alchemy.0110.worst: "Worst weapon i have - [second_artifact.GetName]"
+ 
+ ancient_magic_alchemy.0111.t: "Artifact Enchantment Experiment - Choosing armor"
+ ancient_magic_alchemy.0111.desc: "I should choose what armor from my inventory i'm ready to 'sacrifice' for my experiment."
+ ancient_magic_alchemy.0111.only: "Not many to choose from"
+ ancient_magic_alchemy.0111.best: "Best armor i have - [first_artifact.GetName]"
+ ancient_magic_alchemy.0111.worst: "Worst armor i have - [second_artifact.GetName]"
+ 
+ ancient_magic_alchemy.0110.t: "Artifact Enchantment Experiment - Choosing necklace"
+ ancient_magic_alchemy.0110.desc: "I should choose what necklace from my inventory i'm ready to 'sacrifice' for my experiment."
+ ancient_magic_alchemy.0110.only: "Not many to choose from"
+ ancient_magic_alchemy.0110.best: "Best necklace i have - [first_artifact.GetName]"
+ ancient_magic_alchemy.0110.worst: "Worst necklace i have - [second_artifact.GetName]"
+ 
+ ancient_magic_alchemy.0110.t: "Artifact Enchantment Experiment - Choosing Trinket"
+ ancient_magic_alchemy.0110.desc: "I should choose what trinket from my inventory i'm ready to 'sacrifice' for my experiment."
+ ancient_magic_alchemy.0110.only: "Not many to choose from"
+ ancient_magic_alchemy.0110.best: "Best trinket i have - [first_artifact.GetName]"
+ ancient_magic_alchemy.0110.worst: "Worst trinket i have - [second_artifact.GetName]"

@@ -1811,13 +1811,15 @@ ancient_magic_alchemy.0054 = {
 	option = { #Basic
 		name = ancient_magic_alchemy.0054.a
 		
-		custom_tooltip = {
-			text = non_fancy_laboratory_tools_tooltip
+		trigger = {
+			laboratory_iron_tools_level < 1
+		}
+		show_as_unavailable = { #Its useless to make the character to pay for something that he owns
+			laboratory_iron_tools_level >= 1
 		}
 		
-		show_as_unavailable = { #Its useless to make the character to pay for something that he owns
-			#laboratory_iron_tools_level >= 1
-			always = yes
+		custom_tooltip = {
+			text = non_fancy_laboratory_tools_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_iron_tools_level_1_cost
@@ -1832,14 +1834,17 @@ ancient_magic_alchemy.0054 = {
 	}
 	
 	option = { #Intermidiate
-		name = ancient_magic_alchemy.0054.b
+		name = ancient_magic_alchemy.0054.b;
+		
+		trigger = {
+			laboratory_iron_tools_level < 2
+		}
+		show_as_unavailable = {
+			laboratory_iron_tools_level >= 2
+		}
 		
 		custom_tooltip = {
 			text = fancy_laboratory_tools_tooltip
-		}
-		
-		show_as_unavailable = {
-			laboratory_iron_tools_level >= 2
 		}
 		
 		remove_short_term_gold = laboratory_iron_tools_level_2_cost
@@ -1856,13 +1861,17 @@ ancient_magic_alchemy.0054 = {
 	option = { #Master
 		name = ancient_magic_alchemy.0054.c
 		
-		custom_tooltip = {
-			text = rare_laboratory_tools_tooltip
+		trigger = {
+			laboratory_iron_tools_level < 3
+			mage_level > 10
 		}
-		
 		show_as_unavailable = {
 			laboratory_iron_tools_level >= 3
-			mage_level > 10
+			mage_level < 10
+		}
+		
+		custom_tooltip = {
+			text = rare_laboratory_tools_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_iron_tools_level_3_cost
@@ -1879,13 +1888,17 @@ ancient_magic_alchemy.0054 = {
 	option = { #Grandmaster level
 		name = ancient_magic_alchemy.0054.d
 		
-		custom_tooltip = {
-			text = magical_laboratory_tools_tooltip
+		trigger = {
+			laboratory_iron_tools_level < 4
+			mage_level > 15
 		}
-		
 		show_as_unavailable = {
 			laboratory_iron_tools_level >= 4
-			mage_level > 15
+			mage_level < 15
+		}
+		
+		custom_tooltip = {
+			text = magical_laboratory_tools_tooltip
 		}
 		
 		remove_short_term_gold = laboratory_iron_tools_level_4_cost
@@ -2137,7 +2150,7 @@ ancient_magic_alchemy.0058 = {
 #############################
 
 #### Perform Experiments ####
-ancient_magic_alchemy.0100 = { #Who is gonna perform the experiments
+ancient_magic_alchemy.0100 = { #Who is gonna perform the experiments (WIP)
 	title = ancient_magic_alchemy.0100.t
 	desc = ancient_magic_alchemy.0100.desc
 	type = character_event
@@ -2167,6 +2180,11 @@ ancient_magic_alchemy.0100 = { #Who is gonna perform the experiments
 		trigger = {
 			is_ai = no
 		}
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
 	}
 }
 
@@ -2183,10 +2201,20 @@ ancient_magic_alchemy.0101 = { #What kind of experiments should be performed
 	
 	option = { #Combine materials
 		name = ancient_magic_alchemy.0101.a
+		trigger_event = ancient_magic_alchemy.0102
 	}
 	
 	option = { #Experiment with impirinting spells on items
 		name = ancient_magic_alchemy.0101.b
+		trigger_event = 
+	}
+	
+	option = { #Botanical Alchemy
+		name = ancient_magic_alchemy.0101.c
+	}
+	
+	option = { #Magical Experiments
+		name = ancient_magic_alchemy.0101.d
 	}
 	
 	option = { #exit
@@ -2194,10 +2222,15 @@ ancient_magic_alchemy.0101 = { #What kind of experiments should be performed
 		trigger = {
 			is_ai = no
 		}
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
 	}
 }
 
-ancient_magic_alchemy.0102 = { #Combine materials - investment
+ancient_magic_alchemy.0102 = { #Combine materials - choose type
 	title = ancient_magic_alchemy.0102.t
 	desc = ancient_magic_alchemy.0102.desc
 	type = character_event
@@ -2207,9 +2240,74 @@ ancient_magic_alchemy.0102 = { #Combine materials - investment
 		character = ROOT
 		animation = personality_rational
 	}
+		
+	option = { #combine with special materials
+		name = ancient_magic_alchemy.0102.a
+		trigger = {
+			any_ingredient_in_inventory = {
+				OR = {
+					has_artifact_feature_group = herbs
+					has_artifact_feature_group = special_metals
+					has_artifact_feature_group = ores
+					has_artifact_feature_group = wood
+				}
+			}
+			always = no # For now this event chain is not used (WIP)
+		}
+		
+		trigger_event = ancient_magic_alchemy.0103
+	}
+	
+	option = { #Magicaly enhance materials
+		name = ancient_magic_alchemy.0102.b
+		trigger = {
+			any_ingredient_in_inventory = {
+				has_artifact_feature = mana_vial
+			}
+		}
+		
+		random_ingredient_in_inventory = {
+			limit = {
+				has_artifact_feature = mana_vial
+			}
+			ROOT = {destroy_artifact = prev}
+		}
+		
+		trigger_event = { id = ancient_magic_alchemy.0104 days = { 0 5 } }
+	}
+	
+	option = { #Combine mundane material
+		name = ancient_magic_alchemy.0102.c
+		
+		trigger_event = { id = ancient_magic_alchemy.0105 days = { 0 5 } }
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0050.exit
+		trigger = {
+			is_ai = no
+		}
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
+	}
+}
+#Investments
+ancient_magic_alchemy.0103 = { #Combine materials - investment (Type A)
+	title = ancient_magic_alchemy.0103.t
+	desc = ancient_magic_alchemy.0103.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
 	
 	option = { #efficient investment
-		name = ancient_magic_alchemy.0102.d
+		name = ancient_magic_alchemy.0103.d
 		remove_short_term_gold = 100
 		trigger = {
 			stewardship > 15
@@ -2217,31 +2315,979 @@ ancient_magic_alchemy.0102 = { #Combine materials - investment
 	}
 	
 	option = { #bare minimum
-		name = ancient_magic_alchemy.0102.a
+		name = ancient_magic_alchemy.0103.a
 		remove_short_term_gold = 35
 	}
 	
 	option = { #medium investment
-		name = ancient_magic_alchemy.0102.b
+		name = ancient_magic_alchemy.0103.b
 		remove_short_term_gold = 75
 	}
 	
 	option = { #great investment
-		name = ancient_magic_alchemy.0102.c
+		name = ancient_magic_alchemy.0103.c
+		remove_short_term_gold = 150
+	}
+}
+
+ancient_magic_alchemy.0104 = { #Combine materials - investment (Type B)
+	title = ancient_magic_alchemy.0104.t
+	desc = ancient_magic_alchemy.0104.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #efficient investment
+		name = ancient_magic_alchemy.0104.d
+		remove_short_term_gold = 100
+		trigger = {
+			stewardship > 15
+		}
+	}
+	
+	option = { #bare minimum
+		name = ancient_magic_alchemy.0104.a
+		remove_short_term_gold = 35
+	}
+	
+	option = { #medium investment
+		name = ancient_magic_alchemy.0104.b
+		remove_short_term_gold = 75
+	}
+	
+	option = { #great investment
+		name = ancient_magic_alchemy.0104.c
 		remove_short_term_gold = 150
 	}
 	
+	after = {
+		random_list = { #what happens
+			1 = { trigger_event = { id = ancient_magic_alchemy.0201 days = { 100 460 } } }
+		}
+		random_list = { #random accident
+			1 = {} #nothing happens
+		}
+	}
+}
+
+ancient_magic_alchemy.0105 = { #Combine materials - investment (Type C)
+	title = ancient_magic_alchemy.0105.t
+	desc = ancient_magic_alchemy.0105.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #efficient investment
+		name = ancient_magic_alchemy.0105.d
+		remove_short_term_gold = 125
+		trigger = {
+			stewardship > 15
+		}
+	}
+	
+	option = { #bare minimum
+		name = ancient_magic_alchemy.0105.a
+		remove_short_term_gold = 50
+	}
+	
+	option = { #medium investment
+		name = ancient_magic_alchemy.0105.b
+		remove_short_term_gold = 100
+	}
+	
+	option = { #great investment
+		name = ancient_magic_alchemy.0105.c
+		remove_short_term_gold = 200
+	}
+	
+	after = {
+		random_list = { #what happens
+			1 = { trigger_event = { id = ancient_magic_alchemy.0200 days = { 80 400 } } }
+		}
+		random_list = { #random accident
+			1 = {} #nothing happens
+		}
+	}
+}
+
+ancient_magic_alchemy.0107 = {
+	title = ancient_magic_alchemy.0107.t
+	desc = ancient_magic_alchemy.0107.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #Experiment on weapon
+		name = ancient_magic_alchemy.0107.weapon
+		trigger = {
+			any_character_artifact = {
+				artifact_slot_type = primary_armament
+			}
+		}
+		
+		trigger_event = { id = ancient_magic_alchemy.0110 }
+	}
+	
+	option = { #Experiment on armor
+		name = ancient_magic_alchemy.0107.armor
+		trigger = {
+			any_character_artifact = {
+				artifact_slot_type = armor
+			}
+		}
+		
+		trigger_event = { id = ancient_magic_alchemy.0111 }
+	}
+	
+	option = { #Experiment on necklace
+		name = ancient_magic_alchemy.0107.necklace
+		trigger = {
+			any_character_artifact = {
+				artifact_type = necklace
+			}
+		}
+		
+		trigger_event = { id = ancient_magic_alchemy.0112 }
+	}
+	
+	option = { #Experiment on trinket
+		name = ancient_magic_alchemy.0107.trinket
+		trigger = {
+			any_character_artifact = {
+				artifact_slot_type = miscellaneous
+				NOT = { artifact_type = necklace }
+				NOT = { 
+					OR = { 
+						has_artifact_feature_group = book_subject 
+						has_artifact_feature_group = book_cover_material 
+						has_artifact_feature_group = book_title 
+						has_artifact_feature_group = book_topic 
+						has_artifact_feature_group = book_decoration 
+					}
+				}
+			}
+		}
+		
+		trigger_event = { id = ancient_magic_alchemy.0113 }
+	}
+	
+	option = { #Buy some trinket on market
+		name = ancient_magic_alchemy.0107.buy
+		
+		trigger_event = { id = ancient_magic_alchemy.0114 days = { 5 15 } }
+	}
+	
 	option = { #exit
-		name = ancient_magic_alchemy.0100.exit
+		name = ancient_magic_alchemy.0050.exit
 		trigger = {
 			is_ai = no
+		}
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
+	}
+}
+
+#choose artifact for experiment
+ancient_magic_alchemy.0110 = { #Choose weapon
+	title = ancient_magic_alchemy.0110.t
+	desc = ancient_magic_alchemy.01110.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	artifact = {
+        target = scope:this_artifact
+        position = lower_center_portrait  
+		trigger = {
+			any_character_artifact = {
+				count = 1
+				artifact_slot_type = primary_armament
+			}
+		}
+    }
+	artifact = { # To display the artifact in the event-window
+        target = scope:first_artifact
+        position = lower_left_portrait 
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_slot_type = primary_armament
+			}
+		}
+    }
+	artifact = {
+        target = scope:second_artifact
+        position = lower_right_portrait 
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_slot_type = primary_armament
+			}
+		}
+    }
+	
+	immediate = {
+		if = {
+			limit = {
+				any_character_artifact = {
+					count > 1
+					artifact_slot_type = primary_armament
+				}
+			}
+			ordered_character_artifact = {
+				limit = {
+					artifact_slot_type = primary_armament
+				}
+				order_by = quality
+				position = 0
+
+				save_scope_as = first_artifact
+			}
+			ordered_character_artifact = {
+				limit = {
+					artifact_slot_type = primary_armament
+					NOT = { this = first_artifact }
+				}
+				order_by = quality
+				position = 100 #probability that anyone has over 100 weapons is very low, so to get the one with lowest quality
+
+				save_scope_as = second_artifact
+			}
+		}
+		else = {
+			random_character_artifact = {
+				limit = {
+					artifact_slot_type = primary_armament
+				}
+
+				save_scope_as = this_artifact
+			}
+		}
+	}
+	
+	option = { #choose first artifact
+		name = ancient_magic_alchemy.0110.only
+		trigger = {
+			any_character_artifact = {
+				count = 1
+				artifact_slot_type = primary_armament
+			}
+		}
+		
+		hidden_effect = {
+			scope:this_artifact = {
+				save_scope_as = chosen_artifact
+			}
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	option = { #choose first artifact
+		name = ancient_magic_alchemy.0110.best
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_slot_type = primary_armament
+			}
+		}
+		
+		hidden_effect = {
+			scope:first_artifact = {
+				save_scope_as = chosen_artifact
+			}
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	
+	option = { #choose second artifact
+		name = ancient_magic_alchemy.0110.worst
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_slot_type = primary_armament
+			}
+		}
+		
+		hidden_effect = {
+			scope:second_artifact = {
+				save_scope_as = chosen_artifact
+			}
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0050.exit
+		trigger = {
+			is_ai = no
+		}
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
+	}
+}
+
+ancient_magic_alchemy.0111 = { #Choose armor
+	title = ancient_magic_alchemy.0111.t
+	desc = ancient_magic_alchemy.0111.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	artifact = {
+        target = scope:this_artifact
+        position = lower_center_portrait  
+		trigger = {
+			any_character_artifact = {
+				count = 1
+				artifact_slot_type = armor
+			}
+		}
+    }
+	artifact = { # To display the artifact in the event-window
+        target = scope:first_artifact
+        position = lower_left_portrait 
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_slot_type = armor
+			}
+		}
+    }
+	artifact = {
+        target = scope:second_artifact
+        position = lower_right_portrait 
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_slot_type = armor
+			}
+		}
+    }
+	
+	immediate = {
+		if = {
+			limit = {
+				any_character_artifact = {
+					count > 1
+					artifact_slot_type = armor
+				}
+			}
+			ordered_character_artifact = {
+				limit = {
+					artifact_slot_type = armor
+				}
+				order_by = quality
+				position = 0
+
+				save_scope_as = first_artifact
+			}
+			ordered_character_artifact = {
+				limit = {
+					artifact_slot_type = armor
+					NOT = { this = first_artifact }
+				}
+				order_by = quality
+				position = 100 #probability that anyone has over 100 weapons is very low, so to get the one with lowest quality
+
+				save_scope_as = second_artifact
+			}
+		}
+		else = {
+			random_character_artifact = {
+				limit = {
+					artifact_slot_type = armor
+				}
+
+				save_scope_as = this_artifact
+			}
+		}
+	}
+	
+	option = { #choose first artifact
+		name = ancient_magic_alchemy.0111.only
+		trigger = {
+			any_character_artifact = {
+				count = 1
+				artifact_slot_type = armor
+			}
+		}
+		
+		hidden_effect = {
+			scope:this_artifact = {
+				save_scope_as = chosen_artifact
+			}
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	option = { #choose first artifact
+		name = ancient_magic_alchemy.0111.best
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_slot_type = armor
+			}
+		}
+		
+		hidden_effect = {
+			scope:first_artifact = {
+				save_scope_as = chosen_artifact
+			}
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	
+	option = { #choose second artifact
+		name = ancient_magic_alchemy.0111.worst
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_slot_type = armor
+			}
+		}
+		
+		hidden_effect = {
+			scope:second_artifact = {
+				save_scope_as = chosen_artifact
+			}
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0050.exit
+		trigger = {
+			is_ai = no
+		}
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
+	}
+}
+
+ancient_magic_alchemy.0112 = { #Choose necklace
+	title = ancient_magic_alchemy.0112.t
+	desc = ancient_magic_alchemy.0112.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	artifact = {
+        target = scope:this_artifact
+        position = lower_center_portrait  
+		trigger = {
+			any_character_artifact = {
+				count = 1
+				artifact_type = necklace
+			}
+		}
+    }
+	artifact = { # To display the artifact in the event-window
+        target = scope:first_artifact
+        position = lower_left_portrait 
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_type = necklace
+			}
+		}
+    }
+	artifact = {
+        target = scope:second_artifact
+        position = lower_right_portrait 
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_type = necklace
+			}
+		}
+    }
+	
+	immediate = {
+		if = {
+			limit = {
+				any_character_artifact = {
+					count > 1
+					artifact_type = necklace
+				}
+			}
+			ordered_character_artifact = {
+				limit = {
+					artifact_type = necklace
+				}
+				order_by = quality
+				position = 0
+
+				save_scope_as = first_artifact
+			}
+			ordered_character_artifact = {
+				limit = {
+					artifact_type = necklace
+					NOT = { this = first_artifact }
+				}
+				order_by = quality
+				position = 100 #probability that anyone has over 100 weapons is very low, so to get the one with lowest quality
+
+				save_scope_as = second_artifact
+			}
+		}
+		else = {
+			random_character_artifact = {
+				limit = {
+					artifact_type = necklace
+				}
+
+				save_scope_as = this_artifact
+			}
+		}
+	}
+	
+	option = { #choose first artifact
+		name = ancient_magic_alchemy.0112.only
+		trigger = {
+			any_character_artifact = {
+				count = 1
+				artifact_type = necklace
+			}
+		}
+		
+		hidden_effect = {
+			scope:this_artifact = {
+				save_scope_as = chosen_artifact
+			}
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	option = { #choose first artifact
+		name = ancient_magic_alchemy.0112.best
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_type = necklace
+			}
+		}
+		
+		hidden_effect = {
+			scope:first_artifact = {
+				save_scope_as = chosen_artifact
+			}
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	
+	option = { #choose second artifact
+		name = ancient_magic_alchemy.0112.worst
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_type = necklace
+			}
+		}
+		
+		hidden_effect = {
+			scope:second_artifact = {
+				save_scope_as = chosen_artifact
+			}
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0050.exit
+		trigger = {
+			is_ai = no
+		}
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
+	}
+}
+
+ancient_magic_alchemy.0113 = { #Choose trinket
+	title = ancient_magic_alchemy.0113.t
+	desc = ancient_magic_alchemy.0113.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	artifact = {
+        target = scope:this_artifact
+        position = lower_center_portrait  
+		trigger = {
+			any_character_artifact = {
+				count = 1
+				artifact_slot_type = miscellaneous
+				NOT = { artifact_type = necklace }
+				NOT = { 
+					OR = { 
+						has_artifact_feature_group = book_subject 
+						has_artifact_feature_group = book_cover_material 
+						has_artifact_feature_group = book_title 
+						has_artifact_feature_group = book_topic 
+						has_artifact_feature_group = book_decoration 
+					}
+				}
+			}
+		}
+    }
+	artifact = { # To display the artifact in the event-window
+        target = scope:first_artifact
+        position = lower_left_portrait 
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_slot_type = miscellaneous
+				NOT = { artifact_type = necklace }
+				NOT = { 
+					OR = { 
+						has_artifact_feature_group = book_subject 
+						has_artifact_feature_group = book_cover_material 
+						has_artifact_feature_group = book_title 
+						has_artifact_feature_group = book_topic 
+						has_artifact_feature_group = book_decoration 
+					}
+				}
+			}
+		}
+    }
+	artifact = {
+        target = scope:second_artifact
+        position = lower_right_portrait 
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_slot_type = miscellaneous
+				NOT = { artifact_type = necklace }
+				NOT = { 
+					OR = { 
+						has_artifact_feature_group = book_subject 
+						has_artifact_feature_group = book_cover_material 
+						has_artifact_feature_group = book_title 
+						has_artifact_feature_group = book_topic 
+						has_artifact_feature_group = book_decoration 
+					}
+				}
+			}
+		}
+    }
+	
+	immediate = {
+		if = {
+			limit = {
+				any_character_artifact = {
+					count > 1
+					artifact_slot_type = miscellaneous
+					NOT = { artifact_type = necklace }
+					NOT = { 
+						OR = { 
+							has_artifact_feature_group = book_subject 
+							has_artifact_feature_group = book_cover_material 
+							has_artifact_feature_group = book_title 
+							has_artifact_feature_group = book_topic 
+							has_artifact_feature_group = book_decoration 
+						}
+					}
+				}
+			}
+			ordered_character_artifact = {
+				limit = {
+					artifact_slot_type = miscellaneous
+					NOT = { artifact_type = necklace }
+					NOT = { 
+						OR = { 
+							has_artifact_feature_group = book_subject 
+							has_artifact_feature_group = book_cover_material 
+							has_artifact_feature_group = book_title 
+							has_artifact_feature_group = book_topic 
+							has_artifact_feature_group = book_decoration 
+						}
+					}
+				}
+				order_by = quality
+				position = 0
+
+				save_scope_as = first_artifact
+			}
+			ordered_character_artifact = {
+				limit = {
+					artifact_slot_type = miscellaneous
+					NOT = { artifact_type = necklace }
+					NOT = { 
+						OR = { 
+							has_artifact_feature_group = book_subject 
+							has_artifact_feature_group = book_cover_material 
+							has_artifact_feature_group = book_title 
+							has_artifact_feature_group = book_topic 
+							has_artifact_feature_group = book_decoration 
+						}
+					}
+				}
+				order_by = quality
+				position = 100 #probability that anyone has over 100 weapons is very low, so to get the one with lowest quality
+
+				save_scope_as = second_artifact
+			}
+		}
+		else = {
+			random_character_artifact = {
+				limit = {
+					artifact_slot_type = miscellaneous
+					NOT = { artifact_type = necklace }
+					NOT = { 
+						OR = { 
+							has_artifact_feature_group = book_subject 
+							has_artifact_feature_group = book_cover_material 
+							has_artifact_feature_group = book_title 
+							has_artifact_feature_group = book_topic 
+							has_artifact_feature_group = book_decoration 
+						}
+					}
+				}
+
+				save_scope_as = this_artifact
+			}
+		}
+	}
+	
+	option = { #choose first artifact
+		name = ancient_magic_alchemy.0113.only
+		trigger = {
+			any_character_artifact = {
+				count = 1
+				artifact_slot_type = miscellaneous
+				NOT = { artifact_type = necklace }
+				NOT = { 
+					OR = { 
+						has_artifact_feature_group = book_subject 
+						has_artifact_feature_group = book_cover_material 
+						has_artifact_feature_group = book_title 
+						has_artifact_feature_group = book_topic 
+						has_artifact_feature_group = book_decoration 
+					}
+				}
+			}
+		}
+		
+		hidden_effect = {
+			scope:this_artifact = {
+				save_scope_as = chosen_artifact
+			}
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	option = { #choose first artifact
+		name = ancient_magic_alchemy.0113.best
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_slot_type = miscellaneous
+				NOT = { artifact_type = necklace }
+				NOT = { 
+					OR = { 
+						has_artifact_feature_group = book_subject 
+						has_artifact_feature_group = book_cover_material 
+						has_artifact_feature_group = book_title 
+						has_artifact_feature_group = book_topic 
+						has_artifact_feature_group = book_decoration 
+					}
+				}
+			}
+		}
+		
+		hidden_effect = {
+			scope:first_artifact = {
+				save_scope_as = chosen_artifact
+			}
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	
+	option = { #choose second artifact
+		name = ancient_magic_alchemy.0113.worst
+		trigger = {
+			any_character_artifact = {
+				count > 1
+				artifact_slot_type = miscellaneous
+				NOT = { artifact_type = necklace }
+				NOT = { 
+					OR = { 
+						has_artifact_feature_group = book_subject 
+						has_artifact_feature_group = book_cover_material 
+						has_artifact_feature_group = book_title 
+						has_artifact_feature_group = book_topic 
+						has_artifact_feature_group = book_decoration 
+					}
+				}
+			}
+		}
+		
+		hidden_effect = {
+			scope:second_artifact = {
+				save_scope_as = chosen_artifact
+			}
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0050.exit
+		trigger = {
+			is_ai = no
+		}
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
+	}
+}
+
+ancient_magic_alchemy.0114 = { #Choose trinket
+	title = ancient_magic_alchemy.0114.t
+	desc = ancient_magic_alchemy.0114.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	artifact = {
+        target = scope:this_artifact
+        position = lower_center_portrait  
+    }
+	
+	immediate = {
+	}
+	
+	option = { #expensive trinket
+		name = ancient_magic_alchemy.0114.only
+		
+		remove_short_term_gold = 150
+		
+		hidden_effect = {
+			generate_random_trinket = { OWNER = ROOT QUALITY = 60 SCOPE = chosen_artifact }
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	option = { #averange trinket
+		name = ancient_magic_alchemy.0114.best
+		
+		remove_short_term_gold = 100
+		
+		hidden_effect = {
+			generate_random_trinket = { OWNER = ROOT QUALITY = 30 SCOPE = chosen_artifact }
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	
+	option = { #cheap trinket
+		name = ancient_magic_alchemy.0114.worst
+		
+		remove_short_term_gold = 50
+		
+		hidden_effect = {
+			generate_random_trinket = { OWNER = ROOT QUALITY = 10 SCOPE = chosen_artifact }
+		}
+		
+		trigger_event = ancient_magic_alchemy.0115
+	}
+	
+	option = { #exit
+		name = ancient_magic_alchemy.0050.exit
+		trigger = {
+			is_ai = no
+		}
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
+	}
+}
+
+ancient_magic_alchemy.0115 = { #Chain caretaker
+	type = character_event
+	hidden = yes
+	
+	immediate = {
+		random_list = {
 		}
 	}
 }
 
 ## Combine materials ##
-# New metal/ore found
-ancient_magic_alchemy.0110 = { #Choose new metal/ore event
+# New metal/ore event chain
+ancient_magic_alchemy.0200 = { #Choose new metal/ore event (combined from mundane materials)
+	type = character_event
+	hidden = yes
+	
+	immediate = {
+		random_list = {
+			1 = { 
+				trigger = { 
+					NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = metals target = flag:carbon_steel } } } 
+				}
+				trigger_event = ancient_magic_alchemy.0250 
+			}
+			1 = { #fallback event
+				trigger_event = ancient_magic_alchemy.0500 
+			}
+		}
+	}
+}
+ancient_magic_alchemy.0201 = { #Choose new metal/ore event (magicaly enhancd materials)
 	type = character_event
 	hidden = yes
 	
@@ -2251,7 +3297,7 @@ ancient_magic_alchemy.0110 = { #Choose new metal/ore event
 				trigger = { 
 					NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = ores target = flag:mythril	} }	} 
 				}
-				trigger_event = ancient_magic_alchemy.0111 
+				trigger_event = ancient_magic_alchemy.0210 
 			}
 			1 = { #fallback event
 				trigger_event = ancient_magic_alchemy.0500 
@@ -2259,10 +3305,11 @@ ancient_magic_alchemy.0110 = { #Choose new metal/ore event
 		}
 	}
 }
-# New metal/ore found
-ancient_magic_alchemy.0111 = { #mythril
-	title = ancient_magic_alchemy.0111.t
-	desc = ancient_magic_alchemy.0111.desc
+
+# New magical metal/ore found
+ancient_magic_alchemy.0210 = { #mythril
+	title = ancient_magic_alchemy.0210.t
+	desc = ancient_magic_alchemy.0210.desc
 	type = character_event
 	theme = learning_scholarship_focus
 	
@@ -2284,10 +3331,11 @@ ancient_magic_alchemy.0111 = { #mythril
 	}
 	
 	option = { 
-		name = ancient_magic_alchemy.0111.a
+		name = ancient_magic_alchemy.0210.a
 	}
 	
 	after = {
+		create_ingredient_ore = { OWNER = ROOT TYPE = mythril }
 		hidden_effect = {
 			scope:activity = {
 				complete_activity = yes
@@ -2296,8 +3344,8 @@ ancient_magic_alchemy.0111 = { #mythril
 	}
 }
 
-# Alloy
-ancient_magic_alchemy.0200 = {
+# New non-magical metal/ore found
+ancient_magic_alchemy.0250 = { #carbon steel
 	title = ancient_magic_alchemy.0200.t
 	desc = ancient_magic_alchemy.0200.desc
 	type = character_event
@@ -2311,6 +3359,13 @@ ancient_magic_alchemy.0200 = {
 	immediate = {
 		change_mage_xp = { VALUE = 500 }
  		add_learning_lifestyle_xp = medium_lifestyle_experience
+		
+		random_owned_alchemy_book = { 
+			add_to_variable_list = {
+				name = metals
+				target = flag:carbon_steel
+			}
+		}
 	}
 	
 	option = { 
@@ -2318,6 +3373,7 @@ ancient_magic_alchemy.0200 = {
 	}
 	
 	after = {
+		create_ingredient_metal = { OWNER = ROOT TYPE = carbon_steel }
 		hidden_effect = {
 			scope:activity = {
 				complete_activity = yes
