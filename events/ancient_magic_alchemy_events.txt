@@ -3190,7 +3190,7 @@ ancient_magic_alchemy.0113 = { #Choose trinket
 	}
 }
 
-ancient_magic_alchemy.0114 = { #Choose trinket
+ancient_magic_alchemy.0114 = { #Buy trinket
 	title = ancient_magic_alchemy.0114.t
 	desc = ancient_magic_alchemy.0114.desc
 	type = character_event
@@ -3210,35 +3210,35 @@ ancient_magic_alchemy.0114 = { #Choose trinket
 	}
 	
 	option = { #expensive trinket
-		name = ancient_magic_alchemy.0114.only
+		name = ancient_magic_alchemy.0114.a
 		
 		remove_short_term_gold = 150
 		
 		hidden_effect = {
-			generate_random_trinket = { OWNER = ROOT QUALITY = 60 SCOPE = chosen_artifact }
+			generate_random_trinket = { OWNER = ROOT QUALITY = { 20 30 } SCOPE = chosen_artifact }
 		}
 		
 		trigger_event = ancient_magic_alchemy.0115
 	}
 	option = { #averange trinket
-		name = ancient_magic_alchemy.0114.best
+		name = ancient_magic_alchemy.0114.b
 		
-		remove_short_term_gold = 100
+		remove_short_term_gold = 75
 		
 		hidden_effect = {
-			generate_random_trinket = { OWNER = ROOT QUALITY = 30 SCOPE = chosen_artifact }
+			generate_random_trinket = { OWNER = ROOT QUALITY = { 10 20 } SCOPE = chosen_artifact }
 		}
 		
 		trigger_event = ancient_magic_alchemy.0115
 	}
 	
 	option = { #cheap trinket
-		name = ancient_magic_alchemy.0114.worst
+		name = ancient_magic_alchemy.0114.c
 		
 		remove_short_term_gold = 50
 		
 		hidden_effect = {
-			generate_random_trinket = { OWNER = ROOT QUALITY = 10 SCOPE = chosen_artifact }
+			generate_random_trinket = { OWNER = ROOT QUALITY = { 1 10 } SCOPE = chosen_artifact }
 		}
 		
 		trigger_event = ancient_magic_alchemy.0115
@@ -3257,12 +3257,227 @@ ancient_magic_alchemy.0114 = { #Choose trinket
 	}
 }
 
+#choose type of enchantment
 ancient_magic_alchemy.0115 = { #Chain caretaker
+	title = ancient_magic_alchemy.0115.t
+	desc = ancient_magic_alchemy.0115.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	artifact = {
+        target = scope:chosen_artifact
+        position = lower_center_portrait  
+    }
+	
+	immediate = {
+		set_variable = {
+			name = enchantment_type
+			value = flag:none
+		}
+	}
+		
+	option = { #Atack type
+		name = ancient_magic_alchemy.0115.a
+		
+		hidden_effect = {
+			set_variable = {
+				name = enchantment_type
+				value = flag:attack
+			}
+		}
+	}
+	option = { #Defense based
+		name = ancient_magic_alchemy.0115.b
+		
+		hidden_effect = {
+			set_variable = {
+				name = enchantment_type
+				value = flag:defense
+			}
+		}
+	}
+	option = { #Support
+		name = ancient_magic_alchemy.0115.c
+		
+		hidden_effect = {
+			set_variable = {
+				name = enchantment_type
+				value = flag:support
+			}
+		}
+	}
+	
+	after = {
+		trigger_event = ancient_magic_alchemy.0116
+	}
+}
+
+ancient_magic_alchemy.0116 = { #Random enchantment chooser
+	type = character_event
+	hidden = yes
+	
+	immediate = {
+		set_variable = { #0 - 4
+			name = enchantment_difficulity
+			value = 0
+		}
+		set_local_variable = {
+			name = failsafe_bool
+			value = 0 #0 - False 	1 - True
+		}
+		switch = {
+			trigger = var:enchantment_type
+			flag:attack = {
+				random_list = {
+					100 = {
+						trigger = { 
+							has_perk = temporal_manipulation_perk
+							NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = enchantments target = flag:time_acceleration } } } 
+						}
+						change_variable = { name = enchantment_difficulity add = 4 }
+						set_variable = { name = enchantment_name value = flag:time_acceleration }
+					}
+					100 = {
+						trigger = { 
+							has_perk = flaming_weapons_perk
+							NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = enchantments target = flag:fire_coating } } } 
+						}
+						change_variable = { name = enchantment_difficulity add = 2 }
+						set_variable = { name = enchantment_name value = flag:fire_coating }
+					}
+					100 = {
+						trigger = { 
+							has_perk = elemental_warrior_perk
+							NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = enchantments target = flag:wind_acceleration } } } 
+						}
+						change_variable = { name = enchantment_difficulity add = 2 }
+						set_variable = { name = enchantment_name value = flag:wind_acceleration }
+					}
+					100 = {
+						trigger = { 
+							has_perk = aura_of_death_perk
+							NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = enchantments target = flag:death_aura } } } 
+						}
+						change_variable = { name = enchantment_difficulity add = 3 }
+						set_variable = { name = enchantment_name value = flag:death_aura }
+					}
+					100 = { set_variable = { name = enchantment_name value = flag:none } }
+				}
+			}
+			flag:defense = {
+				random_list = {
+					100 = {
+						trigger = { 
+							has_perk = living_earthworks_perk
+							NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = enchantments target = flag:earth_strengthening } } } 
+						}
+						change_variable = { name = enchantment_difficulity add = 2 }
+						set_variable = { name = enchantment_name value = flag:earth_strengthening }
+					}
+					100 = {
+						trigger = { 
+							has_perk = control_water_perk
+							has_perk = battlefield_life_mage_perk
+							NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = enchantments target = flag:blood_defense } } } 
+						}
+						change_variable = { name = enchantment_difficulity add = 4 }
+						set_variable = { name = enchantment_name value = flag:blood_defense }
+					}
+					100 = {
+						trigger = { 
+							has_perk = lord_of_the_elements_perk
+							NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = enchantments target = flag:elemental_defense } } } 
+						}
+						change_variable = { name = enchantment_difficulity add = 4 }
+						set_variable = { name = enchantment_name value = flag:elemental_defense }
+					}
+					100 = {	set_variable = { name = enchantment_name value = flag:none } }
+				}
+			}
+			flag:support = {
+				random_list = {
+					100 = {
+						trigger = { 
+							has_perk = heal_perk
+							NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = enchantments target = flag:minor_healing_aura } } } 
+						}
+						change_variable = { name = enchantment_difficulity add = 2 }
+						set_variable = { name = enchantment_name value = flag:minor_healing_aura }
+					}
+					100 = {
+						trigger = { 
+							has_perk = greater_heal_perk
+							NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = enchantments target = flag:major_healing_aura } } } 
+						}
+						change_variable = { name = enchantment_difficulity add = 3 }
+						set_variable = { name = enchantment_name value = flag:major_healing_aura }
+					}
+					100 = {
+						trigger = { 
+							has_perk = entrance_perk
+							NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = enchantments target = flag:mental_support } } } 
+						}
+						change_variable = { name = enchantment_difficulity add = 2 }
+						set_variable = { name = enchantment_name value = flag:mental_support }
+					}
+					100 = {
+						trigger = { 
+							has_perk = inward_perfection_perk
+							NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = enchantments target = flag:fertility_boost } } } 
+						}
+						change_variable = { name = enchantment_difficulity add = 1 }
+						set_variable = { name = enchantment_name value = flag:fertility_boost }
+					}
+					100 = { set_variable = { name = enchantment_name value = flag:none } }
+				}
+			}
+			fallback = { change_local_variable = { name = failsafe_bool add = 1 } } #Failsafe
+		}
+		
+		if = { #Start next event
+			limit = { local_var:failsafe_bool.compare_value > 0 }
+			trigger_event = ancient_magic_alchemy.0501
+		}
+		else = {
+			trigger_event = ancient_magic_alchemy.0117
+		}
+	}
+}
+
+ancient_magic_alchemy.0117 = { #Enchantment chain decider
 	type = character_event
 	hidden = yes
 	
 	immediate = {
 		random_list = {
+			100 = { #success
+				modifier = {
+					add = {
+						value = scope:chosen_artifact.artifact_wealth_quality_average_value
+						divide = var:enchantment_difficulity
+					}
+				}
+				trigger_event = ancient_magic_alchemy
+			}
+			100 = { # Fail
+				modifier = {
+					multiply = {
+						value = 1
+						add = var:enchantment_difficulity
+					}
+				}
+				random_list = {
+					100 = { #Destroy artifact
+					}
+					100 = { #Explosion
+					}
+				}
+			}
 		}
 	}
 }
@@ -3382,6 +3597,20 @@ ancient_magic_alchemy.0250 = { #carbon steel
 	}
 }
 
+##Enchantment experiments
+ancient_magic_alchemy.0300 = {
+	title = ancient_magic_alchemy.0200.t
+	desc = ancient_magic_alchemy.0200.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = ecstasy
+	}
+	
+}
+
 # Fail - nothing found
 ancient_magic_alchemy.0500 = {
 	title = ancient_magic_alchemy.0500.t
@@ -3400,6 +3629,36 @@ ancient_magic_alchemy.0500 = {
 	
 	option = { 
 		name = ancient_magic_alchemy.0500.a
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
+	}
+}
+#Enchantment Failed
+ancient_magic_alchemy.0501 = {
+	title = ancient_magic_alchemy.0501.t
+	desc = ancient_magic_alchemy.0501.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = sadness
+	}
+	
+	immediate = {
+ 		add_learning_lifestyle_xp = medium_lifestyle_experience
+		change_mage_xp = { VALUE = medium_lifestyle_experience }
+		destroy_artifact = scope:chosen_artifact
+	}
+	
+	option = { 
+		name = ancient_magic_alchemy.0501.a
 	}
 	
 	after = {

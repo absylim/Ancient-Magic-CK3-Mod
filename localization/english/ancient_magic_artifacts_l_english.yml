@@ -18,3 +18,8 @@
  carbon_steel_metal_ingredient_desc: "Special metal made mainly from iron and low concentration of carbon, great conductor of mana among non-magical metals."
  
  #Woods
+ 
+ # Rings
+ artifact_ring: "Ring"
+ artifact_ring_name: "$artifact_name_prefix$ Ring"
+ artifact_ring_description: "[SCOPE.Custom('ArtifactArticleWealth')] ring of [SCOPE.Custom('ArtifactQuality')] craftsmanship."

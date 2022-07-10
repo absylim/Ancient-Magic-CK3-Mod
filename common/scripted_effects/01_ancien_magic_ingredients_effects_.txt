@@ -535,3 +535,140 @@ create_ingredient_herb = {
 		}
 	}
 }
+
+generate_random_trinket = {
+	$OWNER$ = { save_scope_as = owner }
+	
+	hidden_effect_new_artifact = {
+		scope:owner = {
+			random_list = {
+				1 = { #ring
+					create_artifact = {
+						name = artifact_ring_name
+						description = placeholder
+						type = miscellaneous
+						visuals = ring
+						modifier = artifact_placeholder_modifier
+						save_scope_as = newly_created_artifact
+						quality = $QUALITY$
+						wealth = $QUALITY$
+						history = {
+							type = discovered
+							actor = scope:owner
+							recipient = scope:owner
+							location = scope:owner.location
+						}
+					}
+					scope:newly_created_artifact = {
+						get_artifact_feature_references_effect = yes
+						set_artifact_description = artifact_ring_description
+					}
+					
+				}
+				1 = { #Brooch
+					create_artifact = {
+						name = artifact_brooch_name
+						description = placeholder
+						type = miscellaneous
+						visuals = brooch
+						modifier = artifact_placeholder_modifier
+						save_scope_as = newly_created_artifact
+						quality = $QUALITY$
+						wealth = $QUALITY$
+						history = {
+							type = discovered
+							actor = scope:owner
+							recipient = scope:owner
+							location = scope:owner.location
+						}
+					}
+					scope:newly_created_artifact = {
+						if = {
+							limit = {
+								OR = {
+									has_artifact_feature = brooch_decoration_adornment
+									has_artifact_feature = brooch_decoration_centerpiece_and_adornment
+								}
+							}
+							set_artifact_feature_group = brooch_adornment
+						}
+						if = {
+							limit = {
+								OR = {
+									has_artifact_feature = brooch_decoration_centerpiece
+									has_artifact_feature = brooch_decoration_centerpiece_and_adornment
+								}
+							}
+							set_artifact_feature_group = brooch_centerpiece
+						}
+						
+						get_artifact_feature_references_effect = yes
+						set_artifact_description = artifact_brooch_description
+					}
+				}
+			}
+		}
+		
+		scope:newly_created_artifact = {
+			set_artifact_name = $TYPE$_herb_ingredient_name
+			
+			set_artifact_description = $TYPE$_herb_ingredient_desc
+				
+			random_list = {
+				1 = { add_artifact_modifier = artifact_monthly_prestige_penalty_modifier }
+				1 = { add_artifact_modifier = artifact_child_opinion_1_modifier }
+				1 = { add_artifact_modifier = artifact_knight_effectiveness_1_modifier }
+				1 = { add_artifact_modifier = artifact_knight_effectiveness_2_modifier }
+				1 = { add_artifact_modifier = artifact_knight_effectiveness_3_modifier }
+				1 = { add_artifact_modifier = artifact_monthly_prestige_1_modifier }
+				1 = { add_artifact_modifier = artifact_monthly_prestige_2_modifier }
+				1 = { add_artifact_modifier = artifact_short_reign_duration_mult_1_modifier }
+				1 = { add_artifact_modifier = artifact_short_reign_duration_mult_2_modifier }
+				1 = { add_artifact_modifier = artifact_dynasty_opinion_1_modifier }
+				1 = { add_artifact_modifier = artifact_dynasty_opinion_2_modifier }
+				1 = { add_artifact_modifier = artifact_short_reign_duration_mult_1_modifier }
+				1 = { add_artifact_modifier = artifact_monthly_prestige_add_1_modifier }
+				1 = { add_artifact_modifier = artifact_monthly_prestige_add_2_modifier }
+				1 = { add_artifact_modifier = artifact_attraction_opinion_1_modifier }
+				1 = { add_artifact_modifier = artifact_monthly_piety_1_modifier }
+				1 = { add_artifact_modifier = artifact_different_faith_opinion_1_modifier }
+				1 = { add_artifact_modifier = artifact_different_faith_opinion_2_modifier }
+				2 = {}
+			}
+			random_list = {
+				200 = {} # To lower the probability of second modifier
+				1 = { add_artifact_modifier = artifact_monthly_prestige_penalty_modifier }
+				1 = { add_artifact_modifier = artifact_child_opinion_1_modifier }
+				1 = { add_artifact_modifier = artifact_knight_effectiveness_1_modifier }
+				1 = { add_artifact_modifier = artifact_knight_effectiveness_2_modifier }
+				1 = { add_artifact_modifier = artifact_knight_effectiveness_3_modifier }
+				1 = { add_artifact_modifier = artifact_monthly_prestige_1_modifier }
+				1 = { add_artifact_modifier = artifact_monthly_prestige_2_modifier }
+				1 = { add_artifact_modifier = artifact_short_reign_duration_mult_1_modifier }
+				1 = { add_artifact_modifier = artifact_short_reign_duration_mult_2_modifier }
+				1 = { add_artifact_modifier = artifact_dynasty_opinion_1_modifier }
+				1 = { add_artifact_modifier = artifact_dynasty_opinion_2_modifier }
+				1 = { add_artifact_modifier = artifact_short_reign_duration_mult_1_modifier }
+				1 = { add_artifact_modifier = artifact_monthly_prestige_add_1_modifier }
+				1 = { add_artifact_modifier = artifact_monthly_prestige_add_2_modifier }
+				1 = { add_artifact_modifier = artifact_attraction_opinion_1_modifier }
+				1 = { add_artifact_modifier = artifact_monthly_piety_1_modifier }
+				1 = { add_artifact_modifier = artifact_different_faith_opinion_1_modifier }
+				1 = { add_artifact_modifier = artifact_different_faith_opinion_2_modifier }
+			}
+			
+			remove_artifact_modifier = artifact_placeholder_modifier
+
+			set_variable = {
+				name = quality
+				value = $QUALITY$
+			}
+			set_variable = {
+				name = wealth
+				value = $QUALITY$
+			}
+			
+			save_scope_as = $SCOPE$
+		}
+	}
+}
