@@ -178,3 +178,9 @@
  ancient_magic_alchemy.0114.a: "The most expensive one"
  ancient_magic_alchemy.0114.b: "Lets go with middle"
  ancient_magic_alchemy.0114.c: "Cheapest is the best"
+ 
+ ancient_magic_alchemy.0129.t: "Herb experiment - Mana Blood"
+ ancient_magic_alchemy.0129.desc: "Using mana blood in my experiment migh yield some results."
+ ancient_magic_alchemy.0129.a: "Use [first_blood.GetName]"
+ ancient_magic_alchemy.0129.b: "Use [second_blood.GetName]"
+ ancient_magic_alchemy.0129.c: "No Blood"

@@ -2221,10 +2221,15 @@ ancient_magic_alchemy.0101 = { #What kind of experiments should be performed
 	
 	option = { #Botanical Alchemy
 		name = ancient_magic_alchemy.0101.c
+		trigger_event = ancient_magic_alchemy.0125
 	}
 	
 	option = { #Magical Experiments
 		name = ancient_magic_alchemy.0101.d
+		trigger = {
+			always = no
+		}
+		trigger_event = ancient_magic_alchemy.0150
 	}
 	
 	option = { #exit
@@ -2292,16 +2297,9 @@ ancient_magic_alchemy.0102 = { #Combine materials - choose type
 		trigger_event = { id = ancient_magic_alchemy.0105 days = { 0 5 } }
 	}
 	
-	option = { #exit
-		name = ancient_magic_alchemy.0050.exit
-		trigger = {
-			is_ai = no
-		}
-		hidden_effect = {
-			scope:activity = {
-				complete_activity = yes
-			}
-		}
+	option = { #Go back
+		name = ancient_magic_alchemy.0115.back
+		trigger_event = ancient_magic_alchemy.0101
 	}
 }
 #Investments
@@ -2316,27 +2314,55 @@ ancient_magic_alchemy.0103 = { #Combine materials - investment (Type A)
 		animation = personality_rational
 	}
 	
+	immediate = {
+		set_variable = {
+			name = investment
+			value = 0
+		}
+	}
+	
 	option = { #efficient investment
 		name = ancient_magic_alchemy.0103.d
 		remove_short_term_gold = 100
 		trigger = {
 			stewardship > 15
 		}
+		hidden_effect = {
+			change_variable = { name = investment add = 3 }
+		}
 	}
 	
 	option = { #bare minimum
 		name = ancient_magic_alchemy.0103.a
 		remove_short_term_gold = 35
+		hidden_effect = {
+			change_variable = { name = investment add = 1 }
+		}
 	}
 	
 	option = { #medium investment
 		name = ancient_magic_alchemy.0103.b
 		remove_short_term_gold = 75
+		hidden_effect = {
+			change_variable = { name = investment add = 2 }
+		}
 	}
 	
 	option = { #great investment
 		name = ancient_magic_alchemy.0103.c
 		remove_short_term_gold = 150
+		hidden_effect = {
+			change_variable = { name = investment add = 3 }
+		}
+	}
+	
+	after = {
+		random_list = { #what happens
+			1 = { trigger_event = { id = ancient_magic_alchemy.0201 days = { 100 460 } } }
+		}
+		random_list = { #random accident
+			1 = {} #nothing happens
+		}
 	}
 }
 
@@ -2351,27 +2377,46 @@ ancient_magic_alchemy.0104 = { #Combine materials - investment (Type B)
 		animation = personality_rational
 	}
 	
+	immediate = {
+		set_variable = {
+			name = investment
+			value = 0
+		}
+	}
+	
 	option = { #efficient investment
 		name = ancient_magic_alchemy.0104.d
 		remove_short_term_gold = 100
 		trigger = {
 			stewardship > 15
 		}
+		hidden_effect = {
+			change_variable = { name = investment add = 3 }
+		}
 	}
 	
 	option = { #bare minimum
 		name = ancient_magic_alchemy.0104.a
 		remove_short_term_gold = 35
+		hidden_effect = {
+			change_variable = { name = investment add = 1 }
+		}
 	}
 	
 	option = { #medium investment
 		name = ancient_magic_alchemy.0104.b
 		remove_short_term_gold = 75
+		hidden_effect = {
+			change_variable = { name = investment add = 2 }
+		}
 	}
 	
 	option = { #great investment
 		name = ancient_magic_alchemy.0104.c
 		remove_short_term_gold = 150
+		hidden_effect = {
+			change_variable = { name = investment add = 3 }
+		}
 	}
 	
 	after = {
@@ -2395,27 +2440,46 @@ ancient_magic_alchemy.0105 = { #Combine materials - investment (Type C)
 		animation = personality_rational
 	}
 	
+	immediate = {
+		set_variable = {
+			name = investment
+			value = 0
+		}
+	}
+	
 	option = { #efficient investment
 		name = ancient_magic_alchemy.0105.d
 		remove_short_term_gold = 125
 		trigger = {
 			stewardship > 15
 		}
+		hidden_effect = {
+			change_variable = { name = investment add = 3 }
+		}
 	}
 	
 	option = { #bare minimum
 		name = ancient_magic_alchemy.0105.a
 		remove_short_term_gold = 50
+		hidden_effect = {
+			change_variable = { name = investment add = 1 }
+		}
 	}
 	
 	option = { #medium investment
 		name = ancient_magic_alchemy.0105.b
 		remove_short_term_gold = 100
+		hidden_effect = {
+			change_variable = { name = investment add = 2 }
+		}
 	}
 	
 	option = { #great investment
 		name = ancient_magic_alchemy.0105.c
 		remove_short_term_gold = 200
+		hidden_effect = {
+			change_variable = { name = investment add = 3 }
+		}
 	}
 	
 	after = {
@@ -2428,6 +2492,7 @@ ancient_magic_alchemy.0105 = { #Combine materials - investment (Type C)
 	}
 }
 
+##Enchantment Experiments
 ancient_magic_alchemy.0107 = {
 	title = ancient_magic_alchemy.0107.t
 	desc = ancient_magic_alchemy.0107.desc
@@ -2647,16 +2712,9 @@ ancient_magic_alchemy.0110 = { #Choose weapon
 		trigger_event = ancient_magic_alchemy.0115
 	}
 	
-	option = { #exit
-		name = ancient_magic_alchemy.0050.exit
-		trigger = {
-			is_ai = no
-		}
-		hidden_effect = {
-			scope:activity = {
-				complete_activity = yes
-			}
-		}
+	option = { #Go back
+		name = ancient_magic_alchemy.0115.back
+		trigger_event = ancient_magic_alchemy.0101
 	}
 }
 
@@ -2794,18 +2852,10 @@ ancient_magic_alchemy.0111 = { #Choose armor
 		trigger_event = ancient_magic_alchemy.0115
 	}
 	
-	option = { #exit
-		name = ancient_magic_alchemy.0050.exit
-		trigger = {
-			is_ai = no
-		}
-		hidden_effect = {
-			scope:activity = {
-				complete_activity = yes
-			}
-		}
-	}
-}
+	option = { #Go back
+		name = ancient_magic_alchemy.0115.back
+		trigger_event = ancient_magic_alchemy.0101
+	}}
 
 ancient_magic_alchemy.0112 = { #Choose necklace
 	title = ancient_magic_alchemy.0112.t
@@ -2941,18 +2991,10 @@ ancient_magic_alchemy.0112 = { #Choose necklace
 		trigger_event = ancient_magic_alchemy.0115
 	}
 	
-	option = { #exit
-		name = ancient_magic_alchemy.0050.exit
-		trigger = {
-			is_ai = no
-		}
-		hidden_effect = {
-			scope:activity = {
-				complete_activity = yes
-			}
-		}
-	}
-}
+	option = { #Go back
+		name = ancient_magic_alchemy.0115.back
+		trigger_event = ancient_magic_alchemy.0101
+	}}
 
 ancient_magic_alchemy.0113 = { #Choose trinket
 	title = ancient_magic_alchemy.0113.t
@@ -3187,18 +3229,10 @@ ancient_magic_alchemy.0113 = { #Choose trinket
 		trigger_event = ancient_magic_alchemy.0115
 	}
 	
-	option = { #exit
-		name = ancient_magic_alchemy.0050.exit
-		trigger = {
-			is_ai = no
-		}
-		hidden_effect = {
-			scope:activity = {
-				complete_activity = yes
-			}
-		}
-	}
-}
+	option = { #Go back
+		name = ancient_magic_alchemy.0115.back
+		trigger_event = ancient_magic_alchemy.0101
+	}}
 
 ancient_magic_alchemy.0114 = { #Buy trinket
 	title = ancient_magic_alchemy.0114.t
@@ -3254,18 +3288,10 @@ ancient_magic_alchemy.0114 = { #Buy trinket
 		trigger_event = ancient_magic_alchemy.0115
 	}
 	
-	option = { #exit
-		name = ancient_magic_alchemy.0050.exit
-		trigger = {
-			is_ai = no
-		}
-		hidden_effect = {
-			scope:activity = {
-				complete_activity = yes
-			}
-		}
-	}
-}
+	option = { #Go back
+		name = ancient_magic_alchemy.0115.back
+		trigger_event = ancient_magic_alchemy.0101
+	}}
 
 #choose type of enchantment
 ancient_magic_alchemy.0115 = {
@@ -3331,7 +3357,7 @@ ancient_magic_alchemy.0115 = {
 	}
 }
 
-#choose ammount of mana drops used in experiment
+#choose ammount of mana drops used in enchantment experiment
 ancient_magic_alchemy.0116 = {
 	title = ancient_magic_alchemy.0116.t
 	desc = { 
@@ -3361,7 +3387,7 @@ ancient_magic_alchemy.0116 = {
     }
 		
 	option = { #use mana flask
-		name = ancient_magic_alchemy.0115.mana_flask
+		name = ancient_magic_alchemy.0116.mana_flask
 		
 		trigger = {
 			any_ingredient_in_inventory = {
@@ -3704,6 +3730,343 @@ ancient_magic_alchemy.0119 = { #Enchantment chain decider - event caller
 	}
 }
 
+##Botanical alchemy choice
+ancient_magic_alchemy.0125 = {
+	title = ancient_magic_alchemy.0125.t
+	desc = ancient_magic_alchemy.0125.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #Potions
+		name = ancient_magic_alchemy.0125.potions
+		trigger_event = ancient_magic_alchemy.0126
+	}
+	
+	option = { #Magical plants experiments
+		name = ancient_magic_alchemy.0125.plants
+		trigger = {
+			any_ingredient_in_inventory = {
+				has_artifact_feature = mana_drop
+			}
+		}
+		
+		trigger_event = ancient_magic_alchemy.0127
+	}
+	
+	option = { #Go back
+		name = ancient_magic_alchemy.0115.back
+		trigger_event = ancient_magic_alchemy.0101
+	}
+}
+
+ancient_magic_alchemy.0126 = { #Potion crafting chain decider - event caller
+	type = character_event
+	hidden = yes
+	
+	immediate = {
+		random_list = {
+			1 = {
+				trigger = { 
+					always = no
+					NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = potions target = flag:healing_potion } } } 
+				}
+			}
+			1 = {
+				trigger = { 
+					always = no
+					NOT = { any_owned_alchemy_book = { is_target_in_variable_list = { name = potions target = flag:mana_refill_potion } } } 
+				}
+			}
+			1 = { trigger_event = { id = ancient_magic_alchemy.1000 days = { 30 60 } } } #Love potion event
+		}
+	}
+}
+
+ancient_magic_alchemy.0127 = { #Herb crafting - investment
+	title = ancient_magic_alchemy.0127.t
+	desc = ancient_magic_alchemy.0127.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	immediate = {
+		set_variable = {
+			name = investment
+			value = 0
+		}
+	}
+	
+	option = { #efficient investment
+		name = ancient_magic_alchemy.0127.d
+		remove_short_term_gold = 100
+		trigger = {
+			stewardship > 15
+		}
+		hidden_effect = {
+			change_variable = { name = investment add = 3 }
+		}
+	}
+	
+	option = { #bare minimum
+		name = ancient_magic_alchemy.0127.a
+		remove_short_term_gold = 35
+		hidden_effect = {
+			change_variable = { name = investment add = 3 }
+		}
+	}
+	
+	option = { #medium investment
+		name = ancient_magic_alchemy.0127.b
+		remove_short_term_gold = 75
+		hidden_effect = {
+			change_variable = { name = investment add = 3 }
+		}
+	}
+	
+	option = { #great investment
+		name = ancient_magic_alchemy.0127.c
+		remove_short_term_gold = 150
+		hidden_effect = {
+			change_variable = { name = investment add = 3 }
+		}
+	}
+	
+	after = {
+		set_variable = { name = mana_drops_used value = 0 }
+		trigger_event = { id = ancient_magic_alchemy.0128 }
+	}
+}
+
+ancient_magic_alchemy.0128 = { #Herb crafting - mana ammount
+	title = ancient_magic_alchemy.0128.t
+	desc = { 
+		first_valid = {
+			triggered_desc = {
+			    trigger = {
+					any_ingredient_in_inventory = {
+						has_artifact_feature = mana_drop
+					}
+			    }
+			    desc = ancient_magic_alchemy.0128.desc
+			}
+			desc = ancient_magic_alchemy.0128.desc_no_mana_drop
+		}
+	}
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	artifact = {
+        target = scope:chosen_artifact
+        position = lower_center_portrait  
+    }
+		
+	option = { #use mana flask
+		name = ancient_magic_alchemy.0116.mana_flask
+		
+		trigger = {
+			any_ingredient_in_inventory = {
+				has_artifact_feature = mana_vial
+			}
+		}
+		
+		random_ingredient_in_inventory = {
+			limit = {
+				has_artifact_feature = mana_vial
+			}
+			ROOT = {destroy_artifact = prev}
+		}
+		
+		hidden_effect = {
+			set_variable = { name = mana_drops_used value = mana_drops_needed_for_vial }
+			trigger_event = ancient_magic_alchemy.0129
+		}
+	}
+	option = { #increase
+		name = ancient_magic_alchemy.0116.increase
+		trigger = {
+			any_ingredient_in_inventory = {
+				count > var:mana_drops_used.compare_value
+				has_artifact_feature = mana_drop
+			}
+		}
+		show_as_unavailable = {
+			any_ingredient_in_inventory = {
+				has_artifact_feature = mana_drop
+			}
+			any_ingredient_in_inventory = {
+				count <= var:mana_drops_used.compare_value
+				has_artifact_feature = mana_drop
+			}
+		}
+		
+		hidden_effect = {
+			change_variable = {	name = mana_drops_used	add = 1	}
+			trigger_event = ancient_magic_alchemy.0128
+		}
+	}
+	option = { #decrease
+		name = ancient_magic_alchemy.0116.decrease
+		trigger = {
+			any_ingredient_in_inventory = {
+				has_artifact_feature = mana_drop
+			}
+			var:mana_drops_used.compare_value > 1
+		}
+		show_as_unavailable = {
+			any_ingredient_in_inventory = {
+				has_artifact_feature = mana_drop
+			}
+			var:mana_drops_used.compare_value <= 1
+		}
+		
+		hidden_effect = {
+			change_variable = {	name = mana_drops_used	subtract = 1 min = 1 }
+			trigger_event = ancient_magic_alchemy.0128
+		}
+	}
+	option = { #accept
+		name = ancient_magic_alchemy.0116.accept
+		
+		trigger = {
+			any_ingredient_in_inventory = {
+				has_artifact_feature = mana_drop
+			}
+		}
+		
+		hidden_effect = {
+			trigger_event = ancient_magic_alchemy.0129
+		}
+	}
+}
+
+ancient_magic_alchemy.0129 = { #Herb crafting - mana blood
+	title = ancient_magic_alchemy.0129.t
+	desc = ancient_magic_alchemy.0129.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					any_ingredient_in_inventory = {
+						has_artifact_feature_group = mana_blood
+					}
+				}
+			}
+			trigger_event = ancient_magic_alchemy.0130
+		}
+		
+		ordered_ingredient_in_inventory = {
+			has_artifact_feature_group = mana_blood
+			order_by = var:mana_affinity
+			position = 0
+			save_scope_as = first_blood
+		}
+		ordered_ingredient_in_inventory = {
+			has_artifact_feature_group = mana_blood
+			order_by = var:mana_affinity
+			position = 100
+			save_scope_as = second_blood
+		}
+	}
+	
+	option = { #Use mana blood with highest mana_affinity
+		name = ancient_magic_alchemy.0129.a
+		hidden_effect = {
+			scope:first_blood = {
+				save_scope_as = chosen_blood
+			}
+			set_variable = { name = use_mana_blood value = 1 }
+		}
+		
+	}
+	
+	option = { #Use mana blood with lowest mana_affinity
+		name = ancient_magic_alchemy.0129.b
+		trigger = { NOT = { scope:first_blood = scope:second_blood } }
+		hidden_effect = {
+			scope:second_blood = {
+				save_scope_as = chosen_blood
+			}
+			set_variable = { name = use_mana_blood value = 1 }
+		}
+	}
+	
+	option = { #Not use mana blood
+		name = ancient_magic_alchemy.0129.c
+		hidden_effect = {
+			set_variable = { name = use_mana_blood value = 0 }
+		}
+	}
+	
+	after = {
+		trigger_event = ancient_magic_alchemy.0130
+	}
+}
+
+ancient_magic_alchemy.0130 = { #Herb crafting - event chooser
+	type = character_event
+	hidden = yes
+	
+	immediate = {
+		random_list = {
+			1 = { 
+				trigger = {
+					var:use_mana_blood.compare_value > 0
+				}
+				trigger_event = ancient_magic_alchemy.1250
+			}
+			100 = { #Fallback event - found nothing
+				modifier = {
+					divide = var:investment
+				}
+				trigger_event = ancient_magic_alchemy.1505 
+			} 
+		}
+	}
+}
+
+##Magical Experiments (WIP)
+ancient_magic_alchemy.0150 = {
+	title = ancient_magic_alchemy.0150.t
+	desc = ancient_magic_alchemy.0150.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	
+	option = { #Transmutation
+		name = ancient_magic_alchemy.0150.transmutation
+	}
+	
+	option = { #Mana affinity experiments
+		name = ancient_magic_alchemy.0150.mana_affinity
+	}
+}
+
 ## Combine materials ##
 # New metal/ore event chain
 ancient_magic_alchemy.0200 = { #Choose new metal/ore event (combined from mundane materials)
@@ -3718,7 +4081,10 @@ ancient_magic_alchemy.0200 = { #Choose new metal/ore event (combined from mundan
 				}
 				trigger_event = ancient_magic_alchemy.0250 
 			}
-			1 = { #fallback event
+			10 = { #fallback event
+				modifier = {
+					divide = var:investment
+				}
 				trigger_event = ancient_magic_alchemy.1500 
 			}
 		}
@@ -4256,6 +4622,45 @@ ancient_magic_alchemy.0703 = { #Mental Health Enhancement
 
 # Item Enchantment
 
+##Potions##
+ancient_magic_alchemy.1000 = { #Love potion event chain
+	title = ancient_magic_alchemy.0703.t
+	desc = ancient_magic_alchemy.0703.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = ecstasy
+	}
+	
+	option = {
+		name = ancient_magic_alchemy.0703.a
+	}
+}
+
+##Hebs##
+ancient_magic_alchemy.1250 = { # 
+	title = ancient_magic_alchemy.0703.t
+	desc = ancient_magic_alchemy.0703.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	immediate = {
+ 		add_learning_lifestyle_xp = medium_lifestyle_experience
+		change_mage_xp = { VALUE =  }
+	}
+	
+	left_portrait = {
+		character = ROOT
+		animation = ecstasy
+	}
+	
+	option = {
+		name = ancient_magic_alchemy.0703.a
+	}
+}
+
 # Fail - nothing found
 ancient_magic_alchemy.1500 = {
 	title = ancient_magic_alchemy.1500.t
@@ -4402,6 +4807,36 @@ ancient_magic_alchemy.1502 = {
 				}
 			}
 		}
+	}
+	
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
+	}
+}
+#Hebology - fail
+ancient_magic_alchemy.1505 = {
+	title = ancient_magic_alchemy.1500.t
+	desc = ancient_magic_alchemy.1500.desc
+	type = character_event
+	theme = learning_scholarship_focus
+	
+	left_portrait = {
+		character = ROOT
+		animation = sadness
+	}
+	
+	immediate = {
+ 		add_learning_lifestyle_xp = medium_lifestyle_experience
+		add_character_modifier = magical_fertilizer
+		change_mage_xp = { VALUE = 100 }
+	}
+	
+	option = { 
+		name = ancient_magic_alchemy.1500.a
 	}
 	
 	after = {

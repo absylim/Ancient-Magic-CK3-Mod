@@ -218,3 +218,8 @@ ignored_populace_laboratory = {
 	icon = science_flask_negative
 	general_opinion = -30
 }
+
+magical_fertilizer = {
+	icon = magic_positive
+	development_growth_factor = 0.15
+}
