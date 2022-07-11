@@ -97,6 +97,16 @@ laboratory_spellcircles_level = {
 	max = laboratory_spellcircles_level_max
 }
 
+mage_xp_from_enchantment_experiment = {
+	value = 600
+	if = {
+		limit = {
+			has_variable = enchantment_difficulity
+		}
+		multiply = var:enchantment_difficulity
+	}
+}
+
 am_interesting_courtier_selection_score = {
 	value = 10
 	if = {

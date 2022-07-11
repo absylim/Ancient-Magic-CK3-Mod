@@ -21,3 +21,274 @@ ingredient_mana_blood_god_rank_affinity_modifier = {
 	monthly_prestige = 0.2
 	monthly_dynasty_prestige = 0.1
 }
+
+###########################################################
+############### 		ENCHANTMENTS 		###############
+###########################################################
+
+#Fire Coating
+artifact_enchantment_fire_coating_1_modifier = {
+	prowess = 3
+	monthly_prestige = 0.05
+}
+artifact_enchantment_fire_coating_2_modifier = {
+	prowess = 5
+	monthly_prestige = 0.15
+}
+artifact_enchantment_fire_coating_3_modifier = {
+	prowess = 9
+	monthly_prestige = 0.35
+}
+artifact_enchantment_fire_coating_4_modifier = {
+	prowess = 15
+	monthly_prestige = 0.5
+}
+
+#Wind Acceleration
+artifact_enchantment_wind_acceleration_1_modifier = {
+	prowess = 3
+	monthly_prestige = 0.05
+}
+artifact_enchantment_wind_acceleration_2_modifier = {
+	prowess = 5
+	monthly_prestige = 0.15
+}
+artifact_enchantment_wind_acceleration_3_modifier = {
+	prowess = 9
+	monthly_prestige = 0.35
+}
+artifact_enchantment_wind_acceleration_4_modifier = {
+	prowess = 15
+	monthly_prestige = 0.5
+}
+
+#Time Acceleration
+artifact_enchantment_time_acceleration_1_modifier = {
+	prowess = 5
+	monthly_prestige = 0.15
+}
+artifact_enchantment_time_acceleration_2_modifier = {
+	prowess = 8
+	monthly_prestige = 0.35
+}
+artifact_enchantment_time_acceleration_3_modifier = {
+	prowess = 13
+	monthly_prestige = 0.65
+}
+artifact_enchantment_time_acceleration_4_modifier = {
+	prowess = 18
+	monthly_prestige = 1
+}
+
+#Death Aura
+artifact_enchantment_death_aura_1_modifier = {
+	prowess = 1
+	monthly_prestige = 0.05
+	dread_gain_mult = 0.1
+	dread_decay_mult = -0.25
+}
+artifact_enchantment_death_aura_2_modifier = {
+	prowess = 3
+	monthly_prestige = 0.15
+	dread_gain_mult = 0.25
+	dread_decay_mult = -0.35
+}
+artifact_enchantment_death_aura_3_modifier = {
+	prowess = 6
+	monthly_prestige = 0.35
+	dread_gain_mult = 0.4
+	dread_decay_mult = -0.55
+}
+artifact_enchantment_death_aura_4_modifier = {
+	prowess = 8
+	monthly_prestige = 0.5
+	dread_gain_mult = 0.65
+	dread_decay_mult = -0.75
+}
+
+#Earth strenghtening
+artifact_enchantment_earth_strengthening_1_modifier = {
+	prowess = 2
+	monthly_prestige = 0.08
+}
+artifact_enchantment_earth_strengthening_2_modifier = {
+	prowess = 4
+	monthly_prestige = 0.2
+}
+artifact_enchantment_earth_strengthening_3_modifier = {
+	prowess = 7
+	monthly_prestige = 0.4
+}
+artifact_enchantment_earth_strengthening_4_modifier = {
+	prowess = 12
+	monthly_prestige = 0.55
+}
+
+#Blood Defence
+artifact_enchantment_blood_defence_1_modifier = {
+	prowess = 2
+	monthly_prestige = 0.08
+	dread_gain_mult = 0.05
+	dread_baseline_add = 5
+}
+artifact_enchantment_blood_defence_2_modifier = {
+	prowess = 4
+	monthly_prestige = 0.2
+	negate_health_penalty_add = 0.25
+	hostile_scheme_resistance_add = 5
+	dread_gain_mult = 0.10
+	dread_baseline_add = 10
+}
+artifact_enchantment_blood_defence_3_modifier = {
+	prowess = 8
+	monthly_prestige = 0.35
+	negate_health_penalty_add = 0.5
+	hostile_scheme_resistance_add = 10
+	dread_gain_mult = 0.2
+	dread_baseline_add = 15
+}
+artifact_enchantment_blood_defence_4_modifier = {
+	prowess = 10
+	monthly_prestige = 0.5
+	negate_health_penalty_add = 0.75
+	hostile_scheme_resistance_add = 15
+	dread_gain_mult = 0.35
+	dread_baseline_add = 20
+}
+
+#Elemental Defense
+artifact_enchantment_elemental_defence_1_modifier = {
+	prowess = 5
+	monthly_prestige = 0.25
+	monthly_dynasty_prestige = 0.05
+	hostile_scheme_resistance_add = 5
+}
+artifact_enchantment_elemental_defence_2_modifier = {
+	prowess = 10
+	monthly_prestige = 0.5
+	monthly_dynasty_prestige = 0.1
+	hostile_scheme_resistance_add = 15
+}
+artifact_enchantment_elemental_defence_3_modifier = {
+	prowess = 15
+	monthly_prestige = 0.75
+	monthly_dynasty_prestige = 0.35
+	hostile_scheme_resistance_add = 25
+}
+artifact_enchantment_elemental_defence_4_modifier = {
+	prowess = 25
+	monthly_prestige = 1
+	monthly_dynasty_prestige = 0.5
+	hostile_scheme_resistance_add = 35
+}
+
+#Minor Healing aura
+artifact_enchantment_minor_healing_aura_1_modifier = {
+	health = 0.25
+	negate_health_penalty_add = 0.25
+	monthly_prestige = 0.05
+}
+artifact_enchantment_minor_healing_aura_2_modifier = {
+	health = 0.5
+	negate_health_penalty_add = 0.5
+	monthly_prestige = 0.25
+}
+artifact_enchantment_minor_healing_aura_3_modifier = {
+	health = 0.75
+	negate_health_penalty_add = 0.75
+	monthly_dynasty_prestige = 0.05
+	monthly_prestige = 0.5
+	monthly_piety = 0.05
+}
+artifact_enchantment_minor_healing_aura_4_modifier = {
+	health = 1
+	negate_health_penalty_add = 1
+	monthly_dynasty_prestige = 0.15
+	monthly_prestige = 0.75
+	monthly_piety = 0.15
+}
+
+#Major Healing aura
+artifact_enchantment_major_healing_aura_1_modifier = {
+	health = 0.5
+	negate_health_penalty_add = 0.5
+	monthly_prestige = 0.15
+}
+artifact_enchantment_major_healing_aura_2_modifier = {
+	health = 1
+	monthly_dynasty_prestige = 0.1
+	monthly_prestige = 0.25
+	monthly_piety = 0.05
+	negate_health_penalty_add = 1
+}
+artifact_enchantment_major_healing_aura_3_modifier = {
+	health = 1.5
+	monthly_dynasty_prestige = 0.35
+	monthly_prestige = 0.5
+	monthly_piety = 0.15
+	negate_health_penalty_add = 1.5
+}
+artifact_enchantment_major_healing_aura_4_modifier = {
+	health = 2.5
+	monthly_dynasty_prestige = 0.5
+	monthly_prestige = 1
+	monthly_piety = 0.35
+	negate_health_penalty_add = 2.5
+}
+
+#Mental Health Enhancment
+artifact_enchantment_mental_health_enhancement_1_modifier = {
+	health = 0.15
+	stress_loss_mult = 0.15
+	stress_gain_mult = -0.15
+	monthly_prestige = 0.1
+}
+artifact_enchantment_mental_health_enhancement_2_modifier = {
+	health = 0.25
+	stress_loss_mult = 0.35
+	stress_gain_mult = -0.35
+	monthly_dynasty_prestige = 0.1
+	monthly_prestige = 0.25
+	hostile_scheme_resistance_add = 10
+}
+artifact_enchantment_mental_health_enhancement_3_modifier = {
+	health = 0.35
+	stress_loss_mult = 0.5
+	stress_gain_mult = -0.7
+	monthly_dynasty_prestige = 0.35
+	monthly_prestige = 0.5
+	hostile_scheme_resistance_add = 15
+}
+artifact_enchantment_mental_health_enhancement_4_modifier = {
+	health = 0.5
+	stress_loss_mult = 0.75
+	stress_gain_mult = -0.95
+	monthly_dynasty_prestige = 0.5
+	monthly_prestige = 1
+	hostile_scheme_resistance_add = 25
+}
+
+#Fertility Boost
+artifact_enchantment_fertility_boost_1_modifier = {
+	health = 0.15
+	fertility = 0.15
+	monthly_prestige = 0.1
+}
+artifact_enchantment_fertility_boost_2_modifier = {
+	health = 0.25
+	fertility = 0.35
+	monthly_dynasty_prestige = 0.1
+	monthly_prestige = 0.25
+}
+artifact_enchantment_fertility_boost_3_modifier = {
+	health = 0.35
+	fertility = 0.65
+	monthly_dynasty_prestige = 0.35
+	monthly_prestige = 0.5
+}
+artifact_enchantment_fertility_boost_4_modifier = {
+	health = 0.5
+	fertility = 1
+	monthly_dynasty_prestige = 0.5
+	monthly_prestige = 1
+}

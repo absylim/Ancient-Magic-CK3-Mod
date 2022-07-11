@@ -39,3 +39,8 @@ death_botched_blood_transfusion = {
 	public_knowledge = yes
 	icon = "death_unknown.dds"
 }
+
+death_enchatment_explosion = {
+	public_knowledge = yes
+	icon = "death_unknown.dds"
+}

@@ -87,6 +87,120 @@ get_mana_blood_detailed_description_effect = {
 	}
 }
 
+give_artifact_an_enchantment_effect = {
+	$ENCHANTER$ = { save_scope_as = enchanter }
+	random_list = {
+		200 = { #1 level
+			add_artifact_modifier = artifact_enchantment_$ENCHANTMENT$_1_modifier
+		}
+		75 = { #2 level
+			modifier = {
+				add = {
+					value = 5
+					multiply = {
+						value = var:mana_drops_used
+						divide = var:enchantment_difficulity
+					}
+				}
+			}
+			modifier = {
+				add = {
+					value = 2
+					multiply = scope:enchanter.mage_level
+				}
+			}
+			modifier = {
+				add = {
+					value = 10
+					multiply = laboratory_iron_tools_level_max
+					divide = var:enchantment_difficulity
+				}
+			}
+			modifier = {
+				add = {
+					value = 10
+					multiply = { 
+						value = laboratory_spellcircles_level_max
+						add = 1
+						divide = var:enchantment_difficulity
+					}
+				}
+			}
+			add_artifact_modifier = artifact_enchantment_$ENCHANTMENT$_2_modifier
+		}
+		25 = { #3 level
+			modifier = {
+				add = {
+					value = 8
+					multiply = {
+						value = var:mana_drops_used
+						divide = var:enchantment_difficulity
+					}
+				}
+			}
+			modifier = {
+				add = {
+					value = 4
+					multiply = scope:enchanter.mage_level
+				}
+			}
+			modifier = {
+				add = {
+					value = 15
+					multiply = laboratory_iron_tools_level_max
+					divide = var:enchantment_difficulity
+				}
+			}
+			modifier = {
+				add = {
+					value = 15
+					multiply = { 
+						value = laboratory_spellcircles_level_max
+						add = 1
+						divide = var:enchantment_difficulity
+					}
+				}
+			}
+			add_artifact_modifier = artifact_enchantment_$ENCHANTMENT$_3_modifier
+		}
+		5 = { #4 level
+			modifier = {
+				add = {
+					value = 13
+					multiply = {
+						value = var:mana_drops_used
+						divide = var:enchantment_difficulity
+					}
+				}
+			}
+			modifier = {
+				add = {
+					value = 6
+					multiply = scope:enchanter.mage_level
+				}
+			}
+			modifier = {
+				add = {
+					value = 20
+					multiply = laboratory_iron_tools_level_max
+					divide = var:enchantment_difficulity
+				}
+			}
+			modifier = {
+				add = {
+					value = 20
+					multiply = { 
+						value = laboratory_spellcircles_level_max
+						add = 1
+						divide = var:enchantment_difficulity
+					}
+				}
+			}
+			add_artifact_modifier = artifact_enchantment_$ENCHANTMENT$_4_modifier
+		}
+	}
+}
+
 create_ingredient_mana_blood_effect = {
 	$OWNER$ = { save_scope_as = owner }
 	$ORIGIN$ = { save_scope_as = origin }
