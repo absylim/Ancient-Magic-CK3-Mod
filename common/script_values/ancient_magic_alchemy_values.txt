@@ -1,7 +1,39 @@
 ﻿#Author: Donekulda
 #Desc: Script values of alchemy recipies, laboratory costs and etc
 
+#Compressed Mana
 mana_drops_needed_for_vial = 12
+mana_drops_in_inventory = {
+	value = 0
+	
+	if = {
+		limit = {
+			any_ingredient_in_inventory = {
+				has_artifact_feature_group = compressed_mana
+				has_artifact_feature = mana_drop
+			}
+		}
+		every_ingredient_in_inventory = {
+			has_artifact_feature_group = compressed_mana
+			has_artifact_feature = mana_drop
+			add = 1
+		}
+	}
+	
+	if = {
+		limit = {
+			any_ingredient_in_inventory = {
+				has_artifact_feature_group = compressed_mana
+				has_artifact_feature = mana_vial
+			}
+		}
+		every_ingredient_in_inventory = {
+			has_artifact_feature_group = compressed_mana
+			has_artifact_feature = mana_vial
+			add = 12
+		}
+	}
+}
 
 #Build cost of laboratory
 cheap_laboratory_build_cost = 100

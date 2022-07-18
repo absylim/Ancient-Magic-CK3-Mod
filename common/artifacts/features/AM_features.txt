@@ -50,7 +50,7 @@
 		group = compressed_mana
 		trigger = {
 			trigger_if = { 
-				limit = { has_variable = var:compressed_mana_type }
+				limit = { has_variable = compressed_mana_type }
 				var:compressed_mana_type = flag:mana_drop
 			}
 		}
@@ -61,7 +61,7 @@
 		group = compressed_mana
 		trigger = {
 			trigger_if = { 
-				limit = { has_variable = var:compressed_mana_type }
+				limit = { has_variable = compressed_mana_type }
 				var:compressed_mana_type = flag:mana_vial
 			}
 		}
@@ -72,7 +72,7 @@
 		group = ores
 		trigger = {
 			trigger_if = { 
-				limit = { has_variable = var:ore_type }
+				limit = { has_variable = ore_type }
 				var:ore_type = flag:mythril
 			}
 		}
@@ -83,7 +83,7 @@
 		group = wood
 		trigger = {
 			trigger_if = { 
-				limit = { has_variable = var:wood_type }
+				limit = { has_variable = wood_type }
 				var:ore_type = flag:magical_oak
 			}
 		}
@@ -94,7 +94,7 @@
 		group = special_metals
 		trigger = {
 			trigger_if = { 
-				limit = { has_variable = var:metal_type }
+				limit = { has_variable = metal_type }
 				var:ore_type = flag:carbon_steel
 			}
 		}

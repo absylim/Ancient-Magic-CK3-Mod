@@ -140,6 +140,28 @@
  magical_laboratory_spellcircles_tooltip: ""
  
  ancient_magic_alchemy.0100.t: "Alchemy Experiments - who will perform them"
+ ancient_magic_alchemy.0100.desc: ""
+ ancient_magic_alchemy.0100.a: ""
+ 
+ ancient_magic_alchemy.0101.t: "Alchemy Experiments - type of experiment"
+ ancient_magic_alchemy.0101.desc: "Perfoming experiment isn't cheap or short time activity, i should decide to what kind of experiment i want to invest my time and gold!"
+ ancient_magic_alchemy.0101.a: "Material Experiment"
+ ancient_magic_alchemy.0101.b: "Experiment with impirinting spells on items"
+ ancient_magic_alchemy.0101.c: "Botanical Alchemy"
+ ancient_magic_alchemy.0101.c: "Magical Experiments"
+ 
+ ancient_magic_alchemy.0102.t: "Material Experiment - combine what?"
+ ancient_magic_alchemy.0102.desc: "As i can perform multiple types of combination, i need to decide what kind of material experiment i want to perform and invest into!"
+ ancient_magic_alchemy.0102.a: "combine with special materials"
+ ancient_magic_alchemy.0102.b: "Magicaly enhance materials"
+ ancient_magic_alchemy.0102.c: "Combine mundane material"
+ 
+ ancient_magic_alchemy.0103.t: "Material Experiment - Investment"
+ ancient_magic_alchemy.0103.desc: "To combine different materials i will first need to buy them. Now i should decide how much i want to invest into this endeavour, the more i invest and more materials to combine i buy the higher will be my chance of findind something new!"
+ ancient_magic_alchemy.0103.a: "Bare minimum"
+ ancient_magic_alchemy.0103.b: "Medium investment"
+ ancient_magic_alchemy.0103.c: "Great investment"
+ ancient_magic_alchemy.0103.d: "Efficient investment"
  
  ancient_magic_alchemy.0107.t: "Artifact Enchantment Experiment - What to enchant"
  ancient_magic_alchemy.0107.desc: "Enchanting artifact is not an easy task, and the more so when you dont even know how to enchant, i should choose for what kind of artifact from my inventory i want to enchant first. But i need to choose carefully as even finished product could be turned into useless one."
@@ -179,8 +201,121 @@
  ancient_magic_alchemy.0114.b: "Lets go with middle"
  ancient_magic_alchemy.0114.c: "Cheapest is the best"
  
+ ancient_magic_alchemy.0115.t: "Artifact Enchantment Experiment - Type"
+ ancient_magic_alchemy.0115.desc: "As im focusing on creating enchantment, i should decide what type of spell i want to try to engrave on my artifact!"
+ ancient_magic_alchemy.0115.a: "Atack type"
+ ancient_magic_alchemy.0115.a: "Defence type"
+ ancient_magic_alchemy.0115.a: "Support type"
+ 
+ ancient_magic_alchemy.0116.t: "Artifact Enchantment Experiment - Compressed Mana"
+ ancient_magic_alchemy.0116.desc: "Every type of enchantment needs large ammounts of mana to be created. Perfoming this task from ones own mana pool is foolish so i need to use mana drops. The more i will use the higher the chance of success and of better enchantment.\nAmmount of mana drops to be used: [SCOPE.GetValue('mana_drops_used')]"
+ ancient_magic_alchemy.0116.mana_flask: "Use Mana vial"
+ ancient_magic_alchemy.0116.increase: "Increase"
+ ancient_magic_alchemy.0116.decrease: "Decrease"
+ ancient_magic_alchemy.0116.accept: "Confirm"
+ 
+ ancient_magic_alchemy.0125.t: "Botanical Alchemy Experiment"
+ ancient_magic_alchemy.0125.potions: "Potion Experiments"
+ ancient_magic_alchemy.0125.plants: "Plant Experiments"
+ ancient_magic_alchemy.0125.back: "Go Back"
+ 
+ ancient_magic_alchemy.0127.t: "Plant Experiments - investment"
+ ancient_magic_alchemy.0127.desc: "To ensure the highest success of my eperimentation i will need to acquire wide range of different plant species!"
+ 
+ ancient_magic_alchemy.0128.t: "Plant Experiments - Compressed Mana"
+ ancient_magic_alchemy.0128.desc: "As my experiments are of magical nature i will need to use large ammounts of mana to temper the plants im gonna use.\nAmmount of mana drops to be used: [SCOPE.GetValue('mana_drops_used')]"
+ 
  ancient_magic_alchemy.0129.t: "Herb experiment - Mana Blood"
  ancient_magic_alchemy.0129.desc: "Using mana blood in my experiment migh yield some results."
  ancient_magic_alchemy.0129.a: "Use [first_blood.GetName]"
  ancient_magic_alchemy.0129.b: "Use [second_blood.GetName]"
  ancient_magic_alchemy.0129.c: "No Blood"
+ 
+ ancient_magic_alchemy.0150.t: "Magical Experiments"
+ ancient_magic_alchemy.0150.desc: ""
+ ancient_magic_alchemy.0150.a: ""
+ 
+ ancient_magic_alchemy.0210.t: "Material Experiment - Mythril"
+ ancient_magic_alchemy.0150.desc: ""After many sleepless nights and many destroyed materials i finally found combination that gave me something usefull. Its a metal thats higly conductive and resistant(able to withstand) to mana, with high hardness and strenght. It's silvery blue color with its properties tells me according to literature, that its called Mythril."
+ ancient_magic_alchemy.0150.a: "This will be of a great help in magical experiments"
+ 
+ ancient_magic_alchemy.0250.t: "Material Experiment - Carbon Steel"
+ ancient_magic_alchemy.0150.desc: "After many sleepless nights and many destroyed materials i finally found combination that gave me something usefull. Its a metal thats higly conductive to mana, with great hardness and strenght. It's chromic grey color with its properties tells me according to literature, that its called Steel."
+ ancient_magic_alchemy.0150.a: "This will be of a great help in forging"
+ 
+ ancient_magic_alchemy.0500.t: "Artifact Enchantment Experiment - Fire Coating"
+ ancient_magic_alchemy.0150.desc: ""
+ ancient_magic_alchemy.0150.a: ""
+ 
+ ancient_magic_alchemy.0501.t: "Artifact Enchantment Experiment - Wind Acceleration"
+ ancient_magic_alchemy.0150.desc: ""
+ ancient_magic_alchemy.0150.a: ""
+ 
+ ancient_magic_alchemy.0502.t: "Artifact Enchantment Experiment - Time Acceleration"
+ ancient_magic_alchemy.0150.desc: ""
+ ancient_magic_alchemy.0150.a: ""
+ 
+ ancient_magic_alchemy.0503.t: "Artifact Enchantment Experiment - Death Aura"
+ ancient_magic_alchemy.0150.desc: ""
+ ancient_magic_alchemy.0150.a: ""
+ 
+ ancient_magic_alchemy.0600.t: "Artifact Enchantment Experiment - Earth strenghtening"
+ ancient_magic_alchemy.0150.desc: ""
+ ancient_magic_alchemy.0150.a: ""
+ 
+ ancient_magic_alchemy.0601.t: "Artifact Enchantment Experiment - Blood Defence"
+ ancient_magic_alchemy.0150.desc: ""
+ ancient_magic_alchemy.0150.a: ""
+ 
+ ancient_magic_alchemy.0602.t: "Artifact Enchantment Experiment - Elemental Defence"
+ ancient_magic_alchemy.0150.desc: ""
+ ancient_magic_alchemy.0150.a: ""
+ 
+ ancient_magic_alchemy.0700.t: "Artifact Enchantment Experiment - Minor Healing Aura"
+ ancient_magic_alchemy.0150.desc: ""
+ ancient_magic_alchemy.0150.a: ""
+ 
+ ancient_magic_alchemy.0701.t: "Artifact Enchantment Experiment - Major Healing Aura"
+ ancient_magic_alchemy.0150.desc: ""
+ ancient_magic_alchemy.0150.a: ""
+ 
+ ancient_magic_alchemy.0702.t: "Artifact Enchantment Experiment - Fertily"
+ ancient_magic_alchemy.0150.desc: ""
+ ancient_magic_alchemy.0150.a: ""
+ 
+ ancient_magic_alchemy.0703.t: "Artifact Enchantment Experiment - Mental Health Enhancement"
+ ancient_magic_alchemy.0150.desc: ""
+ ancient_magic_alchemy.0150.a: ""
+ 
+ ancient_magic_alchemy.2000.t: "Perfoming Alchemy - What to do"
+ ancient_magic_alchemy.0150.desc: "With recordeds from my experiments i should be able to recreate those substances!"
+ ancient_magic_alchemy.0150.mythril: "Create Mythril"
+ ancient_magic_alchemy.0150.carbon_steel: "Create Steel"
+ 
+ ancient_magic_alchemy.2100.t: "Alchemy - Mythril"
+ ancient_magic_alchemy.0150.desc: "After meticulously following the recorded procedures, i was able to reacreate the metal called Mythril!"
+ ancient_magic_alchemy.0150.a: "This will be of a great help in magical experiments"
+ 
+ ancient_magic_alchemy.2101.t: "Alchemy - Carbon Steel"
+ ancient_magic_alchemy.0150.desc: "After meticulously following the recorded procedures, i was able to reacreate the metal called Steel!"
+ ancient_magic_alchemy.0150.a: "This will be of a great help in forging"
+ 
+ ancient_magic_alchemy.5000.t: "Alchemical Experiment Failure"
+ ancient_magic_alchemy.0150.desc: "Even after many sleepless nights in laboratory, i still found nothing! The only comfort i can have form this is the experience gained from those experiments about alchemy and materials in whole."
+ ancient_magic_alchemy.0150.a: "Next time i will get it!"
+ 
+ ancient_magic_alchemy.5001.t: "Artifact Enchantment Experiment - Failure"
+ ancient_magic_alchemy.0150.desc: "AS it was to be expected to fail, because of its difficulity, im not that suprised. I can still be glad that it didn't explode into my face."
+ ancient_magic_alchemy.0150.a: "Hopefully next time"
+ 
+ ancient_magic_alchemy.5002.t: "Artifact Enchantment Experiment - Explosion"
+ ancient_magic_alchemy.0150.desc: "When performing the enchantment, something has gone terribly wrong and the mana inside it caused powerful magical discharge that caused massive explossion."
+ ancient_magic_alchemy.0150.a: "Oh no..."
+ 
+ ancient_magic_alchemy.5005.t: "Herbology Experiment - Failure"
+ ancient_magic_alchemy.0150.desc: "After many nights in laboratory, many mana temperings of plants and lost resources on their acquirment. I'm getting nothing, the only thing those failures are usefull for is fertilizer!"
+ ancient_magic_alchemy.0150.a: "Such a waste"
+ 
+ ancient_magic_alchemy.5010.t: "Alchemy - Failure"
+ ancient_magic_alchemy.0150.desc: "Even after following the recorded procedure i still failed."
+ ancient_magic_alchemy.0150.a: "Next time i will get it!"

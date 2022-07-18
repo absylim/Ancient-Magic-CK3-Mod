@@ -114,10 +114,10 @@ upgrade_laboratory_decision = {
 			value = glass
 						
 			current_description = {
-				desc = use_laboratory_decision_option_glass_desc
+				desc = upgrade_laboratory_decision_option_glass_desc
 			}
 			localization  = {
-				desc = use_laboratory_decision_option_glass
+				desc = upgrade_laboratory_decision_option_glass
 			}
 			icon = "gfx/interface/icons/artifact/artifact_flask.dds"
 
@@ -130,10 +130,10 @@ upgrade_laboratory_decision = {
 			value = crucible
 			
 			current_description = {
-				desc = use_laboratory_decision_option_crucible_desc
+				desc = upgrade_laboratory_decision_option_crucible_desc
 			}
 			localization  = {
-				desc = use_laboratory_decision_option_crucible
+				desc = upgrade_laboratory_decision_option_crucible
 			}
 			icon = "gfx/interface/icons/artifact/alchemy.dds"
 
@@ -146,10 +146,10 @@ upgrade_laboratory_decision = {
 			value = iron_tools
 				
 			current_description = {
-				desc = use_laboratory_decision_option_iron_tools_desc
+				desc = upgrade_laboratory_decision_option_iron_tools_desc
 			}
 			localization  = {
-				desc = use_laboratory_decision_option_iron_tools
+				desc = upgrade_laboratory_decision_option_iron_tools
 			}
 			icon = "gfx/interface/icons/artifact/artifact_hammer.dds"
 
@@ -162,10 +162,10 @@ upgrade_laboratory_decision = {
 			value = books
 			
 			current_description = {
-				desc = use_laboratory_decision_option_books_desc
+				desc = upgrade_laboratory_decision_option_books_desc
 			}
 			localization  = {
-				desc = use_laboratory_decision_option_books
+				desc = upgrade_laboratory_decision_option_books
 			}
 			icon = "gfx/interface/icons/artifact/artifact_book.dds"
 
@@ -178,10 +178,10 @@ upgrade_laboratory_decision = {
 			value = spellcircles
 			
 			current_description = {
-				desc = use_laboratory_decision_option_spellcircles_desc
+				desc = upgrade_laboratory_decision_option_spellcircles_desc
 			}
 			localization  = {
-				desc = use_laboratory_decision_option_spellcircles
+				desc = upgrade_laboratory_decision_option_spellcircles
 			}
 			icon = "gfx/interface/icons/artifact/artifact_brooch.dds"
 
@@ -318,6 +318,7 @@ use_laboratory_decision = {
 						artifact_type = magical_material
 					}
 				}
+				always = no
 			}
 				
 			current_description = {
@@ -343,6 +344,7 @@ use_laboratory_decision = {
 						artifact_type = magical_material
 					}
 				}
+				always = no
 			}
 			current_description = {
 				desc = use_laboratory_decision_option_perform_forge_magical_necklace_desc
@@ -366,6 +368,7 @@ use_laboratory_decision = {
 						artifact_type = magical_material
 					}
 				}
+				always = no
 			}
 			current_description = {
 				desc = use_laboratory_decision_option_perform_forge_magical_armor_desc
@@ -403,18 +406,42 @@ use_laboratory_decision = {
 			}
 			else_if = {
 				limit = { scope:perform_alchemy = yes }
+				capital_province = {
+					spawn_activity = {
+						owner = ROOT
+						type = activity_alchemy
+					}
+				}
 			
 			}
 			else_if = {
 				limit = { scope:forge_magical_ring = yes }
+				capital_province = {
+					spawn_activity = {
+						owner = ROOT
+						type = activity_alchemy_experiments
+					}
+				}
 			
 			}
 			else_if = {
 				limit = { scope:forge_magical_necklace = yes }
+				capital_province = {
+					spawn_activity = {
+						owner = ROOT
+						type = activity_alchemy_experiments
+					}
+				}
 			
 			}
 			else_if = {
 				limit = { scope:forge_magical_armor = yes }
+				capital_province = {
+					spawn_activity = {
+						owner = ROOT
+						type = activity_alchemy_experiments
+					}
+				}
 
 			}
 		}

@@ -1,7 +1,8 @@
 ﻿# Build Laboratory
 activity_build_laboratory = {
+	expiration_days = 1200
 	solo = yes
-	color = { 0.1093, 0.1304, 0.1419 1 }
+	color = { 0.1093 0.1304 0.1419 1 }
 	valid = {
 		activity_owner = {
 			is_alive = yes

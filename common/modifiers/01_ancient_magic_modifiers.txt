@@ -221,5 +221,12 @@ ignored_populace_laboratory = {
 
 magical_fertilizer = {
 	icon = magic_positive
-	development_growth_factor = 0.15
+	development_growth_factor = 0.05
+}
+
+man_eating_plant = {
+	icon = magic_positive
+	court_grandeur_baseline_add = 7
+	hostile_scheme_resistance_mult = 0.15
+	years = 7 
 }

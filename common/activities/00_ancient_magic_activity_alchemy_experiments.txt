@@ -1,7 +1,8 @@
 ﻿# Perform experiments
 activity_alchemy_experiments = {
+	expiration_days = 800
 	solo = yes
-	color = { 0.1093, 0.1304, 0.1419 1 }
+	color = { 0.1093 0.1304 0.1419 1 }
 	valid = {
 		activity_owner = {
 			is_alive = yes
@@ -16,6 +17,116 @@ activity_alchemy_experiments = {
 		activity_owner = {
 			#To trigger the event to choose lab location
 			trigger_event = ancient_magic_alchemy.0101
+		}
+	}
+	on_complete = {
+	}
+	on_invalidated = {
+		complete_activity = yes
+	}
+}
+
+# Perform Alchemy
+activity_alchemy = {
+	expiration_days = 800
+	solo = yes
+	color = { 0.1093 0.1304 0.1419 1 }
+	valid = {
+		activity_owner = {
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+	}
+	on_activate = {
+		activity_owner = {
+			#To trigger the event to choose lab location
+			trigger_event = ancient_magic_alchemy.2000
+		}
+	}
+	on_complete = {
+	}
+	on_invalidated = {
+		complete_activity = yes
+	}
+}
+
+# Forging magical ring
+activity_forge_magical_ring = {
+	expiration_days = 800
+	solo = yes
+	color = { 0.1093 0.1304 0.1419 1 }
+	valid = {
+		activity_owner = {
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+	}
+	on_activate = {
+		activity_owner = {
+			#To trigger the event to choose lab location
+			trigger_event = ancient_magic_alchemy.2000
+		}
+	}
+	on_complete = {
+	}
+	on_invalidated = {
+		complete_activity = yes
+	}
+}
+# Forging magical necklace
+activity_forge_magical_necklace = {
+	expiration_days = 800
+	solo = yes
+	color = { 0.1093 0.1304 0.1419 1 }
+	valid = {
+		activity_owner = {
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+	}
+	on_activate = {
+		activity_owner = {
+			#To trigger the event to choose lab location
+			trigger_event = ancient_magic_alchemy.2000
+		}
+	}
+	on_complete = {
+	}
+	on_invalidated = {
+		complete_activity = yes
+	}
+}
+# Forging magical armor
+activity_forge_magical_armor = {
+	expiration_days = 800
+	solo = yes
+	color = { 0.1093 0.1304 0.1419 1 }
+	valid = {
+		activity_owner = {
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+	}
+	on_activate = {
+		activity_owner = {
+			#To trigger the event to choose lab location
+			trigger_event = ancient_magic_alchemy.2000
 		}
 	}
 	on_complete = {

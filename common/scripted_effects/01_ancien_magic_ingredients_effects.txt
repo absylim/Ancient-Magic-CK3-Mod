@@ -112,7 +112,7 @@ give_artifact_an_enchantment_effect = {
 			modifier = {
 				add = {
 					value = 10
-					multiply = laboratory_iron_tools_level_max
+					multiply = laboratory_iron_tools_level
 					divide = var:enchantment_difficulity
 				}
 			}
@@ -120,7 +120,7 @@ give_artifact_an_enchantment_effect = {
 				add = {
 					value = 10
 					multiply = { 
-						value = laboratory_spellcircles_level_max
+						value = laboratory_spellcircles_level
 						add = 1
 						divide = var:enchantment_difficulity
 					}
@@ -147,7 +147,7 @@ give_artifact_an_enchantment_effect = {
 			modifier = {
 				add = {
 					value = 15
-					multiply = laboratory_iron_tools_level_max
+					multiply = laboratory_iron_tools_level
 					divide = var:enchantment_difficulity
 				}
 			}
@@ -155,7 +155,7 @@ give_artifact_an_enchantment_effect = {
 				add = {
 					value = 15
 					multiply = { 
-						value = laboratory_spellcircles_level_max
+						value = laboratory_spellcircles_level
 						add = 1
 						divide = var:enchantment_difficulity
 					}
@@ -182,7 +182,7 @@ give_artifact_an_enchantment_effect = {
 			modifier = {
 				add = {
 					value = 20
-					multiply = laboratory_iron_tools_level_max
+					multiply = laboratory_iron_tools_level
 					divide = var:enchantment_difficulity
 				}
 			}
@@ -190,13 +190,135 @@ give_artifact_an_enchantment_effect = {
 				add = {
 					value = 20
 					multiply = { 
-						value = laboratory_spellcircles_level_max
+						value = laboratory_spellcircles_level
 						add = 1
 						divide = var:enchantment_difficulity
 					}
 				}
 			}
 			add_artifact_modifier = artifact_enchantment_$ENCHANTMENT$_4_modifier
+		}
+	}
+}
+
+pay_mana_drop_cost_effect = {
+	$OWNER$ = { save_scope_as = owner }
+	save_scope_value_as = {
+		name = mana_drop_cost
+		value = $COST$
+	}
+	
+	scope:owner = {
+		set_local_variable = {
+			name = mana_drop_cost_local
+			value = scope:mana_drop_cost
+		}
+		
+		if = {
+			limit = {
+				any_ingredient_in_inventory = {
+					count >= scope:mana_drop_cost
+					has_artifact_feature_group = compressed_mana
+					has_artifact_feature = mana_drop
+				}
+			}
+			while = {
+				limit = {
+					local_var:mana_drop_cost_local.compare_value > 0
+				}
+				random_ingredient_in_inventory = {
+					limit = {
+						has_artifact_feature_group = compressed_mana
+						has_artifact_feature = mana_drop
+					}
+					artifact_owner = {destroy_artifact = prev}
+				}
+				change_local_variable = { name = mana_drop_cost_local subtract = 1 }
+			}
+		}
+		else_if = {
+			limit = {
+				scope:mana_drop_cost <= mana_drops_in_inventory
+			}
+			set_local_variable = {
+				name = mana_vial_cost_local
+				value = 0
+			}
+			
+			while = {
+				limit = {
+					local_var:mana_drop_cost_local.compare_value >= mana_drops_needed_for_vial
+				}
+				change_local_variable = { name = mana_drop_cost_local subtract = mana_drops_needed_for_vial }
+				change_local_variable = { name = mana_vial_cost_local add = 1 }
+			}
+			
+			while = { #destroy every mana drop in inventory
+				limit = {
+					any_ingredient_in_inventory = {
+						has_artifact_feature_group = compressed_mana
+						has_artifact_feature = mana_drop
+					}
+					local_var:mana_drop_cost_local.compare_value > 0
+				}
+				random_ingredient_in_inventory = {
+					limit = {
+						has_artifact_feature_group = compressed_mana
+						has_artifact_feature = mana_drop
+					}
+					artifact_owner = {destroy_artifact = prev}
+				}
+				change_local_variable = { name = mana_drop_cost_local subtract = 1 }
+			}
+			
+			#if there wasnt enough mana drops 
+			set_local_variable = {
+				name = mana_drops_to_generate
+				value = {
+					value = mana_drops_needed_for_vial
+					subtract = local_var:mana_drop_cost_local
+				}
+			}
+			if = {
+				limit = {
+					any_ingredient_in_inventory = {
+						has_artifact_feature_group = compressed_mana
+						has_artifact_feature = mana_vial
+					}
+				}
+				random_ingredient_in_inventory = {
+					limit = {
+						has_artifact_feature_group = compressed_mana
+						has_artifact_feature = mana_vial
+					}
+					artifact_owner = {destroy_artifact = prev}
+				}
+				while = { 
+					limit = {
+						local_var:mana_drops_to_generate.compare_value > 0
+					}
+					create_ingredient_compressed_mana = { OWNER = scope:owner }
+					change_local_variable = { name = mana_drops_to_generate subtract = 1 }
+				}
+			}
+			
+			while = {
+				limit = {
+					any_ingredient_in_inventory = {
+						has_artifact_feature_group = compressed_mana
+						has_artifact_feature = mana_vial
+					}
+					local_var:mana_vial_cost_local.compare_value > 0
+				}
+				random_ingredient_in_inventory = {
+					limit = {
+						has_artifact_feature_group = compressed_mana
+						has_artifact_feature = mana_vial
+					}
+					artifact_owner = {destroy_artifact = prev}
+				}
+				change_local_variable = { name = mana_vial_cost_local subtract = 1 }
+			}
 		}
 	}
 }
