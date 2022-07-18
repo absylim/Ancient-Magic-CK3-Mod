@@ -3,6 +3,8 @@
 #the same goes for adding this bloodline into trigger has_magical_bloodline_trigger and has_magical_bloodline_of_type_trigger in scripted_triggers/ancient_magic_health_triggers.txt 
 #and into get_mana_blood_detailed_description_effect in scipted_effects/01_ancient_magic_ingredients_effects.txt
 #and lasty added into add_magical_bloodline_effect in scipted_effects/00_ancient_magic_mana_affinity_effects.txt
+
+#Generic magical beings (Bloodlines that can be found all around the world)
 dragonic_bloodline = {
 	Index = 9200
 	
@@ -192,4 +194,226 @@ infused_magical_blood_incompatible = {
 	shown_in_ruler_designer = no
 	
 	ai_rationality = low_negative_ai_value
+}
+
+# Region bloodlines - bloodlines that are found only in their specific regions and around them
+
+####################################################
+############	Greek Bloodlines		############
+####################################################
+
+zeus_bloodline = {
+	Index = 9275
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+	
+	health = 1.5
+	fertility = 0.5
+	prowess = 5
+	
+	diplomacy = -5
+	stewardship = 3
+	martial = 4
+	intrigue = 2
+	learning = -2
+	
+	ai_energy = high_negative_ai_value #Lizards are innatly lethargic
+	ai_honor = dominant_positive_ai_value
+	ai_greed = dominant_positive_ai_value
+	ai_boldness = high_positive_ai_value
+	ai_sociability = medium_negative_ai_value
+	
+	compatibility = {
+		arrogant = @neg_compat_medium # Only dragons can be arrogant
+		dragonic_bloodline = @pos_compat_high
+		deceitful = @neg_compat_medium
+		craven = @neg_compat_medium
+		brave = @pos_compat_medium
+		compassionate = @neg_compat_low
+	}
+	
+	attraction_opinion = 25
+	tribal_government_opinion = 10
+	vassal_opinion = 5
+	same_opinion = 15
+}
+
+posseidon_bloodline = {
+	Index = 9276
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+hades_bloodline = {
+	Index = 9277
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+aphrodite_bloodline = {
+	Index = 9278
+	
+	ruler_designer_cost = 200
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+medusa_bloodline = {
+	Index = 9279
+	
+	ruler_designer_cost = 150
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+####################################################
+############	Norse Bloodlines		############
+####################################################
+odin_bloodline = {
+	Index = 9300
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+thor_bloodline = {
+	Index = 9301
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+loki_bloodline = {
+	Index = 9302
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+dwarven_bloodline = {
+	Index = 9303
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+####################################################
+############	Egypt Bloodlines		############
+####################################################
+
+ra_bloodline = {
+	Index = 9325
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+set_bloodline = {
+	Index = 9326
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+anubis_bloodline = {
+	Index = 9327
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+thoth_bloodline = {
+	Index = 9328
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+####################################################
+############	Indian Bloodlines		############
+####################################################
+brahma_bloodline = {
+	Index = 9350
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+vishu_bloodline = {
+	Index = 9351
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+shiva_bloodline = {
+	Index = 9352
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+}
+
+####################################################
+###########	  Sub-Saharan Bloodlines	 ###########
+####################################################
+
+djin_bloodline = {
+	Index = 9375
+	
+	ruler_designer_cost = 250
+	
+	genetic = yes
+	physical = yes
+	good = yes
+	
+	intrigue = 4
 }
