@@ -203,3 +203,32 @@ enchanting_aura_spell = {}
 sculpt_mind_spell = {}
 
 master_of_puppets_spell = {}
+
+# Mythology
+zeus = {}
+posseidon = {}
+hades = {}
+aphrodite = {}
+ares = {}
+athena = {}
+medusa = {}
+odin = {}
+thor = {}
+loki = {}
+frigg = {}
+ouroboros = {}
+dwarve = {}
+re = {}
+osiris = {}
+seth = {}
+anubis = {}
+ptah = {}
+amon = {}
+brahma = {}
+vishu = {}
+shiva = {}
+djin = {}
+anu = {}
+enlil = {}
+enki = {}
+ninhursag = {}

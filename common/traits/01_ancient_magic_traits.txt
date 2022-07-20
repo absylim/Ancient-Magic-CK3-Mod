@@ -1,5 +1,5 @@
 ﻿immortal = {
-	index = 9001
+	index = 5001
 
 	immortal = yes
 
@@ -8,7 +8,7 @@
 }
 
 architect_of_bloodlines = {
-	index = 9005
+	index = 5005
 
 	ruler_designer_cost = 50
 
@@ -16,15 +16,44 @@ architect_of_bloodlines = {
 }
 
 master_of_time = {
-	index = 9006
+	index = 5006
 
 	ruler_designer_cost = 50
 
 	ai_rationality = very_low_positive_ai_value
 }
 
+undead = {
+	index = 5007
+	immortal = yes
+	#fertility = -1000
+	can_have_children = no # Looks better
+	dread_baseline_add = 30
+	attraction_opinion = -30
+	general_opinion = -30
+	same_opinion = 30
+	dread_baseline_add = 10
+
+	ruler_designer_cost = 10
+
+	ai_compassion = dominant_negative_ai_value
+	ai_boldness = very_low_positive_ai_value
+	ai_rationality = very_low_positive_ai_value
+
+	triggered_opinion = {
+		parameter = necromancy_illegal
+		opinion_modifier = necromancy_crime
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		parameter = necromancy_accepted
+		opinion_modifier = necromancy_allowed
+		ignore_opinion_value_if_same_trait = yes
+	}
+}
+
 deacon_of_death = {
-	index = 9008
+	index = 5008
 
 	ruler_designer_cost = 50
 
@@ -33,7 +62,7 @@ deacon_of_death = {
 }
 
 avatar_of_life = {
-	index = 9009
+	index = 5009
 
 	ruler_designer_cost = 50
 
@@ -42,7 +71,7 @@ avatar_of_life = {
 }
 
 lord_of_the_elements = {
-	index = 9010
+	index = 5010
 
 	ruler_designer_cost = 50
 
@@ -50,7 +79,7 @@ lord_of_the_elements = {
 }
 
 master_of_puppets = {
-	index = 9011
+	index = 5011
 
 	ruler_designer_cost = 50
 
@@ -58,7 +87,7 @@ master_of_puppets = {
 }
 
 mage = {
-	index = 33302
+	index = 5045
 
 	inherit_chance = 0
 	birth = 0
@@ -101,7 +130,7 @@ mage = {
 }
 
 infinite_mana = {
-	index = 33303
+	index = 5049
 
 	inherit_chance = 0
 	birth = 0
@@ -110,42 +139,13 @@ infinite_mana = {
 	ruler_designer_cost = 9001
 }
 
-undead = {
-	index = 9007
-	immortal = yes
-	#fertility = -1000
-	can_have_children = no # Looks better
-	dread_baseline_add = 30
-	attraction_opinion = -30
-	general_opinion = -30
-	same_opinion = 30
-	dread_baseline_add = 10
-
-	ruler_designer_cost = 10
-
-	ai_compassion = dominant_negative_ai_value
-	ai_boldness = very_low_positive_ai_value
-	ai_rationality = very_low_positive_ai_value
-
-	triggered_opinion = {
-		parameter = necromancy_illegal
-		opinion_modifier = necromancy_crime
-		ignore_opinion_value_if_same_trait = yes
-	}
-	triggered_opinion = {
-		parameter = necromancy_accepted
-		opinion_modifier = necromancy_allowed
-		ignore_opinion_value_if_same_trait = yes
-	}
-}
-
 ##############################################
 ############## HEALTH ########################
 ##############################################
 
 #Mana devouring stage 1 - Mana devouring
 mana_devouring_1 = {
-	index = 9051
+	index = 5051
 
 	health = -1
 	prowess = -2
@@ -179,7 +179,7 @@ mana_devouring_1 = {
 }
 #Mana devouring stage 2 - Body devouring
 mana_devouring_2 = {
-	index = 9052
+	index = 5052
 
 	martial = -4
 	intrigue = -4
@@ -215,7 +215,7 @@ mana_devouring_2 = {
 }
 
 mana_burn = {
-	index = 9053
+	index = 5053
 
 	prowess = -10
 	health = -1
@@ -231,7 +231,7 @@ mana_burn = {
 }
 
 mage_dementia = {
-	index = 9054
+	index = 5054
 	learning = -5
 	martial = -5
 	intrigue = -5
@@ -253,7 +253,7 @@ mage_dementia = {
 
 #ARCANE OUTCOMES
 education_arcane_1 = {
-	index = 9101
+	index = 5101
 	minimum_age = 16
 	learning = 2
 	education = yes
@@ -276,7 +276,7 @@ education_arcane_1 = {
 	level = 1
 }
 education_arcane_2 = {
-	index = 9102
+	index = 5102
 	minimum_age = 16
 	learning = 3
 	prowess = 1
@@ -300,7 +300,7 @@ education_arcane_2 = {
 	level = 2
 }
 education_arcane_3 = {
-	index = 9103
+	index = 5103
 	minimum_age = 16
 	learning = 4
 	prowess = 2
@@ -324,7 +324,7 @@ education_arcane_3 = {
 	level = 3
 }
 education_arcane_4 = {
-	index = 9104
+	index = 5104
 	minimum_age = 16
 	learning = 6
 	prowess = 4

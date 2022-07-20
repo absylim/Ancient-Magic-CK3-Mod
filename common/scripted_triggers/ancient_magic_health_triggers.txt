@@ -88,6 +88,29 @@ has_magical_bloodline_trigger = {
 		has_trait = dragonic_bloodline
 		has_trait = antler_bloodline
 		has_trait = giant_bloodline
+		has_trait = zeus_bloodline
+		has_trait = posseidon_bloodline
+		has_trait = hades_bloodline
+		has_trait = aphrodite_bloodline
+		has_trait = ares_bloodline
+		has_trait = athena_bloodline
+		has_trait = medusa_bloodline
+		has_trait = odin_bloodline
+		has_trait = thor_bloodline
+		has_trait = loki_bloodline
+		has_trait = frigg_bloodline
+		has_trait = ouroboros_bloodline
+		has_trait = dwarven_bloodline
+		has_trait = ra_bloodline
+		has_trait = seth_bloodline
+		has_trait = anubis_bloodline
+		has_trait = thoth_bloodline
+		has_trait = ptah_bloodline
+		has_trait = amon_bloodline
+		has_trait = brahma_bloodline
+		has_trait = vishu_bloodline
+		has_trait = shiva_bloodline
+		has_trait = djin_bloodline
 	}
 }
 
@@ -97,5 +120,28 @@ has_magical_bloodline_of_type_trigger = {
 		flag:dragonic_bloodline = { $TARGET$ = { has_trait = dragonic_bloodline } }
 		flag:antler_bloodline = { $TARGET$ = { has_trait = antler_bloodline } }
 		flag:giant_bloodline = { $TARGET$ = { has_trait = giant_bloodline } }
+		flag:zeus_bloodline = { $TARGET$ = { has_trait = zeus_bloodline } }
+		flag:posseidon_bloodline = { $TARGET$ = { has_trait = posseidon_bloodline } }
+		flag:hades_bloodline = { $TARGET$ = { has_trait = hades_bloodline } }
+		flag:aphrodite_bloodline = { $TARGET$ = { has_trait = aphrodite_bloodline } }
+		flag:ares_bloodline = { $TARGET$ = { has_trait = ares_bloodline } }
+		flag:athena_bloodline = { $TARGET$ = { has_trait = athena_bloodline } }
+		flag:medusa_bloodline = { $TARGET$ = { has_trait = medusa_bloodline } }
+		flag:odin_bloodline = { $TARGET$ = { has_trait = odin_bloodline } }
+		flag:thor_bloodline = { $TARGET$ = { has_trait = thor_bloodline } }
+		flag:loki_bloodline = { $TARGET$ = { has_trait = loki_bloodline } }
+		flag:frigg_bloodline = { $TARGET$ = { has_trait = frigg_bloodline } }
+		flag:ouroboros_bloodline = { $TARGET$ = { has_trait = ouroboros_bloodline } }
+		flag:dwarven_bloodline = { $TARGET$ = { has_trait = dwarven_bloodline } }
+		flag:ra_bloodline = { $TARGET$ = { has_trait = ra_bloodline } }
+		flag:seth_bloodline = { $TARGET$ = { has_trait = seth_bloodline } }
+		flag:anubis_bloodline = { $TARGET$ = { has_trait = anubis_bloodline } }
+		flag:thoth_bloodline = { $TARGET$ = { has_trait = thoth_bloodline } }
+		flag:ptah_bloodline = { $TARGET$ = { has_trait = ptah_bloodline } }
+		flag:amon_bloodline = { $TARGET$ = { has_trait = amon_bloodline } }
+		flag:brahma_bloodline = { $TARGET$ = { has_trait = brahma_bloodline } }
+		flag:vishu_bloodline = { $TARGET$ = { has_trait = vishu_bloodline } }
+		flag:shiva_bloodline = { $TARGET$ = { has_trait = shiva_bloodline } }
+		flag:djin_bloodline = { $TARGET$ = { has_trait = djin_bloodline } }
 	}
 }
