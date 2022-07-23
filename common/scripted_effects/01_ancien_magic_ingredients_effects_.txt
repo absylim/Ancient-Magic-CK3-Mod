@@ -26,18 +26,19 @@ get_mana_blood_detailed_description_effect = {
 			  odin_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:odin_bloodline } }
 			  thor_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:thor_bloodline } }
 			  loki_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:loki_bloodline } }
-			  frigg_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:frigg_bloodline } }
+			  freyja_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:freyja_bloodline } }
 			  ouroboros_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:giant_bloodline } }
 			  dwarven_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:dwarven_bloodline } }
-			  ra_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:ra_bloodline } }
+			  osiris_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:osiris_bloodline } }
 			  seth_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:seth_bloodline } }
 			  anubis_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:anubis_bloodline } }
 			  thoth_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:thoth_bloodline } }
 			  ptah_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:ptah_bloodline } }
-			  amon_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:amon_bloodline } }
+			  amun_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:amun_bloodline } }
 			  brahma_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:brahma_bloodline } }
-			  vishu_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:vishu_bloodline } }
+			  vishnu_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:vishnu_bloodline } }
 			  shiva_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:shiva_bloodline } }
+			  genesha_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:genesha_bloodline } }
 			  djin_bloodline = { save_scope_value_as = { name = bloodline_scope value = flag:djin_bloodline } }
 			  fallback = { save_scope_value_as = { name = bloodline_scope value = flag:none } }
 			}

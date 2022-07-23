@@ -2,7 +2,8 @@
 #For each added bloodline there must be added into mana_affinity_bloodline_boost in script_values/00_ancient_magic_mana_affinity.txt its follow-up code 
 #the same goes for adding this bloodline into trigger has_magical_bloodline_trigger and has_magical_bloodline_of_type_trigger in scripted_triggers/ancient_magic_health_triggers.txt 
 #and into get_mana_blood_detailed_description_effect in scipted_effects/01_ancient_magic_ingredients_effects.txt
-#and lasty added into add_magical_bloodline_effect in scipted_effects/00_ancient_magic_mana_affinity_effects.txt
+#and add added into add_magical_bloodline_effect in scipted_effects/00_ancient_magic_mana_affinity_effects.txt
+#and if the bloodline is region based add it into scipted_effects/00_ancient_magic_map_effects.txt
 
 #Generic magical beings (Bloodlines that can be found all around the world)
 dragonic_bloodline = {
@@ -21,19 +22,20 @@ dragonic_bloodline = {
 		odin_bloodline
 		thor_bloodline
 		loki_bloodline
-		frigg_bloodline
+		freyja_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
-		amon_bloodline
+		amun_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 250
@@ -106,17 +108,18 @@ antler_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 75
@@ -169,6 +172,8 @@ giant_bloodline = {
 	index = 5202
 	
 	opposites = {
+		giant
+		dwarf
 		dragonic_bloodline
 		antler_bloodline
 		zeus_bloodline
@@ -183,18 +188,18 @@ giant_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
-		giant
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 75
@@ -239,6 +244,83 @@ giant_bloodline = {
 				desc = trait_giant_bloodline_desc
 			}
 			desc = trait_giant_bloodline_character_desc
+		}
+	}
+}
+
+ouroboros_bloodline = {
+	index = 5304
+	
+	opposites = {
+		dragonic_bloodline
+		antler_bloodline
+		zeus_bloodline
+		posseidon_bloodline
+		hades_bloodline
+		aphrodite_bloodline
+		ares_bloodline
+		athena_bloodline
+		medusa_bloodline
+		odin_bloodline
+		thor_bloodline
+		loki_bloodline
+		dwarven_bloodline
+		osiris_bloodline
+		seth_bloodline
+		anubis_bloodline
+		thoth_bloodline
+		ptah_bloodline
+		brahma_bloodline
+		vishnu_bloodline
+		shiva_bloodline
+		djin_bloodline
+		giant_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
+	}
+	
+	ruler_designer_cost = 300
+	shown_in_ruler_designer = no
+	
+	birth = 0
+	random_creation = 0.0025
+	
+	genetic = yes
+	physical = yes
+	good = yes
+	
+	health = 3
+	fertility = -2
+	prowess = 7
+	life_expectancy = 100
+	
+	diplomacy = -2
+	learning = 4
+	
+	ai_energy = dominant_positive_ai_value
+	ai_rationality = dominant_negative_ai_value #Void being
+	ai_greed = dominant_negative_ai_value
+	ai_boldness = high_positive_ai_value
+	ai_sociability = medium_negative_ai_value
+	
+	attraction_opinion = -20
+	tribal_government_opinion = 20
+	vassal_opinion = 10
+	same_opinion = 15
+	christianity_religion_opinion = -20
+	islam_religion_opinion = -20
+	germanic_religion_opinion = -30
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_ouroboros_bloodline_desc
+			}
+			desc = trait_ouroboros_bloodline_character_desc
 		}
 	}
 }
@@ -291,18 +373,20 @@ zeus_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
+		strong
 	}
 	
 	ruler_designer_cost = 250
@@ -318,6 +402,11 @@ zeus_bloodline = {
 	fertility = 0.5
 	prowess = 7
 	life_expectancy = 30
+	
+	culture_modifier = {
+		parameter = strong_traits_more_valued
+		monthly_prestige = 0.5
+	}
 	
 	diplomacy = -3
 	stewardship = 2
@@ -401,18 +490,20 @@ posseidon_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
+		strong
 	}
 	
 	ruler_designer_cost = 250
@@ -423,6 +514,11 @@ posseidon_bloodline = {
 	genetic = yes
 	physical = yes
 	good = yes
+	
+	culture_modifier = {
+		parameter = strong_traits_more_valued
+		monthly_prestige = 0.5
+	}
 	
 	health = 1.5
 	fertility = 0.5
@@ -448,32 +544,10 @@ posseidon_bloodline = {
 	islam_religion_opinion = -25
 	christianity_religion_opinion = -25
 	
-	triggered_opinion = {
-		parameter = special_doctrine_is_christian_faith
-		opinion_modifier = blood_of_false_god_bad_3
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_islamic_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_jewish_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
 	culture_modifier = {
 		parameter = strong_traits_more_valued
 		monthly_prestige = 0.5
 	}
-	
 	
 	desc = {
 		first_valid = {
@@ -505,18 +579,19 @@ hades_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 250
@@ -527,6 +602,11 @@ hades_bloodline = {
 	genetic = yes
 	physical = yes
 	good = yes
+	
+	culture_modifier = {
+		parameter = strong_traits_more_valued
+		monthly_prestige = 0.5
+	}
 	
 	health = 1.5
 	fertility = 0.5
@@ -551,27 +631,6 @@ hades_bloodline = {
 	same_opinion = 15
 	islam_religion_opinion = -25
 	christianity_religion_opinion = -25
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_christian_faith
-		opinion_modifier = blood_of_false_god_bad_3
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_islamic_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_jewish_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
 	
 	desc = {
 		first_valid = {
@@ -603,18 +662,19 @@ aphrodite_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 200
@@ -652,21 +712,18 @@ aphrodite_bloodline = {
 	triggered_opinion = {
 		parameter = special_doctrine_is_christian_faith
 		opinion_modifier = blood_of_false_god_bad_3
-		check_missing = yes
 		ignore_opinion_value_if_same_trait = yes
 	}
 	
 	triggered_opinion = {
 		parameter = special_doctrine_is_islamic_faith
 		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
 		ignore_opinion_value_if_same_trait = yes
 	}
 	
 	triggered_opinion = {
 		parameter = special_doctrine_is_jewish_faith
 		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
 		ignore_opinion_value_if_same_trait = yes
 	}
 	
@@ -689,6 +746,7 @@ ares_bloodline = {
 	opposites = {
 		dragonic_bloodline
 		antler_bloodline
+		ouroboros_bloodline
 		zeus_bloodline
 		posseidon_bloodline
 		hades_bloodline
@@ -698,20 +756,21 @@ ares_bloodline = {
 		odin_bloodline
 		thor_bloodline
 		loki_bloodline
-		ouroboros_bloodline
+		freyja_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
+		amun_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		genesha_bloodline
+		strong
 	}
 	
 	ruler_designer_cost = 200
@@ -757,21 +816,18 @@ ares_bloodline = {
 	triggered_opinion = {
 		parameter = special_doctrine_is_christian_faith
 		opinion_modifier = blood_of_false_god_bad_3
-		check_missing = yes
 		ignore_opinion_value_if_same_trait = yes
 	}
 	
 	triggered_opinion = {
 		parameter = special_doctrine_is_islamic_faith
 		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
 		ignore_opinion_value_if_same_trait = yes
 	}
 	
 	triggered_opinion = {
 		parameter = special_doctrine_is_jewish_faith
 		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
 		ignore_opinion_value_if_same_trait = yes
 	}
 	
@@ -805,18 +861,19 @@ athena_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 200
@@ -853,27 +910,6 @@ athena_bloodline = {
 	islam_religion_opinion = -25
 	christianity_religion_opinion = -25
 	
-	triggered_opinion = {
-		parameter = special_doctrine_is_christian_faith
-		opinion_modifier = blood_of_false_god_bad_3
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_islamic_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_jewish_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
 	desc = {
 		first_valid = {
 			triggered_desc = {
@@ -904,18 +940,19 @@ medusa_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 150
@@ -985,22 +1022,24 @@ odin_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
+		strong
 	}
 	
 	ruler_designer_cost = 250
-	shown_in_ruler_designer = no
+	shown_in_ruler_designer = yes
 	
 	birth = 0
 	random_creation = 0
@@ -1009,32 +1048,36 @@ odin_bloodline = {
 	physical = yes
 	good = yes
 	
+	health = 1.75
+	fertility = -1.5
+	prowess = 6
+	life_expectancy = 30
+	
+	culture_modifier = {
+		parameter = strong_traits_more_valued
+		monthly_prestige = 0.5
+	}
+	
+	diplomacy = 3 #poet
+	stewardship = 3
+	martial = 2
+	intrigue = 1
+	learning = 4
+	
+	ai_energy = medium_positve_ai_value
+	ai_honor = high_negative_ai_value
+	ai_rationality = dominant_positive_ai_value
+	ai_greed = dominant_positive_ai_value
+	ai_boldness = low_positive_ai_value
+	ai_sociability = medium_positive_ai_value
+	
 	attraction_opinion = 15
 	tribal_government_opinion = 10
-	vassal_opinion = 5
-	same_opinion = 15
+	vassal_opinion = -10
+	same_opinion = -15
+	christianity_religion_opinion = -25
+	islam_religion_opinion = -20
 	germanic_religion_opinion = 25
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_christian_faith
-		opinion_modifier = blood_of_false_god_bad_3
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_islamic_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_jewish_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
 	
 	desc = {
 		first_valid = {
@@ -1066,22 +1109,24 @@ thor_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
+		strong
 	}
 	
 	ruler_designer_cost = 250
-	shown_in_ruler_designer = no
+	shown_in_ruler_designer = yes
 	
 	birth = 0
 	random_creation = 0
@@ -1090,32 +1135,34 @@ thor_bloodline = {
 	physical = yes
 	good = yes
 	
-	attraction_opinion = 15
-	tribal_government_opinion = 10
-	vassal_opinion = 5
+	health = 2.25
+	fertility = -1.5
+	prowess = 7
+	life_expectancy = 30
+	
+	culture_modifier = {
+		parameter = strong_traits_more_valued
+		monthly_prestige = 0.5
+	}
+	
+	diplomacy = -2
+	martial = 6
+	intrigue = -3
+	learning = -2
+	
+	ai_energy = dominant_positve_ai_value
+	ai_honor = dominant_positive_ai_value
+	ai_rationality = medium_negative_ai_value
+	ai_boldness = dominant_positive_ai_value
+	ai_sociability = high_positive_ai_value
+	
+	attraction_opinion = 25
+	tribal_government_opinion = 25
+	vassal_opinion = 15
 	same_opinion = 15
+	christianity_religion_opinion = -25
+	islam_religion_opinion = -20
 	germanic_religion_opinion = 25
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_christian_faith
-		opinion_modifier = blood_of_false_god_bad_3
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_islamic_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_jewish_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
 	
 	desc = {
 		first_valid = {
@@ -1147,22 +1194,23 @@ loki_bloodline = {
 		thor_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 250
-	shown_in_ruler_designer = no
+	shown_in_ruler_designer = yes
 	
 	birth = 0
 	random_creation = 0
@@ -1171,32 +1219,31 @@ loki_bloodline = {
 	physical = yes
 	good = yes
 	
-	attraction_opinion = 15
-	tribal_government_opinion = 10
-	vassal_opinion = 5
-	same_opinion = 15
+	health = 1.5
+	fertility = 0.5
+	prowess = 3
+	life_expectancy = 25
+	
+	diplomacy = 3
+	stewardship = 2
+	martial = -4
+	intrigue = 4
+	learning = 2
+	
+	ai_energy = medium_positve_ai_value
+	ai_honor = dominant_negative_ai_value
+	ai_rationality = dominant_positive_ai_value
+	ai_greed = dominant_positive_ai_value
+	ai_boldness = low_positive_ai_value
+	ai_sociability = high_positive_ai_value
+	
+	attraction_opinion = 25
+	tribal_government_opinion = -10
+	vassal_opinion = -15
+	same_opinion = -15
+	islam_religion_opinion = -20
+	christianity_religion_opinion = -25
 	germanic_religion_opinion = 15
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_christian_faith
-		opinion_modifier = blood_of_false_god_bad_3
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_islamic_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_jewish_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
 	
 	desc = {
 		first_valid = {
@@ -1211,7 +1258,7 @@ loki_bloodline = {
 	}
 }
 
-frigg_bloodline = {
+freyja_bloodline = {
 	index = 5303
 	
 	opposites = {
@@ -1229,21 +1276,22 @@ frigg_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		amon_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 250
-	shown_in_ruler_designer = no
+	shown_in_ruler_designer = yes
 	
 	birth = 0
 	random_creation = 0
@@ -1252,30 +1300,42 @@ frigg_bloodline = {
 	physical = yes
 	good = yes
 	
-	attraction_opinion = 15
+	health = 1.5
+	fertility = -1
+	prowess = 5
+	life_expectancy = 25
+	
+	diplomacy = 3
+	martial = 2
+	intrigue = 2
+	learning = 4
+	
+	ai_energy = dominant_positve_ai_value
+	ai_honor = low_positive_ai_value
+	ai_zeal = very_low_negative_ai_value
+	ai_rationality = dominant_positive_ai_value
+	ai_greed = dominant_positive_ai_value
+	ai_sociability = medium_positive_ai_value
+	ai_amenity_target_baseline = 1
+	ai_amenity_spending = 0.15
+	
+	attraction_opinion = 25
 	tribal_government_opinion = 10
-	vassal_opinion = 5
-	same_opinion = 15
+	vassal_opinion = 10
+	same_opinion = 25
+	islam_religion_opinion = -20
+	christianity_religion_opinion = -25
 	germanic_religion_opinion = 15
 	
 	triggered_opinion = {
-		parameter = special_doctrine_is_christian_faith
-		opinion_modifier = blood_of_false_god_bad_3
-		check_missing = yes
+		parameter = doctrine_witchcraft_crime
+		opinion_modifier = blood_of_witch_crime
 		ignore_opinion_value_if_same_trait = yes
 	}
 	
 	triggered_opinion = {
-		parameter = special_doctrine_is_islamic_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_jewish_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
+		parameter = doctrine_witchcraft_shunned
+		opinion_modifier = blood_of_witch_shunned
 		ignore_opinion_value_if_same_trait = yes
 	}
 	
@@ -1285,90 +1345,9 @@ frigg_bloodline = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_frigg_bloodline_desc
+				desc = trait_freyja_bloodline_desc
 			}
-			desc = trait_frigg_bloodline_character_desc
-		}
-	}
-}
-
-ouroboros_bloodline = {
-	index = 5304
-	
-	opposites = {
-		dragonic_bloodline
-		antler_bloodline
-		zeus_bloodline
-		posseidon_bloodline
-		hades_bloodline
-		aphrodite_bloodline
-		ares_bloodline
-		athena_bloodline
-		medusa_bloodline
-		odin_bloodline
-		thor_bloodline
-		loki_bloodline
-		dwarven_bloodline
-		ra_bloodline
-		seth_bloodline
-		anubis_bloodline
-		thoth_bloodline
-		ptah_bloodline
-		brahma_bloodline
-		vishu_bloodline
-		shiva_bloodline
-		djin_bloodline
-		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
-	}
-	
-	ruler_designer_cost = 250
-	shown_in_ruler_designer = no
-	
-	birth = 0
-	random_creation = 0
-	
-	genetic = yes
-	physical = yes
-	good = yes
-	
-	attraction_opinion = 15
-	tribal_government_opinion = 10
-	vassal_opinion = 5
-	same_opinion = 15
-	germanic_religion_opinion = 15
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_christian_faith
-		opinion_modifier = blood_of_false_god_bad_3
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_islamic_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_jewish_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_ouroboros_bloodline_desc
-			}
-			desc = trait_ouroboros_bloodline_character_desc
+			desc = trait_freyja_bloodline_character_desc
 		}
 	}
 }
@@ -1377,6 +1356,8 @@ dwarven_bloodline = {
 	index = 5305
 	
 	opposites = {
+		dwarf
+		giant
 		dragonic_bloodline
 		antler_bloodline
 		zeus_bloodline
@@ -1390,22 +1371,23 @@ dwarven_bloodline = {
 		thor_bloodline
 		loki_bloodline
 		ouroboros_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
-	ruler_designer_cost = 250
-	shown_in_ruler_designer = no
+	ruler_designer_cost = 150
+	shown_in_ruler_designer = yes
 	
 	birth = 0
 	random_creation = 0
@@ -1414,6 +1396,26 @@ dwarven_bloodline = {
 	physical = yes
 	good = yes
 	
+	health = 1
+	fertility = -0.5
+	prowess = 4
+	life_expectancy = 15
+	
+	diplomacy = -1
+	stewardship = 4
+	martial = 2
+	intrigue = -2
+	learning = 2
+	
+	ai_energy = medium_positve_ai_value
+	ai_honor = medium_positive_ai_value
+	ai_rationality = dominant_positive_ai_value
+	ai_greed = high_positive_ai_value
+	ai_boldness = medium_positive_ai_value
+	ai_sociability = medium_positive_ai_value
+	
+	islam_religion_opinion = -10
+	christianity_religion_opinion = -10
 	germanic_religion_opinion = 5
 	
 	desc = {
@@ -1433,7 +1435,7 @@ dwarven_bloodline = {
 ############	Egypt Bloodlines		############
 ####################################################
 
-ra_bloodline = {
+osiris_bloodline = {
 	index = 5325
 	
 	opposites = {
@@ -1456,12 +1458,13 @@ ra_bloodline = {
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 250
@@ -1506,9 +1509,9 @@ ra_bloodline = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_ra_bloodline_desc
+				desc = trait_osiris_bloodline_desc
 			}
-			desc = trait_ra_bloodline_character_desc
+			desc = trait_osiris_bloodline_character_desc
 		}
 	}
 }
@@ -1531,17 +1534,19 @@ seth_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
+		strong
 	}
 	
 	ruler_designer_cost = 250
@@ -1553,6 +1558,11 @@ seth_bloodline = {
 	genetic = yes
 	physical = yes
 	good = yes
+	
+	culture_modifier = {
+		parameter = strong_traits_more_valued
+		monthly_prestige = 0.5
+	}
 	
 	attraction_opinion = 15
 	tribal_government_opinion = 10
@@ -1611,17 +1621,18 @@ anubis_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 250
@@ -1691,17 +1702,18 @@ thoth_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 250
@@ -1771,17 +1783,18 @@ ptah_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 250
@@ -1833,7 +1846,7 @@ ptah_bloodline = {
 	}
 }
 
-amon_bloodline = {
+amun_bloodline = {
 	index = 5330
 	
 	opposites = {
@@ -1851,17 +1864,18 @@ amon_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
+		freyja_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 250
@@ -1906,9 +1920,9 @@ amon_bloodline = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_amon_bloodline_desc
+				desc = trait_amun_bloodline_desc
 			}
-			desc = trait_amon_bloodline_character_desc
+			desc = trait_amun_bloodline_character_desc
 		}
 	}
 }
@@ -1935,17 +1949,18 @@ brahma_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 250
@@ -1998,7 +2013,7 @@ brahma_bloodline = {
 	}
 }
 
-vishu_bloodline = {
+vishnu_bloodline = {
 	index = 5351
 	
 	opposites = {
@@ -2016,7 +2031,7 @@ vishu_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
@@ -2025,8 +2040,9 @@ vishu_bloodline = {
 		shiva_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 250
@@ -2072,9 +2088,9 @@ vishu_bloodline = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_vishu_bloodline_desc
+				desc = trait_vishnu_bloodline_desc
 			}
-			desc = trait_vishu_bloodline_character_desc
+			desc = trait_vishnu_bloodline_character_desc
 		}
 	}
 }
@@ -2097,17 +2113,18 @@ shiva_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		djin_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 250
@@ -2159,6 +2176,87 @@ shiva_bloodline = {
 	}
 }
 
+genesha_bloodline = {
+	index = 5353
+	
+	opposites = {
+		dragonic_bloodline
+		antler_bloodline
+		zeus_bloodline
+		posseidon_bloodline
+		hades_bloodline
+		aphrodite_bloodline
+		ares_bloodline
+		athena_bloodline
+		medusa_bloodline
+		odin_bloodline
+		thor_bloodline
+		loki_bloodline
+		ouroboros_bloodline
+		dwarven_bloodline
+		osiris_bloodline
+		seth_bloodline
+		anubis_bloodline
+		thoth_bloodline
+		ptah_bloodline
+		brahma_bloodline
+		vishnu_bloodline
+		djin_bloodline
+		giant_bloodline
+		freyja_bloodline
+		amun_bloodline
+	}
+	
+	ruler_designer_cost = 250
+	shown_in_ruler_designer = no
+	
+	birth = 0
+	random_creation = 0
+	
+	genetic = yes
+	physical = yes
+	good = yes
+	
+	tribal_government_opinion = 10
+	vassal_opinion = 5
+	same_opinion = 15
+	hinduism_religion_opinion = 20
+	
+	triggered_opinion = {
+		parameter = special_doctrine_is_christian_faith
+		opinion_modifier = blood_of_false_god_bad_3
+		check_missing = yes
+		ignore_opinion_value_if_same_trait = yes
+	}
+	
+	triggered_opinion = {
+		parameter = special_doctrine_is_islamic_faith
+		opinion_modifier = blood_of_false_god_bad_2
+		check_missing = yes
+		ignore_opinion_value_if_same_trait = yes
+	}
+	
+	triggered_opinion = {
+		parameter = special_doctrine_is_jewish_faith
+		opinion_modifier = blood_of_false_god_bad_2
+		check_missing = yes
+		ignore_opinion_value_if_same_trait = yes
+	}
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_shiva_bloodline_desc
+			}
+			desc = trait_shiva_bloodline_character_desc
+		}
+	}
+}
+
+
 ####################################################
 ###########	  Sub-Saharan Bloodlines	 ###########
 ####################################################
@@ -2181,17 +2279,18 @@ djin_bloodline = {
 		loki_bloodline
 		ouroboros_bloodline
 		dwarven_bloodline
-		ra_bloodline
+		osiris_bloodline
 		seth_bloodline
 		anubis_bloodline
 		thoth_bloodline
 		ptah_bloodline
 		brahma_bloodline
-		vishu_bloodline
+		vishnu_bloodline
 		shiva_bloodline
 		giant_bloodline
-		frigg_bloodline
-		amon_bloodline
+		freyja_bloodline
+		amun_bloodline
+		genesha_bloodline
 	}
 	
 	ruler_designer_cost = 250
