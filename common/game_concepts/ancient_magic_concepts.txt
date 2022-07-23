@@ -223,12 +223,12 @@ seth = {}
 anubis = {}
 thoth = { texture = "gfx/interface/icons/thoth.dds" }
 ptah = {}
-amun = {}
+amun = { texture = "gfx/interface/icons/amun_icon.dds" }
 brahma = { texture = "gfx/interface/icons/brahma_icon.dds" }
 genesha = { texture = "gfx/interface/icons/genesha_icon.dds" }
 vishnu = { texture = "gfx/interface/icons/vishnu_icon.dds" }
 shiva = { texture = "gfx/interface/icons/shiva_icon.dds" }
-djin = {}
+djin = { texture = "gfx/interface/icons/djin_icon.dds" }
 anu = {}
 enlil = {}
 enki = {}
