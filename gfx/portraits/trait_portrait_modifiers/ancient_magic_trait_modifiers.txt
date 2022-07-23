@@ -69,6 +69,7 @@
 		traits = { 
 			giant
 			giant_bloodline
+			ouroboros_bloodline
 		}
 		dna_modifiers = {
 			morph = {
@@ -115,6 +116,79 @@
 			}
 		}
 	}
+
+	norse_dwarfe = {
+		traits = { dwarven_bloodline }
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_head_top_width
+				template = head_top_width_pos
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_forehead_brow_forward
+				template = forehead_brow_forward_pos
+				value = 0.6
+			}
+			morph = {
+				mode = modify
+				gene = gene_forehead_height
+				template = forehead_height_pos
+				value = 0.25
+			}
+			morph = {
+				mode = modify
+				gene = gene_forehead_width
+				template = forehead_width_pos
+				value = 0.25
+			}
+			morph = {
+				mode = modify
+				gene = gene_mouth_height
+				template = mouth_height_pos
+				value = 0.25
+			}	
+			morph = {
+				mode = modify
+				gene = gene_bs_nose_ridge_width
+				template = nose_ridge_width_pos
+				value = 0.25
+			}		
+			morph = {
+				mode = modify
+				gene = gene_bs_nose_height
+				template = nose_height_pos
+				value = 0.25
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_nose_tip_width
+				template = nose_tip_width_pos
+				value = 0.25
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_nose_ridge_angle
+				template = nose_ridge_angle_pos
+				value = 0.25
+			}
+			morph = {
+				mode = modify
+				gene = gene_height
+				template = dwarf_height
+				value = 0
+			}
+			color = {
+				gene = skin_color
+				mode = replace
+				
+				x = 10.0
+				y = 10.0
+			}
+		}
+	}
 }
 
 beauty = {
@@ -124,6 +198,10 @@ beauty = {
 			beauty_good_2
 			beauty_good_3
 			antler_bloodline
+			aphrodite_bloodline
+			dragonic_bloodline
+			loki_bloodline
+			ares_bloodline
 		}
 		dna_modifiers = {
 			morph = {
@@ -150,6 +228,27 @@ beauty = {
 			}
 		}
 	}
+	
+	freyja = {
+		traits = {
+			freyja_bloodline
+		}
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_beauty_1
+				value = 1.0
+			}
+		}
+		color = {
+			gene = hair_color
+			mode = replace
+			
+			x = -1.0
+			y = -0.2
+		}
+	}
 }
 
 scaly = {
@@ -160,6 +259,8 @@ scaly = {
 		traits = {
 			scaly
 			dragonic_bloodline
+			medusa_bloodline
+			ouroboros_bloodline
 		}
 		dna_modifiers = {
 			morph = {
@@ -191,6 +292,27 @@ scaly = {
 				gene = gene_eyebrows_fullness
 				template = no_eyebrows
 				value = 0.5
+			}
+		}
+	}
+}
+
+bloodline = {
+	greek = {
+		traits = {
+			zeus_bloodline
+			posseidon_bloodline
+			hades_bloodline
+			aphrodite_bloodline
+			ares_bloodline
+			athena_bloodline
+		}
+		dna_modifiers = {
+			morph = {
+				mode = add
+				gene = complexion
+				template = complexion_beauty_1
+				value = 0.35
 			}
 		}
 	}
