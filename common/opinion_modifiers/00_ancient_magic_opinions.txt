@@ -74,3 +74,35 @@ gave_me_their_blood_opinion = {
 	opinion = 25
 	years = 5
 }
+
+blood_of_false_god_bad_1 = {
+	opinion = -10
+}
+
+blood_of_false_god_bad_2 = {
+	opinion = -20
+}
+
+blood_of_false_god_bad_3 = {
+	opinion = -30
+}
+
+blood_of_foreign_god_bad_1 = {
+	opinion = -5
+}
+
+blood_of_foreign_god_bad_2 = {
+	opinion = -10
+}
+
+blood_of_foreign_god_bad_3 = {
+	opinion = -20
+}
+
+blood_of_witch_crime = {
+	opinion = -25
+}
+
+blood_of_witch_shunned = {
+	opinion = -15
+}

@@ -29,6 +29,8 @@ dragonic_bloodline_affinity_boost = 7
 giant_bloodline_affinity_boost = 2
 #Antler Bloodline -> Antlers - Mystical Deers which use mana for their defence
 antler_bloodline_affinity_boost = 4
+#Ouroboros Bloodline -> Those with this bloodline have high physical resistance and are most of the time synonymous with immortality
+ouroboros_bloodline_affinity_boost = 6
 
 # Greek/Roman Mythos
 zeus_bloodline_affinity_boost = 5
@@ -43,22 +45,22 @@ medusa_bloodline_affinity_boost = 3
 odin_bloodline_affinity_boost = 5
 thor_bloodline_affinity_boost = 5
 loki_bloodline_affinity_boost = 5
-frigg_bloodline_affinity_boost = 5
-ouroboros_bloodline_affinity_boost = 7
+freyja_bloodline_affinity_boost = 5
 dwarven_bloodline_affinity_boost = 3
 
 # Ehyptian Mythos
-ra_bloodline_affinity_boost = 6
+osiris_bloodline_affinity_boost = 6
 seth_bloodline_affinity_boost = 5
 anubis_bloodline_affinity_boost = 5
 thoth_bloodline_affinity_boost = 6
 ptah_bloodline_affinity_boost = 5
-amon_bloodline_affinity_boost = 6
+amun_bloodline_affinity_boost = 6
 
 # Indian Mythos
 brahma_bloodline_affinity_boost = 7
-vishu_bloodline_affinity_boost = 5
+vishnu_bloodline_affinity_boost = 5
 shiva_bloodline_affinity_boost = 5
+genesha_bloodline_affinity_boost = 5
 
 # Arabian/Mesopotamian Mythos
 djin_bloodline_affinity_boost = 4
@@ -255,11 +257,11 @@ mana_affinity_bloodline_boost = { #Bonus added to mana affinity thanks to ones B
 	}
 	else_if = {
 		limit = {
-			has_trait = frigg_bloodline
+			has_trait = freyja_bloodline
 		}
 		add = {
-			value = frigg_bloodline_affinity_boost
-			desc = MANA_AFFINITY_FRIGG_BLOODLINE
+			value = freyja_bloodline_affinity_boost
+			desc = MANA_AFFINITY_FREYJA_BLOODLINE
 			format = "FORMAT_MANA_AFFINITY_BOOST"
 		}
 	}
@@ -285,11 +287,11 @@ mana_affinity_bloodline_boost = { #Bonus added to mana affinity thanks to ones B
 	}
 	else_if = {
 		limit = {
-			has_trait = ra_bloodline
+			has_trait = osiris_bloodline
 		}
 		add = {
-			value = ra_bloodline_affinity_boost
-			desc = MANA_AFFINITY_RA_BLOODLINE
+			value = osiris_bloodline_affinity_boost
+			desc = MANA_AFFINITY_OSIRIS_BLOODLINE
 			format = "FORMAT_MANA_AFFINITY_BOOST"
 		}
 	}
@@ -335,11 +337,11 @@ mana_affinity_bloodline_boost = { #Bonus added to mana affinity thanks to ones B
 	}
 	else_if = {
 		limit = {
-			has_trait = amon_bloodline
+			has_trait = amun_bloodline
 		}
 		add = {
-			value = amon_bloodline_affinity_boost
-			desc = MANA_AFFINITY_AMON_BLOODLINE
+			value = amun_bloodline_affinity_boost
+			desc = MANA_AFFINITY_AMUN_BLOODLINE
 			format = "FORMAT_MANA_AFFINITY_BOOST"
 		}
 	}
@@ -355,11 +357,11 @@ mana_affinity_bloodline_boost = { #Bonus added to mana affinity thanks to ones B
 	}
 	else_if = {
 		limit = {
-			has_trait = vishu_bloodline
+			has_trait = vishnu_bloodline
 		}
 		add = {
-			value = vishu_bloodline_affinity_boost
-			desc = MANA_AFFINITY_VISHU_BLOODLINE
+			value = vishnu_bloodline_affinity_boost
+			desc = MANA_AFFINITY_VISHNU_BLOODLINE
 			format = "FORMAT_MANA_AFFINITY_BOOST"
 		}
 	}
@@ -370,6 +372,16 @@ mana_affinity_bloodline_boost = { #Bonus added to mana affinity thanks to ones B
 		add = {
 			value = shiva_bloodline_affinity_boost
 			desc = MANA_AFFINITY_SHIVE_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = genesha_bloodline
+		}
+		add = {
+			value = genesha_bloodline_affinity_boost
+			desc = MANA_AFFINITY_GENESHA_BLOODLINE
 			format = "FORMAT_MANA_AFFINITY_BOOST"
 		}
 	}

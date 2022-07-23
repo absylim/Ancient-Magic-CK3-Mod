@@ -215,18 +215,19 @@ medusa = {}
 odin = {}
 thor = {}
 loki = {}
-frigg = {}
+freyja = {}
 ouroboros = {}
 dwarve = {}
-re = {}
 osiris = {}
 seth = {}
 anubis = {}
+thoth = { texture = "gfx/interface/icons/thoth.dds" }
 ptah = {}
-amon = {}
-brahma = {}
-vishu = {}
-shiva = {}
+amun = {}
+brahma = { texture = "gfx/interface/icons/brahma_icon.dds" }
+genesha = { texture = "gfx/interface/icons/genesha_icon.dds" }
+vishnu = { texture = "gfx/interface/icons/vishnu_icon.dds" }
+shiva = { texture = "gfx/interface/icons/shiva_icon.dds" }
 djin = {}
 anu = {}
 enlil = {}
