@@ -55,11 +55,12 @@ ancient_magic_gain_talent_events.003 = {
 						geographical_region = custom_roman_empire 
 						geographical_region = custom_sicily 
 						geographical_region = custom_roman_mesopotamia 
+						geographical_region = ghw_region_anatolia
 					}
 				}
 			}
 			random_list = {
-				100 = {} #Nothing happens
+				20 = {} #Nothing happens
 				1 = { give_greek_bloodline_effect = yes }
 			}
 		}
@@ -79,7 +80,7 @@ ancient_magic_gain_talent_events.003 = {
 				}
 			}
 			random_list = {
-				100 = {}
+				20 = {}
 				1 = { give_norse_bloodline_effect = yes }
 			}
 		}
@@ -98,7 +99,7 @@ ancient_magic_gain_talent_events.003 = {
 				}
 			}
 			random_list = {
-				100 = {}
+				20 = {}
 				1 = { give_india_bloodline_effect = yes }
 			}
 		}
@@ -114,7 +115,7 @@ ancient_magic_gain_talent_events.003 = {
 				}
 			}
 			random_list = {
-				100 = {}
+				20 = {}
 				1 = { give_egyptian_bloodline_effect = yes }
 			}
 		}
@@ -131,7 +132,7 @@ ancient_magic_gain_talent_events.003 = {
 				}
 			}
 			random_list = {
-				100 = {}
+				20 = {}
 				1 = { give_mesopotamia_bloodline_effect = yes }
 			}
 		}
