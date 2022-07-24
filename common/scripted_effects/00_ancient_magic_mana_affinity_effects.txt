@@ -312,6 +312,30 @@ add_magical_bloodline_effect = {
 			  flag:dragonic_bloodline = { add_trait = dragonic_bloodline }
 			  flag:antler_bloodline = { add_trait = antler_bloodline }
 			  flag:giant_bloodline = { add_trait = giant_bloodline }
+			  flag:zeus_bloodline = { add_trait = zeus_bloodline }
+			  flag:posseidon_bloodline = { add_trait = posseidon_bloodline }
+			  flag:hades_bloodline = { add_trait = hades_bloodline }
+			  flag:aphrodite_bloodline = { add_trait = aphrodite_bloodline }
+			  flag:ares_bloodline = { add_trait = ares_bloodline }
+			  flag:athena_bloodline = { add_trait = athena_bloodline }
+			  flag:medusa_bloodline = { add_trait = medusa_bloodline }
+			  flag:odin_bloodline = { add_trait = odin_bloodline }
+			  flag:thor_bloodline = { add_trait = thor_bloodline }
+			  flag:loki_bloodline = { add_trait = loki_bloodline }
+			  flag:freyja_bloodline = { add_trait = freyja_bloodline }
+			  flag:ouroboros_bloodline = { add_trait = ouroboros_bloodline }
+			  flag:dwarven_bloodline = { add_trait = dwarven_bloodline }
+			  flag:osiris_bloodline = { add_trait = osiris_bloodline }
+			  flag:seth_bloodline = { add_trait = seth_bloodline }
+			  flag:anubis_bloodline = { add_trait = anubis_bloodline }
+			  flag:thoth_bloodline = { add_trait = thoth_bloodline }
+			  flag:ptah_bloodline = { add_trait = ptah_bloodline }
+			  flag:amun_bloodline = { add_trait = amun_bloodline }
+			  flag:brahma_bloodline = { add_trait = brahma_bloodline }
+			  flag:vishnu_bloodline = { add_trait = vishnu_bloodline }
+			  flag:shiva_bloodline = { add_trait = shiva_bloodline }
+			  flag:genesha_bloodline = { add_trait = genesha_bloodline }
+			  flag:djinn_bloodline = { add_trait = djinn_bloodline }
 			}
 		}
 	}

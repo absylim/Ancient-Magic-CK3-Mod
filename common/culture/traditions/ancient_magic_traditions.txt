@@ -425,7 +425,10 @@ tradition_mythology_india = {
 	}
 	
 	is_shown = {
-		has_cultural_pillar = heritage_dravidian
+		OR = {
+			has_cultural_pillar = heritage_dravidian
+			has_cultural_pillar = heritage_indo_aryan
+		}
 	}
 	
 	parameters = {

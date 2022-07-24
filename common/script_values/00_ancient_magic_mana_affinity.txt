@@ -29,6 +29,41 @@ dragonic_bloodline_affinity_boost = 7
 giant_bloodline_affinity_boost = 2
 #Antler Bloodline -> Antlers - Mystical Deers which use mana for their defence
 antler_bloodline_affinity_boost = 4
+#Ouroboros Bloodline -> Those with this bloodline have high physical resistance and are most of the time synonymous with immortality
+ouroboros_bloodline_affinity_boost = 6
+
+# Greek/Roman Mythos
+zeus_bloodline_affinity_boost = 5
+posseidon_bloodline_affinity_boost = 5
+hades_bloodline_affinity_boost = 5
+aphrodite_bloodline_affinity_boost = 5
+ares_bloodline_affinity_boost = 5
+athena_bloodline_affinity_boost = 5
+medusa_bloodline_affinity_boost = 3
+
+# Norse Mythos
+odin_bloodline_affinity_boost = 5
+thor_bloodline_affinity_boost = 5
+loki_bloodline_affinity_boost = 5
+freyja_bloodline_affinity_boost = 5
+dwarven_bloodline_affinity_boost = 3
+
+# Ehyptian Mythos
+osiris_bloodline_affinity_boost = 6
+seth_bloodline_affinity_boost = 5
+anubis_bloodline_affinity_boost = 5
+thoth_bloodline_affinity_boost = 6
+ptah_bloodline_affinity_boost = 5
+amun_bloodline_affinity_boost = 6
+
+# Indian Mythos
+brahma_bloodline_affinity_boost = 7
+vishnu_bloodline_affinity_boost = 5
+shiva_bloodline_affinity_boost = 5
+genesha_bloodline_affinity_boost = 5
+
+# Arabian/Mesopotamian Mythos
+djinn_bloodline_affinity_boost = 4
 
 #########################################################################################################################
 #########################################################################################################################
@@ -117,6 +152,246 @@ mana_affinity_bloodline_boost = { #Bonus added to mana affinity thanks to ones B
 		add = {
 			value = giant_bloodline_affinity_boost
 			desc = MANA_AFFINITY_GIANT_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = zeus_bloodline
+		}
+		add = {
+			value = zeus_bloodline_affinity_boost
+			desc = MANA_AFFINITY_ZEUS_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = posseidon_bloodline
+		}
+		add = {
+			value = posseidon_bloodline_affinity_boost
+			desc = MANA_AFFINITY_POSSEIDON_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = hades_bloodline
+		}
+		add = {
+			value = hades_bloodline_affinity_boost
+			desc = MANA_AFFINITY_HADES_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = aphrodite_bloodline
+		}
+		add = {
+			value = aphrodite_bloodline_affinity_boost
+			desc = MANA_AFFINITY_APHRODITE_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = ares_bloodline
+		}
+		add = {
+			value = ares_bloodline_affinity_boost
+			desc = MANA_AFFINITY_ARES_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = athena_bloodline
+		}
+		add = {
+			value = athena_bloodline_affinity_boost
+			desc = MANA_AFFINITY_ATHENA_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = medusa_bloodline
+		}
+		add = {
+			value = medusa_bloodline_affinity_boost
+			desc = MANA_AFFINITY_MEDUSA_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = odin_bloodline
+		}
+		add = {
+			value = odin_bloodline_affinity_boost
+			desc = MANA_AFFINITY_ODIN_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = thor_bloodline
+		}
+		add = {
+			value = thor_bloodline_affinity_boost
+			desc = MANA_AFFINITY_THOR_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = loki_bloodline
+		}
+		add = {
+			value = loki_bloodline_affinity_boost
+			desc = MANA_AFFINITY_LOKI_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = freyja_bloodline
+		}
+		add = {
+			value = freyja_bloodline_affinity_boost
+			desc = MANA_AFFINITY_FREYJA_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = ouroboros_bloodline
+		}
+		add = {
+			value = ouroboros_bloodline_affinity_boost
+			desc = MANA_AFFINITY_OUROBOROS_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = dwarven_bloodline
+		}
+		add = {
+			value = dwarven_bloodline_affinity_boost
+			desc = MANA_AFFINITY_DWARVEN_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = osiris_bloodline
+		}
+		add = {
+			value = osiris_bloodline_affinity_boost
+			desc = MANA_AFFINITY_OSIRIS_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = seth_bloodline
+		}
+		add = {
+			value = seth_bloodline_affinity_boost
+			desc = MANA_AFFINITY_SETH_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = anubis_bloodline
+		}
+		add = {
+			value = anubis_bloodline_affinity_boost
+			desc = MANA_AFFINITY_ANUBIS_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = thoth_bloodline
+		}
+		add = {
+			value = thoth_bloodline_affinity_boost
+			desc = MANA_AFFINITY_THOTH_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = ptah_bloodline
+		}
+		add = {
+			value = ptah_bloodline_affinity_boost
+			desc = MANA_AFFINITY_PTAH_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = amun_bloodline
+		}
+		add = {
+			value = amun_bloodline_affinity_boost
+			desc = MANA_AFFINITY_AMUN_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = brahma_bloodline
+		}
+		add = {
+			value = brahma_bloodline_affinity_boost
+			desc = MANA_AFFINITY_BRAHMA_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = vishnu_bloodline
+		}
+		add = {
+			value = vishnu_bloodline_affinity_boost
+			desc = MANA_AFFINITY_VISHNU_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = shiva_bloodline
+		}
+		add = {
+			value = shiva_bloodline_affinity_boost
+			desc = MANA_AFFINITY_SHIVE_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = genesha_bloodline
+		}
+		add = {
+			value = genesha_bloodline_affinity_boost
+			desc = MANA_AFFINITY_GENESHA_BLOODLINE
+			format = "FORMAT_MANA_AFFINITY_BOOST"
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = djinn_bloodline
+		}
+		add = {
+			value = djinn_bloodline_affinity_boost
+			desc = MANA_AFFINITY_DJINN_BLOODLINE
 			format = "FORMAT_MANA_AFFINITY_BOOST"
 		}
 	}
