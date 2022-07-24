@@ -767,3 +767,9 @@ give_india_bloodline_effect = {
 		1 = { add_trait = genesha_bloodline }
 	}
 }
+
+give_mesopotamia_bloodline_effect = {
+	random_list = {
+		1 = { add_trait = djinn_bloodline }
+	}
+}

@@ -119,6 +119,6 @@
  trait_genesha_bloodline_desc: "The blood of [genesha|E] flows through the veins of this character."
  trait_genesha_bloodline_character_desc: "The blood of [genesha|E] flows through the veins of [ROOT.GetCharacter.GetFirstNameNoTooltip]."
  #Arabia
- trait_djin_bloodline: "Blood of [djin|E]"
- trait_djin_bloodline_desc: "The blood of [djin|E] flows through the veins of this character."
- trait_djin_bloodline_character_desc: "The blood of [djin|E] flows through the veins of [ROOT.GetCharacter.GetFirstNameNoTooltip]."
+ trait_djinn_bloodline: "Blood of [djinn|E]"
+ trait_djinn_bloodline_desc: "The blood of [djinn|E] flows through the veins of this character."
+ trait_djinn_bloodline_character_desc: "The blood of [djinn|E] flows through the veins of [ROOT.GetCharacter.GetFirstNameNoTooltip]."

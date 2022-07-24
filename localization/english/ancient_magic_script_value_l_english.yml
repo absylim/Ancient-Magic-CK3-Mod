@@ -28,4 +28,4 @@
  MANA_AFFINITY_VISHNU_BLOODLINE: "[GetTrait('vishnu_bloodline').GetName( GetNullCharacter ) |LV]"
  MANA_AFFINITY_SHIVE_BLOODLINE: "[GetTrait('shiva_bloodline').GetName( GetNullCharacter ) |LV]"
  MANA_AFFINITY_GENESHA_BLOODLINE: "[GetTrait('genesha_bloodline').GetName( GetNullCharacter ) |LV]"
- MANA_AFFINITY_DJIN_BLOODLINE: "[GetTrait('djin_bloodline').GetName( GetNullCharacter ) |LV]"
+ MANA_AFFINITY_DJINN_BLOODLINE: "[GetTrait('djinn_bloodline').GetName( GetNullCharacter ) |LV]"

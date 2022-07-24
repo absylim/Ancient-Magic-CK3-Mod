@@ -83,6 +83,58 @@ ancient_magic_gain_talent_events.003 = {
 				1 = { give_norse_bloodline_effect = yes }
 			}
 		}
+		else_if = {#Is in India
+			limit = {
+				culture = { 
+					OR = {
+						has_cultural_pillar = heritage_dravidian
+						has_cultural_pillar = heritage_indo_aryan
+					}
+				}
+				location = { 
+					OR = {
+						geographical_region = world_india
+					}
+				}
+			}
+			random_list = {
+				100 = {}
+				1 = { give_india_bloodline_effect = yes }
+			}
+		}
+		else_if = {#Is Egyptian
+			limit = {
+				culture = { 
+					has_cultural_pillar = heritage_arabic
+				}
+				location = { 
+					OR = {
+						geographical_region = ghw_region_egypt 
+					}
+				}
+			}
+			random_list = {
+				100 = {}
+				1 = { give_egyptian_bloodline_effect = yes }
+			}
+		}
+		else_if = {#Is Mezopotamia/Arabia
+			limit = {
+				culture = { 
+					has_cultural_pillar = heritage_arabic
+				}
+				location = { 
+					OR = {
+						geographical_region = world_middle_east_arabia 
+						geographical_region = world_middle_east_persia
+					}
+				}
+			}
+			random_list = {
+				100 = {}
+				1 = { give_mesopotamia_bloodline_effect = yes }
+			}
+		}
 	}
 }
 

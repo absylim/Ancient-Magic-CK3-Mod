@@ -110,7 +110,7 @@ has_magical_bloodline_trigger = {
 		has_trait = brahma_bloodline
 		has_trait = vishnu_bloodline
 		has_trait = shiva_bloodline
-		has_trait = djin_bloodline
+		has_trait = djinn_bloodline
 	}
 }
 
@@ -143,6 +143,6 @@ has_magical_bloodline_of_type_trigger = {
 		flag:vishnu_bloodline = { $TARGET$ = { has_trait = vishnu_bloodline } }
 		flag:shiva_bloodline = { $TARGET$ = { has_trait = shiva_bloodline } }
 		flag:genesha_bloodline = { $TARGET$ = { has_trait = genesha_bloodline } }
-		flag:djin_bloodline = { $TARGET$ = { has_trait = djin_bloodline } }
+		flag:djinn_bloodline = { $TARGET$ = { has_trait = djinn_bloodline } }
 	}
 }

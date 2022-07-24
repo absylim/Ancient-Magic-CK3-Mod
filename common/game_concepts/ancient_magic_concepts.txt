@@ -228,7 +228,7 @@ brahma = { texture = "gfx/interface/icons/brahma_icon.dds" }
 genesha = { texture = "gfx/interface/icons/genesha_icon.dds" }
 vishnu = { texture = "gfx/interface/icons/vishnu_icon.dds" }
 shiva = { texture = "gfx/interface/icons/shiva_icon.dds" }
-djin = { texture = "gfx/interface/icons/djin_icon.dds" }
+djinn = { texture = "gfx/interface/icons/djinn_icon.dds" }
 anu = {}
 enlil = {}
 enki = {}

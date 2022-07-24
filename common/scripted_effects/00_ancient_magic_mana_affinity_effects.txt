@@ -335,7 +335,7 @@ add_magical_bloodline_effect = {
 			  flag:vishnu_bloodline = { add_trait = vishnu_bloodline }
 			  flag:shiva_bloodline = { add_trait = shiva_bloodline }
 			  flag:genesha_bloodline = { add_trait = genesha_bloodline }
-			  flag:djin_bloodline = { add_trait = djin_bloodline }
+			  flag:djinn_bloodline = { add_trait = djinn_bloodline }
 			}
 		}
 	}

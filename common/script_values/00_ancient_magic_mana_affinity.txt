@@ -63,7 +63,7 @@ shiva_bloodline_affinity_boost = 5
 genesha_bloodline_affinity_boost = 5
 
 # Arabian/Mesopotamian Mythos
-djin_bloodline_affinity_boost = 4
+djinn_bloodline_affinity_boost = 4
 
 #########################################################################################################################
 #########################################################################################################################
@@ -387,11 +387,11 @@ mana_affinity_bloodline_boost = { #Bonus added to mana affinity thanks to ones B
 	}
 	else_if = {
 		limit = {
-			has_trait = djin_bloodline
+			has_trait = djinn_bloodline
 		}
 		add = {
-			value = djin_bloodline_affinity_boost
-			desc = MANA_AFFINITY_DJIN_BLOODLINE
+			value = djinn_bloodline_affinity_boost
+			desc = MANA_AFFINITY_DJINN_BLOODLINE
 			format = "FORMAT_MANA_AFFINITY_BOOST"
 		}
 	}
