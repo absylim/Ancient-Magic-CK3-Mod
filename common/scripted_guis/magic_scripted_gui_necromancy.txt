@@ -13,7 +13,7 @@ inflict_illness_spell = {
 			add_trait = ill
 		}
 		change_mana_with_tooltip = { VALUE = inflict_illness_spell_cost.neg }
-		change_mage_xp = { VALUE = inflict_illness_spell_cost.abs }
+		change_mage_xp = { VALUE = inflict_illness_spell_xp.abs }
 	}
 }
 
@@ -61,7 +61,7 @@ plague_lord_spell = {
 			add_trait = bubonic_plague
 		}
 		change_mana_with_tooltip = { VALUE = plague_lord_spell_cost.neg }
-		change_mage_xp = { VALUE = plague_lord_spell_cost.abs }
+		change_mage_xp = { VALUE = plague_lord_spell_xp.abs }
 	}
 }
 
@@ -172,7 +172,7 @@ necromancy_spell = {
 			years = 2
 		}
 		change_mana_with_tooltip = { VALUE = necromancy_spell_cost.neg }
-		change_mage_xp = { VALUE = necromancy_spell_cost.abs }
+		change_mage_xp = { VALUE = necromancy_spell_xp.abs }
 	}
 }
 
@@ -238,7 +238,7 @@ drain_life_spell = {
 			years = mage_level
 		}
 		change_mana_with_tooltip = { VALUE = drain_life_spell_cost.neg }
-		change_mage_xp = { VALUE = drain_life_spell_cost.abs }
+		change_mage_xp = { VALUE = drain_life_spell_xp.abs }
 	}
 }
 
@@ -297,7 +297,7 @@ death_stare_spell = {
 			trigger_event = { on_action = death_stare_action }
 		}
 		change_mana_with_tooltip = { VALUE = death_stare_spell_cost.neg }
-		change_mage_xp = { VALUE = death_stare_spell_cost.abs }
+		change_mage_xp = { VALUE = death_stare_spell_xp.abs }
 	}
 }
 
@@ -411,7 +411,7 @@ deacon_of_death_spell = {
 		scope:spell_target = { convert_undead = yes }
 		add_hook_no_toast = { type = ancient_magic_hook_undead_master target = scope:spell_target }
 		change_mana_with_tooltip = { VALUE = deacon_of_death_spell_cost.neg }
-		change_mage_xp = { VALUE = deacon_of_death_spell_cost.abs }
+		change_mage_xp = { VALUE = deacon_of_death_spell_xp.abs }
 	}
 }
 

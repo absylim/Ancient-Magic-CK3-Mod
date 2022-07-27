@@ -179,7 +179,7 @@ golem_creation_spell = {
 			years = 5
 		}
 		change_mana_with_tooltip = { VALUE = golem_creation_spell_cost.neg }
-		change_mage_xp = { VALUE = golem_creation_spell_cost.abs }
+		change_mage_xp = { VALUE = golem_creation_spell_xp.abs }
 	}
 }
 
@@ -393,7 +393,7 @@ lord_of_the_elements_spell = {
 			years = 5
 		}
 		change_mana_with_tooltip = { VALUE = lord_of_the_elements_spell_cost.neg }
-		change_mage_xp = { VALUE = lord_of_the_elements_spell_cost.abs }
+		change_mage_xp = { VALUE = lord_of_the_elements_spell_xp.abs }
 	}
 }
 
