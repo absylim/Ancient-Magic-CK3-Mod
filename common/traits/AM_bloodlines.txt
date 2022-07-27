@@ -63,6 +63,8 @@ dragonic_bloodline = {
 	intrigue = -2
 	learning = 1
 	
+	flag = character_universal_spell_cost_reduction_10
+	
 	ai_energy = high_negative_ai_value #Lizards are innatly lethargic
 	ai_honor = dominant_positive_ai_value
 	ai_greed = dominant_positive_ai_value
@@ -145,6 +147,9 @@ antler_bloodline = {
 	intrigue = 2
 	martial = -3
 	learning = 1
+	
+	flag = character_mensomancy_spell_cost_reduction_10
+	flag = character_chiromancy_spell_cost_reduction_05
 	
 	ai_compassion = medium_positive_ai_value
 	ai_zeal = very_low_negative_ai_value
@@ -304,6 +309,8 @@ ouroboros_bloodline = {
 	diplomacy = -2
 	learning = 4
 	
+	flag = character_universal_spell_cost_reduction_05
+	
 	ai_energy = dominant_positive_ai_value
 	ai_rationality = dominant_negative_ai_value #Void being
 	ai_greed = dominant_negative_ai_value
@@ -419,6 +426,9 @@ zeus_bloodline = {
 	martial = 4
 	intrigue = 2
 	learning = -2
+	
+	flag = character_elomancy_spell_cost_reduction_15
+	flag = character_chronomancy_spell_cost_reduction_05 #Son of Cronos
 		
 	ai_energy = medium_positive_ai_value
 	ai_honor = medium_negative_ai_value
@@ -442,24 +452,6 @@ zeus_bloodline = {
 	same_opinion = 15
 	islam_religion_opinion = -25
 	christianity_religion_opinion = -25
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_christian_faith
-		opinion_modifier = blood_of_false_god_bad_3
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_islamic_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_jewish_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		ignore_opinion_value_if_same_trait = yes
-	}
 	
 	culture_modifier = {
 		parameter = strong_traits_more_valued
@@ -541,6 +533,9 @@ posseidon_bloodline = {
 	stewardship = 4 #Trades
 	martial = 3
 	learning = -3 #Fishbrain
+	
+	flag = character_elomancy_spell_cost_reduction_15
+	flag = character_chronomancy_spell_cost_reduction_05 #Son of Cronos
 	
 	ai_energy = high_positive_ai_value
 	ai_honor = medium_negative_ai_value
@@ -642,6 +637,9 @@ hades_bloodline = {
 	intrigue = 2
 	learning = 1
 	
+	flag = character_necromancy_spell_cost_reduction_15
+	flag = character_chronomancy_spell_cost_reduction_05 #Son of Cronos
+	
 	ai_energy = medium_negative_ai_value
 	ai_honor = dominant_positive_ai_value #Most honorable god in greek pantheon
 	ai_rationality = dominant_positive_ai_value
@@ -720,6 +718,8 @@ aphrodite_bloodline = {
 	intrigue = 3
 	learning = -2
 	
+	flag = character_mensomancy_spell_cost_reduction_10
+	
 	ai_energy = high_positive_ai_value 
 	ai_honor = medium_negative_ai_value
 	ai_greed = low_positive_ai_value
@@ -732,24 +732,6 @@ aphrodite_bloodline = {
 	same_opinion = 15
 	islam_religion_opinion = -25
 	christianity_religion_opinion = -25
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_christian_faith
-		opinion_modifier = blood_of_false_god_bad_3
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_islamic_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_jewish_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		ignore_opinion_value_if_same_trait = yes
-	}
 	
 	desc = {
 		first_valid = {
@@ -823,6 +805,9 @@ ares_bloodline = {
 	intrigue = -1
 	learning = -4
 	
+	flag = character_elomancy_spell_cost_reduction_05
+	flag = character_chiromancy_spell_cost_reduction_05
+	
 	ai_energy = dominant_positive_ai_value 
 	ai_rationality = high_negative_ai_value
 	ai_honor = medium_positive_ai_value
@@ -836,24 +821,6 @@ ares_bloodline = {
 	same_opinion = 15
 	islam_religion_opinion = -25
 	christianity_religion_opinion = -25
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_christian_faith
-		opinion_modifier = blood_of_false_god_bad_3
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_islamic_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_jewish_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		ignore_opinion_value_if_same_trait = yes
-	}
 	
 	desc = {
 		first_valid = {
@@ -919,6 +886,9 @@ athena_bloodline = {
 	martial = 4
 	intrigue = 2
 	learning = 3
+	
+	flag = character_biomancy_spell_cost_reduction_10 #known for creating monsters - Arachnid, Medusa
+	flag = character_chiromancy_spell_cost_reduction_05
 	
 	ai_energy = medium_positive_ai_value 
 	ai_honor = medium_negative_ai_value
@@ -998,6 +968,8 @@ medusa_bloodline = {
 	martial = 2
 	intrigue = 1
 	learning = 4 #priestess
+	
+	flag = character_mensomancy_spell_cost_reduction_05
 	
 	ai_energy = low_negative_ai_value 
 	ai_honor = medium_positive_ai_value
@@ -1088,6 +1060,8 @@ odin_bloodline = {
 	intrigue = 1
 	learning = 4
 	
+	flag = character_universal_spell_cost_reduction_10 #Sacrifieced eye for knowledge
+	
 	ai_energy = medium_positve_ai_value
 	ai_honor = high_negative_ai_value
 	ai_rationality = dominant_positive_ai_value
@@ -1173,6 +1147,8 @@ thor_bloodline = {
 	martial = 6
 	intrigue = -3
 	learning = -2
+	
+	flag = character_elomancy_spell_cost_reduction_20
 	
 	ai_energy = dominant_positve_ai_value
 	ai_honor = dominant_positive_ai_value
@@ -1260,6 +1236,8 @@ loki_bloodline = {
 	intrigue = 4
 	learning = 2
 	
+	flag = character_mensomancy_spell_cost_reduction_15
+	
 	ai_energy = medium_positve_ai_value
 	ai_honor = dominant_negative_ai_value
 	ai_rationality = dominant_positive_ai_value
@@ -1345,6 +1323,8 @@ freyja_bloodline = {
 	martial = 2
 	intrigue = 2
 	learning = 4
+	
+	flag = character_chronomancy_spell_cost_reduction_20
 	
 	ai_energy = dominant_positve_ai_value
 	ai_honor = low_positive_ai_value
@@ -1442,6 +1422,7 @@ dwarven_bloodline = {
 	martial = 2
 	intrigue = -2
 	learning = 2
+	flag = character_elomancy_spell_cost_reduction_05
 	
 	ai_energy = medium_positve_ai_value
 	ai_honor = medium_positive_ai_value
@@ -1521,6 +1502,11 @@ osiris_bloodline = {
 	diplomacy = 2
 	stewardship = 3
 	intrigue = -1
+	
+	flag = character_elomancy_spell_cost_reduction_05
+	flag = character_chiromancy_spell_cost_reduction_05
+	flag = character_biomancy_spell_cost_reduction_05
+	flag = character_necromancy_spell_cost_reduction_05
 	
 	ai_energy = low_negative_ai_value 
 	ai_honor = high_positive_ai_value
@@ -1608,6 +1594,10 @@ seth_bloodline = {
 	intrigue = 4
 	learning = -2
 	
+	flag = character_elomancy_spell_cost_reduction_10
+	flag = character_mensomancy_spell_cost_reduction_05
+	flag = character_necromancy_spell_cost_reduction_05
+	
 	ai_energy = low_negative_ai_value 
 	ai_honor = dominant_negative_ai_value
 	ai_rationality = medium_negative_ai_value #god of chaos
@@ -1685,6 +1675,8 @@ anubis_bloodline = {
 	stewardship = 2
 	martial = 1
 	learning = 3 #balzaming
+	
+	flag = character_necromancy_spell_cost_reduction_20
 	
 	ai_energy = high_negative_ai_value 
 	ai_honor = medium_positive_ai_value
@@ -1771,6 +1763,8 @@ thoth_bloodline = {
 	intrigue = 2
 	learning = 4
 	
+	flag = character_universal_spell_cost_reduction_10
+	
 	ai_energy = low_negative_ai_value 
 	ai_honor = medium_negative_ai_value
 	ai_rationality = dominant_positive_ai_value
@@ -1848,6 +1842,9 @@ ptah_bloodline = {
 	stewardship = 4
 	martial = -1
 	learning = 2
+	
+	flag = character_elomancy_spell_cost_reduction_10
+	flag = character_necromancy_spell_cost_reduction_05
 	
 	ai_energy = low_positive_ai_value 
 	ai_honor = medium_positive_ai_value
@@ -1927,6 +1924,9 @@ amun_bloodline = {
 	stewardship = 3
 	martial = 2
 	intrigue = 2
+	
+	flag = character_elomancy_spell_cost_reduction_15
+	flag = character_chronomancy_spell_cost_reduction_05
 	
 	ai_energy = high_positive_ai_value 
 	ai_honor = medium_negative_ai_value
@@ -2012,6 +2012,8 @@ brahma_bloodline = {
 	intrigue = -1
 	intrigue = 4
 	
+	flag = character_universal_spell_cost_reduction_10
+	
 	ai_energy = low_negative_ai_value 
 	ai_honor = medium_positive_ai_value
 	ai_rationality = high_positive_ai_value
@@ -2091,6 +2093,8 @@ vishnu_bloodline = {
 	intrigue = 1
 	learning = 2
 	
+	flag = character_universal_spell_cost_reduction_10
+	
 	ai_energy = low_negative_ai_value 
 	ai_rationality = high_positive_ai_value
 	ai_greed = medium_negative_ai_value
@@ -2102,27 +2106,6 @@ vishnu_bloodline = {
 	vassal_opinion = 5
 	same_opinion = 15
 	hinduism_religion_opinion = 25
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_christian_faith
-		opinion_modifier = blood_of_false_god_bad_3
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_islamic_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_jewish_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
 	
 	desc = {
 		first_valid = {
@@ -2188,6 +2171,8 @@ shiva_bloodline = {
 	stewardship = 1
 	martial = 4
 	
+	flag = character_universal_spell_cost_reduction_10
+	
 	ai_energy = high_positive_ai_value 
 	ai_honor = medium_positive_ai_value
 	ai_rationality = high_negative_ai_value
@@ -2201,27 +2186,6 @@ shiva_bloodline = {
 	vassal_opinion = 15
 	same_opinion = 15
 	hinduism_religion_opinion = 25
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_christian_faith
-		opinion_modifier = blood_of_false_god_bad_3
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_islamic_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
-	
-	triggered_opinion = {
-		parameter = special_doctrine_is_jewish_faith
-		opinion_modifier = blood_of_false_god_bad_2
-		check_missing = yes
-		ignore_opinion_value_if_same_trait = yes
-	}
 	
 	desc = {
 		first_valid = {
@@ -2285,6 +2249,10 @@ genesha_bloodline = {
 	diplomacy = 2
 	stewardship = 2
 	learning = 2
+	
+	flag = character_elomancy_spell_cost_reduction_05
+	flag = character_chiromancy_spell_cost_reduction_05
+	flag = character_mensomancy_spell_cost_reduction_05
 	
 	ai_energy = low_positive_ai_value 
 	ai_honor = medium_positive_ai_value
@@ -2387,6 +2355,8 @@ djinn_bloodline = {
 	vassal_opinion = 5
 	same_opinion = 15
 	islam_religion_opinion = -5
+	
+	flag = character_universal_spell_cost_reduction_05
 	
 	desc = {
 		first_valid = {

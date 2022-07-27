@@ -23,6 +23,8 @@ soul_materialisation_mana_cost = {
 chronomancy_spell_discount = {
 	value = 1
 	
+	add = universal_spell_dicount
+	
 	if = {
 		limit = {
 			culture = {
@@ -30,13 +32,156 @@ chronomancy_spell_discount = {
 			}
 		}
 		
-		subtract = -0.15 #15% discount
+		subtract = 0.15 #15% discount
 	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_reduction_05
+		}
+		subtract = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_increase_05
+		}
+		add = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_reduction_10
+		}
+		subtract = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_increase_10
+		}
+		add = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_reduction_15
+		}
+		subtract = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_increase_15
+		}
+		add = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_reduction_20
+		}
+		subtract = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_increase_20
+		}
+		add = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_reduction_25
+		}
+		subtract = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_increase_25
+		}
+		add = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_reduction_30
+		}
+		subtract = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_increase_30
+		}
+		add = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_reduction_35
+		}
+		subtract = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_increase_35
+		}
+		add = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_reduction_40
+		}
+		subtract = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_increase_40
+		}
+		add = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_reduction_45
+		}
+		subtract = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_increase_45
+		}
+		add = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_reduction_50
+		}
+		subtract = 0.5
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chronomancy_spell_cost_increase_50
+		}
+		add = 0.5
+	}
+	
 	min = 0.25 #the greatest reduction can be 75%
-	max = 1
+	max = 3
 }
 chiromancy_spell_discount = {
 	value = 1
+	
+	add = universal_spell_dicount
 	
 	if = {
 		limit = {
@@ -45,13 +190,156 @@ chiromancy_spell_discount = {
 			}
 		}
 		
-		subtract = -0.2 #20% discount
+		subtract = 0.2 #20% discount
 	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_reduction_05
+		}
+		subtract = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_increase_05
+		}
+		add = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_reduction_10
+		}
+		subtract = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_increase_10
+		}
+		add = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_reduction_15
+		}
+		subtract = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_increase_15
+		}
+		add = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_reduction_20
+		}
+		subtract = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_increase_20
+		}
+		add = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_reduction_25
+		}
+		subtract = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_increase_25
+		}
+		add = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_reduction_30
+		}
+		subtract = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_increase_30
+		}
+		add = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_reduction_35
+		}
+		subtract = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_increase_35
+		}
+		add = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_reduction_40
+		}
+		subtract = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_increase_40
+		}
+		add = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_reduction_45
+		}
+		subtract = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_increase_45
+		}
+		add = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_reduction_50
+		}
+		subtract = 0.5
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_chiromancy_spell_cost_increase_50
+		}
+		add = 0.5
+	}
+	
 	min = 0.25 #the greatest reduction can be 75%
-	max = 1
+	max = 3
 }
 necromancy_spell_discount = {
 	value = 1
+	
+	add = universal_spell_dicount
 	
 	if = {
 		limit = {
@@ -60,13 +348,156 @@ necromancy_spell_discount = {
 			}
 		}
 		
-		subtract = -0.2 #20% discount
+		subtract = 0.2 #20% discount
 	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_reduction_05
+		}
+		subtract = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_increase_05
+		}
+		add = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_reduction_10
+		}
+		subtract = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_increase_10
+		}
+		add = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_reduction_15
+		}
+		subtract = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_increase_15
+		}
+		add = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_reduction_20
+		}
+		subtract = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_increase_20
+		}
+		add = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_reduction_25
+		}
+		subtract = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_increase_25
+		}
+		add = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_reduction_30
+		}
+		subtract = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_increase_30
+		}
+		add = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_reduction_35
+		}
+		subtract = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_increase_35
+		}
+		add = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_reduction_40
+		}
+		subtract = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_increase_40
+		}
+		add = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_reduction_45
+		}
+		subtract = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_increase_45
+		}
+		add = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_reduction_50
+		}
+		subtract = 0.5
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_necromancy_spell_cost_increase_50
+		}
+		add = 0.5
+	}
+	
 	min = 0.25 #the greatest reduction can be 75%
-	max = 1
+	max = 3
 }
 elomancy_spell_discount = {
 	value = 1
+	
+	add = universal_spell_dicount
 	
 	if = {
 		limit = {
@@ -75,13 +506,156 @@ elomancy_spell_discount = {
 			}
 		}
 		
-		subtract = -0.2 #20% discount
+		subtract = 0.2 #20% discount
 	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_reduction_05
+		}
+		subtract = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_increase_05
+		}
+		add = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_reduction_10
+		}
+		subtract = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_increase_10
+		}
+		add = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_reduction_15
+		}
+		subtract = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_increase_15
+		}
+		add = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_reduction_20
+		}
+		subtract = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_increase_20
+		}
+		add = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_reduction_25
+		}
+		subtract = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_increase_25
+		}
+		add = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_reduction_30
+		}
+		subtract = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_increase_30
+		}
+		add = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_reduction_35
+		}
+		subtract = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_increase_35
+		}
+		add = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_reduction_40
+		}
+		subtract = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_increase_40
+		}
+		add = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_reduction_45
+		}
+		subtract = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_increase_45
+		}
+		add = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_reduction_50
+		}
+		subtract = 0.5
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_elomancy_spell_cost_increase_50
+		}
+		add = 0.5
+	}
+	
 	min = 0.25 #the greatest reduction can be 75%
-	max = 1
+	max = 3
 }
 mensomancy_spell_discount = {
 	value = 1
+	
+	add = universal_spell_dicount
 	
 	if = {
 		limit = {
@@ -90,13 +664,156 @@ mensomancy_spell_discount = {
 			}
 		}
 		
-		subtract = -0.2 #20% discount
+		subtract = 0.2 #20% discount
 	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_reduction_05
+		}
+		subtract = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_increase_05
+		}
+		add = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_reduction_10
+		}
+		subtract = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_increase_10
+		}
+		add = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_reduction_15
+		}
+		subtract = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_increase_15
+		}
+		add = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_reduction_20
+		}
+		subtract = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_increase_20
+		}
+		add = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_reduction_25
+		}
+		subtract = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_increase_25
+		}
+		add = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_reduction_30
+		}
+		subtract = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_increase_30
+		}
+		add = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_reduction_35
+		}
+		subtract = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_increase_35
+		}
+		add = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_reduction_40
+		}
+		subtract = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_increase_40
+		}
+		add = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_reduction_45
+		}
+		subtract = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_increase_45
+		}
+		add = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_reduction_50
+		}
+		subtract = 0.5
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_mensomancy_spell_cost_increase_50
+		}
+		add = 0.5
+	}
+	
 	min = 0.25 #the greatest reduction can be 75%
-	max = 1
+	max = 3
 }
 biomancy_spell_discount = {
 	value = 1
+	
+	add = universal_spell_dicount
 	
 	if = {
 		limit = {
@@ -105,12 +822,296 @@ biomancy_spell_discount = {
 			}
 		}
 		
-		subtract = -0.2 #20% discount
+		subtract = 0.2 #20% discount
 	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_reduction_05
+		}
+		subtract = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_increase_05
+		}
+		add = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_reduction_10
+		}
+		subtract = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_increase_10
+		}
+		add = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_reduction_15
+		}
+		subtract = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_increase_15
+		}
+		add = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_reduction_20
+		}
+		subtract = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_increase_20
+		}
+		add = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_reduction_25
+		}
+		subtract = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_increase_25
+		}
+		add = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_reduction_30
+		}
+		subtract = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_increase_30
+		}
+		add = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_reduction_35
+		}
+		subtract = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_increase_35
+		}
+		add = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_reduction_40
+		}
+		subtract = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_increase_40
+		}
+		add = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_reduction_45
+		}
+		subtract = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_increase_45
+		}
+		add = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_reduction_50
+		}
+		subtract = 0.5
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_biomancy_spell_cost_increase_50
+		}
+		add = 0.5
+	}
+	
 	min = 0.25 #the greatest reduction can be 75%
-	max = 1
+	max = 3 #300% increase is max
 }
 
+universal_spell_dicount = { #Spell dicount, used as sub calculation for all other spell dicounts
+	value = 0
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_reduction_05
+		}
+		subtract = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_increase_05
+		}
+		add = 0.05
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_reduction_10
+		}
+		subtract = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_increase_10
+		}
+		add = 0.1
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_reduction_15
+		}
+		subtract = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_increase_15
+		}
+		add = 0.15
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_reduction_20
+		}
+		subtract = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_increase_20
+		}
+		add = 0.2
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_reduction_25
+		}
+		subtract = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_increase_25
+		}
+		add = 0.25
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_reduction_30
+		}
+		subtract = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_increase_30
+		}
+		add = 0.3
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_reduction_35
+		}
+		subtract = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_increase_35
+		}
+		add = 0.35
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_reduction_40
+		}
+		subtract = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_increase_40
+		}
+		add = 0.4
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_reduction_45
+		}
+		subtract = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_increase_45
+		}
+		add = 0.45
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_reduction_50
+		}
+		subtract = 0.5
+	}
+	
+	if = {
+		limit = {
+			 has_trait_with_flag = character_universal_spell_cost_increase_50
+		}
+		add = 0.5
+	}
+}
 
 ######################
 ## Spell mana costs ##
@@ -578,4 +1579,197 @@ enchanting_aura_spell_gen_cost = {
 		add = 1
 	}
 	multiply = enchanting_aura_spell_gen_cost_individual
+}
+
+######################
+##   Spell mage xp  ##
+######################
+# As spells are discounted the xp from them is also affected
+
+#Chronomancy
+glimpse_the_future_spell_xp = {
+	value = glimpse_the_future_spell_cost
+	divide = chronomancy_spell_discount
+}
+financial_times_spell_xp = {
+	value = financial_times_spell_cost
+	divide = chronomancy_spell_discount
+}
+celerity_spell_xp = {
+	value = celerity_spell_cost
+	divide = chronomancy_spell_discount
+}
+mass_celerity_spell_xp = {
+	value = mass_celerity_spell_cost
+	divide = chronomancy_spell_discount
+}
+slowness_spell_xp = {
+	value = slowness_spell_cost
+	divide = chronomancy_spell_discount
+}
+mass_slowness_spell_xp = {
+	value = mass_slowness_spell_cost
+	divide = chronomancy_spell_discount
+}
+temporal_manipulation_spell_xp = {
+	value = temporal_manipulation_spell_cost
+	divide = chronomancy_spell_discount
+}
+haste_spell_xp = {
+	value = haste_spell_cost
+	divide = chronomancy_spell_discount
+}
+master_of_time_spell_xp = {
+	value = master_of_time_spell_cost
+	divide = chronomancy_spell_discount
+}
+
+#Chiromancy
+heal_spell_xp = {
+	value = heal_spell_cost
+	divide = chiromancy_spell_discount
+}
+greater_heal_spell_xp = {
+	value = greater_heal_spell_cost
+	divide = chiromancy_spell_discount
+}
+avatar_of_life_spell_xp = {
+	value = avatar_of_life_spell_cost
+	divide = chiromancy_spell_discount
+}
+
+#Elomancy
+flame_aura_spell_xp = {
+	value = flame_aura_spell_cost
+	divide = elomancy_spell_discount
+}
+flaming_weapons_spell_xp = {
+	value = flaming_weapons_spell_cost
+	divide = elomancy_spell_discount
+}
+living_earthworks_spell_xp = {
+	value = living_earthworks_spell_cost
+	divide = elomancy_spell_discount
+}
+golem_creation_spell_xp = {
+	value = golem_creation_spell_cost
+	divide = elomancy_spell_discount
+}
+control_water_spell_xp = {
+	value = control_water_spell_cost
+	divide = elomancy_spell_discount
+}
+drought_spell_xp = {
+	value = drought_spell_cost
+	divide = elomancy_spell_discount
+}
+elemental_warrior_spell_xp = {
+	value = elemental_warrior_spell_cost
+	divide = elomancy_spell_discount
+}
+lord_of_the_elements_spell_xp = {
+	value = lord_of_the_elements_spell_cost
+	divide = elomancy_spell_discount
+}
+
+#Necromancy
+inflict_illness_spell_xp = {
+	value = inflict_illness_spell_cost
+	divide = necromancy_spell_discount
+}
+plague_lord_spell_xp = {
+	value = plague_lord_spell_cost
+	divide = necromancy_spell_discount
+}
+aura_of_death_spell_xp = {
+	value = aura_of_death_spell_cost
+	divide = necromancy_spell_discount
+}
+necromancy_spell_xp = {
+	value = necromancy_spell_cost
+	divide = necromancy_spell_discount
+}
+drain_life_spell_xp = {
+	value = drain_life_spell_cost
+	divide = necromancy_spell_discount
+}
+death_stare_spell_xp = {
+	value = death_stare_spell_cost
+	divide = necromancy_spell_discount
+}
+blight_spell_xp = {
+	value = blight_spell_cost
+	divide = necromancy_spell_discount
+}
+deacon_of_death_spell_xp = {
+	value = deacon_of_death_spell_cost
+	divide = necromancy_spell_discount
+}
+
+#Biomancy
+rewrite_beauty_spell_xp = {
+	value = rewrite_beauty_spell_cost
+	divide = biomancy_spell_discount
+}
+rewrite_physique_spell_xp = {
+	value = rewrite_physique_spell_cost
+	divide = biomancy_spell_discount
+}
+rewrite_intellect_spell_xp = {
+	value = rewrite_intellect_spell_cost
+	divide = biomancy_spell_discount
+}
+sculpter_of_flesh_spell_xp = {
+	value = sculpter_of_flesh_spell_cost
+	divide = biomancy_spell_discount
+}
+fertility_control_spell_xp = {
+	value = fertility_control_spell_cost
+	divide = biomancy_spell_discount
+}
+impregnate_spell_xp = {
+	value = impregnate_spell_cost
+	divide = biomancy_spell_discount
+}
+
+#Mensomancy
+entrance_spell_xp = {
+	value = entrance_spell_cost
+	divide = mensomancy_spell_discount
+}
+incite_lust_spell_xp = {
+	value = incite_lust_spell_cost
+	divide = mensomancy_spell_discount
+}
+incite_obedience_spell_xp = {
+	value = incite_obedience_spell_cost
+	divide = mensomancy_spell_discount
+}
+dominate_spell_xp = {
+	value = dominate_spell_cost
+	divide = mensomancy_spell_discount
+}
+beguiling_aura_spell_xp = {
+	value = beguiling_aura_spell_cost
+	divide = mensomancy_spell_discount
+}
+friendship_spell_xp = {
+	value = friendship_spell_cost
+	divide = mensomancy_spell_discount
+}
+rivalry_spell_xp = {
+	value = rivalry_spell_cost
+	divide = mensomancy_spell_discount
+}
+enchanting_aura_spell_xp = {
+	value = enchanting_aura_spell_cost
+	divide = mensomancy_spell_discount
+}
+sculpt_mind_spell_xp = {
+	value = sculpt_mind_spell_cost
+	divide = mensomancy_spell_discount
+}
+master_of_puppets_spell_xp = {
+	value = master_of_puppets_spell_cost
+	divide = mensomancy_spell_discount
 }

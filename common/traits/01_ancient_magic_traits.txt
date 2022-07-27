@@ -35,6 +35,9 @@ undead = {
 	dread_baseline_add = 10
 
 	ruler_designer_cost = 10
+	
+	flag = character_mensomancy_spell_cost_reduction_05
+	flag = character_necromancy_spell_cost_reduction_15
 
 	ai_compassion = dominant_negative_ai_value
 	ai_boldness = very_low_positive_ai_value
@@ -157,6 +160,8 @@ mana_devouring_1 = {
 
 	dread_baseline_add = -10
 	dread_loss_mult = 1
+	
+	flag = character_universal_spell_cost_increase_05
 
 	ruler_designer_cost = -15
 
@@ -193,6 +198,8 @@ mana_devouring_2 = {
 
 	dread_baseline_add = -20
 	dread_loss_mult = 1
+	
+	flag = character_universal_spell_cost_increase_15
 
 	ruler_designer_cost = -75
 
@@ -242,6 +249,8 @@ mage_dementia = {
 	genetic = no
 	inherit_chance = 0
 	birth = 0
+	
+	flag = character_universal_spell_cost_increase_10
 
 	ai_rationality = -100
 	ai_boldness = 50

@@ -119,6 +119,7 @@ mana_affinity = {
 			format = "FORMAT_MANA_AFFINITY_BOOST" #Custom format for mana affinity
 		}
 	}
+	
 	round = yes
 }
 

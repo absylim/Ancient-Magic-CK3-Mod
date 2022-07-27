@@ -12,7 +12,7 @@ start_aura_effect = {
 pay_aura_cost_and_get_xp_effect = {
 	change_mana_with_tooltip = { VALUE = $SPELL$_cost.neg }
 	change_mana_gen_tooltip = { VALUE = $SPELL$_gen_cost_individual }
-	change_mage_xp = { VALUE = $SPELL$_cost.abs }
+	change_mage_xp = { VALUE = $SPELL$_xp.abs }
 }
 
 update_aura_effect = {

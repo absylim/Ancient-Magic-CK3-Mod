@@ -25,7 +25,7 @@ entrance_spell = {
 			}
 		}
 		change_mana_with_tooltip = { VALUE = entrance_spell_cost.neg }
-		change_mage_xp = { VALUE = entrance_spell_cost.abs }
+		change_mage_xp = { VALUE = entrance_spell_xp.abs }
 	}
 }
 
@@ -73,7 +73,7 @@ incite_lust_spell = {
 	effect = {
 		scope:spell_target = { set_relation_lover = prev }
 		change_mana_with_tooltip = { VALUE = incite_lust_spell_cost.neg }
-		change_mage_xp = { VALUE = incite_lust_spell_cost.abs }
+		change_mage_xp = { VALUE = incite_lust_spell_xp.abs }
 	}
 }
 
@@ -127,7 +127,7 @@ incite_obedience_spell = {
 			type = ancient_magic_hook_obedient
 		}
 		change_mana_with_tooltip = { VALUE = incite_obedience_spell_cost.neg }
-		change_mage_xp = { VALUE = incite_obedience_spell_cost.abs }
+		change_mage_xp = { VALUE = incite_obedience_spell_xp.abs }
 	}
 }
 
@@ -182,7 +182,7 @@ dominate_spell = {
 			type = ancient_magic_hook_dominated
 		}
 		change_mana_with_tooltip = { VALUE = dominate_spell_cost.neg }
-		change_mage_xp = { VALUE = dominate_spell_cost.abs }
+		change_mage_xp = { VALUE = dominate_spell_xp.abs }
 	}
 }
 
@@ -280,7 +280,7 @@ friendship_spell = {
 	effect = {
 		scope:spell_target = { set_relation_friend = prev }
 		change_mana_with_tooltip = { VALUE = friendship_spell_cost.neg }
-		change_mage_xp = { VALUE = friendship_spell_cost.abs }
+		change_mage_xp = { VALUE = friendship_spell_xp.abs }
 	}
 }
 
@@ -328,7 +328,7 @@ rivalry_spell = {
 	effect = {
 		scope:spell_target = { set_relation_rival = prev }
 		change_mana_with_tooltip = { VALUE = rivalry_spell_cost.neg }
-		change_mage_xp = { VALUE = rivalry_spell_cost.abs }
+		change_mage_xp = { VALUE = rivalry_spell_xp.abs }
 	}
 }
 
@@ -429,7 +429,7 @@ sculpt_mind_spell = {
 			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
 		change_mana_with_tooltip = { VALUE = sculpt_mind_spell_cost.neg }
-		change_mage_xp = { VALUE = sculpt_mind_spell_cost.abs }
+		change_mage_xp = { VALUE = sculpt_mind_spell_xp.abs }
 	}
 }
 
@@ -483,7 +483,7 @@ master_of_puppets_spell = {
 			type = ancient_magic_hook_puppet
 		}
 		change_mana_with_tooltip = { VALUE = master_of_puppets_spell_cost.neg }
-		change_mage_xp = { VALUE = master_of_puppets_spell_cost.abs }
+		change_mage_xp = { VALUE = master_of_puppets_spell_xp.abs }
 	}
 }
 
