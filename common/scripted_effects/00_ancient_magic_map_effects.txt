@@ -722,6 +722,16 @@ populate_focal_point = {
 	create_focal_points = { TITLE = b_chuya }
 }
 
+populate_map_wit_ley_lines = {
+	populate_ley_lines = yes
+	populate_focal_point = yes
+	
+	set_global_variable = {
+		name = ancient_magic_map_initialize_complete
+		value = 1
+	}
+}
+
 #########################################
 ######### Regional BLOODLINES  ##########
 #########################################
