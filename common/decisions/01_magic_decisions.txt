@@ -93,7 +93,7 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 	desc = implant_magical_blood_decision_desc
 
 	widget = {
-		gui = decision_view_widget_am_implant_magical_blood
+		gui = decision_view_widget_AM_implant_magical_blood
 		controller = decision_option_list_controller
 		
 		# Close family
