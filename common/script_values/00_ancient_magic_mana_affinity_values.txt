@@ -76,6 +76,17 @@ average_mana_blood_compatibility_level = 25
 good_mana_blood_compatibility_level = 50
 excellent_mana_blood_compatibility_level = 75
 
+# Mana blood sublimation
+magical_blood_infusion_cooldown = 15 #Years it will take until the infused mana blood sublimates
+magical_blood_infusion_cooldown_incompatble = {
+	value = magical_blood_infusion_cooldown
+	add = 5
+}
+magical_blood_sublimation_base_mana_affinity_boost = {
+	value = var:infused_blood_mana_affinity
+	divide = 2
+}
+
 #########################################################################################################################
 #########################################################################################################################
 
