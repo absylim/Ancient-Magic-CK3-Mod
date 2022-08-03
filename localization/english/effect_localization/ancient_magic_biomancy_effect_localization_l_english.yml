@@ -18,6 +18,10 @@
  GLOBAL_UNLOCK_IMPREGNATE_SPELL: "Unlocks [impregnate_spell|E]"
  FIRST_UNLOCK_IMPREGNATE_SPELL: "Allows you to cast [impregnate_spell|E]"
  THIRD_UNLOCK_IMPREGNATE_SPELL: "Allows #V [CHARACTER.GetTitledFirstName]#! to cast [impregnate_spell|E]"
+ GLOBAL_UNLOCK_PURIFY_BLOODLINE_SPELL: "Unlocks [purify_bloodline_spell|E]"
+ FIRST_UNLOCK_PURIFY_BLOODLINE_SPELL: "Allows you to cast [purify_bloodline_spell|E]"
+ THIRD_UNLOCK_PURIFY_BLOODLINE_SPELL: "Allows #V [CHARACTER.GetTitledFirstName]#! to cast [purify_bloodline_spell|E]"
+ 
 
  # Trait removal
  GLOBAL_UNLOCK_NEGATIVE_TRAIT_REMOVAL_REWRITE_BEAUTY: "Allows removal of negative traits using [rewrite_beauty_spell|E]"

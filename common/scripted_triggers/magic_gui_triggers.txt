@@ -766,5 +766,7 @@ has_trait_trigger = {
 		flag:hyperlexic = { has_trait = hyperlexic }
 		flag:dyscalculic = { has_trait = dyscalculic }
 		flag:hypercalculic = { has_trait = hypercalculic }
+		flag:infused_magical_blood_compatible = { has_trait = infused_magical_blood_compatible }
+		flag:infused_magical_blood_incompatible = { has_trait = infused_magical_blood_incompatible }
 	}
 }

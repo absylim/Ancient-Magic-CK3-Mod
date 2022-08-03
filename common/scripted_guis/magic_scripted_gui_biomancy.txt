@@ -424,3 +424,68 @@ impregnate_spell_has_list = {
 		always = no
 	}
 }
+
+purify_bloodline_spell = {
+	scope = character
+	is_shown = {
+		OR = {
+			scope:spell_target = { has_trait = infused_magical_blood_compatible }
+			scope:spell_target = { has_trait = infused_magical_blood_incompatible }
+		}
+	}
+	is_valid = {
+		has_enough_mana_trigger = { SPELL = purify_bloodline_spell }
+	}
+	effect = {
+		scope:spell_target = {
+			if = {
+				limit = { has_trait = infused_magical_blood_compatible }
+				remove_trait = infused_magical_blood_compatible
+			}
+			else_if = {
+				limit = { has_trait = infused_magical_blood_incompatible }
+				remove_trait = infused_magical_blood_incompatible
+			}
+			set_variable = {
+				name = infused_blood_mana_affinity
+				value = 0
+			}
+		}
+		change_mana_with_tooltip = { VALUE = purify_bloodline_spell_cost.neg }
+		change_mage_xp = { VALUE = purify_bloodline_spell_xp.abs }
+	}
+}
+
+purify_bloodline_spell_spellbook = {
+	scope = character
+	is_shown = {
+		has_perk = sculpter_of_flesh_perk
+		OR = {
+			scope:spell_target = { has_trait = infused_magical_blood_compatible }
+			scope:spell_target = { has_trait = infused_magical_blood_incompatible }
+		}
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+purify_bloodline_spell_has_properties = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}
+
+purify_bloodline_spell_has_list = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+	is_valid = {
+		always = no
+	}
+}

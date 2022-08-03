@@ -183,6 +183,8 @@ fertility_control_spell = {}
 
 impregnate_spell = {}
 
+purify_bloodline_spell = {}
+
 # Mensomancy
 entrance_spell = {}
 
