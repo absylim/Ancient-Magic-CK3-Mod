@@ -249,7 +249,7 @@ am_convert_holding_to_city_of_magic_decision = {
 
 	widget = {
 		# Name of the widget to use. Must be at the path <decision_view_widgets>/<widget_name>.gui
-		gui = decision_view_widget_am_convert_to_city_of_magic
+		gui = decision_view_widget_AM_convert_to_city_of_magic
 		# Some widgets require a custom controller (see below). Default: default
 		controller = create_holy_order
 		barony_valid = {
