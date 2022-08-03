@@ -59,3 +59,8 @@
  
  ancient_magic_rituals_events.012.desc: "[physician.GetFirstNameNoTooltip] wrings [physician.GetHerHis] hands. "I am truly sorry, my lord," \n[physician.GetSheHe] says. "The transfusion was unsuccessful. However, I did manage to replace your original blood, so you will not die from the operation.""
  ancient_magic_rituals_events.012.a: "Get [physician.GetHerHim] out of my sight."
+ 
+ ancient_magic_rituals_events.015.t: "Infused magical blood sublimates"
+ ancient_magic_rituals_events.015.desc: "I woke this morning and saw rays of sunshine falling through my window, it took me a moment to realize that im bit weaker, but also i feel somewhat stronger. When i scanned my body i wasnt able to find any traces of the foreing implanted blood and yet i dont feel that much weaker, and this led me to the conclusion that the infused blood sublimated into my body, and to some extent upgraded my innate [mana_affinity]!"
+ ancient_magic_rituals_events.015.a: "Time to look for some new blood"
+ ancient_magic_rituals_events.015.b: "I'm at the peek!"
