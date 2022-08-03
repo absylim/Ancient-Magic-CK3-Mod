@@ -1,0 +1,41 @@
+﻿highlight_ley_lines_map = {
+	effect = {
+		if = {
+			limit = { NOT = { global_var:custom_map_mode = flag:highlight_ley_lines } }
+			set_global_variable = {
+				name = custom_map_mode_changing
+				value = 1
+			}
+			set_global_variable = {
+				name = custom_map_mode
+				value = flag:highlight_ley_lines
+			}
+			every_barony = {
+				if = {
+					limit = { 
+						title_province = { has_province_modifier = ley_line_modifier }
+					}
+					set_color_from_title = title:d_map_ley_line
+				}
+				else_if = {
+					limit = { 
+						title_province = { has_province_modifier = focal_point_modifier }
+					}
+					set_color_from_title = title:d_map_focal_point
+				}
+				else = {
+					set_color_from_title = title:d_map_color_red # Red where it does not
+				}
+			}
+			remove_global_variable = custom_map_mode_changing
+		}
+	}
+	is_shown = {
+		exists = global_var:custom_map_mode
+		global_var:custom_map_mode = flag:highlight_ley_lines
+	}
+	is_valid = {
+		NOT = { exists = global_var:custom_map_mode_changing }
+        exists = global_var:ancient_magic_map_initialize_complete
+	}
+}

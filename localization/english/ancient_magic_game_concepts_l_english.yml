@@ -186,6 +186,8 @@
  game_concept_fertility_control_spell_desc: "$fertility_control_spell_desc$\n\nYou choose:\n#P Massive Increase#! to your [fertility|E]\n#N Severe Penalty#! to your [fertility|E]"
  game_concept_impregnate_spell: "$impregnate_spell_name$"
  game_concept_impregnate_spell_desc: "$impregnate_spell_desc$\n\nIf you are male:\nTarget becomes [GetTrait('pregnant').GetName(GetNullCharacter)] with your child\n\nIf you are female:\nYou become [GetTrait('pregnant').GetName(GetNullCharacter)] with the target's child"
+ game_concept_purify_bloodline_spell: "$purify_bloodline_spell_name$"
+ game_concept_purify_bloodline_spell_desc: "$purify_bloodline_spell_desc$\n\nTarget:\nLooses [GetTrait('infused_magical_blood_incompatible').GetName(GetNullCharacter)]"
 
  # Mensomancy
  game_concept_entrance_spell: "$entrance_spell_name$"

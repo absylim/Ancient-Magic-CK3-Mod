@@ -127,6 +127,7 @@ set_up_spells = {
 	add_to_global_variable_list = { name = biomancy_spells_list target = flag:sculpter_of_flesh_spell }
 	add_to_global_variable_list = { name = biomancy_spells_list target = flag:fertility_control_spell }
 	add_to_global_variable_list = { name = biomancy_spells_list target = flag:impregnate_spell }
+	add_to_global_variable_list = { name = biomancy_spells_list target = flag:purify_bloodline_spell }
 
 	# Mind Magic
 	clear_global_variable_list = mensomancy_spells_list

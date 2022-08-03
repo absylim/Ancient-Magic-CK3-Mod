@@ -1328,6 +1328,29 @@ sculpter_of_flesh_spell_cost = {
 }
 fertility_control_spell_cost = { value = 100 multiply = biomancy_spell_discount }
 impregnate_spell_cost = { value = 300 multiply = biomancy_spell_discount }
+purify_bloodline_spell_cost = {
+	value = 400
+	
+	if = {
+		limit = { exists = scope:spell_target }
+		
+		if = {
+			limit = { scope:spell_target = { has_trait = infused_magical_blood_compatible } }
+			multiply = {
+				value = var:infused_blood_mana_affinity
+			}
+		}
+		else_if = {
+			limit = { scope:spell_target = { has_trait = infused_magical_blood_incompatible } }
+			multiply = {
+				value = var:infused_blood_mana_affinity
+				multiply = 2
+			}
+		}
+	}
+	
+	multiply = biomancy_spell_discount
+}
 
 #MindMagic
 entrance_spell_cost = { value = 100 multiply = mensomancy_spell_discount }
@@ -1729,6 +1752,10 @@ fertility_control_spell_xp = {
 }
 impregnate_spell_xp = {
 	value = impregnate_spell_cost
+	divide = biomancy_spell_discount
+}
+purify_bloodline_spell_xp = {
+	value = purify_bloodline_spell_cost
 	divide = biomancy_spell_discount
 }
 

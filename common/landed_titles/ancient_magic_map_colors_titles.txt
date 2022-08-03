@@ -1,0 +1,17 @@
+﻿d_map_base_color = {
+	color = { 84 78 60 }
+	can_create = { always = no }
+}
+d_map_color_red = {
+	color = { 255 0 0 }
+	can_create = { always = no }
+}
+
+d_map_ley_line = {
+	color = { 0 120 255 }
+	can_create = { always = no }
+}
+d_map_focal_point = {
+	color = { 0 0 255 }
+	can_create = { always = no }
+}

@@ -1062,7 +1062,7 @@ odin_bloodline = {
 	
 	flag = character_universal_spell_cost_reduction_10 #Sacrifieced eye for knowledge
 	
-	ai_energy = medium_positve_ai_value
+	ai_energy = medium_positive_ai_value
 	ai_honor = high_negative_ai_value
 	ai_rationality = dominant_positive_ai_value
 	ai_greed = dominant_positive_ai_value
@@ -1085,7 +1085,7 @@ odin_bloodline = {
 				}
 				desc = trait_odin_bloodline_desc
 			}
-			desc = traitodin_bloodline_character_desc
+			desc = trait_odin_bloodline_character_desc
 		}
 	}
 }
@@ -1150,7 +1150,7 @@ thor_bloodline = {
 	
 	flag = character_elomancy_spell_cost_reduction_20
 	
-	ai_energy = dominant_positve_ai_value
+	ai_energy = dominant_positive_ai_value
 	ai_honor = dominant_positive_ai_value
 	ai_rationality = medium_negative_ai_value
 	ai_boldness = dominant_positive_ai_value
@@ -1238,7 +1238,7 @@ loki_bloodline = {
 	
 	flag = character_mensomancy_spell_cost_reduction_15
 	
-	ai_energy = medium_positve_ai_value
+	ai_energy = medium_positive_ai_value
 	ai_honor = dominant_negative_ai_value
 	ai_rationality = dominant_positive_ai_value
 	ai_greed = dominant_positive_ai_value
@@ -1326,7 +1326,7 @@ freyja_bloodline = {
 	
 	flag = character_chronomancy_spell_cost_reduction_20
 	
-	ai_energy = dominant_positve_ai_value
+	ai_energy = dominant_positive_ai_value
 	ai_honor = low_positive_ai_value
 	ai_zeal = very_low_negative_ai_value
 	ai_rationality = dominant_positive_ai_value
@@ -1424,7 +1424,7 @@ dwarven_bloodline = {
 	learning = 2
 	flag = character_elomancy_spell_cost_reduction_05
 	
-	ai_energy = medium_positve_ai_value
+	ai_energy = medium_positive_ai_value
 	ai_honor = medium_positive_ai_value
 	ai_rationality = dominant_positive_ai_value
 	ai_greed = high_positive_ai_value

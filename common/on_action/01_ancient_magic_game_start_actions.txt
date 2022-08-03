@@ -13,7 +13,6 @@
 
 populate_map_with_magic_nodes = {
 	effect = {
-		populate_ley_lines = yes
-		populate_focal_point = yes
+		populate_map_wit_ley_lines = yes
 	}
 }

@@ -17,3 +17,10 @@
  LOSE_MANA_EFFECT:0 "Loses Mana $VALUE|V0$"
 #interactions
  interaction_category_uncategorized: "Magic"
+ LEY_LINE_MAP_MODE: "Ley Lines"
+ ley_line_tooltip: "Shows [ley_lines|E] and their [focal_points|E] on the map."
+ 
+ LEY_LINE_TOOLTIP: "#T $LEY_LINE_MAP_MODE$\n#!$ley_line_tooltip$"
+ LEY_LINE_HEADER: "Showing: [ley_lines|E] and [focal_points|E]"
+ ley_line: "Ley Line"
+ focal_point: "[focal_point|E]w"

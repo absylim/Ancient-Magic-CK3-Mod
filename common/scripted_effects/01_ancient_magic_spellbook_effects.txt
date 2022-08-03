@@ -569,6 +569,14 @@ effect_get_all_sculpt_flesh_traits = {
 		name = sculpter_of_flesh_spell_list
 		target = flag:bleeder
 	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:infused_magical_blood_compatible
+	}
+	add_to_variable_list = {
+		name = sculpter_of_flesh_spell_list
+		target = flag:infused_magical_blood_incompatible
+	}
 	if = {
 		limit = { is_pih_installed_trigger = yes }
 		add_to_variable_list = {
