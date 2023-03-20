@@ -122,7 +122,7 @@ give_base_mana_affinity = { #effect used for inheriting mana affinity
 	if = {
 		limit = {
 			is_located_on_ley_line = yes
-			local_var:temp_base_mana_affinity_value.compare_value < 10 #So that its not easy after some tier to increase it with ley line
+			local_var:temp_base_mana_affinity_value < 10 #So that its not easy after some tier to increase it with ley line
 		}
 		random_list = {
 			75 = {} #Nothing happens
@@ -134,7 +134,7 @@ give_base_mana_affinity = { #effect used for inheriting mana affinity
 	else_if = {
 		limit = {
 			is_located_on_focal_point = yes
-			local_var:temp_base_mana_affinity_value.compare_value < 15 #So that its not easy after some tier to increase it with focal points
+			local_var:temp_base_mana_affinity_value < 15 #So that its not easy after some tier to increase it with focal points
 		}
 		random_list = {
 			50 = {} #Nothing happens
@@ -231,7 +231,7 @@ give_base_mana_affinity_game_start_effect = { #Only called on game start
 		if = {
 			limit = {
 				is_located_on_ley_line = yes
-				local_var:temp_base_mana_affinity_value.compare_value < 10 #So that its not easy after some tier to increase it with ley line
+				local_var:temp_base_mana_affinity_value < 10 #So that its not easy after some tier to increase it with ley line
 			}
 			random_list = {
 				75 = {} #Nothing happens
@@ -243,7 +243,7 @@ give_base_mana_affinity_game_start_effect = { #Only called on game start
 		else_if = {
 			limit = {
 				is_located_on_focal_point = yes
-				local_var:temp_base_mana_affinity_value.compare_value < 15 #So that its not easy after some tier to increase it with focal points
+				local_var:temp_base_mana_affinity_value < 15 #So that its not easy after some tier to increase it with focal points
 			}
 			random_list = {
 				50 = {} #Nothing happens
@@ -283,7 +283,7 @@ ask_for_mana_blood_interaction_effect = {
 	if = {
 		limit = {
 			scope:recipient = {
-				var:base_mana_affinity.compare_value < magical_mana_affinity_level
+				var:base_mana_affinity < magical_mana_affinity_level
 			}
 		}
 		save_scope_value_as = {

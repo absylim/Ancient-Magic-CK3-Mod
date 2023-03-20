@@ -70,7 +70,7 @@ forge_material_soul_decision = {
 		}
 		modifier = {
 			var:memory_life_capacity_left <= 10
-			multiply = 1.5
+			factor = 1.5
 		}
 	}
 }
@@ -106,11 +106,9 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 					creator = {
 						is_close_family_of = ROOT
 					}
-					if = {
-						limit = {
-							has_variable = mana_affinity
-						}
-						var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
+					AND = {
+						has_variable = mana_affinity
+						var:mana_affinity > scope:creator.var:base_mana_affinity
 					}
 				}
 			}
@@ -133,11 +131,9 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 					creator = {
 						is_extended_family_of = ROOT
 					}
-					if = {
-						limit = {
-							has_variable = mana_affinity
-						}
-						var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
+					AND = {
+						has_variable = mana_affinity
+						var:mana_affinity > scope:creator.var:base_mana_affinity
 					}
 				}
 			}
@@ -163,11 +159,9 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 							is_close_family_of = ROOT
 						}
 					}
-					if = {
-						limit = {
-							has_variable = mana_affinity
-						}
-						var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
+					AND = {
+						has_variable = mana_affinity
+						var:mana_affinity > scope:creator.var:base_mana_affinity
 					}
 				}
 			}

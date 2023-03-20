@@ -65,7 +65,7 @@ change_mage_xp = {
 			}
 		}
 		if = {
-			limit = { mage_level.compare_value > scope:old_level.compare_value }
+			limit = { mage_level > scope:old_level }
 			send_interface_toast = {
 				title = mage_level_increase
 				left_icon = root

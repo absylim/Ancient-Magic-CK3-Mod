@@ -302,7 +302,7 @@ ouroboros_bloodline = {
 	good = yes
 	
 	health = 3
-	fertility = -2
+	fertility = -0.95
 	prowess = 7
 	life_expectancy = 100
 	
@@ -412,7 +412,7 @@ zeus_bloodline = {
 	good = yes
 	
 	health = 1.5
-	fertility = 0.5
+	fertility = 0.25
 	prowess = 7
 	life_expectancy = 30
 	
@@ -525,7 +525,7 @@ posseidon_bloodline = {
 	}
 	
 	health = 1.5
-	fertility = 0.5
+	fertility = 0.2
 	prowess = 5
 	life_expectancy = 30
 	
@@ -709,7 +709,7 @@ aphrodite_bloodline = {
 	good = yes
 	
 	health = 1.5
-	fertility = 1.5
+	fertility = 0.35
 	prowess = 2
 	life_expectancy = 20
 	
@@ -794,7 +794,7 @@ ares_bloodline = {
 	}
 	
 	health = 2.5
-	fertility = -0.5
+	fertility = -0.25
 	prowess = 8
 	life_expectancy = 20
 	dread = 10

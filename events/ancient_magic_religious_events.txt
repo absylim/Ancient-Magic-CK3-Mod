@@ -559,7 +559,7 @@ am_religious_special.2001 = {
 	option = {
 		name = am_religious_special.2001.b
 		custom_tooltip = am_religious_special.2001.b.tt
-		# remove_decision_cooldown = mm_spiritual_hof_change_to_equal_genderview_decision
+		# remove_decision_cooldown = am_spiritual_hof_change_to_equal_genderview_decision
 	}
 }
 
@@ -1052,7 +1052,7 @@ am_religious_special.2009 = { # Success
 	}
 
 	immediate = {
-		mm_convocation_change_doctrine_effect = yes
+		am_convocation_change_doctrine_effect = yes
 		play_music_cue = "mx_cue_epic_sacral_moment"
 	}
 	option = {

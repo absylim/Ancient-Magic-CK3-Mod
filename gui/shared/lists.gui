@@ -99,6 +99,7 @@ types Lists
 
 				onclick = "[CharacterListItem.OnClick('character')]"
 				enabled = "[CharacterListItem.IsSelectable]"
+				tooltip = "[CharacterListItem.GetUnselectableReason]"
 
 				framesize = { 249 78 }
 				spriteType = Corneredtiled
@@ -132,6 +133,7 @@ types Lists
 									layoutpolicy_horizontal = expanding
 									using = Font_Size_Medium
 									autoresize = no
+									alwaystransparent = yes
 
 									text = "[Character.GetUINameNoTooltip]"
 								}
@@ -154,6 +156,7 @@ types Lists
 											autoresize = no
 											align = nobaseline
 											visible = "[Character.HasRelationTo( GetPlayer )]"
+											alwaystransparent = yes
 										}
 
 										expand = {
@@ -1283,7 +1286,6 @@ types Lists
 		size = { 0 125 }
 
 		hbox = {
-
 			spacing = 5
 
 			background = {

@@ -70,7 +70,7 @@ monthly_mana_gen = {
 
 	effect = {
 		if = {
-			limit = { current_day.compare_value = 1 }
+			limit = { current_day = 1 }
 			change_mana = { VALUE = ancient_magic_mana_gen }
 			change_variable = {
 				name = mana_gen_months_left

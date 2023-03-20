@@ -91,7 +91,7 @@ ancient_magic_rituals_events.004 = { #Extract managical blood - decision
 	immediate = {
 		if = {
 			limit = {
-				var:base_mana_affinity.compare_value < magical_mana_affinity_level
+				var:base_mana_affinity < magical_mana_affinity_level
 			}
 			save_scope_value_as = {
 				name = blood_decay
@@ -181,7 +181,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 0
@@ -197,7 +197,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 1
@@ -213,7 +213,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 2
@@ -229,7 +229,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 3
@@ -245,7 +245,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 4
@@ -261,7 +261,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 5
@@ -277,7 +277,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 6
@@ -293,7 +293,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 7
@@ -311,7 +311,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 0
@@ -327,7 +327,7 @@ ancient_magic_rituals_events.005 = { #Implant Magical blood - Close Relaritves
 					creator = {
 						is_close_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = var:mana_affinity
 				position = 0
@@ -540,7 +540,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 0
@@ -556,7 +556,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 1
@@ -572,7 +572,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 2
@@ -588,7 +588,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 3
@@ -604,7 +604,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 4
@@ -620,7 +620,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 5
@@ -636,7 +636,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 6
@@ -652,7 +652,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 7
@@ -670,7 +670,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 0
@@ -686,7 +686,7 @@ ancient_magic_rituals_events.006 = { #Implant Magical blood - Extended Relaritve
 					creator = {
 						is_extended_family_of = scope:infusion_target
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = var:mana_affinity
 				position = 0
@@ -902,7 +902,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 							is_extended_family_of = scope:infusion_target
 						}
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 0
@@ -921,7 +921,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 							is_extended_family_of = scope:infusion_target
 						}
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 1
@@ -940,7 +940,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 							is_extended_family_of = scope:infusion_target
 						}
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 2
@@ -959,7 +959,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 							is_extended_family_of = scope:infusion_target
 						}
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 3
@@ -978,7 +978,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 							is_extended_family_of = scope:infusion_target
 						}
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 4
@@ -997,7 +997,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 							is_extended_family_of = scope:infusion_target
 						}
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 5
@@ -1016,7 +1016,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 							is_extended_family_of = scope:infusion_target
 						}
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 6
@@ -1035,7 +1035,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 							is_extended_family_of = scope:infusion_target
 						}
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 7
@@ -1056,7 +1056,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 							is_extended_family_of = scope:infusion_target
 						}
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = mana_blood_compatibility
 				position = 0
@@ -1075,7 +1075,7 @@ ancient_magic_rituals_events.007 = { #Implant Magical blood - Extended Relaritve
 							is_extended_family_of = scope:infusion_target
 						}
 					}
-					var:mana_affinity.compare_value > scope:infusion_target.var:base_mana_affinity.compare_value
+					var:mana_affinity > scope:infusion_target.var:base_mana_affinity
 				}
 				order_by = var:mana_affinity
 				position = 0

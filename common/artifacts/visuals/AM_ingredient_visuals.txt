@@ -17,7 +17,7 @@ mana_blood = {
 				#		}
 				#	}
 				#	
-				#	local_var:blood_mana_affinity.compare_value  <= mundane_mana_affinity_level
+				#	local_var:blood_mana_affinity <= mundane_mana_affinity_level
 				#}
 			}
 		}
@@ -40,8 +40,8 @@ mana_blood = {
 			#		}
 			#	}
 			#	
-			#	local_var:blood_mana_affinity.compare_value  > mundane_mana_affinity_level
-			#	local_var:blood_mana_affinity.compare_value  <= sub_magical_mana_affinity_level
+			#	local_var:blood_mana_affinity > mundane_mana_affinity_level
+			#	local_var:blood_mana_affinity <= sub_magical_mana_affinity_level
 			#}
 		}
 		reference = "mana_blood_sub_magical.dds"
@@ -63,8 +63,8 @@ mana_blood = {
 			#		}
 			#	}
 			#	
-			#	local_var:blood_mana_affinity.compare_value > sub_magical_mana_affinity_level
-			#	local_var:blood_mana_affinity.compare_value  <= magical_mana_affinity_level
+			#	local_var:blood_mana_affinity > sub_magical_mana_affinity_level
+			#	local_var:blood_mana_affinity <= magical_mana_affinity_level
 			#}
 		}
 		reference = "mana_blood_magical.dds"

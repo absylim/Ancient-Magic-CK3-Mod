@@ -1,4 +1,4 @@
-arcane_lifestyle = { #Dummy lifestyle
+﻿arcane_lifestyle = { #Dummy lifestyle
 	
 	is_valid = {
 		always = no
