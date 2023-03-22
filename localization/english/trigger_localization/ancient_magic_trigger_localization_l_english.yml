@@ -1,0 +1,14 @@
+﻿l_english:
+ HAS_MAGE_LEVEL_TRIGGER:0 "Has [mage_level|E]: $NUM|V0$"
+ NOT_HAS_MAGE_LEVEL_TRIGGER:0 "Does not have [mage_level|E] $NUM|V0$"
+ I_HAVE_MAGE_LEVEL_TRIGGER:1 "You have [mage_level|E] $NUM|V0$"
+ NOT_I_HAVE_MAGE_LEVEL_TRIGGER:1 "You do #bold not#! have [mage_level|E] $NUM|V0$"
+ THEY_HAVE_MAGE_LEVEL_TRIGGER:0 "[CHARACTER.GetShortUIName|V] has [mage_level|E] $NUM|V0$"
+ NOT_THEY_HAVE_MAGE_LEVEL_TRIGGER:0 "[CHARACTER.GetShortUIName|V] does #bold not#! have [mage_level|E] $NUM|V0$"
+ 
+ HAS_MANA_AFFINITY_LEVEL_TRIGGER:0 "Has [mana_affinity_i] $NUM|V0$"
+ NOT_HAS_MANA_AFFINITY_LEVEL_TRIGGER:0 "Does not have [mana_affinity_i] $NUM|V0$"
+ I_HAVE_MANA_AFFINITY_LEVEL_TRIGGER:1 "You have $NUM|V0[mana_affinity_i]$"
+ NOT_I_HAVE_MANA_AFFINITY_LEVEL_TRIGGER:1 "You do #bold not#! have $NUM|V0$[mana_affinity_i]"
+ THEY_HAVE_MANA_AFFINITY_LEVEL_TRIGGER:0 "[CHARACTER.GetShortUIName|V] has $NUM|V0$[mana_affinity_i]"
+ NOT_THEY_HAVE_MANA_AFFINITY_LEVEL_TRIGGER:0 "[CHARACTER.GetShortUIName|V] does #bold not#! have $NUM|V0$ [mana_affinity_i]"

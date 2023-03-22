@@ -177,3 +177,9 @@ unlock_impregnate_spell = {
 		text = unlock_impregnate_spell
 	}
 }
+
+unlock_purify_bloodline_spell = {
+	custom_description_no_bullet = {
+		text = unlock_purify_bloodline_spell
+	}
+}

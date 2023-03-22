@@ -13,7 +13,7 @@ heal_spell = {
 			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
 		change_mana_with_tooltip = { VALUE = heal_spell_cost.neg }
-		change_mage_xp = { VALUE = heal_spell_cost.abs }
+		change_mage_xp = { VALUE = heal_spell_xp.abs }
 	}
 }
 
@@ -66,7 +66,7 @@ greater_heal_spell = {
 			scope:spell_target = { add_or_remove_trait_effect = { FLAG = prev } }
 		}
 		change_mana_with_tooltip = { VALUE = greater_heal_spell_cost.neg }
-		change_mage_xp = { VALUE = greater_heal_spell_cost.abs }
+		change_mage_xp = { VALUE = greater_heal_spell_xp.abs }
 	}
 }
 
@@ -129,7 +129,7 @@ avatar_of_life_spell = {
 			}
 		}
 		change_mana_with_tooltip = { VALUE = avatar_of_life_spell_cost.neg }
-		change_mage_xp = { VALUE = avatar_of_life_spell_cost.abs }
+		change_mage_xp = { VALUE = avatar_of_life_spell_xp.abs }
 	}
 }
 

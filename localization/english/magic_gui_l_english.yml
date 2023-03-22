@@ -70,6 +70,7 @@
  sculpter_of_flesh_spell_name: "Sculpter of Flesh"
  fertility_control_spell_name: "Fertility Control"
  impregnate_spell_name: "Impregnate"
+ purify_bloodline_spell_name: "Purify Bloodline"
  # Mind Magic
  entrance_spell_name: "Entrance"
  incite_lust_spell_name: "Incite Lust"
@@ -133,6 +134,7 @@
  sculpter_of_flesh_spell_desc: "A catch-all term for a number of separate spell constructs, this spell allows the user to sculpt the flesh, bone, musculature, and other organs of the target in ways that the Rewrite spells don't. While the myriad methods and effects of this spell can differ wildly, [biomancer|E]#E s#! have classified them all under this single spell name, simply for ease of reference and use."
  fertility_control_spell_desc: "The favorite spell of many a promiscuous young mage, this spell either suppresses or enhances the reproductive systems of the caster, effectively ensuring that any... [Concept('extramarital_sex','fornicative endeavors')|E]... the mage may engage in, will have the result they desire, be it a child of their line, a bastard, or no child at all."
  impregnate_spell_desc: "This rather invasive and, most would say, horrifying use of [biomancy|E] allows the mage to generate a pregnancy, skipping the fun part and going straight to the unpleasant part. If the mage is a woman, the spell causes the pregnancy in herself, using essence from the targeted man. If the mage is a man, the spell forcibly impregnates the target woman with his essence. If the mage is of the same gender as the target, the spell fails due to biological limitations."
+ purify_bloodline_spell_desc: "As one polutes one blood with blood of others, it's sometimes needed to purify one of it. This spell cleans ones bloodline of foreign blood."
 
  # Mensomancy
  entrance_spell_desc: "You steer the target's thoughts toward appreciation. They perceive you in a positive light, though the suggestion does fade over time."

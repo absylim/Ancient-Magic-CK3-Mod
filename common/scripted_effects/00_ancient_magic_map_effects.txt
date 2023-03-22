@@ -721,3 +721,65 @@ populate_focal_point = {
 	create_focal_points = { TITLE = c_sungqu }
 	create_focal_points = { TITLE = b_chuya }
 }
+
+populate_map_wit_ley_lines = {
+	populate_ley_lines = yes
+	populate_focal_point = yes
+	
+	set_global_variable = {
+		name = ancient_magic_map_initialize_complete
+		value = 1
+	}
+}
+
+#########################################
+######### Regional BLOODLINES  ##########
+#########################################
+
+give_greek_bloodline_effect = {
+	random_list = {
+		1 = { trigger = { NOT = { has_trait = strong } } add_trait = zeus_bloodline }
+		1 = { trigger = { NOT = { has_trait = strong } } add_trait = posseidon_bloodline }
+		1 = { trigger = { NOT = { has_trait = strong } } add_trait = hades_bloodline }
+		1 = { add_trait = aphrodite_bloodline }
+		1 = { trigger = { NOT = { has_trait = strong } } add_trait = ares_bloodline }
+		1 = { add_trait = athena_bloodline }
+		1 = { add_trait = medusa_bloodline }
+	}
+}
+
+give_norse_bloodline_effect = {
+	random_list = {
+		1 = { trigger = { NOT = { has_trait = strong } } add_trait = odin_bloodline }
+		1 = { trigger = { NOT = { has_trait = strong } } add_trait = thor_bloodline }
+		1 = { add_trait = loki_bloodline }
+		1 = { add_trait = freyja_bloodline }
+		1 = { add_trait = dwarven_bloodline }
+	}
+}
+
+give_egyptian_bloodline_effect = {
+	random_list = {
+		1 = { add_trait = osiris_bloodline }
+		1 = { trigger = { NOT = { has_trait = strong } } add_trait = seth_bloodline }
+		1 = { add_trait = anubis_bloodline }
+		1 = { add_trait = thoth_bloodline }
+		1 = { add_trait = ptah_bloodline }
+		1 = { add_trait = amun_bloodline }
+	}
+}
+
+give_india_bloodline_effect = {
+	random_list = {
+		1 = { add_trait = brahma_bloodline }
+		1 = { add_trait = vishnu_bloodline }
+		1 = { add_trait = shiva_bloodline }
+		1 = { add_trait = genesha_bloodline }
+	}
+}
+
+give_mesopotamia_bloodline_effect = {
+	random_list = {
+		1 = { add_trait = djinn_bloodline }
+	}
+}

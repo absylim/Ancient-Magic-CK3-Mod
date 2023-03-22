@@ -70,7 +70,7 @@ forge_material_soul_decision = {
 		}
 		modifier = {
 			var:memory_life_capacity_left <= 10
-			multiply = 1.5
+			factor = 1.5
 		}
 	}
 }
@@ -93,7 +93,7 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 	desc = implant_magical_blood_decision_desc
 
 	widget = {
-		gui = decision_view_widget_am_implant_magical_blood
+		gui = decision_view_widget_AM_implant_magical_blood
 		controller = decision_option_list_controller
 		
 		# Close family
@@ -106,11 +106,9 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 					creator = {
 						is_close_family_of = ROOT
 					}
-					if = {
-						limit = {
-							has_variable = mana_affinity
-						}
-						var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
+					AND = {
+						has_variable = mana_affinity
+						var:mana_affinity > scope:creator.var:base_mana_affinity
 					}
 				}
 			}
@@ -133,11 +131,9 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 					creator = {
 						is_extended_family_of = ROOT
 					}
-					if = {
-						limit = {
-							has_variable = mana_affinity
-						}
-						var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
+					AND = {
+						has_variable = mana_affinity
+						var:mana_affinity > scope:creator.var:base_mana_affinity
 					}
 				}
 			}
@@ -163,11 +159,9 @@ implant_magical_blood_decision = { #Decision to implant into oneself blood of ot
 							is_close_family_of = ROOT
 						}
 					}
-					if = {
-						limit = {
-							has_variable = mana_affinity
-						}
-						var:mana_affinity.compare_value > scope:creator.var:base_mana_affinity.compare_value
+					AND = {
+						has_variable = mana_affinity
+						var:mana_affinity > scope:creator.var:base_mana_affinity
 					}
 				}
 			}
@@ -249,7 +243,7 @@ am_convert_holding_to_city_of_magic_decision = {
 
 	widget = {
 		# Name of the widget to use. Must be at the path <decision_view_widgets>/<widget_name>.gui
-		gui = decision_view_widget_am_convert_to_city_of_magic
+		gui = decision_view_widget_AM_convert_to_city_of_magic
 		# Some widgets require a custom controller (see below). Default: default
 		controller = create_holy_order
 		barony_valid = {

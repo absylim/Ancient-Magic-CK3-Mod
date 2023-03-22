@@ -104,13 +104,13 @@ magic_advancement_tree_completed = {
 	is_valid = {
 		switch = {
 			trigger = scope:tree
-			flag:basic = { basic_num_perks.compare_value = 1 }
-			flag:chronomancy = { chronomancy_num_perks.compare_value = 9 }
-			flag:chiromancy = { chiromancy_num_perks.compare_value = 9 }
-			flag:elomancy = { elomancy_num_perks.compare_value = 9 }
-			flag:necromancy = { necromancy_num_perks.compare_value = 9 }
-			flag:biomancy = { biomancy_num_perks.compare_value = 9 }
-			flag:mensomancy = { mensomancy_num_perks.compare_value = 9 }
+			flag:basic = { basic_num_perks = 1 }
+			flag:chronomancy = { chronomancy_num_perks = 9 }
+			flag:chiromancy = { chiromancy_num_perks = 9 }
+			flag:elomancy = { elomancy_num_perks = 9 }
+			flag:necromancy = { necromancy_num_perks = 9 }
+			flag:biomancy = { biomancy_num_perks = 9 }
+			flag:mensomancy = { mensomancy_num_perks = 9 }
 		}
 	}
 }

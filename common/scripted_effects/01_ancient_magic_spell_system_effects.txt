@@ -12,12 +12,12 @@ start_aura_effect = {
 pay_aura_cost_and_get_xp_effect = {
 	change_mana_with_tooltip = { VALUE = $SPELL$_cost.neg }
 	change_mana_gen_tooltip = { VALUE = $SPELL$_gen_cost_individual }
-	change_mage_xp = { VALUE = $SPELL$_cost.abs }
+	change_mage_xp = { VALUE = $SPELL$_xp.abs }
 }
 
 update_aura_effect = {
 	if = {
-		limit = { var:aura_mask_0.$SPELL$_aura_bit.compare_value = set }
+		limit = { var:aura_mask_0.$SPELL$_aura_bit = set }
 		every_in_list = {
 			variable = $SPELL$_targets
 			remove_all_character_modifier_instances = $SPELL$_modifier
@@ -128,6 +128,7 @@ set_up_spells = {
 	add_to_global_variable_list = { name = biomancy_spells_list target = flag:sculpter_of_flesh_spell }
 	add_to_global_variable_list = { name = biomancy_spells_list target = flag:fertility_control_spell }
 	add_to_global_variable_list = { name = biomancy_spells_list target = flag:impregnate_spell }
+	add_to_global_variable_list = { name = biomancy_spells_list target = flag:purify_bloodline_spell }
 
 	# Mind Magic
 	clear_global_variable_list = mensomancy_spells_list

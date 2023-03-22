@@ -1,0 +1,3 @@
+﻿
+germanic_religion_opinion = { decimals = 0 }
+hinduism_religion_opinion = { decimals = 0 }

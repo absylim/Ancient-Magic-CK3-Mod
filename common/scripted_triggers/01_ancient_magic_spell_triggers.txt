@@ -8,6 +8,6 @@
 has_enough_mana_trigger = {
 	custom_description = {
 		text = "has_enough_mana_trigger"
-		var:mana.compare_value >= $SPELL$_cost.abs
+		var:mana >= $SPELL$_cost.abs
 	}
 }

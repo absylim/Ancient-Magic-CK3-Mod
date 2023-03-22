@@ -57,7 +57,7 @@ ask_for_mana_blood_interaction = { #Personal Interaction with character to ask f
 	}
 
 	is_valid_showing_failures_only = {
-		scope:recipient = { is_diplomatically_available = yes }
+		#scope:recipient = { is_diplomatically_available = yes }
 
 		# If recipient is wounded, ill or is low on blood
 		scope:recipient = {
@@ -89,7 +89,10 @@ ask_for_mana_blood_interaction = { #Personal Interaction with character to ask f
 		localization = SCHEME_HOOK
 	}
 	should_use_extra_icon = {
-		scope:actor = { has_usable_hook = scope:recipient }
+		OR = {
+			scope:actor = { has_usable_hook = scope:recipient }
+			scope:actor = { has_magical_bloodline_trigger = yes }
+		}
 	}
 	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
 	send_options_exclusive = no
@@ -107,9 +110,9 @@ ask_for_mana_blood_interaction = { #Personal Interaction with character to ask f
 		flag = bloodline
 		localization = INCLUDE_MAGICAL_BLOODLINE
 	}
-	should_use_extra_icon = {
-		scope:actor = { has_magical_bloodline_trigger = yes }
-	}
+	#should_use_extra_icon = {
+	#	scope:actor = { has_magical_bloodline_trigger = yes }
+	#}
 	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
 	send_options_exclusive = no
 

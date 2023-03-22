@@ -184,6 +184,8 @@ fertility_control_spell = {}
 
 impregnate_spell = {}
 
+purify_bloodline_spell = {}
+
 # Mensomancy
 entrance_spell = {}
 
@@ -204,3 +206,33 @@ enchanting_aura_spell = {}
 sculpt_mind_spell = {}
 
 master_of_puppets_spell = {}
+
+# Mythology
+zeus = {}
+posseidon = {}
+hades = {}
+aphrodite = {}
+ares = {}
+athena = {}
+medusa = {}
+odin = {}
+thor = {}
+loki = {}
+freyja = {}
+ouroboros = {}
+dwarve = {}
+osiris = {}
+seth = {}
+anubis = {}
+thoth = { texture = "gfx/interface/icons/thoth.dds" }
+ptah = {}
+amun = { texture = "gfx/interface/icons/amun_icon.dds" }
+brahma = { texture = "gfx/interface/icons/brahma_icon.dds" }
+genesha = { texture = "gfx/interface/icons/genesha_icon.dds" }
+vishnu = { texture = "gfx/interface/icons/vishnu_icon.dds" }
+shiva = { texture = "gfx/interface/icons/shiva_icon.dds" }
+djinn = { texture = "gfx/interface/icons/djinn_icon.dds" }
+anu = {}
+enlil = {}
+enki = {}
+ninhursag = {}

@@ -22,9 +22,7 @@
 	}
 
 	is_valid_showing_failures_only = {
-		scope:recipient = {
-			is_diplomatically_available = yes
-		}
+		#scope:recipient = { is_diplomatically_available = yes }
 		NOT = { scope:actor = { has_strong_hook = scope:recipient } }
 		custom_description = {
 			scope:recipient = {

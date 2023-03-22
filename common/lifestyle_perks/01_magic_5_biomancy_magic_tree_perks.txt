@@ -202,6 +202,7 @@ sculpter_of_flesh_perk = {
 
 	effect = {
 		unlock_sculpter_of_flesh_spell = yes
+		unlock_purify_bloodline_spell = yes
 		gain_mana_gen_perk = { VALUE = sculpter_of_flesh_perk_gen_cost }
 		gain_max_mana_perk = { VALUE = sculpter_of_flesh_perk_max_mana }
 		mod_bit = { MASK = biomancy_perk_mask_0 BIT = sculpter_of_flesh_perk_bit OP = set }

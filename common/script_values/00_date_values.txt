@@ -1,47 +1,47 @@
 ﻿current_day_in_year = {
     value = 0
     if = {
-        limit = { current_month.compare_value > 1 }
+        limit = { current_month > 1 }
         add = 31
     }
     if = {
-        limit = { current_month.compare_value > 2 }
+        limit = { current_month > 2 }
         add = 28
     }
     if = {
-        limit = { current_month.compare_value > 3 }
+        limit = { current_month > 3 }
         add = 31
     }
     if = {
-        limit = { current_month.compare_value > 4 }
+        limit = { current_month > 4 }
         add = 30
     }
     if = {
-        limit = { current_month.compare_value > 5 }
+        limit = { current_month > 5 }
         add = 31
     }
     if = {
-        limit = { current_month.compare_value > 6 }
+        limit = { current_month > 6 }
         add = 30
     }
     if = {
-        limit = { current_month.compare_value > 7 }
+        limit = { current_month > 7 }
         add = 31
     }
     if = {
-        limit = { current_month.compare_value > 8 }
+        limit = { current_month > 8 }
         add = 31
     }
     if = {
-        limit = { current_month.compare_value > 9 }
+        limit = { current_month > 9 }
         add = 30
     }
     if = {
-        limit = { current_month.compare_value > 10 }
+        limit = { current_month > 10 }
         add = 31
     }
     if = {
-        limit = { current_month.compare_value > 11 }
+        limit = { current_month > 11 }
         add = 30
     }
     add = current_day

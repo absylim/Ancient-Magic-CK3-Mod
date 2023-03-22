@@ -177,3 +177,9 @@ unlock_impregnate_spell = {
 	first = FIRST_UNLOCK_IMPREGNATE_SPELL
 	third = THIRD_UNLOCK_IMPREGNATE_SPELL
 }
+
+unlock_purify_bloodline_spell = {
+	global = GLOBAL_UNLOCK_PURIFY_BLOODLINE_SPELL
+	first = FIRST_UNLOCK_PURIFY_BLOODLINE_SPELL
+	third = THIRD_UNLOCK_PURIFY_BLOODLINE_SPELL
+}

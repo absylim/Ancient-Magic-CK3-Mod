@@ -146,9 +146,9 @@ increase_times_repeated = {
 		AND = {
 			OR = {
 				NOT = { is_magic_aura_trigger = { SPELL = scope:spell } }
-				scope:max_repeats.compare_value <= mage_level.compare_value
+				scope:max_repeats <= mage_level
 			}
-			var:repeat_spell.compare_value < scope:max_repeats.compare_value
+			var:repeat_spell < scope:max_repeats
 		}
 	}
 	effect = {
@@ -172,9 +172,9 @@ increase_times_repeated_max = {
 		AND = {
 			OR = {
 				NOT = { is_magic_aura_trigger = { SPELL = scope:spell } }
-				scope:max_repeats.compare_value <= mage_level.compare_value
+				scope:max_repeats <= mage_level
 			}
-			var:repeat_spell.compare_value < scope:max_repeats.compare_value
+			var:repeat_spell < scope:max_repeats
 		}
 	}
 	effect = {

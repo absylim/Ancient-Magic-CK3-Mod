@@ -28,7 +28,7 @@
 	character_modifier = {
 		city_of_magic_holding_holding_build_speed = -0.1
 		city_of_magic_holding_build_gold_cost = -0.2
-		city_of_magic_holding_holding_gold_cost = -0.1
+		city_of_magic_holding_holding_build_gold_cost = -0.1
 	}
 	
 	cost = {
@@ -232,10 +232,10 @@ tradition_mythology_greek = {
 	
 	character_modifier = { #City state builders
 		city_of_magic_holding_build_gold_cost = -0.2
-		city_of_magic_holding_holding_gold_cost = -0.15
+		city_of_magic_holding_holding_build_gold_cost = -0.15
 		city_of_magic_holding_holding_build_speed = -0.15
 		city_holding_build_gold_cost = -0.25
-		city_holding_holding_gold_cost = -0.025
+		city_holding_holding_build_gold_cost = -0.025
 		city_holding_holding_build_speed = -0.25
 	}
 	
@@ -431,7 +431,10 @@ tradition_mythology_india = {
 	}
 	
 	is_shown = {
-		has_cultural_pillar = heritage_dravidian
+		OR = {
+			has_cultural_pillar = heritage_dravidian
+			has_cultural_pillar = heritage_indo_aryan
+		}
 	}
 	
 	parameters = {

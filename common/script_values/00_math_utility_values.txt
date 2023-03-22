@@ -357,7 +357,7 @@ num_set_bits = {
 abs = {
 	value = this
 	if = {
-		limit = { this.compare_value < 0 }
+		limit = { this < 0 }
 		multiply = -1
 	}
 }
@@ -378,7 +378,7 @@ tri = {
 	ordered_province = {
 		limit = {
 			has_variable = tri_sum
-			var:tri_sum.compare_value < prev.compare_value
+			var:tri_sum < prev
 		}
 		order_by = var:tri_num
 		position = 0

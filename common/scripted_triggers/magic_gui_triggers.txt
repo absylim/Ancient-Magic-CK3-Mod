@@ -63,7 +63,7 @@ will_target_have_trait_trigger = {
 personality_traits_under_limit_trigger = {
 	custom_description = {
 		text = "personality_traits_under_limit_trigger"
-		number_of_personality_traits.compare_value < personality_trait_limit
+		number_of_personality_traits < personality_trait_limit
 	}
 }
 
@@ -766,5 +766,7 @@ has_trait_trigger = {
 		flag:hyperlexic = { has_trait = hyperlexic }
 		flag:dyscalculic = { has_trait = dyscalculic }
 		flag:hypercalculic = { has_trait = hypercalculic }
+		flag:infused_magical_blood_compatible = { has_trait = infused_magical_blood_compatible }
+		flag:infused_magical_blood_incompatible = { has_trait = infused_magical_blood_incompatible }
 	}
 }

@@ -8,3 +8,5 @@
  city_of_magic_holding_holding_build_piety_cost:0 "[city_of_magic|E] [holding|E] Construction Cost"
  city_of_magic_holding_holding_build_prestige_cost:0 "[city_of_magic|E] [holding|E] Construction Cost"
  
+ germanic_religion_opinion: "$germanic_religion_adherent$ Opinion"
+ hinduism_religion_opinion: "$hinduism_religion_adherent$ Opinion"
