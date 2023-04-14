@@ -1,5 +1,5 @@
 ﻿l_english:
- #major
+#Major
  forge_material_soul_decision: "Forge Material Soul"
  forge_material_soul_decision_tooltip: "With the use of [mana|E] you can materialize your soul in this realm."
  forge_material_soul_decision_desc: "Bodily immortality is one thing, but the brain can only handle so much. Stuff hundreds of years of knowledge into one mind, and you simply run out of room. To reach true immortality, one needs to reforge their soul into a limitless receptable of knowledge, so that one can truly transcend one's mortal coil!"
@@ -51,7 +51,7 @@
  am_ai_convert_holding_to_city_of_magic_decision_confirm:1 "Lay the foundation!"
  am_ai_convert_holding_to_city_of_magic_decision_custom:0 "In a fitting Barony"
  
- #intrigue menu
+#Intrigue menu
  open_spellbook_decision: "Open Spellbook"
  open_spellbook_decision_tooltip: "[ROOT.GetCharacter.GetFirstNameNoTooltip] casts a spell on [ROOT.GetCharacter.GetHerselfHimself]."
  open_spellbook_decision_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] casts a spell on [ROOT.GetCharacter.GetHerselfHimself]."
@@ -78,14 +78,30 @@
  am_convocation_witchcraft_accepted_custom_desc: "You will call a convocation of respected and devout spiritual leaders to attempt to change the faith's $doctrine_witchcraft_name$ [doctrine|E] to [GetFaithDoctrine('doctrine_witchcraft_accepted').GetBaseName]. A high skill in [learning|E] is recommended, as well as good relations with your [GetPlayer.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName]. Other skills may be used depending on the flow of the convocation, and having certain [lifestyle|E] perks are also helpful."
  am_convocation_witchcraft_crime_custom_desc: "You will call a convocation of respected and devout spiritual leaders to attempt to change the faith's $doctrine_witchcraft_name$ [doctrine|E] to [GetFaithDoctrine('doctrine_witchcraft_crime').GetBaseName]. A high skill in [learning|E] is recommended, as well as good relations with your [GetPlayer.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName]. Other skills may be used depending on the flow of the convocation, and having certain [lifestyle|E] perks are also helpful."
 
- # debug
+#Debug
  reset_mana_system_decision: "Reset Mana System"
  reset_mana_system_decision_tooltip: "Reset maximum mana and mana regen"
  reset_mana_system_decision_desc: "Recalculates the maximum mana and mana regen for every character in the game. Useful after updating the game."
  reset_mana_system_decision_effect_tooltip: "Reset all characters' mana systems"
  reset_mana_system_decision_confirm: "Reset!"
  
- #Alchemy
+ reset_mana_system_ai_decision: "AI Reset Mana System"
+ reset_mana_system_ai_decision_tooltip: "Reset maximum mana and mana regen"
+ reset_mana_system_ai_decision_desc: "Recalculates the maximum mana and mana regen for every character in the game. Useful after updating the game."
+ reset_mana_system_ai_decision_effect_tooltip: "Reset all characters' mana systems"
+ reset_mana_system_ai_decision_confirm: "Reset!"
+ 
+ debug_check_mana_affinity: "Debug: Check mana affinity"
+ debug_check_mana_affinity_tooltip: "Returns your own mana affinity"
+ debug_check_mana_affinity_desc: "Used when mana affinity hud shower doesnt work properly"
+ debug_check_mana_affinity_confirm: "Check Affinity"
+ 
+ debug_regenerate_base_mana_affinity: "Debug: Regenerate Base mana affinity"
+ debug_regenerate_base_mana_affinity_tooltip: "Regenerates Base mana affinity"
+ debug_regenerate_base_mana_affinity_desc: ""
+ debug_regenerate_base_mana_affinity_confirm: "Regenerate"
+ 
+#Alchemy
  build_laboratory_decision: "Build Laboratory"
  build_laboratory_decision_tooltip: "Building laboratory for my experiments, could prove very useful."
  build_laboratory_decision_desc: "I'm in dire need of place where i could perform my experiments, that could lead me to much better understanding of arcane knowledge. And for such task i need to build my own laboratory, that would allow me to perform my arcane experiments on special materials!"

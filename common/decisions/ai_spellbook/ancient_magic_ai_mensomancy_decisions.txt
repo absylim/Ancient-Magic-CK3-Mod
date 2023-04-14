@@ -1,4 +1,7 @@
 ﻿beguiling_aura_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -71,6 +74,9 @@
 }
 
 enchanting_aura_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes

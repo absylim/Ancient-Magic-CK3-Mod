@@ -1,4 +1,7 @@
 ﻿stone_golem_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -16,7 +19,7 @@
 			uses_supply = no
 			inheritable = no
 			men_at_arms = {
-				type = golem
+				type = stone_golems
 				stacks = mage_level
 			}
 			location = capital_province
@@ -40,6 +43,9 @@
 }
 
 lava_golem_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -58,7 +64,7 @@ lava_golem_ai_spell_decision = {
 			uses_supply = no
 			inheritable = no
 			men_at_arms = {
-				type = lava_golem
+				type = lava_golems
 				stacks = mage_level
 			}
 			location = capital_province
@@ -91,6 +97,9 @@ lava_golem_ai_spell_decision = {
 }
 
 flame_aura_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -161,6 +170,9 @@ flame_aura_ai_spell_decision = {
 }
 
 flaming_weapons_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -231,6 +243,9 @@ flaming_weapons_ai_spell_decision = {
 }
 
 living_earthworks_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -301,6 +316,9 @@ living_earthworks_ai_spell_decision = {
 }
 
 water_control_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -371,6 +389,9 @@ water_control_ai_spell_decision = {
 }
 
 cloak_of_elements_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes

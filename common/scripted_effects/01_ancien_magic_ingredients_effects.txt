@@ -224,7 +224,7 @@ pay_mana_drop_cost_effect = {
 			}
 			while = {
 				limit = {
-					local_var:mana_drop_cost_local.compare_value > 0
+					local_var:mana_drop_cost_local > 0
 				}
 				random_ingredient_in_inventory = {
 					limit = {
@@ -247,7 +247,7 @@ pay_mana_drop_cost_effect = {
 			
 			while = {
 				limit = {
-					local_var:mana_drop_cost_local.compare_value >= mana_drops_needed_for_vial
+					local_var:mana_drop_cost_local >= mana_drops_needed_for_vial
 				}
 				change_local_variable = { name = mana_drop_cost_local subtract = mana_drops_needed_for_vial }
 				change_local_variable = { name = mana_vial_cost_local add = 1 }
@@ -259,7 +259,7 @@ pay_mana_drop_cost_effect = {
 						has_artifact_feature_group = compressed_mana
 						has_artifact_feature = mana_drop
 					}
-					local_var:mana_drop_cost_local.compare_value > 0
+					local_var:mana_drop_cost_local > 0
 				}
 				random_ingredient_in_inventory = {
 					limit = {
@@ -295,7 +295,7 @@ pay_mana_drop_cost_effect = {
 				}
 				while = { 
 					limit = {
-						local_var:mana_drops_to_generate.compare_value > 0
+						local_var:mana_drops_to_generate > 0
 					}
 					create_ingredient_compressed_mana = { OWNER = scope:owner }
 					change_local_variable = { name = mana_drops_to_generate subtract = 1 }
@@ -308,7 +308,7 @@ pay_mana_drop_cost_effect = {
 						has_artifact_feature_group = compressed_mana
 						has_artifact_feature = mana_vial
 					}
-					local_var:mana_vial_cost_local.compare_value > 0
+					local_var:mana_vial_cost_local > 0
 				}
 				random_ingredient_in_inventory = {
 					limit = {
@@ -471,7 +471,7 @@ create_ingredient_compressed_mana = {
 		
 		while = { #destroy the rest of mana drops
 			limit = {
-				local_var:number_of_drops.compare_value > 0
+				local_var:number_of_drops > 0
 			}
 			scope:owner = {
 				random_ingredient_in_inventory = {
@@ -573,17 +573,20 @@ create_ingredient_compressed_mana = {
 create_ingredient_ore = {
 	$OWNER$ = { save_scope_as = owner }
 	
+	set_local_variable = {
+		name = ore_quality 
+		value = 0
+	}
+			
+	switch = {
+		trigger = $TYPE$
+		mythril = { change_local_variable = { name = ore_quality add = 100 } }
+		fallback = { change_local_variable = { name = ore_quality add = 15 } }
+	}
+	
 	save_scope_value_as = {
 		name = quality
-		value = {
-			value = 0
-			
-			switch = {
-				trigger = $TYPE$
-				mythril = { add = 100 }
-				fallback = { add = 15 }
-			}
-		}
+		value = local_var:ore_quality
 	}
 	
 	hidden_effect_new_artifact = {
@@ -623,17 +626,20 @@ create_ingredient_ore = {
 create_ingredient_metal = {
 	$OWNER$ = { save_scope_as = owner }
 	
+	set_local_variable = {
+		name = metal_quality 
+		value = 0
+	}
+			
+	switch = {
+		trigger = $TYPE$
+		carbon_steel = { change_local_variable = { name = metal_quality add = 50 } }
+		fallback = { change_local_variable = { name = metal_quality add = 15 } }
+	}
+	
 	save_scope_value_as = {
 		name = quality
-		value = {
-			value = 0
-			
-			switch = {
-				trigger = $TYPE$
-				carbon_steel = { add = 50 }
-				fallback = { add = 15 }
-			}
-		}
+		value = local_var:metal_quality
 	}
 	
 	hidden_effect_new_artifact = {
@@ -673,17 +679,20 @@ create_ingredient_metal = {
 create_ingredient_wood = {
 	$OWNER$ = { save_scope_as = owner }
 	
+	set_local_variable = {
+		name = wood_quality 
+		value = 0
+	}
+			
+	switch = {
+		trigger = $TYPE$
+		magical_oak = { change_local_variable = { name = wood_quality add = 25 } }
+		fallback = { change_local_variable = { name = wood_quality add = 15 } }
+	}
+	
 	save_scope_value_as = {
 		name = quality
-		value = {
-			value = 0
-			
-			switch = {
-				trigger = $TYPE$
-				magical_oak = { add = 25 }
-				fallback = { add = 15 }
-			}
-		}
+		value = local_var:wood_quality
 	}
 	
 	hidden_effect_new_artifact = {

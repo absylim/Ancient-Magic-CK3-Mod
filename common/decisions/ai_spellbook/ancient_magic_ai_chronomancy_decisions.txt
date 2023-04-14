@@ -1,4 +1,7 @@
 ﻿haste_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -71,6 +74,9 @@
 }
 
 glimpse_the_future_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -146,6 +152,9 @@ glimpse_the_future_ai_spell_decision = {
 }
 
 financial_times_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -223,6 +232,9 @@ financial_times_ai_spell_decision = {
 }
 
 celerity_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -300,6 +312,9 @@ celerity_ai_spell_decision = {
 }
 
 temporal_manipulation_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes

@@ -1,4 +1,7 @@
 ﻿raise_undead_horde_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -19,7 +22,7 @@
 			uses_supply = no
 			inheritable = no
 			men_at_arms = {
-				type = undead
+				type = lesser_undead
 				stacks = mage_level
 			}
 			location = capital_province
@@ -43,6 +46,9 @@
 }
 
 become_liche_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -75,6 +81,9 @@ become_liche_ai_spell_decision = {
 }
 
 aura_of_death_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes

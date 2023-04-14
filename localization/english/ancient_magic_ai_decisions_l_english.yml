@@ -1,0 +1,80 @@
+﻿l_english:
+ spellbook_ai_spell_decision_desc: "AI's ability to cast spells"
+ spellbook_ai_spell_decision_tooltip: "AI's ability to cast spells"
+#Biomancy
+ improve_intellect_ai_spell_decision: "Improve Intellect AI spell decision"
+ improve_intellect_ai_spell_decision_confirm: "Improve"
+  
+ improve_beauty_ai_spell_decision: "improve_beauty_ai_spell_decision"
+ improve_beauty_ai_spell_decision_confirm: "Improve"
+  
+ improve_physique_ai_spell_decision: "improve_physique_ai_spell_decision"
+ improve_physique_ai_spell_decision_confirm: "Improve"
+  
+#Chiromancy
+ heal_ai_spell_decision: "heal_ai_spell_decision"
+ heal_ai_spell_decision_confirm: "Heal"
+  
+ greater_heal_ai_spell_decision: "greater_heal_ai_spell_decision"
+ greater_heal_ai_spell_decision_confirm: "Heal"
+ 
+ full_restoration_ai_spell_decision: "full_restoration_ai_spell_decision"
+ full_restoration_ai_spell_decision_confirm: "Heal"
+  
+#Chronomancy
+ haste_ai_spell_decision: "haste_ai_spell_decision"
+ haste_ai_spell_decision_confirm: "Confirm"
+ 
+ glimpse_the_future_ai_spell_decision: "glimpse_the_future_ai_spell_decision"
+ glimpse_the_future_ai_spell_decision_confirm: "Confirm"
+ 
+ financial_times_ai_spell_decision: "financial_times_ai_spell_decision"
+ financial_times_ai_spell_decision_confirm: "Confirm"
+ 
+ celerity_ai_spell_decision: "celerity_ai_spell_decision"
+ celerity_ai_spell_decision_confirm: "Confirm"
+ 
+ temporal_manipulation_ai_spell_decision: "temporal_manipulation_ai_spell_decision"
+ temporal_manipulation_ai_spell_decision_confirm: "Confirm"
+ 
+#elomancy
+ golem_army: "Golem Army"
+ lava_golem_army: "Lava Golem Army"
+ 
+ stone_golem_ai_spell_decision: "stone_golem_ai_spell_decision"
+ stone_golem_ai_spell_decision_confirm: "Confirm"
+ 
+ lava_golem_ai_spell_decision: "lava_golem_ai_spell_decision"
+ lava_golem_ai_spell_decision_confirm: "Confirm"
+ 
+ flame_aura_ai_spell_decision: "flame_aura_ai_spell_decision"
+ flame_aura_ai_spell_decision_confirm: "Confirm"
+ 
+ flaming_weapons_ai_spell_decision: "flaming_weapons_ai_spell_decision"
+ flaming_weapons_ai_spell_decision_confirm: "Confirm"
+ 
+ living_earthworks_ai_spell_decision: "living_earthworks_ai_spell_decision"
+ living_earthworks_ai_spell_decision_confirm: "Confirm"
+ 
+ water_control_ai_spell_decision: "water_control_ai_spell_decision"
+ water_control_ai_spell_decision_confirm: "Confirm"
+ 
+ cloak_of_elements_ai_spell_decision: "cloak_of_elements_ai_spell_decision"
+ cloak_of_elements_ai_spell_decision_confirm: "Confirm"
+
+#Mensomancy 
+ beguiling_aura_ai_spell_decision: "beguiling_aura_ai_spell_decision"
+ beguiling_aura_ai_spell_decision_confirm: "Confirm"
+ 
+ enchanting_aura_ai_spell_decision: "enchanting_aura_ai_spell_decision"
+ enchanting_aura_ai_spell_decision_confirm: "Confirm"
+ 
+#Necromancy
+ raise_undead_horde_ai_spell_decision: "raise_undead_horde_ai_spell_decision"
+ raise_undead_horde_ai_spell_decision_confirm: "Confirm"
+ 
+ become_liche_ai_spell_decision: "become_liche_ai_spell_decision"
+ become_liche_ai_spell_decision_confirm: "Confirm"
+ 
+ aura_of_death_ai_spell_decision: "aura_of_death_ai_spell_decision"
+ aura_of_death_ai_spell_decision_confirm: "Confirm"

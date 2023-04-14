@@ -1,4 +1,7 @@
 ﻿heal_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -35,6 +38,9 @@
 }
 
 greater_heal_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes
@@ -74,6 +80,9 @@ greater_heal_ai_spell_decision = {
 }
 
 full_restoration_ai_spell_decision = {
+	desc = spellbook_ai_spell_decision_desc
+	tooltip = spellbook_ai_spell_decision_tooltip
+	
 	is_shown = {
 		is_ai = yes
 		is_magus_trigger = yes

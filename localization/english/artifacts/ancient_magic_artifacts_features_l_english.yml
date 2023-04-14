@@ -1,0 +1,15 @@
+﻿l_english:
+#Mana Blood Ranks
+ feature_mana_blood_mundane_rank: "Mana Blood Mundane"
+ feature_mana_blood_sub_magical_rank: ""
+ feature_mana_blood_magical_rank:
+ feature_mana_blood_transcendent_rank:
+ feature_mana_blood_demigod_rank:
+ feature_mana_blood_god_rank:
+ 
+#Ingredients
+ feature_mana_drop: "Drop of Mana"
+ feature_mana_vial: "Vial of Mana"
+ feature_mythril_ore: "Mythril ore"
+ feature_magical_oak_wood: "Oak wood"
+ feature_carbon_steel: "Steel"

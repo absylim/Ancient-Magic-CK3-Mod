@@ -437,7 +437,7 @@ ancient_magic_alchemy.0003 = {
 			change_variable = { name = lab_ambition subtract = 1 }
 			if = {
 				limit = {
-					var:lab_ambition.compare_value = 1
+					var:lab_ambition = 1
 				}
 				random_list = {
 					20 = {
@@ -487,7 +487,7 @@ ancient_magic_alchemy.0003 = {
 			change_variable = { name = lab_ambition subtract = 1 }
 			if = {
 				limit = {
-					var:lab_ambition.compare_value = 1
+					var:lab_ambition = 1
 				}
 				random_list = {
 					20 = {
@@ -576,7 +576,7 @@ ancient_magic_alchemy.0004 = {
 			change_variable = { name = lab_ambition subtract = 1 }
 			if = {
 				limit = {
-					var:lab_ambition.compare_value = 1
+					var:lab_ambition = 1
 				}
 				random_list = {
 					20 = {
@@ -626,7 +626,7 @@ ancient_magic_alchemy.0004 = {
 			change_variable = { name = laboratory_crucible_level add = 2 }
 			if = {
 				limit = {
-					var:lab_ambition.compare_value = 1
+					var:lab_ambition = 1
 				}
 				random_list = {
 					20 = {
@@ -714,7 +714,7 @@ ancient_magic_alchemy.0005 = {
 			change_variable = { name = lab_ambition subtract = 1 }
 			if = {
 				limit = {
-					var:lab_ambition.compare_value = 1
+					var:lab_ambition = 1
 				}
 				random_list = {
 					20 = {
@@ -764,7 +764,7 @@ ancient_magic_alchemy.0005 = {
 			change_variable = { name = lab_ambition subtract = 1 }
 			if = {
 				limit = {
-					var:lab_ambition.compare_value = 1
+					var:lab_ambition = 1
 				}
 				random_list = {
 					20 = {
@@ -852,7 +852,7 @@ ancient_magic_alchemy.0006 = {
 			change_variable = { name = lab_ambition subtract = 1 }
 			if = {
 				limit = {
-					var:lab_ambition.compare_value = 1
+					var:lab_ambition = 1
 				}
 				random_list = {
 					20 = {
@@ -902,7 +902,7 @@ ancient_magic_alchemy.0006 = {
 			change_variable = { name = lab_ambition subtract = 1 }
 			if = {
 				limit = {
-					var:lab_ambition.compare_value = 1
+					var:lab_ambition = 1
 				}
 				random_list = {
 					20 = {
@@ -990,7 +990,7 @@ ancient_magic_alchemy.0007 = {
 			change_variable = { name = lab_ambition subtract = 1 }
 			if = {
 				limit = {
-					var:lab_ambition.compare_value = 1
+					var:lab_ambition = 1
 				}
 				random_list = {
 					20 = {
@@ -1047,7 +1047,7 @@ ancient_magic_alchemy.0007 = {
 			change_variable = { name = lab_ambition subtract = 1 }
 			if = {
 				limit = {
-					var:lab_ambition.compare_value = 1
+					var:lab_ambition = 1
 				}
 				random_list = {
 					20 = {
@@ -1122,28 +1122,28 @@ ancient_magic_alchemy.0008 = {
 		remove_character_flag = decided_on_spellcircles
 		if = {
 			limit = {
-				var:laboratory_level.compare_value < 6
+				var:laboratory_level < 6
 			}
 			trigger_event = ancient_magic_alchemy.0009 # Cheap Laboratory
 		}
 		if = {
 			limit = {
-				var:laboratory_level.compare_value >= 6
-				var:laboratory_level.compare_value < 13
+				var:laboratory_level >= 6
+				var:laboratory_level < 13
 			}
 			trigger_event = ancient_magic_alchemy.0010 # Normal Laboratory
 		}
 		if = {
 			limit = {
-				var:laboratory_level.compare_value >= 12
-				var:laboratory_level.compare_value < 19
+				var:laboratory_level >= 12
+				var:laboratory_level < 19
 			}
 			trigger_event = ancient_magic_alchemy.0011 # Good Laboratory
 		}
 		if = {
 			limit = {
-				var:laboratory_level.compare_value >= 19
-				var:laboratory_level.compare_value < 24
+				var:laboratory_level >= 19
+				var:laboratory_level < 24
 				NOT = {
 					check_variable = {
 						which = laboratory_level
@@ -1155,7 +1155,7 @@ ancient_magic_alchemy.0008 = {
 		}
 		if = {
 			limit = {
-				var:laboratory_level.compare_value >= 24
+				var:laboratory_level >= 24
 			}
 			trigger_event = ancient_magic_alchemy.0013 # Best Laboratory
 		}
@@ -3478,7 +3478,7 @@ ancient_magic_alchemy.0116 = {
 		name = ancient_magic_alchemy.0116.increase
 		trigger = {
 			any_ingredient_in_inventory = {
-				count > var:mana_drops_used.compare_value
+				count > var:mana_drops_used
 				has_artifact_feature = mana_drop
 			}
 		}
@@ -3487,7 +3487,7 @@ ancient_magic_alchemy.0116 = {
 				has_artifact_feature = mana_drop
 			}
 			any_ingredient_in_inventory = {
-				count <= var:mana_drops_used.compare_value
+				count <= var:mana_drops_used
 				has_artifact_feature = mana_drop
 			}
 		}
@@ -3503,13 +3503,13 @@ ancient_magic_alchemy.0116 = {
 			any_ingredient_in_inventory = {
 				has_artifact_feature = mana_drop
 			}
-			var:mana_drops_used.compare_value > 1
+			var:mana_drops_used > 1
 		}
 		show_as_unavailable = {
 			any_ingredient_in_inventory = {
 				has_artifact_feature = mana_drop
 			}
-			var:mana_drops_used.compare_value <= 1
+			var:mana_drops_used <= 1
 		}
 		
 		hidden_effect = {
@@ -3655,7 +3655,7 @@ ancient_magic_alchemy.0117 = { #Random enchantment chooser
 		}
 		
 		if = { #Start next event
-			limit = { local_var:failsafe_bool.compare_value > 0 }
+			limit = { local_var:failsafe_bool > 0 }
 			trigger_event = ancient_magic_alchemy.5001
 		}
 		else = {
@@ -3954,7 +3954,7 @@ ancient_magic_alchemy.0128 = { #Herb crafting - mana ammount
 		name = ancient_magic_alchemy.0116.increase
 		trigger = {
 			any_ingredient_in_inventory = {
-				count > var:mana_drops_used.compare_value
+				count > var:mana_drops_used
 				has_artifact_feature = mana_drop
 			}
 		}
@@ -3963,7 +3963,7 @@ ancient_magic_alchemy.0128 = { #Herb crafting - mana ammount
 				has_artifact_feature = mana_drop
 			}
 			any_ingredient_in_inventory = {
-				count <= var:mana_drops_used.compare_value
+				count <= var:mana_drops_used
 				has_artifact_feature = mana_drop
 			}
 		}
@@ -3979,13 +3979,13 @@ ancient_magic_alchemy.0128 = { #Herb crafting - mana ammount
 			any_ingredient_in_inventory = {
 				has_artifact_feature = mana_drop
 			}
-			var:mana_drops_used.compare_value > 1
+			var:mana_drops_used > 1
 		}
 		show_as_unavailable = {
 			any_ingredient_in_inventory = {
 				has_artifact_feature = mana_drop
 			}
-			var:mana_drops_used.compare_value <= 1
+			var:mana_drops_used <= 1
 		}
 		
 		hidden_effect = {
@@ -4032,13 +4032,13 @@ ancient_magic_alchemy.0129 = { #Herb crafting - mana blood
 		}
 		
 		ordered_ingredient_in_inventory = {
-			has_artifact_feature_group = mana_blood
+			limit = { has_artifact_feature_group = mana_blood }
 			order_by = var:mana_affinity
 			position = 0
 			save_scope_as = first_blood
 		}
 		ordered_ingredient_in_inventory = {
-			has_artifact_feature_group = mana_blood
+			limit = { has_artifact_feature_group = mana_blood }
 			order_by = var:mana_affinity
 			position = 100
 			save_scope_as = second_blood
@@ -4087,13 +4087,16 @@ ancient_magic_alchemy.0130 = { #Herb crafting - event chooser
 		random_list = {
 			1 = { #Man eating plant
 				trigger = {
-					var:use_mana_blood.compare_value > 0 #check if mana blood is used
+					var:use_mana_blood > 0 #check if mana blood is used
 				}
 				trigger_event = { id = ancient_magic_alchemy.1250 days = { 40 100 } }
 			}
 			100 = { #Fallback event - found nothing
 				modifier = {
-					divide = var:investment
+					factor = {
+						value = 1
+						divide = var:investment
+					}
 				}
 				trigger_event = { id = ancient_magic_alchemy.5005 days = { 30 60 } }
 			} 
@@ -4139,9 +4142,12 @@ ancient_magic_alchemy.0200 = { #Choose new metal/ore event (combined from mundan
 			}
 			10 = { #fallback event
 				modifier = {
-					divide = var:investment
+					factor = {
+						value = 1
+						divide = var:investment
+					}
 				}
-				trigger_event = ancient_magic_alchemy.5000 
+				trigger_event = ancient_magic_alchemy.5000  
 			}
 		}
 	}
@@ -4718,6 +4724,8 @@ ancient_magic_alchemy.1250 = { # Man eating plant
 	}
 }
 
+
+
 #### Alchemy ####
 ancient_magic_alchemy.2000 = { #Decide what alchemy to do
 	title = ancient_magic_alchemy.2000.t
@@ -4965,19 +4973,18 @@ ancient_magic_alchemy.5002 = {
 					}
 				}
 				modifier = {
-					multiply = {
+					factor = {
 						value = 2
 						multiply = laboratory_spellcircles_level
 						min = 1
 					}
 				}
 			}
-			30 = { #enchanter gets wounded
+			35 = { #enchanter gets wounded
 				modifier = {
-					divide = {
+					factor = {
 						value = 1
-						multiply = laboratory_spellcircles_level
-						min = 1
+						divide = laboratory_spellcircles_level
 					}
 				}
 				scope:enchanter = {
@@ -4986,22 +4993,20 @@ ancient_magic_alchemy.5002 = {
 			}
 			30 = { #enchanter gets severly injured
 				modifier = {
-					divide = {
-						value = 2
-						multiply = laboratory_spellcircles_level
-						min = 1
+					factor = {
+						value = 1
+						divide = laboratory_spellcircles_level
 					}
 				}
 				scope:enchanter = {
 					add_trait = wounded_2
 				}
 			}
-			30 = { #enchanter is maimed
+			25 = { #enchanter is maimed
 				modifier = {
-					divide = {
-						value = 3
-						multiply = laboratory_spellcircles_level
-						min = 1
+					factor = {
+						value = 1
+						divide = laboratory_spellcircles_level
 					}
 				}
 				scope:enchanter = {
@@ -5009,12 +5014,9 @@ ancient_magic_alchemy.5002 = {
 				}
 			}
 			5 = { #enchanter dies
-				modifier = {
-					divide = {
-						value = 4
-						multiply = laboratory_spellcircles_level
-						min = 1
-					}
+				factor = {
+					value = 1
+					divide = laboratory_spellcircles_level
 				}
 				scope:enchanter = {
 					death = {
