@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "Ancient-Magic-CK3-Mod"
+		},
+		{
+			"path": "..",
+			"name": "mod"
+		},
+		{
+			"path": "../../logs",
+			"name": "logs"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.txt": "paradox-ck3",
+			"*.gui": "paradox-gui",
+			"*.mod": "paradox-mod",
+			"**/localization/**/*.yml": "paradox-loc"
+		},
+		"px.excludedMods": []
+	}
+}
