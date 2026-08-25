@@ -25,6 +25,7 @@ trello:
 ## Design
 
 Mana is the pool a mage holds and spends to cast. Casting spends from the pool; over time the pool regenerates from Mana Generation. Higher **Magic Potential** (from Mana Affinity once trained) regenerates faster; **Mage Level** improves spell effect and advances from that potential—it is not the pool itself. Prefer these terms over “Magic Power.”
+In essence mana is the source of any magic, with it cahracteřrs can perform magical actions, be it for spells, auras or crafting. Those actions gives characters ability to perform actions beyond standard play.
 
 Lifecycle:
 
