@@ -119,6 +119,29 @@ HUD tooltip mirrors income/expense lists (`mana_gen_income` / `mana_gen_expenses
 | HUD breakdown SGUIs | `common/scripted_guis/01_ancient_magic_hud_sguis.txt` |
 | HUD GUI | `gui/custom_gui/mana_system_hud.gui` |
 
+## Variables
+
+| Symbol | Role |
+|--------|------|
+| `var:mana` | Current mana pool on the character |
+| `ancient_magic_max_mana` | Pool cap used by clamp and HUD |
+| `ancient_magic_mana_gen` | Net monthly (or daily-scaled) change applied by the pulse |
+| `ancient_magic_mana_gen_gen_only` | Income side of net gen (HUD income total) |
+| `ancient_magic_mana_gen_drain_only` | Expense side of net gen (HUD expenses total) |
+| `ancient_magic_mana_gen_perks` / `_potency` / `_circles` / `_legacy` | HUD income buckets (`flag:gen_*`) |
+| `ancient_magic_mana_drain_auras` / `_disease` | HUD expense buckets (`flag:drain_*`) |
+| `mana_gen_months_left` / `mana_gen_days_left` | Remaining pulse ticks for the year |
+| `$SPELL$_gen_cost` / `$SPELL$_gen_cost_individual` | Aura sustain deltas (usually negative) wired into drain |
+
+## Contributors
+
+Unique `git log` authors on this page’s `code_roots` plus cited clamp helper (`00_math_utility_values.txt`), gathered at write time:
+
+- absylim
+- Donekulda
+- ethiopianvampire
+- GingerAvalanche
+
 ## Related docs
 
 - [spellbook-and-auras.md](spellbook-and-auras.md)
