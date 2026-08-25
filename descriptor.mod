@@ -3,6 +3,7 @@ tags={
 	"Gameplay"
 	"Character Interactions"
 	"Character Focuses"
+	"Magic"
 }
 name="Ancient Magic Github"
 picture="thumbnail.png"
