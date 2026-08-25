@@ -57,9 +57,12 @@ Same lifecycle as Design, with code entry points.
 
 - Shared mutate: `change_mana` in `common/scripted_effects/01_ancient_magic_effects.txt` — adds `$VALUE$` to `var:mana`, then reclamps with `clamp_to_max_mana`.
 - Tooltip wrapper: `change_mana_with_tooltip`.
-- Aura start pay path: `pay_aura_cost_and_get_xp_effect` (`01_ancient_magic_spell_system_effects.txt`) calls `change_mana_with_tooltip` with `$SPELL$_cost.neg`, then `change_mana_gen_tooltip` for the sustain delta, then XP.
+- Aura start pay path: `pay_aura_cost_and_get_xp_effect` (`01_ancient_magic_spell_system_effects.txt`) calls `change_mana_with_tooltip` with `$SPELL$_cost.neg`, then `change_mana_gen_tooltip` (UI + `on_reset_mana_system` for the sustain delta display), then XP. The ongoing drain itself comes from `$SPELL$_gen_cost` once targets exist.
 - Aura setup: `start_aura_effect` registers target, modifier, aura bit, then `on_reset_mana_system`.
-- Cast gate: `has_enough_mana_trigger` / `can_cast_aura_trigger` in `common/scripted_triggers/01_ancient_magic_spell_triggers.txt` — pool check `var:mana >= $SPELL$_cost.abs` only (no monthly-gen affordability check in that trigger).
+- Cast gates in `common/scripted_triggers/01_ancient_magic_spell_triggers.txt`:
+  - `has_enough_mana_trigger` — pool check `var:mana >= $SPELL$_cost.abs`.
+  - `can_cast_aura_trigger` — `OR` of (target already in `$SPELL$_targets`) or `has_enough_mana_trigger` (so re-targeting an active aura does not re-require pool Mana).
+  - Neither trigger checks monthly-gen affordability.
 
 ### 3. Regen — pulse → `change_mana`
 
@@ -101,7 +104,7 @@ HUD tooltip mirrors income/expense lists (`mana_gen_income` / `mana_gen_expenses
 - Sustain numbers live in `common/script_values/01_ancient_magic_spell_cost_values.txt` as `$SPELL$_gen_cost` / `$SPELL$_gen_cost_individual` (typically **negative**, e.g. `-15` per target).
 - Those values feed `ancient_magic_mana_drain_auras` and therefore net monthly gen. Active auras reduce (or invert) regen; the pulse still applies whatever net is—there is no separate “pay sustain from pool” step beyond that net.
 - **`_gen_cost` naming pitfall:** file comment in mana system values — `_gen_cost` is a misnomer. **Positive** perk constants *increase* gen; **negative** spell/aura (and disease) values *decrease* gen. UI labels still say “cost.”
-- Manual stop: `stop_aura_effect` removes targets/modifiers, refunds the individual gen delta via `change_mana_gen_tooltip` with `.abs`, clears aura bit when list empty. Debug / bulk clear: `kill_aura` (does not itself reset mana system).
+- Manual stop: `stop_aura_effect` removes the target from `$SPELL$_targets` and clears modifiers; once the target list is empty it unsets the aura bit. Ending the drain is a consequence of those list/modifier clears (spell `_gen_cost` values sum over remaining targets)—not a separate gen “refund.” `change_mana_gen_tooltip` with `.abs` only shows the UI delta and fires `on_reset_mana_system`. Debug / bulk clear: `kill_aura` (does not itself reset mana system).
 
 **Code gap vs player rule (KTD3):** Design/loc say insufficient sustain **ends** the Aura. Re-verified at write time: `monthly_mana_gen` / `daily_mana_gen` only call `change_mana`; they do **not** call `stop_aura_effect` or `kill_aura` when net gen (or pool) cannot cover sustain. `stop_aura_effect` / `kill_aura` appear on player cancel paths, debug decisions, and reset-style on_actions—not as an automatic sustain-failure shutdown. Until such wiring exists, insufficient sustain drains the pool via negative net gen / cast gates, but auras are **not** auto-cleared by the pulse.
 
